@@ -33,8 +33,8 @@ public abstract class Verbum <Hoc extends Verbum <Hoc>> {
 
   /**
    * Officium hoc cōnstrūctōrem reī classis huius perpetrat.
-   * @param ctgr valōrem {@link Verbum#catēgoria} indicat.
-   * @param fdmn valōrem {@link Verbum#fundāmen} indicat.
+   * @param ctgr valōrem {@link #catēgoria} indicat.
+   * @param fdmn valōrem {@link #fundāmen} indicat.
    */
   protected Verbum(@NotNull final Catēgoria ctgr, @NotNull final String fdmn) {
     catēgoria = ctgr;
