@@ -13,6 +13,15 @@ import java.util.*;
 import java.util.function.Supplier;
 import java.util.stream.*;
 
+/**
+ * Classis {@link PrōnōmenConiūnctīvum} repraesentat nōmina ut coniectēris.
+ * PrōnōminaConiūnctīva catēgoriam {@link Catēgoria#PRŌNŌMEN_CONIŪNCTĪVUM} ūtuntur et cōnservāta sunt in scrīniō <a href="../src/main/resources/prōnōminaConiūnctīva">prōnōminaConiūnctīva</a>.
+ * Discrīmina prīmōria inter classibus hāc et {@link Prōnōmen} est haec modōs {@link Coniugiāle} dēfīnītōs dēdūcit.
+ * @see LēctorMultiplicibus.LēctorPrōnōminibusConiūnctīvīs
+ * @see TenorMultiplicibus.TenorPrōnōminibusConiūnctīvīs
+ * @see InventorPrōnōminibusConiūnctīvīs
+ * @see ConditōrPrōnōminibusConiūnctīvīs
+ */
 @SuppressWarnings({ "NonAsciiCharacters", "SpellCheckingInspection" })
 public final class PrōnōmenConiūnctīvum extends Nōminālis <PrōnōmenConiūnctīvum> implements Coniugiāle {
   @Getter(lazy = true) @Accessors(fluent = true)
@@ -26,6 +35,9 @@ public final class PrōnōmenConiūnctīvum extends Nōminālis <PrōnōmenConi�
     nūntius().plūsGarriō("Scrībor ut", scrīptiō);
   }
 
+    /**
+     * {@inheritDoc}
+     */
   public <Illud extends Verbum <Illud>> @NotNull LinkedList <Verbum <@Nullable ?>> coniugō(@Nullable final Illud prīma,
                                                                                            @Nullable final Illud secunda) {
     return Stream.of(prīma, this, secunda)
@@ -34,11 +46,17 @@ public final class PrōnōmenConiūnctīvum extends Nōminālis <PrōnōmenConi�
                  .collect(Collectors.toCollection(LinkedList::new));
   }
 
+    /**
+     * {@inheritDoc}
+     */
   public @NotNull Verba coniugō(@NotNull final Verba prīma, @NotNull final Verba secunda) {
     prīma.coniūnctīvumAllegōContinuōque(this, secunda);
     return prīma;
   }
 
+    /**
+     * {@inheritDoc}
+     */
   public @NotNull Verba coniugō(@NotNull final Verba prīma, @NotNull final LinkedList <Verbum <@Nullable ?>> secunda) {
     prīma.coniūnctīvumAllegōContinuōque(this, Verba.conditōr().seriēs(secunda).condam());
     return prīma;
