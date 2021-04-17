@@ -9,11 +9,24 @@ import org.jetbrains.annotations.*;
 
 import java.util.function.Supplier;
 
+/**
+ * Classis {@link Adiectīvum} repraesentat adiectīva ut coniectēris.
+ * Adiectīva catēgoriam {@link Catēgoria#NŌMEN} ūtuntur et cōnservāta sunt in scrīniō <a href="../src/main/resources/adiectīva">adiectīva</a>.
+ * Discrīmina prīmōria inter classibus hāc et {@link Prōnōmen} est huius valor {@link #gradus}.
+ * @see LēctorMultiplicibus.LēctorAdiectīvīs
+ * @see TenorMultiplicibus.TenorAdiectīvīs
+ * @see InventorAdiectīvīs
+ * @see ConditōrAdiectīvīs
+ */
 @SuppressWarnings({ "NonAsciiCharacters", "SpellCheckingInspection" })
 public final class Adiectīvum extends Nōminālis <Adiectīvum> {
   @Getter(lazy = true) @Accessors(fluent = true)
   private final @NotNull NūntiusAdiectīvōrum nūntius = NūntiusAdiectīvōrum.fac.get();
 
+  /**
+   * Valor hic potentiam reī huius dēsignat.
+   * @see Gradus
+   */
   public final @NotNull Gradus gradus;
 
   @Builder(builderClassName = "Conditōr", builderMethodName = "conditōr", buildMethodName = "condam")
