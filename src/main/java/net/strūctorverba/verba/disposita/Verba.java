@@ -9,6 +9,10 @@ import org.jetbrains.annotations.*;
 
 import java.util.*;
 
+/**
+ * Classis {@link Verba} rēs classis {@link Verbum} cōnsit.
+ * Rēs classis huius et seriem rērum classis {@link Verbum} et rēs classis {@link Coniugiāle} et aliam classis {@link Verba} constat.
+ */
 @SuppressWarnings({ "NonAsciiCharacters", "SpellCheckingInspection", "unused" })
 public final class Verba {
   private final @NotNull LinkedList <Verbum <?>> seriēs       = new LinkedList <>();
@@ -40,15 +44,24 @@ public final class Verba {
     this.seriēs.addAll(seriēs);
   }
 
+  /**
+   * Modus hic ūsūfructuāriōs licet rem classis {@link Coniugiāle} huius allegere.
+   */
   public void coniūnctīvumAllegō(@NotNull final Coniugiāle coniūnctīvum) {
     this.coniūnctīvum = coniūnctīvum;
   }
 
+  /**
+   * Modus hic ūsūfructuāriōs licet rēs et classis {@link Coniugiāle} et classis {@link Verba} huius allegere.
+   */
   public void coniūnctīvumAllegōContinuōque(@NotNull final Coniugiāle coniūnctīvum, @NotNull final Verba continuāta) {
     this.coniūnctīvum = coniūnctīvum;
     this.continuāta = continuāta;
   }
 
+  /**
+   * @return repraesentātiōnem scrīpta reī huius. Rēs omnēs contentās cōnsit et cum spatiīs distinet.
+   */
   public @NotNull @Override String toString( ) {
     final StringBuilder strūctor = new StringBuilder();
     seriēs.forEach(verbum -> strūctor.append(verbum).append(' '));
