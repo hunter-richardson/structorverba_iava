@@ -17,19 +17,19 @@ public abstract class Nōminālis <Hoc extends VerbumMultiplex <Hoc>> extends Ve
   public final @NotNull Speciālitās speciālitās;
   
   /**
-   * Valor hic generem eius dēsignat.
+   * Valor hic generem reī huius dēsignat.
    * @see Genus
    */
   public final @NotNull Genus genus;
   
   /**
-   * Valor hic cāsum eius dēsignat.
+   * Valor hic cāsum reī huius dēsignat.
    * @see Cāsus
    */
   public final @NotNull Cāsus cāsus;
   
   /**
-   * Valor hic numerum eius dēsignat.
+   * Valor hic numerum reī huius dēsignat.
    * @see Numerāle
    */
   public final @NotNull Numerāle numerāle;
