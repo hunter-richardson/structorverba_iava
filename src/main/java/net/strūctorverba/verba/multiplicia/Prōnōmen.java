@@ -11,7 +11,7 @@ import java.util.function.Supplier;
 
 /**
  * Classis {@link Prōnōmen} repraesentat nōmina ut coniectēris.
- * Nōmina catēgoriam {@link Catēgoria#PRŌNŌMEN} ūtuntur et cōnservāta sunt in scrīniō <a href="../src/main/resources/prōnōmina">prōnōmina</a>.
+ * Prōnōmina catēgoriam {@link Catēgoria#PRŌNŌMEN} ūtuntur et cōnservāta sunt in scrīniō <a href="../src/main/resources/prōnōmina">prōnōmina</a>.
  * @see LēctorMultiplicibus.LēctorPrōnōminibus
  * @see TenorMultiplicibus.TenorPrōnōminibus
  * @see InventorPrōnōminibus
