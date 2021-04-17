@@ -12,6 +12,14 @@ import org.jetbrains.annotations.*;
 import java.util.Objects;
 import java.util.function.Supplier;
 
+/**
+ * Classis {@link Āctum} repraesentat nōmina ut coniectēris.
+ * Nōmina catēgoriam {@link Catēgoria#ĀCTUM} ūtuntur et cōnservāta sunt in scrīniō <a href="../src/main/resources/ācta">ācta</a>.
+ * @see LēctorMultiplicibus.LēctorĀctīs
+ * @see TenorMultiplicibus.TenorĀctīs
+ * @see InventorĀctīs
+ * @see ConditōrĀctīs
+ */
 @SuppressWarnings({ "NonAsciiCharacters", "SpellCheckingInspection", "unused" })
 public final class Āctum extends VerbumMultiplex <Āctum> {
   @Getter(lazy = true) @Accessors(fluent = true)
@@ -23,11 +31,35 @@ public final class Āctum extends VerbumMultiplex <Āctum> {
   @Getter(lazy = true) @Accessors(fluent = true)
   private final @NotNull NūntiusĀctōrum nūntius = NūntiusĀctōrum.fac.get();
 
-  public final @NotNull Modus    modus;
-  public final @NotNull Vōx      vōx;
-  public final @NotNull Tempus   tempus;
+  /**
+   * Valor hic modum reī huius dēsignat.
+   * @see Modus
+   */
+  public final @NotNull Modus modus;
+
+  /**
+   * Valor hic vōcem reī huius dēsignat.
+   * @see Modus
+   */
+  public final @NotNull Vōx vōx;
+
+  /**
+   * Valor hic temporem reī huius dēsignat.
+   * @see Tempus
+   */
+  public final @NotNull Tempus tempus;
+
+  /**
+   * Valor hic numerum reī huius dēsignat.
+   * @see Numerāle
+   */
   public final @NotNull Numerāle numerāle;
-  public final @NotNull Persōna  persōna;
+
+  /**
+   * Valor hic persōnam reī huius dēsignat.
+   * @see Persōna
+   */
+  public final @NotNull Persōna persōna;
 
   @Builder(builderClassName = "Conditōr", builderMethodName = "conditōr", buildMethodName = "condam")
   private Āctum(@NotNull final Modus modus, @NotNull final Vōx vōx, @NotNull final Tempus tempus,
@@ -42,13 +74,24 @@ public final class Āctum extends VerbumMultiplex <Āctum> {
     nūntius().plūsGarriō("Scrībor ut", scrīptiō);
   }
 
+  /**
+   * Modus hic rem classis {@link Adiectīvum} ā parametrī dēsignātīs advenit.
+   * @return rem classis {@link Adiectīvum} quod parametrōs dēsignātōs quadrat.
+   * @param vx valōrem {@link #vōx} indicat.
+   * @param tmps valōrem {@link #tempus} indicat.
+   * @param spclt valōrem {@link Nōminālis#speciālitās} indicat.
+   * @param gns valōrem {@link Nōminālis#genus} indicat.
+   * @param css valōrem {@link Nōminālis#cāsus} indicat.
+   * @param nmrl valōrem {@link Nōminālis#numerāle} indicat.
+   * @param grds valōrem {@link Adiectīvum#gradus} indicat.
+   */
   public @Nullable Adiectīvum participem(@NotNull final Vōx vx, @NotNull final Tempus tmps,
                                          @NotNull final Speciālitās spclt, @NotNull final Genus gns,
-                                         @NotNull final Cāsus css, @NotNull final Numerāle nmrl) {
+                                         @NotNull final Cāsus css, @NotNull final Numerāle nmrl, @NotNull final Gradus grds) {
     if(Modus.PARTICIPIUM.equals(modus)
        && vōx.equals(vx)
        && tempus.equals(tmps)) {
-      return adiectīva().adveniam(toString(), spclt, gns, css, nmrl, Gradus.NŌRMĀlE);
+      return adiectīva().adveniam(toString(), spclt, gns, css, nmrl, grds);
     } else {
       Āctum alium = ācta().adveniam(fundāmen, Modus.PARTICIPIUM, vx, tmps);
       return Objects.isNull(alium) ? null
@@ -56,21 +99,51 @@ public final class Āctum extends VerbumMultiplex <Āctum> {
     }
   }
 
+  /**
+   * Modus hic rem classis {@link Adiectīvum} ā parametrī dēsignātīs advenit.
+   * @return rem classis {@link Adiectīvum} quod parametrōs dēsignātōs quadrat.
+   * @param vx valōrem {@link #vōx} indicat.
+   * @param spclt valōrem {@link Nōminālis#speciālitās} indicat.
+   * @param gns valōrem {@link Nōminālis#genus} indicat.
+   * @param css valōrem {@link Nōminālis#cāsus} indicat.
+   * @param nmrl valōrem {@link Nōminālis#numerāle} indicat.
+   * @param grds valōrem {@link Adiectīvum#gradus} indicat.
+   */
   public @Nullable Adiectīvum participem(@NotNull final Vōx vx, @NotNull final Speciālitās spclt,
                                          @NotNull final Genus gns, @NotNull final Cāsus css,
-                                         @NotNull final Numerāle nmrl) {
-    return participem(vx, tempus, spclt, gns, css, nmrl);
+                                         @NotNull final Numerāle nmrl, @NotNull final Gradus grds) {
+    return participem(vx, tempus, spclt, gns, css, nmrl, grds);
   }
 
+  /**
+   * Modus hic rem classis {@link Adiectīvum} ā parametrī dēsignātīs advenit.
+   * @return rem classis {@link Adiectīvum} quod parametrōs dēsignātōs quadrat.
+   * @param tmps valōrem {@link #tempus} indicat.
+   * @param spclt valōrem {@link Nōminālis#speciālitās} indicat.
+   * @param gns valōrem {@link Nōminālis#genus} indicat.
+   * @param css valōrem {@link Nōminālis#cāsus} indicat.
+   * @param nmrl valōrem {@link Nōminālis#numerāle} indicat.
+   * @param grds valōrem {@link Adiectīvum#gradus} indicat.
+   */
   public @Nullable Adiectīvum participem(@NotNull final Tempus tmps, @NotNull final Speciālitās spclt,
                                          @NotNull final Genus gns, @NotNull final Cāsus css,
-                                         @NotNull final Numerāle nmrl) {
-    return participem(vōx, tmps, spclt, gns, css, nmrl);
+                                         @NotNull final Numerāle nmrl, @NotNull final Gradus grds) {
+    return participem(vōx, tmps, spclt, gns, css, nmrl, grds);
   }
 
+  /**
+   * Modus hic rem classis {@link Adiectīvum} ā parametrī dēsignātīs advenit.
+   * @return rem classis {@link Adiectīvum} quod parametrōs dēsignātōs quadrat.
+   * @param spclt valōrem {@link Nōminālis#speciālitās} indicat.
+   * @param gns valōrem {@link Nōminālis#genus} indicat.
+   * @param css valōrem {@link Nōminālis#cāsus} indicat.
+   * @param nmrl valōrem {@link Nōminālis#numerāle} indicat.
+   * @param grds valōrem {@link Adiectīvum#gradus} indicat.
+   */
   public @Nullable Adiectīvum participem(@NotNull final Speciālitās spclt, @NotNull final Genus gns,
-                                         @NotNull final Cāsus css, @NotNull final Numerāle nmrl) {
-    return participem(vōx, tempus, spclt, gns, css, nmrl);
+                                         @NotNull final Cāsus css, @NotNull final Numerāle nmrl,
+                                         @NotNull final Gradus grds) {
+    return participem(vōx, tempus, spclt, gns, css, nmrl, grds);
   }
 
   public static final class NūntiusĀctōrum extends Nūntius {
