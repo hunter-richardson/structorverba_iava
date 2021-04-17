@@ -20,12 +20,12 @@ import org.jetbrains.annotations.NotNull;
 @SuppressWarnings({ "NonAsciiCharacters", "SpellCheckingInspection" })
 public abstract class Verbum <Hoc extends Verbum <Hoc>> {
   /**
-   * Valor hic repraesentat fōrma verbī cui rādīcēscit. Quoque nōminātur scāpum XML quō cōnservātum est.
+   * Valor hic repraesentat fōrmam verbī cui rādīcēscit. Quoque nōminātur scāpum XML quō cōnservātum est.
    */
   public final @NotNull String fundāmen;
 
   /**
-   * Valor hic extēnsiō classī huius reī huic dēsignat.
+   * Valor hic extēnsiōnem classī huius reī huic dēsignat.
    * {@link Catēgoria#scrīptiō} quoque nōminātur scrīnium intrā quō scāpum eius cōnservātum est.
    * @see Catēgoria
    */
@@ -42,7 +42,7 @@ public abstract class Verbum <Hoc extends Verbum <Hoc>> {
   }
 
   /**
-   * @return repraesentātiō scrīpta reī classis {@link Verbum}.
+   * @return repraesentātiōnem scrīpta reī classis {@link Verbum}.
    */
   public abstract @Override @NotNull String toString( );
 }
