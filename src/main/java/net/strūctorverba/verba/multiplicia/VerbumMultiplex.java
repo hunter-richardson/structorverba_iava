@@ -51,7 +51,7 @@ public abstract class VerbumMultiplex <Hoc extends Verbum <Hoc>> extends Verbum 
   }
 
   /**
-   * @return repraesentātiōnem scrīpta reī classis {@link Verbum}. Valōrem {@link #encliticum} valōrī {@link #scrīptiō} addit.
+   * @return repraesentātiōnem scrīpta reī huius. Valōrem {@link #encliticum} valōrī {@link #scrīptiō} addit.
    */
   public @Override @NotNull String toString( ) {
     return Encliticum.NŌLĒNS.equals(encliticum) ? scrīptiō
