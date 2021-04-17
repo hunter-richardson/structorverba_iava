@@ -9,6 +9,14 @@ import org.jetbrains.annotations.*;
 
 import java.util.function.Supplier;
 
+/**
+ * Classis {@link Nōmen} repraesentat nōmina ut coniectēris.
+ * Nōmina catēgoriam {@link Catēgoria#NŌMEN} ūtuntur et cōnservāta sunt in scrīniō <a href="../src/main/resources/nōmina">nōmina</a>.
+ * @see LēctorMultiplicibus.LēctorNōminibus
+ * @see TenorMultiplicibus.TenorNōminibus
+ * @see InventorNōminibus
+ * @see ConditōrNōminibus
+ */
 @SuppressWarnings({ "NonAsciiCharacters", "SpellCheckingInspection" })
 public final class Nōmen extends Nōminālis <Nōmen> {
   @Getter(lazy = true) @Accessors(fluent = true)
