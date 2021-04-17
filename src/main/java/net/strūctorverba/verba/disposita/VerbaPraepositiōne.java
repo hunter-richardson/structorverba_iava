@@ -11,6 +11,11 @@ import org.jetbrains.annotations.*;
 
 import java.util.function.Supplier;
 
+/**
+ * Classis {@link VerbaPraepositiōne} rēs classum {@link Nōminālis} et {@link VerbumSimplex.Praepositiō} conciliat.
+ * VerbaPraepositiōne catēgoriam {@link Catēgoria#VERBA_PRAEPOSITIŌNE} ūtuntur et sunt generātī statim quam cōnservātī intrā scrīnium <a href="../src/main/resources">auxiliārēs</a>.
+ * @see StrūctorVerba
+ */
 @SuppressWarnings({ "NonAsciiCharacters", "SpellCheckingInspection", "unused" })
 public final class VerbaPraepositiōne extends VerbumMultiplex <VerbaPraepositiōne> {
   @Getter(lazy = true) @Accessors(fluent = true)
@@ -55,6 +60,9 @@ public final class VerbaPraepositiōne extends VerbumMultiplex <VerbaPraepositi�
     return this;
   }
 
+  /**
+   * @return repraesentātiōnem scrīpta reī classis {@link Verbum}. Valōrem rēs classum {@link Nōminālis} et {@link VerbumSimplex.Praepositiō} addit.
+   */
   public @Override @NotNull String toString( ) {
     if (StringUtils.isNotBlank(praepositiō.fundāmen)) {
       return String.format("%s %s", praepositiō.fundāmen, rēs);
