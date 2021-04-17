@@ -1,0 +1,128 @@
+<āctum fundāmen="cōnsectārī">
+  <fōrma modus="īnfīnītīvum" vōx="āctīvum" tempus="praesēns">
+    cōnsectārī
+  </fōrma>
+  <fōrma modus="participium" vōx="āctīvum" tempus="praesēns">
+    cōnsectāns
+  </fōrma>
+  <fōrma modus="participium" vōx="āctīvum" tempus="perfectum">
+    cōnsectātus
+  </fōrma>
+  <fōrma modus="participium" vōx="āctīvum" tempus="futūrum">
+    cōnsectātūrus
+  </fōrma>
+  <fōrma modus="participium" vōx="passīvum" tempus="futūrum">
+    cōnsectandus
+  </fōrma>
+
+  <fōrma modus="imperātīvum" vōx="āctīvum" tempus="praesēns" numerāle="singulāre" persōna="secundum">
+    cōnsectāre
+  </fōrma>
+  <fōrma modus="imperātīvum" vōx="āctīvum" tempus="praesēns" numerāle="plūrāle" persōna="secundum">
+    cōnsectāminī
+  </fōrma>
+  <fōrma modus="imperātīvum" vōx="āctīvum" tempus="futūrum" numerāle="singulāre" persōna="secundum">
+    cōnsectātor
+  </fōrma>
+  <fōrma modus="imperātīvum" vōx="āctīvum" tempus="futūrum" numerāle="singulāre" persōna="tertium">
+    cōnsectātor
+  </fōrma>
+  <fōrma modus="imperātīvum" vōx="āctīvum" tempus="futūrum" numerāle="plūrāle" persōna="tertium">
+    cōnsectantor
+  </fōrma>
+
+  <fōrma modus="indicātīvum" vōx="āctīvum" tempus="praesēns" numerāle="singulāre" persōna="prīmum">
+    cōnsector
+  </fōrma>
+  <fōrma modus="indicātīvum" vōx="āctīvum" tempus="praesēns" numerāle="singulāre" persōna="secundum">
+    cōnsectāris
+  </fōrma>
+  <fōrma modus="indicātīvum" vōx="āctīvum" tempus="praesēns" numerāle="singulāre" persōna="tertium">
+    cōnsectātur
+  </fōrma>
+  <fōrma modus="indicātīvum" vōx="āctīvum" tempus="praesēns" numerāle="Numerāle" persōna="prīmum">
+    cōnsectāmur
+  </fōrma>
+  <fōrma modus="indicātīvum" vōx="āctīvum" tempus="praesēns" numerāle="Numerāle" persōna="secundum">
+    cōnsectāminī
+  </fōrma>
+  <fōrma modus="indicātīvum" vōx="āctīvum" tempus="praesēns" numerāle="Numerāle" persōna="tertium">
+    cōnsectantur
+  </fōrma>
+
+  <fōrma modus="indicātīvum" vōx="āctīvum" tempus="infectum" numerāle="singulāre" persōna="prīmum">
+    cōnsectābar
+  </fōrma>
+  <fōrma modus="indicātīvum" vōx="āctīvum" tempus="infectum" numerāle="singulāre" persōna="secundum">
+    cōnsectābāris
+  </fōrma>
+  <fōrma modus="indicātīvum" vōx="āctīvum" tempus="infectum" numerāle="singulāre" persōna="tertium">
+    cōnsectābātur
+  </fōrma>
+  <fōrma modus="indicātīvum" vōx="āctīvum" tempus="infectum" numerāle="Numerāle" persōna="prīmum">
+    cōnsectābāmur
+  </fōrma>
+  <fōrma modus="indicātīvum" vōx="āctīvum" tempus="infectum" numerāle="Numerāle" persōna="secundum">
+    cōnsectābāminī
+  </fōrma>
+  <fōrma modus="indicātīvum" vōx="āctīvum" tempus="infectum" numerāle="Numerāle" persōna="tertium">
+    cōnsectābantur
+  </fōrma>
+
+  <fōrma modus="indicātīvum" vōx="āctīvum" tempus="futūrum" numerāle="singulāre" persōna="prīmum">
+    cōnsectābor
+  </fōrma>
+  <fōrma modus="indicātīvum" vōx="āctīvum" tempus="futūrum" numerāle="singulāre" persōna="secundum">
+    cōnsectāberis
+  </fōrma>
+  <fōrma modus="indicātīvum" vōx="āctīvum" tempus="futūrum" numerāle="singulāre" persōna="tertium">
+    cōnsectābitur
+  </fōrma>
+  <fōrma modus="indicātīvum" vōx="āctīvum" tempus="futūrum" numerāle="Numerāle" persōna="prīmum">
+    cōnsectābimur
+  </fōrma>
+  <fōrma modus="indicātīvum" vōx="āctīvum" tempus="futūrum" numerāle="Numerāle" persōna="secundum">
+    cōnsectābiminī
+  </fōrma>
+  <fōrma modus="indicātīvum" vōx="āctīvum" tempus="futūrum" numerāle="Numerāle" persōna="tertium">
+    cōnsectābuntur
+  </fōrma>
+
+  <fōrma modus="subiūnctīvum" vōx="āctīvum" tempus="praesēns" numerāle="singulāre" persōna="prīmum">
+    cōnsecter
+  </fōrma>
+  <fōrma modus="subiūnctīvum" vōx="āctīvum" tempus="praesēns" numerāle="singulāre" persōna="secundum">
+    cōnsectēris
+  </fōrma>
+  <fōrma modus="subiūnctīvum" vōx="āctīvum" tempus="praesēns" numerāle="singulāre" persōna="tertium">
+    cōnsectētur
+  </fōrma>
+  <fōrma modus="subiūnctīvum" vōx="āctīvum" tempus="praesēns" numerāle="Numerāle" persōna="prīmum">
+    cōnsectēmur
+  </fōrma>
+  <fōrma modus="subiūnctīvum" vōx="āctīvum" tempus="praesēns" numerāle="Numerāle" persōna="secundum">
+    cōnsectēminī
+  </fōrma>
+  <fōrma modus="subiūnctīvum" vōx="āctīvum" tempus="praesēns" numerāle="Numerāle" persōna="tertium">
+    cōnsectentur
+  </fōrma>
+
+  <fōrma modus="subiūnctīvum" vōx="āctīvum" tempus="infectum" numerāle="singulāre" persōna="prīmum">
+    cōnsectārer
+  </fōrma>
+  <fōrma modus="subiūnctīvum" vōx="āctīvum" tempus="infectum" numerāle="singulāre" persōna="secundum">
+    cōnsectārēris
+  </fōrma>
+  <fōrma modus="subiūnctīvum" vōx="āctīvum" tempus="infectum" numerāle="singulāre" persōna="tertium">
+    cōnsectārētur
+  </fōrma>
+  <fōrma modus="subiūnctīvum" vōx="āctīvum" tempus="infectum" numerāle="Numerāle" persōna="prīmum">
+    cōnsectārēmur
+  </fōrma>
+  <fōrma modus="subiūnctīvum" vōx="āctīvum" tempus="infectum" numerāle="Numerāle" persōna="secundum">
+    cōnsectārēminī
+  </fōrma>
+  <fōrma modus="subiūnctīvum" vōx="āctīvum" tempus="infectum" numerāle="Numerāle" persōna="tertium">
+    cōnsectārentur
+  </fōrma>
+</āctum>

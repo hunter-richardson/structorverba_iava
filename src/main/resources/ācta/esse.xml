@@ -1,0 +1,220 @@
+<āctum fundāmen="esse">
+  <fōrma modus="īnfīnītīvum" vōx="āctīvum" tempus="praesēns">
+    esse
+  </fōrma>
+  <fōrma modus="īnfīnītīvum" vōx="āctīvum" tempus="perfectum">
+    fuisse
+  </fōrma>
+  <fōrma modus="participium" vōx="āctīvum" tempus="futūrum">
+    futūrus
+  </fōrma>
+
+  <fōrma modus="imperātīvum" vōx="āctīvum" tempus="praesēns" numerāle="singulāre" persōna="secundum">
+    es
+  </fōrma>
+  <fōrma modus="imperātīvum" vōx="āctīvum" tempus="praesēns" numerāle="plūrāle" persōna="secundum">
+    este
+  </fōrma>
+  <fōrma modus="imperātīvum" vōx="āctīvum" tempus="futūrum" numerāle="singulāre" persōna="secundum">
+    estō
+  </fōrma>
+  <fōrma modus="imperātīvum" vōx="āctīvum" tempus="futūrum" numerāle="singulāre" persōna="tertium">
+    estō
+  </fōrma>
+  <fōrma modus="imperātīvum" vōx="āctīvum" tempus="futūrum" numerāle="plūrāle" persōna="secundum">
+    estōte
+  </fōrma>
+  <fōrma modus="imperātīvum" vōx="āctīvum" tempus="futūrum" numerāle="plūrāle" persōna="tertium">
+    suntō
+  </fōrma>
+
+  <fōrma modus="indicātīvum" vōx="āctīvum" tempus="praesēns" numerāle="singulāre" persōna="prīmum">
+    sum
+  </fōrma>
+  <fōrma modus="indicātīvum" vōx="āctīvum" tempus="praesēns" numerāle="singulāre" persōna="secundum">
+    es
+  </fōrma>
+  <fōrma modus="indicātīvum" vōx="āctīvum" tempus="praesēns" numerāle="singulāre" persōna="tertium">
+    est
+  </fōrma>
+  <fōrma modus="indicātīvum" vōx="āctīvum" tempus="praesēns" numerāle="Numerāle" persōna="prīmum">
+    sumus
+  </fōrma>
+  <fōrma modus="indicātīvum" vōx="āctīvum" tempus="praesēns" numerāle="Numerāle" persōna="secundum">
+    estis
+  </fōrma>
+  <fōrma modus="indicātīvum" vōx="āctīvum" tempus="praesēns" numerāle="Numerāle" persōna="tertium">
+    sunt
+  </fōrma>
+
+  <fōrma modus="indicātīvum" vōx="āctīvum" tempus="infectum" numerāle="singulāre" persōna="prīmum">
+    eram
+  </fōrma>
+  <fōrma modus="indicātīvum" vōx="āctīvum" tempus="infectum" numerāle="singulāre" persōna="secundum">
+    erās
+  </fōrma>
+  <fōrma modus="indicātīvum" vōx="āctīvum" tempus="infectum" numerāle="singulāre" persōna="tertium">
+    erat
+  </fōrma>
+  <fōrma modus="indicātīvum" vōx="āctīvum" tempus="infectum" numerāle="Numerāle" persōna="prīmum">
+    erāmus
+  </fōrma>
+  <fōrma modus="indicātīvum" vōx="āctīvum" tempus="infectum" numerāle="Numerāle" persōna="secundum">
+    erātis
+  </fōrma>
+  <fōrma modus="indicātīvum" vōx="āctīvum" tempus="infectum" numerāle="Numerāle" persōna="tertium">
+    erant
+  </fōrma>
+
+  <fōrma modus="indicātīvum" vōx="āctīvum" tempus="futūrum" numerāle="singulāre" persōna="prīmum">
+    erō
+  </fōrma>
+  <fōrma modus="indicātīvum" vōx="āctīvum" tempus="futūrum" numerāle="singulāre" persōna="secundum">
+    eris
+  </fōrma>
+  <fōrma modus="indicātīvum" vōx="āctīvum" tempus="futūrum" numerāle="singulāre" persōna="tertium">
+    erit
+  </fōrma>
+  <fōrma modus="indicātīvum" vōx="āctīvum" tempus="futūrum" numerāle="Numerāle" persōna="prīmum">
+    erimus
+  </fōrma>
+  <fōrma modus="indicātīvum" vōx="āctīvum" tempus="futūrum" numerāle="Numerāle" persōna="secundum">
+    eritis
+  </fōrma>
+  <fōrma modus="indicātīvum" vōx="āctīvum" tempus="futūrum" numerāle="Numerāle" persōna="tertium">
+    erunt
+  </fōrma>
+
+  <fōrma modus="indicātīvum" vōx="āctīvum" tempus="perfectum" numerāle="singulāre" persōna="prīmum">
+    fuī
+  </fōrma>
+  <fōrma modus="indicātīvum" vōx="āctīvum" tempus="perfectum" numerāle="singulāre" persōna="secundum">
+    fuistī
+  </fōrma>
+  <fōrma modus="indicātīvum" vōx="āctīvum" tempus="perfectum" numerāle="singulāre" persōna="tertium">
+    fuit
+  </fōrma>
+  <fōrma modus="indicātīvum" vōx="āctīvum" tempus="perfectum" numerāle="Numerāle" persōna="prīmum">
+    fuimus
+  </fōrma>
+  <fōrma modus="indicātīvum" vōx="āctīvum" tempus="perfectum" numerāle="Numerāle" persōna="secundum">
+    fuitis
+  </fōrma>
+  <fōrma modus="indicātīvum" vōx="āctīvum" tempus="perfectum" numerāle="Numerāle" persōna="tertium">
+    fuērunt
+  </fōrma>
+
+  <fōrma modus="indicātīvum" vōx="āctīvum" tempus="plūperfectum" numerāle="singulāre" persōna="prīmum">
+    fueram
+  </fōrma>
+  <fōrma modus="indicātīvum" vōx="āctīvum" tempus="plūperfectum" numerāle="singulāre" persōna="secundum">
+    fuerās
+  </fōrma>
+  <fōrma modus="indicātīvum" vōx="āctīvum" tempus="plūperfectum" numerāle="singulāre" persōna="tertium">
+    fuerat
+  </fōrma>
+  <fōrma modus="indicātīvum" vōx="āctīvum" tempus="plūperfectum" numerāle="Numerāle" persōna="prīmum">
+    fuerāmus
+  </fōrma>
+  <fōrma modus="indicātīvum" vōx="āctīvum" tempus="plūperfectum" numerāle="Numerāle" persōna="secundum">
+    fuerātis
+  </fōrma>
+  <fōrma modus="indicātīvum" vōx="āctīvum" tempus="plūperfectum" numerāle="Numerāle" persōna="tertium">
+    fuerant
+  </fōrma>
+
+  <fōrma modus="indicātīvum" vōx="āctīvum" tempus="perfutūrum" numerāle="singulāre" persōna="prīmum">
+    fuerō
+  </fōrma>
+  <fōrma modus="indicātīvum" vōx="āctīvum" tempus="perfutūrum" numerāle="singulāre" persōna="secundum">
+    fueris
+  </fōrma>
+  <fōrma modus="indicātīvum" vōx="āctīvum" tempus="perfutūrum" numerāle="singulāre" persōna="tertium">
+    fuerit
+  </fōrma>
+  <fōrma modus="indicātīvum" vōx="āctīvum" tempus="perfutūrum" numerāle="Numerāle" persōna="prīmum">
+    fuerimus
+  </fōrma>
+  <fōrma modus="indicātīvum" vōx="āctīvum" tempus="perfutūrum" numerāle="Numerāle" persōna="secundum">
+    fueritis
+  </fōrma>
+  <fōrma modus="indicātīvum" vōx="āctīvum" tempus="perfutūrum" numerāle="Numerāle" persōna="tertium">
+    fuerint
+  </fōrma>
+
+  <fōrma modus="subiūnctīvum" vōx="āctīvum" tempus="praesēns" numerāle="singulāre" persōna="prīmum">
+    sis
+  </fōrma>
+  <fōrma modus="subiūnctīvum" vōx="āctīvum" tempus="praesēns" numerāle="singulāre" persōna="secundum">
+    sīs
+  </fōrma>
+  <fōrma modus="subiūnctīvum" vōx="āctīvum" tempus="praesēns" numerāle="singulāre" persōna="tertium">
+    sit
+  </fōrma>
+  <fōrma modus="subiūnctīvum" vōx="āctīvum" tempus="praesēns" numerāle="Numerāle" persōna="prīmum">
+    sīmus
+  </fōrma>
+  <fōrma modus="subiūnctīvum" vōx="āctīvum" tempus="praesēns" numerāle="Numerāle" persōna="secundum">
+    sītis
+  </fōrma>
+  <fōrma modus="subiūnctīvum" vōx="āctīvum" tempus="praesēns" numerāle="Numerāle" persōna="tertium">
+    sint
+  </fōrma>
+
+  <fōrma modus="subiūnctīvum" vōx="āctīvum" tempus="infectum" numerāle="singulāre" persōna="prīmum">
+    essem
+  </fōrma>
+  <fōrma modus="subiūnctīvum" vōx="āctīvum" tempus="infectum" numerāle="singulāre" persōna="secundum">
+    essēs
+  </fōrma>
+  <fōrma modus="subiūnctīvum" vōx="āctīvum" tempus="infectum" numerāle="singulāre" persōna="tertium">
+    esset
+  </fōrma>
+  <fōrma modus="subiūnctīvum" vōx="āctīvum" tempus="infectum" numerāle="Numerāle" persōna="prīmum">
+    essēmus
+  </fōrma>
+  <fōrma modus="subiūnctīvum" vōx="āctīvum" tempus="infectum" numerāle="Numerāle" persōna="secundum">
+    essētis
+  </fōrma>
+  <fōrma modus="subiūnctīvum" vōx="āctīvum" tempus="infectum" numerāle="Numerāle" persōna="tertium">
+    essent
+  </fōrma>
+
+  <fōrma modus="subiūnctīvum" vōx="āctīvum" tempus="perfectum" numerāle="singulāre" persōna="prīmum">
+    fuerim
+  </fōrma>
+  <fōrma modus="subiūnctīvum" vōx="āctīvum" tempus="perfectum" numerāle="singulāre" persōna="secundum">
+    fuerīs
+  </fōrma>
+  <fōrma modus="subiūnctīvum" vōx="āctīvum" tempus="perfectum" numerāle="singulāre" persōna="tertium">
+    fuerit
+  </fōrma>
+  <fōrma modus="subiūnctīvum" vōx="āctīvum" tempus="perfectum" numerāle="Numerāle" persōna="prīmum">
+    fuerīmus
+  </fōrma>
+  <fōrma modus="subiūnctīvum" vōx="āctīvum" tempus="perfectum" numerāle="Numerāle" persōna="secundum">
+    fuerītis
+  </fōrma>
+  <fōrma modus="subiūnctīvum" vōx="āctīvum" tempus="perfectum" numerāle="Numerāle" persōna="tertium">
+    fuerint
+  </fōrma>
+
+  <fōrma modus="subiūnctīvum" vōx="āctīvum" tempus="plūperfectum" numerāle="singulāre" persōna="prīmum">
+    fuissem
+  </fōrma>
+  <fōrma modus="subiūnctīvum" vōx="āctīvum" tempus="plūperfectum" numerāle="singulāre" persōna="secundum">
+    fuissēs
+  </fōrma>
+  <fōrma modus="subiūnctīvum" vōx="āctīvum" tempus="plūperfectum" numerāle="singulāre" persōna="tertium">
+    fuisset
+  </fōrma>
+  <fōrma modus="subiūnctīvum" vōx="āctīvum" tempus="plūperfectum" numerāle="Numerāle" persōna="prīmum">
+    fuissēmus
+  </fōrma>
+  <fōrma modus="subiūnctīvum" vōx="āctīvum" tempus="plūperfectum" numerāle="Numerāle" persōna="secundum">
+    fuissētis
+  </fōrma>
+  <fōrma modus="subiūnctīvum" vōx="āctīvum" tempus="plūperfectum" numerāle="Numerāle" persōna="tertium">
+    fuissent
+  </fōrma>
+</āctum>

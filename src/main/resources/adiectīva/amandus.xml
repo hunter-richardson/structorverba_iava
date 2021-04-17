@@ -1,0 +1,343 @@
+<adiectīvum fundāmen="amandus">
+  <fōrma speciālitās="commūne" genus="masculīnum" numerāle="singulāre" cāsus="nōminātīvum" gradus="nōrmāle">
+    amandus
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="masculīnum" numerāle="singulāre" cāsus="genitīvum" gradus="nōrmāle">
+    amandī
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="masculīnum" numerāle="singulāre" cāsus="datīvum" gradus="nōrmāle">
+    amandō
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="masculīnum" numerāle="singulāre" cāsus="accūsātīvum" gradus="nōrmāle">
+    amandum
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="masculīnum" numerāle="singulāre" cāsus="ablātīvum" gradus="nōrmāle">
+    amandō
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="masculīnum" numerāle="singulāre" cāsus="locātīvum" gradus="nōrmāle">
+    amande
+  </fōrma>
+
+  <fōrma speciālitās="commūne" genus="masculīnum" numerāle="plūrāle" cāsus="nōminātīvum" gradus="nōrmāle">
+    amandī
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="masculīnum" numerāle="plūrāle" cāsus="genitīvum" gradus="nōrmāle">
+    amandōrum
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="masculīnum" numerāle="plūrāle" cāsus="datīvum" gradus="nōrmāle">
+    amandīs
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="masculīnum" numerāle="plūrāle" cāsus="accūsātīvum" gradus="nōrmāle">
+    amandōs
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="masculīnum" numerāle="plūrāle" cāsus="ablātīvum" gradus="nōrmāle">
+    amandīs
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="masculīnum" numerāle="plūrāle" cāsus="locātīvum" gradus="nōrmāle">
+    amandī
+  </fōrma>
+
+  <fōrma speciālitās="commūne" genus="fēminīnum" numerāle="singulāre" cāsus="nōminātīvum" gradus="nōrmāle">
+    amanda
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="fēminīnum" numerāle="singulāre" cāsus="genitīvum" gradus="nōrmāle">
+    amandae
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="fēminīnum" numerāle="singulāre" cāsus="datīvum" gradus="nōrmāle">
+    amandā
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="fēminīnum" numerāle="singulāre" cāsus="accūsātīvum" gradus="nōrmāle">
+    amandam
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="fēminīnum" numerāle="singulāre" cāsus="ablātīvum" gradus="nōrmāle">
+    amandā
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="fēminīnum" numerāle="singulāre" cāsus="locātīvum" gradus="nōrmāle">
+    amanda
+  </fōrma>
+
+  <fōrma speciālitās="commūne" genus="fēminīnum" numerāle="plūrāle" cāsus="nōminātīvum" gradus="nōrmāle">
+    amandae
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="fēminīnum" numerāle="plūrāle" cāsus="genitīvum" gradus="nōrmāle">
+    amandārum
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="fēminīnum" numerāle="plūrāle" cāsus="datīvum" gradus="nōrmāle">
+    amandīs
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="fēminīnum" numerāle="plūrāle" cāsus="accūsātīvum" gradus="nōrmāle">
+    amandās
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="fēminīnum" numerāle="plūrāle" cāsus="ablātīvum" gradus="nōrmāle">
+    amandīs
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="fēminīnum" numerāle="plūrāle" cāsus="locātīvum" gradus="nōrmāle">
+    amandae
+  </fōrma>
+
+  <fōrma speciālitās="commūne" genus="neutrum" numerāle="singulāre" cāsus="nōminātīvum" gradus="nōrmāle">
+    amandum
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="neutrum" numerāle="singulāre" cāsus="genitīvum" gradus="nōrmāle">
+    amandī
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="neutrum" numerāle="singulāre" cāsus="datīvum" gradus="nōrmāle">
+    amandō
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="neutrum" numerāle="singulāre" cāsus="accūsātīvum" gradus="nōrmāle">
+    amandum
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="neutrum" numerāle="singulāre" cāsus="ablātīvum" gradus="nōrmāle">
+    amandō
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="neutrum" numerāle="singulāre" cāsus="locātīvum" gradus="nōrmāle">
+    amandum
+  </fōrma>
+
+  <fōrma speciālitās="commūne" genus="neutrum" numerāle="plūrāle" cāsus="nōminātīvum" gradus="nōrmāle">
+    amanda
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="neutrum" numerāle="plūrāle" cāsus="genitīvum" gradus="nōrmāle">
+    amandōrum
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="neutrum" numerāle="plūrāle" cāsus="datīvum" gradus="nōrmāle">
+    amandīs
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="neutrum" numerāle="plūrāle" cāsus="accūsātīvum" gradus="nōrmāle">
+    amanda
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="neutrum" numerāle="plūrāle" cāsus="ablātīvum" gradus="nōrmāle">
+    amandīs
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="neutrum" numerāle="plūrāle" cāsus="locātīvum" gradus="nōrmāle">
+    amanda
+  </fōrma>
+
+  <fōrma speciālitās="commūne" genus="masculīnum" numerāle="singulāre" cāsus="nōminātīvum" gradus="comparātīvum">
+    amandior
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="masculīnum" numerāle="singulāre" cāsus="genitīvum" gradus="comparātīvum">
+    amandiōris
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="masculīnum" numerāle="singulāre" cāsus="datīvum" gradus="comparātīvum">
+    amandiōrī
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="masculīnum" numerāle="singulāre" cāsus="accūsātīvum" gradus="comparātīvum">
+    amandiōrem
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="masculīnum" numerāle="singulāre" cāsus="ablātīvum" gradus="comparātīvum">
+    amandiōre
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="masculīnum" numerāle="singulāre" cāsus="locātīvum" gradus="comparātīvum">
+    amandior
+  </fōrma>
+
+  <fōrma speciālitās="commūne" genus="masculīnum" numerāle="plūrāle" cāsus="nōminātīvum" gradus="comparātīvum">
+    amandiōrēs
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="masculīnum" numerāle="plūrāle" cāsus="genitīvum" gradus="comparātīvum">
+    amandiōrum
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="masculīnum" numerāle="plūrāle" cāsus="datīvum" gradus="comparātīvum">
+    amandiōribus
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="masculīnum" numerāle="plūrāle" cāsus="accūsātīvum" gradus="comparātīvum">
+    amandiōrēs
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="masculīnum" numerāle="plūrāle" cāsus="ablātīvum" gradus="comparātīvum">
+    amandiōribus
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="masculīnum" numerāle="plūrāle" cāsus="locātīvum" gradus="comparātīvum">
+    amandiōrēs
+  </fōrma>
+
+  <fōrma speciālitās="commūne" genus="fēminīnum" numerāle="singulāre" cāsus="nōminātīvum" gradus="comparātīvum">
+    amandiōr
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="fēminīnum" numerāle="singulāre" cāsus="genitīvum" gradus="comparātīvum">
+    amandiōris
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="fēminīnum" numerāle="singulāre" cāsus="datīvum" gradus="comparātīvum">
+    amandiōrī
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="fēminīnum" numerāle="singulāre" cāsus="accūsātīvum" gradus="comparātīvum">
+    amandiōrem
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="fēminīnum" numerāle="singulāre" cāsus="ablātīvum" gradus="comparātīvum">
+    amandiōre
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="fēminīnum" numerāle="singulāre" cāsus="locātīvum" gradus="comparātīvum">
+    amandior
+  </fōrma>
+
+  <fōrma speciālitās="commūne" genus="fēminīnum" numerāle="plūrāle" cāsus="nōminātīvum" gradus="comparātīvum">
+    amandiōrēs
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="fēminīnum" numerāle="plūrāle" cāsus="genitīvum" gradus="comparātīvum">
+    amandiōrum
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="fēminīnum" numerāle="plūrāle" cāsus="datīvum" gradus="comparātīvum">
+    amandiōribus
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="fēminīnum" numerāle="plūrāle" cāsus="accūsātīvum" gradus="comparātīvum">
+    amandiōrēs
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="fēminīnum" numerāle="plūrāle" cāsus="ablātīvum" gradus="comparātīvum">
+    amandiōribus
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="fēminīnum" numerāle="plūrāle" cāsus="locātīvum" gradus="comparātīvum">
+    amandiōrēs
+  </fōrma>
+
+  <fōrma speciālitās="commūne" genus="neutrum" numerāle="singulāre" cāsus="nōminātīvum" gradus="comparātīvum">
+    amandius
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="neutrum" numerāle="singulāre" cāsus="genitīvum" gradus="comparātīvum">
+    amandiōris
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="neutrum" numerāle="singulāre" cāsus="datīvum" gradus="comparātīvum">
+    amandiōrī
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="neutrum" numerāle="singulāre" cāsus="accūsātīvum" gradus="comparātīvum">
+    amandius
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="neutrum" numerāle="singulāre" cāsus="ablātīvum" gradus="comparātīvum">
+    amandiōre
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="neutrum" numerāle="singulāre" cāsus="locātīvum" gradus="comparātīvum">
+    amandius
+  </fōrma>
+
+  <fōrma speciālitās="commūne" genus="neutrum" numerāle="plūrāle" cāsus="nōminātīvum" gradus="comparātīvum">
+    amandiōra
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="neutrum" numerāle="plūrāle" cāsus="genitīvum" gradus="comparātīvum">
+    amandiōrum
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="neutrum" numerāle="plūrāle" cāsus="datīvum" gradus="comparātīvum">
+    amandiōribus
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="neutrum" numerāle="plūrāle" cāsus="accūsātīvum" gradus="comparātīvum">
+    amandiōra
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="neutrum" numerāle="plūrāle" cāsus="ablātīvum" gradus="comparātīvum">
+    amandiōribus
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="neutrum" numerāle="plūrāle" cāsus="locātīvum" gradus="comparātīvum">
+    amandiōra
+  </fōrma>
+
+  <fōrma speciālitās="commūne" genus="masculīnum" numerāle="singulāre" cāsus="nōminātīvum" gradus="superlātīvum">
+    amandissimus
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="masculīnum" numerāle="singulāre" cāsus="genitīvum" gradus="superlātīvum">
+    amandissimī
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="masculīnum" numerāle="singulāre" cāsus="datīvum" gradus="superlātīvum">
+    amandissimō
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="masculīnum" numerāle="singulāre" cāsus="accūsātīvum" gradus="superlātīvum">
+    amandissimum
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="masculīnum" numerāle="singulāre" cāsus="ablātīvum" gradus="superlātīvum">
+    amandissimō
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="masculīnum" numerāle="singulāre" cāsus="locātīvum" gradus="superlātīvum">
+    amandissimus
+  </fōrma>
+
+  <fōrma speciālitās="commūne" genus="masculīnum" numerāle="plūrāle" cāsus="nōminātīvum" gradus="superlātīvum">
+    amandissimī
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="masculīnum" numerāle="plūrāle" cāsus="genitīvum" gradus="superlātīvum">
+    amandissimōrum
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="masculīnum" numerāle="plūrāle" cāsus="datīvum" gradus="superlātīvum">
+    amandissimīs
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="masculīnum" numerāle="plūrāle" cāsus="accūsātīvum" gradus="superlātīvum">
+    amandissimōs
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="masculīnum" numerāle="plūrāle" cāsus="ablātīvum" gradus="superlātīvum">
+    amandissimīs
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="masculīnum" numerāle="plūrāle" cāsus="locātīvum" gradus="superlātīvum">
+    amandissimēs
+  </fōrma>
+
+  <fōrma speciālitās="commūne" genus="fēminīnum" numerāle="singulāre" cāsus="nōminātīvum" gradus="superlātīvum">
+    amandissima
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="fēminīnum" numerāle="singulāre" cāsus="genitīvum" gradus="superlātīvum">
+    amandissimae
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="fēminīnum" numerāle="singulāre" cāsus="datīvum" gradus="superlātīvum">
+    amandissimae
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="fēminīnum" numerāle="singulāre" cāsus="accūsātīvum" gradus="superlātīvum">
+    amandissimam
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="fēminīnum" numerāle="singulāre" cāsus="ablātīvum" gradus="superlātīvum">
+    amandissimā
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="fēminīnum" numerāle="singulāre" cāsus="locātīvum" gradus="superlātīvum">
+    amandissima
+  </fōrma>
+
+  <fōrma speciālitās="commūne" genus="fēminīnum" numerāle="plūrāle" cāsus="nōminātīvum" gradus="superlātīvum">
+    amandissimae
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="fēminīnum" numerāle="plūrāle" cāsus="genitīvum" gradus="superlātīvum">
+    amandissimārum
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="fēminīnum" numerāle="plūrāle" cāsus="datīvum" gradus="superlātīvum">
+    amandissimīs
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="fēminīnum" numerāle="plūrāle" cāsus="accūsātīvum" gradus="superlātīvum">
+    amandissimās
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="fēminīnum" numerāle="plūrāle" cāsus="ablātīvum" gradus="superlātīvum">
+    amandissimīs
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="fēminīnum" numerāle="plūrāle" cāsus="locātīvum" gradus="superlātīvum">
+    amandissimae
+  </fōrma>
+
+  <fōrma speciālitās="commūne" genus="neutrum" numerāle="singulāre" cāsus="nōminātīvum" gradus="superlātīvum">
+    amandissimum
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="neutrum" numerāle="singulāre" cāsus="genitīvum" gradus="superlātīvum">
+    amandissimī
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="neutrum" numerāle="singulāre" cāsus="datīvum" gradus="superlātīvum">
+    amandissimō
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="neutrum" numerāle="singulāre" cāsus="accūsātīvum" gradus="superlātīvum">
+    amandissimum
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="neutrum" numerāle="singulāre" cāsus="ablātīvum" gradus="superlātīvum">
+    amandissimō
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="neutrum" numerāle="singulāre" cāsus="locātīvum" gradus="superlātīvum">
+    amandissimum
+  </fōrma>
+
+  <fōrma speciālitās="commūne" genus="neutrum" numerāle="plūrāle" cāsus="nōminātīvum" gradus="superlātīvum">
+    amandissima
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="neutrum" numerāle="plūrāle" cāsus="genitīvum" gradus="superlātīvum">
+    amandissimōrum
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="neutrum" numerāle="plūrāle" cāsus="datīvum" gradus="superlātīvum">
+    amandissimīs
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="neutrum" numerāle="plūrāle" cāsus="accūsātīvum" gradus="superlātīvum">
+    amandissima
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="neutrum" numerāle="plūrāle" cāsus="ablātīvum" gradus="superlātīvum">
+    amandissimīs
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="neutrum" numerāle="plūrāle" cāsus="locātīvum" gradus="superlātīvum">
+    amandissima
+  </fōrma>
+</adiectīvum>

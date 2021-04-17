@@ -1,0 +1,39 @@
+<nōmen fundāmen="voluptās">
+  <fōrma speciālitās="commūne" genus="fēminīnum" numerāle="singulāre" cāsus="nōminātīvum">
+    voluptās
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="fēminīnum" numerāle="singulāre" cāsus="genitīvum">
+    voluptātis
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="fēminīnum" numerāle="singulāre" cāsus="datīvum">
+    voluptātī
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="fēminīnum" numerāle="singulāre" cāsus="accūsātīvum">
+    voluptātem
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="fēminīnum" numerāle="singulāre" cāsus="ablātīvum">
+    voluptāte
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="fēminīnum" numerāle="singulāre" cāsus="vocātīvum">
+    voluptās
+  </fōrma>
+
+  <fōrma speciālitās="commūne" genus="fēminīnum" numerāle="plūrāle" cāsus="nōminātīvum">
+    voluptātēs
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="fēminīnum" numerāle="plūrāle" cāsus="genitīvum">
+    voluptātum
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="fēminīnum" numerāle="plūrāle" cāsus="datīvum">
+    voluptātibus
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="fēminīnum" numerāle="plūrāle" cāsus="accūsātīvum">
+    voluptātēs
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="fēminīnum" numerāle="plūrāle" cāsus="ablātīvum">
+    voluptātibus
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="fēminīnum" numerāle="plūrāle" cāsus="vocātīvum">
+    voluptātēs
+  </fōrma>
+</nōmen>

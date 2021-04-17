@@ -1,0 +1,343 @@
+<adiectīvum fundāmen="volēns">
+  <fōrma speciālitās="commūne" genus="masculīnum" numerāle="singulāre" cāsus="nōminātīvum" gradus="nōrmāle">
+    volēns
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="masculīnum" numerāle="singulāre" cāsus="genitīvum" gradus="nōrmāle">
+    volēntis
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="masculīnum" numerāle="singulāre" cāsus="datīvum" gradus="nōrmāle">
+    volēntī
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="masculīnum" numerāle="singulāre" cāsus="accūsātīvum" gradus="nōrmāle">
+    volēntem
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="masculīnum" numerāle="singulāre" cāsus="ablātīvum" gradus="nōrmāle">
+    volēnte
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="masculīnum" numerāle="singulāre" cāsus="locātīvum" gradus="nōrmāle">
+    dolor
+  </fōrma>
+
+  <fōrma speciālitās="commūne" genus="masculīnum" numerāle="plūrāle" cāsus="nōminātīvum" gradus="nōrmāle">
+    volēntēs
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="masculīnum" numerāle="plūrāle" cāsus="genitīvum" gradus="nōrmāle">
+    volēntum
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="masculīnum" numerāle="plūrāle" cāsus="datīvum" gradus="nōrmāle">
+    volēntibus
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="masculīnum" numerāle="plūrāle" cāsus="accūsātīvum" gradus="nōrmāle">
+    volēntēs
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="masculīnum" numerāle="plūrāle" cāsus="ablātīvum" gradus="nōrmāle">
+    volēntibus
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="masculīnum" numerāle="plūrāle" cāsus="locātīvum" gradus="nōrmāle">
+    volēntēs
+  </fōrma>
+
+  <fōrma speciālitās="commūne" genus="fēminīnum" numerāle="singulāre" cāsus="nōminātīvum" gradus="nōrmāle">
+    volēns
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="fēminīnum" numerāle="singulāre" cāsus="genitīvum" gradus="nōrmāle">
+    volēntis
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="fēminīnum" numerāle="singulāre" cāsus="datīvum" gradus="nōrmāle">
+    volēntī
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="fēminīnum" numerāle="singulāre" cāsus="accūsātīvum" gradus="nōrmāle">
+    volēntem
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="fēminīnum" numerāle="singulāre" cāsus="ablātīvum" gradus="nōrmāle">
+    volēnte
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="fēminīnum" numerāle="singulāre" cāsus="locātīvum" gradus="nōrmāle">
+    dolor
+  </fōrma>
+
+  <fōrma speciālitās="commūne" genus="fēminīnum" numerāle="plūrāle" cāsus="nōminātīvum" gradus="nōrmāle">
+    volēntēs
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="fēminīnum" numerāle="plūrāle" cāsus="genitīvum" gradus="nōrmāle">
+    volēntum
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="fēminīnum" numerāle="plūrāle" cāsus="datīvum" gradus="nōrmāle">
+    volēntibus
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="fēminīnum" numerāle="plūrāle" cāsus="accūsātīvum" gradus="nōrmāle">
+    volēntēs
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="fēminīnum" numerāle="plūrāle" cāsus="ablātīvum" gradus="nōrmāle">
+    volēntibus
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="fēminīnum" numerāle="plūrāle" cāsus="locātīvum" gradus="nōrmāle">
+    volēntēs
+  </fōrma>
+
+  <fōrma speciālitās="commūne" genus="neutrum" numerāle="singulāre" cāsus="nōminātīvum" gradus="nōrmāle">
+    volēns
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="neutrum" numerāle="singulāre" cāsus="genitīvum" gradus="nōrmāle">
+    volēntis
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="neutrum" numerāle="singulāre" cāsus="datīvum" gradus="nōrmāle">
+    volēntī
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="neutrum" numerāle="singulāre" cāsus="accūsātīvum" gradus="nōrmāle">
+    volēns
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="neutrum" numerāle="singulāre" cāsus="ablātīvum" gradus="nōrmāle">
+    volēnte
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="neutrum" numerāle="singulāre" cāsus="locātīvum" gradus="nōrmāle">
+    volēns
+  </fōrma>
+
+  <fōrma speciālitās="commūne" genus="neutrum" numerāle="plūrāle" cāsus="nōminātīvum" gradus="nōrmāle">
+    volēntia
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="neutrum" numerāle="plūrāle" cāsus="genitīvum" gradus="nōrmāle">
+    volēntum
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="neutrum" numerāle="plūrāle" cāsus="datīvum" gradus="nōrmāle">
+    volēntibus
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="neutrum" numerāle="plūrāle" cāsus="accūsātīvum" gradus="nōrmāle">
+    volēntia
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="neutrum" numerāle="plūrāle" cāsus="ablātīvum" gradus="nōrmāle">
+    volēntibus
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="neutrum" numerāle="plūrāle" cāsus="locātīvum" gradus="nōrmāle">
+    volēntia
+  </fōrma>
+
+  <fōrma speciālitās="commūne" genus="masculīnum" numerāle="singulāre" cāsus="nōminātīvum" gradus="comparātīvum">
+    volēntior
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="masculīnum" numerāle="singulāre" cāsus="genitīvum" gradus="comparātīvum">
+    volēntiōris
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="masculīnum" numerāle="singulāre" cāsus="datīvum" gradus="comparātīvum">
+    volēntiōrī
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="masculīnum" numerāle="singulāre" cāsus="accūsātīvum" gradus="comparātīvum">
+    volēntiōrem
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="masculīnum" numerāle="singulāre" cāsus="ablātīvum" gradus="comparātīvum">
+    volēntiōre
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="masculīnum" numerāle="singulāre" cāsus="locātīvum" gradus="comparātīvum">
+    volēntior
+  </fōrma>
+
+  <fōrma speciālitās="commūne" genus="masculīnum" numerāle="plūrāle" cāsus="nōminātīvum" gradus="comparātīvum">
+    volēntiōrēs
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="masculīnum" numerāle="plūrāle" cāsus="genitīvum" gradus="comparātīvum">
+    volēntiōrum
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="masculīnum" numerāle="plūrāle" cāsus="datīvum" gradus="comparātīvum">
+    volēntiōribus
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="masculīnum" numerāle="plūrāle" cāsus="accūsātīvum" gradus="comparātīvum">
+    volēntiōrēs
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="masculīnum" numerāle="plūrāle" cāsus="ablātīvum" gradus="comparātīvum">
+    volēntiōribus
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="masculīnum" numerāle="plūrāle" cāsus="locātīvum" gradus="comparātīvum">
+    volēntiōrēs
+  </fōrma>
+
+  <fōrma speciālitās="commūne" genus="fēminīnum" numerāle="singulāre" cāsus="nōminātīvum" gradus="comparātīvum">
+    volēntiōr
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="fēminīnum" numerāle="singulāre" cāsus="genitīvum" gradus="comparātīvum">
+    volēntiōris
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="fēminīnum" numerāle="singulāre" cāsus="datīvum" gradus="comparātīvum">
+    volēntiōrī
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="fēminīnum" numerāle="singulāre" cāsus="accūsātīvum" gradus="comparātīvum">
+    volēntiōrem
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="fēminīnum" numerāle="singulāre" cāsus="ablātīvum" gradus="comparātīvum">
+    volēntiōre
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="fēminīnum" numerāle="singulāre" cāsus="locātīvum" gradus="comparātīvum">
+    volēntior
+  </fōrma>
+
+  <fōrma speciālitās="commūne" genus="fēminīnum" numerāle="plūrāle" cāsus="nōminātīvum" gradus="comparātīvum">
+    volēntiōrēs
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="fēminīnum" numerāle="plūrāle" cāsus="genitīvum" gradus="comparātīvum">
+    volēntiōrum
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="fēminīnum" numerāle="plūrāle" cāsus="datīvum" gradus="comparātīvum">
+    volēntiōribus
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="fēminīnum" numerāle="plūrāle" cāsus="accūsātīvum" gradus="comparātīvum">
+    volēntiōrēs
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="fēminīnum" numerāle="plūrāle" cāsus="ablātīvum" gradus="comparātīvum">
+    volēntiōribus
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="fēminīnum" numerāle="plūrāle" cāsus="locātīvum" gradus="comparātīvum">
+    volēntiōrēs
+  </fōrma>
+
+  <fōrma speciālitās="commūne" genus="neutrum" numerāle="singulāre" cāsus="nōminātīvum" gradus="comparātīvum">
+    volēntius
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="neutrum" numerāle="singulāre" cāsus="genitīvum" gradus="comparātīvum">
+    volēntiōris
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="neutrum" numerāle="singulāre" cāsus="datīvum" gradus="comparātīvum">
+    volēntiōrī
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="neutrum" numerāle="singulāre" cāsus="accūsātīvum" gradus="comparātīvum">
+    volēntius
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="neutrum" numerāle="singulāre" cāsus="ablātīvum" gradus="comparātīvum">
+    volēntiōre
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="neutrum" numerāle="singulāre" cāsus="locātīvum" gradus="comparātīvum">
+    volēntius
+  </fōrma>
+
+  <fōrma speciālitās="commūne" genus="neutrum" numerāle="plūrāle" cāsus="nōminātīvum" gradus="comparātīvum">
+    volēntiōra
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="neutrum" numerāle="plūrāle" cāsus="genitīvum" gradus="comparātīvum">
+    volēntiōrum
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="neutrum" numerāle="plūrāle" cāsus="datīvum" gradus="comparātīvum">
+    volēntiōribus
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="neutrum" numerāle="plūrāle" cāsus="accūsātīvum" gradus="comparātīvum">
+    volēntiōra
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="neutrum" numerāle="plūrāle" cāsus="ablātīvum" gradus="comparātīvum">
+    volēntiōribus
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="neutrum" numerāle="plūrāle" cāsus="locātīvum" gradus="comparātīvum">
+    volēntiōra
+  </fōrma>
+
+  <fōrma speciālitās="commūne" genus="masculīnum" numerāle="singulāre" cāsus="nōminātīvum" gradus="superlātīvum">
+    volēntissimus
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="masculīnum" numerāle="singulāre" cāsus="genitīvum" gradus="superlātīvum">
+    volēntissimī
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="masculīnum" numerāle="singulāre" cāsus="datīvum" gradus="superlātīvum">
+    volēntissimō
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="masculīnum" numerāle="singulāre" cāsus="accūsātīvum" gradus="superlātīvum">
+    volēntissimum
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="masculīnum" numerāle="singulāre" cāsus="ablātīvum" gradus="superlātīvum">
+    volēntissimō
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="masculīnum" numerāle="singulāre" cāsus="locātīvum" gradus="superlātīvum">
+    volēnissimus
+  </fōrma>
+
+  <fōrma speciālitās="commūne" genus="masculīnum" numerāle="plūrāle" cāsus="nōminātīvum" gradus="superlātīvum">
+    volēntissimī
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="masculīnum" numerāle="plūrāle" cāsus="genitīvum" gradus="superlātīvum">
+    volēntissimōrum
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="masculīnum" numerāle="plūrāle" cāsus="datīvum" gradus="superlātīvum">
+    volēntissimīs
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="masculīnum" numerāle="plūrāle" cāsus="accūsātīvum" gradus="superlātīvum">
+    volēntissimōs
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="masculīnum" numerāle="plūrāle" cāsus="ablātīvum" gradus="superlātīvum">
+    volēntissimīs
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="masculīnum" numerāle="plūrāle" cāsus="locātīvum" gradus="superlātīvum">
+    volēntissimēs
+  </fōrma>
+
+  <fōrma speciālitās="commūne" genus="fēminīnum" numerāle="singulāre" cāsus="nōminātīvum" gradus="superlātīvum">
+    volēntissima
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="fēminīnum" numerāle="singulāre" cāsus="genitīvum" gradus="superlātīvum">
+    volēntissimae
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="fēminīnum" numerāle="singulāre" cāsus="datīvum" gradus="superlātīvum">
+    volēntissimae
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="fēminīnum" numerāle="singulāre" cāsus="accūsātīvum" gradus="superlātīvum">
+    volēntissimam
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="fēminīnum" numerāle="singulāre" cāsus="ablātīvum" gradus="superlātīvum">
+    volēntissimā
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="fēminīnum" numerāle="singulāre" cāsus="locātīvum" gradus="superlātīvum">
+    volēntissima
+  </fōrma>
+
+  <fōrma speciālitās="commūne" genus="fēminīnum" numerāle="plūrāle" cāsus="nōminātīvum" gradus="superlātīvum">
+    volēntissimae
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="fēminīnum" numerāle="plūrāle" cāsus="genitīvum" gradus="superlātīvum">
+    volēntissimārum
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="fēminīnum" numerāle="plūrāle" cāsus="datīvum" gradus="superlātīvum">
+    volēntissimīs
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="fēminīnum" numerāle="plūrāle" cāsus="accūsātīvum" gradus="superlātīvum">
+    volēntissimās
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="fēminīnum" numerāle="plūrāle" cāsus="ablātīvum" gradus="superlātīvum">
+    volēntissimīs
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="fēminīnum" numerāle="plūrāle" cāsus="locātīvum" gradus="superlātīvum">
+    volēntissimae
+  </fōrma>
+
+  <fōrma speciālitās="commūne" genus="neutrum" numerāle="singulāre" cāsus="nōminātīvum" gradus="superlātīvum">
+    volēnissimum
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="neutrum" numerāle="singulāre" cāsus="genitīvum" gradus="superlātīvum">
+    volēntissimī
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="neutrum" numerāle="singulāre" cāsus="datīvum" gradus="superlātīvum">
+    volēntissimō
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="neutrum" numerāle="singulāre" cāsus="accūsātīvum" gradus="superlātīvum">
+    volēnissimum
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="neutrum" numerāle="singulāre" cāsus="ablātīvum" gradus="superlātīvum">
+    volēntissimō
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="neutrum" numerāle="singulāre" cāsus="locātīvum" gradus="superlātīvum">
+    volēnissimum
+  </fōrma>
+
+  <fōrma speciālitās="commūne" genus="neutrum" numerāle="plūrāle" cāsus="nōminātīvum" gradus="superlātīvum">
+    volēntissima
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="neutrum" numerāle="plūrāle" cāsus="genitīvum" gradus="superlātīvum">
+    volēntissimōrum
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="neutrum" numerāle="plūrāle" cāsus="datīvum" gradus="superlātīvum">
+    volēntissimīs
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="neutrum" numerāle="plūrāle" cāsus="accūsātīvum" gradus="superlātīvum">
+    volēntissima
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="neutrum" numerāle="plūrāle" cāsus="ablātīvum" gradus="superlātīvum">
+    volēntissimīs
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="neutrum" numerāle="plūrāle" cāsus="locātīvum" gradus="superlātīvum">
+    volēntissima
+  </fōrma>
+</adiectīvum>

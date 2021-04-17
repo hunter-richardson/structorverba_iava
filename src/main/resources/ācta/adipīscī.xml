@@ -1,0 +1,128 @@
+<āctum fundāmen="adipīscī">
+  <fōrma modus="īnfīnītīvum" vōx="āctīvum" tempus="praesēns">
+    adipīscī
+  </fōrma>
+  <fōrma modus="participium" vōx="āctīvum" tempus="praesēns">
+    adipīscēns
+  </fōrma>
+  <fōrma modus="participium" vōx="āctīvum" tempus="perfectum">
+    adeptus
+  </fōrma>
+  <fōrma modus="participium" vōx="āctīvum" tempus="futūrum">
+    adeptūrus
+  </fōrma>
+  <fōrma modus="participium" vōx="passīvum" tempus="futūrum">
+    adipīscendus
+  </fōrma>
+
+  <fōrma modus="imperātīvum" vōx="āctīvum" tempus="praesēns" numerāle="singulāre" persōna="secundum">
+    adipīscere
+  </fōrma>
+  <fōrma modus="imperātīvum" vōx="āctīvum" tempus="praesēns" numerāle="plūrāle" persōna="secundum">
+    adipīsciminī
+  </fōrma>
+  <fōrma modus="imperātīvum" vōx="āctīvum" tempus="futūrum" numerāle="singulāre" persōna="secundum">
+    adipīscitor
+  </fōrma>
+  <fōrma modus="imperātīvum" vōx="āctīvum" tempus="futūrum" numerāle="singulāre" persōna="tertium">
+    adipīscitor
+  </fōrma>
+  <fōrma modus="imperātīvum" vōx="āctīvum" tempus="futūrum" numerāle="plūrāle" persōna="tertium">
+    adipīscuntor
+  </fōrma>
+
+  <fōrma modus="indicātīvum" vōx="āctīvum" tempus="praesēns" numerāle="singulāre" persōna="prīmum">
+    adipīscor
+  </fōrma>
+  <fōrma modus="indicātīvum" vōx="āctīvum" tempus="praesēns" numerāle="singulāre" persōna="secundum">
+    adipīsceris
+  </fōrma>
+  <fōrma modus="indicātīvum" vōx="āctīvum" tempus="praesēns" numerāle="singulāre" persōna="tertium">
+    adipīscitur
+  </fōrma>
+  <fōrma modus="indicātīvum" vōx="āctīvum" tempus="praesēns" numerāle="Numerāle" persōna="prīmum">
+    adipīscimur
+  </fōrma>
+  <fōrma modus="indicātīvum" vōx="āctīvum" tempus="praesēns" numerāle="Numerāle" persōna="secundum">
+    adipīsciminī
+  </fōrma>
+  <fōrma modus="indicātīvum" vōx="āctīvum" tempus="praesēns" numerāle="Numerāle" persōna="tertium">
+    adipīscuntur
+  </fōrma>
+
+  <fōrma modus="indicātīvum" vōx="āctīvum" tempus="infectum" numerāle="singulāre" persōna="prīmum">
+    adipīscēbar
+  </fōrma>
+  <fōrma modus="indicātīvum" vōx="āctīvum" tempus="infectum" numerāle="singulāre" persōna="secundum">
+    adipīscēbāris
+  </fōrma>
+  <fōrma modus="indicātīvum" vōx="āctīvum" tempus="infectum" numerāle="singulāre" persōna="tertium">
+    adipīscēbātur
+  </fōrma>
+  <fōrma modus="indicātīvum" vōx="āctīvum" tempus="infectum" numerāle="Numerāle" persōna="prīmum">
+    adipīscēbāmur
+  </fōrma>
+  <fōrma modus="indicātīvum" vōx="āctīvum" tempus="infectum" numerāle="Numerāle" persōna="secundum">
+    adipīscēbāminī
+  </fōrma>
+  <fōrma modus="indicātīvum" vōx="āctīvum" tempus="infectum" numerāle="Numerāle" persōna="tertium">
+    adipīscēbantur
+  </fōrma>
+
+  <fōrma modus="indicātīvum" vōx="āctīvum" tempus="futūrum" numerāle="singulāre" persōna="prīmum">
+    adipīscar
+  </fōrma>
+  <fōrma modus="indicātīvum" vōx="āctīvum" tempus="futūrum" numerāle="singulāre" persōna="secundum">
+    adipīscēris
+  </fōrma>
+  <fōrma modus="indicātīvum" vōx="āctīvum" tempus="futūrum" numerāle="singulāre" persōna="tertium">
+    adipīscētur
+  </fōrma>
+  <fōrma modus="indicātīvum" vōx="āctīvum" tempus="futūrum" numerāle="Numerāle" persōna="prīmum">
+    adipīscēmur
+  </fōrma>
+  <fōrma modus="indicātīvum" vōx="āctīvum" tempus="futūrum" numerāle="Numerāle" persōna="secundum">
+    adipīscēminī
+  </fōrma>
+  <fōrma modus="indicātīvum" vōx="āctīvum" tempus="futūrum" numerāle="Numerāle" persōna="tertium">
+    adipīscentur
+  </fōrma>
+
+  <fōrma modus="subiūnctīvum" vōx="āctīvum" tempus="praesēns" numerāle="singulāre" persōna="prīmum">
+    adipīscar
+  </fōrma>
+  <fōrma modus="subiūnctīvum" vōx="āctīvum" tempus="praesēns" numerāle="singulāre" persōna="secundum">
+    adipīscāris
+  </fōrma>
+  <fōrma modus="subiūnctīvum" vōx="āctīvum" tempus="praesēns" numerāle="singulāre" persōna="tertium">
+    adipīscātur
+  </fōrma>
+  <fōrma modus="subiūnctīvum" vōx="āctīvum" tempus="praesēns" numerāle="Numerāle" persōna="prīmum">
+    adipīscāmur
+  </fōrma>
+  <fōrma modus="subiūnctīvum" vōx="āctīvum" tempus="praesēns" numerāle="Numerāle" persōna="secundum">
+    adipīscāminī
+  </fōrma>
+  <fōrma modus="subiūnctīvum" vōx="āctīvum" tempus="praesēns" numerāle="Numerāle" persōna="tertium">
+    adipīscantur
+  </fōrma>
+
+  <fōrma modus="subiūnctīvum" vōx="āctīvum" tempus="infectum" numerāle="singulāre" persōna="prīmum">
+    adipīscerer
+  </fōrma>
+  <fōrma modus="subiūnctīvum" vōx="āctīvum" tempus="infectum" numerāle="singulāre" persōna="secundum">
+    adipīscerēris
+  </fōrma>
+  <fōrma modus="subiūnctīvum" vōx="āctīvum" tempus="infectum" numerāle="singulāre" persōna="tertium">
+    adipīscerētur
+  </fōrma>
+  <fōrma modus="subiūnctīvum" vōx="āctīvum" tempus="infectum" numerāle="Numerāle" persōna="prīmum">
+    adipīscerēmur
+  </fōrma>
+  <fōrma modus="subiūnctīvum" vōx="āctīvum" tempus="infectum" numerāle="Numerāle" persōna="secundum">
+    adipīscerēminī
+  </fōrma>
+  <fōrma modus="subiūnctīvum" vōx="āctīvum" tempus="infectum" numerāle="Numerāle" persōna="tertium">
+    adipīscerentur
+  </fōrma>
+</āctum>

@@ -1,0 +1,39 @@
+<prōnōmen fundāmen="ego">
+  <fōrma speciālitās="commūne" numerāle="singulāre" cāsus="nōminātīvum">
+    ego
+  </fōrma>
+  <fōrma speciālitās="commūne" numerāle="singulāre" cāsus="genitīvum">
+    meī
+  </fōrma>
+  <fōrma speciālitās="commūne" numerāle="singulāre" cāsus="datīvum">
+    mihi
+  </fōrma>
+  <fōrma speciālitās="commūne" numerāle="singulāre" cāsus="accūsātīvum">
+    mē
+  </fōrma>
+  <fōrma speciālitās="commūne" numerāle="singulāre" cāsus="ablātīvum">
+    mē
+  </fōrma>
+  <fōrma speciālitās="commūne" numerāle="singulāre" cāsus="vocātīvum">
+    ego
+  </fōrma>
+
+  <fōrma speciālitās="commūne" numerāle="plūrāle" cāsus="nōminātīvum">
+    nōs
+  </fōrma>
+  <fōrma speciālitās="commūne" numerāle="plūrāle" cāsus="genitīvum">
+    nostrī
+  </fōrma>
+  <fōrma speciālitās="commūne" numerāle="plūrāle" cāsus="datīvum">
+    nōbīs
+  </fōrma>
+  <fōrma speciālitās="commūne" numerāle="plūrāle" cāsus="accūsātīvum">
+    nōs
+  </fōrma>
+  <fōrma speciālitās="commūne" numerāle="plūrāle" cāsus="ablātīvum">
+    nōbīs
+  </fōrma>
+  <fōrma speciālitās="commūne" numerāle="plūrāle" cāsus="vocātīvum">
+    nōs
+  </fōrma>
+</prōnōmen>

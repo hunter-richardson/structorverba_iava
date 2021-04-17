@@ -1,0 +1,343 @@
+<āctum fundāmen="amāre">
+  <fōrma modus="īnfīnītīvum" vōx="āctīvum" tempus="praesēns">
+    amāre
+  </fōrma>
+  <fōrma modus="īnfīnītīvum" vōx="āctīvum" tempus="perfectum">
+    amāvisse
+  </fōrma>
+  <fōrma modus="īnfīnītīvum" vōx="passīvum" tempus="perfectum">
+    amārī
+  </fōrma>
+  <fōrma modus="participium" vōx="āctīvum" tempus="praesēns">
+    amāns
+  </fōrma>
+  <fōrma modus="participium" vōx="āctīvum" tempus="futūrum">
+    amātūrus
+  </fōrma>
+  <fōrma modus="participium" vōx="passīvum" tempus="perfectum">
+    amātus
+  </fōrma>
+  <fōrma modus="participium" vōx="passīvum" tempus="futūrum">
+    amandus
+  </fōrma>
+
+  <fōrma modus="imperātīvum" vōx="āctīvum" tempus="praesēns" numerāle="singulāre" persōna="secundum">
+    amā
+  </fōrma>
+  <fōrma modus="imperātīvum" vōx="āctīvum" tempus="praesēns" numerāle="plūrāle" persōna="secundum">
+    amāte
+  </fōrma>
+  <fōrma modus="imperātīvum" vōx="āctīvum" tempus="futūrum" numerāle="singulāre" persōna="secundum">
+    amātō
+  </fōrma>
+  <fōrma modus="imperātīvum" vōx="āctīvum" tempus="futūrum" numerāle="singulāre" persōna="tertium">
+    amātō
+  </fōrma>
+  <fōrma modus="imperātīvum" vōx="āctīvum" tempus="futūrum" numerāle="plūrāle" persōna="secundum">
+    amātōte
+  </fōrma>
+  <fōrma modus="imperātīvum" vōx="āctīvum" tempus="futūrum" numerāle="plūrāle" persōna="tertium">
+    amantō
+  </fōrma>
+
+  <fōrma modus="imperātīvum" vōx="passīvum" tempus="praesēns" numerāle="singulāre" persōna="secundum">
+    amāre
+  </fōrma>
+  <fōrma modus="imperātīvum" vōx="passīvum" tempus="futūrum" numerāle="singulāre" persōna="secundum">
+    amātor
+  </fōrma>
+  <fōrma modus="imperātīvum" vōx="passīvum" tempus="futūrum" numerāle="singulāre" persōna="tertium">
+    amātor
+  </fōrma>
+  <fōrma modus="imperātīvum" vōx="passīvum" tempus="praesēns" numerāle="plūrāle" persōna="secundum">
+    amāminī
+  </fōrma>
+  <fōrma modus="imperātīvum" vōx="passīvum" tempus="futūrum" numerāle="plūrāle" persōna="tertium">
+    amantor
+  </fōrma>
+
+  <fōrma modus="indicātīvum" vōx="āctīvum" tempus="praesēns" numerāle="singulāre" persōna="prīmum">
+    amō
+  </fōrma>
+  <fōrma modus="indicātīvum" vōx="āctīvum" tempus="praesēns" numerāle="singulāre" persōna="secundum">
+    amās
+  </fōrma>
+  <fōrma modus="indicātīvum" vōx="āctīvum" tempus="praesēns" numerāle="singulāre" persōna="tertium">
+    amat
+  </fōrma>
+  <fōrma modus="indicātīvum" vōx="āctīvum" tempus="praesēns" numerāle="Numerāle" persōna="prīmum">
+    amāmus
+  </fōrma>
+  <fōrma modus="indicātīvum" vōx="āctīvum" tempus="praesēns" numerāle="Numerāle" persōna="secundum">
+    amātis
+  </fōrma>
+  <fōrma modus="indicātīvum" vōx="āctīvum" tempus="praesēns" numerāle="Numerāle" persōna="tertium">
+    amant
+  </fōrma>
+
+  <fōrma modus="indicātīvum" vōx="āctīvum" tempus="infectum" numerāle="singulāre" persōna="prīmum">
+    amābam
+  </fōrma>
+  <fōrma modus="indicātīvum" vōx="āctīvum" tempus="infectum" numerāle="singulāre" persōna="secundum">
+    amābās
+  </fōrma>
+  <fōrma modus="indicātīvum" vōx="āctīvum" tempus="infectum" numerāle="singulāre" persōna="tertium">
+    amābat
+  </fōrma>
+  <fōrma modus="indicātīvum" vōx="āctīvum" tempus="infectum" numerāle="Numerāle" persōna="prīmum">
+    amābāmus
+  </fōrma>
+  <fōrma modus="indicātīvum" vōx="āctīvum" tempus="infectum" numerāle="Numerāle" persōna="secundum">
+    amābātis
+  </fōrma>
+  <fōrma modus="indicātīvum" vōx="āctīvum" tempus="infectum" numerāle="Numerāle" persōna="tertium">
+    amābant
+  </fōrma>
+
+  <fōrma modus="indicātīvum" vōx="āctīvum" tempus="futūrum" numerāle="singulāre" persōna="prīmum">
+    amābō
+  </fōrma>
+  <fōrma modus="indicātīvum" vōx="āctīvum" tempus="futūrum" numerāle="singulāre" persōna="secundum">
+    amābis
+  </fōrma>
+  <fōrma modus="indicātīvum" vōx="āctīvum" tempus="futūrum" numerāle="singulāre" persōna="tertium">
+    amābit
+  </fōrma>
+  <fōrma modus="indicātīvum" vōx="āctīvum" tempus="futūrum" numerāle="Numerāle" persōna="prīmum">
+    amābimus
+  </fōrma>
+  <fōrma modus="indicātīvum" vōx="āctīvum" tempus="futūrum" numerāle="Numerāle" persōna="secundum">
+    amābitis
+  </fōrma>
+  <fōrma modus="indicātīvum" vōx="āctīvum" tempus="futūrum" numerāle="Numerāle" persōna="tertium">
+    amābunt
+  </fōrma>
+
+  <fōrma modus="indicātīvum" vōx="āctīvum" tempus="perfectum" numerāle="singulāre" persōna="prīmum">
+    amāvī
+  </fōrma>
+  <fōrma modus="indicātīvum" vōx="āctīvum" tempus="perfectum" numerāle="singulāre" persōna="secundum">
+    amāvistī
+  </fōrma>
+  <fōrma modus="indicātīvum" vōx="āctīvum" tempus="perfectum" numerāle="singulāre" persōna="tertium">
+    amāvit
+  </fōrma>
+  <fōrma modus="indicātīvum" vōx="āctīvum" tempus="perfectum" numerāle="Numerāle" persōna="prīmum">
+    amāvimus
+  </fōrma>
+  <fōrma modus="indicātīvum" vōx="āctīvum" tempus="perfectum" numerāle="Numerāle" persōna="secundum">
+    amāvitis
+  </fōrma>
+  <fōrma modus="indicātīvum" vōx="āctīvum" tempus="perfectum" numerāle="Numerāle" persōna="tertium">
+    amāvērunt
+  </fōrma>
+
+  <fōrma modus="indicātīvum" vōx="āctīvum" tempus="plūperfectum" numerāle="singulāre" persōna="prīmum">
+    amāveram
+  </fōrma>
+  <fōrma modus="indicātīvum" vōx="āctīvum" tempus="plūperfectum" numerāle="singulāre" persōna="secundum">
+    amāverās
+  </fōrma>
+  <fōrma modus="indicātīvum" vōx="āctīvum" tempus="plūperfectum" numerāle="singulāre" persōna="tertium">
+    amāverat
+  </fōrma>
+  <fōrma modus="indicātīvum" vōx="āctīvum" tempus="plūperfectum" numerāle="Numerāle" persōna="prīmum">
+    amāverāmus
+  </fōrma>
+  <fōrma modus="indicātīvum" vōx="āctīvum" tempus="plūperfectum" numerāle="Numerāle" persōna="secundum">
+    amāverātis
+  </fōrma>
+  <fōrma modus="indicātīvum" vōx="āctīvum" tempus="plūperfectum" numerāle="Numerāle" persōna="tertium">
+    amāvērant
+  </fōrma>
+
+  <fōrma modus="indicātīvum" vōx="āctīvum" tempus="perfutūrum" numerāle="singulāre" persōna="prīmum">
+    amāverō
+  </fōrma>
+  <fōrma modus="indicātīvum" vōx="āctīvum" tempus="perfutūrum" numerāle="singulāre" persōna="secundum">
+    amāveris
+  </fōrma>
+  <fōrma modus="indicātīvum" vōx="āctīvum" tempus="perfutūrum" numerāle="singulāre" persōna="tertium">
+    amāverit
+  </fōrma>
+  <fōrma modus="indicātīvum" vōx="āctīvum" tempus="perfutūrum" numerāle="Numerāle" persōna="prīmum">
+    amāverimus
+  </fōrma>
+  <fōrma modus="indicātīvum" vōx="āctīvum" tempus="perfutūrum" numerāle="Numerāle" persōna="secundum">
+    amāveritis
+  </fōrma>
+  <fōrma modus="indicātīvum" vōx="āctīvum" tempus="perfutūrum" numerāle="Numerāle" persōna="tertium">
+    amāvērint
+  </fōrma>
+
+  <fōrma modus="indicātīvum" vōx="passīvum" tempus="praesēns" numerāle="singulāre" persōna="prīmum">
+    amor
+  </fōrma>
+  <fōrma modus="indicātīvum" vōx="passīvum" tempus="praesēns" numerāle="singulāre" persōna="secundum">
+    amāris
+  </fōrma>
+  <fōrma modus="indicātīvum" vōx="passīvum" tempus="praesēns" numerāle="singulāre" persōna="tertium">
+    amatur
+  </fōrma>
+  <fōrma modus="indicātīvum" vōx="passīvum" tempus="praesēns" numerāle="Numerāle" persōna="prīmum">
+    amāmur
+  </fōrma>
+  <fōrma modus="indicātīvum" vōx="passīvum" tempus="praesēns" numerāle="Numerāle" persōna="secundum">
+    amāminī
+  </fōrma>
+  <fōrma modus="indicātīvum" vōx="passīvum" tempus="praesēns" numerāle="Numerāle" persōna="tertium">
+    amantur
+  </fōrma>
+
+  <fōrma modus="indicātīvum" vōx="passīvum" tempus="infectum" numerāle="singulāre" persōna="prīmum">
+    amābar
+  </fōrma>
+  <fōrma modus="indicātīvum" vōx="passīvum" tempus="infectum" numerāle="singulāre" persōna="secundum">
+    amābāris
+  </fōrma>
+  <fōrma modus="indicātīvum" vōx="passīvum" tempus="infectum" numerāle="singulāre" persōna="tertium">
+    amābātur
+  </fōrma>
+  <fōrma modus="indicātīvum" vōx="passīvum" tempus="infectum" numerāle="Numerāle" persōna="prīmum">
+    amābāmur
+  </fōrma>
+  <fōrma modus="indicātīvum" vōx="passīvum" tempus="infectum" numerāle="Numerāle" persōna="secundum">
+    amābāminī
+  </fōrma>
+  <fōrma modus="indicātīvum" vōx="passīvum" tempus="infectum" numerāle="Numerāle" persōna="tertium">
+    amābantur
+  </fōrma>
+
+  <fōrma modus="indicātīvum" vōx="passīvum" tempus="futūrum" numerāle="singulāre" persōna="prīmum">
+    amābor
+  </fōrma>
+  <fōrma modus="indicātīvum" vōx="passīvum" tempus="futūrum" numerāle="singulāre" persōna="secundum">
+    amāberis
+  </fōrma>
+  <fōrma modus="indicātīvum" vōx="passīvum" tempus="futūrum" numerāle="singulāre" persōna="tertium">
+    amābitur
+  </fōrma>
+  <fōrma modus="indicātīvum" vōx="passīvum" tempus="futūrum" numerāle="Numerāle" persōna="prīmum">
+    amāberimur
+  </fōrma>
+  <fōrma modus="indicātīvum" vōx="passīvum" tempus="futūrum" numerāle="Numerāle" persōna="secundum">
+    amābiminī
+  </fōrma>
+  <fōrma modus="indicātīvum" vōx="passīvum" tempus="futūrum" numerāle="Numerāle" persōna="tertium">
+    amābuntur
+  </fōrma>
+
+  <fōrma modus="subiūnctīvum" vōx="āctīvum" tempus="praesēns" numerāle="singulāre" persōna="prīmum">
+    amem
+  </fōrma>
+  <fōrma modus="subiūnctīvum" vōx="āctīvum" tempus="praesēns" numerāle="singulāre" persōna="secundum">
+    amēs
+  </fōrma>
+  <fōrma modus="subiūnctīvum" vōx="āctīvum" tempus="praesēns" numerāle="singulāre" persōna="tertium">
+    amet
+  </fōrma>
+  <fōrma modus="subiūnctīvum" vōx="āctīvum" tempus="praesēns" numerāle="Numerāle" persōna="prīmum">
+    amēmus
+  </fōrma>
+  <fōrma modus="subiūnctīvum" vōx="āctīvum" tempus="praesēns" numerāle="Numerāle" persōna="secundum">
+    amētis
+  </fōrma>
+  <fōrma modus="subiūnctīvum" vōx="āctīvum" tempus="praesēns" numerāle="Numerāle" persōna="tertium">
+    ament
+  </fōrma>
+
+  <fōrma modus="subiūnctīvum" vōx="āctīvum" tempus="infectum" numerāle="singulāre" persōna="prīmum">
+    amārem
+  </fōrma>
+  <fōrma modus="subiūnctīvum" vōx="āctīvum" tempus="infectum" numerāle="singulāre" persōna="secundum">
+    amārēs
+  </fōrma>
+  <fōrma modus="subiūnctīvum" vōx="āctīvum" tempus="infectum" numerāle="singulāre" persōna="tertium">
+    amāret
+  </fōrma>
+  <fōrma modus="subiūnctīvum" vōx="āctīvum" tempus="infectum" numerāle="Numerāle" persōna="prīmum">
+    amārēmus
+  </fōrma>
+  <fōrma modus="subiūnctīvum" vōx="āctīvum" tempus="infectum" numerāle="Numerāle" persōna="secundum">
+    amārētis
+  </fōrma>
+  <fōrma modus="subiūnctīvum" vōx="āctīvum" tempus="infectum" numerāle="Numerāle" persōna="tertium">
+    amārent
+  </fōrma>
+
+  <fōrma modus="subiūnctīvum" vōx="āctīvum" tempus="perfectum" numerāle="singulāre" persōna="prīmum">
+    amāverim
+  </fōrma>
+  <fōrma modus="subiūnctīvum" vōx="āctīvum" tempus="perfectum" numerāle="singulāre" persōna="secundum">
+    amāverīs
+  </fōrma>
+  <fōrma modus="subiūnctīvum" vōx="āctīvum" tempus="perfectum" numerāle="singulāre" persōna="tertium">
+    amāverit
+  </fōrma>
+  <fōrma modus="subiūnctīvum" vōx="āctīvum" tempus="perfectum" numerāle="Numerāle" persōna="prīmum">
+    amāverīmus
+  </fōrma>
+  <fōrma modus="subiūnctīvum" vōx="āctīvum" tempus="perfectum" numerāle="Numerāle" persōna="secundum">
+    amāverītis
+  </fōrma>
+  <fōrma modus="subiūnctīvum" vōx="āctīvum" tempus="perfectum" numerāle="Numerāle" persōna="tertium">
+    amāverint
+  </fōrma>
+
+  <fōrma modus="subiūnctīvum" vōx="āctīvum" tempus="plūperfectum" numerāle="singulāre" persōna="prīmum">
+    amāvissem
+  </fōrma>
+  <fōrma modus="subiūnctīvum" vōx="āctīvum" tempus="plūperfectum" numerāle="singulāre" persōna="secundum">
+    amāvissēs
+  </fōrma>
+  <fōrma modus="subiūnctīvum" vōx="āctīvum" tempus="plūperfectum" numerāle="singulāre" persōna="tertium">
+    amāvisset
+  </fōrma>
+  <fōrma modus="subiūnctīvum" vōx="āctīvum" tempus="plūperfectum" numerāle="Numerāle" persōna="prīmum">
+    amāvissēmus
+  </fōrma>
+  <fōrma modus="subiūnctīvum" vōx="āctīvum" tempus="plūperfectum" numerāle="Numerāle" persōna="secundum">
+    amāvissētis
+  </fōrma>
+  <fōrma modus="subiūnctīvum" vōx="āctīvum" tempus="plūperfectum" numerāle="Numerāle" persōna="tertium">
+    amāvissent
+  </fōrma>
+
+  <fōrma modus="subiūnctīvum" vōx="passīvum" tempus="praesēns" numerāle="singulāre" persōna="prīmum">
+    amer
+  </fōrma>
+  <fōrma modus="subiūnctīvum" vōx="passīvum" tempus="praesēns" numerāle="singulāre" persōna="secundum">
+    amēris
+  </fōrma>
+  <fōrma modus="subiūnctīvum" vōx="passīvum" tempus="praesēns" numerāle="singulāre" persōna="tertium">
+    amētur
+  </fōrma>
+  <fōrma modus="subiūnctīvum" vōx="passīvum" tempus="praesēns" numerāle="Numerāle" persōna="prīmum">
+    amēmur
+  </fōrma>
+  <fōrma modus="subiūnctīvum" vōx="passīvum" tempus="praesēns" numerāle="Numerāle" persōna="secundum">
+    amēminī
+  </fōrma>
+  <fōrma modus="subiūnctīvum" vōx="passīvum" tempus="praesēns" numerāle="Numerāle" persōna="tertium">
+    amentur
+  </fōrma>
+
+  <fōrma modus="subiūnctīvum" vōx="passīvum" tempus="infectum" numerāle="singulāre" persōna="prīmum">
+    amārer
+  </fōrma>
+  <fōrma modus="subiūnctīvum" vōx="passīvum" tempus="infectum" numerāle="singulāre" persōna="secundum">
+    amārēris
+  </fōrma>
+  <fōrma modus="subiūnctīvum" vōx="passīvum" tempus="infectum" numerāle="singulāre" persōna="tertium">
+    amārētur
+  </fōrma>
+  <fōrma modus="subiūnctīvum" vōx="passīvum" tempus="infectum" numerāle="Numerāle" persōna="prīmum">
+    amārēmur
+  </fōrma>
+  <fōrma modus="subiūnctīvum" vōx="passīvum" tempus="infectum" numerāle="Numerāle" persōna="secundum">
+    amārēminī
+  </fōrma>
+  <fōrma modus="subiūnctīvum" vōx="passīvum" tempus="infectum" numerāle="Numerāle" persōna="tertium">
+    amārentur
+  </fōrma>
+</āctum>

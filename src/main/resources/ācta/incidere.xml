@@ -1,0 +1,223 @@
+<āctum fundāmen="incidere">
+  <fōrma modus="īnfīnītīvum" vōx="āctīvum" tempus="praesēns">
+    incidere
+  </fōrma>
+  <fōrma modus="īnfīnītīvum" vōx="āctīvum" tempus="perfectum">
+    incidisse
+  </fōrma>
+  <fōrma modus="participium" vōx="āctīvum" tempus="praesēns">
+    incidēns
+  </fōrma>
+  <fōrma modus="participium" vōx="passīvum" tempus="futūrum">
+    incidendus
+  </fōrma>
+
+  <fōrma modus="imperātīvum" vōx="āctīvum" tempus="praesēns" numerāle="singulāre" persōna="secundum">
+    incide
+  </fōrma>
+  <fōrma modus="imperātīvum" vōx="āctīvum" tempus="futūrum" numerāle="singulāre" persōna="secundum">
+    inciditō
+  </fōrma>
+  <fōrma modus="imperātīvum" vōx="āctīvum" tempus="futūrum" numerāle="singulāre" persōna="tertium">
+    inciditō
+  </fōrma>
+  <fōrma modus="imperātīvum" vōx="āctīvum" tempus="praesēns" numerāle="plūrāle" persōna="secundum">
+    incidite
+  </fōrma>
+  <fōrma modus="imperātīvum" vōx="āctīvum" tempus="futūrum" numerāle="plūrāle" persōna="secundum">
+    inciditōte
+  </fōrma>
+  <fōrma modus="imperātīvum" vōx="āctīvum" tempus="futūrum" numerāle="plūrāle" persōna="tertium">
+    inciduntō
+  </fōrma>
+
+  <fōrma modus="indicātīvum" vōx="āctīvum" tempus="praesēns" numerāle="singulāre" persōna="prīmum">
+    incidō
+  </fōrma>
+  <fōrma modus="indicātīvum" vōx="āctīvum" tempus="praesēns" numerāle="singulāre" persōna="secundum">
+    incidis
+  </fōrma>
+  <fōrma modus="indicātīvum" vōx="āctīvum" tempus="praesēns" numerāle="singulāre" persōna="tertium">
+    incidit
+  </fōrma>
+  <fōrma modus="indicātīvum" vōx="āctīvum" tempus="praesēns" numerāle="plūrāle" persōna="prīmum">
+    incidimus
+  </fōrma>
+  <fōrma modus="indicātīvum" vōx="āctīvum" tempus="praesēns" numerāle="plūrāle" persōna="secundum">
+    inciditis
+  </fōrma>
+  <fōrma modus="indicātīvum" vōx="āctīvum" tempus="praesēns" numerāle="plūrāle" persōna="tertium">
+    incidunt
+  </fōrma>
+
+  <fōrma modus="indicātīvum" vōx="āctīvum" tempus="infectum" numerāle="singulāre" persōna="prīmum">
+    incidēbam
+  </fōrma>
+  <fōrma modus="indicātīvum" vōx="āctīvum" tempus="infectum" numerāle="singulāre" persōna="secundum">
+    incidēbās
+  </fōrma>
+  <fōrma modus="indicātīvum" vōx="āctīvum" tempus="infectum" numerāle="singulāre" persōna="tertium">
+    incidēbat
+  </fōrma>
+  <fōrma modus="indicātīvum" vōx="āctīvum" tempus="infectum" numerāle="plūrāle" persōna="prīmum">
+    incidēbāmus
+  </fōrma>
+  <fōrma modus="indicātīvum" vōx="āctīvum" tempus="infectum" numerāle="plūrāle" persōna="secundum">
+    incidēbātis
+  </fōrma>
+  <fōrma modus="indicātīvum" vōx="āctīvum" tempus="infectum" numerāle="plūrāle" persōna="tertium">
+    incidēbant
+  </fōrma>
+
+  <fōrma modus="indicātīvum" vōx="āctīvum" tempus="futūrum" numerāle="singulāre" persōna="prīmum">
+    incidam
+  </fōrma>
+  <fōrma modus="indicātīvum" vōx="āctīvum" tempus="futūrum" numerāle="singulāre" persōna="secundum">
+    incidēs
+  </fōrma>
+  <fōrma modus="indicātīvum" vōx="āctīvum" tempus="futūrum" numerāle="singulāre" persōna="tertium">
+    incidet
+  </fōrma>
+  <fōrma modus="indicātīvum" vōx="āctīvum" tempus="futūrum" numerāle="plūrāle" persōna="prīmum">
+    incidēmus
+  </fōrma>
+  <fōrma modus="indicātīvum" vōx="āctīvum" tempus="futūrum" numerāle="plūrāle" persōna="secundum">
+    incidētis
+  </fōrma>
+  <fōrma modus="indicātīvum" vōx="āctīvum" tempus="futūrum" numerāle="plūrāle" persōna="tertium">
+    incident
+  </fōrma>
+
+  <fōrma modus="indicātīvum" vōx="āctīvum" tempus="perfectum" numerāle="singulāre" persōna="prīmum">
+    incidī
+  </fōrma>
+  <fōrma modus="indicātīvum" vōx="āctīvum" tempus="perfectum" numerāle="singulāre" persōna="secundum">
+    incidistī
+  </fōrma>
+  <fōrma modus="indicātīvum" vōx="āctīvum" tempus="perfectum" numerāle="singulāre" persōna="tertium">
+    incidit
+  </fōrma>
+  <fōrma modus="indicātīvum" vōx="āctīvum" tempus="perfectum" numerāle="plūrāle" persōna="prīmum">
+    incidimus
+  </fōrma>
+  <fōrma modus="indicātīvum" vōx="āctīvum" tempus="perfectum" numerāle="plūrāle" persōna="secundum">
+    inciditis
+  </fōrma>
+  <fōrma modus="indicātīvum" vōx="āctīvum" tempus="perfectum" numerāle="plūrāle" persōna="tertium">
+    incidērunt
+  </fōrma>
+
+  <fōrma modus="indicātīvum" vōx="āctīvum" tempus="plūperfectum" numerāle="singulāre" persōna="prīmum">
+    incideram
+  </fōrma>
+  <fōrma modus="indicātīvum" vōx="āctīvum" tempus="plūperfectum" numerāle="singulāre" persōna="secundum">
+    inciderās
+  </fōrma>
+  <fōrma modus="indicātīvum" vōx="āctīvum" tempus="plūperfectum" numerāle="singulāre" persōna="tertium">
+    inciderat
+  </fōrma>
+  <fōrma modus="indicātīvum" vōx="āctīvum" tempus="plūperfectum" numerāle="plūrāle" persōna="prīmum">
+    inciderāmus
+  </fōrma>
+  <fōrma modus="indicātīvum" vōx="āctīvum" tempus="plūperfectum" numerāle="plūrāle" persōna="secundum">
+    inciderātis
+  </fōrma>
+  <fōrma modus="indicātīvum" vōx="āctīvum" tempus="plūperfectum" numerāle="plūrāle" persōna="tertium">
+    incidērant
+  </fōrma>
+
+  <fōrma modus="indicātīvum" vōx="āctīvum" tempus="perfutūrum" numerāle="singulāre" persōna="prīmum">
+    inciderō
+  </fōrma>
+  <fōrma modus="indicātīvum" vōx="āctīvum" tempus="perfutūrum" numerāle="singulāre" persōna="secundum">
+    incideris
+  </fōrma>
+  <fōrma modus="indicātīvum" vōx="āctīvum" tempus="perfutūrum" numerāle="singulāre" persōna="tertium">
+    inciderit
+  </fōrma>
+  <fōrma modus="indicātīvum" vōx="āctīvum" tempus="perfutūrum" numerāle="plūrāle" persōna="prīmum">
+    inciderimus
+  </fōrma>
+  <fōrma modus="indicātīvum" vōx="āctīvum" tempus="perfutūrum" numerāle="plūrāle" persōna="secundum">
+    incideritis
+  </fōrma>
+  <fōrma modus="indicātīvum" vōx="āctīvum" tempus="perfutūrum" numerāle="plūrāle" persōna="tertium">
+    incidērint
+  </fōrma>
+
+  <fōrma modus="subiūnctīvum" vōx="āctīvum" tempus="praesēns" numerāle="singulāre" persōna="prīmum">
+    incidam
+  </fōrma>
+  <fōrma modus="subiūnctīvum" vōx="āctīvum" tempus="praesēns" numerāle="singulāre" persōna="secundum">
+    incidās
+  </fōrma>
+  <fōrma modus="subiūnctīvum" vōx="āctīvum" tempus="praesēns" numerāle="singulāre" persōna="tertium">
+    incidat
+  </fōrma>
+  <fōrma modus="subiūnctīvum" vōx="āctīvum" tempus="praesēns" numerāle="plūrāle" persōna="prīmum">
+    incidāmus
+  </fōrma>
+  <fōrma modus="subiūnctīvum" vōx="āctīvum" tempus="praesēns" numerāle="plūrāle" persōna="secundum">
+    incidātis
+  </fōrma>
+  <fōrma modus="subiūnctīvum" vōx="āctīvum" tempus="praesēns" numerāle="plūrāle" persōna="tertium">
+    incidant
+  </fōrma>
+
+  <fōrma modus="subiūnctīvum" vōx="āctīvum" tempus="infectum" numerāle="singulāre" persōna="prīmum">
+    inciderem
+  </fōrma>
+  <fōrma modus="subiūnctīvum" vōx="āctīvum" tempus="infectum" numerāle="singulāre" persōna="secundum">
+    inciderēs
+  </fōrma>
+  <fōrma modus="subiūnctīvum" vōx="āctīvum" tempus="infectum" numerāle="singulāre" persōna="tertium">
+    incideret
+  </fōrma>
+  <fōrma modus="subiūnctīvum" vōx="āctīvum" tempus="infectum" numerāle="plūrāle" persōna="prīmum">
+    inciderēmus
+  </fōrma>
+  <fōrma modus="subiūnctīvum" vōx="āctīvum" tempus="infectum" numerāle="plūrāle" persōna="secundum">
+    inciderētis
+  </fōrma>
+  <fōrma modus="subiūnctīvum" vōx="āctīvum" tempus="infectum" numerāle="plūrāle" persōna="tertium">
+    inciderent
+  </fōrma>
+
+  <fōrma modus="subiūnctīvum" vōx="āctīvum" tempus="perfectum" numerāle="singulāre" persōna="prīmum">
+    inciderim
+  </fōrma>
+  <fōrma modus="subiūnctīvum" vōx="āctīvum" tempus="perfectum" numerāle="singulāre" persōna="secundum">
+    inciderīs
+  </fōrma>
+  <fōrma modus="subiūnctīvum" vōx="āctīvum" tempus="perfectum" numerāle="singulāre" persōna="tertium">
+    inciderit
+  </fōrma>
+  <fōrma modus="subiūnctīvum" vōx="āctīvum" tempus="perfectum" numerāle="plūrāle" persōna="prīmum">
+    inciderīmus
+  </fōrma>
+  <fōrma modus="subiūnctīvum" vōx="āctīvum" tempus="perfectum" numerāle="plūrāle" persōna="secundum">
+    inciderītis
+  </fōrma>
+  <fōrma modus="subiūnctīvum" vōx="āctīvum" tempus="perfectum" numerāle="plūrāle" persōna="tertium">
+    inciderint
+  </fōrma>
+
+  <fōrma modus="subiūnctīvum" vōx="āctīvum" tempus="plūperfectum" numerāle="singulāre" persōna="prīmum">
+    incidissem
+  </fōrma>
+  <fōrma modus="subiūnctīvum" vōx="āctīvum" tempus="plūperfectum" numerāle="singulāre" persōna="secundum">
+    incidissēs
+  </fōrma>
+  <fōrma modus="subiūnctīvum" vōx="āctīvum" tempus="plūperfectum" numerāle="singulāre" persōna="tertium">
+    incidisset
+  </fōrma>
+  <fōrma modus="subiūnctīvum" vōx="āctīvum" tempus="plūperfectum" numerāle="plūrāle" persōna="prīmum">
+    incidissēmus
+  </fōrma>
+  <fōrma modus="subiūnctīvum" vōx="āctīvum" tempus="plūperfectum" numerāle="plūrāle" persōna="secundum">
+    incidissētis
+  </fōrma>
+  <fōrma modus="subiūnctīvum" vōx="āctīvum" tempus="plūperfectum" numerāle="plūrāle" persōna="tertium">
+    incidissent
+  </fōrma>
+</āctum>

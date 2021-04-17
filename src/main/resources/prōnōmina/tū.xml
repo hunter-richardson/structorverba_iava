@@ -1,0 +1,39 @@
+<prōnōmen fundāmen="tū">
+  <fōrma speciālitās="commūne" numerāle="singulāre" cāsus="nōminātīvum">
+    tū
+  </fōrma>
+  <fōrma speciālitās="commūne" numerāle="singulāre" cāsus="genitīvum">
+    tuī
+  </fōrma>
+  <fōrma speciālitās="commūne" numerāle="singulāre" cāsus="datīvum">
+    tibi
+  </fōrma>
+  <fōrma speciālitās="commūne" numerāle="singulāre" cāsus="accūsātīvum">
+    tē
+  </fōrma>
+  <fōrma speciālitās="commūne" numerāle="singulāre" cāsus="ablātīvum">
+    tē
+  </fōrma>
+  <fōrma speciālitās="commūne" numerāle="singulāre" cāsus="vocātīvum">
+    tū
+  </fōrma>
+
+  <fōrma speciālitās="commūne" numerāle="plūrāle" cāsus="nōminātīvum">
+    vōs
+  </fōrma>
+  <fōrma speciālitās="commūne" numerāle="plūrāle" cāsus="genitīvum">
+    vostrī
+  </fōrma>
+  <fōrma speciālitās="commūne" numerāle="plūrāle" cāsus="datīvum">
+    vōbīs
+  </fōrma>
+  <fōrma speciālitās="commūne" numerāle="plūrāle" cāsus="accūsātīvum">
+    vōs
+  </fōrma>
+  <fōrma speciālitās="commūne" numerāle="plūrāle" cāsus="ablātīvum">
+    vōbīs
+  </fōrma>
+  <fōrma speciālitās="commūne" numerāle="plūrāle" cāsus="vocātīvum">
+    vōs
+  </fōrma>
+</prōnōmen>

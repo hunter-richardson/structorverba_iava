@@ -1,1 +1,1 @@
-# structorverba_iava
+# Strūctor Verba : Iava
