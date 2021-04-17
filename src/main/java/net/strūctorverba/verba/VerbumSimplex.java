@@ -75,7 +75,7 @@ public abstract class VerbumSimplex <Hoc extends Verbum <Hoc>> extends Verbum <H
   /**
    * Classis {@link Coniūnctīvum} repraesentat coniūnctīva ut coniectēris.
    * Coniūnctīva catēgoriam {@link Catēgoria#CONIŪNCTĪVUM} ūtuntur et cōnservāta sunt in scrīniō <a href="../src/main/resources/coniūnctīva">coniūnctīva</a>.
-   * Prōpositīs programmātis huius classis {@link Coniūnctīvum} differt classe {@link Adverbium} sōlum in quō classis {@link Coniūnctīvum} modōs {@link Coniugiāle} dēfīnītōs dēdūcit.
+   * Prōpositīs programmātis huius classis hoc differt classe {@link Adverbium} sōlum in quō classis {@link Coniūnctīvum} modōs {@link Coniugiāle} dēfīnītōs dēdūcit.
    * @see LēctorSimplicibus.LēctorConiūnctīvīs
    * @see TenorSimplibus.TenorConiūnctivīs
    * @see ConditōrSimplicibus.ConditōrConiūnctīvīs
