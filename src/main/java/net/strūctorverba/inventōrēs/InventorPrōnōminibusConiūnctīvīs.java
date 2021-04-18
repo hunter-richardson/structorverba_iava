@@ -36,7 +36,7 @@ public final class InventorPrōnōminibusConiūnctīvīs extends Inventor <Prōn
   }
 
   public @Override void restituō( ) {
-    speciālitās = Speciālitās.COMMŪNE;
+    speciālitās = Speciālitās.NŪLLUM;
     genus = Genus.NŪLLUM;
     numerāle = Numerāle.NŪLLUS;
     cāsus = Cāsus.NŪLLUS;

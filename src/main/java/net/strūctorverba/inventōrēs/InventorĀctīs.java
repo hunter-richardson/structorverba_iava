@@ -21,7 +21,7 @@ public final class InventorĀctīs extends Inventor <Āctum> {
   private @NotNull Vōx      vōx      = Vōx.NŪLLA;
   private @NotNull Tempus   tempus   = Tempus.NŪLLUM;
   private @NotNull Numerāle numerāle = Numerāle.NŪLLUS;
-  private @NotNull Persōna  persōna  = Persōna.NŪLLUM;
+  private @NotNull Persōna  persōna  = Persōna.NŪLLA;
   private @NotNull Modus    modus    = Modus.NŪLLUS;
 
   private InventorĀctīs( ) {
@@ -40,7 +40,7 @@ public final class InventorĀctīs extends Inventor <Āctum> {
     vōx = Vōx.NŪLLA;
     tempus = Tempus.NŪLLUM;
     numerāle = Numerāle.NŪLLUS;
-    persōna = Persōna.NŪLLUM;
+    persōna = Persōna.NŪLLA;
     modus = Modus.NŪLLUS;
     nūntius.certiōrō(getClass().getSimpleName(), "est restitūtus.");
   }
@@ -60,7 +60,7 @@ public final class InventorĀctīs extends Inventor <Āctum> {
       nūntius.garriō("Quastiōnī adiēcī conditiōnem novam:",
                      Numerāle.class.getSimpleName(), "est", illud);
     } else if (illud instanceof Persōna) {
-      persōna = Persōna.ut(illud, Persōna.NŪLLUM);
+      persōna = Persōna.ut(illud, Persōna.NŪLLA);
       nūntius.garriō("Quastiōnī adiēcī conditiōnem novam:",
                      Persōna.class.getSimpleName(), "est", illud);
     } else if (illud instanceof Modus) {
