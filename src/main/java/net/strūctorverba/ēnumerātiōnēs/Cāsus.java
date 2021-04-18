@@ -97,7 +97,7 @@ public enum Cāsus {
 
   /**
    * @return {@code illud} sī valōrem ēnumerātiō {@link Cāsus} quadrat; {@code dēfecta} aliter.
-   * @param illud valor tentadus.
+   * @param illud valor tentandus.
    * @param dēfecta valor reventus sī rēs nūlla {@code illud} quadrat.
    */
   public static @NotNull Cāsus ut(@NotNull final Enum<@NotNull ?> illud, @NotNull final Cāsus dēfecta) {
@@ -112,7 +112,7 @@ public enum Cāsus {
 
   /**
    * @return {@code illud} sī valōrem ēnumerātiō {@link Cāsus} quadrat; {@code dēfecta} aliter.
-   * @param illud valor tentadus.
+   * @param illud valor tentandus.
    * @implSpec {@code null} veniet sī rēs nūlla {@code illud} quadrat.
    */
   @SuppressWarnings("ConstantConditions")
