@@ -25,7 +25,7 @@ public abstract class Verbum <Hoc extends Verbum <Hoc>> {
   public final @NotNull String fundāmen;
 
   /**
-   * Valor hic extēnsiōnem classī huius reī huic dēsignat.
+   * Valor hic extēnsiōnem classī huic reī huic dēsignat.
    * {@link Catēgoria#scrīptiō} quoque nōminātur scrīnium intrā quō scāpum eius cōnservātum est.
    * @see Catēgoria
    */
