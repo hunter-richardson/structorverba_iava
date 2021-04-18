@@ -110,7 +110,6 @@ public enum Cāsus {
     }
   }
 
-
   /**
    * @return {@code illud} sī valōrem ēnumerātiō {@link Cāsus} quadrat; {@code dēfecta} aliter.
    * @param illud valor tentandus.
