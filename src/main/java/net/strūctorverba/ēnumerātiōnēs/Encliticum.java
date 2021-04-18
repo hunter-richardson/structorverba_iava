@@ -1,5 +1,6 @@
 package net.strūctorverba.ēnumerātiōnēs;
 
+import net.strūctorverba.verba.multiplicia.VerbumMultiplex;
 import org.apache.commons.lang3.StringUtils;
 import org.jetbrains.annotations.NotNull;
 

@@ -2,8 +2,9 @@ package net.strūctorverba.verba.disposita;
 
 import lombok.*;
 import lombok.experimental.Accessors;
+import net.strūctorverba.mīscella.StrūctorVerba;
 import net.strūctorverba.nūntiī.*;
-import net.strūctorverba.verba.VerbumSimplex;
+import net.strūctorverba.verba.*;
 import net.strūctorverba.verba.multiplicia.*;
 import net.strūctorverba.ēnumerātiōnēs.*;
 import org.apache.commons.lang3.*;

@@ -2,6 +2,7 @@ package net.strūctorverba.ēnumerātiōnēs;
 
 import lombok.Getter;
 import net.strūctorverba.nūntiī.Nūntius;
+import net.strūctorverba.verba.multiplicia.*;
 import org.apache.commons.lang3.StringUtils;
 import org.jetbrains.annotations.*;
 
@@ -9,6 +10,8 @@ import java.util.stream.Stream;
 
 /**
  * Ēnumerātiō haec numerum verbī omnis dēsignat.
+ * @see Nōminālis
+ * @see Āctum
  */
 @SuppressWarnings({ "NonAsciiCharacters", "SpellCheckingInspection", "unused" })
 public enum Numerāle {
@@ -16,17 +19,17 @@ public enum Numerāle {
    * Valor hic ūtātur sī ūsūfructuāriī valōrem validum nōn dēnotat.
    * Numquam scrīnium <a href="../src/main/resources">auxiliārēs</a> inscrībētur.
    */
-  NŪLLUM(StringUtils.EMPTY),
+  NŪLLUS(StringUtils.EMPTY),
 
   /**
    * Valor hic numerum singulārem dēsignat.
    */
-  SINGULĀRE("singulāre"),
+  SINGULĀRIS("singulāris"),
 
   /**
    * Valor hic numerum plūrālem dēsignat.
    */
-  PLŪRĀLE("plūrāle");
+  PLŪRĀLIS("plūrālis");
 
   @Getter(lazy = true)
   private static final @NotNull Nūntius.NūntiusErrōribus nūntius = Nūntius.NūntiusErrōribus.fac.get();

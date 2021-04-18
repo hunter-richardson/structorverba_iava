@@ -20,8 +20,8 @@ public final class InventorNōminibus extends Inventor <Nōmen> {
 
   private @NotNull Speciālitās speciālitās = Speciālitās.NŪLLUM;
   private @NotNull Genus       genus       = Genus.NŪLLUM;
-  private @NotNull Numerāle    numerāle    = Numerāle.NŪLLUM;
-  private @NotNull Cāsus       cāsus       = Cāsus.NŪLLUM;
+  private @NotNull Numerāle    numerāle    = Numerāle.NŪLLUS;
+  private @NotNull Cāsus       cāsus       = Cāsus.NŪLLUS;
 
   private InventorNōminibus( ) {
     super(Nūntius.NūntiusInventōrīNōminibus.fac);
@@ -37,8 +37,8 @@ public final class InventorNōminibus extends Inventor <Nōmen> {
   public @Override void restituō( ) {
     speciālitās = Speciālitās.COMMŪNE;
     genus = Genus.NŪLLUM;
-    numerāle = Numerāle.NŪLLUM;
-    cāsus = Cāsus.NŪLLUM;
+    numerāle = Numerāle.NŪLLUS;
+    cāsus = Cāsus.NŪLLUS;
     nūntius.certiōrō(getClass().getSimpleName(), "est restitūtus.");
   }
 
@@ -52,11 +52,11 @@ public final class InventorNōminibus extends Inventor <Nōmen> {
       nūntius.garriō("Quastiōnī adiēcī conditiōnem novam:",
                      Genus.class.getSimpleName(), "est", illud);
     } else if (illud instanceof Numerāle) {
-      numerāle = Numerāle.ut(illud, Numerāle.NŪLLUM);
+      numerāle = Numerāle.ut(illud, Numerāle.NŪLLUS);
       nūntius.garriō("Quastiōnī adiēcī conditiōnem novam:",
                      Numerāle.class.getSimpleName(), "est", illud);
     } else if (illud instanceof Cāsus) {
-      cāsus = Cāsus.ut(illud, Cāsus.NŪLLUM);
+      cāsus = Cāsus.ut(illud, Cāsus.NŪLLUS);
       nūntius.garriō("Quastiōnī adiēcī conditiōnem novam:",
                      Cāsus.class.getSimpleName(), "est", illud);
     } else {

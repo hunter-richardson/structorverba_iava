@@ -21,9 +21,9 @@ public final class ConditōrAdiectīvīs extends ConditōrMultiplicibus <Adiect�
 
   private @NotNull Speciālitās speciālitās = Speciālitās.NŪLLUM;
   private @NotNull Genus       genus       = Genus.NŪLLUM;
-  private @NotNull Numerāle    numerāle    = Numerāle.NŪLLUM;
-  private @NotNull Cāsus       cāsus       = Cāsus.NŪLLUM;
-  private @NotNull Gradus      gradus      = Gradus.NŪLLUM;
+  private @NotNull Numerāle    numerāle    = Numerāle.NŪLLUS;
+  private @NotNull Cāsus       cāsus       = Cāsus.NŪLLUS;
+  private @NotNull Gradus      gradus      = Gradus.NŪLLUS;
 
   private ConditōrAdiectīvīs( ) {
     super(Nūntius.NūntiusConditōrīAdiectīvīs.fac);
@@ -52,9 +52,9 @@ public final class ConditōrAdiectīvīs extends ConditōrMultiplicibus <Adiect�
     switch (nōmen) {
       case "speciālitās" -> speciālitās = Speciālitās.dēfīniam(dēscrīptor, Speciālitās.NŪLLUM);
       case "genus" -> genus = Genus.dēfīniam(dēscrīptor, Genus.NŪLLUM);
-      case "numerāle" -> numerāle = Numerāle.dēfīniam(dēscrīptor, Numerāle.NŪLLUM);
-      case "cāsus" -> cāsus = Cāsus.dēfīniam(dēscrīptor, Cāsus.NŪLLUM);
-      case "gradus" -> gradus = Gradus.dēfīniam(dēscrīptor, Gradus.NŪLLUM);
+      case "numerāle" -> numerāle = Numerāle.dēfīniam(dēscrīptor, Numerāle.NŪLLUS);
+      case "cāsus" -> cāsus = Cāsus.dēfīniam(dēscrīptor, Cāsus.NŪLLUS);
+      case "gradus" -> gradus = Gradus.dēfīniam(dēscrīptor, Gradus.NŪLLUS);
       case "fundāmen" -> fundāmen = dēscrīptor.trim();
       default -> {
         nūntius.moneō(Adiectīvum.class.getSimpleName().replace("um", "ō"),
@@ -69,9 +69,9 @@ public final class ConditōrAdiectīvīs extends ConditōrMultiplicibus <Adiect�
   public @Override void restituō( ) {
     speciālitās = Speciālitās.NŪLLUM;
     genus = Genus.NŪLLUM;
-    cāsus = Cāsus.NŪLLUM;
-    numerāle = Numerāle.NŪLLUM;
-    gradus = Gradus.NŪLLUM;
+    cāsus = Cāsus.NŪLLUS;
+    numerāle = Numerāle.NŪLLUS;
+    gradus = Gradus.NŪLLUS;
     nūntius.certiōrō(getClass().getSimpleName(), "est restitūtus.");
   }
 }

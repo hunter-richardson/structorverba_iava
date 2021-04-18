@@ -1,6 +1,10 @@
 package net.strūctorverba.verba.multiplicia;
 
-import net.strūctorverba.verba.Verbum;
+import net.strūctorverba.conditōrēs.multiplicia.ConditōrMultiplicibus;
+import net.strūctorverba.inventōrēs.Inventor;
+import net.strūctorverba.lēctōrēs.LēctorMultiplicibus;
+import net.strūctorverba.tenōrēs.TenorMultiplicibus;
+import net.strūctorverba.verba.*;
 import net.strūctorverba.ēnumerātiōnēs.*;
 import org.jetbrains.annotations.NotNull;
 

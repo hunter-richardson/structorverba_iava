@@ -2,6 +2,7 @@ package net.strūctorverba.ēnumerātiōnēs;
 
 import lombok.Getter;
 import net.strūctorverba.nūntiī.Nūntius;
+import net.strūctorverba.verba.multiplicia.Āctum;
 import org.apache.commons.lang3.StringUtils;
 import org.jetbrains.annotations.*;
 
@@ -10,6 +11,7 @@ import java.util.stream.Stream;
 
 /**
  * Ēnumerātiō haec temporem verbī omnis dēsignat.
+ * @see Āctum
  */
 @SuppressWarnings({ "NonAsciiCharacters", "SpellCheckingInspection", "unused" })
 public enum Tempus {

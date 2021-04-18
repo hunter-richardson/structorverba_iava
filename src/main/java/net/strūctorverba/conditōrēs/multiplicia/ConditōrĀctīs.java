@@ -18,11 +18,11 @@ public final class ConditōrĀctīs extends ConditōrMultiplicibus <Āctum> {
   public static final @NotNull Supplier <ConditōrĀctīs> fac =
     () -> ObjectUtils.firstNonNull(īnstantia, īnstantia = new ConditōrĀctīs());
 
-  private @NotNull Modus    modus    = Modus.NŪLLUM;
-  private @NotNull Vōx      vōx      = Vōx.NŪLLUM;
+  private @NotNull Modus    modus    = Modus.NŪLLUS;
+  private @NotNull Vōx      vōx      = Vōx.NŪLLA;
   private @NotNull Tempus   tempus   = Tempus.NŪLLUM;
-  private @NotNull Numerāle numerāle = Numerāle.NŪLLUM;
-  private @NotNull Persōna  persōna  = Persōna.NŪLLUM;
+  private @NotNull Numerāle numerāle = Numerāle.NŪLLUS;
+  private @NotNull Persōna  persōna  = Persōna.NŪLLA;
 
   private ConditōrĀctīs( ) {
     super(Nūntius.NūntiusConditōrīĀctīs.fac);
@@ -50,11 +50,11 @@ public final class ConditōrĀctīs extends ConditōrMultiplicibus <Āctum> {
 
   public @Override void allegō(@NotNull final String nōmen, @NotNull final String dēscrīptor) {
     switch (nōmen) {
-      case "modus" -> modus = Modus.dēfīniam(dēscrīptor, Modus.NŪLLUM);
-      case "vōx" -> vōx = Vōx.dēfīniam(dēscrīptor, Vōx.NŪLLUM);
+      case "modus" -> modus = Modus.dēfīniam(dēscrīptor, Modus.NŪLLUS);
+      case "vōx" -> vōx = Vōx.dēfīniam(dēscrīptor, Vōx.NŪLLA);
       case "tempus" -> tempus = Tempus.dēfīniam(dēscrīptor, Tempus.NŪLLUM);
-      case "numerāle" -> numerāle = Numerāle.dēfīniam(dēscrīptor, Numerāle.NŪLLUM);
-      case "persōna" -> persōna = Persōna.dēfīniam(dēscrīptor, Persōna.NŪLLUM);
+      case "numerāle" -> numerāle = Numerāle.dēfīniam(dēscrīptor, Numerāle.NŪLLUS);
+      case "persōna" -> persōna = Persōna.dēfīniam(dēscrīptor, Persōna.NŪLLA);
       case "fundāmen" -> fundāmen = dēscrīptor.trim();
       default -> {
         nūntius.moneō(Āctum.class.getSimpleName().replace("um", "ō"),
@@ -67,11 +67,11 @@ public final class ConditōrĀctīs extends ConditōrMultiplicibus <Āctum> {
   }
 
   public @Override void restituō( ) {
-    numerāle = Numerāle.NŪLLUM;
-    persōna = Persōna.NŪLLUM;
+    numerāle = Numerāle.NŪLLUS;
+    persōna = Persōna.NŪLLA;
     tempus = Tempus.NŪLLUM;
-    modus = Modus.NŪLLUM;
-    vōx = Vōx.NŪLLUM;
+    modus = Modus.NŪLLUS;
+    vōx = Vōx.NŪLLA;
     nūntius.certiōrō(getClass().getSimpleName(), "est restitūtus.");
   }
 }

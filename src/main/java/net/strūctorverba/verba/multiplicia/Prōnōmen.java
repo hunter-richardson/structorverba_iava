@@ -2,7 +2,11 @@ package net.strūctorverba.verba.multiplicia;
 
 import lombok.*;
 import lombok.experimental.Accessors;
+import net.strūctorverba.conditōrēs.multiplicia.ConditōrPrōnōminibus;
+import net.strūctorverba.inventōrēs.InventorPrōnōminibus;
+import net.strūctorverba.lēctōrēs.LēctorMultiplicibus;
 import net.strūctorverba.nūntiī.*;
+import net.strūctorverba.tenōrēs.TenorMultiplicibus;
 import net.strūctorverba.ēnumerātiōnēs.*;
 import org.apache.commons.lang3.ObjectUtils;
 import org.jetbrains.annotations.*;

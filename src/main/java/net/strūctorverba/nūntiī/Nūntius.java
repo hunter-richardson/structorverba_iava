@@ -157,7 +157,7 @@ public abstract class Nūntius {
       () -> ObjectUtils.firstNonNull(īnstantia, īnstantia = new NūntiusTenōrīPrōnōmibusConiūnctīvīs());
 
     private NūntiusTenōrīPrōnōmibusConiūnctīvīs( ) {
-      super(ParametrīNūntiī.parā(TenorMultiplicibus.TenorPrōnōmibusConiūnctīvīs.class));
+      super(ParametrīNūntiī.parā(TenorMultiplicibus.TenorPrōnōminibusConiūnctīvīs.class));
     }
   }
 

@@ -6,6 +6,7 @@ import java.time.Month;
 
 /**
  * Ēnumerātiō haec mēnsēs annī dēsignat.
+ * @see Month
  */
 @SuppressWarnings({ "NonAsciiCharacters", "SpellCheckingInspection" })
 public enum Mēnsis {

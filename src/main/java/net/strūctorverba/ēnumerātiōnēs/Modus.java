@@ -2,13 +2,15 @@ package net.strūctorverba.ēnumerātiōnēs;
 
 import lombok.Getter;
 import net.strūctorverba.nūntiī.Nūntius;
+import net.strūctorverba.verba.multiplicia.Āctum;
 import org.apache.commons.lang3.StringUtils;
 import org.jetbrains.annotations.*;
 
 import java.util.stream.Stream;
 
 /**
- * Ēnumerātiō haec modum verbī omnis dēsignat.
+ * Ēnumerātiō haec modum āctī omnis dēsignat.
+ * @see Āctum
  */
 @SuppressWarnings({ "NonAsciiCharacters", "SpellCheckingInspection", "unused" })
 public enum Modus {
@@ -16,27 +18,27 @@ public enum Modus {
    * Valor hic ūtātur sī ūsūfructuāriī valōrem validum nōn dēnotat.
    * Numquam scrīnium <a href="../src/main/resources">auxiliārēs</a> inscrībētur.
    */
-  NŪLLUM(StringUtils.EMPTY),
+  NŪLLUS(StringUtils.EMPTY),
 
   /**
    * Valor hic modum indicātīvum dēsignat.
    */
-  INDICĀTĪVUM("indicātīvum"),
+  INDICĀTĪVUS("indicātīvus"),
 
   /**
    * Valor hic modum subiūnctīvum dēsignat.
    */
-  SUBIŪNCTĪVUM("subiūnctīvum"),
+  SUBIŪNCTĪVUS("subiūnctīvus"),
 
   /**
    * Valor hic modum īnfīnītīvum dēsignat.
    */
-  ĪNFĪNĪTĪVUM("īnfīnītīvum"),
+  ĪNFĪNĪTĪVUS("īnfīnītīvus"),
 
   /**
    * Valor hic modum imperātīvum dēsignat.
    */
-  IMPERĀTĪVUM("imperātīvum"),
+  IMPERĀTĪVUS("imperātīvus"),
 
   /**
    * Valor hic modum participiālem dēsignat.

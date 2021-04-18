@@ -2,9 +2,12 @@ package net.strūctorverba.verba.multiplicia;
 
 import lombok.*;
 import lombok.experimental.Accessors;
+import net.strūctorverba.conditōrēs.multiplicia.ConditōrĀctīs;
+import net.strūctorverba.inventōrēs.InventorĀctīs;
 import net.strūctorverba.lēctōrēs.LēctorMultiplicibus;
 import net.strūctorverba.mīscella.Ūtilitās;
 import net.strūctorverba.nūntiī.*;
+import net.strūctorverba.tenōrēs.TenorMultiplicibus;
 import net.strūctorverba.ēnumerātiōnēs.*;
 import org.apache.commons.lang3.ObjectUtils;
 import org.jetbrains.annotations.*;
@@ -88,12 +91,12 @@ public final class Āctum extends VerbumMultiplex <Āctum> {
   public @Nullable Adiectīvum participem(@NotNull final Vōx vx, @NotNull final Tempus tmps,
                                          @NotNull final Speciālitās spclt, @NotNull final Genus gns,
                                          @NotNull final Cāsus css, @NotNull final Numerāle nmrl, @NotNull final Gradus grds) {
-    if(Modus.PARTICIPIUM.equals(modus)
+    if(Modus.PARTICIPĀLIS.equals(modus)
        && vōx.equals(vx)
        && tempus.equals(tmps)) {
       return adiectīva().adveniam(toString(), spclt, gns, css, nmrl, grds);
     } else {
-      Āctum alium = ācta().adveniam(fundāmen, Modus.PARTICIPIUM, vx, tmps);
+      Āctum alium = ācta().adveniam(fundāmen, Modus.PARTICIPĀLIS, vx, tmps);
       return Objects.isNull(alium) ? null
                                    : adiectīva().adveniam(alium.toString(), spclt, gns, css, nmrl, Gradus.NŌRMĀlE);
     }

@@ -20,9 +20,9 @@ public final class InventorAdiectīvīs extends Inventor <Adiectīvum> {
 
   private @NotNull Speciālitās speciālitās = Speciālitās.NŪLLUM;
   private @NotNull Genus       genus       = Genus.NŪLLUM;
-  private @NotNull Numerāle    numerāle    = Numerāle.NŪLLUM;
-  private @NotNull Cāsus       cāsus       = Cāsus.NŪLLUM;
-  private @NotNull Gradus      gradus      = Gradus.NŪLLUM;
+  private @NotNull Numerāle    numerāle    = Numerāle.NŪLLUS;
+  private @NotNull Cāsus       cāsus       = Cāsus.NŪLLUS;
+  private @NotNull Gradus      gradus      = Gradus.NŪLLUS;
 
   private InventorAdiectīvīs( ) {
     super(Nūntius.NūntiusInventōrīAdiectīvīs.fac);
@@ -40,9 +40,9 @@ public final class InventorAdiectīvīs extends Inventor <Adiectīvum> {
   public @Override void restituō( ) {
     speciālitās = Speciālitās.NŪLLUM;
     genus = Genus.NŪLLUM;
-    numerāle = Numerāle.NŪLLUM;
-    cāsus = Cāsus.NŪLLUM;
-    gradus = Gradus.NŪLLUM;
+    numerāle = Numerāle.NŪLLUS;
+    cāsus = Cāsus.NŪLLUS;
+    gradus = Gradus.NŪLLUS;
     nūntius.certiōrō(getClass().getSimpleName(), "est restitūtus.");
   }
 
@@ -56,15 +56,15 @@ public final class InventorAdiectīvīs extends Inventor <Adiectīvum> {
       nūntius.garriō("Quastiōnī adiēcī conditiōnem novam:",
                      Genus.class.getSimpleName(), "est", illud);
     } else if (illud instanceof Numerāle) {
-      numerāle = Numerāle.ut(illud, Numerāle.NŪLLUM);
+      numerāle = Numerāle.ut(illud, Numerāle.NŪLLUS);
       nūntius.garriō("Quastiōnī adiēcī conditiōnem novam:",
                      Numerāle.class.getSimpleName(), "est", illud);
     } else if (illud instanceof Cāsus) {
-      cāsus = Cāsus.ut(illud, Cāsus.NŪLLUM);
+      cāsus = Cāsus.ut(illud, Cāsus.NŪLLUS);
       nūntius.garriō("Quastiōnī adiēcī conditiōnem novam:",
                      Cāsus.class.getSimpleName(), "est", illud);
     } else if (illud instanceof Gradus) {
-      gradus = Gradus.ut(illud, Gradus.NŪLLUM);
+      gradus = Gradus.ut(illud, Gradus.NŪLLUS);
       nūntius.garriō("Quastiōnī adiēcī conditiōnem novam:",
                      Gradus.class.getSimpleName(), "est", illud);
     } else {

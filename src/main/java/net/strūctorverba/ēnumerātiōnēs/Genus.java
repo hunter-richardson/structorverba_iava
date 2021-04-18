@@ -2,6 +2,7 @@ package net.strūctorverba.ēnumerātiōnēs;
 
 import lombok.Getter;
 import net.strūctorverba.nūntiī.Nūntius;
+import net.strūctorverba.verba.multiplicia.Nōminālis;
 import org.apache.commons.lang3.StringUtils;
 import org.jetbrains.annotations.*;
 
@@ -9,6 +10,7 @@ import java.util.stream.Stream;
 
 /**
  * Ēnumerātiō haec generem verbī omnis dēsignat.
+ * @see Nōminālis
  */
 @SuppressWarnings({ "NonAsciiCharacters", "SpellCheckingInspection", "unused" })
 public enum Genus {

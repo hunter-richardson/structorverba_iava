@@ -18,11 +18,11 @@ public final class InventorĀctīs extends Inventor <Āctum> {
   public static final @NotNull Supplier <InventorĀctīs> fac =
     () -> ObjectUtils.firstNonNull(īnstantia, īnstantia = new InventorĀctīs());
 
-  private @NotNull Vōx      vōx      = Vōx.NŪLLUM;
+  private @NotNull Vōx      vōx      = Vōx.NŪLLA;
   private @NotNull Tempus   tempus   = Tempus.NŪLLUM;
-  private @NotNull Numerāle numerāle = Numerāle.NŪLLUM;
+  private @NotNull Numerāle numerāle = Numerāle.NŪLLUS;
   private @NotNull Persōna  persōna  = Persōna.NŪLLUM;
-  private @NotNull Modus    modus    = Modus.NŪLLUM;
+  private @NotNull Modus    modus    = Modus.NŪLLUS;
 
   private InventorĀctīs( ) {
     super(Nūntius.NūntiusInventōrīĀctīs.fac);
@@ -37,18 +37,18 @@ public final class InventorĀctīs extends Inventor <Āctum> {
   }
 
   public @Override void restituō( ) {
-    vōx = Vōx.NŪLLUM;
+    vōx = Vōx.NŪLLA;
     tempus = Tempus.NŪLLUM;
-    numerāle = Numerāle.NŪLLUM;
+    numerāle = Numerāle.NŪLLUS;
     persōna = Persōna.NŪLLUM;
-    modus = Modus.NŪLLUM;
+    modus = Modus.NŪLLUS;
     nūntius.certiōrō(getClass().getSimpleName(), "est restitūtus.");
   }
 
 
   protected @Override void allegam(@NotNull final Enum<@NotNull ?> illud) {
     if (illud instanceof Vōx) {
-      vōx = Vōx.ut(illud, Vōx.NŪLLUM);
+      vōx = Vōx.ut(illud, Vōx.NŪLLA);
       nūntius.garriō("Quastiōnī adiēcī conditiōnem novam:",
                      Vōx.class.getSimpleName(), "est", illud);
     } else if (illud instanceof Tempus) {
@@ -56,7 +56,7 @@ public final class InventorĀctīs extends Inventor <Āctum> {
       nūntius.garriō("Quastiōnī adiēcī conditiōnem novam:",
                      Tempus.class.getSimpleName(), "est", illud);
     } else if (illud instanceof Numerāle) {
-      numerāle = Numerāle.ut(illud, Numerāle.NŪLLUM);
+      numerāle = Numerāle.ut(illud, Numerāle.NŪLLUS);
       nūntius.garriō("Quastiōnī adiēcī conditiōnem novam:",
                      Numerāle.class.getSimpleName(), "est", illud);
     } else if (illud instanceof Persōna) {
@@ -64,7 +64,7 @@ public final class InventorĀctīs extends Inventor <Āctum> {
       nūntius.garriō("Quastiōnī adiēcī conditiōnem novam:",
                      Persōna.class.getSimpleName(), "est", illud);
     } else if (illud instanceof Modus) {
-      modus = Modus.ut(illud, Modus.NŪLLUM);
+      modus = Modus.ut(illud, Modus.NŪLLUS);
       nūntius.garriō("Quastiōnī adiēcī conditiōnem novam:",
                      Modus.class.getSimpleName(), "est", illud);
     } else {

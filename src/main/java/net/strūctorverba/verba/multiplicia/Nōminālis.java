@@ -1,6 +1,7 @@
 package net.strūctorverba.verba.multiplicia;
 
 import net.strūctorverba.mīscella.Ūtilitās;
+import net.strūctorverba.verba.Verbum;
 import net.strūctorverba.ēnumerātiōnēs.*;
 import org.jetbrains.annotations.NotNull;
 

@@ -1,5 +1,8 @@
 package net.strūctorverba.ēnumerātiōnēs;
 
+import net.strūctorverba.verba.*;
+import net.strūctorverba.verba.disposita.VerbaPraepositiōne;
+import net.strūctorverba.verba.multiplicia.*;
 import org.apache.commons.lang3.StringUtils;
 import org.jetbrains.annotations.NotNull;
 
@@ -29,17 +32,17 @@ public enum Catēgoria {
   ĀCTUM("ācta"),
 
   /**
-   * Valor hic classem {@link Adverbium} respondet.
+   * Valor hic classem {@link VerbumSimplex.Adverbium} respondet.
    */
   ADVERBIUM("adverbia"),
 
   /**
-   * Valor hic classem {@link Coniūnctīvum} respondet.
+   * Valor hic classem {@link VerbumSimplex.Coniūnctīvum} respondet.
    */
   CONIŪNCTĪVUM("coniūnctīva"),
 
   /**
-   * Valor hic classem {@link Praepositiō} respondet.
+   * Valor hic classem {@link VerbumSimplex.Praepositiō} respondet.
    */
   PRAEPOSITIŌ("praepositiōnēs"),
 
@@ -49,7 +52,7 @@ public enum Catēgoria {
   PRŌNŌMEN_CONIŪNCTĪVUM("prōnōminaConiūnctīva"),
 
   /**
-   * Valor hic classem {@link Numerus} respondet.
+   * Valor hic classem {@link VerbumSimplex.Numerus} respondet.
    */
   NUMERUM(StringUtils.EMPTY),
 

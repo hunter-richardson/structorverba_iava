@@ -2,6 +2,7 @@ package net.strūctorverba.ēnumerātiōnēs;
 
 import lombok.Getter;
 import net.strūctorverba.nūntiī.Nūntius;
+import net.strūctorverba.verba.multiplicia.Āctum;
 import org.apache.commons.lang3.StringUtils;
 import org.jetbrains.annotations.*;
 
@@ -9,6 +10,7 @@ import java.util.stream.Stream;
 
 /**
  * Ēnumerātiō haec vōcem verbī omnis dēsignat.
+ * @see Āctum
  */
 @SuppressWarnings({ "NonAsciiCharacters", "SpellCheckingInspection", "unused" })
 public enum Vōx {
@@ -16,7 +18,7 @@ public enum Vōx {
    * Valor hic ūtātur sī ūsūfructuāriī valōrem validum nōn dēnotat.
    * Numquam scrīnium <a href="../src/main/resources">auxiliārēs</a> inscrībētur.
    */
-  NŪLLUM(StringUtils.EMPTY),
+  NŪLLA(StringUtils.EMPTY),
 
   /**
    * Valor hic vōcem āctīvam dēsignat.

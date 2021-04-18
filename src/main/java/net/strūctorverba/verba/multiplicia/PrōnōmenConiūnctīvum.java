@@ -2,7 +2,11 @@ package net.strūctorverba.verba.multiplicia;
 
 import lombok.*;
 import lombok.experimental.Accessors;
+import net.strūctorverba.conditōrēs.multiplicia.ConditōrPrōnōminibusConiūnctīvīs;
+import net.strūctorverba.inventōrēs.InventorPrōnōminibusConiūnctīvīs;
+import net.strūctorverba.lēctōrēs.LēctorMultiplicibus;
 import net.strūctorverba.nūntiī.*;
+import net.strūctorverba.tenōrēs.TenorMultiplicibus;
 import net.strūctorverba.verba.*;
 import net.strūctorverba.verba.disposita.Verba;
 import net.strūctorverba.ēnumerātiōnēs.*;

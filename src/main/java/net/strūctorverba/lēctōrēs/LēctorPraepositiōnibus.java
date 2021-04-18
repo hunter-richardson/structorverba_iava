@@ -65,8 +65,8 @@ public final class LēctorPraepositiōnibus {
   public @NotNull VerbumSimplex.Praepositiō adveniam(@NotNull final String verbum) {
    Cāsus cāsus = Stream.of(Cāsus.ABLĀTĪVUM, Cāsus.ACCŪSĀTĪVUM, Cāsus.GENITĪVUM, Cāsus.VOCĀTĪVUM)
                        .filter(css -> quaerō.test(verbum, css))
-                       .findFirst().orElse(Cāsus.NŪLLUM);
-   if(Cāsus.NŪLLUM.equals(cāsus)) {
+                       .findFirst().orElse(Cāsus.NŪLLUS);
+   if(Cāsus.NŪLLUS.equals(cāsus)) {
      nūntius().moneō("Nihil advenī");
      nūntius().moneō(String.format("%snī", VerbumSimplex.Praepositiō.class.getSimpleName()),
                      "assūmētur");

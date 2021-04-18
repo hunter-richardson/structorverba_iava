@@ -61,16 +61,16 @@ public abstract class LēctorMultiplicibus <Hoc extends VerbumMultiplex <Hoc>> e
       try {
         return adveniam(switch (persōna) {
                           case PRĪMUM -> switch (numerāle) {
-                            case SINGULĀRE -> "meus";
-                            case PLŪRĀLE -> "noster";
-                            case NŪLLUM -> throw new IllegalArgumentException(String.format("Ūsus prāvus est ēnumerātiōnis %s",
-                                                                                            Numerāle.NŪLLUM));
+                            case SINGULĀRIS -> "meus";
+                            case PLŪRĀLIS -> "noster";
+                            case NŪLLUS -> throw new IllegalArgumentException(String.format("Ūsus prāvus est ēnumerātiōnis %s",
+                                                                                            Numerāle.NŪLLUS));
                           };
                           case SECUNDUM -> switch (numerāle) {
-                            case SINGULĀRE -> "tuus";
-                            case PLŪRĀLE -> "voster";
-                            case NŪLLUM -> throw new IllegalArgumentException(String.format("Ūsus prāvus est ēnumerātiōnis %s",
-                                                                                            Numerāle.NŪLLUM));
+                            case SINGULĀRIS -> "tuus";
+                            case PLŪRĀLIS -> "voster";
+                            case NŪLLUS -> throw new IllegalArgumentException(String.format("Ūsus prāvus est ēnumerātiōnis %s",
+                                                                                            Numerāle.NŪLLUS));
                           };
                           case TERTIUM -> "suus";
                           case NŪLLUM -> throw new IllegalArgumentException(String.format("Ūsus prāvus est ēnumerātiōnis %s",
@@ -103,7 +103,7 @@ public abstract class LēctorMultiplicibus <Hoc extends VerbumMultiplex <Hoc>> e
                           case SECUNDUM -> "tū";
                           case TERTIUM -> "is";
                           case NŪLLUM -> throw new IllegalArgumentException(String.format("Ūsus prāvus est ēnumerātiōnis %s",
-                                                                                          Numerāle.NŪLLUM));
+                                                                                          Numerāle.NŪLLUS));
                         }, illa);
       } catch (IllegalArgumentException e) {
         nūntius.terreō(e);
@@ -121,7 +121,7 @@ public abstract class LēctorMultiplicibus <Hoc extends VerbumMultiplex <Hoc>> e
 
     private LēctorPrōnōminibusConiūnctīvīs( ) {
       super(Catēgoria.PRŌNŌMEN_CONIŪNCTĪVUM, Nūntius.NūntiusLēctōrīPrōnōminibusConiūnctīvīs.fac,
-            TenorMultiplicibus.TenorPrōnōmibusConiūnctīvīs.fac, InventorPrōnōminibusConiūnctīvīs.fac);
+            TenorMultiplicibus.TenorPrōnōminibusConiūnctīvīs.fac, InventorPrōnōminibusConiūnctīvīs.fac);
     }
   }
 

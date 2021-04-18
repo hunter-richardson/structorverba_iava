@@ -2,6 +2,7 @@ package net.strūctorverba.ēnumerātiōnēs;
 
 import lombok.Getter;
 import net.strūctorverba.nūntiī.Nūntius;
+import net.strūctorverba.verba.multiplicia.Adiectīvum;
 import org.apache.commons.lang3.StringUtils;
 import org.jetbrains.annotations.*;
 
@@ -9,6 +10,7 @@ import java.util.stream.Stream;
 
 /**
  * Ēnumerātiō haec potentiam adiectīvī omnis dēsignat.
+ * @see Adiectīvum
  */
 @SuppressWarnings({ "NonAsciiCharacters", "SpellCheckingInspection", "unused" })
 public enum Gradus {
@@ -16,7 +18,7 @@ public enum Gradus {
    * Valor hic ūtātur sī ūsūfructuāriī valōrem validum nōn dēnotat.
    * Numquam scrīnium <a href="../src/main/resources">auxiliārēs</a> inscrībētur.
    */
-  NŪLLUM(StringUtils.EMPTY),
+  NŪLLUS(StringUtils.EMPTY),
 
   /**
    * Valor hic potentiam nōrmāle dēsignat.
@@ -26,12 +28,12 @@ public enum Gradus {
   /**
    * Valor hic potentiam comparātīvum dēsignat.
    */
-  COMPARĀTĪVUM("comparātīvum"),
+  COMPARĀTĪVUS("comparātīvus"),
 
   /**
    * Valor hic potentiam superlātīvum dēsignat.
    */
-  SUPERLĀTĪVUM("superlātīvum");
+  SUPERLĀTĪVUS("superlātīvus");
 
   @Getter(lazy = true)
   private static final @NotNull Nūntius.NūntiusErrōribus nūntius = Nūntius.NūntiusErrōribus.fac.get();

@@ -85,13 +85,13 @@ public abstract class TenorMultiplicibus <Hoc extends VerbumMultiplex <Hoc>> ext
   }
 
   @Singleton @DependsOn({ "CondītōrPrōnōminiusConiūnctīvīs", "NūntiusTenōrīPrōnōmibusConiūnctīvīs" })
-  public static final class TenorPrōnōmibusConiūnctīvīs extends TenorMultiplicibus <PrōnōmenConiūnctīvum> {
-    private static @Nullable TenorPrōnōmibusConiūnctīvīs īnstantia = null;
+  public static final class TenorPrōnōminibusConiūnctīvīs extends TenorMultiplicibus <PrōnōmenConiūnctīvum> {
+    private static @Nullable TenorPrōnōminibusConiūnctīvīs īnstantia = null;
 
-    public static @NotNull final Supplier <TenorPrōnōmibusConiūnctīvīs> fac =
-      () -> ObjectUtils.firstNonNull(īnstantia, īnstantia = new TenorPrōnōmibusConiūnctīvīs());
+    public static @NotNull final Supplier <TenorPrōnōminibusConiūnctīvīs> fac =
+      () -> ObjectUtils.firstNonNull(īnstantia, īnstantia = new TenorPrōnōminibusConiūnctīvīs());
 
-    private TenorPrōnōmibusConiūnctīvīs( ) {
+    private TenorPrōnōminibusConiūnctīvīs( ) {
       super(Nūntius.NūntiusTenōrīPrōnōmibusConiūnctīvīs.fac, ConditōrPrōnōminibusConiūnctīvīs.fac);
     }
   }

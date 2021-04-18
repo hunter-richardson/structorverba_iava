@@ -20,8 +20,8 @@ public final class InventorPrōnōminibusConiūnctīvīs extends Inventor <Prōn
 
   private @NotNull Speciālitās speciālitās = Speciālitās.NŪLLUM;
   private @NotNull Genus       genus       = Genus.NŪLLUM;
-  private @NotNull Numerāle    numerāle    = Numerāle.NŪLLUM;
-  private @NotNull Cāsus       cāsus       = Cāsus.NŪLLUM;
+  private @NotNull Numerāle    numerāle    = Numerāle.NŪLLUS;
+  private @NotNull Cāsus       cāsus       = Cāsus.NŪLLUS;
 
   private InventorPrōnōminibusConiūnctīvīs( ) {
     super(Nūntius.NūntiusInventōrīPrōnōmibusConiūnctīvīs.fac);
@@ -38,8 +38,8 @@ public final class InventorPrōnōminibusConiūnctīvīs extends Inventor <Prōn
   public @Override void restituō( ) {
     speciālitās = Speciālitās.COMMŪNE;
     genus = Genus.NŪLLUM;
-    numerāle = Numerāle.NŪLLUM;
-    cāsus = Cāsus.NŪLLUM;
+    numerāle = Numerāle.NŪLLUS;
+    cāsus = Cāsus.NŪLLUS;
     nūntius.certiōrō(getClass().getSimpleName(), "est restitūtus.");
   }
 
@@ -53,7 +53,7 @@ public final class InventorPrōnōminibusConiūnctīvīs extends Inventor <Prōn
       nūntius.garriō("Quastiōnī adiēcī conditiōnem novam:",
                      Genus.class.getSimpleName(), "est", illud);
     } else if (illud instanceof Numerāle) {
-      numerāle = Numerāle.ut(illud, Numerāle.NŪLLUM);
+      numerāle = Numerāle.ut(illud, Numerāle.NŪLLUS);
       nūntius.garriō("Quastiōnī adiēcī conditiōnem novam:",
                      Numerāle.class.getSimpleName(), "est", illud);
     } else {
