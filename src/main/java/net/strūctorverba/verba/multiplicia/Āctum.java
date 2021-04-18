@@ -75,8 +75,8 @@ public final class Āctum extends VerbumMultiplex <Āctum> {
   }
 
   /**
-   * Modus hic rem classis {@link Adiectīvum} ā parametrī dēsignātīs advenit.
-   * @return rem classis {@link Adiectīvum} quod parametrōs dēsignātōs quadrat.
+   * Modus hic rem classis {@link Adiectīvum} ā parametrīs dēsignātīs advenit.
+   * @return rem classis {@link Adiectīvum} quod parametra dēsignāta quadrat.
    * @param vx valōrem {@link #vōx} indicat.
    * @param tmps valōrem {@link #tempus} indicat.
    * @param spclt valōrem {@link Nōminālis#speciālitās} indicat.
@@ -100,8 +100,8 @@ public final class Āctum extends VerbumMultiplex <Āctum> {
   }
 
   /**
-   * Modus hic rem classis {@link Adiectīvum} ā parametrī dēsignātīs advenit.
-   * @return rem classis {@link Adiectīvum} quod parametrōs dēsignātōs quadrat.
+   * Modus hic rem classis {@link Adiectīvum} ā parametrīs dēsignātīs advenit.
+   * @return rem classis {@link Adiectīvum} quod parametra dēsignāta quadrat.
    * @param vx valōrem {@link #vōx} indicat.
    * @param spclt valōrem {@link Nōminālis#speciālitās} indicat.
    * @param gns valōrem {@link Nōminālis#genus} indicat.
@@ -116,8 +116,8 @@ public final class Āctum extends VerbumMultiplex <Āctum> {
   }
 
   /**
-   * Modus hic rem classis {@link Adiectīvum} ā parametrī dēsignātīs advenit.
-   * @return rem classis {@link Adiectīvum} quod parametrōs dēsignātōs quadrat.
+   * Modus hic rem classis {@link Adiectīvum} ā parametrīs dēsignātīs advenit.
+   * @return rem classis {@link Adiectīvum} quod parametra dēsignāta quadrat.
    * @param tmps valōrem {@link #tempus} indicat.
    * @param spclt valōrem {@link Nōminālis#speciālitās} indicat.
    * @param gns valōrem {@link Nōminālis#genus} indicat.
@@ -132,8 +132,8 @@ public final class Āctum extends VerbumMultiplex <Āctum> {
   }
 
   /**
-   * Modus hic rem classis {@link Adiectīvum} ā parametrī dēsignātīs advenit.
-   * @return rem classis {@link Adiectīvum} quod parametrōs dēsignātōs quadrat.
+   * Modus hic rem classis {@link Adiectīvum} ā parametrīs dēsignātīs advenit.
+   * @return rem classis {@link Adiectīvum} quod parametra dēsignāta quadrat.
    * @param spclt valōrem {@link Nōminālis#speciālitās} indicat.
    * @param gns valōrem {@link Nōminālis#genus} indicat.
    * @param css valōrem {@link Nōminālis#cāsus} indicat.
