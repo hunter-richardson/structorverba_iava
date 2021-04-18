@@ -17,11 +17,20 @@ import java.util.*;
 import java.util.function.*;
 import java.util.stream.*;
 
+/**
+ * Classis {@link StrūctorVerba} accessum modīs omnibus programmātis StrūctorVerba prōvidet.
+ * Sōlum reī classis huiuc accēdendus licēre ūsum plēnum programmātis ūsūfructuāriīs.
+ * @see #fac
+ */
 @Singleton @SuppressWarnings({ "NonAsciiCharacters", "SpellCheckingInspection", "unused" })
 @NoArgsConstructor(access = AccessLevel.PRIVATE)
 public final class StrūctorVerba {
   private static @Nullable StrūctorVerba īnstantia = null;
 
+  /**
+   * Valor hic viam reī classis huiuc facit.
+   * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
+   */
   public static final @NotNull Supplier <StrūctorVerba> fac =
     () -> ObjectUtils.firstNonNull(īnstantia, īnstantia = new StrūctorVerba());
 
@@ -52,53 +61,94 @@ public final class StrūctorVerba {
   @Getter(lazy = true) @Accessors(fluent = true)
   private final @NotNull LēctorMultiplicibus.LēctorĀctīs ācta = LēctorMultiplicibus.LēctorĀctīs.fac.get();
 
+  /**
+   * @return rem classis {@link LēctorMultiplicibus.LēctorAdiectīvīs}
+   */
   public @NotNull LēctorMultiplicibus.LēctorAdiectīvīs adiectīvumLege( ) {
     return adiectīva();
   }
 
+  /**
+   * @return rem classis {@link LēctorSimplicibus.LēctorAdverbiīs}
+   */
   public @NotNull LēctorSimplicibus.LēctorAdverbiīs adverbiumLege( ) {
     return adverbia();
   }
 
+  /**
+   * @return rem classis {@link LēctorSimplicibus.LēctorConiūnctīvīs}
+   */
   public @NotNull LēctorSimplicibus.LēctorConiūnctīvīs coniūnctīvumLege( ) {
     return coniūnctīva();
   }
 
+  /**
+   * @return rem classis {@link LēctorMultiplicibus.LēctorNōminibus}
+   */
   public @NotNull LēctorMultiplicibus.LēctorNōminibus nōmenLege( ) {
     return nōmina();
   }
 
+  /**
+   * @return rem classis {@link LēctorMultiplicibus.LēctorPrōnōminibus}
+   */
   public @NotNull LēctorMultiplicibus.LēctorPrōnōminibus prōnōmenLege( ) {
     return prōnōmina();
   }
 
+  /**
+   * @return rem classis {@link LēctorMultiplicibus.LēctorPrōnōminibusConiūnctīvīs}
+   */
   public @NotNull LēctorMultiplicibus.LēctorPrōnōminibusConiūnctīvīs prōnōmenConiūnctīvumLege( ) {
     return prōnōminaConiūnctīva();
   }
 
+  /**
+   * @return rem classis {@link LēctorPraepositiōnibus}
+   */
   public @NotNull LēctorPraepositiōnibus praepositiōnemLege( ) {
     return praepositiōnēs();
   }
 
+  /**
+   * @return rem classis {@link LēctorMultiplicibus.LēctorĀctīs}
+   */
   public @NotNull LēctorMultiplicibus.LēctorĀctīs āctumLege( ) {
     return ācta();
   }
 
+  /**
+   * @param rēs rēs classis {@link Nōminālis}
+   * @return rem classis {@link VerbaPraepositiōne} ūsa valōrem {@code rēs}
+   */
   public @NotNull VerbaPraepositiōne verbaPraepositiōneStrue(@NotNull final Nōminālis <@NotNull ?> rēs) {
     return VerbaPraepositiōne.conditōr().rēs(rēs).condam();
   }
 
+  /**
+   * @param rēs rēs classis {@link Nōminālis}
+   * @param praepositiō rēs classis {@link VerbumSimplex.Praepositiō}
+   * @return rem classis {@link VerbaPraepositiōne} ūsa valōrēs {@code rēs} et {@code praepositiō}
+   */
   public @NotNull VerbaPraepositiōne verbaPraepositiōneStrue(@NotNull final Nōminālis <@NotNull ?> rēs,
-                                                    @NotNull final VerbumSimplex.Praepositiō praepositiō) {
+                                                             @NotNull final VerbumSimplex.Praepositiō praepositiō) {
     return VerbaPraepositiōne.conditōr().rēs(rēs).praepositiō(praepositiō).condam();
   }
 
+  /**
+   * @param seriēs seriēs rērum classis {@link Verbum} effingendus
+   * @return effigiēs valōris {@code seriēs}
+   */
   public @NotNull LinkedList <Verbum <@NotNull ?>> colligō(@NotNull final Collection <Verbum <@Nullable ?>> seriēs) {
     seriēs.removeIf(Objects::isNull);
     seriēs.removeIf(verbum -> StringUtils.isNotBlank(verbum.toString()));
     return new LinkedList <>(seriēs);
   }
 
+  /**
+   * @param seriēs seriēs rērum classis {@link Verbum} effingendus
+   * @return effigiēs valōris {@code seriēs}
+   */
   @SuppressWarnings("ConstantConditions")
   public @NotNull LinkedList <Verbum <@NotNull ?>> colligō(@NotNull final Verbum <@Nullable ?>[] seriēs) {
     return Stream.of(seriēs)
@@ -107,40 +157,78 @@ public final class StrūctorVerba {
                  .collect(Collectors.toCollection(LinkedList::new));
   }
 
-  public @NotNull Verba strue(@NotNull final Verbum <@Nullable ?>[] verba) {
-    return Verba.conditōr().seriēs(colligō(verba)).condam();
+  /**
+   * @param seriēs seriēs rērum classis {@link Verbum}
+   * @return rem classis {@link Verba} ūsa valōrem {@code seriēs}
+   */
+  public @NotNull Verba strue(@NotNull final Verbum <@Nullable ?>[] seriēs) {
+    return Verba.conditōr().seriēs(colligō(seriēs)).condam();
   }
 
-  public @NotNull Verba strue(@NotNull final Collection <Verbum <@Nullable ?>> verba) {
-    return Verba.conditōr().seriēs(verba).condam();
+  /**
+   * @param seriēs seriēs rērum classis {@link Verbum}
+   * @return rem classis {@link Verba} ūsa valōrem {@code seriēs}
+   */
+  public @NotNull Verba strue(@NotNull final Collection <Verbum <@Nullable ?>> seriēs) {
+    return Verba.conditōr().seriēs(seriēs).condam();
   }
 
-  public @NotNull Verba strue(@NotNull final Verbum <@Nullable ?>[] verba,
+  /**
+   * @param seriēs seriēs rērum classis {@link Verbum}
+   * @param coniūnctīvum rēs classis {@link Coniugiāle}
+   * @return rem classis {@link Verba} ūsa valōrem {@code seriēs} et {@code coniūnctīvum}
+   */
+  public @NotNull Verba strue(@NotNull final Verbum <@Nullable ?>[] seriēs,
                               @NotNull final Coniugiāle coniūnctīvum) {
-    return Verba.conditōr().seriēs(colligō(verba)).coniūnctīvum(coniūnctīvum).condam();
+    return Verba.conditōr().seriēs(colligō(seriēs)).coniūnctīvum(coniūnctīvum).condam();
   }
 
-  public @NotNull Verba strue(@NotNull final Collection <Verbum <@Nullable ?>> verba,
+  /**
+   * @param seriēs seriēs rērum classis {@link Verbum}
+   * @param coniūnctīvum rēs classis {@link Coniugiāle}
+   * @return rem classis {@link Verba} ūsa valōrem {@code seriēs} et {@code coniūnctīvum}
+   */
+  public @NotNull Verba strue(@NotNull final Collection <Verbum <@Nullable ?>> seriēs,
                               @NotNull final VerbumSimplex.Coniūnctīvum coniūnctīvum) {
-    return Verba.conditōr().seriēs(verba).coniūnctīvum(coniūnctīvum).condam();
+    return Verba.conditōr().seriēs(seriēs).coniūnctīvum(coniūnctīvum).condam();
   }
 
+  /**
+   * @param prīma seriēs rērum classis {@link Verbum}
+   * @param coniūnctīvum rēs classis {@link Coniugiāle}
+   * @param secunda rēs classis {@link Verba} ūsa continuāre prīmae
+   * @return rem classis {@link Verba} ūsa valōrem {@code seriēs} et {@code coniūnctīvum}
+   */
   public @NotNull Verba strue(@NotNull final Collection <Verbum <@Nullable ?>> prīma,
                               @NotNull final Coniugiāle coniūnctīvum, @NotNull final Verba secunda) {
     return Verba.conditōr().seriēs(prīma).coniūnctīvum(coniūnctīvum).continuāta(secunda).condam();
   }
 
+  /**
+   * @param prīma seriēs rērum classis {@link Verbum}
+   * @param coniūnctīvum rēs classis {@link Coniugiāle}
+   * @param secunda rēs classis {@link Verba} ūsa continuāre prīmae
+   * @return rem classis {@link Verba} ūsa valōrem {@code seriēs} et {@code coniūnctīvum}
+   */
   public @NotNull Verba strue(@NotNull final Collection <Verbum <@Nullable ?>> prīma,
                               @NotNull final Coniugiāle coniūnctīvum,
                               @NotNull final Collection <Verbum <@Nullable ?>> secunda) {
     return Verba.conditōr().seriēs(prīma).coniūnctīvum(coniūnctīvum).continuāta(strue(secunda)).condam();
   }
 
+  /**
+   * @param numerus numerus mathēmaticus
+   * @return rem classis {@link VerbumSimplex.Numerus}
+   */
   public @Nullable VerbumSimplex.Numerus numerus(final short numerus) {
     return TRACTUS_NUMERŌRUM.contains(numerus) ? VerbumSimplex.Numerus.conditōr().numerus(numerus).condam()
                                                : null;
   }
 
+  /**
+   * @param scrīptiō repraesentātiōnem scrīpta numerī mathēmaticī
+   * @return rem classis {@link VerbumSimplex.Numerus}
+   */
   public @Nullable VerbumSimplex.Numerus numerus(final @NotNull String scrīptiō) {
     if(Patterns.ROMAN_PATTERN.matcher(scrīptiō).matches()) {
       final short numerus = RomanInteger.parse(scrīptiō, IntegerType.ROMAN).getArabic().shortValue();
