@@ -22,7 +22,7 @@ public enum Mēnsis {
   /**
    * Valor hic mēnsem Martis dēsignat.
    */
-  MĀRTIS("Martis"),
+  MĀRTIS("Mārtis"),
 
   /**
    * Valor hic mēnsem Aprīlis dēsignat.
