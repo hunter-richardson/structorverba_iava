@@ -1,39 +1,39 @@
 <prōnōmen fundāmen="ego">
-  <fōrma speciālitās="commūne" numerāle="singulāre" cāsus="nōminātīvum">
+  <fōrma speciālitās="commūne" numerālis="singulāris" cāsus="nōminātīvus">
     ego
   </fōrma>
-  <fōrma speciālitās="commūne" numerāle="singulāre" cāsus="genitīvum">
+  <fōrma speciālitās="commūne" numerālis="singulāris" cāsus="genitīvus">
     meī
   </fōrma>
-  <fōrma speciālitās="commūne" numerāle="singulāre" cāsus="datīvum">
+  <fōrma speciālitās="commūne" numerālis="singulāris" cāsus="datīvus">
     mihi
   </fōrma>
-  <fōrma speciālitās="commūne" numerāle="singulāre" cāsus="accūsātīvum">
+  <fōrma speciālitās="commūne" numerālis="singulāris" cāsus="accūsātīvus">
     mē
   </fōrma>
-  <fōrma speciālitās="commūne" numerāle="singulāre" cāsus="ablātīvum">
+  <fōrma speciālitās="commūne" numerālis="singulāris" cāsus="ablātīvus">
     mē
   </fōrma>
-  <fōrma speciālitās="commūne" numerāle="singulāre" cāsus="vocātīvum">
+  <fōrma speciālitās="commūne" numerālis="singulāris" cāsus="vocātīvus">
     ego
   </fōrma>
 
-  <fōrma speciālitās="commūne" numerāle="plūrāle" cāsus="nōminātīvum">
+  <fōrma speciālitās="commūne" numerālis="plūrālis" cāsus="nōminātīvus">
     nōs
   </fōrma>
-  <fōrma speciālitās="commūne" numerāle="plūrāle" cāsus="genitīvum">
+  <fōrma speciālitās="commūne" numerālis="plūrālis" cāsus="genitīvus">
     nostrī
   </fōrma>
-  <fōrma speciālitās="commūne" numerāle="plūrāle" cāsus="datīvum">
+  <fōrma speciālitās="commūne" numerālis="plūrālis" cāsus="datīvus">
     nōbīs
   </fōrma>
-  <fōrma speciālitās="commūne" numerāle="plūrāle" cāsus="accūsātīvum">
+  <fōrma speciālitās="commūne" numerālis="plūrālis" cāsus="accūsātīvus">
     nōs
   </fōrma>
-  <fōrma speciālitās="commūne" numerāle="plūrāle" cāsus="ablātīvum">
+  <fōrma speciālitās="commūne" numerālis="plūrālis" cāsus="ablātīvus">
     nōbīs
   </fōrma>
-  <fōrma speciālitās="commūne" numerāle="plūrāle" cāsus="vocātīvum">
+  <fōrma speciālitās="commūne" numerālis="plūrālis" cāsus="vocātīvus">
     nōs
   </fōrma>
 </prōnōmen>

@@ -33,9 +33,9 @@ public final class PrōnōmenConiūnctīvum extends Nōminālis <PrōnōmenConi�
 
   @Builder(builderClassName = "Conditōr", builderMethodName = "conditōr", buildMethodName = "condam")
   private PrōnōmenConiūnctīvum(@NotNull final Speciālitās speciālitās, @NotNull final Genus genus,
-                               @NotNull final Cāsus cāsus, @NotNull final Numerāle numerāle,
+                               @NotNull final Cāsus cāsus, @NotNull final Numerālis numerālis,
                                @NotNull final String fundāmen, @NotNull final String scrīptiō) {
-    super(Catēgoria.PRŌNŌMEN_CONIŪNCTĪVUM, speciālitās, genus, cāsus, numerāle, fundāmen, scrīptiō);
+    super(Catēgoria.PRŌNŌMEN_CONIŪNCTĪVUM, speciālitās, genus, cāsus, numerālis, fundāmen, scrīptiō);
     nūntius().plūsGarriō("Scrībor ut", scrīptiō);
   }
 

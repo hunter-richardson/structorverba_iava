@@ -1,39 +1,39 @@
 <nōmen fundāmen="dolor">
-  <fōrma speciālitās="commūne" genus="masculīnum" numerāle="singulāre" cāsus="nōminātīvum">
+  <fōrma speciālitās="commūne" genus="masculīnum" numerālis="singulāris" cāsus="nōminātīvus">
     dolor
   </fōrma>
-  <fōrma speciālitās="commūne" genus="masculīnum" numerāle="singulāre" cāsus="genitīvum">
+  <fōrma speciālitās="commūne" genus="masculīnum" numerālis="singulāris" cāsus="genitīvus">
     dolōris
   </fōrma>
-  <fōrma speciālitās="commūne" genus="masculīnum" numerāle="singulāre" cāsus="datīvum">
+  <fōrma speciālitās="commūne" genus="masculīnum" numerālis="singulāris" cāsus="datīvus">
     dolōrī
   </fōrma>
-  <fōrma speciālitās="commūne" genus="masculīnum" numerāle="singulāre" cāsus="accūsātīvum">
+  <fōrma speciālitās="commūne" genus="masculīnum" numerālis="singulāris" cāsus="accūsātīvus">
     dolōrem
   </fōrma>
-  <fōrma speciālitās="commūne" genus="masculīnum" numerāle="singulāre" cāsus="ablātīvum">
+  <fōrma speciālitās="commūne" genus="masculīnum" numerālis="singulāris" cāsus="ablātīvus">
     dolōre
   </fōrma>
-  <fōrma speciālitās="commūne" genus="masculīnum" numerāle="singulāre" cāsus="vocātīvum">
+  <fōrma speciālitās="commūne" genus="masculīnum" numerālis="singulāris" cāsus="vocātīvus">
     dolor
   </fōrma>
 
-  <fōrma speciālitās="commūne" genus="masculīnum" numerāle="plūrāle" cāsus="nōminātīvum">
+  <fōrma speciālitās="commūne" genus="masculīnum" numerālis="plūrālis" cāsus="nōminātīvus">
     dolōrēs
   </fōrma>
-  <fōrma speciālitās="commūne" genus="masculīnum" numerāle="plūrāle" cāsus="genitīvum">
+  <fōrma speciālitās="commūne" genus="masculīnum" numerālis="plūrālis" cāsus="genitīvus">
     dolōrum
   </fōrma>
-  <fōrma speciālitās="commūne" genus="masculīnum" numerāle="plūrāle" cāsus="datīvum">
+  <fōrma speciālitās="commūne" genus="masculīnum" numerālis="plūrālis" cāsus="datīvus">
     dolōribus
   </fōrma>
-  <fōrma speciālitās="commūne" genus="masculīnum" numerāle="plūrāle" cāsus="accūsātīvum">
+  <fōrma speciālitās="commūne" genus="masculīnum" numerālis="plūrālis" cāsus="accūsātīvus">
     dolōrēs
   </fōrma>
-  <fōrma speciālitās="commūne" genus="masculīnum" numerāle="plūrāle" cāsus="ablātīvum">
+  <fōrma speciālitās="commūne" genus="masculīnum" numerālis="plūrālis" cāsus="ablātīvus">
     dolōribus
   </fōrma>
-  <fōrma speciālitās="commūne" genus="masculīnum" numerāle="plūrāle" cāsus="vocātīvum">
+  <fōrma speciālitās="commūne" genus="masculīnum" numerālis="plūrālis" cāsus="vocātīvus">
     dolōrēs
   </fōrma>
 </nōmen>

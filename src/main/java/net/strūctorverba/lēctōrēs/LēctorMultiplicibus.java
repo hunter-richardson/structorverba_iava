@@ -57,24 +57,24 @@ public abstract class LēctorMultiplicibus <Hoc extends VerbumMultiplex <Hoc>> e
     }
 
     @SuppressWarnings("unused")
-    public @Nullable Adiectīvum adveniam(final Numerāle numerāle, final Persōna persōna, final Enum<?>... illa) {
+    public @Nullable Adiectīvum adveniam(final Numerālis numerālis, final Persōna persōna, final Enum<?>... illa) {
       try {
         return adveniam(switch (persōna) {
-                          case PRĪMUM -> switch (numerāle) {
+                          case PRĪMA -> switch (numerālis) {
                             case SINGULĀRIS -> "meus";
                             case PLŪRĀLIS -> "noster";
                             case NŪLLUS -> throw new IllegalArgumentException(String.format("Ūsus prāvus est ēnumerātiōnis %s",
-                                                                                            Numerāle.NŪLLUS));
+                                                                                            Numerālis.NŪLLUS));
                           };
-                          case SECUNDUM -> switch (numerāle) {
+                          case SECUNDA -> switch (numerālis) {
                             case SINGULĀRIS -> "tuus";
                             case PLŪRĀLIS -> "voster";
                             case NŪLLUS -> throw new IllegalArgumentException(String.format("Ūsus prāvus est ēnumerātiōnis %s",
-                                                                                            Numerāle.NŪLLUS));
+                                                                                            Numerālis.NŪLLUS));
                           };
-                          case TERTIUM -> "suus";
-                          case NŪLLUM -> throw new IllegalArgumentException(String.format("Ūsus prāvus est ēnumerātiōnis %s",
-                                                                                          Persōna.NŪLLUM));
+                          case TERTIA -> "suus";
+                          case NŪLLA -> throw new IllegalArgumentException(String.format("Ūsus prāvus est ēnumerātiōnis %s",
+                                                                                          Persōna.NŪLLA));
                         }, illa);
       } catch (IllegalArgumentException e) {
         nūntius.terreō(e);
@@ -99,11 +99,11 @@ public abstract class LēctorMultiplicibus <Hoc extends VerbumMultiplex <Hoc>> e
     public @Nullable Prōnōmen adveniam(final Persōna persōna, final Enum<?>... illa) {
       try {
         return adveniam(switch (persōna) {
-                          case PRĪMUM -> "ego";
-                          case SECUNDUM -> "tū";
-                          case TERTIUM -> "is";
-                          case NŪLLUM -> throw new IllegalArgumentException(String.format("Ūsus prāvus est ēnumerātiōnis %s",
-                                                                                          Numerāle.NŪLLUS));
+                          case PRĪMA -> "ego";
+                          case SECUNDA -> "tū";
+                          case TERTIA -> "is";
+                          case NŪLLA -> throw new IllegalArgumentException(String.format("Ūsus prāvus est ēnumerātiōnis %s",
+                                                                                         Numerālis.NŪLLUS));
                         }, illa);
       } catch (IllegalArgumentException e) {
         nūntius.terreō(e);

@@ -14,7 +14,7 @@ import java.util.stream.Stream;
  * @see Āctum
  */
 @SuppressWarnings({ "NonAsciiCharacters", "SpellCheckingInspection", "unused" })
-public enum Numerāle {
+public enum Numerālis {
   /**
    * Valor hic ūtātur sī ūsūfructuāriī valōrem validum nōn dēnotat.
    * Numquam scrīnium <a href="../src/main/resources">auxiliārēs</a> inscrībētur.
@@ -43,38 +43,38 @@ public enum Numerāle {
    * Officium hoc cōnstrūctōrem reī classis huius perpetrat.
    * @param scrpt valōrem {@link #scrīptiō} indicat.
    */
-  Numerāle(@NotNull final String scrpt) {
+  Numerālis(@NotNull final String scrpt) {
     scrīptiō = scrpt;
   }
 
   /**
-   * Modus hic rem ēnumerātiō {@link Numerāle} ā parametrō dēsignātō advenit.
-   * @return rem ēnumerātiō {@link Numerāle} quod parametrum dēsignātum quadrat.
+   * Modus hic rem ēnumerātiō {@link Numerālis} ā parametrō dēsignātō advenit.
+   * @return rem ēnumerātiō {@link Numerālis} quod parametrum dēsignātum quadrat.
    * @param scrīptiō valōrem {@link #scrīptiō} indicat.
    * @implSpec {@code null} veniet sī rēs nūlla parametrum quadrat.
    */
-  public static @Nullable Numerāle dēfīniam(@NotNull final String scrīptiō) {
+  public static @Nullable Numerālis dēfīniam(@NotNull final String scrīptiō) {
     return dēfīniam(scrīptiō, null);
   }
 
   /**
-   * Modus hic rem ēnumerātiō {@link Numerāle} ā parametrō dēsignātō advenit.
-   * @return rem ēnumerātiō {@link Numerāle} quod parametrum dēsignātum quadrat.
+   * Modus hic rem ēnumerātiō {@link Numerālis} ā parametrō dēsignātō advenit.
+   * @return rem ēnumerātiō {@link Numerālis} quod parametrum dēsignātum quadrat.
    * @param scrīptiō valōrem {@link #scrīptiō} indicat.
    * @param dēfecta valor reventus sī rēs nūlla parametrum quadrat.
    */
-  public static @Nullable Numerāle dēfīniam(@NotNull final String scrīptiō, @Nullable final Numerāle dēfecta) {
+  public static @Nullable Numerālis dēfīniam(@NotNull final String scrīptiō, @Nullable final Numerālis dēfecta) {
     return Stream.of(values())
                  .filter(numerāle -> numerāle.scrīptiō.equals(scrīptiō))
                  .findFirst().orElse(dēfecta);
   }
 
   /**
-   * @return {@code illud} sī valōrem ēnumerātiō {@link Numerāle} quadrat; {@code dēfecta} aliter.
+   * @return {@code illud} sī valōrem ēnumerātiō {@link Numerālis} quadrat; {@code dēfecta} aliter.
    * @param illud valor tentandus.
    * @param dēfecta valor reventus sī rēs nūlla {@code illud} quadrat.
    */
-  public static @NotNull Numerāle ut(@NotNull final Enum<@NotNull ?> illud, @NotNull final Numerāle dēfecta) {
+  public static @NotNull Numerālis ut(@NotNull final Enum<@NotNull ?> illud, @NotNull final Numerālis dēfecta) {
     try {
       return ut(illud);
     } catch (EnumConstantNotPresentException e) {
@@ -84,13 +84,13 @@ public enum Numerāle {
   }
 
   /**
-   * @return {@code illud} sī valōrem ēnumerātiō {@link Numerāle} quadrat; {@code dēfecta} aliter.
+   * @return {@code illud} sī valōrem ēnumerātiō {@link Numerālis} quadrat; {@code dēfecta} aliter.
    * @param illud valor tentandus.
    * @implSpec {@code null} veniet sī rēs nūlla {@code illud} quadrat.
    */
   @SuppressWarnings("ConstantConditions")
-  public static @NotNull Numerāle ut(@NotNull final Enum<@NotNull ?> illud) throws EnumConstantNotPresentException {
-    final Numerāle hoc = (Numerāle) illud;
+  public static @NotNull Numerālis ut(@NotNull final Enum<@NotNull ?> illud) throws EnumConstantNotPresentException {
+    final Numerālis hoc = (Numerālis) illud;
     if(hoc.equals(illud)) {
       return hoc;
     } else {

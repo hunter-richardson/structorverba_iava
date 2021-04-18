@@ -35,10 +35,10 @@ public final class Adiectīvum extends Nōminālis <Adiectīvum> {
 
   @Builder(builderClassName = "Conditōr", builderMethodName = "conditōr", buildMethodName = "condam")
   private Adiectīvum(@NotNull final Speciālitās speciālitās, @NotNull final Genus genus,
-                     @NotNull final Cāsus cāsus, @NotNull final Numerāle numerāle,
+                     @NotNull final Cāsus cāsus, @NotNull final Numerālis numerālis,
                      @NotNull final Gradus gradus, @NotNull final String fundāmen,
                      @NotNull final String scrīptiō) {
-    super(Catēgoria.ADIECTĪVUM, speciālitās, genus, cāsus, numerāle, fundāmen, scrīptiō);
+    super(Catēgoria.ADIECTĪVUM, speciālitās, genus, cāsus, numerālis, fundāmen, scrīptiō);
     this.gradus = gradus;
     nūntius().plūsGarriō("Scrībor ut", scrīptiō);
   }

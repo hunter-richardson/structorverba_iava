@@ -20,9 +20,9 @@ public final class ConditōrĀctīs extends ConditōrMultiplicibus <Āctum> {
 
   private @NotNull Modus    modus    = Modus.NŪLLUS;
   private @NotNull Vōx      vōx      = Vōx.NŪLLA;
-  private @NotNull Tempus   tempus   = Tempus.NŪLLUM;
-  private @NotNull Numerāle numerāle = Numerāle.NŪLLUS;
-  private @NotNull Persōna  persōna  = Persōna.NŪLLA;
+  private @NotNull Tempus    tempus    = Tempus.NŪLLUM;
+  private @NotNull Numerālis numerālis = Numerālis.NŪLLUS;
+  private @NotNull Persōna   persōna   = Persōna.NŪLLA;
 
   private ConditōrĀctīs( ) {
     super(Nūntius.NūntiusConditōrīĀctīs.fac);
@@ -31,15 +31,14 @@ public final class ConditōrĀctīs extends ConditōrMultiplicibus <Āctum> {
   public @Override @Nullable Āctum condam( ) {
     if (StringUtils.isNoneBlank(fundāmen, scrīptiō)) {
       final Āctum hoc = Āctum.conditōr().fundāmen(fundāmen).modus(modus).vōx(vōx).tempus(tempus)
-                             .numerāle(numerāle).persōna(persōna).scrīptiō(scrīptiō).condam();
+                             .numerālis(numerālis).persōna(persōna).scrīptiō(scrīptiō).condam();
       if(Objects.isNull(hoc)) {
         nūntius.moneō(Āctum.class.getSimpleName().replace("um", "ī"),
                       StringUtils.firstNonBlank(fundāmen, scrīptiō), "prōductiō fōrmae nūllae prōcessit.");
         return null;
       } else {
         nūntius.certiōrō(Āctum.class.getSimpleName(), scrīptiō, "fīnītur prōdūcere.");
-        return Āctum.conditōr().fundāmen(fundāmen).modus(modus).vōx(vōx).tempus(tempus)
-                    .numerāle(numerāle).persōna(persōna).scrīptiō(scrīptiō).condam();
+        return hoc;
       }
     } else {
       nūntius.moneō(Āctum.class.getSimpleName().replace("um", "ī"),
@@ -53,7 +52,7 @@ public final class ConditōrĀctīs extends ConditōrMultiplicibus <Āctum> {
       case "modus" -> modus = Modus.dēfīniam(dēscrīptor, Modus.NŪLLUS);
       case "vōx" -> vōx = Vōx.dēfīniam(dēscrīptor, Vōx.NŪLLA);
       case "tempus" -> tempus = Tempus.dēfīniam(dēscrīptor, Tempus.NŪLLUM);
-      case "numerāle" -> numerāle = Numerāle.dēfīniam(dēscrīptor, Numerāle.NŪLLUS);
+      case "numerālis" -> numerālis = Numerālis.dēfīniam(dēscrīptor, Numerālis.NŪLLUS);
       case "persōna" -> persōna = Persōna.dēfīniam(dēscrīptor, Persōna.NŪLLA);
       case "fundāmen" -> fundāmen = dēscrīptor.trim();
       default -> {
@@ -67,7 +66,7 @@ public final class ConditōrĀctīs extends ConditōrMultiplicibus <Āctum> {
   }
 
   public @Override void restituō( ) {
-    numerāle = Numerāle.NŪLLUS;
+    numerālis = Numerālis.NŪLLUS;
     persōna = Persōna.NŪLLA;
     tempus = Tempus.NŪLLUM;
     modus = Modus.NŪLLUS;

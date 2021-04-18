@@ -19,9 +19,9 @@ public final class InventorNōminibus extends Inventor <Nōmen> {
     () -> ObjectUtils.firstNonNull(īnstantia, īnstantia = new InventorNōminibus());
 
   private @NotNull Speciālitās speciālitās = Speciālitās.NŪLLUM;
-  private @NotNull Genus       genus       = Genus.NŪLLUM;
-  private @NotNull Numerāle    numerāle    = Numerāle.NŪLLUS;
-  private @NotNull Cāsus       cāsus       = Cāsus.NŪLLUS;
+  private @NotNull Genus     genus     = Genus.NŪLLUM;
+  private @NotNull Numerālis numerālis = Numerālis.NŪLLUS;
+  private @NotNull Cāsus     cāsus     = Cāsus.NŪLLUS;
 
   private InventorNōminibus( ) {
     super(Nūntius.NūntiusInventōrīNōminibus.fac);
@@ -31,13 +31,13 @@ public final class InventorNōminibus extends Inventor <Nōmen> {
     return nōmen -> speciālitās.equals(nōmen.speciālitās)
                     && genus.equals(nōmen.genus)
                     && cāsus.equals(nōmen.cāsus)
-                    && numerāle.equals(nōmen.numerāle);
+                    && numerālis.equals(nōmen.numerālis);
   }
 
   public @Override void restituō( ) {
     speciālitās = Speciālitās.NŪLLUM;
     genus = Genus.NŪLLUM;
-    numerāle = Numerāle.NŪLLUS;
+    numerālis = Numerālis.NŪLLUS;
     cāsus = Cāsus.NŪLLUS;
     nūntius.certiōrō(getClass().getSimpleName(), "est restitūtus.");
   }
@@ -51,10 +51,10 @@ public final class InventorNōminibus extends Inventor <Nōmen> {
       genus = Genus.ut(illud, Genus.NŪLLUM);
       nūntius.garriō("Quastiōnī adiēcī conditiōnem novam:",
                      Genus.class.getSimpleName(), "est", illud);
-    } else if (illud instanceof Numerāle) {
-      numerāle = Numerāle.ut(illud, Numerāle.NŪLLUS);
+    } else if (illud instanceof Numerālis) {
+      numerālis = Numerālis.ut(illud, Numerālis.NŪLLUS);
       nūntius.garriō("Quastiōnī adiēcī conditiōnem novam:",
-                     Numerāle.class.getSimpleName(), "est", illud);
+                     Numerālis.class.getSimpleName(), "est", illud);
     } else if (illud instanceof Cāsus) {
       cāsus = Cāsus.ut(illud, Cāsus.NŪLLUS);
       nūntius.garriō("Quastiōnī adiēcī conditiōnem novam:",

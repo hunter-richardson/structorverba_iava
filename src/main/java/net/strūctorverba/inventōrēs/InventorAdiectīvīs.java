@@ -19,9 +19,9 @@ public final class InventorAdiectīvīs extends Inventor <Adiectīvum> {
     () -> ObjectUtils.firstNonNull(īnstantia, īnstantia = new InventorAdiectīvīs());
 
   private @NotNull Speciālitās speciālitās = Speciālitās.NŪLLUM;
-  private @NotNull Genus       genus       = Genus.NŪLLUM;
-  private @NotNull Numerāle    numerāle    = Numerāle.NŪLLUS;
-  private @NotNull Cāsus       cāsus       = Cāsus.NŪLLUS;
+  private @NotNull Genus     genus     = Genus.NŪLLUM;
+  private @NotNull Numerālis numerālis = Numerālis.NŪLLUS;
+  private @NotNull Cāsus     cāsus     = Cāsus.NŪLLUS;
   private @NotNull Gradus      gradus      = Gradus.NŪLLUS;
 
   private InventorAdiectīvīs( ) {
@@ -32,7 +32,7 @@ public final class InventorAdiectīvīs extends Inventor <Adiectīvum> {
     return adiectīvum -> speciālitās.equals(adiectīvum.speciālitās)
                          && genus.equals(adiectīvum.genus)
                          && cāsus.equals(adiectīvum.cāsus)
-                         && numerāle.equals(adiectīvum.numerāle)
+                         && numerālis.equals(adiectīvum.numerālis)
                          && gradus.equals(adiectīvum.gradus);
   }
 
@@ -40,7 +40,7 @@ public final class InventorAdiectīvīs extends Inventor <Adiectīvum> {
   public @Override void restituō( ) {
     speciālitās = Speciālitās.NŪLLUM;
     genus = Genus.NŪLLUM;
-    numerāle = Numerāle.NŪLLUS;
+    numerālis = Numerālis.NŪLLUS;
     cāsus = Cāsus.NŪLLUS;
     gradus = Gradus.NŪLLUS;
     nūntius.certiōrō(getClass().getSimpleName(), "est restitūtus.");
@@ -55,10 +55,10 @@ public final class InventorAdiectīvīs extends Inventor <Adiectīvum> {
       genus = Genus.ut(illud, Genus.NŪLLUM);
       nūntius.garriō("Quastiōnī adiēcī conditiōnem novam:",
                      Genus.class.getSimpleName(), "est", illud);
-    } else if (illud instanceof Numerāle) {
-      numerāle = Numerāle.ut(illud, Numerāle.NŪLLUS);
+    } else if (illud instanceof Numerālis) {
+      numerālis = Numerālis.ut(illud, Numerālis.NŪLLUS);
       nūntius.garriō("Quastiōnī adiēcī conditiōnem novam:",
-                     Numerāle.class.getSimpleName(), "est", illud);
+                     Numerālis.class.getSimpleName(), "est", illud);
     } else if (illud instanceof Cāsus) {
       cāsus = Cāsus.ut(illud, Cāsus.NŪLLUS);
       nūntius.garriō("Quastiōnī adiēcī conditiōnem novam:",

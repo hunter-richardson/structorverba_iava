@@ -23,7 +23,7 @@ public enum Gradus {
   /**
    * Valor hic potentiam nōrmāle dēsignat.
    */
-  NŌRMĀlE("nōrmāle"),
+  NŌRMĀlIS("nōrmālis"),
 
   /**
    * Valor hic potentiam comparātīvum dēsignat.

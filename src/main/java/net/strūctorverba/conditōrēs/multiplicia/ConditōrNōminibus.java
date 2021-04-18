@@ -20,9 +20,9 @@ public final class ConditōrNōminibus extends ConditōrMultiplicibus <Nōmen> {
     () -> ObjectUtils.firstNonNull(īnstantia, īnstantia = new ConditōrNōminibus());
 
   private @NotNull Speciālitās speciālitās = Speciālitās.NŪLLUM;
-  private @NotNull Genus       genus       = Genus.NŪLLUM;
-  private @NotNull Numerāle    numerāle    = Numerāle.NŪLLUS;
-  private @NotNull Cāsus       cāsus       = Cāsus.NŪLLUS;
+  private @NotNull Genus     genus     = Genus.NŪLLUM;
+  private @NotNull Numerālis numerālis = Numerālis.NŪLLUS;
+  private @NotNull Cāsus     cāsus     = Cāsus.NŪLLUS;
 
   private ConditōrNōminibus( ) {
     super(Nūntius.NūntiusConditōrīNōminibus.fac);
@@ -31,7 +31,7 @@ public final class ConditōrNōminibus extends ConditōrMultiplicibus <Nōmen> {
   public @Override @Nullable Nōmen condam( ) {
     if (StringUtils.isNoneBlank(fundāmen, scrīptiō)) {
       final Nōmen hoc = Nōmen.conditōr().fundāmen(fundāmen).speciālitās(speciālitās).genus(genus)
-                             .cāsus(cāsus).numerāle(numerāle).scrīptiō(scrīptiō).condam();
+                             .cāsus(cāsus).numerālis(numerālis).scrīptiō(scrīptiō).condam();
       if(Objects.isNull(hoc)) {
         nūntius.moneō(Nōmen.class.getSimpleName().replace("en", "inis"),
                       StringUtils.firstNonBlank(fundāmen, scrīptiō), "prōductiō fōrmae nūllae prōcessit.");
@@ -51,7 +51,7 @@ public final class ConditōrNōminibus extends ConditōrMultiplicibus <Nōmen> {
     switch (nōmen) {
       case "speciālitās" -> speciālitās = Speciālitās.dēfīniam(dēscrīptor, Speciālitās.NŪLLUM);
       case "genus" -> genus = Genus.dēfīniam(dēscrīptor, Genus.NŪLLUM);
-      case "numerāle" -> numerāle = Numerāle.dēfīniam(dēscrīptor, Numerāle.NŪLLUS);
+      case "numerālis" -> numerālis = Numerālis.dēfīniam(dēscrīptor, Numerālis.NŪLLUS);
       case "cāsus" -> cāsus = Cāsus.dēfīniam(dēscrīptor, Cāsus.NŪLLUS);
       case "fundāmen" -> fundāmen = dēscrīptor.trim();
       default -> {
@@ -68,7 +68,7 @@ public final class ConditōrNōminibus extends ConditōrMultiplicibus <Nōmen> {
     speciālitās = Speciālitās.NŪLLUM;
     genus = Genus.NŪLLUM;
     cāsus = Cāsus.NŪLLUS;
-    numerāle = Numerāle.NŪLLUS;
+    numerālis = Numerālis.NŪLLUS;
     nūntius.certiōrō(getClass().getSimpleName(), "est restitūtus.");
   }
 }

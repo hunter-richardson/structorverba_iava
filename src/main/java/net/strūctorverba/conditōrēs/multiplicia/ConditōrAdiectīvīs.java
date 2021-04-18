@@ -20,9 +20,9 @@ public final class ConditōrAdiectīvīs extends ConditōrMultiplicibus <Adiect�
     () -> ObjectUtils.firstNonNull(īnstantia, īnstantia = new ConditōrAdiectīvīs());
 
   private @NotNull Speciālitās speciālitās = Speciālitās.NŪLLUM;
-  private @NotNull Genus       genus       = Genus.NŪLLUM;
-  private @NotNull Numerāle    numerāle    = Numerāle.NŪLLUS;
-  private @NotNull Cāsus       cāsus       = Cāsus.NŪLLUS;
+  private @NotNull Genus     genus     = Genus.NŪLLUM;
+  private @NotNull Numerālis numerālis = Numerālis.NŪLLUS;
+  private @NotNull Cāsus     cāsus     = Cāsus.NŪLLUS;
   private @NotNull Gradus      gradus      = Gradus.NŪLLUS;
 
   private ConditōrAdiectīvīs( ) {
@@ -32,7 +32,7 @@ public final class ConditōrAdiectīvīs extends ConditōrMultiplicibus <Adiect�
   public @Override @Nullable Adiectīvum condam( ) {
     if (StringUtils.isNoneBlank(fundāmen, scrīptiō)) {
       final Adiectīvum hoc = Adiectīvum.conditōr().fundāmen(fundāmen).speciālitās(speciālitās).genus(genus)
-                                       .cāsus(cāsus).numerāle(numerāle).gradus(gradus).scrīptiō(scrīptiō).condam();
+                                       .cāsus(cāsus).numerālis(numerālis).gradus(gradus).scrīptiō(scrīptiō).condam();
       if(Objects.isNull(hoc)) {
         nūntius.moneō(Adiectīvum.class.getSimpleName().replace("um", "ī"),
                       StringUtils.firstNonBlank(fundāmen, scrīptiō), "prōductiō fōrmae nūllae prōcessit.");
@@ -52,7 +52,7 @@ public final class ConditōrAdiectīvīs extends ConditōrMultiplicibus <Adiect�
     switch (nōmen) {
       case "speciālitās" -> speciālitās = Speciālitās.dēfīniam(dēscrīptor, Speciālitās.NŪLLUM);
       case "genus" -> genus = Genus.dēfīniam(dēscrīptor, Genus.NŪLLUM);
-      case "numerāle" -> numerāle = Numerāle.dēfīniam(dēscrīptor, Numerāle.NŪLLUS);
+      case "numerālis" -> numerālis = Numerālis.dēfīniam(dēscrīptor, Numerālis.NŪLLUS);
       case "cāsus" -> cāsus = Cāsus.dēfīniam(dēscrīptor, Cāsus.NŪLLUS);
       case "gradus" -> gradus = Gradus.dēfīniam(dēscrīptor, Gradus.NŪLLUS);
       case "fundāmen" -> fundāmen = dēscrīptor.trim();
@@ -70,7 +70,7 @@ public final class ConditōrAdiectīvīs extends ConditōrMultiplicibus <Adiect�
     speciālitās = Speciālitās.NŪLLUM;
     genus = Genus.NŪLLUM;
     cāsus = Cāsus.NŪLLUS;
-    numerāle = Numerāle.NŪLLUS;
+    numerālis = Numerālis.NŪLLUS;
     gradus = Gradus.NŪLLUS;
     nūntius.certiōrō(getClass().getSimpleName(), "est restitūtus.");
   }

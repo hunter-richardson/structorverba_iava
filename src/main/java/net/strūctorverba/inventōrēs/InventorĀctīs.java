@@ -19,9 +19,9 @@ public final class InventorĀctīs extends Inventor <Āctum> {
     () -> ObjectUtils.firstNonNull(īnstantia, īnstantia = new InventorĀctīs());
 
   private @NotNull Vōx      vōx      = Vōx.NŪLLA;
-  private @NotNull Tempus   tempus   = Tempus.NŪLLUM;
-  private @NotNull Numerāle numerāle = Numerāle.NŪLLUS;
-  private @NotNull Persōna  persōna  = Persōna.NŪLLA;
+  private @NotNull Tempus    tempus    = Tempus.NŪLLUM;
+  private @NotNull Numerālis numerālis = Numerālis.NŪLLUS;
+  private @NotNull Persōna   persōna   = Persōna.NŪLLA;
   private @NotNull Modus    modus    = Modus.NŪLLUS;
 
   private InventorĀctīs( ) {
@@ -32,14 +32,14 @@ public final class InventorĀctīs extends Inventor <Āctum> {
     return āctum -> modus.equals(āctum.modus)
                     && vōx.equals(āctum.vōx)
                     && tempus.equals(āctum.tempus)
-                    && numerāle.equals(āctum.numerāle)
+                    && numerālis.equals(āctum.numerālis)
                     && persōna.equals(āctum.persōna);
   }
 
   public @Override void restituō( ) {
     vōx = Vōx.NŪLLA;
     tempus = Tempus.NŪLLUM;
-    numerāle = Numerāle.NŪLLUS;
+    numerālis = Numerālis.NŪLLUS;
     persōna = Persōna.NŪLLA;
     modus = Modus.NŪLLUS;
     nūntius.certiōrō(getClass().getSimpleName(), "est restitūtus.");
@@ -55,10 +55,10 @@ public final class InventorĀctīs extends Inventor <Āctum> {
       tempus = Tempus.ut(illud, Tempus.NŪLLUM);
       nūntius.garriō("Quastiōnī adiēcī conditiōnem novam:",
                      Tempus.class.getSimpleName(), "est", illud);
-    } else if (illud instanceof Numerāle) {
-      numerāle = Numerāle.ut(illud, Numerāle.NŪLLUS);
+    } else if (illud instanceof Numerālis) {
+      numerālis = Numerālis.ut(illud, Numerālis.NŪLLUS);
       nūntius.garriō("Quastiōnī adiēcī conditiōnem novam:",
-                     Numerāle.class.getSimpleName(), "est", illud);
+                     Numerālis.class.getSimpleName(), "est", illud);
     } else if (illud instanceof Persōna) {
       persōna = Persōna.ut(illud, Persōna.NŪLLA);
       nūntius.garriō("Quastiōnī adiēcī conditiōnem novam:",

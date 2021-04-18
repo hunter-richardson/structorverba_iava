@@ -19,9 +19,9 @@ public final class ConditōrPrōnōminibusConiūnctīvīs extends ConditōrMulti
     () -> ObjectUtils.firstNonNull(īnstantia, īnstantia = new ConditōrPrōnōminibusConiūnctīvīs());
 
   private @NotNull Speciālitās speciālitās = Speciālitās.NŪLLUM;
-  private @NotNull Genus       genus       = Genus.NŪLLUM;
-  private @NotNull Numerāle    numerāle    = Numerāle.NŪLLUS;
-  private @NotNull Cāsus       cāsus       = Cāsus.NŪLLUS;
+  private @NotNull Genus     genus     = Genus.NŪLLUM;
+  private @NotNull Numerālis numerālis = Numerālis.NŪLLUS;
+  private @NotNull Cāsus     cāsus     = Cāsus.NŪLLUS;
 
   private ConditōrPrōnōminibusConiūnctīvīs( ) {
     super(Nūntius.NūntiusConditōrīPrōnōmibusConiūnctīvīs.fac);
@@ -31,7 +31,7 @@ public final class ConditōrPrōnōminibusConiūnctīvīs extends ConditōrMulti
   public @Override @Nullable PrōnōmenConiūnctīvum condam( ) {
     if (StringUtils.isNoneBlank(fundāmen, scrīptiō)) {
       final PrōnōmenConiūnctīvum hoc = PrōnōmenConiūnctīvum.conditōr().fundāmen(fundāmen).speciālitās(speciālitās)
-                                                           .genus(genus).cāsus(cāsus).numerāle(numerāle)
+                                                           .genus(genus).cāsus(cāsus).numerālis(numerālis)
                                                            .scrīptiō(scrīptiō).condam();
       if(Objects.isNull(hoc)) {
         nūntius.moneō(PrōnōmenConiūnctīvum.class.getSimpleName()
@@ -41,8 +41,7 @@ public final class ConditōrPrōnōminibusConiūnctīvīs extends ConditōrMulti
         return null;
       } else {
         nūntius.certiōrō(PrōnōmenConiūnctīvum.class.getSimpleName(), scrīptiō, "fīnītur prōdūcere.");
-        return PrōnōmenConiūnctīvum.conditōr().fundāmen(fundāmen).speciālitās(speciālitās).genus(genus)
-                                   .cāsus(cāsus).numerāle(numerāle).scrīptiō(scrīptiō).condam();
+        return hoc;
       }
     } else {
       nūntius.moneō(PrōnōmenConiūnctīvum.class.getSimpleName()
@@ -57,7 +56,7 @@ public final class ConditōrPrōnōminibusConiūnctīvīs extends ConditōrMulti
     switch (nōmen) {
       case "speciālitās" -> speciālitās = Speciālitās.dēfīniam(dēscrīptor, Speciālitās.NŪLLUM);
       case "genus" -> genus = Genus.dēfīniam(dēscrīptor, Genus.NŪLLUM);
-      case "numerāle" -> numerāle = Numerāle.dēfīniam(dēscrīptor, Numerāle.NŪLLUS);
+      case "numerālis" -> numerālis = Numerālis.dēfīniam(dēscrīptor, Numerālis.NŪLLUS);
       case "cāsus" -> cāsus = Cāsus.dēfīniam(dēscrīptor, Cāsus.NŪLLUS);
       case "fundāmen" -> fundāmen = dēscrīptor.trim();
       default -> {
@@ -77,7 +76,7 @@ public final class ConditōrPrōnōminibusConiūnctīvīs extends ConditōrMulti
     speciālitās = Speciālitās.NŪLLUM;
     genus = Genus.NŪLLUM;
     cāsus = Cāsus.NŪLLUS;
-    numerāle = Numerāle.NŪLLUS;
+    numerālis = Numerālis.NŪLLUS;
     nūntius.certiōrō(getClass().getSimpleName(), "est restitūtus.");
   }
 }

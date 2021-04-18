@@ -1,39 +1,39 @@
 <prōnōmen fundāmen="tū">
-  <fōrma speciālitās="commūne" numerāle="singulāre" cāsus="nōminātīvum">
+  <fōrma speciālitās="commūne" numerālis="singulāris" cāsus="nōminātīvus">
     tū
   </fōrma>
-  <fōrma speciālitās="commūne" numerāle="singulāre" cāsus="genitīvum">
+  <fōrma speciālitās="commūne" numerālis="singulāris" cāsus="genitīvus">
     tuī
   </fōrma>
-  <fōrma speciālitās="commūne" numerāle="singulāre" cāsus="datīvum">
+  <fōrma speciālitās="commūne" numerālis="singulāris" cāsus="datīvus">
     tibi
   </fōrma>
-  <fōrma speciālitās="commūne" numerāle="singulāre" cāsus="accūsātīvum">
+  <fōrma speciālitās="commūne" numerālis="singulāris" cāsus="accūsātīvus">
     tē
   </fōrma>
-  <fōrma speciālitās="commūne" numerāle="singulāre" cāsus="ablātīvum">
+  <fōrma speciālitās="commūne" numerālis="singulāris" cāsus="ablātīvus">
     tē
   </fōrma>
-  <fōrma speciālitās="commūne" numerāle="singulāre" cāsus="vocātīvum">
+  <fōrma speciālitās="commūne" numerālis="singulāris" cāsus="vocātīvus">
     tū
   </fōrma>
 
-  <fōrma speciālitās="commūne" numerāle="plūrāle" cāsus="nōminātīvum">
+  <fōrma speciālitās="commūne" numerālis="plūrālis" cāsus="nōminātīvus">
     vōs
   </fōrma>
-  <fōrma speciālitās="commūne" numerāle="plūrāle" cāsus="genitīvum">
+  <fōrma speciālitās="commūne" numerālis="plūrālis" cāsus="genitīvus">
     vostrī
   </fōrma>
-  <fōrma speciālitās="commūne" numerāle="plūrāle" cāsus="datīvum">
+  <fōrma speciālitās="commūne" numerālis="plūrālis" cāsus="datīvus">
     vōbīs
   </fōrma>
-  <fōrma speciālitās="commūne" numerāle="plūrāle" cāsus="accūsātīvum">
+  <fōrma speciālitās="commūne" numerālis="plūrālis" cāsus="accūsātīvus">
     vōs
   </fōrma>
-  <fōrma speciālitās="commūne" numerāle="plūrāle" cāsus="ablātīvum">
+  <fōrma speciālitās="commūne" numerālis="plūrālis" cāsus="ablātīvus">
     vōbīs
   </fōrma>
-  <fōrma speciālitās="commūne" numerāle="plūrāle" cāsus="vocātīvum">
+  <fōrma speciālitās="commūne" numerālis="plūrālis" cāsus="vocātīvus">
     vōs
   </fōrma>
 </prōnōmen>

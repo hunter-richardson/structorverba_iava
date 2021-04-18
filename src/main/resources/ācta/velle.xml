@@ -1,201 +1,201 @@
 <āctum fundāmen="velle">
-  <fōrma modus="participium" vōx="āctīvum" tempus="praesēns">
+  <fōrma modus="participiālis" vōx="āctīva" tempus="praesēns">
     volēns
   </fōrma>
-  <fōrma modus="īnfīnītīvum" vōx="āctīvum" tempus="perfectum">
+  <fōrma modus="īnfīnītīvus" vōx="āctīva" tempus="perfectum">
     voluisse
   </fōrma>
-  <fōrma modus="īnfīnītīvum" vōx="āctīvum" tempus="praesēns">
+  <fōrma modus="īnfīnītīvus" vōx="āctīva" tempus="praesēns">
     velle
   </fōrma>
 
-  <fōrma modus="indicātīvum" vōx="āctīvum" tempus="praesēns" numerāle="singulāre" persōna="prīmum">
+  <fōrma modus="indicātīvus" vōx="āctīva" tempus="praesēns" numerālis="singulāris" persōna="prīmum">
     volō
   </fōrma>
-  <fōrma modus="indicātīvum" vōx="āctīvum" tempus="praesēns" numerāle="singulāre" persōna="secundum">
+  <fōrma modus="indicātīvus" vōx="āctīva" tempus="praesēns" numerālis="singulāris" persōna="secundum">
     vīs
   </fōrma>
-  <fōrma modus="indicātīvum" vōx="āctīvum" tempus="praesēns" numerāle="singulāre" persōna="tertium">
+  <fōrma modus="indicātīvus" vōx="āctīva" tempus="praesēns" numerālis="singulāris" persōna="tertium">
     vult
   </fōrma>
-  <fōrma modus="indicātīvum" vōx="āctīvum" tempus="praesēns" numerāle="Numerāle" persōna="prīmum">
+  <fōrma modus="indicātīvus" vōx="āctīva" tempus="praesēns" numerālis="plūrālis" persōna="prīmum">
     volumus
   </fōrma>
-  <fōrma modus="indicātīvum" vōx="āctīvum" tempus="praesēns" numerāle="Numerāle" persōna="secundum">
+  <fōrma modus="indicātīvus" vōx="āctīva" tempus="praesēns" numerālis="plūrālis" persōna="secundum">
     vultis
   </fōrma>
-  <fōrma modus="indicātīvum" vōx="āctīvum" tempus="praesēns" numerāle="Numerāle" persōna="tertium">
+  <fōrma modus="indicātīvus" vōx="āctīva" tempus="praesēns" numerālis="plūrālis" persōna="tertium">
     volunt
   </fōrma>
 
-  <fōrma modus="indicātīvum" vōx="āctīvum" tempus="infectum" numerāle="singulāre" persōna="prīmum">
+  <fōrma modus="indicātīvus" vōx="āctīva" tempus="infectum" numerālis="singulāris" persōna="prīmum">
     volēbam
   </fōrma>
-  <fōrma modus="indicātīvum" vōx="āctīvum" tempus="infectum" numerāle="singulāre" persōna="secundum">
+  <fōrma modus="indicātīvus" vōx="āctīva" tempus="infectum" numerālis="singulāris" persōna="secundum">
     volēbās
   </fōrma>
-  <fōrma modus="indicātīvum" vōx="āctīvum" tempus="infectum" numerāle="singulāre" persōna="tertium">
+  <fōrma modus="indicātīvus" vōx="āctīva" tempus="infectum" numerālis="singulāris" persōna="tertium">
     volēbat
   </fōrma>
-  <fōrma modus="indicātīvum" vōx="āctīvum" tempus="infectum" numerāle="Numerāle" persōna="prīmum">
+  <fōrma modus="indicātīvus" vōx="āctīva" tempus="infectum" numerālis="plūrālis" persōna="prīmum">
     volēbāmus
   </fōrma>
-  <fōrma modus="indicātīvum" vōx="āctīvum" tempus="infectum" numerāle="Numerāle" persōna="secundum">
+  <fōrma modus="indicātīvus" vōx="āctīva" tempus="infectum" numerālis="plūrālis" persōna="secundum">
     volēbātis
   </fōrma>
-  <fōrma modus="indicātīvum" vōx="āctīvum" tempus="infectum" numerāle="Numerāle" persōna="tertium">
+  <fōrma modus="indicātīvus" vōx="āctīva" tempus="infectum" numerālis="plūrālis" persōna="tertium">
     volēbant
   </fōrma>
 
-  <fōrma modus="indicātīvum" vōx="āctīvum" tempus="futūrum" numerāle="singulāre" persōna="prīmum">
+  <fōrma modus="indicātīvus" vōx="āctīva" tempus="futūrum" numerālis="singulāris" persōna="prīmum">
     volam
   </fōrma>
-  <fōrma modus="indicātīvum" vōx="āctīvum" tempus="futūrum" numerāle="singulāre" persōna="secundum">
+  <fōrma modus="indicātīvus" vōx="āctīva" tempus="futūrum" numerālis="singulāris" persōna="secundum">
     volēs
   </fōrma>
-  <fōrma modus="indicātīvum" vōx="āctīvum" tempus="futūrum" numerāle="singulāre" persōna="tertium">
+  <fōrma modus="indicātīvus" vōx="āctīva" tempus="futūrum" numerālis="singulāris" persōna="tertium">
     volet
   </fōrma>
-  <fōrma modus="indicātīvum" vōx="āctīvum" tempus="futūrum" numerāle="Numerāle" persōna="prīmum">
+  <fōrma modus="indicātīvus" vōx="āctīva" tempus="futūrum" numerālis="plūrālis" persōna="prīmum">
     volēmus
   </fōrma>
-  <fōrma modus="indicātīvum" vōx="āctīvum" tempus="futūrum" numerāle="Numerāle" persōna="secundum">
+  <fōrma modus="indicātīvus" vōx="āctīva" tempus="futūrum" numerālis="plūrālis" persōna="secundum">
     volētis
   </fōrma>
-  <fōrma modus="indicātīvum" vōx="āctīvum" tempus="futūrum" numerāle="Numerāle" persōna="tertium">
+  <fōrma modus="indicātīvus" vōx="āctīva" tempus="futūrum" numerālis="plūrālis" persōna="tertium">
     volent
   </fōrma>
 
-  <fōrma modus="indicātīvum" vōx="āctīvum" tempus="perfectum" numerāle="singulāre" persōna="prīmum">
+  <fōrma modus="indicātīvus" vōx="āctīva" tempus="perfectum" numerālis="singulāris" persōna="prīmum">
     voluī
   </fōrma>
-  <fōrma modus="indicātīvum" vōx="āctīvum" tempus="perfectum" numerāle="singulāre" persōna="secundum">
+  <fōrma modus="indicātīvus" vōx="āctīva" tempus="perfectum" numerālis="singulāris" persōna="secundum">
     voluistī
   </fōrma>
-  <fōrma modus="indicātīvum" vōx="āctīvum" tempus="perfectum" numerāle="singulāre" persōna="tertium">
+  <fōrma modus="indicātīvus" vōx="āctīva" tempus="perfectum" numerālis="singulāris" persōna="tertium">
     voluit
   </fōrma>
-  <fōrma modus="indicātīvum" vōx="āctīvum" tempus="perfectum" numerāle="Numerāle" persōna="prīmum">
+  <fōrma modus="indicātīvus" vōx="āctīva" tempus="perfectum" numerālis="plūrālis" persōna="prīmum">
     voluimus
   </fōrma>
-  <fōrma modus="indicātīvum" vōx="āctīvum" tempus="perfectum" numerāle="Numerāle" persōna="secundum">
+  <fōrma modus="indicātīvus" vōx="āctīva" tempus="perfectum" numerālis="plūrālis" persōna="secundum">
     voluitis
   </fōrma>
-  <fōrma modus="indicātīvum" vōx="āctīvum" tempus="perfectum" numerāle="Numerāle" persōna="tertium">
+  <fōrma modus="indicātīvus" vōx="āctīva" tempus="perfectum" numerālis="plūrālis" persōna="tertium">
     voluērunt
   </fōrma>
 
-  <fōrma modus="indicātīvum" vōx="āctīvum" tempus="plūperfectum" numerāle="singulāre" persōna="prīmum">
+  <fōrma modus="indicātīvus" vōx="āctīva" tempus="plūperfectum" numerālis="singulāris" persōna="prīmum">
     volueram
   </fōrma>
-  <fōrma modus="indicātīvum" vōx="āctīvum" tempus="plūperfectum" numerāle="singulāre" persōna="secundum">
+  <fōrma modus="indicātīvus" vōx="āctīva" tempus="plūperfectum" numerālis="singulāris" persōna="secundum">
     voluerās
   </fōrma>
-  <fōrma modus="indicātīvum" vōx="āctīvum" tempus="plūperfectum" numerāle="singulāre" persōna="tertium">
+  <fōrma modus="indicātīvus" vōx="āctīva" tempus="plūperfectum" numerālis="singulāris" persōna="tertium">
     voluerat
   </fōrma>
-  <fōrma modus="indicātīvum" vōx="āctīvum" tempus="plūperfectum" numerāle="Numerāle" persōna="prīmum">
+  <fōrma modus="indicātīvus" vōx="āctīva" tempus="plūperfectum" numerālis="plūrālis" persōna="prīmum">
     voluerāmus
   </fōrma>
-  <fōrma modus="indicātīvum" vōx="āctīvum" tempus="plūperfectum" numerāle="Numerāle" persōna="secundum">
+  <fōrma modus="indicātīvus" vōx="āctīva" tempus="plūperfectum" numerālis="plūrālis" persōna="secundum">
     voluerātis
   </fōrma>
-  <fōrma modus="indicātīvum" vōx="āctīvum" tempus="plūperfectum" numerāle="Numerāle" persōna="tertium">
+  <fōrma modus="indicātīvus" vōx="āctīva" tempus="plūperfectum" numerālis="plūrālis" persōna="tertium">
     voluerant
   </fōrma>
 
-  <fōrma modus="indicātīvum" vōx="āctīvum" tempus="perfutūrum" numerāle="singulāre" persōna="prīmum">
+  <fōrma modus="indicātīvus" vōx="āctīva" tempus="perfutūrum" numerālis="singulāris" persōna="prīmum">
     voluerō
   </fōrma>
-  <fōrma modus="indicātīvum" vōx="āctīvum" tempus="perfutūrum" numerāle="singulāre" persōna="secundum">
+  <fōrma modus="indicātīvus" vōx="āctīva" tempus="perfutūrum" numerālis="singulāris" persōna="secundum">
     volueris
   </fōrma>
-  <fōrma modus="indicātīvum" vōx="āctīvum" tempus="perfutūrum" numerāle="singulāre" persōna="tertium">
+  <fōrma modus="indicātīvus" vōx="āctīva" tempus="perfutūrum" numerālis="singulāris" persōna="tertium">
     voluerit
   </fōrma>
-  <fōrma modus="indicātīvum" vōx="āctīvum" tempus="perfutūrum" numerāle="Numerāle" persōna="prīmum">
+  <fōrma modus="indicātīvus" vōx="āctīva" tempus="perfutūrum" numerālis="plūrālis" persōna="prīmum">
     voluerimus
   </fōrma>
-  <fōrma modus="indicātīvum" vōx="āctīvum" tempus="perfutūrum" numerāle="Numerāle" persōna="secundum">
+  <fōrma modus="indicātīvus" vōx="āctīva" tempus="perfutūrum" numerālis="plūrālis" persōna="secundum">
     volueritis
   </fōrma>
-  <fōrma modus="indicātīvum" vōx="āctīvum" tempus="perfutūrum" numerāle="Numerāle" persōna="tertium">
+  <fōrma modus="indicātīvus" vōx="āctīva" tempus="perfutūrum" numerālis="plūrālis" persōna="tertium">
     voluerint
   </fōrma>
 
-  <fōrma modus="subiūnctīvum" vōx="āctīvum" tempus="praesēns" numerāle="singulāre" persōna="prīmum">
+  <fōrma modus="subiūnctīvus" vōx="āctīva" tempus="praesēns" numerālis="singulāris" persōna="prīmum">
     velim
   </fōrma>
-  <fōrma modus="subiūnctīvum" vōx="āctīvum" tempus="praesēns" numerāle="singulāre" persōna="secundum">
+  <fōrma modus="subiūnctīvus" vōx="āctīva" tempus="praesēns" numerālis="singulāris" persōna="secundum">
     velīs
   </fōrma>
-  <fōrma modus="subiūnctīvum" vōx="āctīvum" tempus="praesēns" numerāle="singulāre" persōna="tertium">
+  <fōrma modus="subiūnctīvus" vōx="āctīva" tempus="praesēns" numerālis="singulāris" persōna="tertium">
     velit
   </fōrma>
-  <fōrma modus="subiūnctīvum" vōx="āctīvum" tempus="praesēns" numerāle="Numerāle" persōna="prīmum">
+  <fōrma modus="subiūnctīvus" vōx="āctīva" tempus="praesēns" numerālis="plūrālis" persōna="prīmum">
     velīmus
   </fōrma>
-  <fōrma modus="subiūnctīvum" vōx="āctīvum" tempus="praesēns" numerāle="Numerāle" persōna="secundum">
+  <fōrma modus="subiūnctīvus" vōx="āctīva" tempus="praesēns" numerālis="plūrālis" persōna="secundum">
     velītis
   </fōrma>
-  <fōrma modus="subiūnctīvum" vōx="āctīvum" tempus="praesēns" numerāle="Numerāle" persōna="tertium">
+  <fōrma modus="subiūnctīvus" vōx="āctīva" tempus="praesēns" numerālis="plūrālis" persōna="tertium">
     velint
   </fōrma>
 
-  <fōrma modus="subiūnctīvum" vōx="āctīvum" tempus="infectum" numerāle="singulāre" persōna="prīmum">
+  <fōrma modus="subiūnctīvus" vōx="āctīva" tempus="infectum" numerālis="singulāris" persōna="prīmum">
     vellem
   </fōrma>
-  <fōrma modus="subiūnctīvum" vōx="āctīvum" tempus="infectum" numerāle="singulāre" persōna="secundum">
+  <fōrma modus="subiūnctīvus" vōx="āctīva" tempus="infectum" numerālis="singulāris" persōna="secundum">
     vellēs
   </fōrma>
-  <fōrma modus="subiūnctīvum" vōx="āctīvum" tempus="infectum" numerāle="singulāre" persōna="tertium">
+  <fōrma modus="subiūnctīvus" vōx="āctīva" tempus="infectum" numerālis="singulāris" persōna="tertium">
     vellet
   </fōrma>
-  <fōrma modus="subiūnctīvum" vōx="āctīvum" tempus="infectum" numerāle="Numerāle" persōna="prīmum">
+  <fōrma modus="subiūnctīvus" vōx="āctīva" tempus="infectum" numerālis="plūrālis" persōna="prīmum">
     vellēmus
   </fōrma>
-  <fōrma modus="subiūnctīvum" vōx="āctīvum" tempus="infectum" numerāle="Numerāle" persōna="secundum">
+  <fōrma modus="subiūnctīvus" vōx="āctīva" tempus="infectum" numerālis="plūrālis" persōna="secundum">
     vellētis
   </fōrma>
-  <fōrma modus="subiūnctīvum" vōx="āctīvum" tempus="infectum" numerāle="Numerāle" persōna="tertium">
+  <fōrma modus="subiūnctīvus" vōx="āctīva" tempus="infectum" numerālis="plūrālis" persōna="tertium">
     vellent
   </fōrma>
 
-  <fōrma modus="subiūnctīvum" vōx="āctīvum" tempus="perfectum" numerāle="singulāre" persōna="prīmum">
+  <fōrma modus="subiūnctīvus" vōx="āctīva" tempus="perfectum" numerālis="singulāris" persōna="prīmum">
     voluerim
   </fōrma>
-  <fōrma modus="subiūnctīvum" vōx="āctīvum" tempus="perfectum" numerāle="singulāre" persōna="secundum">
+  <fōrma modus="subiūnctīvus" vōx="āctīva" tempus="perfectum" numerālis="singulāris" persōna="secundum">
     voluerīs
   </fōrma>
-  <fōrma modus="subiūnctīvum" vōx="āctīvum" tempus="perfectum" numerāle="singulāre" persōna="tertium">
+  <fōrma modus="subiūnctīvus" vōx="āctīva" tempus="perfectum" numerālis="singulāris" persōna="tertium">
     voluerit
   </fōrma>
-  <fōrma modus="subiūnctīvum" vōx="āctīvum" tempus="perfectum" numerāle="Numerāle" persōna="prīmum">
+  <fōrma modus="subiūnctīvus" vōx="āctīva" tempus="perfectum" numerālis="plūrālis" persōna="prīmum">
     voluerīmus
   </fōrma>
-  <fōrma modus="subiūnctīvum" vōx="āctīvum" tempus="perfectum" numerāle="Numerāle" persōna="secundum">
+  <fōrma modus="subiūnctīvus" vōx="āctīva" tempus="perfectum" numerālis="plūrālis" persōna="secundum">
     voluerītis
   </fōrma>
-  <fōrma modus="subiūnctīvum" vōx="āctīvum" tempus="perfectum" numerāle="Numerāle" persōna="tertium">
+  <fōrma modus="subiūnctīvus" vōx="āctīva" tempus="perfectum" numerālis="plūrālis" persōna="tertium">
     voluerint
   </fōrma>
 
-  <fōrma modus="subiūnctīvum" vōx="āctīvum" tempus="plūperfectum" numerāle="singulāre" persōna="prīmum">
+  <fōrma modus="subiūnctīvus" vōx="āctīva" tempus="plūperfectum" numerālis="singulāris" persōna="prīmum">
     voluissem
   </fōrma>
-  <fōrma modus="subiūnctīvum" vōx="āctīvum" tempus="plūperfectum" numerāle="singulāre" persōna="secundum">
+  <fōrma modus="subiūnctīvus" vōx="āctīva" tempus="plūperfectum" numerālis="singulāris" persōna="secundum">
     voluissēs
   </fōrma>
-  <fōrma modus="subiūnctīvum" vōx="āctīvum" tempus="plūperfectum" numerāle="singulāre" persōna="tertium">
+  <fōrma modus="subiūnctīvus" vōx="āctīva" tempus="plūperfectum" numerālis="singulāris" persōna="tertium">
     voluisset
   </fōrma>
-  <fōrma modus="subiūnctīvum" vōx="āctīvum" tempus="plūperfectum" numerāle="Numerāle" persōna="prīmum">
+  <fōrma modus="subiūnctīvus" vōx="āctīva" tempus="plūperfectum" numerālis="plūrālis" persōna="prīmum">
     voluissēmus
   </fōrma>
-  <fōrma modus="subiūnctīvum" vōx="āctīvum" tempus="plūperfectum" numerāle="Numerāle" persōna="secundum">
+  <fōrma modus="subiūnctīvus" vōx="āctīva" tempus="plūperfectum" numerālis="plūrālis" persōna="secundum">
     voluissētis
   </fōrma>
-  <fōrma modus="subiūnctīvum" vōx="āctīvum" tempus="plūperfectum" numerāle="Numerāle" persōna="tertium">
+  <fōrma modus="subiūnctīvus" vōx="āctīva" tempus="plūperfectum" numerālis="plūrālis" persōna="tertium">
     voluissent
   </fōrma>
 </āctum>

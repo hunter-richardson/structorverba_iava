@@ -28,9 +28,9 @@ public final class Prōnōmen extends Nōminālis <Prōnōmen> {
 
   @Builder(builderClassName = "Conditōr", builderMethodName = "conditōr", buildMethodName = "condam")
   private Prōnōmen(@NotNull final Speciālitās speciālitās, @NotNull final Genus genus,
-                   @NotNull final Cāsus cāsus, @NotNull final Numerāle numerāle,
+                   @NotNull final Cāsus cāsus, @NotNull final Numerālis numerālis,
                    @NotNull final String fundāmen, @NotNull final String scrīptiō) {
-    super(Catēgoria.PRŌNŌMEN, speciālitās, genus, cāsus, numerāle, fundāmen, scrīptiō);
+    super(Catēgoria.PRŌNŌMEN, speciālitās, genus, cāsus, numerālis, fundāmen, scrīptiō);
     nūntius().plūsGarriō("Scrībor ut", scrīptiō);
   }
 

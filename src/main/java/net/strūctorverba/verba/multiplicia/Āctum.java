@@ -54,9 +54,9 @@ public final class Āctum extends VerbumMultiplex <Āctum> {
 
   /**
    * Valor hic numerum reī huius dēsignat.
-   * @see Numerāle
+   * @see Numerālis
    */
-  public final @NotNull Numerāle numerāle;
+  public final @NotNull Numerālis numerālis;
 
   /**
    * Valor hic persōnam reī huius dēsignat.
@@ -66,13 +66,13 @@ public final class Āctum extends VerbumMultiplex <Āctum> {
 
   @Builder(builderClassName = "Conditōr", builderMethodName = "conditōr", buildMethodName = "condam")
   private Āctum(@NotNull final Modus modus, @NotNull final Vōx vōx, @NotNull final Tempus tempus,
-                @NotNull final Numerāle numerāle, @NotNull final Persōna persōna,
+                @NotNull final Numerālis numerālis, @NotNull final Persōna persōna,
                 @NotNull final String fundāmen, @NotNull final String scrīptiō) {
     super(Catēgoria.ĀCTUM, fundāmen, Ūtilitās.minusculāsScrībō(scrīptiō));
     this.modus = modus;
     this.vōx = vōx;
     this.tempus = tempus;
-    this.numerāle = numerāle;
+    this.numerālis = numerālis;
     this.persōna = persōna;
     nūntius().plūsGarriō("Scrībor ut", scrīptiō);
   }
@@ -85,12 +85,12 @@ public final class Āctum extends VerbumMultiplex <Āctum> {
    * @param spclt valōrem {@link Nōminālis#speciālitās} indicat.
    * @param gns valōrem {@link Nōminālis#genus} indicat.
    * @param css valōrem {@link Nōminālis#cāsus} indicat.
-   * @param nmrl valōrem {@link Nōminālis#numerāle} indicat.
+   * @param nmrl valōrem {@link Nōminālis#numerālis} indicat.
    * @param grds valōrem {@link Adiectīvum#gradus} indicat.
    */
   public @Nullable Adiectīvum participem(@NotNull final Vōx vx, @NotNull final Tempus tmps,
                                          @NotNull final Speciālitās spclt, @NotNull final Genus gns,
-                                         @NotNull final Cāsus css, @NotNull final Numerāle nmrl, @NotNull final Gradus grds) {
+                                         @NotNull final Cāsus css, @NotNull final Numerālis nmrl, @NotNull final Gradus grds) {
     if(Modus.PARTICIPĀLIS.equals(modus)
        && vōx.equals(vx)
        && tempus.equals(tmps)) {
@@ -98,7 +98,7 @@ public final class Āctum extends VerbumMultiplex <Āctum> {
     } else {
       Āctum alium = ācta().adveniam(fundāmen, Modus.PARTICIPĀLIS, vx, tmps);
       return Objects.isNull(alium) ? null
-                                   : adiectīva().adveniam(alium.toString(), spclt, gns, css, nmrl, Gradus.NŌRMĀlE);
+                                   : adiectīva().adveniam(alium.toString(), spclt, gns, css, nmrl, Gradus.NŌRMĀlIS);
     }
   }
 
@@ -109,12 +109,12 @@ public final class Āctum extends VerbumMultiplex <Āctum> {
    * @param spclt valōrem {@link Nōminālis#speciālitās} indicat.
    * @param gns valōrem {@link Nōminālis#genus} indicat.
    * @param css valōrem {@link Nōminālis#cāsus} indicat.
-   * @param nmrl valōrem {@link Nōminālis#numerāle} indicat.
+   * @param nmrl valōrem {@link Nōminālis#numerālis} indicat.
    * @param grds valōrem {@link Adiectīvum#gradus} indicat.
    */
   public @Nullable Adiectīvum participem(@NotNull final Vōx vx, @NotNull final Speciālitās spclt,
                                          @NotNull final Genus gns, @NotNull final Cāsus css,
-                                         @NotNull final Numerāle nmrl, @NotNull final Gradus grds) {
+                                         @NotNull final Numerālis nmrl, @NotNull final Gradus grds) {
     return participem(vx, tempus, spclt, gns, css, nmrl, grds);
   }
 
@@ -125,12 +125,12 @@ public final class Āctum extends VerbumMultiplex <Āctum> {
    * @param spclt valōrem {@link Nōminālis#speciālitās} indicat.
    * @param gns valōrem {@link Nōminālis#genus} indicat.
    * @param css valōrem {@link Nōminālis#cāsus} indicat.
-   * @param nmrl valōrem {@link Nōminālis#numerāle} indicat.
+   * @param nmrl valōrem {@link Nōminālis#numerālis} indicat.
    * @param grds valōrem {@link Adiectīvum#gradus} indicat.
    */
   public @Nullable Adiectīvum participem(@NotNull final Tempus tmps, @NotNull final Speciālitās spclt,
                                          @NotNull final Genus gns, @NotNull final Cāsus css,
-                                         @NotNull final Numerāle nmrl, @NotNull final Gradus grds) {
+                                         @NotNull final Numerālis nmrl, @NotNull final Gradus grds) {
     return participem(vōx, tmps, spclt, gns, css, nmrl, grds);
   }
 
@@ -140,11 +140,11 @@ public final class Āctum extends VerbumMultiplex <Āctum> {
    * @param spclt valōrem {@link Nōminālis#speciālitās} indicat.
    * @param gns valōrem {@link Nōminālis#genus} indicat.
    * @param css valōrem {@link Nōminālis#cāsus} indicat.
-   * @param nmrl valōrem {@link Nōminālis#numerāle} indicat.
+   * @param nmrl valōrem {@link Nōminālis#numerālis} indicat.
    * @param grds valōrem {@link Adiectīvum#gradus} indicat.
    */
   public @Nullable Adiectīvum participem(@NotNull final Speciālitās spclt, @NotNull final Genus gns,
-                                         @NotNull final Cāsus css, @NotNull final Numerāle nmrl,
+                                         @NotNull final Cāsus css, @NotNull final Numerālis nmrl,
                                          @NotNull final Gradus grds) {
     return participem(vōx, tempus, spclt, gns, css, nmrl, grds);
   }

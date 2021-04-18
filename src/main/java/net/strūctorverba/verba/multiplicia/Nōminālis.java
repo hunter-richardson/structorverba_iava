@@ -31,9 +31,9 @@ public abstract class Nōminālis <Hoc extends VerbumMultiplex <Hoc>> extends Ve
   
   /**
    * Valor hic numerum reī huius dēsignat.
-   * @see Numerāle
+   * @see Numerālis
    */
-  public final @NotNull Numerāle numerāle;
+  public final @NotNull Numerālis numerālis;
 
   /**
    * Officium hoc cōnstrūctōrem reī classis huius perpetrat.
@@ -41,18 +41,18 @@ public abstract class Nōminālis <Hoc extends VerbumMultiplex <Hoc>> extends Ve
    * @param spclt valōrem {@link Nōminālis#speciālitās} indicat.
    * @param gns valōrem {@link Nōminālis#genus} indicat.
    * @param css valōrem {@link Nōminālis#cāsus} indicat.
-   * @param nmrl valōrem {@link Nōminālis#numerāle} indicat.
+   * @param nmrl valōrem {@link Nōminālis#numerālis} indicat.
    * @param fdmn valōrem {@link Verbum#fundāmen} indicat.
    * @param scrpt valōrem {@link #scrīptiō} indicat.
    */
   protected Nōminālis(@NotNull final Catēgoria ctgr, @NotNull final Speciālitās spclt,
-                      @NotNull final Genus gns, @NotNull final Cāsus css, @NotNull final Numerāle nmrl,
+                      @NotNull final Genus gns, @NotNull final Cāsus css, @NotNull final Numerālis nmrl,
                       @NotNull final String fdmn, @NotNull final String scrpt) {
     super(ctgr, fdmn, Speciālitās.PROPRIUM.equals(spclt) ? Ūtilitās.prīmamCapitāneamScrībō(scrpt)
                                                          : scrpt);
     speciālitās = spclt;
     genus = gns;
     cāsus = css;
-    numerāle = nmrl;
+    numerālis = nmrl;
   }
 }
