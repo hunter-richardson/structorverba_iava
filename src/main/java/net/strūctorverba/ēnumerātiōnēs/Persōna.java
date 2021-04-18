@@ -36,7 +36,7 @@ public enum Persōna {
   TERTIA("tertia");
 
   @Getter(lazy = true)
-  private static final @NotNull Nūntius.NūntiusErrōribus nūntius = Nūntius.NūntiusErrōribus.fac.get();
+  private static final @NotNull Nūntius.NūntiusĒnumerātiōnum nūntius = Nūntius.NūntiusĒnumerātiōnum.fac.get();
 
   /**
    * Valor hic repraesentātiōnem scrīpta reī huius dēsignat.

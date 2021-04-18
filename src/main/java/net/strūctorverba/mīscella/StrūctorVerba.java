@@ -5,6 +5,7 @@ import com.github.chaosfirebolt.converter.constants.*;
 import lombok.*;
 import lombok.experimental.Accessors;
 import net.strūctorverba.lēctōrēs.*;
+import net.strūctorverba.nūntiī.Nūntius;
 import net.strūctorverba.verba.*;
 import net.strūctorverba.verba.disposita.*;
 import net.strūctorverba.verba.multiplicia.Nōminālis;
@@ -23,7 +24,6 @@ import java.util.stream.*;
  * @see #fac
  */
 @Singleton @SuppressWarnings({ "NonAsciiCharacters", "SpellCheckingInspection", "unused" })
-@NoArgsConstructor(access = AccessLevel.PRIVATE)
 public final class StrūctorVerba {
   private static @Nullable StrūctorVerba īnstantia = null;
 
@@ -36,6 +36,10 @@ public final class StrūctorVerba {
 
   private final Range<Short> TRACTUS_NUMERŌRUM = Range.between(Integer.valueOf(1).shortValue(),
                                                                Integer.valueOf(4000).shortValue());
+
+  private StrūctorVerba() {
+    Thread.currentThread().setUncaughtExceptionHandler(Nūntius.NūntiusErrōribus.fac.get());
+  }
 
   @Getter(lazy = true) @Accessors(fluent = true)
   private final @NotNull LēctorMultiplicibus.LēctorAdiectīvīs adiectīva = LēctorMultiplicibus.LēctorAdiectīvīs.fac.get();

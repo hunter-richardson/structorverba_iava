@@ -116,7 +116,7 @@ public enum Mēnsis {
              case OCTOBER -> OCTŌBRIS;
              case NOVEMBER -> NOVEMBRIS;
              case DECEMBER -> DECEMBRIS;
-           };
+    };
   }
 
   /**
