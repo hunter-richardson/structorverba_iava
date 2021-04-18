@@ -14,6 +14,7 @@ import java.util.stream.Stream;
 public enum Cāsus {
   /**
    * Valor hic ūtātur sī ūsūfructuāriī valōrem validum nōn dēnotat.
+   * Numquam scrīnium <a href="../src/main/resources">auxiliārēs</a> inscrībētur.
    */
   NŪLLUM(StringUtils.EMPTY),
 
