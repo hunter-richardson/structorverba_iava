@@ -11,7 +11,7 @@ import org.junit.platform.commons.util.StringUtils;
 
 @SuppressWarnings({ "NonAsciiCharacters", "SpellCheckingInspection", "FieldCanBeLocal" })
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
-public class Numera {
+public class Numerī {
   @NotNull @Getter(lazy = true) @Accessors(fluent = true)
   private final StrūctorVerba strūctor = StrūctorVerba.fac.get();
 

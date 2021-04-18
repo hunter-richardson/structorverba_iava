@@ -5,16 +5,15 @@ import lombok.experimental.Accessors;
 import net.strūctorverba.conditōrēs.multiplicia.ConditōrPrōnōminibusConiūnctīvīs;
 import net.strūctorverba.inventōrēs.InventorPrōnōminibusConiūnctīvīs;
 import net.strūctorverba.lēctōrēs.LēctorMultiplicibus;
-import net.strūctorverba.nūntiī.*;
+import net.strūctorverba.nūntiī.Nūntius;
 import net.strūctorverba.tenōrēs.TenorMultiplicibus;
 import net.strūctorverba.verba.*;
 import net.strūctorverba.verba.disposita.Verba;
 import net.strūctorverba.ēnumerātiōnēs.*;
-import org.apache.commons.lang3.*;
+import org.apache.commons.lang3.StringUtils;
 import org.jetbrains.annotations.*;
 
 import java.util.*;
-import java.util.function.Supplier;
 import java.util.stream.*;
 
 /**
@@ -25,11 +24,12 @@ import java.util.stream.*;
  * @see TenorMultiplicibus.TenorPrōnōminibusConiūnctīvīs
  * @see InventorPrōnōminibusConiūnctīvīs
  * @see ConditōrPrōnōminibusConiūnctīvīs
+ * @see Nūntius.NūntiusPrōnōminumConiūnctīvōrum
  */
 @SuppressWarnings({ "NonAsciiCharacters", "SpellCheckingInspection" })
 public final class PrōnōmenConiūnctīvum extends Nōminālis <PrōnōmenConiūnctīvum> implements Coniugiāle {
   @Getter(lazy = true) @Accessors(fluent = true)
-  private final @NotNull NūntiusPrōnōminumConiūnctīvōrum nūntius = NūntiusPrōnōminumConiūnctīvōrum.fac.get();
+  private final @NotNull Nūntius.NūntiusPrōnōminumConiūnctīvōrum nūntius = Nūntius.NūntiusPrōnōminumConiūnctīvōrum.fac.get();
 
   @Builder(builderClassName = "Conditōr", builderMethodName = "conditōr", buildMethodName = "condam")
   private PrōnōmenConiūnctīvum(@NotNull final Speciālitās speciālitās, @NotNull final Genus genus,
@@ -64,16 +64,5 @@ public final class PrōnōmenConiūnctīvum extends Nōminālis <PrōnōmenConi�
   public @NotNull Verba coniugō(@NotNull final Verba prīma, @NotNull final LinkedList <Verbum <@Nullable ?>> secunda) {
     prīma.coniūnctīvumAllegōContinuōque(this, Verba.conditōr().seriēs(secunda).condam());
     return prīma;
-  }
-
-  public static final class NūntiusPrōnōminumConiūnctīvōrum extends Nūntius {
-    private static @Nullable NūntiusPrōnōminumConiūnctīvōrum īnstantia = null;
-
-    public static final @NotNull Supplier <NūntiusPrōnōminumConiūnctīvōrum> fac =
-      () -> ObjectUtils.firstNonNull(īnstantia, īnstantia = new NūntiusPrōnōminumConiūnctīvōrum());
-
-    private NūntiusPrōnōminumConiūnctīvōrum() {
-      super(ParametrīNūntiī.parā(PrōnōmenConiūnctīvum.Conditōr.class));
-    }
   }
 }

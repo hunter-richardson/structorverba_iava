@@ -5,6 +5,8 @@ import net.strūctorverba.conditōrēs.multiplicia.*;
 import net.strūctorverba.inventōrēs.*;
 import net.strūctorverba.lēctōrēs.*;
 import net.strūctorverba.tenōrēs.*;
+import net.strūctorverba.verba.VerbumSimplex;
+import net.strūctorverba.verba.multiplicia.*;
 import org.apache.commons.lang3.*;
 import org.jetbrains.annotations.*;
 
@@ -14,6 +16,10 @@ import java.util.function.Supplier;
 import java.util.logging.Logger;
 import java.util.stream.Stream;
 
+/**
+ * Classis {@link Nūntius} nūntia dē exsecūtiōne programmātis StrūctorVerba in scāpīs LOG scrībit.
+ * Classēs plūrimae aliae in programmātem StrūctorVerba rem classis huius.
+ */
 @SuppressWarnings({ "NonAsciiCharacters", "SpellCheckingInspection" })
 public abstract class Nūntius {
   private final @NotNull Logger praecō;
@@ -22,7 +28,7 @@ public abstract class Nūntius {
     praecō = parametrī.praecōnium.get();
   }
 
-  protected final void nūntiō(@NotNull final GradusNūntiī gradus, @Nullable final Object... nūntia) {
+  private void nūntiō(@NotNull final GradusNūntiī gradus, @Nullable final Object... nūntia) {
     if(GradusNūntiī.compareTo(gradus, GradusNūntiī.gradior(praecō.getLevel())) >= 0) {
       if(nūntia != null) {
         final StringBuilder strūctor = new StringBuilder();
@@ -42,7 +48,7 @@ public abstract class Nūntius {
                                              .filter(historicus -> historicus.getModuleName().contains(getClass().getModule().getName()))
                                              .findFirst().orElse(error.getStackTrace()[0]);
     praecō.throwing(historia.getClassName(), historia.getMethodName(), error);
-    terreō("Fūnctiō", historia.getMethodName(), "classe",
+    terreō("Modus", historia.getMethodName(), "classe",
            historia.getClassName(), "continātum est errōrem:",
            error.getClass().getSimpleName(), error.getMessage());
   }
@@ -389,6 +395,105 @@ public abstract class Nūntius {
 
     private NūntiusLēctōrīPraepositiōnibus( ) {
       super(ParametrīNūntiī.parā(LēctorPraepositiōnibus.class));
+    }
+  }
+
+  @Singleton public static final class NūntiusAdverbiōrum extends Nūntius {
+    private static @Nullable NūntiusAdverbiōrum īnstantia = null;
+
+    public static @NotNull Supplier<NūntiusAdverbiōrum> fac =
+      () -> ObjectUtils.firstNonNull(īnstantia, īnstantia = new NūntiusAdverbiōrum());
+
+    private NūntiusAdverbiōrum() {
+      super(ParametrīNūntiī.parā(VerbumSimplex.Adverbium.Conditōr.class));
+    }
+  }
+
+  @Singleton public static final class NūntiusConiūnctīvōrum extends Nūntius {
+    private static @Nullable NūntiusConiūnctīvōrum īnstantia = null;
+
+    public static @NotNull Supplier<NūntiusConiūnctīvōrum> fac =
+      () -> ObjectUtils.firstNonNull(īnstantia, īnstantia = new NūntiusConiūnctīvōrum());
+
+    private NūntiusConiūnctīvōrum() {
+      super(ParametrīNūntiī.parā(VerbumSimplex.Coniūnctīvum.Conditōr.class));
+    }
+  }
+
+  @Singleton public static final class NūntiusPraepositiōnum extends Nūntius {
+    private static @Nullable NūntiusPraepositiōnum īnstantia = null;
+
+    public static @NotNull Supplier<NūntiusPraepositiōnum> fac =
+      () -> ObjectUtils.firstNonNull(īnstantia, īnstantia = new NūntiusPraepositiōnum());
+
+    private NūntiusPraepositiōnum( ) {
+      super(ParametrīNūntiī.parā(VerbumSimplex.Praepositiō.Conditōr.class));
+    }
+  }
+
+  @Singleton public static final class NūntiusNumerōrum extends Nūntius {
+    private static @Nullable NūntiusNumerōrum īnstantia = null;
+
+    public static final @NotNull Supplier<NūntiusNumerōrum> fac =
+      () -> ObjectUtils.firstNonNull(īnstantia, īnstantia = new NūntiusNumerōrum());
+
+    protected NūntiusNumerōrum() {
+      super(ParametrīNūntiī.parā(VerbumSimplex.Numerus.Conditōr.class));
+    }
+  }
+
+  @Singleton public static final class NūntiusNōminum extends Nūntius {
+    private static @Nullable NūntiusNōminum īnstantia = null;
+
+    public static final @NotNull Supplier <NūntiusNōminum> fac =
+      () -> ObjectUtils.firstNonNull(īnstantia, īnstantia = new NūntiusNōminum());
+
+    private NūntiusNōminum( ) {
+      super(ParametrīNūntiī.parā(Nōmen.Conditōr.class));
+    }
+  }
+
+  @Singleton public static final class NūntiusAdiectīvōrum extends Nūntius {
+    private static @Nullable NūntiusAdiectīvōrum īnstantia = null;
+
+    public static final @NotNull Supplier <NūntiusAdiectīvōrum> fac =
+      () -> ObjectUtils.firstNonNull(īnstantia, īnstantia = new NūntiusAdiectīvōrum());
+
+    private NūntiusAdiectīvōrum() {
+      super(ParametrīNūntiī.parā(Āctum.Conditōr.class));
+    }
+  }
+
+  @Singleton public static final class NūntiusPrōnōminum extends Nūntius {
+    private static @Nullable NūntiusPrōnōminum īnstantia = null;
+
+    public static final @NotNull Supplier <NūntiusPrōnōminum> fac =
+      () -> ObjectUtils.firstNonNull(īnstantia, īnstantia = new NūntiusPrōnōminum());
+
+    private NūntiusPrōnōminum() {
+      super(ParametrīNūntiī.parā(Prōnōmen.Conditōr.class));
+    }
+  }
+
+  @Singleton public static final class NūntiusPrōnōminumConiūnctīvōrum extends Nūntius {
+    private static @Nullable NūntiusPrōnōminumConiūnctīvōrum īnstantia = null;
+
+    public static final @NotNull Supplier <NūntiusPrōnōminumConiūnctīvōrum> fac =
+      () -> ObjectUtils.firstNonNull(īnstantia, īnstantia = new NūntiusPrōnōminumConiūnctīvōrum());
+
+    private NūntiusPrōnōminumConiūnctīvōrum() {
+      super(ParametrīNūntiī.parā(PrōnōmenConiūnctīvum.Conditōr.class));
+    }
+  }
+
+  @Singleton public static final class NūntiusĀctōrum extends Nūntius {
+    private static @Nullable NūntiusĀctōrum īnstantia = null;
+
+    public static final @NotNull Supplier<NūntiusĀctōrum> fac =
+      () -> ObjectUtils.firstNonNull(īnstantia, īnstantia = new NūntiusĀctōrum());
+
+    private NūntiusĀctōrum( ) {
+      super(ParametrīNūntiī.parā(Āctum.Conditōr.class));
     }
   }
 

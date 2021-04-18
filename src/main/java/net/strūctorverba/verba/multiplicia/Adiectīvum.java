@@ -5,13 +5,10 @@ import lombok.experimental.Accessors;
 import net.strūctorverba.conditōrēs.multiplicia.ConditōrAdiectīvīs;
 import net.strūctorverba.inventōrēs.InventorAdiectīvīs;
 import net.strūctorverba.lēctōrēs.LēctorMultiplicibus;
-import net.strūctorverba.nūntiī.*;
+import net.strūctorverba.nūntiī.Nūntius;
 import net.strūctorverba.tenōrēs.TenorMultiplicibus;
 import net.strūctorverba.ēnumerātiōnēs.*;
-import org.apache.commons.lang3.ObjectUtils;
-import org.jetbrains.annotations.*;
-
-import java.util.function.Supplier;
+import org.jetbrains.annotations.NotNull;
 
 /**
  * Classis {@link Adiectīvum} repraesentat adiectīva ut coniectēris.
@@ -21,11 +18,12 @@ import java.util.function.Supplier;
  * @see TenorMultiplicibus.TenorAdiectīvīs
  * @see InventorAdiectīvīs
  * @see ConditōrAdiectīvīs
+ * @see Nūntius.NūntiusAdiectīvōrum
  */
 @SuppressWarnings({ "NonAsciiCharacters", "SpellCheckingInspection" })
 public final class Adiectīvum extends Nōminālis <Adiectīvum> {
   @Getter(lazy = true) @Accessors(fluent = true)
-  private final @NotNull NūntiusAdiectīvōrum nūntius = NūntiusAdiectīvōrum.fac.get();
+  private final @NotNull Nūntius.NūntiusAdiectīvōrum nūntius = Nūntius.NūntiusAdiectīvōrum.fac.get();
 
   /**
    * Valor hic potentiam reī huius dēsignat.
@@ -41,17 +39,6 @@ public final class Adiectīvum extends Nōminālis <Adiectīvum> {
     super(Catēgoria.ADIECTĪVUM, speciālitās, genus, cāsus, numerālis, fundāmen, scrīptiō);
     this.gradus = gradus;
     nūntius().plūsGarriō("Scrībor ut", scrīptiō);
-  }
-
-  public static final class NūntiusAdiectīvōrum extends Nūntius {
-    private static @Nullable NūntiusAdiectīvōrum īnstantia = null;
-
-    public static final @NotNull Supplier <NūntiusAdiectīvōrum> fac =
-      () -> ObjectUtils.firstNonNull(īnstantia, īnstantia = new NūntiusAdiectīvōrum());
-
-    private NūntiusAdiectīvōrum() {
-      super(ParametrīNūntiī.parā(Āctum.Conditōr.class));
-    }
   }
 }
 

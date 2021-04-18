@@ -6,14 +6,12 @@ import net.strūctorverba.conditōrēs.multiplicia.ConditōrĀctīs;
 import net.strūctorverba.inventōrēs.InventorĀctīs;
 import net.strūctorverba.lēctōrēs.LēctorMultiplicibus;
 import net.strūctorverba.mīscella.Ūtilitās;
-import net.strūctorverba.nūntiī.*;
+import net.strūctorverba.nūntiī.Nūntius;
 import net.strūctorverba.tenōrēs.TenorMultiplicibus;
 import net.strūctorverba.ēnumerātiōnēs.*;
-import org.apache.commons.lang3.ObjectUtils;
 import org.jetbrains.annotations.*;
 
 import java.util.Objects;
-import java.util.function.Supplier;
 
 /**
  * Classis {@link Āctum} repraesentat nōmina ut coniectēris.
@@ -22,6 +20,7 @@ import java.util.function.Supplier;
  * @see TenorMultiplicibus.TenorĀctīs
  * @see InventorĀctīs
  * @see ConditōrĀctīs
+ * @see Nūntius.NūntiusĀctōrum
  */
 @SuppressWarnings({ "NonAsciiCharacters", "SpellCheckingInspection", "unused" })
 public final class Āctum extends VerbumMultiplex <Āctum> {
@@ -32,7 +31,7 @@ public final class Āctum extends VerbumMultiplex <Āctum> {
   private final @NotNull LēctorMultiplicibus.LēctorĀctīs ācta = LēctorMultiplicibus.LēctorĀctīs.fac.get();
 
   @Getter(lazy = true) @Accessors(fluent = true)
-  private final @NotNull NūntiusĀctōrum nūntius = NūntiusĀctōrum.fac.get();
+  private final @NotNull Nūntius.NūntiusĀctōrum nūntius = Nūntius.NūntiusĀctōrum.fac.get();
 
   /**
    * Valor hic modum reī huius dēsignat.
@@ -147,16 +146,5 @@ public final class Āctum extends VerbumMultiplex <Āctum> {
                                          @NotNull final Cāsus css, @NotNull final Numerālis nmrl,
                                          @NotNull final Gradus grds) {
     return participem(vōx, tempus, spclt, gns, css, nmrl, grds);
-  }
-
-  public static final class NūntiusĀctōrum extends Nūntius {
-    private static @Nullable Āctum.NūntiusĀctōrum īnstantia = null;
-
-    public static final @NotNull Supplier<NūntiusĀctōrum> fac =
-      () -> ObjectUtils.firstNonNull(īnstantia, īnstantia = new NūntiusĀctōrum());
-
-    private NūntiusĀctōrum( ) {
-      super(ParametrīNūntiī.parā(Āctum.Conditōr.class));
-    }
   }
 }

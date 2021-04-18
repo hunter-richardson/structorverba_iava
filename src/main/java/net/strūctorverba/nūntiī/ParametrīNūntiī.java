@@ -10,7 +10,7 @@ import java.util.function.Supplier;
 import java.util.logging.*;
 
 @SuppressWarnings({ "NonAsciiCharacters", "SpellCheckingInspection" })
-public final class ParametrīNūntiī {
+final class ParametrīNūntiī {
   private final @NotNull GradusNūntiī gradusMaximus = GradusNūntiī.OMNIS;
   private final @NotNull String       locus         = "logs";
 
