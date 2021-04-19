@@ -14,7 +14,7 @@ import java.util.LinkedList;
 
 /**
  * Classis {@link DolōremIpsum} versiōnem prīmam tentāminārum programmātī StrūctorVerba dēfīnit.
- * Laudem Marcō Tulliō Cicerōnī cum parte dialogī Socraticus "Dē Fīnibus Bonōrum et Mālōrum" in librō prīmō sectiōne decimā versū duotrīcēsimō cōnstruat.
+ * Laudem Marcō Tulliō Cicerōnī cum parte dialogī Sōcraticus "Dē Fīnibus Bonōrum et Mālōrum" in librō prīmō sectiōne decimā versū duotrīcēsimō cōnstruat.
  * Versūs ante triēntem prīmam incipit et post fīnālem fīnit.
  * Pars illa est agnita poēmam istam "Lorem Ipsum" īnspīrāvisse.
  * @see <a href="http://www.thelatinlibrary.com/cicero/fin1.shtml#32">Dē Fīnibus Bonōrum et Mālōrum</a>
