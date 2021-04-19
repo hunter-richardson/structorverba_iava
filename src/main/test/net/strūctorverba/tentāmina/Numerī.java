@@ -119,7 +119,7 @@ public class Numerī {
 
   /**
    * Modus hic additiōnem rērum duārum classis {@link VerbumSimplex.Numerus}. <br>
-   * Scrīptiunculās et "17 = XVIII" et "3 = III" et "17 + 3 = 20 = XX" prōdūcat.
+   * Scrīptiunculās et <code>17 = XVIII</code> et <code>3 = III</code> et <code>17 + 3 = 20 = XX</code> prōdūcat.
    */
   @Test @Order(4)
   public void additiōnis() {
@@ -128,7 +128,7 @@ public class Numerī {
 
   /**
    * Modus hic subtractiōnem rērum duārum classis {@link VerbumSimplex.Numerus}. <br>
-   * Scrīptiunculās et "12 = XII" et "7 = VII" et "12 - 7 = 5 = V" prōdūcat.
+   * Scrīptiunculās et <code>12 = XII</code> et <code>7 = VII</code> et <code>12 - 7 = 5 = V</code> prōdūcat.
    */
   @Test @Order(5)
   public void subtractiōnis() {
@@ -137,7 +137,7 @@ public class Numerī {
 
   /**
    * Modus hic multiplicātiōnem rērum duārum classis {@link VerbumSimplex.Numerus}. <br>
-   * Scrīptiunculās et "3 = III" et "2 = II" et "3 * 2 = 6 = VI" prōdūcat.
+   * Scrīptiunculās et <code>3 = III</code> et <code>2 = II</code> et <code>3 * 2 = 6 = VI</code> prōdūcat.
    */
   @Test @Order(6)
   public void multiplicātiōnis() {
@@ -146,7 +146,7 @@ public class Numerī {
 
   /**
    * Modus hic dīvīsiōnem rērum duārum classis {@link VerbumSimplex.Numerus}. <br>
-   * Scrīptiunculās et "18 = XVII" et "6 = VI" et "18 / 6 = 3 = III" prōdūcat.
+   * Scrīptiunculās et <code>18 = XVII</code> et <code>6 = VI</code> et <code>18 / 6 = 3 = III</code> prōdūcat.
    */
   @Test @Order(7)
   public void dīvīsiōnis() {
@@ -155,7 +155,7 @@ public class Numerī {
 
   /**
    * Modus hic mānsiōnem rērum duārum classis {@link VerbumSimplex.Numerus}. <br>
-   * Scrīptiunculās et "12 = XII" et "9 = IX" et "12 % 9 = 3 = III" prōdūcat.
+   * Scrīptiunculās et <code>12 = XII</code> et <code>9 = IX</code> et <code>12 % 9 = 3 = III</code> prōdūcat.
    */
   @Test @Order(8)
   public void mānsiōnis() {
