@@ -14,7 +14,7 @@ import org.jetbrains.annotations.NotNull;
  * Classis {@link Verbum} repraesentat verba Latīna, fōrmās omnēs datī quās ūsūfructuāriī petunt.
  * Rem omnem classis huius rēs classis {@link Lēctor} colliget et rēs classis {@link Tenor} sēliget et rēs classis {@link Conditōr} tandem cōnstruet.
  * Rēs classis {@link Lēctor} colliget datum ā scāpō XML intrā scrīnium <a href="../src/main/resources">auxiliārēs</a>.
- * Rēs multiplicēs classis huius (quae classem {@link VerbumMultiplex} extendit) rēs classis {@link Inventor} quaestiōnibus ūtitur.
+ * Rēs multiplicēs classis huius (quae classem {@link VerbumMultiplex} extendit) rēs classis {@link Inventor} ūtitur cōlāre.
  * @param <Hoc> Tabellā hāc classis {@link Hoc} extēnsiōnem aptam datīs petītīs repraesentat.
  */
 @SuppressWarnings({ "NonAsciiCharacters", "SpellCheckingInspection" })

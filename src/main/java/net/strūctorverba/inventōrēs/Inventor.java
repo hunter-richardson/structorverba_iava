@@ -1,28 +1,57 @@
 package net.strūctorverba.inventōrēs;
 
+import net.strūctorverba.lēctōrēs.LēctorMultiplicibus;
 import net.strūctorverba.nūntiī.Nūntius;
+import net.strūctorverba.tenōrēs.TenorMultiplicibus;
 import net.strūctorverba.verba.multiplicia.VerbumMultiplex;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.Arrays;
 import java.util.function.*;
 
+/**
+ * Classis {@link Inventor} cōlit rēs classis {@link VerbumMultiplex} quās rēs classis {@link TenorMultiplicibus} referat.
+ * @param <Hoc> classis extenta classis {@link VerbumMultiplex}
+ */
 @SuppressWarnings({ "NonAsciiCharacters", "SpellCheckingInspection" })
 public abstract class Inventor <Hoc extends VerbumMultiplex <Hoc>> {
+  /**
+   * Valor hic est vās classis {@link Nūntius} classī hui.
+   */
   protected final @NotNull Nūntius nūntius;
 
+  /**
+   * Officium hoc cōnstrūctōrem reī classis huius perpetrat.
+   * @param nts valōrem {@link #nūntius} supplet.
+   */
   protected Inventor(@NotNull final Supplier <? extends Nūntius> nts) {
     nūntius = nts.get();
   }
 
+  /**
+   * Modus hic seriem {@code illa} reī huic indit.
+   * @param illa seriem ēnumerātiōnum indendam
+   * @return rem huius
+   * @see #allegam(Enum)
+   */
   public final @NotNull Inventor <Hoc> allegō(@NotNull final Enum <@NotNull ?>... illa) {
     Arrays.stream(illa).forEach(this::allegam);
     return this;
   }
 
+  /**
+   * @return quaestiōnem quam rēs classis {@link LēctorMultiplicibus} ūtātur rēs classis {@link VerbumMultiplex} percōlere
+   */
   public abstract @NotNull Predicate <@NotNull Hoc> inquīram( );
 
+  /**
+   * Modus hic rem hanc restituit.
+   */
   public abstract void restituō( );
 
+  /**
+   * Modus hic ēnumerātiōnem singulum {@code illud} reī huic indit.
+   * @param illud ēnumerātiōnem indendam
+   */
   protected abstract void allegam(final Enum <@NotNull ?> illud);
 }

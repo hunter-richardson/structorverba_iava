@@ -10,7 +10,7 @@ import org.jetbrains.annotations.NotNull;
 
 /**
  * Classis {@link VerbumMultiplex} repraesentat verbum aliquem quod fōrmās multās habet.
- * Rēs classis {@link Inventor} rēbus classis huius adsunt et ūtilissimae quaestiōnibus sunt.
+ * Rēs classis {@link Inventor} rēbus classis huius adsunt et ūtilissimae sunt rēs classis huius percōlere.
  * Discrīmina prīmōria inter classibus hāc et {@link VerbumSimplex} sunt huius valōrēs {#scrīptiō} et {#encliticum}.
  * @param <Hoc> Tabellā hāc classis {@link Hoc} extēnsiōnem aptam datīs petītīs repraesentat.
  * @see LēctorMultiplicibus

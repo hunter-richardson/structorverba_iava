@@ -15,6 +15,7 @@ import java.util.function.Supplier;
  * Classis {@link LēctorSimplicibus} est vās classis {@link Lēctor} classibus omnibus quibus classem {@link VerbumMultiplex} extendit.
  * @param <Hoc> classis extenta classis {@link VerbumMultiplex}
  * @see Inventor
+ * @see TenorMultiplicibus
  */
 @SuppressWarnings({ "NonAsciiCharacters", "SpellCheckingInspection" })
 public abstract class LēctorMultiplicibus <Hoc extends VerbumMultiplex <Hoc>> extends Lēctor <Hoc> {
@@ -38,7 +39,7 @@ public abstract class LēctorMultiplicibus <Hoc extends VerbumMultiplex <Hoc>> e
   /**
    * Modus hic ūtitur modus {@link Lēctor#legam(String)} rem classis {@link Hoc} ā valōre {@link Lēctor#tenor} advenīre.
    * @param fundāmen fundāmen verbō quod rēs haec cōnābitur advenīre
-   * @param illa seriēs ēnumerātiōnum licent {@link #inventor} colere ēventīs lēctīs
+   * @param illa seriēs ēnumerātiōnum quam licet {@link #inventor} cōlere ēventīs lēctīs
    * @return rem classis {@link Hoc} quam valōrem {@code verbum} quadrat
    */
   public final @Nullable Hoc adveniam(@NotNull final String fundāmen, @NotNull final Enum <@NotNull ?>... illa) {

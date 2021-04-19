@@ -9,24 +9,36 @@ import org.jetbrains.annotations.*;
 import javax.ejb.*;
 import java.util.function.*;
 
+/**
+ * Classis {@link InventorNōminibus} est vās classis {@link Inventor} classī {@link Nōmen}.
+ * @see Nōmen
+ * @see Nūntius.NūntiusInventōrīNōminibus
+ */
 @SuppressWarnings({ "NonAsciiCharacters", "SpellCheckingInspection" })
 @Singleton
 @DependsOn("NūntiusInventōrīAdiectīvīs")
 public final class InventorNōminibus extends Inventor <Nōmen> {
   private static @Nullable InventorNōminibus īnstantia = null;
 
+  /**
+   * Valor hic viam reī classis huiuc facit.
+   * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
+   */
   public static final @NotNull Supplier <InventorNōminibus> fac =
     () -> ObjectUtils.firstNonNull(īnstantia, īnstantia = new InventorNōminibus());
 
   private @NotNull Speciālitās speciālitās = Speciālitās.NŪLLUM;
-  private @NotNull Genus     genus     = Genus.NŪLLUM;
-  private @NotNull Numerālis numerālis = Numerālis.NŪLLUS;
-  private @NotNull Cāsus     cāsus     = Cāsus.NŪLLUS;
+  private @NotNull Genus       genus       = Genus.NŪLLUM;
+  private @NotNull Numerālis   numerālis   = Numerālis.NŪLLUS;
+  private @NotNull Cāsus       cāsus       = Cāsus.NŪLLUS;
 
   private InventorNōminibus( ) {
     super(Nūntius.NūntiusInventōrīNōminibus.fac);
   }
 
+  /**
+   * @inheritDoc
+   */
   public @Override @NotNull Predicate <@NotNull Nōmen> inquīram( ) {
     return nōmen -> speciālitās.equals(nōmen.speciālitās)
                     && genus.equals(nōmen.genus)
@@ -34,6 +46,9 @@ public final class InventorNōminibus extends Inventor <Nōmen> {
                     && numerālis.equals(nōmen.numerālis);
   }
 
+  /**
+   * @inheritDoc
+   */
   public @Override void restituō( ) {
     speciālitās = Speciālitās.NŪLLUM;
     genus = Genus.NŪLLUM;
@@ -42,6 +57,13 @@ public final class InventorNōminibus extends Inventor <Nōmen> {
     nūntius.certiōrō(getClass().getSimpleName(), "est restitūtus.");
   }
 
+  /**
+   * @inheritDoc
+   * @see Speciālitās#ut(Enum, Speciālitās)
+   * @see Genus#ut(Enum, Genus)
+   * @see Numerālis#ut(Enum, Numerālis)
+   * @see Cāsus#ut(Enum, Cāsus)
+   */
   protected @Override void allegam(@NotNull final Enum<@NotNull ?> illud) {
     if (illud instanceof Speciālitās) {
       speciālitās = Speciālitās.ut(illud, Speciālitās.NŪLLUM);

@@ -9,25 +9,37 @@ import org.jetbrains.annotations.*;
 import javax.ejb.*;
 import java.util.function.*;
 
+/**
+ * Classis {@link InventorĀctīs} est vās classis {@link Inventor} classī {@link Āctum}.
+ * @see Āctum
+ * @see Nūntius.NūntiusInventōrīĀctīs
+ */
 @SuppressWarnings({ "NonAsciiCharacters", "SpellCheckingInspection" })
 @Singleton
 @DependsOn("NūntiusInventōrīĀctīs")
 public final class InventorĀctīs extends Inventor <Āctum> {
   private static @Nullable InventorĀctīs īnstantia = null;
 
+  /**
+   * Valor hic viam reī classis huiuc facit.
+   * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
+   */
   public static final @NotNull Supplier <InventorĀctīs> fac =
     () -> ObjectUtils.firstNonNull(īnstantia, īnstantia = new InventorĀctīs());
 
-  private @NotNull Vōx      vōx      = Vōx.NŪLLA;
+  private @NotNull Vōx       vōx       = Vōx.NŪLLA;
   private @NotNull Tempus    tempus    = Tempus.NŪLLUM;
   private @NotNull Numerālis numerālis = Numerālis.NŪLLUS;
   private @NotNull Persōna   persōna   = Persōna.NŪLLA;
-  private @NotNull Modus    modus    = Modus.NŪLLUS;
+  private @NotNull Modus     modus     = Modus.NŪLLUS;
 
   private InventorĀctīs( ) {
     super(Nūntius.NūntiusInventōrīĀctīs.fac);
   }
 
+  /**
+   * @inheritDoc
+   */
   public @Override @NotNull Predicate <@NotNull Āctum> inquīram( ) {
     return āctum -> modus.equals(āctum.modus)
                     && vōx.equals(āctum.vōx)
@@ -36,6 +48,9 @@ public final class InventorĀctīs extends Inventor <Āctum> {
                     && persōna.equals(āctum.persōna);
   }
 
+  /**
+   * @inheritDoc
+   */
   public @Override void restituō( ) {
     vōx = Vōx.NŪLLA;
     tempus = Tempus.NŪLLUM;
@@ -45,7 +60,14 @@ public final class InventorĀctīs extends Inventor <Āctum> {
     nūntius.certiōrō(getClass().getSimpleName(), "est restitūtus.");
   }
 
-
+  /**
+   * @inheritDoc
+   * @see Vōx#ut(Enum, Vōx)
+   * @see Tempus#ut(Enum, Tempus)
+   * @see Numerālis#ut(Enum, Numerālis)
+   * @see Persōna#ut(Enum, Persōna)
+   * @see Modus#ut(Enum, Modus)
+   */
   protected @Override void allegam(@NotNull final Enum<@NotNull ?> illud) {
     if (illud instanceof Vōx) {
       vōx = Vōx.ut(illud, Vōx.NŪLLA);
