@@ -10,13 +10,29 @@ import org.jetbrains.annotations.*;
 import javax.ejb.*;
 import java.util.function.Supplier;
 
+/**
+ * Classis {@link LēctorSimplicibus} est vās classis {@link Lēctor} classibus omnibus quibus classem {@link VerbumSimplex} extendit.
+ * @param <Hoc> classis extentum classis {@link VerbumSimplex}
+ * @see TenorSimplibus
+ */
 @SuppressWarnings({ "NonAsciiCharacters", "SpellCheckingInspection" })
 public abstract class LēctorSimplicibus <Hoc extends VerbumSimplex <Hoc>> extends Lēctor <Hoc> {
+  /**
+   * Officium hoc cōnstrūctōrem reī classis huius perpetrat.
+   * @param catēgoria valōrem {@link Lēctor#catēgoria} indicat.
+   * @param nūntius valōrem {@link Lēctor#nūntius} supplet.
+   * @param tenor valōrem {@link Lēctor#tenor} supplet.
+   */
   protected LēctorSimplicibus(@NotNull final Catēgoria catēgoria, @NotNull final Supplier <? extends Nūntius> nūntius,
                               @NotNull final Supplier <@NotNull ? extends TenorSimplibus <Hoc>> tenor) {
     super(catēgoria, nūntius, tenor);
   }
 
+  /**
+   * Modus hic ūtitur modus {@link Lēctor#legam(String)} rem classis {@link Hoc} ā valōre {@link Lēctor#tenor} advenīre.
+   * @param verbum fundāmen verbō quod rēs haec cōnābitur advenīre
+   * @return rem classis {@link Hoc} quam valōrem {@code verbum} quadrat
+   */
   public final @Nullable Hoc adveniam(@NotNull final String verbum) {
     legam(verbum);
     final Hoc hoc = tenor.referō();
@@ -29,10 +45,20 @@ public abstract class LēctorSimplicibus <Hoc extends VerbumSimplex <Hoc>> exten
     }
   }
 
+  /**
+   * Classis {@link LēctorAdverbiīs} est vās classis {@link Lēctor} classī {@link VerbumSimplex.Adverbium}.
+   * @see Catēgoria#ADVERBIUM
+   * @see TenorSimplibus.TenorAdverbiīs
+   * @see Nūntius.NūntiusLēctōrīAdverbiīs
+   */
   @Singleton @DependsOn({ "TenorAdverbiīs", "NūntiusLēctōrīAdverbiīs" })
   public static final class LēctorAdverbiīs extends LēctorSimplicibus <VerbumSimplex.Adverbium> {
     private static @Nullable LēctorAdverbiīs īnstantia = null;
 
+    /**
+     * Valor hic viam reī classis huiuc facit.
+     * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
+     */
     public static final @NotNull Supplier <LēctorAdverbiīs> fac =
       () -> ObjectUtils.firstNonNull(īnstantia, īnstantia = new LēctorAdverbiīs());
 
@@ -43,10 +69,20 @@ public abstract class LēctorSimplicibus <Hoc extends VerbumSimplex <Hoc>> exten
     }
   }
 
+  /**
+   * Classis {@link LēctorConiūnctīvīs} est vās classis {@link Lēctor} classī {@link VerbumSimplex.Coniūnctīvum}.
+   * @see Catēgoria#CONIŪNCTĪVUM
+   * @see TenorSimplibus.TenorConiūnctivīs
+   * @see Nūntius.NūntiusLēctōrīConiūnctīvīs
+   */
   @Singleton @DependsOn({ "TenorConiūnctivīs", "NūntiusLēctōrīConiūnctīvīs" })
   public static final class LēctorConiūnctīvīs extends LēctorSimplicibus <VerbumSimplex.Coniūnctīvum> {
     private static @Nullable LēctorConiūnctīvīs īnstantia = null;
 
+    /**
+     * Valor hic viam reī classis huiuc facit.
+     * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
+     */
     public static final @NotNull Supplier <LēctorConiūnctīvīs> fac =
       () -> ObjectUtils.firstNonNull(īnstantia, īnstantia = new LēctorConiūnctīvīs());
 

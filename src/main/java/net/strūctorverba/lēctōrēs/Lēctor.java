@@ -13,12 +13,34 @@ import java.io.*;
 import java.nio.file.Path;
 import java.util.function.Supplier;
 
+/**
+ * Classis {@link Lēctor} colliget datum ā scāpō XML intrā scrīnium <a href="../src/main/resources">auxiliārēs</a> rēbus classis {@link Verbum} scrībere.
+ */
 @SuppressWarnings({ "NonAsciiCharacters", "SpellCheckingInspection" })
 public abstract class Lēctor <Hoc extends Verbum <Hoc>> {
-  protected final @NotNull Nūntius     nūntius;
-  protected final @NotNull Tenor <Hoc> tenor;
-  protected final @NotNull Catēgoria   catēgoria;
+  /**
+   * Valor hic est vās classis {@link Nūntius} classī hui.
+   */
+  protected final @NotNull Nūntius nūntius;
 
+  /**
+   * Valor hic est vās classis {@link Tenor} classī hui.
+   */
+  protected final @NotNull Tenor <Hoc> tenor;
+
+  /**
+   * Valor hic extēnsiōnem classī {@link Verbum} dēsignat scrībere.
+   * {@link Catēgoria#scrīptiō} quoque nōminātur scrīnium intrā quō scāpum eius cōnservātum est.
+   * @see Catēgoria
+   */
+  protected final @NotNull Catēgoria catēgoria;
+
+  /**
+   * Officium hoc cōnstrūctōrem reī classis huius perpetrat.
+   * @param ctgr valōrem {@link #catēgoria} indicat.
+   * @param nts valōrem {@link #nūntius} supplet.
+   * @param tnr valōrem {@link #tenor} supplet.
+   */
   protected Lēctor(@NotNull final Catēgoria ctgr, @NotNull final Supplier <? extends Nūntius> nts,
                    @NotNull final Supplier <@NotNull ? extends Tenor <Hoc>> tnr) {
     nūntius = nts.get();
@@ -26,6 +48,10 @@ public abstract class Lēctor <Hoc extends Verbum <Hoc>> {
     catēgoria = ctgr;
   }
 
+  /**
+   * Modus hic verbum cōnābitur legere ā scāpō XML intrā scrīnium <a href="../src/main/resources">auxiliārēs</a>.
+   * @param verbum fundāmen verbō quod rēs haec cōnābitur legere.
+   */
   protected final void legam(@NotNull final String verbum) {
     final Path nōmen = Path.of(catēgoria.scrīptiō, String.format("%s.xml", Ūtilitās.minusculāsScrībō(verbum)));
     if(quaerō(verbum)) {
@@ -38,7 +64,7 @@ public abstract class Lēctor <Hoc extends Verbum <Hoc>> {
         nūntius.terreō(e);
       }
     } else {
-      nūntius.moneō("Abest ōrdō auxiliāris", nōmen);
+      nūntius.moneō("Abest scāpum auxiliāris", nōmen);
     }
   }
 

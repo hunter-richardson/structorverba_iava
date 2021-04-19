@@ -11,10 +11,22 @@ import org.jetbrains.annotations.*;
 import javax.ejb.*;
 import java.util.function.Supplier;
 
+/**
+ * Classis {@link LēctorSimplicibus} est vās classis {@link Lēctor} classibus omnibus quibus classem {@link VerbumMultiplex} extendit.
+ * @param <Hoc> classis extentum classis {@link VerbumMultiplex}
+ * @see Inventor
+ */
 @SuppressWarnings({ "NonAsciiCharacters", "SpellCheckingInspection" })
 public abstract class LēctorMultiplicibus <Hoc extends VerbumMultiplex <Hoc>> extends Lēctor <Hoc> {
   private final @NotNull Inventor <Hoc> inventor;
 
+  /**
+   * Officium hoc cōnstrūctōrem reī classis huius perpetrat.
+   * @param catēgoria valōrem {@link Lēctor#catēgoria} indicat.
+   * @param nūntius valōrem {@link Lēctor#nūntius} supplet.
+   * @param tenor valōrem {@link Lēctor#tenor} supplet.
+   * @param inventor valor hic colit ēventīs multīs possibilibus quibus {@link Lēctor#tenor} referat.
+   */
   protected LēctorMultiplicibus(@NotNull final Catēgoria catēgoria,
                                 @NotNull final Supplier <? extends Nūntius> nūntius,
                                 @NotNull final Supplier <@NotNull ? extends TenorMultiplicibus <Hoc>> tenor,
@@ -23,7 +35,12 @@ public abstract class LēctorMultiplicibus <Hoc extends VerbumMultiplex <Hoc>> e
     this.inventor = inventor.get();
   }
 
-
+  /**
+   * Modus hic ūtitur modus {@link Lēctor#legam(String)} rem classis {@link Hoc} ā valōre {@link Lēctor#tenor} advenīre.
+   * @param fundāmen fundāmen verbō quod rēs haec cōnābitur advenīre
+   * @param illa seriēs ēnumerātiōnum licent {@link #inventor} colere ēventīs lēctīs
+   * @return rem classis {@link Hoc} quam valōrem {@code verbum} quadrat
+   */
   public final @Nullable Hoc adveniam(@NotNull final String fundāmen, @NotNull final Enum <@NotNull ?>... illa) {
     legam(fundāmen);
     Hoc hoc = tenor.referō(inventor.allegō(illa).inquīram());
@@ -37,9 +54,23 @@ public abstract class LēctorMultiplicibus <Hoc extends VerbumMultiplex <Hoc>> e
     }
   }
 
+  /**
+   * Classis {@link LēctorNōminibus} est vās classis {@link Lēctor} classī {@link Nōmen}.
+   * @see Catēgoria#NŌMEN
+   * @see TenorMultiplicibus.TenorNōminibus
+   * @see Nūntius.NūntiusLēctōrīNōminibus
+   * @see InventorNōminibus
+   */
   @Singleton @DependsOn({ "TenorNōminibus", "NūntiusLēctōrīNōminibus" })
   public static final class LēctorNōminibus extends LēctorMultiplicibus <Nōmen> {
-    public static final @NotNull Supplier <LēctorNōminibus> fac = LēctorNōminibus::new;
+    private static @Nullable LēctorNōminibus īnstantia = null;
+
+    /**
+     * Valor hic viam reī classis huiuc facit.
+     * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
+     */
+    public static final @NotNull Supplier <LēctorNōminibus> fac =
+      () -> ObjectUtils.firstNonNull(īnstantia, īnstantia = new LēctorNōminibus());
 
     private LēctorNōminibus( ) {
       super(Catēgoria.NŌMEN, Nūntius.NūntiusLēctōrīNōminibus.fac,
@@ -47,15 +78,41 @@ public abstract class LēctorMultiplicibus <Hoc extends VerbumMultiplex <Hoc>> e
     }
   }
 
+  /**
+   * Classis {@link LēctorAdiectīvīs} est vās classis {@link Lēctor} classī {@link Adiectīvum}.
+   * @see Catēgoria#ADIECTĪVUM
+   * @see TenorMultiplicibus.TenorAdiectīvīs
+   * @see Nūntius.NūntiusLēctōrīAdiectīvīs
+   * @see InventorAdiectīvīs
+   */
   @Singleton @DependsOn({ "TenorAdiectīvīs", "NūntiusLēctōrīAdiectīvīs" })
   public static final class LēctorAdiectīvīs extends LēctorMultiplicibus <Adiectīvum> {
-    public static final @NotNull Supplier <LēctorAdiectīvīs> fac = LēctorAdiectīvīs::new;
+    private static @Nullable LēctorAdiectīvīs īnstantia = null;
+
+    /**
+     * Valor hic viam reī classis huiuc facit.
+     * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
+     */
+    public static final @NotNull Supplier <LēctorAdiectīvīs> fac =
+      () -> ObjectUtils.firstNonNull(īnstantia, īnstantia = new LēctorAdiectīvīs());
 
     private LēctorAdiectīvīs( ) {
       super(Catēgoria.ADIECTĪVUM, Nūntius.NūntiusLēctōrīAdiectīvīs.fac,
             TenorMultiplicibus.TenorAdiectīvīs.fac, InventorAdiectīvīs.fac);
     }
 
+    /**
+     * Modus hic cōnābitur advenīre rem classis {@link Adiectīvum} quam adiectīvum possessīvum repraesentat et valōrēs {@code illa} quadrat.
+     * @param numerālis dēsignat adiectīvum possessīvum sīve singulāre (id est aut "meus" aut "tuus") sīve plūrāle (id est aut "noster" aut "vester") petitur
+     * @param persōna persōnam adiectīvī petītī dēsignat
+     * @param illa seriēs ēnumerātiōnum licent {@link #inventor} colere ēventīs lēctīs
+     * @see <a href="../src/main/resources/adiectīvum/meus.xml">meus.xml</a>
+     * @see <a href="../src/main/resources/adiectīvum/tuus.xml">tuus.xml</a>
+     * @see <a href="../src/main/resources/adiectīvum/noster.xml">noster.xml</a>
+     * @see <a href="../src/main/resources/adiectīvum/vester.xml">vester.xml</a>
+     * @see Numerālis
+     * @see Persōna
+     */
     @SuppressWarnings("unused")
     public @Nullable Adiectīvum adveniam(final Numerālis numerālis, final Persōna persōna, final Enum<?>... illa) {
       try {
@@ -68,7 +125,7 @@ public abstract class LēctorMultiplicibus <Hoc extends VerbumMultiplex <Hoc>> e
                           };
                           case SECUNDA -> switch (numerālis) {
                             case SINGULĀRIS -> "tuus";
-                            case PLŪRĀLIS -> "voster";
+                            case PLŪRĀLIS -> "vester";
                             case NŪLLUS -> throw new IllegalArgumentException(String.format("Ūsus prāvus est ēnumerātiōnis %s",
                                                                                             Numerālis.NŪLLUS));
                           };
@@ -83,10 +140,21 @@ public abstract class LēctorMultiplicibus <Hoc extends VerbumMultiplex <Hoc>> e
     }
   }
 
+  /**
+   * Classis {@link LēctorPrōnōminibus} est vās classis {@link Lēctor} classī {@link Prōnōmen}.
+   * @see Catēgoria#PRŌNŌMEN
+   * @see TenorMultiplicibus.TenorPrōnōminibus
+   * @see Nūntius.NūntiusLēctōrīPrōnōminibus
+   * @see InventorPrōnōminibus
+   */
   @Singleton @DependsOn({ "TenorPrōnōminibus", "NūntiusLēctōrīPrōnōminibus" })
   public static final class LēctorPrōnōminibus extends LēctorMultiplicibus <Prōnōmen> {
     private static @Nullable LēctorPrōnōminibus īnstantia = null;
 
+    /**
+     * Valor hic viam reī classis huiuc facit.
+     * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
+     */
     public static final @NotNull Supplier <LēctorPrōnōminibus> fac =
       () -> ObjectUtils.firstNonNull(īnstantia, īnstantia = new LēctorPrōnōminibus());
 
@@ -95,6 +163,15 @@ public abstract class LēctorMultiplicibus <Hoc extends VerbumMultiplex <Hoc>> e
             TenorMultiplicibus.TenorPrōnōminibus.fac, InventorPrōnōminibus.fac);
     }
 
+    /**
+     * Modus hic cōnābitur advenīre rem classis {@link Prōnōmen} quam prōnōmen possessīvum repraesentat et valōrēs {@code illa} quadrat.
+     * @param persōna persōnam prōnimis petītī dēsignat
+     * @param illa seriēs ēnumerātiōnum licent {@link #inventor} colere ēventīs lēctīs
+     * @see <a href="../src/main/resources/prōnōmina/ego.xml">ego.xml</a>
+     * @see <a href="../src/main/resources/prōnōmina/tū.xml">tū.xml</a>
+     * @see <a href="../src/main/resources/prōnōmina/is.xml">is.xml</a>
+     * @see Persōna
+     */
     @SuppressWarnings("unused")
     public @Nullable Prōnōmen adveniam(final Persōna persōna, final Enum<?>... illa) {
       try {
@@ -112,10 +189,22 @@ public abstract class LēctorMultiplicibus <Hoc extends VerbumMultiplex <Hoc>> e
     }
   }
 
+
+  /**
+   * Classis {@link LēctorPrōnōminibusConiūnctīvīs} est vās classis {@link Lēctor} classī {@link PrōnōmenConiūnctīvum}.
+   * @see Catēgoria#PRŌNŌMEN_CONIŪNCTĪVUM
+   * @see TenorMultiplicibus.TenorPrōnōminibusConiūnctīvīs
+   * @see Nūntius.NūntiusLēctōrīPrōnōminibusConiūnctīvīs
+   * @see InventorPrōnōminibusConiūnctīvīs
+   */
   @Singleton @DependsOn({ "TenorPrōnōmibusConiūnctīvīs", "NūntiusLēctōrīPrōnōminibusConiūnctīvīs" })
   public static final class LēctorPrōnōminibusConiūnctīvīs extends LēctorMultiplicibus <PrōnōmenConiūnctīvum> {
     private static @Nullable LēctorPrōnōminibusConiūnctīvīs īnstantia = null;
 
+    /**
+     * Valor hic viam reī classis huiuc facit.
+     * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
+     */
     public static final @NotNull Supplier <LēctorPrōnōminibusConiūnctīvīs> fac =
       () -> ObjectUtils.firstNonNull(īnstantia, īnstantia = new LēctorPrōnōminibusConiūnctīvīs());
 
@@ -125,10 +214,22 @@ public abstract class LēctorMultiplicibus <Hoc extends VerbumMultiplex <Hoc>> e
     }
   }
 
+
+  /**
+   * Classis {@link LēctorĀctīs} est vās classis {@link Lēctor} classī {@link Āctum}.
+   * @see Catēgoria#ĀCTUM
+   * @see TenorMultiplicibus.TenorĀctīs
+   * @see Nūntius.NūntiusLēctōrīĀctīs
+   * @see InventorĀctīs
+   */
   @Singleton @DependsOn({ "TenorĀctīs", "NūntiusLēctōrīĀctīs" })
   public static final class LēctorĀctīs extends LēctorMultiplicibus <Āctum> {
     private static @Nullable LēctorĀctīs īnstantia = null;
 
+    /**
+     * Valor hic viam reī classis huiuc facit.
+     * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
+     */
     public static final @NotNull Supplier <LēctorĀctīs> fac =
       () -> ObjectUtils.firstNonNull(īnstantia, īnstantia = new LēctorĀctīs());
 
@@ -137,6 +238,11 @@ public abstract class LēctorMultiplicibus <Hoc extends VerbumMultiplex <Hoc>> e
             TenorMultiplicibus.TenorĀctīs.fac, InventorĀctīs.fac);
     }
 
+    /**
+     * Modus hic cōnābitur advenīre rem classis {@link Āctum} quam fōrma āctī "esse" repraesentat et valōrēs {@code illa} quadrat.
+     * @param illa seriēs ēnumerātiōnum licent {@link #inventor} colere ēventīs lēctīs
+     * @see <a href="../src/main/resources/ācta/esse.xml">esse.xml</a>
+     */
     public @Nullable Āctum adveniam(@NotNull final Enum<?>... illa) {
       return adveniam("esse", illa);
     }
