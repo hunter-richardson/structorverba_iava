@@ -1,6 +1,5 @@
 package net.strūctorverba.tentāmina;
 
-
 import lombok.Getter;
 import lombok.experimental.Accessors;
 import net.strūctorverba.mīscella.StrūctorVerba;
