@@ -188,8 +188,8 @@ public class Numerī {
    */
   @Test @Order(8)
   public void mānsiōnis() {
-    final short numerusPrīmus = 6;
-    final short numerusSecundus = 18;
+    final short numerusPrīmus = 12;
+    final short numerusSecundus = 9;
     final short expectātus = numerusPrīmus % numerusSecundus;
 
     final VerbumSimplex.Numerus prīmus = strūctor().numerus(numerusPrīmus);
