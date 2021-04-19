@@ -13,11 +13,11 @@ import org.junit.jupiter.api.*;
 import java.util.LinkedList;
 
 /**
- * Classis {@link DolōremIpsum} versiōnem prīmam tentāminārum programmātī StrūctorVerba dēfīnit.
- * Laudem Marcō Tulliō Cicerōnī cum parte dialogī Sōcraticus "Dē Fīnibus Bonōrum et Mālōrum" in librō prīmō sectiōne decimā versū duotrīcēsimō cōnstruat.
- * Versūs ante triēntem prīmam incipit et post fīnālem fīnit.
+ * Classis {@link DolōremIpsum} versiōnem prīmam tentāminārum programmātī StrūctorVerba dēfīnit. <br>
+ * Laudem Marcō Tulliō Cicerōnī cum parte dialogī Sōcraticus "Dē Fīnibus Bonōrum et Mālōrum" in librō prīmō sectiōne decimā versū duotrīcēsimō cōnstruat. <br>
+ * Versūs ante triēntem prīmam incipit et post fīnālem fīnit. <br>
  * Pars illa est agnita poēmam istam "Lorem Ipsum" īnspīrāvisse.
- * @see <a href="http://www.thelatinlibrary.com/cicero/fin1.shtml#32">Dē Fīnibus Bonōrum et Mālōrum</a>
+ * @see <a href="http://www.thelatinlibrary.com/cicero/fin1.shtml#32">Dē Fīnibus Bonōrum et Mālōrum
  */
 @SuppressWarnings({ "NonAsciiCharacters", "SpellCheckingInspection", "FieldCanBeLocal" })
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
@@ -32,7 +32,7 @@ public final class DolōremIpsum {
   private final @NotNull String prōductaCūncta  = "Neque porrō quisquam est quī dolōrem ipsum quia dolor sit amet cōnsectētur adipīscī velit sed quia nōnnumquam eius modī tempora incidunt ut labōre et dolōre magnam aliquam quaerat voluptātem";
 
   /**
-   * Modus hic partem prīmam tentat.
+   * Modus hic partem prīmam tentat. <br>
    * Verba "Neque porrō quisquam est" prōdūcat.
    */
   @Test @Order(1)
@@ -65,7 +65,7 @@ public final class DolōremIpsum {
   }
 
   /**
-   * Modus hic partem secundam tentat.
+   * Modus hic partem secundam tentat. <br>
    * Verba "Quī dolōrem ipsum quia dolor sit amet" prōdūcat.
    */
   @Test @Order(2)
@@ -108,7 +108,7 @@ public final class DolōremIpsum {
   }
 
   /**
-   * Modus hic partem tertiam tentat.
+   * Modus hic partem tertiam tentat. <br>
    * Verba "Cōnsectētur adipīscī velit" prōdūcat.
    */
   @Test @Order(3)
@@ -142,8 +142,8 @@ public final class DolōremIpsum {
   }
 
   /**
-   * Modus hic partem quārtam tentat.
-   * Verba "Sed quia nōnnumquam eius modī tempora incidunt ut labōre et dolōre magnam aliquam quaerat voluptātem" prōdūcat.
+   * Modus hic partem quārtam tentat. <br>
+   * Verba "Sed quia nōnnumquam eius modī tempora incidunt ut labōre et dolōre magnam aliquam quaerat voluptātem" prōdūcat. <br>
    * Prīncipāliter tentat quod modī et {@link Coniugiāle#coniugō(Verbum, Verbum)} rēctē operat sī tentāmina trēs prīma prosperantur.
    */
   @Test @Order(4)
@@ -222,8 +222,8 @@ public final class DolōremIpsum {
   }
 
   /**
-   * Modus hic tentāmina omnēs praevia coniugat.
-   * Verba "Neque porrō quisquam est quī dolōrem ipsum quia dolor sit amet cōnsectētur adipīscī velit sed quia nōnnumquam eius modī tempora incidunt ut labōre et dolōre magnam aliquam quaerat voluptātem" prōdūcat.
+   * Modus hic tentāmina omnēs praevia coniugat. <br>
+   * Verba "Neque porrō quisquam est quī dolōrem ipsum quia dolor sit amet cōnsectētur adipīscī velit sed quia nōnnumquam eius modī tempora incidunt ut labōre et dolōre magnam aliquam quaerat voluptātem" prōdūcat. <br>
    * Aboriētur sī tentāminum aliquid praevium aborītur atque prosperābitur sī omnēs prosperantur.
    */
   @Test @Order(5)

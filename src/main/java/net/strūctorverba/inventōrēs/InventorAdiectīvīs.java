@@ -1,5 +1,6 @@
 package net.strūctorverba.inventōrēs;
 
+import net.strūctorverba.lēctōrēs.LēctorMultiplicibus;
 import net.strūctorverba.nūntiī.Nūntius;
 import net.strūctorverba.verba.multiplicia.*;
 import net.strūctorverba.ēnumerātiōnēs.*;
@@ -39,7 +40,7 @@ public final class InventorAdiectīvīs extends Inventor <Adiectīvum> {
   }
 
   /**
-   * @inheritDoc
+   * @return quaestiōnem quam rēs classis {@link LēctorMultiplicibus.LēctorAdiectīvīs} ūtātur rēs classis {@link Adiectīvum} percōlere
    */
   public @Override @NotNull Predicate <@NotNull Adiectīvum> inquīram( ) {
     return adiectīvum -> speciālitās.equals(adiectīvum.speciālitās)
@@ -50,7 +51,7 @@ public final class InventorAdiectīvīs extends Inventor <Adiectīvum> {
   }
 
   /**
-   * @inheritDoc
+   * {@inheritDoc}
    */
   public @Override void restituō( ) {
     speciālitās = Speciālitās.NŪLLUM;
@@ -62,7 +63,8 @@ public final class InventorAdiectīvīs extends Inventor <Adiectīvum> {
   }
 
   /**
-   * @inheritDoc
+   * {@inheritDoc}
+   * @param illud ēnumerātiōnem indendam
    * @see Speciālitās#ut(Enum)
    * @see Genus#ut(Enum)
    * @see Numerālis#ut(Enum)

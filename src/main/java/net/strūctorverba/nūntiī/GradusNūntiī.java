@@ -9,51 +9,61 @@ import java.util.stream.Stream;
 /**
  * Ēnumerātiō hic persignat et gravitātem nūntiae singulārem et quam verbōsa rēs classis {@link Nūntius} scrībētur.
  * @see ParametrīNūntiī#gradusMinimus
+ * @see <a href="https://docs.oracle.com/javase/7/docs/api/java/util/logging/Level.html">Level</a>
  */
 @SuppressWarnings({ "NonAsciiCharacters", "SpellCheckingInspection", "unused" })
 enum GradusNūntiī {
   /**
    * Valor hic indicat rem taciturna classis {@link Nūntius}.
+   * @see <a href="https://docs.oracle.com/javase/7/docs/api/java/util/logging/Level.html#OFF">OFF</a>
    */
   INERS(Level.OFF),
 
   /**
    * Valor hic indicat rem classis {@link Nūntius} quae errōrēs sōlum persignat.
+   * @see <a href="https://docs.oracle.com/javase/7/docs/api/java/util/logging/Level.html#SEVERE">SEVERE</a>
    */
   GRAVIS(Level.SEVERE),
 
   /**
    * Valor hic indicat rem classis {@link Nūntius} quae persignat errōrēs nūntiāsque quās errōrem addūcant.
+   * @see <a href="https://docs.oracle.com/javase/7/docs/api/java/util/logging/Level.html#WARNING">WARNING</a>
    */
   PRAEMONITŌRIUS(Level.WARNING),
 
   /**
    * Valor hic indicat rem classis {@link Nūntius} quae persignat nūntiās quās ūsūfructuāriīs programmātis intersit.
+   * @see <a href="https://docs.oracle.com/javase/7/docs/api/java/util/logging/Level.html#INFO">INFO</a>
    */
   ĪNFŌRMĀTĪVUS(Level.INFO),
 
   /**
    * Valor hic indicat rem classis {@link Nūntius} quae persignat nūntiās quās auctōribus programmātis intersit.
+   * @see <a href="https://docs.oracle.com/javase/7/docs/api/java/util/logging/Level.html#CONFIG">CONFIG</a>
    */
   PRAEGRESSŪRUS(Level.CONFIG),
 
   /**
    * Valor hic indicat rem classis {@link Nūntius} quae persignat nūntiās quās nēminī fortasse intersit.
+   * @see <a href="https://docs.oracle.com/javase/7/docs/api/java/util/logging/Level.html#FINE">FINE</a>
    */
   SCRŪTĀNS(Level.FINE),
 
   /**
    * Valor hic indicat rem classis {@link Nūntius} quae persignat nūntiās quās nēminī probābiliter intersit.
+   * @see <a href="https://docs.oracle.com/javase/7/docs/api/java/util/logging/Level.html#FINER">FINER</a>
    */
   SCRŪTĀNTIOR(Level.FINER),
 
   /**
    * Valor hic indicat rem classis {@link Nūntius} quae persignat nūntiās quās nēminī certissime intersit.
+   * @see <a href="https://docs.oracle.com/javase/7/docs/api/java/util/logging/Level.html#FINEST">FINEST</a>
    */
   SCRŪTĀNTISSIMUS(Level.FINEST),
 
   /**
    * Valor hic indicat rem classis {@link Nūntius} quae nūntiās omnēs persignat.
+   * @see <a href="https://docs.oracle.com/javase/7/docs/api/java/util/logging/Level.html#ALL">ALL</a>
    */
   OMNIS(Level.ALL);
 
@@ -67,7 +77,7 @@ enum GradusNūntiī {
   }
 
   /**
-   * Modus hic comparātiōnī intrā rēs ēnumerātiōnis huius et classis {@link <a href="https://docs.oracle.com/javase/7/docs/api/java/util/logging/Level.html">Level</a>} licet.
+   * Modus hic comparātiōnī intrā rēs ēnumerātiōnis huius et classis <a href="https://docs.oracle.com/javase/7/docs/api/java/util/logging/Level.html">Level</a> licet.
    * @param gressus valor tentandus
    * @return rēs ēnumerātiōnis huius quam valor {@code gressus} quadrat
    */

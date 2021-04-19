@@ -11,8 +11,8 @@ import net.strūctorverba.ēnumerātiōnēs.*;
 import org.jetbrains.annotations.NotNull;
 
 /**
- * Classis {@link Adiectīvum} repraesentat adiectīva ut coniectēris.
- * Adiectīva catēgoriam {@link Catēgoria#NŌMEN} ūtuntur et cōnservāta sunt in scrīniō <a href="../src/main/resources/adiectīva">adiectīva</a>.
+ * Classis {@link Adiectīvum} repraesentat adiectīva ut coniectēris. <br>
+ * Adiectīva catēgoriam {@link Catēgoria#NŌMEN} ūtuntur et cōnservāta sunt in scrīniō <a href="../src/main/resources/adiectīva">adiectīva</a>. <br>
  * Discrīmina prīmōria inter classibus hāc et {@link Prōnōmen} est huius valor {@link #gradus}.
  * @see LēctorMultiplicibus.LēctorAdiectīvīs
  * @see TenorMultiplicibus.TenorAdiectīvīs

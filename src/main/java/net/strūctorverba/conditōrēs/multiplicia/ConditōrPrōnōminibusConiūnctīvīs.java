@@ -40,7 +40,7 @@ public final class ConditōrPrōnōminibusConiūnctīvīs extends ConditōrMulti
   }
 
   /**
-   * @inheritDoc
+   * {@inheritDoc}
    */
   public @Override @Nullable PrōnōmenConiūnctīvum condam( ) {
     if (StringUtils.isNoneBlank(fundāmen, scrīptiō)) {
@@ -67,7 +67,7 @@ public final class ConditōrPrōnōminibusConiūnctīvīs extends ConditōrMulti
   }
 
   /**
-   * @inheritDoc
+   * {@inheritDoc}
    * @see Speciālitās#dēfīniam(String)
    * @see Genus#dēfīniam(String)
    * @see Cāsus#dēfīniam(String)
@@ -94,7 +94,7 @@ public final class ConditōrPrōnōminibusConiūnctīvīs extends ConditōrMulti
   }
 
   /**
-   * @inheritDoc
+   * {@inheritDoc}
    * @see Speciālitās#NŪLLUM
    * @see Genus#NŪLLUM
    * @see Cāsus#NŪLLUS

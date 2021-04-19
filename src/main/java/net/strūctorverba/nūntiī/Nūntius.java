@@ -18,7 +18,7 @@ import java.util.logging.Logger;
 import java.util.stream.Stream;
 
 /**
- * Classis {@link Nūntius} nūntia dē exsecūtiōne programmātis StrūctorVerba in scāpīs LOG scrībit.
+ * Classis {@link Nūntius} nūntia dē exsecūtiōne programmātis StrūctorVerba in scāpīs LOG scrībit. <br>
  * Classēs plūrimae aliae in programmātem StrūctorVerba rem classis huius habet.
  */
 @SuppressWarnings({ "NonAsciiCharacters", "SpellCheckingInspection" })
@@ -848,7 +848,7 @@ public abstract class Nūntius {
   }
 
   /**
-   * Classis {@link NūntiusErrōribus} est vās classis {@link Nūntius} ipsīusmet.
+   * Classis {@link NūntiusErrōribus} est vās classis {@link Nūntius} ipsīusmet. <br>
    * Indicat quod exsecūtiōnem programmātis StrūctorVerba errōrem inopīnātum continuātur.
    * @see <a href="https://docs.oracle.com/javase/9/docs/api/java/lang/Thread.UncaughtExceptionHandler.html">Thread.UncaughtExceptionHandler</a>
    */

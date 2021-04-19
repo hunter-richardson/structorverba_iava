@@ -42,7 +42,7 @@ public final class ConditōrAdiectīvīs extends ConditōrMultiplicibus <Adiect�
   }
 
   /**
-   * @inheritDoc
+   * {@inheritDoc}
    */
   public @Override @Nullable Adiectīvum condam( ) {
     if (StringUtils.isNoneBlank(fundāmen, scrīptiō)) {
@@ -64,7 +64,7 @@ public final class ConditōrAdiectīvīs extends ConditōrMultiplicibus <Adiect�
   }
 
   /**
-   * @inheritDoc
+   * {@inheritDoc}
    * @see Speciālitās#dēfīniam(String)
    * @see Genus#dēfīniam(String)
    * @see Cāsus#dēfīniam(String)
@@ -91,7 +91,7 @@ public final class ConditōrAdiectīvīs extends ConditōrMultiplicibus <Adiect�
   }
 
   /**
-   * @inheritDoc
+   * {@inheritDoc}
    * @see Speciālitās#NŪLLUM
    * @see Genus#NŪLLUM
    * @see Cāsus#NŪLLUS

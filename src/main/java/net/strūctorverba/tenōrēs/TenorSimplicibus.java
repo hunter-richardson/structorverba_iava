@@ -34,7 +34,7 @@ public abstract class TenorSimplicibus <Hoc extends VerbumSimplex <Hoc>> extends
   }
 
   /**
-   * @inheritDoc
+   * {@inheritDoc}
    */
   protected final @Override void fīniam( ) {
     hoc = condītōr.condam();
@@ -44,7 +44,8 @@ public abstract class TenorSimplicibus <Hoc extends VerbumSimplex <Hoc>> extends
   }
 
   /**
-   * @inheritDoc
+   * {@inheritDoc}
+   * @param scrīptiō fōrmam scrīptam indendus
    * @see Verbum#fundāmen
    */
   protected @Override void scrībō(@NotNull String scrīptiō) {

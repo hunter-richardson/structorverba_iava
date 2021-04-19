@@ -68,7 +68,7 @@ public class Numerī {
   }
 
   /**
-   * Modus hic conversiōnem ā numerō reī classis {@link VerbumSimplex.Numerus} tentat.
+   * Modus hic conversiōnem ā numerō reī classis {@link VerbumSimplex.Numerus} tentat. <br>
    * Scrīptiunculam "42 = XLII" prōdūcat.
    */
   @Test @Order(1)
@@ -83,7 +83,7 @@ public class Numerī {
   }
 
   /**
-   * Modus hic reversiōnem ā rē classis {@link VerbumSimplex.Numerus} numerō tentat.
+   * Modus hic reversiōnem ā rē classis {@link VerbumSimplex.Numerus} numerō tentat. <br>
    * Scrīptiunculam "XLII = 42" prōdūcat.
    */
   @Test @Order(2)
@@ -98,7 +98,7 @@ public class Numerī {
   }
 
   /**
-   * Modus hic conversiōnem ā numerō reī classis {@link VerbumSimplex.Numerus} atque reversiōnem versam tentat.
+   * Modus hic conversiōnem ā numerō reī classis {@link VerbumSimplex.Numerus} atque reversiōnem versam tentat. <br>
    * Scrīptiunculās et "42 = XLII" et "XLII = 42" dē numerō nescītō inter I et MMMCMXCIX prōdūcat.
    */
   @Test @Order(3)
@@ -118,7 +118,7 @@ public class Numerī {
   }
 
   /**
-   * Modus hic additiōnem rērum duārum classis {@link VerbumSimplex.Numerus}.
+   * Modus hic additiōnem rērum duārum classis {@link VerbumSimplex.Numerus}. <br>
    * Scrīptiunculās et "17 = XVIII" et "3 = III" et "17 + 3 = 20 = XX" prōdūcat.
    */
   @Test @Order(4)
@@ -127,7 +127,7 @@ public class Numerī {
   }
 
   /**
-   * Modus hic subtractiōnem rērum duārum classis {@link VerbumSimplex.Numerus}.
+   * Modus hic subtractiōnem rērum duārum classis {@link VerbumSimplex.Numerus}. <br>
    * Scrīptiunculās et "12 = XII" et "7 = VII" et "12 - 7 = 5 = V" prōdūcat.
    */
   @Test @Order(5)
@@ -136,7 +136,7 @@ public class Numerī {
   }
 
   /**
-   * Modus hic multiplicātiōnem rērum duārum classis {@link VerbumSimplex.Numerus}.
+   * Modus hic multiplicātiōnem rērum duārum classis {@link VerbumSimplex.Numerus}. <br>
    * Scrīptiunculās et "3 = III" et "2 = II" et "3 * 2 = 6 = VI" prōdūcat.
    */
   @Test @Order(6)
@@ -145,7 +145,7 @@ public class Numerī {
   }
 
   /**
-   * Modus hic dīvīsiōnem rērum duārum classis {@link VerbumSimplex.Numerus}.
+   * Modus hic dīvīsiōnem rērum duārum classis {@link VerbumSimplex.Numerus}. <br>
    * Scrīptiunculās et "18 = XVII" et "6 = VI" et "18 / 6 = 3 = III" prōdūcat.
    */
   @Test @Order(7)
@@ -154,7 +154,7 @@ public class Numerī {
   }
 
   /**
-   * Modus hic mānsiōnem rērum duārum classis {@link VerbumSimplex.Numerus}.
+   * Modus hic mānsiōnem rērum duārum classis {@link VerbumSimplex.Numerus}. <br>
    * Scrīptiunculās et "12 = XII" et "9 = IX" et "12 % 9 = 3 = III" prōdūcat.
    */
   @Test @Order(8)

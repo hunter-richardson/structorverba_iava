@@ -49,6 +49,13 @@ public abstract class Lēctor <Hoc extends Verbum <Hoc>> {
     catēgoria = ctgr;
   }
 
+  private boolean quaerō(@NotNull final String verbum) {
+    final Path nōmen = Path.of(catēgoria.scrīptiō, String.format("%s.xml", Ūtilitās.minusculāsScrībō(verbum)));
+    nūntius.notō("Iam exspectō scāpum auxiliārem", nōmen);
+    final File scāpus = Path.of(Ūtilitās.auxilior(nōmen.toString())).toFile();
+    return scāpus.exists() && scāpus.isFile() && scāpus.canRead() && scāpus.length() > 0;
+  }
+
   /**
    * Modus hic verbum cōnābitur legere ā scāpō XML intrā scrīnium <a href="../src/main/resources">auxiliārēs</a>.
    * @param verbum fundāmen verbō quod rēs haec cōnābitur legere.
@@ -67,12 +74,5 @@ public abstract class Lēctor <Hoc extends Verbum <Hoc>> {
     } else {
       nūntius.moneō("Abest scāpum auxiliāris", nōmen);
     }
-  }
-
-  private boolean quaerō(@NotNull final String verbum) {
-    final Path nōmen = Path.of(catēgoria.scrīptiō, String.format("%s.xml", Ūtilitās.minusculāsScrībō(verbum)));
-    nūntius.notō("Iam exspectō scāpum auxiliārem", nōmen);
-    final File scāpus = Path.of(Ūtilitās.auxilior(nōmen.toString())).toFile();
-    return scāpus.exists() && scāpus.isFile() && scāpus.canRead() && scāpus.length() > 0;
   }
 }

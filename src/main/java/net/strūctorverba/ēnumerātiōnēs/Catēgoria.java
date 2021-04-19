@@ -8,6 +8,7 @@ import org.jetbrains.annotations.NotNull;
 
 /**
  * Ēnumerātiō haec extēnsiōnem classī {@link Verbum} dēsignat cui verbum omne respondet.
+ * @see Verbum
  */
 @SuppressWarnings({ "NonAsciiCharacters", "SpellCheckingInspection" })
 public enum Catēgoria {

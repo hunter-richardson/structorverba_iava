@@ -1,5 +1,6 @@
 package net.strūctorverba.conditōrēs.multiplicia;
 
+import net.strūctorverba.conditōrēs.Conditōr;
 import net.strūctorverba.nūntiī.Nūntius;
 import net.strūctorverba.verba.Verbum;
 import net.strūctorverba.verba.multiplicia.*;
@@ -11,6 +12,11 @@ import javax.ejb.*;
 import java.util.Objects;
 import java.util.function.Supplier;
 
+/**
+ * Classis {@link ConditōrĀctīs} est vās classis {@link Conditōr} classī {@link Āctum}.
+ * @see Āctum
+ * @see Nūntius.NūntiusConditōrīĀctīs
+ */
 @SuppressWarnings({ "NonAsciiCharacters", "SpellCheckingInspection" })
 @Singleton @DependsOn("NūntiusConditōrīĀctīs")
 public final class ConditōrĀctīs extends ConditōrMultiplicibus <Āctum> {
@@ -35,7 +41,7 @@ public final class ConditōrĀctīs extends ConditōrMultiplicibus <Āctum> {
   }
 
   /**
-   * @inheritDoc
+   * {@inheritDoc}
    */
   public @Override @Nullable Āctum condam( ) {
     if (StringUtils.isNoneBlank(fundāmen, scrīptiō)) {
@@ -57,7 +63,7 @@ public final class ConditōrĀctīs extends ConditōrMultiplicibus <Āctum> {
   }
 
   /**
-   * @inheritDoc
+   * {@inheritDoc}
    * @see Modus#dēfīniam(String)
    * @see Vōx#dēfīniam(String)
    * @see Tempus#dēfīniam(String)
@@ -84,7 +90,7 @@ public final class ConditōrĀctīs extends ConditōrMultiplicibus <Āctum> {
   }
 
   /**
-   * @inheritDoc
+   * {@inheritDoc}
    * @see Modus#NŪLLUS
    * @see Vōx#NŪLLA
    * @see Tempus#NŪLLUM

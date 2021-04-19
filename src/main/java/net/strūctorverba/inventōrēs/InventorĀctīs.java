@@ -1,5 +1,6 @@
 package net.strūctorverba.inventōrēs;
 
+import net.strūctorverba.lēctōrēs.LēctorMultiplicibus;
 import net.strūctorverba.nūntiī.Nūntius;
 import net.strūctorverba.verba.multiplicia.Āctum;
 import net.strūctorverba.ēnumerātiōnēs.*;
@@ -39,7 +40,7 @@ public final class InventorĀctīs extends Inventor <Āctum> {
   }
 
   /**
-   * @inheritDoc
+   * @return quaestiōnem quam rēs classis {@link LēctorMultiplicibus .LēctorĀctīs} ūtātur rēs classis {@link Āctum} percōlere
    */
   public @Override @NotNull Predicate <@NotNull Āctum> inquīram( ) {
     return āctum -> modus.equals(āctum.modus)
@@ -50,7 +51,7 @@ public final class InventorĀctīs extends Inventor <Āctum> {
   }
 
   /**
-   * @inheritDoc
+   * {@inheritDoc}
    */
   public @Override void restituō( ) {
     vōx = Vōx.NŪLLA;
@@ -62,7 +63,8 @@ public final class InventorĀctīs extends Inventor <Āctum> {
   }
 
   /**
-   * @inheritDoc
+   * {@inheritDoc}
+   * @param illud ēnumerātiōnem indendam
    * @see Vōx#ut(Enum)
    * @see Tempus#ut(Enum)
    * @see Numerālis#ut(Enum)

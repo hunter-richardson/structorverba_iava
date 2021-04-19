@@ -19,9 +19,8 @@ import java.util.function.*;
 import java.util.stream.*;
 
 /**
- * Classis {@link StrūctorVerba} accessum modīs omnibus programmātis StrūctorVerba prōvidet.
+ * Classis {@link StrūctorVerba} accessum modīs omnibus programmātis StrūctorVerba prōvidet. <br>
  * Sōlum reī classis huiuc accēdendus licēre ūsum plēnum programmātis ūsūfructuāriīs.
- * @see #fac
  */
 @Singleton @SuppressWarnings({ "NonAsciiCharacters", "SpellCheckingInspection", "unused" })
 public final class StrūctorVerba {

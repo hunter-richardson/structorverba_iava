@@ -11,7 +11,7 @@ import org.apache.commons.lang3.StringUtils;
 import org.jetbrains.annotations.NotNull;
 
 /**
- * Classis {@link VerbaPraepositiōne} rēs classum {@link Nōminālis} et {@link VerbumSimplex.Praepositiō} conciliat.
+ * Classis {@link VerbaPraepositiōne} rēs classum {@link Nōminālis} et {@link VerbumSimplex.Praepositiō} conciliat. <br>
  * VerbaPraepositiōne catēgoriam {@link Catēgoria#VERBA_PRAEPOSITIŌNE} ūtuntur et sunt generātī statim quam cōnservātī intrā scrīnium <a href="../src/main/resources">auxiliārēs</a>.
  * @see Nūntius.NūntiusVerbōrumPraepositiōnibus
  * @see StrūctorVerba
@@ -53,6 +53,10 @@ public final class VerbaPraepositiōne extends VerbumMultiplex <VerbaPraepositi�
     nūntius().plūsGarriō("Scrībor ut", toString());
   }
 
+  /**
+   * @param cltm valōrem {@link #encliticum} indicat.
+   * @return rem hanc
+   */
   @SuppressWarnings("UnusedReturnValue")
   public @Override @NotNull VerbaPraepositiōne allege(@NotNull final Encliticum cltm) {
     encliticum = cltm;
@@ -62,7 +66,8 @@ public final class VerbaPraepositiōne extends VerbumMultiplex <VerbaPraepositi�
   }
 
   /**
-   * @return repraesentātiōnem scrīpta reī classis {@link Verbum}. Valōrem rēs classum {@link Nōminālis} et {@link VerbumSimplex.Praepositiō} addit.
+   * @return repraesentātiōnem scrīpta reī classis {@link Verbum}. <br>
+   * Valōrem rēs classum {@link Nōminālis} et {@link VerbumSimplex.Praepositiō} addit.
    */
   public @Override @NotNull String toString( ) {
     if (StringUtils.isNotBlank(praepositiō.fundāmen)) {

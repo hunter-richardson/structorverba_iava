@@ -5,9 +5,9 @@ import net.strūctorverba.verba.Verbum;
 import net.strūctorverba.ēnumerātiōnēs.*;
 import org.jetbrains.annotations.NotNull;
 
-/*
+/**
  * Classis {@link Nōminālis} verbum aliquem dēclīnātum repraesentat.
- * @param <Hoc> Tabellā hāc classis {@link Hoc} extēnsiōnem aptam datīs petītīs repraesentat.
+ * @param <Hoc>  Tabellā hāc classis {@link Hoc} extēnsiōnem aptam datīs petītīs repraesentat.
  */
 @SuppressWarnings({ "NonAsciiCharacters", "SpellCheckingInspection" })
 public abstract class Nōminālis <Hoc extends VerbumMultiplex <Hoc>> extends VerbumMultiplex <Hoc> {

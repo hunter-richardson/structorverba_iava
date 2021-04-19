@@ -14,7 +14,7 @@ import org.jetbrains.annotations.*;
 import java.util.Objects;
 
 /**
- * Classis {@link Āctum} repraesentat nōmina ut coniectēris.
+ * Classis {@link Āctum} repraesentat nōmina ut coniectēris. <br>
  * Nōmina catēgoriam {@link Catēgoria#ĀCTUM} ūtuntur et cōnservāta sunt in scrīniō <a href="../src/main/resources/ācta">ācta</a>.
  * @see LēctorMultiplicibus.LēctorĀctīs
  * @see TenorMultiplicibus.TenorĀctīs

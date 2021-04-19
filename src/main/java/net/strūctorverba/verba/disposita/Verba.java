@@ -10,7 +10,7 @@ import org.jetbrains.annotations.*;
 import java.util.*;
 
 /**
- * Classis {@link Verba} rēs classis {@link Verbum} cōnsit.
+ * Classis {@link Verba} rēs classis {@link Verbum} cōnsit. <br>
  * Rēs classis huius et seriem rērum classis {@link Verbum} et rēs classis {@link Coniugiāle} et aliam classis {@link Verba} constat.
  */
 @SuppressWarnings({ "NonAsciiCharacters", "SpellCheckingInspection", "unused" })
@@ -60,7 +60,8 @@ public final class Verba {
   }
 
   /**
-   * @return repraesentātiōnem scrīpta reī huius. Rēs omnēs contentās cōnsit et cum spatiīs distinet.
+   * @return repraesentātiōnem scrīpta reī huius. <br>
+   * Rēs omnēs contentās cōnsit et cum spatiīs distinet.
    */
   public @NotNull @Override String toString( ) {
     final StringBuilder strūctor = new StringBuilder();

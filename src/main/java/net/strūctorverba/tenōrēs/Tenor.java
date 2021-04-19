@@ -59,7 +59,7 @@ public abstract class Tenor <Hoc extends Verbum <Hoc>> extends DefaultHandler {
   }
 
   /**
-   * Modus hic fōrmam scrīptam prōcēdit prōvīsam ā rē classis {@link <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.xml/org/xml/sax/XMLReader.html">XMLReader</a>}
+   * Modus hic fōrmam scrīptam prōcēdit prōvīsam ā rē classis <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.xml/org/xml/sax/XMLReader.html">XMLReader</a>
    * @param litterae litterae prōvīsae
    * @param incepta positiō incepta in valōrem {@code litterae}
    * @param longitia longitia valōris {@code litterae} ūtendī
@@ -78,6 +78,7 @@ public abstract class Tenor <Hoc extends Verbum <Hoc>> extends DefaultHandler {
 
   /**
    * Modus hic rem aptam classis {@link Conditōr} imperat fōrmam scrīptam reī prōductae classis {@link Hoc} indere.
+   * @param scrīptiō fōrmam scrīptam indendus
    * @see #characters(char[], int, int)
    */
   protected abstract void scrībō(@NotNull final String scrīptiō);

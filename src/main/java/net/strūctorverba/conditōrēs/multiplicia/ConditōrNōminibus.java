@@ -41,7 +41,7 @@ public final class ConditōrNōminibus extends ConditōrMultiplicibus <Nōmen> {
   }
 
   /**
-   * @inheritDoc
+   * {@inheritDoc}
    */
   public @Override @Nullable Nōmen condam( ) {
     if (StringUtils.isNoneBlank(fundāmen, scrīptiō)) {
@@ -63,7 +63,7 @@ public final class ConditōrNōminibus extends ConditōrMultiplicibus <Nōmen> {
   }
 
   /**
-   * @inheritDoc
+   * {@inheritDoc}
    * @see Speciālitās#dēfīniam(String)
    * @see Genus#dēfīniam(String)
    * @see Cāsus#dēfīniam(String)
@@ -88,7 +88,7 @@ public final class ConditōrNōminibus extends ConditōrMultiplicibus <Nōmen> {
   }
 
   /**
-   * @inheritDoc
+   * {@inheritDoc}
    * @see Speciālitās#NŪLLUM
    * @see Genus#NŪLLUM
    * @see Cāsus#NŪLLUS

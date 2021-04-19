@@ -22,7 +22,7 @@ final class ParametrīNūntiī {
   public final @NotNull GradusNūntiī gradusMinimus = GradusNūntiī.OMNIS;
 
   /**
-   * Valor hic viam reī classis {@link <a href="https://docs.oracle.com/javase/7/docs/api/java/util/logging/Logger.html">Logger</a>} facit.
+   * Valor hic viam reī classis <a href="https://docs.oracle.com/javase/7/docs/api/java/util/logging/Logger.html">Logger</a> facit.
    * @see <a href="https://docs.oracle.com/javase/7/docs/api/java/util/logging/Logger.html">Logger</a>
    * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
    */

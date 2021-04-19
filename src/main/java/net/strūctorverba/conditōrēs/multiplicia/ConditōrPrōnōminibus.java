@@ -41,7 +41,7 @@ public final class ConditōrPrōnōminibus extends ConditōrMultiplicibus <Prōn
   }
 
   /**
-   * @inheritDoc
+   * {@inheritDoc}
    */
   public @Override @Nullable Prōnōmen condam( ) {
     if (StringUtils.isNoneBlank(fundāmen, scrīptiō)) {
@@ -63,7 +63,7 @@ public final class ConditōrPrōnōminibus extends ConditōrMultiplicibus <Prōn
   }
 
   /**
-   * @inheritDoc
+   * {@inheritDoc}
    * @see Speciālitās#dēfīniam(String)
    * @see Genus#dēfīniam(String)
    * @see Cāsus#dēfīniam(String)
@@ -88,7 +88,7 @@ public final class ConditōrPrōnōminibus extends ConditōrMultiplicibus <Prōn
   }
 
   /**
-   * @inheritDoc
+   * {@inheritDoc}
    * @see Speciālitās#NŪLLUM
    * @see Genus#NŪLLUM
    * @see Cāsus#NŪLLUS

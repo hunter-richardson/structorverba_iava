@@ -13,7 +13,7 @@ import java.util.stream.Stream;
 @SuppressWarnings({ "NonAsciiCharacters", "SpellCheckingInspection", "unused" })
 public enum Cāsus {
   /**
-   * Valor hic ūtātur sī ūsūfructuāriī valōrem validum nōn dēnotat.
+   * Valor hic ūtātur sī ūsūfructuāriī valōrem validum nōn dēnotat. <br>
    * Numquam scrīnium <a href="../src/main/resources">auxiliārēs</a> inscrībētur.
    */
   NŪLLUS(StringUtils.EMPTY),

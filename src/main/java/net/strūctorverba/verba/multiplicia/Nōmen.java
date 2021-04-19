@@ -11,7 +11,7 @@ import net.strūctorverba.ēnumerātiōnēs.*;
 import org.jetbrains.annotations.NotNull;
 
 /**
- * Classis {@link Nōmen} repraesentat nōmina ut coniectēris.
+ * Classis {@link Nōmen} repraesentat nōmina ut coniectēris. <br>
  * Nōmina catēgoriam {@link Catēgoria#NŌMEN} ūtuntur et cōnservāta sunt in scrīniō <a href="../src/main/resources/nōmina">nōmina</a>.
  * @see LēctorMultiplicibus.LēctorNōminibus
  * @see TenorMultiplicibus.TenorNōminibus

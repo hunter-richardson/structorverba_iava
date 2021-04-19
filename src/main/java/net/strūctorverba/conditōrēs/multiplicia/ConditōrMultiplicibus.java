@@ -8,6 +8,10 @@ import org.jetbrains.annotations.*;
 
 import java.util.function.Supplier;
 
+/**
+ * Classis {@link ConditōrMultiplicibus} est vās classis {@link Conditōr} classibus omnibus quibus classem {@link VerbumMultiplex} extendit.
+ * @param <Hoc> classis extenta classis {@link VerbumMultiplex}
+ */
 @SuppressWarnings({ "NonAsciiCharacters", "SpellCheckingInspection" })
 public abstract class ConditōrMultiplicibus <Hoc extends VerbumMultiplex <Hoc>> extends Conditōr <Hoc> {
   /**

@@ -17,8 +17,8 @@ import java.util.*;
 import java.util.stream.*;
 
 /**
- * Classis {@link PrōnōmenConiūnctīvum} repraesentat nōmina ut coniectēris.
- * PrōnōminaConiūnctīva catēgoriam {@link Catēgoria#PRŌNŌMEN_CONIŪNCTĪVUM} ūtuntur et cōnservāta sunt in scrīniō <a href="../src/main/resources/prōnōminaConiūnctīva">prōnōminaConiūnctīva</a>.
+ * Classis {@link PrōnōmenConiūnctīvum} repraesentat nōmina ut coniectēris. <br>
+ * PrōnōminaConiūnctīva catēgoriam {@link Catēgoria#PRŌNŌMEN_CONIŪNCTĪVUM} ūtuntur et cōnservāta sunt in scrīniō <a href="../src/main/resources/prōnōminaConiūnctīva">prōnōminaConiūnctīva</a>. <br>
  * Discrīmina prīmōria inter classibus hāc et {@link Prōnōmen} est haec modōs {@link Coniugiāle} dēfīnītōs dēdūcit.
  * @see LēctorMultiplicibus.LēctorPrōnōminibusConiūnctīvīs
  * @see TenorMultiplicibus.TenorPrōnōminibusConiūnctīvīs
@@ -41,6 +41,9 @@ public final class PrōnōmenConiūnctīvum extends Nōminālis <PrōnōmenConi�
 
     /**
      * {@inheritDoc}
+     * @param prīmus valor prīmus
+     * @param secundus valor secundus
+     * @param <Ille> classis quae valōrēs et {@code prīmus} et {@code secundus} quadrat
      */
   public <Ille extends Verbum <Ille>> @NotNull LinkedList <Verbum <@Nullable ?>> coniugō(@Nullable final Ille prīmus,
                                                                                          @Nullable final Ille secundus) {
@@ -53,6 +56,8 @@ public final class PrōnōmenConiūnctīvum extends Nōminālis <PrōnōmenConi�
 
     /**
      * {@inheritDoc}
+     * @param prīmus valor prīmus
+     * @param secundus valor secundus
      */
   public @NotNull Verba coniugō(@NotNull final Verba prīmus, @NotNull final Verba secundus) {
     nūntius().plūrimumGarriō("Scrībor ut", prīmus, this, secundus);
@@ -62,6 +67,8 @@ public final class PrōnōmenConiūnctīvum extends Nōminālis <PrōnōmenConi�
 
     /**
      * {@inheritDoc}
+     * @param prīmus valor prīmus
+     * @param secundus valor secundus
      */
   public @NotNull Verba coniugō(@NotNull final Verba prīmus, @NotNull final LinkedList <Verbum <@Nullable ?>> secundus) {
     prīmus.coniūnctīvumAllegōContinuōque(this, Verba.conditōr().seriēs(secundus).condam());

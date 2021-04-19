@@ -21,8 +21,8 @@ import java.util.function.Supplier;
 import java.util.stream.*;
 
 /**
- * Classis {@link VerbumSimplex} repraesentat verbum aliquem quod fōrmam ūnam sōlum habent.
- * Rēs classis {@link Inventor} rēbus classis huius absunt atque inūtilēs fuerint.
+ * Classis {@link VerbumSimplex} repraesentat verbum aliquem quod fōrmam ūnam sōlum habent. <br>
+ * Rēs classis {@link Inventor} rēbus classis huius absunt atque inūtilēs fuerint. <br>
  * @param <Hoc> Tabellā hāc classis {@link Hoc} extēnsiōnem aptam datīs petītīs repraesentat.
  * @see LēctorSimplicibus
  * @see TenorSimplicibus
@@ -38,14 +38,16 @@ public abstract class VerbumSimplex <Hoc extends Verbum <Hoc>> extends Verbum <H
   }
 
   /**
-   * @return repraesentātiōnem scrīpta reī classis {@link VerbumSimplex}. Sōlum valōrem {@link Verbum#fundāmen} potest referre cum fōrmā ūnā.
+   *
+   * @return repraesentātiōnem scrīpta reī classis {@link VerbumSimplex}. <br>
+   * Sōlum valōrem {@link Verbum#fundāmen} potest referre cum fōrmā ūnā.
    */
   public @Override @NotNull String toString( ) {
     return fundāmen;
   }
 
   /**
-   * Classis {@link Adverbium} repraesentat adverbia ut coniectēris.
+   * Classis {@link Adverbium} repraesentat adverbia ut coniectēris. <br>
    * Adverbia catēgoriam {@link Catēgoria#ADVERBIUM} ūtuntur et cōnservāta sunt in scrīniō <a href="../src/main/resources/adverbia">adverbia</a>.
    * @see LēctorSimplicibus.LēctorAdverbiīs
    * @see TenorSimplicibus.TenorAdverbiīs
@@ -64,8 +66,8 @@ public abstract class VerbumSimplex <Hoc extends Verbum <Hoc>> extends Verbum <H
   }
 
   /**
-   * Classis {@link Coniūnctīvum} repraesentat coniūnctīva ut coniectēris.
-   * Coniūnctīva catēgoriam {@link Catēgoria#CONIŪNCTĪVUM} ūtuntur et cōnservāta sunt in scrīniō <a href="../src/main/resources/coniūnctīva">coniūnctīva</a>.
+   * Classis {@link Coniūnctīvum} repraesentat coniūnctīva ut coniectēris. <br>
+   * Coniūnctīva catēgoriam {@link Catēgoria#CONIŪNCTĪVUM} ūtuntur et cōnservāta sunt in scrīniō <a href="../src/main/resources/coniūnctīva">coniūnctīva</a>. <br>
    * Prōpositīs programmātis huius classis haec differt classe {@link Adverbium} sōlum in quō classis haec modōs {@link Coniugiāle} dēfīnītōs dēdūcit.
    * @see LēctorSimplicibus.LēctorConiūnctīvīs
    * @see TenorSimplicibus.TenorConiūnctivīs
@@ -84,6 +86,9 @@ public abstract class VerbumSimplex <Hoc extends Verbum <Hoc>> extends Verbum <H
 
     /**
      * {@inheritDoc}
+     * @param prīmus valor prīmus
+     * @param secundus valor secundus
+     * @param <Ille> classis quae valōrēs et {@code prīmus} et {@code secundus} quadrat
      */
     public <Ille extends Verbum <Ille>> @NotNull LinkedList <Verbum <@Nullable ?>> coniugō(@Nullable final Ille prīmus,
                                                                                            @Nullable final Ille secundus) {
@@ -96,6 +101,8 @@ public abstract class VerbumSimplex <Hoc extends Verbum <Hoc>> extends Verbum <H
 
     /**
      * {@inheritDoc}
+     * @param prīmus valor prīmus
+     * @param secundus valor secundus
      */
     public final @NotNull Verba coniugō(@NotNull final Verba prīmus, @NotNull final Verba secundus) {
       nūntius().plūrimumGarriō("Scrībor ut", prīmus, this, secundus);
@@ -105,6 +112,8 @@ public abstract class VerbumSimplex <Hoc extends Verbum <Hoc>> extends Verbum <H
 
     /**
      * {@inheritDoc}
+     * @param prīmus valor prīmus
+     * @param secundus valor secundus
      */
     public final @NotNull Verba coniugō(@NotNull final Verba prīmus,
                                         @NotNull final LinkedList <Verbum <@Nullable ?>> secundus) {
@@ -114,7 +123,7 @@ public abstract class VerbumSimplex <Hoc extends Verbum <Hoc>> extends Verbum <H
   }
 
   /**
-   * Classis {@link Praepositiō} repraesentat praepositiōnēs ut coniectēris.
+   * Classis {@link Praepositiō} repraesentat praepositiōnēs ut coniectēris. <br>
    * Praepositiōnēs catēgoriam {@link Catēgoria#PRAEPOSITIŌ} ūtuntur et cōnservāta sunt in scrīniō <a href="../src/main/resources/praepositiōnēs">praepositiōnēs</a>.
    * @see LēctorPraepositiōnibus
    * @see Nūntius.NūntiusPraepositiōnum
@@ -134,8 +143,8 @@ public abstract class VerbumSimplex <Hoc extends Verbum <Hoc>> extends Verbum <H
   }
 
   /**
-   * Classis {@link Numerus} repraesentat numerōs ut coniectēris.
-   * Numerī catēgoriam {@link Catēgoria#NUMERUM} ūtuntur et sunt generātī statim quam cōnservātī intrā scrīnium <a href="../src/main/resources">auxiliārēs</a>.
+   * Classis {@link Numerus} repraesentat numerōs ut coniectēris. <br>
+   * Numerī catēgoriam {@link Catēgoria#NUMERUM} ūtuntur et sunt generātī statim quam cōnservātī intrā scrīnium <a href="../src/main/resources">auxiliārēs</a>. <br>
    * @see <a href="https://github.com/Chaosfirebolt/RomanNumeralConverter/blob/master/src/main/java/com/github/chaosfirebolt/converter/RomanInteger.java">RomanInteger</a>
    * @see Nūntius.NūntiusNumerōrum
    */

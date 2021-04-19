@@ -66,7 +66,7 @@ public abstract class TenorMultiplicibus <Hoc extends VerbumMultiplex <Hoc>> ext
   }
 
   /**
-   * @inheritDoc
+   * {@inheritDoc}
    * @see Tenor#seriēs
    */
   protected final @Override void fīniam( ) {
@@ -80,7 +80,8 @@ public abstract class TenorMultiplicibus <Hoc extends VerbumMultiplex <Hoc>> ext
   }
 
   /**
-   * @inheritDoc
+   * {@inheritDoc}
+   * @param scrīptiō fōrmam scrīptam indendus
    * @see VerbumMultiplex#scrīptiō
    */
   protected @Override void scrībō(@NotNull String scrīptiō) {

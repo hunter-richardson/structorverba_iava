@@ -9,9 +9,9 @@ import net.strūctorverba.ēnumerātiōnēs.*;
 import org.jetbrains.annotations.NotNull;
 
 /**
- * Classis {@link VerbumMultiplex} repraesentat verbum aliquem quod fōrmās multās habet.
- * Rēs classis {@link Inventor} rēbus classis huius adsunt et ūtilissimae sunt rēs classis huius percōlere.
- * Discrīmina prīmōria inter classibus hāc et {@link VerbumSimplex} sunt huius valōrēs {#scrīptiō} et {#encliticum}.
+ * Classis {@link VerbumMultiplex} repraesentat verbum aliquem quod fōrmās multās habet. <br>
+ * Rēs classis {@link Inventor} rēbus classis huius adsunt et ūtilissimae sunt rēs classis huius percōlere. <br>
+ * Discrīmina prīmōria inter classibus hāc et {@link VerbumSimplex} sunt huius valōrēs {@link #scrīptiō} et {@link #encliticum}. <br>
  * @param <Hoc> Tabellā hāc classis {@link Hoc} extēnsiōnem aptam datīs petītīs repraesentat.
  * @see LēctorMultiplicibus
  * @see TenorMultiplicibus
@@ -44,8 +44,8 @@ public abstract class VerbumMultiplex <Hoc extends Verbum <Hoc>> extends Verbum 
 
   /**
    * Modus hic ūsūfructuāriōs licet valōrem {@link #encliticum} allegere.
-   * @param cltm valōrem {@link #encliticum} indicat.
-   * @return rem hunc classis {@link VerbumMultiplex}.
+   * @param cltm valōrem {@link #encliticum} indicat
+   * @return rem hanc
    * @see Encliticum
    */
   @SuppressWarnings("UnusedReturnValue")
@@ -55,7 +55,8 @@ public abstract class VerbumMultiplex <Hoc extends Verbum <Hoc>> extends Verbum 
   }
 
   /**
-   * @return repraesentātiōnem scrīpta reī huius. Valōrem {@link #encliticum} valōrī {@link #scrīptiō} addit.
+   * @return repraesentātiōnem scrīpta reī huius. <br>
+   * Valōrem {@link #encliticum} valōrī {@link #scrīptiō} addit.
    */
   public @Override @NotNull String toString( ) {
     return Encliticum.NŌLĒNS.equals(encliticum) ? scrīptiō

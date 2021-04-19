@@ -34,7 +34,7 @@ public abstract class ConditōrSimplicibus <Hoc extends VerbumSimplex <Hoc>> ext
   }
 
   /**
-   * @inheritDoc
+   * {@inheritDoc}
    */
   public final @Override @Nullable Hoc condam( ) {
     final Hoc hoc = StringUtils.isNotBlank(fundāmen) ? cōnstrūctor.apply(fundāmen)
@@ -72,7 +72,7 @@ public abstract class ConditōrSimplicibus <Hoc extends VerbumSimplex <Hoc>> ext
     }
 
     /**
-     * @inheritDoc
+     * {@inheritDoc}
      */
     protected @Override void referō(@Nullable final VerbumSimplex.Adverbium hoc) {
       if (Objects.nonNull(hoc)) {
@@ -107,7 +107,7 @@ public abstract class ConditōrSimplicibus <Hoc extends VerbumSimplex <Hoc>> ext
     }
 
     /**
-     * @inheritDoc
+     * {@inheritDoc}
      */
     protected @Override void referō(@Nullable final VerbumSimplex.Coniūnctīvum hoc) {
       if (Objects.nonNull(hoc)) {
