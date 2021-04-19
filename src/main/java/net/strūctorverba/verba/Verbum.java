@@ -9,7 +9,6 @@ import net.strūctorverba.ēnumerātiōnēs.Catēgoria;
 import net.strūctorverba.mīscella.Ūtilitās;
 import org.jetbrains.annotations.NotNull;
 
-
 /**
  * Classis {@link Verbum} repraesentat verba Latīna, fōrmās omnēs datī quās ūsūfructuāriī petunt.
  * Rem omnem classis huius rēs classis {@link Lēctor} colliget et rēs classis {@link Tenor} sēliget et rēs classis {@link Conditōr} tandem cōnstruet.

@@ -8,15 +8,16 @@ import lombok.experimental.Accessors;
 import net.strūctorverba.conditōrēs.ConditōrSimplicibus;
 import net.strūctorverba.inventōrēs.Inventor;
 import net.strūctorverba.lēctōrēs.*;
-import net.strūctorverba.nūntiī.*;
+import net.strūctorverba.mīscella.Ūtilitās;
+import net.strūctorverba.nūntiī.Nūntius;
 import net.strūctorverba.tenōrēs.TenorSimplicibus;
 import net.strūctorverba.verba.disposita.Verba;
-import net.strūctorverba.ēnumerātiōnēs.*;
-import org.apache.commons.lang3.*;
+import net.strūctorverba.ēnumerātiōnēs.Catēgoria;
+import org.apache.commons.lang3.StringUtils;
 import org.jetbrains.annotations.*;
 
 import java.util.*;
-import java.util.function.*;
+import java.util.function.Supplier;
 import java.util.stream.*;
 
 /**
@@ -165,7 +166,7 @@ public abstract class VerbumSimplex <Hoc extends Verbum <Hoc>> extends Verbum <H
      */
     public @Override @NotNull String toString() throws IllegalArgumentException {
       try {
-        return ostendam().toString();
+        return Ūtilitās.capitāneāsScrībō(ostendam().toString());
       } catch (IllegalArgumentException e) {
         nūntius().terreō(e);
         return StringUtils.EMPTY;
