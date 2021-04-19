@@ -10,18 +10,37 @@ import java.util.function.Supplier;
 
 @SuppressWarnings({ "NonAsciiCharacters", "SpellCheckingInspection" })
 public abstract class ConditōrMultiplicibus <Hoc extends VerbumMultiplex <Hoc>> extends Conditōr <Hoc> {
+  /**
+   * Valor hic valōrem {@link VerbumMultiplex#scrīptiō} reī prōductae repraehentat.
+   */
   protected @NotNull String scrīptiō = StringUtils.EMPTY;
 
+  /**
+   * Officium hoc cōnstrūctōrem reī classis huius perpetrat.
+   * @param nūntius valōrem {@link Conditōr#nūntius} supplet.
+   */
   public ConditōrMultiplicibus(@NotNull final Supplier <@NotNull ? extends Nūntius> nūntius) {
     super(nūntius);
   }
 
+  /**
+   * Modus hic valōrem {@link #scrīptiō} indit.
+   * @param scrpt valōrem indendum
+   */
   public final void ut(@NotNull final String scrpt) {
     scrīptiō = scrpt;
     nūntius.garriō("Cōntrūctiōnī adiēcī conditiōnem novam:", "scrīptiō est", scrpt);
   }
 
+  /**
+   * Modus hic valōrem cognitum per valōre {@code nōmen} cum valōre {@code dēscrīptor} indit.
+   * @param nōmen valōrem cognendum
+   * @param dēscrīptor valōrem indendum
+   */
   public abstract void allegō(@NotNull final String nōmen, @NotNull final String dēscrīptor);
 
+  /**
+   * Modus hic rem hanc restituit.
+   */
   public abstract void restituō( );
 }

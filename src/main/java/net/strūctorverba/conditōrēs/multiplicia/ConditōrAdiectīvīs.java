@@ -1,6 +1,8 @@
 package net.strūctorverba.conditōrēs.multiplicia;
 
+import net.strūctorverba.conditōrēs.Conditōr;
 import net.strūctorverba.nūntiī.Nūntius;
+import net.strūctorverba.verba.Verbum;
 import net.strūctorverba.verba.multiplicia.Adiectīvum;
 import net.strūctorverba.ēnumerātiōnēs.*;
 import org.apache.commons.lang3.*;
@@ -10,25 +12,37 @@ import javax.ejb.*;
 import java.util.Objects;
 import java.util.function.Supplier;
 
+/**
+ * Classis {@link ConditōrAdiectīvīs} est vās classis {@link Conditōr} classī {@link Adiectīvum}.
+ * @see Adiectīvum
+ * @see Nūntius.NūntiusConditōrīAdiectīvīs
+ */
 @SuppressWarnings({ "NonAsciiCharacters", "SpellCheckingInspection" })
 @Singleton
 @DependsOn("NūntiusConditōrīAdiectīvīs")
 public final class ConditōrAdiectīvīs extends ConditōrMultiplicibus <Adiectīvum> {
   private static @Nullable ConditōrAdiectīvīs īnstantia = null;
 
+  /**
+   * Valor hic viam reī classis huiuc facit.
+   * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
+   */
   public static final @NotNull Supplier <ConditōrAdiectīvīs> fac =
     () -> ObjectUtils.firstNonNull(īnstantia, īnstantia = new ConditōrAdiectīvīs());
 
   private @NotNull Speciālitās speciālitās = Speciālitās.NŪLLUM;
-  private @NotNull Genus     genus     = Genus.NŪLLUM;
-  private @NotNull Numerālis numerālis = Numerālis.NŪLLUS;
-  private @NotNull Cāsus     cāsus     = Cāsus.NŪLLUS;
+  private @NotNull Genus       genus       = Genus.NŪLLUM;
+  private @NotNull Numerālis   numerālis   = Numerālis.NŪLLUS;
+  private @NotNull Cāsus       cāsus       = Cāsus.NŪLLUS;
   private @NotNull Gradus      gradus      = Gradus.NŪLLUS;
 
   private ConditōrAdiectīvīs( ) {
     super(Nūntius.NūntiusConditōrīAdiectīvīs.fac);
   }
 
+  /**
+   * @inheritDoc
+   */
   public @Override @Nullable Adiectīvum condam( ) {
     if (StringUtils.isNoneBlank(fundāmen, scrīptiō)) {
       final Adiectīvum hoc = Adiectīvum.conditōr().fundāmen(fundāmen).speciālitās(speciālitās).genus(genus)
@@ -48,6 +62,15 @@ public final class ConditōrAdiectīvīs extends ConditōrMultiplicibus <Adiect�
     }
   }
 
+  /**
+   * @inheritDoc
+   * @see Speciālitās#dēfīniam(String, Speciālitās)
+   * @see Genus#dēfīniam(String, Genus)
+   * @see Cāsus#dēfīniam(String, Cāsus)
+   * @see Numerālis#dēfīniam(String, Numerālis)
+   * @see Gradus#dēfīniam(String, Gradus)
+   * @see Verbum#fundāmen
+   */
   public @Override void allegō(@NotNull final String nōmen, @NotNull final String dēscrīptor) {
     switch (nōmen) {
       case "speciālitās" -> speciālitās = Speciālitās.dēfīniam(dēscrīptor, Speciālitās.NŪLLUM);
@@ -66,12 +89,21 @@ public final class ConditōrAdiectīvīs extends ConditōrMultiplicibus <Adiect�
     nūntius.garriō("Cōntrūctiōnī adiēcī conditiōnem novam:", nōmen, "est", dēscrīptor);
   }
 
+  /**
+   * @inheritDoc
+   * @see Speciālitās#NŪLLUM
+   * @see Genus#NŪLLUM
+   * @see Cāsus#NŪLLUS
+   * @see Numerālis#NŪLLUS
+   * @see Gradus#NŪLLUS
+   */
   public @Override void restituō( ) {
     speciālitās = Speciālitās.NŪLLUM;
     genus = Genus.NŪLLUM;
     cāsus = Cāsus.NŪLLUS;
     numerālis = Numerālis.NŪLLUS;
     gradus = Gradus.NŪLLUS;
+    scrīptiō = StringUtils.EMPTY;
     nūntius.certiōrō(getClass().getSimpleName(), "est restitūtus.");
   }
 }

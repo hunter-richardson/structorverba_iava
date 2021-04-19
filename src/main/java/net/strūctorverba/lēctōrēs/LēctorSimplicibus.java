@@ -12,7 +12,7 @@ import java.util.function.Supplier;
 
 /**
  * Classis {@link LēctorSimplicibus} est vās classis {@link Lēctor} classibus omnibus quibus classem {@link VerbumSimplex} extendit.
- * @param <Hoc> classis extentum classis {@link VerbumSimplex}
+ * @param <Hoc> classis extenta classis {@link VerbumSimplex}
  * @see TenorSimplicibus
  */
 @SuppressWarnings({ "NonAsciiCharacters", "SpellCheckingInspection" })

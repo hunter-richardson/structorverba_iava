@@ -14,7 +14,7 @@ import java.util.function.Supplier;
 
 /**
  * Classis {@link TenorMultiplicibus} est vās classis {@link Tenor} classibus omnibus quibus classem {@link VerbumMultiplex} extendit.
- * @param <Hoc> classis extentum classis {@link VerbumMultiplex}
+ * @param <Hoc> classis extenta classis {@link VerbumMultiplex}
  * @see ConditōrMultiplicibus
  */
 @SuppressWarnings({ "NonAsciiCharacters", "SpellCheckingInspection" })

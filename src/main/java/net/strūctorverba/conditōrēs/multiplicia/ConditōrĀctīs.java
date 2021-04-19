@@ -1,6 +1,7 @@
 package net.strūctorverba.conditōrēs.multiplicia;
 
 import net.strūctorverba.nūntiī.Nūntius;
+import net.strūctorverba.verba.Verbum;
 import net.strūctorverba.verba.multiplicia.*;
 import net.strūctorverba.ēnumerātiōnēs.*;
 import org.apache.commons.lang3.*;
@@ -15,11 +16,15 @@ import java.util.function.Supplier;
 public final class ConditōrĀctīs extends ConditōrMultiplicibus <Āctum> {
   private static @Nullable ConditōrĀctīs īnstantia = null;
 
+  /**
+   * Valor hic viam reī classis huiuc facit.
+   * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
+   */
   public static final @NotNull Supplier <ConditōrĀctīs> fac =
     () -> ObjectUtils.firstNonNull(īnstantia, īnstantia = new ConditōrĀctīs());
 
-  private @NotNull Modus    modus    = Modus.NŪLLUS;
-  private @NotNull Vōx      vōx      = Vōx.NŪLLA;
+  private @NotNull Modus     modus     = Modus.NŪLLUS;
+  private @NotNull Vōx       vōx       = Vōx.NŪLLA;
   private @NotNull Tempus    tempus    = Tempus.NŪLLUM;
   private @NotNull Numerālis numerālis = Numerālis.NŪLLUS;
   private @NotNull Persōna   persōna   = Persōna.NŪLLA;
@@ -28,6 +33,9 @@ public final class ConditōrĀctīs extends ConditōrMultiplicibus <Āctum> {
     super(Nūntius.NūntiusConditōrīĀctīs.fac);
   }
 
+  /**
+   * @inheritDoc
+   */
   public @Override @Nullable Āctum condam( ) {
     if (StringUtils.isNoneBlank(fundāmen, scrīptiō)) {
       final Āctum hoc = Āctum.conditōr().fundāmen(fundāmen).modus(modus).vōx(vōx).tempus(tempus)
@@ -47,6 +55,15 @@ public final class ConditōrĀctīs extends ConditōrMultiplicibus <Āctum> {
     }
   }
 
+  /**
+   * @inheritDoc
+   * @see Modus#dēfīniam(String, Modus)
+   * @see Vōx#dēfīniam(String, Vōx)
+   * @see Tempus#dēfīniam(String, Tempus)
+   * @see Numerālis#dēfīniam(String, Numerālis)
+   * @see Persōna#dēfīniam(String, Persōna)
+   * @see Verbum#fundāmen
+   */
   public @Override void allegō(@NotNull final String nōmen, @NotNull final String dēscrīptor) {
     switch (nōmen) {
       case "modus" -> modus = Modus.dēfīniam(dēscrīptor, Modus.NŪLLUS);
@@ -65,12 +82,21 @@ public final class ConditōrĀctīs extends ConditōrMultiplicibus <Āctum> {
     nūntius.garriō("Cōntrūctiōnī adiēcī conditiōnem novam:", nōmen, "est", dēscrīptor);
   }
 
+  /**
+   * @inheritDoc
+   * @see Modus#NŪLLUS
+   * @see Vōx#NŪLLA
+   * @see Tempus#NŪLLUM
+   * @see Numerālis#NŪLLUS
+   * @see Persōna#NŪLLA
+   */
   public @Override void restituō( ) {
     numerālis = Numerālis.NŪLLUS;
     persōna = Persōna.NŪLLA;
     tempus = Tempus.NŪLLUM;
     modus = Modus.NŪLLUS;
     vōx = Vōx.NŪLLA;
+    scrīptiō = StringUtils.EMPTY;
     nūntius.certiōrō(getClass().getSimpleName(), "est restitūtus.");
   }
 }
