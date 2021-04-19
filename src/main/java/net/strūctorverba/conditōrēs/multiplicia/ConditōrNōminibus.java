@@ -37,6 +37,7 @@ public final class ConditōrNōminibus extends ConditōrMultiplicibus <Nōmen> {
 
   private ConditōrNōminibus( ) {
     super(Nūntius.NūntiusConditōrīNōminibus.fac);
+    nūntius.plūrimumGarriō("Factus sum");
   }
 
   /**
@@ -99,6 +100,6 @@ public final class ConditōrNōminibus extends ConditōrMultiplicibus <Nōmen> {
     cāsus = Cāsus.NŪLLUS;
     numerālis = Numerālis.NŪLLUS;
     scrīptiō = StringUtils.EMPTY;
-    nūntius.certiōrō(getClass().getSimpleName(), "est restitūtus.");
+    nūntius.certiōrō("Restitūtus sum");
   }
 }

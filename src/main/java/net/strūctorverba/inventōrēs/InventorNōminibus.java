@@ -34,6 +34,7 @@ public final class InventorNōminibus extends Inventor <Nōmen> {
 
   private InventorNōminibus( ) {
     super(Nūntius.NūntiusInventōrīNōminibus.fac);
+    nūntius.plūrimumGarriō("Factus sum");
   }
 
   /**
@@ -54,7 +55,7 @@ public final class InventorNōminibus extends Inventor <Nōmen> {
     genus = Genus.NŪLLUM;
     numerālis = Numerālis.NŪLLUS;
     cāsus = Cāsus.NŪLLUS;
-    nūntius.certiōrō(getClass().getSimpleName(), "est restitūtus.");
+    nūntius.certiōrō("Restitūtus sum");
   }
 
   /**

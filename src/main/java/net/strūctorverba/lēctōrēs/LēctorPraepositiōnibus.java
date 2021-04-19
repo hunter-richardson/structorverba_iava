@@ -27,7 +27,6 @@ import java.util.stream.Stream;
  */
 @SuppressWarnings({ "NonAsciiCharacters", "SpellCheckingInspection", "unused" })
 @Singleton @DependsOn("NūntiusLēctōrīPraepositiōnibus")
-@NoArgsConstructor(access = AccessLevel.PRIVATE)
 public final class LēctorPraepositiōnibus {
   private static @Nullable LēctorPraepositiōnibus īnstantia = null;
 
@@ -75,6 +74,10 @@ public final class LēctorPraepositiōnibus {
       return VerbumSimplex.Praepositiō.assūme.get();
     }
   };
+
+  private LēctorPraepositiōnibus() {
+    nūntius().plūrimumGarriō("Factus sum");
+  }
 
   /**
    * Modus hic rem classis {@link VerbumSimplex.Praepositiō} ā scāpō XML in scrīnium <a href="../src/main/resources/praepositiōnēs">praepositiōnēs</a> cōnābitur advenīre.

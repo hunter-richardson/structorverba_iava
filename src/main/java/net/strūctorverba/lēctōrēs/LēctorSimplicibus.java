@@ -63,9 +63,8 @@ public abstract class LēctorSimplicibus <Hoc extends VerbumSimplex <Hoc>> exten
       () -> ObjectUtils.firstNonNull(īnstantia, īnstantia = new LēctorAdverbiīs());
 
     private LēctorAdverbiīs( ) {
-      super(Catēgoria.ADVERBIUM,
-            Nūntius.NūntiusLēctōrīAdverbiīs.fac,
-            TenorSimplicibus.TenorAdverbiīs.fac);
+      super(Catēgoria.ADVERBIUM, Nūntius.NūntiusLēctōrīAdverbiīs.fac, TenorSimplicibus.TenorAdverbiīs.fac);
+      nūntius.plūrimumGarriō("Factus sum");
     }
   }
 
@@ -87,9 +86,8 @@ public abstract class LēctorSimplicibus <Hoc extends VerbumSimplex <Hoc>> exten
       () -> ObjectUtils.firstNonNull(īnstantia, īnstantia = new LēctorConiūnctīvīs());
 
     private LēctorConiūnctīvīs( ) {
-      super(Catēgoria.CONIŪNCTĪVUM,
-            Nūntius.NūntiusLēctōrīConiūnctīvīs.fac,
-            TenorSimplicibus.TenorConiūnctivīs.fac);
+      super(Catēgoria.CONIŪNCTĪVUM, Nūntius.NūntiusLēctōrīConiūnctīvīs.fac, TenorSimplicibus.TenorConiūnctivīs.fac);
+      nūntius.plūrimumGarriō("Factus sum");
     }
   }
 }

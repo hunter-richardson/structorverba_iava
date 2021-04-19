@@ -76,6 +76,7 @@ public abstract class LēctorMultiplicibus <Hoc extends VerbumMultiplex <Hoc>> e
     private LēctorNōminibus( ) {
       super(Catēgoria.NŌMEN, Nūntius.NūntiusLēctōrīNōminibus.fac,
             TenorMultiplicibus.TenorNōminibus.fac, InventorNōminibus.fac);
+      nūntius.plūrimumGarriō("Factus sum");
     }
   }
 
@@ -100,6 +101,7 @@ public abstract class LēctorMultiplicibus <Hoc extends VerbumMultiplex <Hoc>> e
     private LēctorAdiectīvīs( ) {
       super(Catēgoria.ADIECTĪVUM, Nūntius.NūntiusLēctōrīAdiectīvīs.fac,
             TenorMultiplicibus.TenorAdiectīvīs.fac, InventorAdiectīvīs.fac);
+      nūntius.plūrimumGarriō("Factus sum");
     }
 
     /**
@@ -136,6 +138,7 @@ public abstract class LēctorMultiplicibus <Hoc extends VerbumMultiplex <Hoc>> e
                         }, illa);
       } catch (IllegalArgumentException e) {
         nūntius.terreō(e);
+        nūntius.moneō("Nihil advenī");
         return null;
       }
     }
@@ -162,6 +165,7 @@ public abstract class LēctorMultiplicibus <Hoc extends VerbumMultiplex <Hoc>> e
     private LēctorPrōnōminibus( ) {
       super(Catēgoria.PRŌNŌMEN, Nūntius.NūntiusLēctōrīPrōnōminibus.fac,
             TenorMultiplicibus.TenorPrōnōminibus.fac, InventorPrōnōminibus.fac);
+      nūntius.plūrimumGarriō("Factus sum");
     }
 
     /**
@@ -185,6 +189,7 @@ public abstract class LēctorMultiplicibus <Hoc extends VerbumMultiplex <Hoc>> e
                         }, illa);
       } catch (IllegalArgumentException e) {
         nūntius.terreō(e);
+        nūntius.moneō("Niihil advenī");
         return null;
       }
     }
@@ -212,6 +217,7 @@ public abstract class LēctorMultiplicibus <Hoc extends VerbumMultiplex <Hoc>> e
     private LēctorPrōnōminibusConiūnctīvīs( ) {
       super(Catēgoria.PRŌNŌMEN_CONIŪNCTĪVUM, Nūntius.NūntiusLēctōrīPrōnōminibusConiūnctīvīs.fac,
             TenorMultiplicibus.TenorPrōnōminibusConiūnctīvīs.fac, InventorPrōnōminibusConiūnctīvīs.fac);
+      nūntius.plūrimumGarriō("Factus sum");
     }
   }
 
@@ -237,6 +243,7 @@ public abstract class LēctorMultiplicibus <Hoc extends VerbumMultiplex <Hoc>> e
     private LēctorĀctīs( ) {
       super(Catēgoria.ĀCTUM, Nūntius.NūntiusLēctōrīĀctīs.fac,
             TenorMultiplicibus.TenorĀctīs.fac, InventorĀctīs.fac);
+      nūntius.plūrimumGarriō("Factus sum");
     }
 
     /**

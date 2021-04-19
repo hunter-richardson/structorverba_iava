@@ -106,6 +106,7 @@ public abstract class TenorMultiplicibus <Hoc extends VerbumMultiplex <Hoc>> ext
 
     private TenorNōminibus( ) {
       super(Nūntius.NūntiusTenōrīNōminibus.fac, ConditōrNōminibus.fac);
+      nūntius.plūrimumGarriō("Factus sum");
     }
   }
 
@@ -128,6 +129,7 @@ public abstract class TenorMultiplicibus <Hoc extends VerbumMultiplex <Hoc>> ext
 
     private TenorAdiectīvīs( ) {
       super(Nūntius.NūntiusTenōrīAdiectīvīs.fac, ConditōrAdiectīvīs.fac);
+      nūntius.plūrimumGarriō("Factus sum");
     }
   }
 
@@ -150,6 +152,7 @@ public abstract class TenorMultiplicibus <Hoc extends VerbumMultiplex <Hoc>> ext
 
     private TenorPrōnōminibus( ) {
       super(Nūntius.NūntiusTenōrīPrōnōminibus.fac, ConditōrPrōnōminibus.fac);
+      nūntius.plūrimumGarriō("Factus sum");
     }
   }
 
@@ -172,6 +175,7 @@ public abstract class TenorMultiplicibus <Hoc extends VerbumMultiplex <Hoc>> ext
 
     private TenorPrōnōminibusConiūnctīvīs( ) {
       super(Nūntius.NūntiusTenōrīPrōnōmibusConiūnctīvīs.fac, ConditōrPrōnōminibusConiūnctīvīs.fac);
+      nūntius.plūrimumGarriō("Factus sum");
     }
   }
 
@@ -194,6 +198,7 @@ public abstract class TenorMultiplicibus <Hoc extends VerbumMultiplex <Hoc>> ext
 
     private TenorĀctīs( ) {
       super(Nūntius.NūntiusTenōrīĀctīs.fac, ConditōrĀctīs.fac);
+      nūntius.plūrimumGarriō("Factus sum");
     }
   }
 }

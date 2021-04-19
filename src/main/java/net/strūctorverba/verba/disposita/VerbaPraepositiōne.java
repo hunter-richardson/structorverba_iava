@@ -57,6 +57,7 @@ public final class VerbaPraepositiōne extends VerbumMultiplex <VerbaPraepositi�
   public @Override @NotNull VerbaPraepositiōne allege(@NotNull final Encliticum cltm) {
     encliticum = cltm;
     rēs.allege(encliticum);
+    nūntius().plūrimumGarriō("Encliticum allēctum", encliticum);
     return this;
   }
 

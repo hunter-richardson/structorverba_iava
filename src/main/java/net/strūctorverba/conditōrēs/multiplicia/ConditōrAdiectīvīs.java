@@ -38,6 +38,7 @@ public final class ConditōrAdiectīvīs extends ConditōrMultiplicibus <Adiect�
 
   private ConditōrAdiectīvīs( ) {
     super(Nūntius.NūntiusConditōrīAdiectīvīs.fac);
+    nūntius.plūrimumGarriō("Factus sum");
   }
 
   /**
@@ -104,6 +105,6 @@ public final class ConditōrAdiectīvīs extends ConditōrMultiplicibus <Adiect�
     numerālis = Numerālis.NŪLLUS;
     gradus = Gradus.NŪLLUS;
     scrīptiō = StringUtils.EMPTY;
-    nūntius.certiōrō(getClass().getSimpleName(), "est restitūtus.");
+    nūntius.certiōrō("Restitūtus sum");
   }
 }

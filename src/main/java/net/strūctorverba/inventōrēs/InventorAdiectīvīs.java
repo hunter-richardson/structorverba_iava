@@ -35,6 +35,7 @@ public final class InventorAdiectīvīs extends Inventor <Adiectīvum> {
 
   private InventorAdiectīvīs( ) {
     super(Nūntius.NūntiusInventōrīAdiectīvīs.fac);
+    nūntius.plūrimumGarriō("Factus sum");
   }
 
   /**
@@ -57,7 +58,7 @@ public final class InventorAdiectīvīs extends Inventor <Adiectīvum> {
     numerālis = Numerālis.NŪLLUS;
     cāsus = Cāsus.NŪLLUS;
     gradus = Gradus.NŪLLUS;
-    nūntius.certiōrō(getClass().getSimpleName(), "est restitūtus.");
+    nūntius.certiōrō("Restitūtus sum");
   }
 
   /**

@@ -44,6 +44,7 @@ public final class PrōnōmenConiūnctīvum extends Nōminālis <PrōnōmenConi�
      */
   public <Ille extends Verbum <Ille>> @NotNull LinkedList <Verbum <@Nullable ?>> coniugō(@Nullable final Ille prīmus,
                                                                                          @Nullable final Ille secundus) {
+    nūntius().plūrimumGarriō("Scrībor ut", prīmus, this, secundus);
     return Stream.of(prīmus, this, secundus)
                  .filter(Objects::nonNull)
                  .filter(verbum -> StringUtils.isNotBlank(verbum.toString()))
@@ -54,6 +55,7 @@ public final class PrōnōmenConiūnctīvum extends Nōminālis <PrōnōmenConi�
      * {@inheritDoc}
      */
   public @NotNull Verba coniugō(@NotNull final Verba prīmus, @NotNull final Verba secundus) {
+    nūntius().plūrimumGarriō("Scrībor ut", prīmus, this, secundus);
     prīmus.coniūnctīvumAllegōContinuōque(this, secundus);
     return prīmus;
   }

@@ -68,6 +68,7 @@ public abstract class ConditōrSimplicibus <Hoc extends VerbumSimplex <Hoc>> ext
     private ConditōrAdverbiīs( ) {
       super(Nūntius.NūntiusConditōrīAdverbiīs.fac,
             fundāmen -> VerbumSimplex.Adverbium.conditōr().fundāmen(fundāmen).condam());
+      nūntius.plūrimumGarriō("Factus sum");
     }
 
     /**
@@ -102,6 +103,7 @@ public abstract class ConditōrSimplicibus <Hoc extends VerbumSimplex <Hoc>> ext
     private ConditōrConiūnctīvīs( ) {
       super(Nūntius.NūntiusConditōrīConiūnctivīs.fac,
             fundāmen -> VerbumSimplex.Coniūnctīvum.conditōr().fundāmen(fundāmen).condam());
+      nūntius.plūrimumGarriō("Factus sum");
     }
 
     /**

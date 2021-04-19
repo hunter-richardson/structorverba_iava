@@ -29,7 +29,7 @@ public abstract class ConditōrMultiplicibus <Hoc extends VerbumMultiplex <Hoc>>
    */
   public final void ut(@NotNull final String scrpt) {
     scrīptiō = scrpt;
-    nūntius.garriō("Cōntrūctiōnī adiēcī conditiōnem novam:", "scrīptiō est", scrpt);
+    nūntius.garriō("Cōntrūctiōnī adiēcī conditiōnem novam: scrīptiō est", scrpt);
   }
 
   /**

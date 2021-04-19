@@ -70,6 +70,7 @@ public abstract class TenorSimplicibus <Hoc extends VerbumSimplex <Hoc>> extends
 
     private TenorAdverbiīs( ) {
       super(Nūntius.NūntiusTenōrīAdverbiīs.fac, ConditōrSimplicibus.ConditōrAdverbiīs.fac);
+      nūntius.plūrimumGarriō("Factus sum");
     }
   }
 
@@ -92,6 +93,7 @@ public abstract class TenorSimplicibus <Hoc extends VerbumSimplex <Hoc>> extends
 
     private TenorConiūnctivīs( ) {
       super(Nūntius.NūntiusTenōrīConiūnctivīs.fac, ConditōrSimplicibus.ConditōrConiūnctīvīs.fac);
+      nūntius.plūrimumGarriō("Factus sum");
     }
   }
 }
