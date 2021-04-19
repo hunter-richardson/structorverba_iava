@@ -12,7 +12,7 @@ import javax.ejb.*;
 import java.util.function.Supplier;
 
 /**
- * Classis {@link LēctorSimplicibus} est vās classis {@link Lēctor} classibus omnibus quibus classem {@link VerbumMultiplex} extendit.
+ * Classis {@link LēctorMultiplicibus} est vās classis {@link Lēctor} classibus omnibus quibus classem {@link VerbumMultiplex} extendit.
  * @param <Hoc> classis extenta classis {@link VerbumMultiplex}
  * @see Inventor
  * @see TenorMultiplicibus

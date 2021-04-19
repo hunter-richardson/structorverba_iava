@@ -12,6 +12,12 @@ import org.junit.jupiter.api.*;
 
 import java.util.LinkedList;
 
+/**
+ * Classis {@link DolōremIpsum} versiōnem prīmam tentāminārum programmātī StrūctorVerba dēfīnit.
+ * Laudem Marcō Tulliō Cicerōnī cum parte dialogī Socraticus "Dē Fīnibus Bonōrum et Mālōrum" in sectiōne I.X.XXXII cōnstruat.
+ * Pars illa est agnita poēmam istam "Lorem Ipsum" īnspīrāvisse.
+ * @see <a href="http://www.thelatinlibrary.com/cicero/fin1.shtml#32">Dē Fīnibus Bonōrum et Mālōrum</a>
+ */
 @SuppressWarnings({ "NonAsciiCharacters", "SpellCheckingInspection", "FieldCanBeLocal" })
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 public final class DolōremIpsum {
@@ -23,8 +29,11 @@ public final class DolōremIpsum {
   private final @NotNull String prōductaTertia  = "Cōnsectētur adipīscī velit";
   private final @NotNull String prōductaQuārta  = "Sed quia nōnnumquam eius modī tempora incidunt ut labōre et dolōre magnam aliquam quaerat voluptātem";
   private final @NotNull String prōductaCūncta  = "Neque porrō quisquam est quī dolōrem ipsum quia dolor sit amet cōnsectētur adipīscī velit sed quia nōnnumquam eius modī tempora incidunt ut labōre et dolōre magnam aliquam quaerat voluptātem";
-  // Prōlātae Cicerōnis ā "Fīnibus Bonōrum et Mālōrum", in sectiōne I.X.XXXII, quis īnspīrāvit poēma "Lorem Ipsum"
 
+  /**
+   * Modus hic partem prīmam tentat.
+   * Verba "Neque porrō quisquam est" prōdūcat.
+   */
   @Test @Order(1)
   public void prīma( ) {
     Verbum <?>[] seriēs = {
@@ -54,6 +63,10 @@ public final class DolōremIpsum {
     System.out.printf("Prōducta prīma: %s%n", haec);
   }
 
+  /**
+   * Modus hic partem secundam tentat.
+   * Verba "Quī dolōrem ipsum quia dolor sit amet" prōdūcat.
+   */
   @Test @Order(2)
   public void secunda( ) {
     Verbum <?>[] seriēs = {
@@ -93,6 +106,10 @@ public final class DolōremIpsum {
     System.out.printf("Prōducta secunda: %s%n", haec);
   }
 
+  /**
+   * Modus hic partem tertiam tentat.
+   * Verba "Cōnsectētur adipīscī velit" prōdūcat.
+   */
   @Test @Order(3)
   public void tertia( ) {
     Verbum <?>[] seriēs = {
@@ -123,6 +140,11 @@ public final class DolōremIpsum {
     System.out.printf("Prōducta tertia: %s%n", haec);
   }
 
+  /**
+   * Modus hic partem quārtam tentat.
+   * Verba "Sed quia nōnnumquam eius modī tempora incidunt ut labōre et dolōre magnam aliquam quaerat voluptātem" prōdūcat.
+   * Prīncipāliter tentat quod modī et {@link Coniugiāle#coniugō(Verbum, Verbum)} rēctē operat sī tentāmina trēs prīma prosperantur.
+   */
   @Test @Order(4)
   public void quārta( ) {
     Verbum <?>[] seriēsPrīma = {
@@ -198,6 +220,11 @@ public final class DolōremIpsum {
     System.out.printf("Prōducta quārta: %s%n", haec);
   }
 
+  /**
+   * Modus hic tentāmina omnēs praevia coniugat.
+   * Verba "Neque porrō quisquam est quī dolōrem ipsum quia dolor sit amet cōnsectētur adipīscī velit sed quia nōnnumquam eius modī tempora incidunt ut labōre et dolōre magnam aliquam quaerat voluptātem" prōdūcat.
+   * Aboriētur sī tentāminum aliquid praevium aborītur atque prosperābitur sī omnēs prosperantur.
+   */
   @Test @Order(5)
   public void cūncta() {
     Verbum <?>[] seriēsPrīma = {

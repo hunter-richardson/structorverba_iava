@@ -142,6 +142,7 @@ public abstract class VerbumSimplex <Hoc extends Verbum <Hoc>> extends Verbum <H
 
     /**
      * Valor hic repraesentātiōnem numeriam tenet reī classis {@link Numerus}.
+     * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Short.html">Short</a>
      */
     public final short numerus;
 

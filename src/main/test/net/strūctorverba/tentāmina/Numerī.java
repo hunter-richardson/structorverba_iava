@@ -9,6 +9,9 @@ import org.jetbrains.annotations.NotNull;
 import org.junit.jupiter.api.*;
 import org.junit.platform.commons.util.StringUtils;
 
+/**
+ * Classis {@link Numerī} operātiōnēs mathēmaticās rērum classis {@link VerbumSimplex.Numerus} tentat.
+ */
 @SuppressWarnings({ "NonAsciiCharacters", "SpellCheckingInspection", "FieldCanBeLocal" })
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 public class Numerī {
@@ -20,6 +23,10 @@ public class Numerī {
 
   private final @NotNull String XLII_SCRĪPTIŌ = "XLII";
 
+  /**
+   * Modus hic conversiōnem ā numerō reī classis {@link VerbumSimplex.Numerus} tentat.
+   * Scrīptiunculam "42 = XLII" prōdūcat.
+   */
   @Test @Order(1)
   public void conversiōnis() {
     final VerbumSimplex.Numerus numerus = strūctor().numerus(XLII_NUMERUM);
@@ -31,6 +38,10 @@ public class Numerī {
     System.out.printf("%d = %s%n", XLII_NUMERUM, numerus);
   }
 
+  /**
+   * Modus hic reversiōnem ā rē classis {@link VerbumSimplex.Numerus} numerō tentat.
+   * Scrīptiunculam "XLII = 42" prōdūcat.
+   */
   @Test @Order(2)
   public void reversiōnis() {
     final VerbumSimplex.Numerus numerus = strūctor().numerus(XLII_SCRĪPTIŌ);
@@ -42,6 +53,10 @@ public class Numerī {
     System.out.printf("%s = %d%n", XLII_SCRĪPTIŌ, numerus.numerus);
   }
 
+  /**
+   * Modus hic conversiōnem ā numerō reī classis {@link VerbumSimplex.Numerus} atque reversiōnem versam tentat.
+   * Scrīptiunculās et "42 = XLII" et "XLII = 42" dē numerō nescītō inter I et MMMCMXCIX prōdūcat.
+   */
   @Test @Order(3)
   public void combīnātiōnis() {
     final short numerus = Integer.valueOf(Math.toIntExact(Math.round((NUMERUM_MAXIMUM + 1) * Math.random()))).shortValue();
@@ -59,6 +74,10 @@ public class Numerī {
     System.out.printf("%d = %s%n", numerus, secundus);
   }
 
+  /**
+   * Modus hic additiōnem rērum duārum classis {@link VerbumSimplex.Numerus}.
+   * Scrīptiunculās et "17 = XVIII" et "3 = III" et "17 + 3 = 20 = XX" prōdūcat.
+   */
   @Test @Order(4)
   public void additiōnis() {
     final short numerusPrīmus = 17;
@@ -82,6 +101,10 @@ public class Numerī {
     System.out.printf("%d + %d = %d = %s%n", numerusPrīmus, numerusSecundus, expectātus, ēventus);
   }
 
+  /**
+   * Modus hic subtractiōnem rērum duārum classis {@link VerbumSimplex.Numerus}.
+   * Scrīptiunculās et "12 = XII" et "7 = VII" et "12 - 7 = 5 = V" prōdūcat.
+   */
   @Test @Order(5)
   public void subtractiōnis() {
     final short numerusPrīmus = 12;
@@ -105,6 +128,10 @@ public class Numerī {
     System.out.printf("%d - %d = %d = %s%n", numerusPrīmus, numerusSecundus, expectātus, ēventus);
   }
 
+  /**
+   * Modus hic multiplicātiōnem rērum duārum classis {@link VerbumSimplex.Numerus}.
+   * Scrīptiunculās et "3 = III" et "2 = II" et "3 * 2 = 5 = VI" prōdūcat.
+   */
   @Test @Order(6)
   public void multiplicātiōnis() {
     final short numerusPrīmus = 3;
@@ -128,6 +155,10 @@ public class Numerī {
     System.out.printf("%d * %d = %d = %s%n", numerusPrīmus, numerusSecundus, expectātus, ēventus);
   }
 
+  /**
+   * Modus hic dīvīsiōnem rērum duārum classis {@link VerbumSimplex.Numerus}.
+   * Scrīptiunculās et "18 = XVII" et "6 = VI" et "18 / 6 = 3 = III" prōdūcat.
+   */
   @Test @Order(7)
   public void dīvīsiōnis() {
     final short numerusPrīmus = 18;
@@ -151,6 +182,10 @@ public class Numerī {
     System.out.printf("%d / %d = %d = %s%n", numerusPrīmus, numerusSecundus, expectātus, ēventus);
   }
 
+  /**
+   * Modus hic mānsiōnem rērum duārum classis {@link VerbumSimplex.Numerus}.
+   * Scrīptiunculās et "12 = XII" et "9 = IX" et "12 % 9 = 3 = III" prōdūcat.
+   */
   @Test @Order(8)
   public void mānsiōnis() {
     final short numerusPrīmus = 6;
