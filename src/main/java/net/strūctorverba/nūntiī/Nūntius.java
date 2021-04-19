@@ -22,6 +22,7 @@ import java.util.stream.Stream;
  */
 @SuppressWarnings({ "NonAsciiCharacters", "SpellCheckingInspection" })
 public abstract class Nūntius {
+  private final @NotNull GradusNūntiī gradusMinimus;
   private final @NotNull Logger praecō;
 
   /**
@@ -29,20 +30,21 @@ public abstract class Nūntius {
    * @param parametrī continet parametrōs ūsōs organum internum reī huius generāre.
    */
   protected Nūntius(@NotNull final ParametrīNūntiī parametrī) {
+    gradusMinimus = parametrī.gradusMinimus;
     praecō = parametrī.praecōnium.get();
   }
 
   private void nūntiō(@NotNull final GradusNūntiī gradus, @Nullable final Object... nūntia) {
-    if(GradusNūntiī.compareTo(gradus, GradusNūntiī.gradior(praecō.getLevel())) >= 0) {
+    if(GradusNūntiī.compareTo(gradus, gradusMinimus) >= 0) {
       if(nūntia != null) {
         final StringBuilder strūctor = new StringBuilder();
         Stream.of(nūntia)
               .filter(Objects::nonNull)
               .filter(pars -> StringUtils.isNotBlank(pars.toString()))
               .forEachOrdered(pars -> strūctor.append(pars).append(' '));
-        praecō.log(gradus.gressus, strūctor.toString());
+        praecō.log(gradus.gressus.get(), strūctor.toString());
       } else {
-        praecō.log(gradus.gressus, StringUtils.EMPTY);
+        praecō.log(gradus.gressus.get(), StringUtils.EMPTY);
       }
     }
   }

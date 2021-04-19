@@ -9,24 +9,40 @@ import java.nio.file.Path;
 import java.util.function.Supplier;
 import java.util.logging.*;
 
+/**
+ * Classis {@link ParametrīNūntiī} valōrēs continet quōs rem classis {@link Nūntius} iuvat generāre.
+ */
 @SuppressWarnings({ "NonAsciiCharacters", "SpellCheckingInspection" })
 final class ParametrīNūntiī {
-  private final @NotNull GradusNūntiī gradusMaximus = GradusNūntiī.OMNIS;
-  private final @NotNull String       locus         = "logs";
+  private final @NotNull String locus = "logs";
 
+  /**
+   * Valor hic incidat quam verbōsa rēs haec scrībētur.
+   */
+  public final @NotNull GradusNūntiī gradusMinimus = GradusNūntiī.OMNIS;
+
+  /**
+   * Valor hic viam reī classis {@link <a href="https://docs.oracle.com/javase/7/docs/api/java/util/logging/Logger.html">Logger</a>} facit.
+   * @see <a href="https://docs.oracle.com/javase/7/docs/api/java/util/logging/Logger.html">Logger</a>
+   * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
+   */
   public final @NotNull Supplier <@NotNull Logger> praecōnium;
 
-  public ParametrīNūntiī(@NotNull final Class <?> cls) {
+  /**
+   * Officium hoc cōnstrūctōrem reī classis huius perpetrat.
+   * @param classis refert classī cui rēs haec pertinet.
+   */
+  public ParametrīNūntiī(@NotNull final Class <?> classis) {
     praecōnium = () -> {
-        final Logger praecō = Logger.getLogger(cls.getSimpleName());
+        final Logger praecō = Logger.getLogger(classis.getSimpleName());
         praecō.setParent(Logger.getGlobal());
         praecō.setUseParentHandlers(false);
-        praecō.setLevel(gradusMaximus.gressus);
+        praecō.setLevel(gradusMinimus.gressus.get());
 
         StreamHandler tenor;
         try {
           if(StringUtils.isNotBlank(locus)) {
-            tenor = new FileHandler(Path.of(locus, String.format("%s.log", cls.getSimpleName()))
+            tenor = new FileHandler(Path.of(locus, String.format("%s.log", classis.getSimpleName()))
                                         .toString(), true);
             tenor.setEncoding(Ūtilitās.LITTERAE.displayName());
           } else {
@@ -36,7 +52,7 @@ final class ParametrīNūntiī {
           tenor = new ConsoleHandler();
         }
 
-        tenor.setLevel(gradusMaximus.gressus);
+        tenor.setLevel(gradusMinimus.gressus.get());
         tenor.setFormatter(new Formatter() {
           @Override
           public String format(LogRecord ēventus) {
@@ -51,6 +67,10 @@ final class ParametrīNūntiī {
       };
   }
 
+  /**
+   * @param classis classis apta
+   * @return rem novam classis huius
+   */
   public static @NotNull ParametrīNūntiī parā(@NotNull final Class<?> classis) {
     return new ParametrīNūntiī(classis);
   }

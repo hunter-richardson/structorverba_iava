@@ -95,13 +95,12 @@ public enum Mēnsis {
    *   <li>Valor <a href="https://docs.oracle.com/javase/8/docs/api/java/time/Month.html#JULY">JULY</a> valōrem {@link #IŪLIUS} cōnsociat.</li>
    *   <li>Valor <a href="https://docs.oracle.com/javase/8/docs/api/java/time/Month.html#AUGUST">AUGUST</a> valōrem {@link #AUGUSTĪ} cōnsociat.</li>
    *   <li>Valor <a href="https://docs.oracle.com/javase/8/docs/api/java/time/Month.html#SEPTEMBER">SEPTEMBER</a> valōrem {@link #SEPTEMBRIS} cōnsociat.</li>
-   *   <li>Valor <a href="https://docs.oracle.com/javase/8/docs/api/java/time/Month.html#OCTOBER">OCTOBER</a> valōrem {@link #OCTOBRIS} cōnsociat.</li>
+   *   <li>Valor <a href="https://docs.oracle.com/javase/8/docs/api/java/time/Month.html#OCTOBER">OCTOBER</a> valōrem {@link #OCTŌBRIS} cōnsociat.</li>
    *   <li>Valor <a href="https://docs.oracle.com/javase/8/docs/api/java/time/Month.html#NOVEMBER">NOVEMBER</a> valōrem {@link #NOVEMBRIS} cōnsociat.</li>
    *   <li>Valor <a href="https://docs.oracle.com/javase/8/docs/api/java/time/Month.html#DECEMBER">DECEMBER</a> valōrem {@link #DECEMBRIS} cōnsociat.</li>
    * </ul>
-   * @param scrpt valor tentandus.
+   * @param ēnumerātiō valor tentandus.
    */
-
   public static @NotNull Mēnsis indīcam(@NotNull final Month ēnumerātiō) {
     return switch (ēnumerātiō) {
              case JANUARY -> IANUĀRIĪ;
