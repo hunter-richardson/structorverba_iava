@@ -84,9 +84,9 @@ public abstract class VerbumSimplex <Hoc extends Verbum <Hoc>> extends Verbum <H
     /**
      * {@inheritDoc}
      */
-    public <Illud extends Verbum <Illud>> @NotNull LinkedList <Verbum <@Nullable ?>> coniugō(@Nullable final Illud prīma,
-                                                                                             @Nullable final Illud secunda) {
-      return Stream.of(prīma, this, secunda)
+    public <Ille extends Verbum <Ille>> @NotNull LinkedList <Verbum <@Nullable ?>> coniugō(@Nullable final Ille prīmus,
+                                                                                           @Nullable final Ille secundus) {
+      return Stream.of(prīmus, this, secundus)
                    .filter(Objects::nonNull)
                    .filter(verbum -> StringUtils.isNotBlank(verbum.toString()))
                    .collect(Collectors.toCollection(LinkedList::new));
@@ -95,18 +95,18 @@ public abstract class VerbumSimplex <Hoc extends Verbum <Hoc>> extends Verbum <H
     /**
      * {@inheritDoc}
      */
-    public final @NotNull Verba coniugō(@NotNull final Verba prīma, @NotNull final Verba secunda) {
-      prīma.coniūnctīvumAllegōContinuōque(this, secunda);
-      return prīma;
+    public final @NotNull Verba coniugō(@NotNull final Verba prīmus, @NotNull final Verba secundus) {
+      prīmus.coniūnctīvumAllegōContinuōque(this, secundus);
+      return prīmus;
     }
 
     /**
      * {@inheritDoc}
      */
-    public final @NotNull Verba coniugō(@NotNull final Verba prīma,
-                                        @NotNull final LinkedList <Verbum <@Nullable ?>> secunda) {
-      prīma.coniūnctīvumAllegōContinuōque(this, Verba.conditōr().seriēs(secunda).condam());
-      return prīma;
+    public final @NotNull Verba coniugō(@NotNull final Verba prīmus,
+                                        @NotNull final LinkedList <Verbum <@Nullable ?>> secundus) {
+      prīmus.coniūnctīvumAllegōContinuōque(this, Verba.conditōr().seriēs(secundus).condam());
+      return prīmus;
     }
   }
 
