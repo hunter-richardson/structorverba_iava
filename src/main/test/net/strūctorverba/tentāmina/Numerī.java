@@ -5,9 +5,9 @@ import lombok.Getter;
 import lombok.experimental.Accessors;
 import net.strūctorverba.mīscella.StrūctorVerba;
 import net.strūctorverba.verba.VerbumSimplex;
+import org.apache.commons.lang3.StringUtils;
 import org.jetbrains.annotations.NotNull;
 import org.junit.jupiter.api.*;
-import org.junit.platform.commons.util.StringUtils;
 
 /**
  * Classis {@link Numerī} operātiōnēs mathēmaticās rērum classis {@link VerbumSimplex.Numerus} tentat.
@@ -22,6 +22,49 @@ public class Numerī {
   private final short XLII_NUMERUM    = 42;
 
   private final @NotNull String XLII_SCRĪPTIŌ = "XLII";
+
+  private void perpetram(final short numerusPrīmus, final short numerusSecundus, final char operātiō) {
+    final String labor = switch (operātiō) {
+                           case '+' -> "additiōnis";
+                           case '-' -> "subtractiōnis";
+                           case '*' -> "multiplicātiōnis";
+                           case '/' -> "dīvīsiōnis";
+                           case '%' -> "mānsiōnis";
+                           default -> StringUtils.EMPTY;
+                         };
+    if(StringUtils.isNotBlank(labor)) {
+      final short expectātus = switch (operātiō) {
+                                 case '+' -> (short) (numerusPrīmus + numerusSecundus);
+                                 case '-' -> (short) (numerusPrīmus - numerusSecundus);
+                                 case '*' -> (short) (numerusPrīmus * numerusSecundus);
+                                 case '/' -> (short) (numerusPrīmus / numerusSecundus);
+                                 case '%' -> (short) (numerusPrīmus % numerusSecundus);
+                                 default -> (short) 0;
+                               };
+
+      final VerbumSimplex.Numerus prīmus = strūctor().numerus(numerusPrīmus);
+      Assertions.assertNotNull(prīmus, String.format("Prōductō %s est relicta prōductiō numerī %d.", labor, numerusPrīmus));
+      final VerbumSimplex.Numerus secundus = strūctor().numerus(numerusSecundus);
+      Assertions.assertNotNull(secundus, String.format("Prōductō %s est relicta prōductiō numerī %d.", labor, numerusSecundus));
+
+      final VerbumSimplex.Numerus ēventus = switch (operātiō) {
+                                              case '+' -> prīmus.addō(secundus);
+                                              case '-' -> prīmus.subtrahō(secundus);
+                                              case '*' -> prīmus.multiplicō(secundus);
+                                              case '/' -> prīmus.dīvidō(secundus);
+                                              case '%' -> prīmus.maneō(secundus);
+                                              default -> null;
+                                            };
+
+      Assertions.assertNotNull(ēventus, String.format("Prōductō %s est relicta prōductiō numerī %d.", labor, expectātus));
+      Assertions.assertTrue(StringUtils.isNotBlank(ēventus.toString()),
+                            String.format("Numerum prōductum %s vacat.", labor));
+
+      System.out.printf("%d = %s%n", numerusPrīmus, prīmus);
+      System.out.printf("%d = %s%n", numerusSecundus, secundus);
+      System.out.printf("%d %c %d = %d = %s%n", numerusPrīmus, operātiō, numerusSecundus, expectātus, ēventus);
+    }
+  }
 
   /**
    * Modus hic conversiōnem ā numerō reī classis {@link VerbumSimplex.Numerus} tentat.
@@ -59,7 +102,7 @@ public class Numerī {
    */
   @Test @Order(3)
   public void combīnātiōnis() {
-    final short numerus = Integer.valueOf(Math.toIntExact(Math.round((NUMERUM_MAXIMUM + 1) * Math.random()))).shortValue();
+    final short numerus = (short) Math.round((NUMERUM_MAXIMUM + 1) * Math.random());
 
     final VerbumSimplex.Numerus prīmus = strūctor().numerus(numerus);
     Assertions.assertNotNull(prīmus, String.format("Prōductō combīnātiōnis est relicta prōductiō numerī %d.", numerus));
@@ -80,25 +123,7 @@ public class Numerī {
    */
   @Test @Order(4)
   public void additiōnis() {
-    final short numerusPrīmus = 17;
-    final short numerusSecundus = 3;
-    final short expectātus = numerusPrīmus + numerusSecundus;
-
-    final VerbumSimplex.Numerus prīmus = strūctor().numerus(numerusPrīmus);
-    Assertions.assertNotNull(prīmus, String.format("Prōductō additiōnis est relicta prōductiō numerī %d.", numerusPrīmus));
-    final VerbumSimplex.Numerus secundus = strūctor().numerus(numerusSecundus);
-    Assertions.assertNotNull(secundus, String.format("Prōductō additiōnis est relicta prōductiō numerī %d.", numerusSecundus));
-    final VerbumSimplex.Numerus ēventus = prīmus.addō(secundus);
-
-    Assertions.assertNotNull(ēventus, String.format("Prōductō additiōnis est relicta prōductiō numerī %d.", expectātus));
-    Assertions.assertTrue(StringUtils.isNotBlank(ēventus.toString()),
-                          "Numerum prōductum additiōnis vacat.");
-    Assertions.assertEquals(ēventus.numerus, expectātus,
-                            "Numerum prōductum additiōnis expectātiōne eius differt.");
-
-    System.out.printf("%d = %s%n", numerusPrīmus, prīmus);
-    System.out.printf("%d = %s%n", numerusSecundus, secundus);
-    System.out.printf("%d + %d = %d = %s%n", numerusPrīmus, numerusSecundus, expectātus, ēventus);
+    perpetram((short) 17, (short) 3, '+');
   }
 
   /**
@@ -107,52 +132,16 @@ public class Numerī {
    */
   @Test @Order(5)
   public void subtractiōnis() {
-    final short numerusPrīmus = 12;
-    final short numerusSecundus = 7;
-    final short expectātus = numerusPrīmus - numerusSecundus;
-
-    final VerbumSimplex.Numerus prīmus = strūctor().numerus(numerusPrīmus);
-    Assertions.assertNotNull(prīmus, String.format("Prōductō subtractiōnis est relicta prōductiō numerī %d.", numerusPrīmus));
-    final VerbumSimplex.Numerus secundus = strūctor().numerus(numerusSecundus);
-    Assertions.assertNotNull(secundus, String.format("Prōductō subtractiōnis est relicta prōductiō numerī %d.", numerusSecundus));
-
-    final VerbumSimplex.Numerus ēventus = prīmus.subtrahō(secundus);
-    Assertions.assertNotNull(ēventus, String.format("Prōductō subtractiōnis est relicta prōductiō numerī %d.", expectātus));
-    Assertions.assertTrue(StringUtils.isNotBlank(ēventus.toString()),
-                          "Numerum prōductum subtractiōnis vacat.");
-    Assertions.assertEquals(ēventus.numerus, expectātus,
-                            "Numerum prōductum subtractiōnis expectātiōne eius differt.");
-
-    System.out.printf("%d = %s%n", numerusPrīmus, prīmus);
-    System.out.printf("%d = %s%n", numerusSecundus, secundus);
-    System.out.printf("%d - %d = %d = %s%n", numerusPrīmus, numerusSecundus, expectātus, ēventus);
+    perpetram((short) 12,(short) 7, '-');
   }
 
   /**
    * Modus hic multiplicātiōnem rērum duārum classis {@link VerbumSimplex.Numerus}.
-   * Scrīptiunculās et "3 = III" et "2 = II" et "3 * 2 = 5 = VI" prōdūcat.
+   * Scrīptiunculās et "3 = III" et "2 = II" et "3 * 2 = 6 = VI" prōdūcat.
    */
   @Test @Order(6)
   public void multiplicātiōnis() {
-    final short numerusPrīmus = 3;
-    final short numerusSecundus = 2;
-    final short expectātus = numerusPrīmus * numerusSecundus;
-
-    final VerbumSimplex.Numerus prīmus = strūctor().numerus(numerusPrīmus);
-    Assertions.assertNotNull(prīmus, String.format("Prōductō multiplicātiōnis est relicta prōductiō numerī %d.", numerusPrīmus));
-    final VerbumSimplex.Numerus secundus = strūctor().numerus(numerusSecundus);
-    Assertions.assertNotNull(secundus, String.format("Prōductō multiplicātiōnis est relicta prōductiō numerī %d.", numerusSecundus));
-    final VerbumSimplex.Numerus ēventus = prīmus.multiplicō(secundus);
-
-    Assertions.assertNotNull(ēventus, String.format("Prōductō multiplicātiōnis est relicta prōductiō numerī %d.", expectātus));
-    Assertions.assertTrue(StringUtils.isNotBlank(ēventus.toString()),
-                          "Numerum prōductum multiplicātiōnis vacat.");
-    Assertions.assertEquals(ēventus.numerus, expectātus,
-                            "Numerum prōductum multiplicātiōnis expectātiōne eius differt.");
-
-    System.out.printf("%d = %s%n", numerusPrīmus, prīmus);
-    System.out.printf("%d = %s%n", numerusSecundus, secundus);
-    System.out.printf("%d * %d = %d = %s%n", numerusPrīmus, numerusSecundus, expectātus, ēventus);
+    perpetram((short) 3,(short) 2, '*');
   }
 
   /**
@@ -161,25 +150,7 @@ public class Numerī {
    */
   @Test @Order(7)
   public void dīvīsiōnis() {
-    final short numerusPrīmus = 18;
-    final short numerusSecundus = 6;
-    final short expectātus = numerusPrīmus / numerusSecundus;
-
-    final VerbumSimplex.Numerus prīmus = strūctor().numerus(numerusPrīmus);
-    Assertions.assertNotNull(prīmus, String.format("Prōductō dīvīsiōnis est relicta prōductiō numerī %d.", numerusPrīmus));
-    final VerbumSimplex.Numerus secundus = strūctor().numerus(numerusSecundus);
-    Assertions.assertNotNull(secundus, String.format("Prōductō dīvīsiōnis est relicta prōductiō numerī %d.", numerusSecundus));
-    final VerbumSimplex.Numerus ēventus = prīmus.dīvidō(secundus);
-
-    Assertions.assertNotNull(ēventus, String.format("Prōductō dīvīsiōnis est relicta prōductiō numerī %d.", expectātus));
-    Assertions.assertTrue(StringUtils.isNotBlank(ēventus.toString()),
-                          "Numerum prōductum dīvīsiōnis vacat.");
-    Assertions.assertEquals(ēventus.numerus, expectātus,
-                            "Numerum prōductum dīvīsiōnis expectātiōne eius differt.");
-
-    System.out.printf("%d = %s%n", numerusPrīmus, prīmus);
-    System.out.printf("%d = %s%n", numerusSecundus, secundus);
-    System.out.printf("%d / %d = %d = %s%n", numerusPrīmus, numerusSecundus, expectātus, ēventus);
+    perpetram((short) 18,(short) 6, '/');
   }
 
   /**
@@ -188,24 +159,6 @@ public class Numerī {
    */
   @Test @Order(8)
   public void mānsiōnis() {
-    final short numerusPrīmus = 12;
-    final short numerusSecundus = 9;
-    final short expectātus = numerusPrīmus % numerusSecundus;
-
-    final VerbumSimplex.Numerus prīmus = strūctor().numerus(numerusPrīmus);
-    Assertions.assertNotNull(prīmus, String.format("Prōductō mānsiōnis est relicta prōductiō numerī %d.", numerusPrīmus));
-    final VerbumSimplex.Numerus secundus = strūctor().numerus(numerusSecundus);
-    Assertions.assertNotNull(secundus, String.format("Prōductō mānsiōnis est relicta prōductiō numerī %d.", numerusSecundus));
-    final VerbumSimplex.Numerus ēventus = prīmus.maneō(secundus);
-
-    Assertions.assertNotNull(ēventus, String.format("Prōductō mānsiōnis est relicta prōductiō numerī %d.", expectātus));
-    Assertions.assertTrue(StringUtils.isNotBlank(ēventus.toString()),
-                          "Numerum prōductum mānsiōnis vacat.");
-    Assertions.assertEquals(ēventus.numerus, expectātus,
-                            "Numerum prōductum mānsiōnis expectātiōne eius differt.");
-
-    System.out.printf("%d = %s%n", numerusPrīmus, prīmus);
-    System.out.printf("%d = %s%n", numerusSecundus, secundus);
-    System.out.printf("%d %% %d = %d = %s%n", numerusPrīmus, numerusSecundus, expectātus, ēventus);
+    perpetram((short) 12,(short) 9, '%');
   }
 }

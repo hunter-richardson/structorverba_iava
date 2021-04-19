@@ -159,17 +159,20 @@ public abstract class VerbumSimplex <Hoc extends Verbum <Hoc>> extends Verbum <H
 
     /**
      * @return repraesentātiōnem scrīpta reī classis {@link Numerus}.
-     * @throws IllegalArgumentException sī valor {@link #numerus} exit terminōs mathēmaticae quae sunt I et MMMCMXCIX.
      * @see <a href="https://github.com/Chaosfirebolt/RomanNumeralConverter/blob/master/src/main/java/com/github/chaosfirebolt/converter/RomanInteger.java">RomanInteger</a>
      */
     public @Override @NotNull String toString() throws IllegalArgumentException {
-      return ostendam().toString();
+      try {
+        return ostendam().toString();
+      } catch (IllegalArgumentException e) {
+        nūntius().terreō(e);
+        return StringUtils.EMPTY;
+      }
     }
 
     /**
-     * @return rem classis {@link Numerus} quae ēventum additiōnis cum rē {@code alius} repraesentat.
+     * @return rem classis {@link Numerus} quae ēventum additiōnis cum valōre {@code alius} repraesentat.
      * @param alius Rēs classis {@link Numerus} ūsa additiōnī.
-     * @throws IllegalArgumentException sī valor {@link #numerus} aut huius aut valōris {@code alius} aut ēventī exit terminōs mathēmaticae quae sunt I et MMMCMXCIX.
      * @see <a href="https://github.com/Chaosfirebolt/RomanNumeralConverter/blob/master/src/main/java/com/github/chaosfirebolt/converter/RomanInteger.java">RomanInteger</a>
      */
     public Numerus addō(final @NotNull Numerus alius) {
@@ -182,9 +185,8 @@ public abstract class VerbumSimplex <Hoc extends Verbum <Hoc>> extends Verbum <H
     }
 
     /**
-     * @return rem classis {@link Numerus} quae ēventum subtractiōnis cum rē {@code alius} repraesentat.
+     * @return rem classis {@link Numerus} quae ēventum subtractiōnis cum valōre {@code alius} repraesentat.
      * @param alius Rēs classis {@link Numerus} ūsa subtractiōnī.
-     * @throws IllegalArgumentException sī valor {@link #numerus} aut huius aut valōris {@code alius} aut ēventī exit terminōs mathēmaticae quae sunt I et MMMCMXCIX.
      * @see <a href="https://github.com/Chaosfirebolt/RomanNumeralConverter/blob/master/src/main/java/com/github/chaosfirebolt/converter/RomanInteger.java">RomanInteger</a>
      */
     public Numerus subtrahō(final @NotNull Numerus alius) {
@@ -197,9 +199,8 @@ public abstract class VerbumSimplex <Hoc extends Verbum <Hoc>> extends Verbum <H
     }
 
     /**
-     * @return rem classis {@link Numerus} quae ēventum multiplicātiōnis cum rē {@code alius} repraesentat.
+     * @return rem classis {@link Numerus} quae ēventum multiplicātiōnis cum valōre {@code alius} repraesentat.
      * @param alius Rēs classis {@link Numerus} ūsa multiplicātiōnī.
-     * @throws IllegalArgumentException sī valor {@link #numerus} aut huius aut valōris {@code alius} aut ēventī exit terminōs mathēmaticae quae sunt I et MMMCMXCIX.
      * @see <a href="https://github.com/Chaosfirebolt/RomanNumeralConverter/blob/master/src/main/java/com/github/chaosfirebolt/converter/RomanInteger.java">RomanInteger</a>
      */
     public Numerus multiplicō(final @NotNull Numerus alius) {
@@ -212,9 +213,8 @@ public abstract class VerbumSimplex <Hoc extends Verbum <Hoc>> extends Verbum <H
     }
 
     /**
-     * @return rem classis {@link Numerus} quae ēventum dīvīsiōnis cum rē {@code alius} repraesentat.
+     * @return rem classis {@link Numerus} quae ēventum dīvīsiōnis cum valōre {@code alius} repraesentat.
      * @param alius Rēs classis {@link Numerus} ūsa dīvīsiōnī.
-     * @throws IllegalArgumentException sī valor {@link #numerus} aut huius aut valōris {@code alius} aut ēventī exit terminōs mathēmaticae quae sunt I et MMMCMXCIX.
      * @see <a href="https://github.com/Chaosfirebolt/RomanNumeralConverter/blob/master/src/main/java/com/github/chaosfirebolt/converter/RomanInteger.java">RomanInteger</a>
      */
     public Numerus dīvidō(final @NotNull Numerus alius) {
@@ -227,9 +227,8 @@ public abstract class VerbumSimplex <Hoc extends Verbum <Hoc>> extends Verbum <H
     }
 
     /**
-     * @return rem classis {@link Numerus} quae ēventum mānsiōnis cum rē {@code alius} repraesentat.
+     * @return rem classis {@link Numerus} quae ēventum mānsiōnis cum valōre {@code alius} repraesentat.
      * @param alius Rēs classis {@link Numerus} ūsa mānsiōnī.
-     * @throws IllegalArgumentException sī valor {@link #numerus} aut huius aut valōris {@code alius} aut ēventī exit terminōs mathēmaticae quae sunt I et MMMCMXCIX.
      * @see <a href="https://github.com/Chaosfirebolt/RomanNumeralConverter/blob/master/src/main/java/com/github/chaosfirebolt/converter/RomanInteger.java">RomanInteger</a>
      */
     public Numerus maneō(final @NotNull Numerus alius) {
