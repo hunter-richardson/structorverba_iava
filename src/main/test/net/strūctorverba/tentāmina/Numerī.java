@@ -23,7 +23,7 @@ public class Numerī {
 
   private final @NotNull String XLII_SCRĪPTIŌ = "XLII";
 
-  private void perpetram(final short numerusPrīmus, final short numerusSecundus, final char operātiō) {
+  private String perpetram(final short numerusPrīmus, final short numerusSecundus, final char operātiō) {
     final String labor = switch (operātiō) {
                            case '+' -> "additiōnis";
                            case '-' -> "subtractiōnis";
@@ -60,9 +60,11 @@ public class Numerī {
       Assertions.assertTrue(StringUtils.isNotBlank(ēventus.toString()),
                             String.format("Numerum prōductum %s vacat.", labor));
 
-      System.out.printf("%d = %s%n", numerusPrīmus, prīmus);
-      System.out.printf("%d = %s%n", numerusSecundus, secundus);
-      System.out.printf("%d %c %d = %d = %s%n", numerusPrīmus, operātiō, numerusSecundus, expectātus, ēventus);
+      return String.format("%d = %s%n%d = %s%n%d %c %d = %d = %s%n",
+                           numerusPrīmus, prīmus, numerusSecundus, secundus,
+                           numerusPrīmus, operātiō, numerusSecundus, expectātus, ēventus);
+    } else {
+      return StringUtils.EMPTY;
     }
   }
 
@@ -113,8 +115,7 @@ public class Numerī {
     Assertions.assertEquals(numerus, secundus.numerus,
                             "Numerum prōductum combīnātiōnis expectātiōne eius differt.");
 
-    System.out.printf("%s = %d%n", prīmus, numerus);
-    System.out.printf("%d = %s%n", numerus, secundus);
+    System.out.printf("%s = %d%n%d = %s%n", prīmus, numerus, numerus, secundus);
   }
 
   /**
@@ -123,7 +124,7 @@ public class Numerī {
    */
   @Test @Order(4)
   public void additiōnis() {
-    perpetram((short) 17, (short) 3, '+');
+    System.out.println(perpetram((short) 17, (short) 3, '+'));
   }
 
   /**
@@ -132,7 +133,7 @@ public class Numerī {
    */
   @Test @Order(5)
   public void subtractiōnis() {
-    perpetram((short) 12,(short) 7, '-');
+    System.out.println(perpetram((short) 12,(short) 7, '-'));
   }
 
   /**
@@ -141,7 +142,7 @@ public class Numerī {
    */
   @Test @Order(6)
   public void multiplicātiōnis() {
-    perpetram((short) 3,(short) 2, '*');
+    System.out.println(perpetram((short) 3,(short) 2, '*'));
   }
 
   /**
@@ -150,7 +151,7 @@ public class Numerī {
    */
   @Test @Order(7)
   public void dīvīsiōnis() {
-    perpetram((short) 18,(short) 6, '/');
+    System.out.println(perpetram((short) 18,(short) 6, '/'));
   }
 
   /**
@@ -159,6 +160,6 @@ public class Numerī {
    */
   @Test @Order(8)
   public void mānsiōnis() {
-    perpetram((short) 12,(short) 9, '%');
+    System.out.println(perpetram((short) 12,(short) 9, '%'));
   }
 }
