@@ -6,6 +6,7 @@ import net.strūctorverba.inventōrēs.*;
 import net.strūctorverba.lēctōrēs.*;
 import net.strūctorverba.tenōrēs.*;
 import net.strūctorverba.verba.VerbumSimplex;
+import net.strūctorverba.verba.disposita.VerbaPraepositiōne;
 import net.strūctorverba.verba.multiplicia.*;
 import org.apache.commons.lang3.*;
 import org.jetbrains.annotations.*;
@@ -824,6 +825,25 @@ public abstract class Nūntius {
 
     private NūntiusĀctōrum( ) {
       super(ParametrīNūntiī.parā(Āctum.Conditōr.class));
+    }
+  }
+
+  /**
+   * Classis {@link NūntiusVerbōrumPraepositiōnibus} est vās classis {@link Nūntius} classī {@link VerbaPraepositiōne.Conditōr}}
+   * @see VerbaPraepositiōne.Conditōr
+   */
+  public static final class NūntiusVerbōrumPraepositiōnibus extends Nūntius {
+    private static @Nullable NūntiusVerbōrumPraepositiōnibus īnstantia = null;
+
+    /**
+     * Valor hic viam reī classis huiuc facit.
+     * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
+     */
+    public static final @NotNull Supplier <NūntiusVerbōrumPraepositiōnibus> fac =
+      () -> ObjectUtils.firstNonNull(īnstantia, īnstantia = new NūntiusVerbōrumPraepositiōnibus());
+
+    private NūntiusVerbōrumPraepositiōnibus() {
+      super(ParametrīNūntiī.parā(VerbaPraepositiōne.Conditōr.class));
     }
   }
 

@@ -3,24 +3,23 @@ package net.strūctorverba.verba.disposita;
 import lombok.*;
 import lombok.experimental.Accessors;
 import net.strūctorverba.mīscella.StrūctorVerba;
-import net.strūctorverba.nūntiī.*;
+import net.strūctorverba.nūntiī.Nūntius;
 import net.strūctorverba.verba.*;
 import net.strūctorverba.verba.multiplicia.*;
 import net.strūctorverba.ēnumerātiōnēs.*;
-import org.apache.commons.lang3.*;
-import org.jetbrains.annotations.*;
-
-import java.util.function.Supplier;
+import org.apache.commons.lang3.StringUtils;
+import org.jetbrains.annotations.NotNull;
 
 /**
  * Classis {@link VerbaPraepositiōne} rēs classum {@link Nōminālis} et {@link VerbumSimplex.Praepositiō} conciliat.
  * VerbaPraepositiōne catēgoriam {@link Catēgoria#VERBA_PRAEPOSITIŌNE} ūtuntur et sunt generātī statim quam cōnservātī intrā scrīnium <a href="../src/main/resources">auxiliārēs</a>.
+ * @see Nūntius.NūntiusVerbōrumPraepositiōnibus
  * @see StrūctorVerba
  */
 @SuppressWarnings({ "NonAsciiCharacters", "SpellCheckingInspection", "unused" })
 public final class VerbaPraepositiōne extends VerbumMultiplex <VerbaPraepositiōne> {
   @Getter(lazy = true) @Accessors(fluent = true)
-  private final @NotNull NūntiusVerbōrumPraepositiōnibus nūntius = NūntiusVerbōrumPraepositiōnibus.fac.get();
+  private final @NotNull Nūntius.NūntiusVerbōrumPraepositiōnibus nūntius = Nūntius.NūntiusVerbōrumPraepositiōnibus.fac.get();
 
   private final @NotNull VerbumSimplex.Praepositiō praepositiō;
   private final @NotNull Nōminālis <?>             rēs;
@@ -71,17 +70,6 @@ public final class VerbaPraepositiōne extends VerbumMultiplex <VerbaPraepositi�
       return rēs.toString();
     } else {
       return String.format("%s%s", rēs, encliticum.scrīptiō);
-    }
-  }
-
-  public static final class NūntiusVerbōrumPraepositiōnibus extends Nūntius {
-    private static @Nullable NūntiusVerbōrumPraepositiōnibus īnstantia = null;
-
-    public static final @NotNull Supplier <NūntiusVerbōrumPraepositiōnibus> fac =
-      () -> ObjectUtils.firstNonNull(īnstantia, īnstantia = new NūntiusVerbōrumPraepositiōnibus());
-
-    private NūntiusVerbōrumPraepositiōnibus() {
-      super(ParametrīNūntiī.parā(VerbaPraepositiōne.Conditōr.class));
     }
   }
 }
