@@ -1,10 +1,8 @@
 package net.strūctorverba.ēnumerātiōnēs;
 
-import lombok.Getter;
-import net.strūctorverba.nūntiī.Nūntius;
 import net.strūctorverba.verba.multiplicia.Āctum;
 import org.apache.commons.lang3.StringUtils;
-import org.jetbrains.annotations.*;
+import org.jetbrains.annotations.NotNull;
 
 import java.util.stream.Stream;
 
@@ -51,9 +49,6 @@ public enum Tempus {
    * Curtātum ā verbīs duōbus est scrīptiōnem facilem in scāpīs XML licēre.
    */
   PERFUTŪRUM("perfutūrum");
-
-  @Getter(lazy = true)
-  private static final @NotNull Nūntius.NūntiusĒnumerātiōnum nūntius = Nūntius.NūntiusĒnumerātiōnum.fac.get();
 
   /**
    * Valor hic repraesentātiōnem scrīpta reī huius dēsignat.

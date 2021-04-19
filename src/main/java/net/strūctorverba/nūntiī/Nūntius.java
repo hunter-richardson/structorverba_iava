@@ -848,25 +848,6 @@ public abstract class Nūntius {
   }
 
   /**
-   * Classis {@link NūntiusĒnumerātiōnum} est vās classis {@link Nūntius} ipsīusmet.
-   * Ēnumerātiōnēs dēfīnītās intrā scrīnium <a href="../src/main/java/net/strūctorverba/ēnumerātiōnēs">ēnumerātiōnēs</a> repraesentat.
-   */
-  @Singleton public static final class NūntiusĒnumerātiōnum extends Nūntius {
-    private static @Nullable NūntiusĒnumerātiōnum īnstantia = null;
-
-    /**
-     * Valor hic viam reī classis huiuc facit.
-     * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
-     */
-    public static final @NotNull Supplier<NūntiusĒnumerātiōnum> fac =
-      () -> ObjectUtils.firstNonNull(īnstantia, īnstantia = new NūntiusĒnumerātiōnum());
-
-    private NūntiusĒnumerātiōnum( ) {
-      super(ParametrīNūntiī.parā(NūntiusĒnumerātiōnum.class));
-    }
-  }
-
-  /**
    * Classis {@link NūntiusErrōribus} est vās classis {@link Nūntius} ipsīusmet.
    * Indicat quod exsecūtiōnem programmātis StrūctorVerba errōrem inopīnātum continuātur.
    * @see <a href="https://docs.oracle.com/javase/9/docs/api/java/lang/Thread.UncaughtExceptionHandler.html">Thread.UncaughtExceptionHandler</a>

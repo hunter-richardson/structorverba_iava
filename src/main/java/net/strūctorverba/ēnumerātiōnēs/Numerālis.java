@@ -1,10 +1,8 @@
 package net.strūctorverba.ēnumerātiōnēs;
 
-import lombok.Getter;
-import net.strūctorverba.nūntiī.Nūntius;
 import net.strūctorverba.verba.multiplicia.*;
 import org.apache.commons.lang3.StringUtils;
-import org.jetbrains.annotations.*;
+import org.jetbrains.annotations.NotNull;
 
 import java.util.stream.Stream;
 
@@ -30,9 +28,6 @@ public enum Numerālis {
    * Valor hic numerum plūrālem dēsignat.
    */
   PLŪRĀLIS("plūrālis");
-
-  @Getter(lazy = true)
-  private static final @NotNull Nūntius.NūntiusĒnumerātiōnum nūntius = Nūntius.NūntiusĒnumerātiōnum.fac.get();
 
   /**
    * Valor hic repraesentātiōnem scrīpta reī huius dēsignat.

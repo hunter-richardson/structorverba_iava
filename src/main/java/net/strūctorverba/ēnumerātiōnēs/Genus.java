@@ -1,10 +1,8 @@
 package net.strūctorverba.ēnumerātiōnēs;
 
-import lombok.Getter;
-import net.strūctorverba.nūntiī.Nūntius;
 import net.strūctorverba.verba.multiplicia.Nōminālis;
 import org.apache.commons.lang3.StringUtils;
-import org.jetbrains.annotations.*;
+import org.jetbrains.annotations.NotNull;
 
 import java.util.stream.Stream;
 
@@ -34,9 +32,6 @@ public enum Genus {
    * Valor hic generem fēminīnum dēsignat.
    */
   FĒMINĪNUM("fēminīnum");
-
-  @Getter(lazy = true)
-  private static final @NotNull Nūntius.NūntiusĒnumerātiōnum nūntius = Nūntius.NūntiusĒnumerātiōnum.fac.get();
 
   /**
    * Valor hic repraesentātiōnem scrīpta reī huius dēsignat.
