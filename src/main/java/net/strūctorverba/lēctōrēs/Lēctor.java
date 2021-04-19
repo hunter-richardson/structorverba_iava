@@ -15,6 +15,7 @@ import java.util.function.Supplier;
 
 /**
  * Classis {@link Lēctor} colliget datum ā scāpō XML intrā scrīnium <a href="../src/main/resources">auxiliārēs</a> rēbus classis {@link Verbum} scrībere.
+ * @param <Hoc> classis extentum classis {@link Verbum}
  */
 @SuppressWarnings({ "NonAsciiCharacters", "SpellCheckingInspection" })
 public abstract class Lēctor <Hoc extends Verbum <Hoc>> {

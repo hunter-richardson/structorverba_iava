@@ -22,7 +22,7 @@ public abstract class VerbumMultiplex <Hoc extends Verbum <Hoc>> extends Verbum 
   /**
    * Valor hic fōrmam fīnem verbī repraesentat. Condiciōnibus plūrimīs est ut ūsūfructuāriī petīvit.
    */
-  protected final @NotNull String scrīptiō;
+  public final @NotNull String scrīptiō;
 
   /**
    * Valor hic <a href="https://en.wiktionary.org/wiki/Category:Latin_clitics">encliticum</a> subiūnctum dēsignat.

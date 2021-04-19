@@ -9,7 +9,7 @@ import net.strūctorverba.conditōrēs.ConditōrSimplicibus;
 import net.strūctorverba.inventōrēs.Inventor;
 import net.strūctorverba.lēctōrēs.*;
 import net.strūctorverba.nūntiī.*;
-import net.strūctorverba.tenōrēs.TenorSimplibus;
+import net.strūctorverba.tenōrēs.TenorSimplicibus;
 import net.strūctorverba.verba.disposita.Verba;
 import net.strūctorverba.ēnumerātiōnēs.*;
 import org.apache.commons.lang3.*;
@@ -24,7 +24,7 @@ import java.util.stream.*;
  * Rēs classis {@link Inventor} rēbus classis huius absunt atque inūtilēs fuerint.
  * @param <Hoc> Tabellā hāc classis {@link Hoc} extēnsiōnem aptam datīs petītīs repraesentat.
  * @see LēctorSimplicibus
- * @see TenorSimplibus
+ * @see TenorSimplicibus
  * @see ConditōrSimplicibus
  */
 @SuppressWarnings({ "NonAsciiCharacters", "SpellCheckingInspction" })
@@ -47,7 +47,7 @@ public abstract class VerbumSimplex <Hoc extends Verbum <Hoc>> extends Verbum <H
    * Classis {@link Adverbium} repraesentat adverbia ut coniectēris.
    * Adverbia catēgoriam {@link Catēgoria#ADVERBIUM} ūtuntur et cōnservāta sunt in scrīniō <a href="../src/main/resources/adverbia">adverbia</a>.
    * @see LēctorSimplicibus.LēctorAdverbiīs
-   * @see TenorSimplibus.TenorAdverbiīs
+   * @see TenorSimplicibus.TenorAdverbiīs
    * @see ConditōrSimplicibus.ConditōrAdverbiīs
    * @see Nūntius.NūntiusAdverbiōrum
    */
@@ -67,7 +67,7 @@ public abstract class VerbumSimplex <Hoc extends Verbum <Hoc>> extends Verbum <H
    * Coniūnctīva catēgoriam {@link Catēgoria#CONIŪNCTĪVUM} ūtuntur et cōnservāta sunt in scrīniō <a href="../src/main/resources/coniūnctīva">coniūnctīva</a>.
    * Prōpositīs programmātis huius classis haec differt classe {@link Adverbium} sōlum in quō classis haec modōs {@link Coniugiāle} dēfīnītōs dēdūcit.
    * @see LēctorSimplicibus.LēctorConiūnctīvīs
-   * @see TenorSimplibus.TenorConiūnctivīs
+   * @see TenorSimplicibus.TenorConiūnctivīs
    * @see ConditōrSimplicibus.ConditōrConiūnctīvīs
    * @see Nūntius.NūntiusConiūnctīvōrum
    */

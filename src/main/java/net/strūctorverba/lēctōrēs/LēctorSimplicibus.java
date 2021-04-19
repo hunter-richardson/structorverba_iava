@@ -1,7 +1,7 @@
 package net.strūctorverba.lēctōrēs;
 
 import net.strūctorverba.nūntiī.Nūntius;
-import net.strūctorverba.tenōrēs.TenorSimplibus;
+import net.strūctorverba.tenōrēs.TenorSimplicibus;
 import net.strūctorverba.verba.VerbumSimplex;
 import net.strūctorverba.ēnumerātiōnēs.Catēgoria;
 import org.apache.commons.lang3.ObjectUtils;
@@ -13,7 +13,7 @@ import java.util.function.Supplier;
 /**
  * Classis {@link LēctorSimplicibus} est vās classis {@link Lēctor} classibus omnibus quibus classem {@link VerbumSimplex} extendit.
  * @param <Hoc> classis extentum classis {@link VerbumSimplex}
- * @see TenorSimplibus
+ * @see TenorSimplicibus
  */
 @SuppressWarnings({ "NonAsciiCharacters", "SpellCheckingInspection" })
 public abstract class LēctorSimplicibus <Hoc extends VerbumSimplex <Hoc>> extends Lēctor <Hoc> {
@@ -24,7 +24,7 @@ public abstract class LēctorSimplicibus <Hoc extends VerbumSimplex <Hoc>> exten
    * @param tenor valōrem {@link Lēctor#tenor} supplet.
    */
   protected LēctorSimplicibus(@NotNull final Catēgoria catēgoria, @NotNull final Supplier <? extends Nūntius> nūntius,
-                              @NotNull final Supplier <@NotNull ? extends TenorSimplibus <Hoc>> tenor) {
+                              @NotNull final Supplier <@NotNull ? extends TenorSimplicibus <Hoc>> tenor) {
     super(catēgoria, nūntius, tenor);
   }
 
@@ -48,7 +48,7 @@ public abstract class LēctorSimplicibus <Hoc extends VerbumSimplex <Hoc>> exten
   /**
    * Classis {@link LēctorAdverbiīs} est vās classis {@link Lēctor} classī {@link VerbumSimplex.Adverbium}.
    * @see Catēgoria#ADVERBIUM
-   * @see TenorSimplibus.TenorAdverbiīs
+   * @see TenorSimplicibus.TenorAdverbiīs
    * @see Nūntius.NūntiusLēctōrīAdverbiīs
    */
   @Singleton @DependsOn({ "TenorAdverbiīs", "NūntiusLēctōrīAdverbiīs" })
@@ -65,14 +65,14 @@ public abstract class LēctorSimplicibus <Hoc extends VerbumSimplex <Hoc>> exten
     private LēctorAdverbiīs( ) {
       super(Catēgoria.ADVERBIUM,
             Nūntius.NūntiusLēctōrīAdverbiīs.fac,
-            TenorSimplibus.TenorAdverbiīs.fac);
+            TenorSimplicibus.TenorAdverbiīs.fac);
     }
   }
 
   /**
    * Classis {@link LēctorConiūnctīvīs} est vās classis {@link Lēctor} classī {@link VerbumSimplex.Coniūnctīvum}.
    * @see Catēgoria#CONIŪNCTĪVUM
-   * @see TenorSimplibus.TenorConiūnctivīs
+   * @see TenorSimplicibus.TenorConiūnctivīs
    * @see Nūntius.NūntiusLēctōrīConiūnctīvīs
    */
   @Singleton @DependsOn({ "TenorConiūnctivīs", "NūntiusLēctōrīConiūnctīvīs" })
@@ -89,7 +89,7 @@ public abstract class LēctorSimplicibus <Hoc extends VerbumSimplex <Hoc>> exten
     private LēctorConiūnctīvīs( ) {
       super(Catēgoria.CONIŪNCTĪVUM,
             Nūntius.NūntiusLēctōrīConiūnctīvīs.fac,
-            TenorSimplibus.TenorConiūnctivīs.fac);
+            TenorSimplicibus.TenorConiūnctivīs.fac);
     }
   }
 }

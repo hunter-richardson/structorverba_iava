@@ -143,8 +143,8 @@ public abstract class Nūntius {
   }
 
   /**
-   * Classis {@link NūntiusTenōrīAdverbiīs} est vās classis {@link Nūntius} classī {@link TenorSimplibus.TenorAdverbiīs}
-   * @see TenorSimplibus.TenorAdverbiīs
+   * Classis {@link NūntiusTenōrīAdverbiīs} est vās classis {@link Nūntius} classī {@link TenorSimplicibus.TenorAdverbiīs}
+   * @see TenorSimplicibus.TenorAdverbiīs
    */
   @Singleton public static final class NūntiusTenōrīAdverbiīs extends Nūntius {
     private static @Nullable NūntiusTenōrīAdverbiīs īnstantia = null;
@@ -157,13 +157,13 @@ public abstract class Nūntius {
       () -> ObjectUtils.firstNonNull(īnstantia, īnstantia = new NūntiusTenōrīAdverbiīs());
 
     private NūntiusTenōrīAdverbiīs( ) {
-      super(ParametrīNūntiī.parā(TenorSimplibus.TenorAdverbiīs.class));
+      super(ParametrīNūntiī.parā(TenorSimplicibus.TenorAdverbiīs.class));
     }
   }
 
   /**
-   * Classis {@link NūntiusTenōrīConiūnctivīs} est vās classis {@link Nūntius} classī {@link TenorSimplibus.TenorConiūnctivīs}
-   * @see TenorSimplibus.TenorConiūnctivīs
+   * Classis {@link NūntiusTenōrīConiūnctivīs} est vās classis {@link Nūntius} classī {@link TenorSimplicibus.TenorConiūnctivīs}
+   * @see TenorSimplicibus.TenorConiūnctivīs
    */
   @Singleton public static final class NūntiusTenōrīConiūnctivīs extends Nūntius {
     private static @Nullable NūntiusTenōrīConiūnctivīs īnstantia = null;
@@ -176,7 +176,7 @@ public abstract class Nūntius {
       () -> ObjectUtils.firstNonNull(īnstantia, īnstantia = new NūntiusTenōrīConiūnctivīs());
 
     private NūntiusTenōrīConiūnctivīs( ) {
-      super(ParametrīNūntiī.parā(TenorSimplibus.TenorConiūnctivīs.class));
+      super(ParametrīNūntiī.parā(TenorSimplicibus.TenorConiūnctivīs.class));
     }
   }
 
