@@ -2,6 +2,7 @@ package net.strūctorverba.conditōrēs.multiplicia;
 
 import net.strūctorverba.conditōrēs.Conditōr;
 import net.strūctorverba.nūntiī.Nūntius;
+import net.strūctorverba.verba.Verbum;
 import net.strūctorverba.verba.multiplicia.*;
 import net.strūctorverba.ēnumerātiōnēs.*;
 import org.apache.commons.lang3.*;
@@ -62,18 +63,18 @@ public final class ConditōrPrōnōminibus extends ConditōrMultiplicibus <Prōn
 
   /**
    * @inheritDoc
-   * @see Speciālitās#dēfīniam(String, Speciālitās)
-   * @see Genus#dēfīniam(String, Genus)
-   * @see Cāsus#dēfīniam(String, Cāsus)
-   * @see Numerālis#dēfīniam(String, Numerālis)
+   * @see Speciālitās#dēfīniam(String)
+   * @see Genus#dēfīniam(String)
+   * @see Cāsus#dēfīniam(String)
+   * @see Numerālis#dēfīniam(String)
    * @see Verbum#fundāmen
    */
   public @Override void allegō(@NotNull final String nōmen, @NotNull final String dēscrīptor) {
     switch (nōmen) {
-      case "speciālitās" -> speciālitās = Speciālitās.dēfīniam(dēscrīptor, Speciālitās.NŪLLUM);
-      case "genus" -> genus = Genus.dēfīniam(dēscrīptor, Genus.NŪLLUM);
-      case "numerālis" -> numerālis = Numerālis.dēfīniam(dēscrīptor, Numerālis.NŪLLUS);
-      case "cāsus" -> cāsus = Cāsus.dēfīniam(dēscrīptor, Cāsus.NŪLLUS);
+      case "speciālitās" -> speciālitās = Speciālitās.dēfīniam(dēscrīptor);
+      case "genus" -> genus = Genus.dēfīniam(dēscrīptor);
+      case "numerālis" -> numerālis = Numerālis.dēfīniam(dēscrīptor);
+      case "cāsus" -> cāsus = Cāsus.dēfīniam(dēscrīptor);
       case "fundāmen" -> fundāmen = dēscrīptor.trim();
       default -> {
         nūntius.moneō(Prōnōmen.class.getSimpleName().replace("en", "ī"),

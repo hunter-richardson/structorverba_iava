@@ -57,20 +57,20 @@ public final class ConditōrĀctīs extends ConditōrMultiplicibus <Āctum> {
 
   /**
    * @inheritDoc
-   * @see Modus#dēfīniam(String, Modus)
-   * @see Vōx#dēfīniam(String, Vōx)
-   * @see Tempus#dēfīniam(String, Tempus)
-   * @see Numerālis#dēfīniam(String, Numerālis)
-   * @see Persōna#dēfīniam(String, Persōna)
+   * @see Modus#dēfīniam(String)
+   * @see Vōx#dēfīniam(String)
+   * @see Tempus#dēfīniam(String)
+   * @see Numerālis#dēfīniam(String)
+   * @see Persōna#dēfīniam(String)
    * @see Verbum#fundāmen
    */
   public @Override void allegō(@NotNull final String nōmen, @NotNull final String dēscrīptor) {
     switch (nōmen) {
-      case "modus" -> modus = Modus.dēfīniam(dēscrīptor, Modus.NŪLLUS);
-      case "vōx" -> vōx = Vōx.dēfīniam(dēscrīptor, Vōx.NŪLLA);
-      case "tempus" -> tempus = Tempus.dēfīniam(dēscrīptor, Tempus.NŪLLUM);
-      case "numerālis" -> numerālis = Numerālis.dēfīniam(dēscrīptor, Numerālis.NŪLLUS);
-      case "persōna" -> persōna = Persōna.dēfīniam(dēscrīptor, Persōna.NŪLLA);
+      case "modus" -> modus = Modus.dēfīniam(dēscrīptor);
+      case "vōx" -> vōx = Vōx.dēfīniam(dēscrīptor);
+      case "tempus" -> tempus = Tempus.dēfīniam(dēscrīptor);
+      case "numerālis" -> numerālis = Numerālis.dēfīniam(dēscrīptor);
+      case "persōna" -> persōna = Persōna.dēfīniam(dēscrīptor);
       case "fundāmen" -> fundāmen = dēscrīptor.trim();
       default -> {
         nūntius.moneō(Āctum.class.getSimpleName().replace("um", "ō"),

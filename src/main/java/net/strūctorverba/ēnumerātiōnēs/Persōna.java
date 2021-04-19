@@ -53,52 +53,24 @@ public enum Persōna {
 
   /**
    * Modus hic rem ēnumerātiō {@link Persōna} ā parametrō dēsignātō advenit.
-   * @return rem ēnumerātiō {@link Persōna} quod parametrum dēsignātum quadrat.
    * @param scrīptiō valōrem {@link #scrīptiō} indicat.
-   * @implSpec {@code null} veniet sī rēs nūlla parametrum quadrat.
-   */
-  public static @Nullable Persōna dēfīniam(@NotNull final String scrīptiō) {
-    return dēfīniam(scrīptiō, null);
-  }
-
-  /**
-   * Modus hic rem ēnumerātiō {@link Persōna} ā parametrō dēsignātō advenit.
    * @return rem ēnumerātiō {@link Persōna} quod parametrum dēsignātum quadrat.
-   * @param scrīptiō valōrem {@link #scrīptiō} indicat.
-   * @param dēfecta valor reventus sī rēs nūlla parametrum quadrat.
+   * @apiNote Modus hic valōrem {@link #NŪLLA} refert sī nihil valōrem {@code scrīptiō} quadrat
    */
-  public static @Nullable Persōna dēfīniam(@NotNull final String scrīptiō, @Nullable final Persōna dēfecta) {
+  public static @NotNull Persōna dēfīniam(@NotNull final String scrīptiō) {
     return Stream.of(values())
                  .filter(persōna -> persōna.scrīptiō.equals(scrīptiō))
-                 .findFirst().orElse(dēfecta);
+                 .findFirst().orElse(NŪLLA);
   }
 
   /**
-   * @return {@code illud} sī valōrem ēnumerātiō {@link Persōna} quadrat; {@code dēfecta} aliter.
+   * @return {@code illud} sī valōrem ēnumerātiō {@link Persōna} quadrat; {@link #NŪLLA} aliter.
    * @param illud valor tentandus.
-   * @param dēfecta valor reventus sī rēs nūlla {@code illud} quadrat.
-   */
-  public static @NotNull Persōna ut(@NotNull final Enum<@NotNull ?> illud, @NotNull final Persōna dēfecta) {
-    try {
-      return ut(illud);
-    } catch (EnumConstantNotPresentException e) {
-      getNūntius().terreō(e);
-      return dēfecta;
-    }
-  }
-
-  /**
-   * @return {@code illud} sī valōrem ēnumerātiō {@link Persōna} quadrat; {@code dēfecta} aliter.
-   * @param illud valor tentandus.
-   * @implSpec {@code null} veniet sī rēs nūlla {@code illud} quadrat.
    */
   @SuppressWarnings("ConstantConditions")
-  public static @NotNull Persōna ut(@NotNull final Enum<@NotNull ?> illud) throws EnumConstantNotPresentException {
+  public static @NotNull Persōna ut(@NotNull final Enum<@NotNull ?> illud) {
     final Persōna hoc = (Persōna) illud;
-    if(hoc.equals(illud)) {
-      return hoc;
-    } else {
-      throw new EnumConstantNotPresentException(Cāsus.class, illud.name());
-    }
+    return hoc.equals(illud) ? hoc
+                             : NŪLLA;
   }
 }

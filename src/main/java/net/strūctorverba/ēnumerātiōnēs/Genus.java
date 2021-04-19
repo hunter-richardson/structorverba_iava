@@ -53,52 +53,24 @@ public enum Genus {
 
   /**
    * Modus hic rem ēnumerātiō {@link Genus} ā parametrō dēsignātō advenit.
-   * @return rem ēnumerātiō {@link Genus} quod parametrum dēsignātum quadrat.
    * @param scrīptiō valōrem {@link #scrīptiō} indicat.
-   * @implSpec {@code null} veniet sī rēs nūlla parametrum quadrat.
-   */
-  public static @Nullable Genus dēfīniam(@NotNull final String scrīptiō) {
-    return dēfīniam(scrīptiō, null);
-  }
-
-  /**
-   * Modus hic rem ēnumerātiō {@link Genus} ā parametrō dēsignātō advenit.
    * @return rem ēnumerātiō {@link Genus} quod parametrum dēsignātum quadrat.
-   * @param scrīptiō valōrem {@link #scrīptiō} indicat.
-   * @param dēfecta valor reventus sī rēs nūlla parametrum quadrat.
+   * @apiNote Modus hic valōrem {@link #NŪLLUM} refert sī nihil valōrem {@code scrīptiō} quadrat
    */
-  public static @Nullable Genus dēfīniam(@NotNull final String scrīptiō, @Nullable final Genus dēfecta) {
+  public static @NotNull Genus dēfīniam(@NotNull final String scrīptiō) {
     return Stream.of(values())
                  .filter(genus -> genus.scrīptiō.equals(scrīptiō))
-                 .findFirst().orElse(dēfecta);
+                 .findFirst().orElse(NŪLLUM);
   }
 
   /**
-   * @return {@code illud} sī valōrem ēnumerātiō {@link Genus} quadrat; {@code dēfecta} aliter.
+   * @return {@code illud} sī valōrem ēnumerātiō {@link Genus} quadrat; {@link #NŪLLUM} aliter.
    * @param illud valor tentandus.
-   * @param dēfecta valor reventus sī rēs nūlla {@code illud} quadrat.
-   */
-  public static @NotNull Genus ut(@NotNull final Enum<@NotNull ?> illud, @NotNull final Genus dēfecta) {
-    try {
-      return ut(illud);
-    } catch (EnumConstantNotPresentException e) {
-      getNūntius().terreō(e);
-      return dēfecta;
-    }
-  }
-
-  /**
-   * @return {@code illud} sī valōrem ēnumerātiō {@link Genus} quadrat; {@code dēfecta} aliter.
-   * @param illud valor tentandus.
-   * @implSpec {@code null} veniet sī rēs nūlla {@code illud} quadrat.
    */
   @SuppressWarnings("ConstantConditions")
-  public static @NotNull Genus ut(@NotNull final Enum<@NotNull ?> illud) throws EnumConstantNotPresentException {
+  public static @NotNull Genus ut(@NotNull final Enum<@NotNull ?> illud) {
     final Genus hoc = (Genus) illud;
-    if(hoc.equals(illud)) {
-      return hoc;
-    } else {
-      throw new EnumConstantNotPresentException(Cāsus.class, illud.name());
-    }
+    return hoc.equals(illud) ? hoc
+                             : NŪLLUM;
   }
 }

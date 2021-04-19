@@ -64,20 +64,20 @@ public final class ConditōrAdiectīvīs extends ConditōrMultiplicibus <Adiect�
 
   /**
    * @inheritDoc
-   * @see Speciālitās#dēfīniam(String, Speciālitās)
-   * @see Genus#dēfīniam(String, Genus)
-   * @see Cāsus#dēfīniam(String, Cāsus)
-   * @see Numerālis#dēfīniam(String, Numerālis)
-   * @see Gradus#dēfīniam(String, Gradus)
+   * @see Speciālitās#dēfīniam(String)
+   * @see Genus#dēfīniam(String)
+   * @see Cāsus#dēfīniam(String)
+   * @see Numerālis#dēfīniam(String)
+   * @see Gradus#dēfīniam(String)
    * @see Verbum#fundāmen
    */
   public @Override void allegō(@NotNull final String nōmen, @NotNull final String dēscrīptor) {
     switch (nōmen) {
-      case "speciālitās" -> speciālitās = Speciālitās.dēfīniam(dēscrīptor, Speciālitās.NŪLLUM);
-      case "genus" -> genus = Genus.dēfīniam(dēscrīptor, Genus.NŪLLUM);
-      case "numerālis" -> numerālis = Numerālis.dēfīniam(dēscrīptor, Numerālis.NŪLLUS);
-      case "cāsus" -> cāsus = Cāsus.dēfīniam(dēscrīptor, Cāsus.NŪLLUS);
-      case "gradus" -> gradus = Gradus.dēfīniam(dēscrīptor, Gradus.NŪLLUS);
+      case "speciālitās" -> speciālitās = Speciālitās.dēfīniam(dēscrīptor);
+      case "genus" -> genus = Genus.dēfīniam(dēscrīptor);
+      case "numerālis" -> numerālis = Numerālis.dēfīniam(dēscrīptor);
+      case "cāsus" -> cāsus = Cāsus.dēfīniam(dēscrīptor);
+      case "gradus" -> gradus = Gradus.dēfīniam(dēscrīptor);
       case "fundāmen" -> fundāmen = dēscrīptor.trim();
       default -> {
         nūntius.moneō(Adiectīvum.class.getSimpleName().replace("um", "ō"),

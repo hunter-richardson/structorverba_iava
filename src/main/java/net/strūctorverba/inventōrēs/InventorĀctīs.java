@@ -62,31 +62,31 @@ public final class InventorĀctīs extends Inventor <Āctum> {
 
   /**
    * @inheritDoc
-   * @see Vōx#ut(Enum, Vōx)
-   * @see Tempus#ut(Enum, Tempus)
-   * @see Numerālis#ut(Enum, Numerālis)
-   * @see Persōna#ut(Enum, Persōna)
-   * @see Modus#ut(Enum, Modus)
+   * @see Vōx#ut(Enum)
+   * @see Tempus#ut(Enum)
+   * @see Numerālis#ut(Enum)
+   * @see Persōna#ut(Enum)
+   * @see Modus#ut(Enum)
    */
   protected @Override void allegam(@NotNull final Enum<@NotNull ?> illud) {
     if (illud instanceof Vōx) {
-      vōx = Vōx.ut(illud, Vōx.NŪLLA);
+      vōx = Vōx.ut(illud);
       nūntius.garriō("Quastiōnī adiēcī conditiōnem novam:",
                      Vōx.class.getSimpleName(), "est", illud);
     } else if (illud instanceof Tempus) {
-      tempus = Tempus.ut(illud, Tempus.NŪLLUM);
+      tempus = Tempus.ut(illud);
       nūntius.garriō("Quastiōnī adiēcī conditiōnem novam:",
                      Tempus.class.getSimpleName(), "est", illud);
     } else if (illud instanceof Numerālis) {
-      numerālis = Numerālis.ut(illud, Numerālis.NŪLLUS);
+      numerālis = Numerālis.ut(illud);
       nūntius.garriō("Quastiōnī adiēcī conditiōnem novam:",
                      Numerālis.class.getSimpleName(), "est", illud);
     } else if (illud instanceof Persōna) {
-      persōna = Persōna.ut(illud, Persōna.NŪLLA);
+      persōna = Persōna.ut(illud);
       nūntius.garriō("Quastiōnī adiēcī conditiōnem novam:",
                      Persōna.class.getSimpleName(), "est", illud);
     } else if (illud instanceof Modus) {
-      modus = Modus.ut(illud, Modus.NŪLLUS);
+      modus = Modus.ut(illud);
       nūntius.garriō("Quastiōnī adiēcī conditiōnem novam:",
                      Modus.class.getSimpleName(), "est", illud);
     } else {

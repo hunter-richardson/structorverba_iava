@@ -63,52 +63,24 @@ public enum Modus {
 
   /**
    * Modus hic rem ēnumerātiō {@link Cāsus} ā parametrō dēsignātō advenit.
-   * @return rem ēnumerātiō {@link Cāsus} quod parametrum dēsignātum quadrat.
    * @param scrīptiō valōrem {@link #scrīptiō} indicat.
-   * @implSpec {@code null} veniet sī rēs nūlla parametrum quadrat.
-   */
-  public static @Nullable Modus dēfīniam(@NotNull final String scrīptiō) {
-    return dēfīniam(scrīptiō, null);
-  }
-
-  /**
-   * Modus hic rem ēnumerātiō {@link Cāsus} ā parametrō dēsignātō advenit.
    * @return rem ēnumerātiō {@link Cāsus} quod parametrum dēsignātum quadrat.
-   * @param scrīptiō valōrem {@link #scrīptiō} indicat.
-   * @param dēfecta valor reventus sī rēs nūlla parametrum quadrat.
+   * @apiNote Modus hic valōrem {@link #NŪLLUS} refert sī nihil valōrem {@code scrīptiō} quadrat
    */
-  public static @Nullable Modus dēfīniam(@NotNull final String scrīptiō, @Nullable final Modus dēfecta) {
+  public static @NotNull Modus dēfīniam(@NotNull final String scrīptiō) {
     return Stream.of(values())
                  .filter(modus -> modus.scrīptiō.equals(scrīptiō))
-                 .findFirst().orElse(dēfecta);
+                 .findFirst().orElse(NŪLLUS);
   }
 
   /**
-   * @return {@code illud} sī valōrem ēnumerātiō {@link Cāsus} quadrat; {@code dēfecta} aliter.
+   * @return {@code illud} sī valōrem ēnumerātiō {@link Cāsus} quadrat; {@link #NŪLLUS} aliter.
    * @param illud valor tentandus.
-   * @param dēfecta valor reventus sī rēs nūlla {@code illud} quadrat.
-   */
-  public static @NotNull Modus ut(@NotNull final Enum<@NotNull ?> illud, @NotNull final Modus dēfecta) {
-    try {
-      return ut(illud);
-    } catch (EnumConstantNotPresentException e) {
-      getNūntius().terreō(e);
-      return dēfecta;
-    }
-  }
-
-  /**
-   * @return {@code illud} sī valōrem ēnumerātiō {@link Cāsus} quadrat; {@code dēfecta} aliter.
-   * @param illud valor tentandus.
-   * @implSpec {@code null} veniet sī rēs nūlla {@code illud} quadrat.
    */
   @SuppressWarnings("ConstantConditions")
-  public static @NotNull Modus ut(@NotNull final Enum<@NotNull ?> illud) throws EnumConstantNotPresentException {
+  public static @NotNull Modus ut(@NotNull final Enum<@NotNull ?> illud) {
     final Modus hoc = (Modus) illud;
-    if(hoc.equals(illud)) {
-      return hoc;
-    } else {
-      throw new EnumConstantNotPresentException(Cāsus.class, illud.name());
-    }
+    return hoc.equals(illud) ? hoc
+                             : NŪLLUS;
   }
 }

@@ -59,26 +59,26 @@ public final class InventorPrōnōminibus extends Inventor <Prōnōmen> {
 
   /**
    * @inheritDoc
-   * @see Speciālitās#ut(Enum, Speciālitās)
-   * @see Genus#ut(Enum, Genus)
-   * @see Numerālis#ut(Enum, Numerālis)
-   * @see Cāsus#ut(Enum, Cāsus)
+   * @see Speciālitās#ut(Enum)
+   * @see Genus#ut(Enum)
+   * @see Numerālis#ut(Enum)
+   * @see Cāsus#ut(Enum)
    */
   protected @Override void allegam(@NotNull final Enum<@NotNull ?> illud) {
     if (illud instanceof Speciālitās) {
-      speciālitās = Speciālitās.ut(illud, Speciālitās.NŪLLUM);
+      speciālitās = Speciālitās.ut(illud);
       nūntius.garriō("Quastiōnī adiēcī conditiōnem novam:",
                      Speciālitās.class.getSimpleName(), "est", illud);
     } else if (illud instanceof Genus) {
-      genus = Genus.ut(illud, Genus.NŪLLUM);
+      genus = Genus.ut(illud);
       nūntius.garriō("Quastiōnī adiēcī conditiōnem novam:",
                      Genus.class.getSimpleName(), "est", illud);
     } else if (illud instanceof Numerālis) {
-      numerālis = Numerālis.ut(illud, Numerālis.NŪLLUS);
+      numerālis = Numerālis.ut(illud);
       nūntius.garriō("Quastiōnī adiēcī conditiōnem novam:",
                      Numerālis.class.getSimpleName(), "est", illud);
     } else if (illud instanceof Cāsus) {
-      cāsus = Cāsus.ut(illud, Cāsus.NŪLLUS);
+      cāsus = Cāsus.ut(illud);
       nūntius.garriō("Quastiōnī adiēcī conditiōnem novam:",
                      Cāsus.class.getSimpleName(), "est", illud);
     } else {
