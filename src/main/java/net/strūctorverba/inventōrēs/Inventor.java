@@ -31,7 +31,7 @@ public abstract class Inventor <Hoc extends VerbumMultiplex <Hoc>> {
   /**
    * Modus hic seriem {@code illa} reī huic indit.
    * @param illa seriem ēnumerātiōnum indendam
-   * @return rem huius
+   * @return Rem huius
    * @see #allegam(Enum)
    */
   public final @NotNull Inventor <Hoc> allegō(@NotNull final Enum <@NotNull ?>... illa) {
@@ -40,7 +40,8 @@ public abstract class Inventor <Hoc extends VerbumMultiplex <Hoc>> {
   }
 
   /**
-   * @return quaestiōnem quam rēs classis {@link LēctorMultiplicibus} ūtātur rēs classis {@link VerbumMultiplex} percōlere
+   * @return Quaestiōnem quam rēs classis {@link LēctorMultiplicibus} ūtātur rēs classis {@link VerbumMultiplex} percōlere
+   * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Predicate.html">Prediate</a>
    */
   public abstract @NotNull Predicate <@NotNull Hoc> inquīram( );
 

@@ -42,7 +42,7 @@ public abstract class Tenor <Hoc extends Verbum <Hoc>> extends DefaultHandler {
   }
 
   /**
-   * @return valōrem {@link #hoc}
+   * @return Valōrem {@link #hoc}
    */
   public @Nullable Hoc referō( ) {
     return hoc;

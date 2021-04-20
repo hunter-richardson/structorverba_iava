@@ -31,7 +31,9 @@ import java.util.stream.*;
 @SuppressWarnings({ "NonAsciiCharacters", "SpellCheckingInspction" })
 public abstract class VerbumSimplex <Hoc extends Verbum <Hoc>> extends Verbum <Hoc> {
   /**
-   * {@inheritDoc}
+   * Officium hoc cōnstrūctōrem reī classis huius perpetrat.
+   * @param ctgr valōrem {@link #catēgoria} indicat.
+   * @param fdmn valōrem {@link #fundāmen} indicat.
    */
   protected VerbumSimplex(@NotNull final Catēgoria ctgr, @NotNull final String fdmn) {
     super(ctgr, fdmn);
@@ -39,7 +41,7 @@ public abstract class VerbumSimplex <Hoc extends Verbum <Hoc>> extends Verbum <H
 
   /**
    *
-   * @return repraesentātiōnem scrīpta reī classis {@link VerbumSimplex}. <br>
+   * @return Repraesentātiōnem scrīpta reī classis {@link VerbumSimplex}. <br>
    * Sōlum valōrem {@link Verbum#fundāmen} potest referre cum fōrmā ūnā.
    */
   public @Override @NotNull String toString( ) {
@@ -67,7 +69,7 @@ public abstract class VerbumSimplex <Hoc extends Verbum <Hoc>> extends Verbum <H
 
   /**
    * Classis {@link Coniūnctīvum} repraesentat coniūnctīva ut coniectēris. <br>
-   * Coniūnctīva catēgoriam {@link Catēgoria#CONIŪNCTĪVUM} ūtuntur et cōnservāta sunt in scrīniō <a href="../src/main/resources/coniūnctīva">coniūnctīva</a>. <br>
+   * Coniūnctīva catēgoriam {@link Catēgoria#CONIŪNCTĪVUM} ūtuntur et cōnservāta sunt in scrīniō <a href="{@docRoot}/../src/main/resources">auxiliārēs</a>/coniūnctīva. <br>
    * Prōpositīs programmātis huius classis haec differt classe {@link Adverbium} sōlum in quō classis haec modōs {@link Coniugiāle} dēfīnītōs dēdūcit.
    * @see LēctorSimplicibus.LēctorConiūnctīvīs
    * @see TenorSimplicibus.TenorConiūnctivīs
@@ -124,7 +126,7 @@ public abstract class VerbumSimplex <Hoc extends Verbum <Hoc>> extends Verbum <H
 
   /**
    * Classis {@link Praepositiō} repraesentat praepositiōnēs ut coniectēris. <br>
-   * Praepositiōnēs catēgoriam {@link Catēgoria#PRAEPOSITIŌ} ūtuntur et cōnservāta sunt in scrīniō <a href="../src/main/resources/praepositiōnēs">praepositiōnēs</a>.
+   * Praepositiōnēs catēgoriam {@link Catēgoria#PRAEPOSITIŌ} ūtuntur et cōnservāta sunt in scrīniō <a href="{@docRoot}/../src/main/resources">auxiliārēs</a>/praepositiōnēs.
    * @see LēctorPraepositiōnibus
    * @see Nūntius.NūntiusPraepositiōnum
    */
@@ -132,6 +134,9 @@ public abstract class VerbumSimplex <Hoc extends Verbum <Hoc>> extends Verbum <H
     @Getter(lazy = true) @Accessors(fluent = true)
     private final @NotNull Nūntius.NūntiusPraepositiōnum nūntius = Nūntius.NūntiusPraepositiōnum.fac.get();
 
+    /**
+     * Valor hic supplet rem classis {@link Praepositiō} quam praepositiōnem nūlla repraesentat.
+     */
     public static final @NotNull Supplier<Praepositiō> assūme =
       () -> Praepositiō.conditōr().fundāmen(StringUtils.EMPTY).condam();
 
@@ -170,7 +175,7 @@ public abstract class VerbumSimplex <Hoc extends Verbum <Hoc>> extends Verbum <H
     }
 
     /**
-     * @return repraesentātiōnem scrīpta reī classis {@link Numerus}.
+     * @return Repraesentātiōnem scrīpta reī classis {@link Numerus}.
      * @see <a href="https://github.com/Chaosfirebolt/RomanNumeralConverter/blob/master/src/main/java/com/github/chaosfirebolt/converter/RomanInteger.java">RomanInteger</a>
      */
     public @Override @NotNull String toString() throws IllegalArgumentException {
@@ -183,7 +188,7 @@ public abstract class VerbumSimplex <Hoc extends Verbum <Hoc>> extends Verbum <H
     }
 
     /**
-     * @return rem classis {@link Numerus} quae ēventum additiōnis cum valōre {@code alius} repraesentat.
+     * @return Rem classis {@link Numerus} quae ēventum additiōnis cum valōre {@code alius} repraesentat.
      * @param alius Rēs classis {@link Numerus} ūsa additiōnī.
      * @see <a href="https://github.com/Chaosfirebolt/RomanNumeralConverter/blob/master/src/main/java/com/github/chaosfirebolt/converter/RomanInteger.java">RomanInteger</a>
      */
@@ -197,7 +202,7 @@ public abstract class VerbumSimplex <Hoc extends Verbum <Hoc>> extends Verbum <H
     }
 
     /**
-     * @return rem classis {@link Numerus} quae ēventum subtractiōnis cum valōre {@code alius} repraesentat.
+     * @return Rem classis {@link Numerus} quae ēventum subtractiōnis cum valōre {@code alius} repraesentat.
      * @param alius Rēs classis {@link Numerus} ūsa subtractiōnī.
      * @see <a href="https://github.com/Chaosfirebolt/RomanNumeralConverter/blob/master/src/main/java/com/github/chaosfirebolt/converter/RomanInteger.java">RomanInteger</a>
      */
@@ -211,7 +216,7 @@ public abstract class VerbumSimplex <Hoc extends Verbum <Hoc>> extends Verbum <H
     }
 
     /**
-     * @return rem classis {@link Numerus} quae ēventum multiplicātiōnis cum valōre {@code alius} repraesentat.
+     * @return Rem classis {@link Numerus} quae ēventum multiplicātiōnis cum valōre {@code alius} repraesentat.
      * @param alius Rēs classis {@link Numerus} ūsa multiplicātiōnī.
      * @see <a href="https://github.com/Chaosfirebolt/RomanNumeralConverter/blob/master/src/main/java/com/github/chaosfirebolt/converter/RomanInteger.java">RomanInteger</a>
      */
@@ -225,7 +230,7 @@ public abstract class VerbumSimplex <Hoc extends Verbum <Hoc>> extends Verbum <H
     }
 
     /**
-     * @return rem classis {@link Numerus} quae ēventum dīvīsiōnis cum valōre {@code alius} repraesentat.
+     * @return Rem classis {@link Numerus} quae ēventum dīvīsiōnis cum valōre {@code alius} repraesentat.
      * @param alius Rēs classis {@link Numerus} ūsa dīvīsiōnī.
      * @see <a href="https://github.com/Chaosfirebolt/RomanNumeralConverter/blob/master/src/main/java/com/github/chaosfirebolt/converter/RomanInteger.java">RomanInteger</a>
      */
@@ -239,7 +244,7 @@ public abstract class VerbumSimplex <Hoc extends Verbum <Hoc>> extends Verbum <H
     }
 
     /**
-     * @return rem classis {@link Numerus} quae ēventum mānsiōnis cum valōre {@code alius} repraesentat.
+     * @return Rem classis {@link Numerus} quae ēventum mānsiōnis cum valōre {@code alius} repraesentat.
      * @param alius Rēs classis {@link Numerus} ūsa mānsiōnī.
      * @see <a href="https://github.com/Chaosfirebolt/RomanNumeralConverter/blob/master/src/main/java/com/github/chaosfirebolt/converter/RomanInteger.java">RomanInteger</a>
      */

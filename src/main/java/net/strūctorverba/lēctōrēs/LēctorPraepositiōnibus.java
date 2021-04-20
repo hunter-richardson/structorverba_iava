@@ -16,13 +16,13 @@ import java.util.function.*;
 import java.util.stream.Stream;
 
 /**
- * Classis {@link LēctorPraepositiōnibus} colliget datum ā scāpō XML in scrīnium <a href="../src/main/resources/praepositiōnēs">praepositiōnēs</a> rēbus classis {@link VerbumSimplex.Praepositiō} scrībere. <br>
+ * Classis {@link LēctorPraepositiōnibus} colliget datum ā scāpō XML in scrīnium <a href="{@docRoot}/../src/main/resources">auxiliārēs</a>/praepositiōnēs rēbus classis {@link VerbumSimplex.Praepositiō} scrībere. <br>
  * Dissimilis ā extēnsiōnibus classis {@link Lēctor} est quod scāpum omne seriem longa ēventōrum possibilium continet. Ergō classem {@link Lēctor} nōn extendit. <br>
  * Scāpa quattuor sunt quae reī huic intersunt ut scāpa singulus cāsuī omnī repraesentātō: {@link Cāsus#ABLĀTĪVUS} et {@link Cāsus#ACCŪSĀTĪVUS} et {@link Cāsus#GENITĪVUS} et {@link Cāsus#VOCĀTĪVUS}.
- * @see <a href="../src/main/resources/praepositiōnēs/ablātīvus.data">ablātīvus.data</a>
- * @see <a href="../src/main/resources/praepositiōnēs/accūsātīvus.data">accūsātīvus.data</a>
- * @see <a href="../src/main/resources/praepositiōnēs/genitīvus.data">genitīvus.data</a>
- * @see <a href="../src/main/resources/praepositiōnēs/vocātīvus.data">vocātīvus.data</a>
+ * @see <a href="{@docRoot}/../src/main/resources">auxiliārēs</a>/praepositiōnēs/ablātīvus.data
+ * @see <a href="{@docRoot}/../src/main/resources">auxiliārēs</a>/praepositiōnēs/accūsātīvus.data
+ * @see <a href="{@docRoot}/../src/main/resources">auxiliārēs</a>/praepositiōnēs/genitīvus.data
+ * @see <a href="{@docRoot}/../src/main/resources">auxiliārēs</a>/praepositiōnēs/vocātīvus.data
  * @see Nūntius.NūntiusLēctōrīPraepositiōnibus
  */
 @SuppressWarnings({ "NonAsciiCharacters", "SpellCheckingInspection", "unused" })
@@ -80,9 +80,9 @@ public final class LēctorPraepositiōnibus {
   }
 
   /**
-   * Modus hic rem classis {@link VerbumSimplex.Praepositiō} ā scāpō XML in scrīnium <a href="../src/main/resources/praepositiōnēs">praepositiōnēs</a> cōnābitur advenīre.
+   * Modus hic rem classis {@link VerbumSimplex.Praepositiō} ā scāpō XML in scrīnium <a href="{@docRoot}/../src/main/resources">auxiliārēs</a>/praepositiōnēs cōnābitur advenīre.
    * @param verbum fundāmen praepositiōnī quod rēs haec cōnābitur advenīre
-   * @return rem classis {@link VerbumSimplex.Praepositiō} quam valōrem {@code verbum} quadrat
+   * @return Rem classis {@link VerbumSimplex.Praepositiō} quam valōrem {@code verbum} quadrat
    */
   public @NotNull VerbumSimplex.Praepositiō adveniam(@NotNull final String verbum) {
    Cāsus cāsus = Stream.of(Cāsus.ABLĀTĪVUS, Cāsus.ACCŪSĀTĪVUS, Cāsus.GENITĪVUS, Cāsus.VOCĀTĪVUS)

@@ -42,10 +42,10 @@ public enum Vōx {
   }
 
   /**
-   * Modus hic rem ēnumerātiō {@link Vōx} ā parametrō dēsignātō advenit.
+   * Modus hic rem ēnumerātiō {@link Vōx} ā parametrō dēsignātō advenit. <br>
+   * Valōrem {@link #NŪLLA} refert sī nihil valōrem {@code scrīptiō} quadrat.
    * @param scrīptiō valōrem {@link #scrīptiō} indicat.
-   * @return rem ēnumerātiō {@link Vōx} quod parametrum dēsignātum quadrat.
-   * @apiNote Modus hic valōrem {@link #NŪLLA} refert sī nihil valōrem {@code scrīptiō} quadrat
+   * @return Rem ēnumerātiō {@link Vōx} quod parametrum dēsignātum quadrat.
    */
   public static @NotNull Vōx dēfīniam(@NotNull final String scrīptiō) {
     return Stream.of(values())

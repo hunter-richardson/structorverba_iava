@@ -28,11 +28,7 @@ final class ParametrīNūntiī {
    */
   public final @NotNull Supplier <@NotNull Logger> praecōnium;
 
-  /**
-   * Officium hoc cōnstrūctōrem reī classis huius perpetrat.
-   * @param classis refert classī cui rēs haec pertinet.
-   */
-  public ParametrīNūntiī(@NotNull final Class <?> classis) {
+  private ParametrīNūntiī(@NotNull final Class <?> classis) {
     praecōnium = () -> {
         final Logger praecō = Logger.getLogger(classis.getSimpleName());
         praecō.setParent(Logger.getGlobal());

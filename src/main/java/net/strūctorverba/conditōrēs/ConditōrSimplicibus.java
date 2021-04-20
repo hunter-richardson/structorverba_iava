@@ -44,7 +44,7 @@ public abstract class ConditōrSimplicibus <Hoc extends VerbumSimplex <Hoc>> ext
   }
 
   /**
-   * Modus hic rem classis {@link Hoc} accipit et valōrī {@link #Conditōr#nūntius} ita refert.
+   * Modus hic rem classis {@link Hoc} accipit et valōrī {@link Conditōr#nūntius} ita refert.
    * @param hoc rem tentanda
    */
   protected abstract void referō(@Nullable final Hoc hoc);

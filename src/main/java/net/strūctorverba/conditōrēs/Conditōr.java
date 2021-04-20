@@ -42,7 +42,7 @@ public abstract class Conditōr <Hoc extends Verbum <Hoc>> {
 
   /**
    * Modus hic rem classis {@link Hoc} cōnābitur cōnstruere.
-   * @return rem novam classis {@link Hoc}
+   * @return Rem novam classis {@link Hoc}
    */
   public abstract @Nullable Hoc condam( );
 }

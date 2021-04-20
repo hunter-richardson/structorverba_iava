@@ -41,6 +41,7 @@ public final class ConditōrPrōnōminibusConiūnctīvīs extends ConditōrMulti
 
   /**
    * {@inheritDoc}
+   * @return Rem novam classis {@link PrōnōmenConiūnctīvum}
    */
   public @Override @Nullable PrōnōmenConiūnctīvum condam( ) {
     if (StringUtils.isNoneBlank(fundāmen, scrīptiō)) {

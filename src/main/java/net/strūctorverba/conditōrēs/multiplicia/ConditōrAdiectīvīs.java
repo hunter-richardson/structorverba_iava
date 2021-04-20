@@ -43,6 +43,7 @@ public final class ConditōrAdiectīvīs extends ConditōrMultiplicibus <Adiect�
 
   /**
    * {@inheritDoc}
+   * @return Rem novam classis {@link Adiectīvum}
    */
   public @Override @Nullable Adiectīvum condam( ) {
     if (StringUtils.isNoneBlank(fundāmen, scrīptiō)) {

@@ -42,6 +42,7 @@ public final class ConditōrNōminibus extends ConditōrMultiplicibus <Nōmen> {
 
   /**
    * {@inheritDoc}
+   * @return Rem novam classis {@link Nōmen}
    */
   public @Override @Nullable Nōmen condam( ) {
     if (StringUtils.isNoneBlank(fundāmen, scrīptiō)) {

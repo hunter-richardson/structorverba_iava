@@ -15,7 +15,7 @@ import java.util.Objects;
 
 /**
  * Classis {@link Āctum} repraesentat nōmina ut coniectēris. <br>
- * Nōmina catēgoriam {@link Catēgoria#ĀCTUM} ūtuntur et cōnservāta sunt in scrīniō <a href="../src/main/resources/ācta">ācta</a>.
+ * Nōmina catēgoriam {@link Catēgoria#ĀCTUM} ūtuntur et cōnservāta sunt in scrīniō <a href="{@docRoot}/../src/main/resources">auxiliārēs</a>/ācta.
  * @see LēctorMultiplicibus.LēctorĀctīs
  * @see TenorMultiplicibus.TenorĀctīs
  * @see InventorĀctīs
@@ -78,7 +78,7 @@ public final class Āctum extends VerbumMultiplex <Āctum> {
 
   /**
    * Modus hic rem classis {@link Adiectīvum} ā parametrīs dēsignātīs advenit.
-   * @return rem classis {@link Adiectīvum} quod parametra dēsignāta quadrat.
+   * @return Rem classis {@link Adiectīvum} quod parametra dēsignāta quadrat.
    * @param vx valōrem {@link #vōx} indicat.
    * @param tmps valōrem {@link #tempus} indicat.
    * @param spclt valōrem {@link Nōminālis#speciālitās} indicat.
@@ -103,7 +103,7 @@ public final class Āctum extends VerbumMultiplex <Āctum> {
 
   /**
    * Modus hic rem classis {@link Adiectīvum} ā parametrīs dēsignātīs advenit.
-   * @return rem classis {@link Adiectīvum} quod parametra dēsignāta quadrat.
+   * @return Rem classis {@link Adiectīvum} quod parametra dēsignāta quadrat.
    * @param vx valōrem {@link #vōx} indicat.
    * @param spclt valōrem {@link Nōminālis#speciālitās} indicat.
    * @param gns valōrem {@link Nōminālis#genus} indicat.
@@ -119,7 +119,7 @@ public final class Āctum extends VerbumMultiplex <Āctum> {
 
   /**
    * Modus hic rem classis {@link Adiectīvum} ā parametrīs dēsignātīs advenit.
-   * @return rem classis {@link Adiectīvum} quod parametra dēsignāta quadrat.
+   * @return Rem classis {@link Adiectīvum} quod parametra dēsignāta quadrat.
    * @param tmps valōrem {@link #tempus} indicat.
    * @param spclt valōrem {@link Nōminālis#speciālitās} indicat.
    * @param gns valōrem {@link Nōminālis#genus} indicat.
@@ -135,7 +135,7 @@ public final class Āctum extends VerbumMultiplex <Āctum> {
 
   /**
    * Modus hic rem classis {@link Adiectīvum} ā parametrīs dēsignātīs advenit.
-   * @return rem classis {@link Adiectīvum} quod parametra dēsignāta quadrat.
+   * @return Rem classis {@link Adiectīvum} quod parametra dēsignāta quadrat.
    * @param spclt valōrem {@link Nōminālis#speciālitās} indicat.
    * @param gns valōrem {@link Nōminālis#genus} indicat.
    * @param css valōrem {@link Nōminālis#cāsus} indicat.

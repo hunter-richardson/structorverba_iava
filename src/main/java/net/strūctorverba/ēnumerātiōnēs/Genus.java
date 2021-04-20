@@ -47,10 +47,10 @@ public enum Genus {
   }
 
   /**
-   * Modus hic rem ēnumerātiō {@link Genus} ā parametrō dēsignātō advenit.
+   * Modus hic rem ēnumerātiō {@link Genus} ā parametrō dēsignātō advenit. <br>
+   * Valōrem {@link #NŪLLUM} refert sī nihil valōrem {@code scrīptiō} quadrat.
    * @param scrīptiō valōrem {@link #scrīptiō} indicat.
-   * @return rem ēnumerātiō {@link Genus} quod parametrum dēsignātum quadrat.
-   * @apiNote Modus hic valōrem {@link #NŪLLUM} refert sī nihil valōrem {@code scrīptiō} quadrat
+   * @return Rem ēnumerātiō {@link Genus} quod parametrum dēsignātum quadrat.
    */
   public static @NotNull Genus dēfīniam(@NotNull final String scrīptiō) {
     return Stream.of(values())

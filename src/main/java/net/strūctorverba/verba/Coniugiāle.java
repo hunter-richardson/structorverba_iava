@@ -18,7 +18,7 @@ public interface Coniugiāle {
    * @param prīmus valor prīmus
    * @param secundus valor secundus
    * @param <Ille> classis quae valōrēs et {@code prīmus} et {@code secundus} quadrat
-   * @return seriēs classis {@link Verbum} quae valōrum et {@code prīmus} et huius et {@code secundus} ōrdine constat
+   * @return Seriēs classis {@link Verbum} quae valōrum et {@code prīmus} et huius et {@code secundus} ōrdine constat
    */
   <Ille extends Verbum <Ille>> @NotNull LinkedList <Verbum <@Nullable ?>> coniugō(@Nullable final Ille prīmus, @Nullable final Ille secundus);
 
@@ -26,7 +26,7 @@ public interface Coniugiāle {
    * Modus hic valōrēs trēs coniugat.
    * @param prīmus valor prīmus
    * @param secundus valor secundus
-   * @return rēs classis {@link Verba} quae valōrum et {@code prīmus} et huius et {@code secundus} constat
+   * @return Rēs classis {@link Verba} quae valōrum et {@code prīmus} et huius et {@code secundus} constat
    */
   @NotNull Verba coniugō(@NotNull final Verba prīmus, @NotNull final Verba secundus);
 
@@ -34,12 +34,12 @@ public interface Coniugiāle {
    * Modus hic valōrēs trēs coniugat.
    * @param prīmus valor prīmus
    * @param secundus valor secundus
-   * @return rēs classis {@link Verba} quae valōrum et {@code prīmus} et huius et {@code secundus} constat
+   * @return Rēs classis {@link Verba} quae valōrum et {@code prīmus} et huius et {@code secundus} constat
    */
   @NotNull Verba coniugō(@NotNull final Verba prīmus, @NotNull final LinkedList <Verbum <@Nullable ?>> secundus);
 
   /**
-   * @return repraesentātiōnem scrīpta reī huius.
+   * @return Repraesentātiōnem scrīpta reī huius.
    * @see Verbum#toString()
    */
   @Override @NotNull String toString( );

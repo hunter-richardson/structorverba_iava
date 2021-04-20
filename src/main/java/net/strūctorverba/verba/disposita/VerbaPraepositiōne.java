@@ -55,7 +55,7 @@ public final class VerbaPraepositiōne extends VerbumMultiplex <VerbaPraepositi�
 
   /**
    * @param cltm valōrem {@link #encliticum} indicat.
-   * @return rem hanc
+   * @return Rem hanc
    */
   @SuppressWarnings("UnusedReturnValue")
   public @Override @NotNull VerbaPraepositiōne allege(@NotNull final Encliticum cltm) {
@@ -66,7 +66,7 @@ public final class VerbaPraepositiōne extends VerbumMultiplex <VerbaPraepositi�
   }
 
   /**
-   * @return repraesentātiōnem scrīpta reī classis {@link Verbum}. <br>
+   * @return Repraesentātiōnem scrīpta reī classis {@link Verbum}. <br>
    * Valōrem rēs classum {@link Nōminālis} et {@link VerbumSimplex.Praepositiō} addit.
    */
   public @Override @NotNull String toString( ) {

@@ -47,10 +47,10 @@ public enum Persōna {
   }
 
   /**
-   * Modus hic rem ēnumerātiō {@link Persōna} ā parametrō dēsignātō advenit.
+   * Modus hic rem ēnumerātiō {@link Persōna} ā parametrō dēsignātō advenit. <br>
+   * Valōrem {@link #NŪLLA} refert sī nihil valōrem {@code scrīptiō} quadrat.
    * @param scrīptiō valōrem {@link #scrīptiō} indicat.
-   * @return rem ēnumerātiō {@link Persōna} quod parametrum dēsignātum quadrat.
-   * @apiNote Modus hic valōrem {@link #NŪLLA} refert sī nihil valōrem {@code scrīptiō} quadrat
+   * @return Rem ēnumerātiō {@link Persōna} quod parametrum dēsignātum quadrat.
    */
   public static @NotNull Persōna dēfīniam(@NotNull final String scrīptiō) {
     return Stream.of(values())

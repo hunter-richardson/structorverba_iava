@@ -43,10 +43,10 @@ public enum Numerālis {
   }
 
   /**
-   * Modus hic rem ēnumerātiō {@link Numerālis} ā parametrō dēsignātō advenit.
+   * Modus hic rem ēnumerātiō {@link Numerālis} ā parametrō dēsignātō advenit. <br>
+   * Valōrem {@link #NŪLLUS} refert sī nihil valōrem {@code scrīptiō} quadrat.
    * @param scrīptiō valōrem {@link #scrīptiō} indicat.
-   * @return rem ēnumerātiō {@link Numerālis} quod parametrum dēsignātum quadrat.
-   * @apiNote Modus hic valōrem {@link #NŪLLUS} refert sī nihil valōrem {@code scrīptiō} quadrat
+   * @return Rem ēnumerātiō {@link Numerālis} quod parametrum dēsignātum quadrat.
    */
   public static @NotNull Numerālis dēfīniam(@NotNull final String scrīptiō) {
     return Stream.of(values())

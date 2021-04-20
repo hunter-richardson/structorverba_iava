@@ -39,7 +39,8 @@ public final class InventorPrōnōminibusConiūnctīvīs extends Inventor <Prōn
   }
 
   /**
-   * @return quaestiōnem quam rēs classis {@link LēctorMultiplicibus .LēctorPrōnōminibusConiūnctīvīs} ūtātur rēs classis {@link PrōnōmenConiūnctīvum} percōlere
+   * @return Quaestiōnem quam rēs classis {@link LēctorMultiplicibus.LēctorPrōnōminibusConiūnctīvīs} ūtātur rēs classis {@link PrōnōmenConiūnctīvum} percōlere
+   * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Predicate.html">Prediate</a>
    */
   public @Override @NotNull Predicate <@NotNull PrōnōmenConiūnctīvum> inquīram( ) {
     return prōnōmen -> speciālitās.equals(prōnōmen.speciālitās)

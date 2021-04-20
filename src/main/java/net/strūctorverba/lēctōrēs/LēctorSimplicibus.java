@@ -31,7 +31,7 @@ public abstract class LēctorSimplicibus <Hoc extends VerbumSimplex <Hoc>> exten
   /**
    * Modus hic ūtitur modus {@link Lēctor#legam(String)} rem classis {@link Hoc} ā valōre {@link Lēctor#tenor} advenīre.
    * @param verbum fundāmen verbō quod rēs haec cōnābitur advenīre
-   * @return rem classis {@link Hoc} quam valōrem {@code verbum} quadrat
+   * @return Rem classis {@link Hoc} quam valōrem {@code verbum} quadrat
    */
   public final @Nullable Hoc adveniam(@NotNull final String verbum) {
     legam(verbum);

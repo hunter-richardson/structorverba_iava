@@ -42,6 +42,7 @@ public final class ConditōrĀctīs extends ConditōrMultiplicibus <Āctum> {
 
   /**
    * {@inheritDoc}
+   * @return Rem novam classis {@link Āctum}
    */
   public @Override @Nullable Āctum condam( ) {
     if (StringUtils.isNoneBlank(fundāmen, scrīptiō)) {

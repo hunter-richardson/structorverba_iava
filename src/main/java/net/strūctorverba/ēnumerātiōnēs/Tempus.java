@@ -63,10 +63,10 @@ public enum Tempus {
   }
 
   /**
-   * Modus hic rem ēnumerātiō {@link Tempus} ā parametrō dēsignātō advenit.
+   * Modus hic rem ēnumerātiō {@link Tempus} ā parametrō dēsignātō advenit. <br>
+   * Valōrem {@link #NŪLLUM} refert sī nihil valōrem {@code scrīptiō} quadrat.
    * @param scrīptiō valōrem {@link #scrīptiō} indicat.
-   * @return rem ēnumerātiō {@link Tempus} quod parametrum dēsignātum quadrat.
-   * @apiNote Modus hic valōrem {@link #NŪLLUM} refert sī nihil valōrem {@code scrīptiō} quadrat
+   * @return Rem ēnumerātiō {@link Tempus} quod parametrum dēsignātum quadrat.
    */
   public static @NotNull Tempus dēfīniam(@NotNull final String scrīptiō) {
     return Stream.of(values())

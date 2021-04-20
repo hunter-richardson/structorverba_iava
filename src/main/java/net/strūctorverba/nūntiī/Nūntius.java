@@ -658,8 +658,8 @@ public abstract class Nūntius {
   }
 
   /**
-   * Classis {@link NūntiusAdverbiōrum} est vās classis {@link Nūntius} classī {@link VerbumSimplex.Adverbium.Conditōr}
-   * @see VerbumSimplex.Adverbium.Conditōr
+   * Classis {@link NūntiusAdverbiōrum} est vās classis {@link Nūntius} classī {@link VerbumSimplex.Adverbium}
+   * @see VerbumSimplex.Adverbium
    */
   @Singleton public static final class NūntiusAdverbiōrum extends Nūntius {
     private static @Nullable NūntiusAdverbiōrum īnstantia = null;
@@ -677,8 +677,8 @@ public abstract class Nūntius {
   }
 
   /**
-   * Classis {@link NūntiusConiūnctīvōrum} est vās classis {@link Nūntius} classī {@link VerbumSimplex.Coniūnctīvum.Conditōr}}
-   * @see VerbumSimplex.Coniūnctīvum.Conditōr
+   * Classis {@link NūntiusConiūnctīvōrum} est vās classis {@link Nūntius} classī {@link VerbumSimplex.Coniūnctīvum}}
+   * @see VerbumSimplex.Coniūnctīvum
    */
   @Singleton public static final class NūntiusConiūnctīvōrum extends Nūntius {
     private static @Nullable NūntiusConiūnctīvōrum īnstantia = null;
@@ -696,8 +696,8 @@ public abstract class Nūntius {
   }
 
   /**
-   * Classis {@link NūntiusPraepositiōnum} est vās classis {@link Nūntius} classī {@link VerbumSimplex.Praepositiō.Conditōr}}
-   * @see VerbumSimplex.Praepositiō.Conditōr
+   * Classis {@link NūntiusPraepositiōnum} est vās classis {@link Nūntius} classī {@link VerbumSimplex.Praepositiō}}
+   * @see VerbumSimplex.Praepositiō
    */
   @Singleton public static final class NūntiusPraepositiōnum extends Nūntius {
     private static @Nullable NūntiusPraepositiōnum īnstantia = null;
@@ -715,8 +715,8 @@ public abstract class Nūntius {
   }
 
   /**
-   * Classis {@link NūntiusNumerōrum} est vās classis {@link Nūntius} classī {@link VerbumSimplex.Numerus.Conditōr}}
-   * @see VerbumSimplex.Numerus.Conditōr
+   * Classis {@link NūntiusNumerōrum} est vās classis {@link Nūntius} classī {@link VerbumSimplex.Numerus}}
+   * @see VerbumSimplex.Numerus
    */
   @Singleton public static final class NūntiusNumerōrum extends Nūntius {
     private static @Nullable NūntiusNumerōrum īnstantia = null;
@@ -728,14 +728,14 @@ public abstract class Nūntius {
     public static final @NotNull Supplier<NūntiusNumerōrum> fac =
       () -> ObjectUtils.firstNonNull(īnstantia, īnstantia = new NūntiusNumerōrum());
 
-    protected NūntiusNumerōrum() {
+    private NūntiusNumerōrum() {
       super(ParametrīNūntiī.parā(VerbumSimplex.Numerus.Conditōr.class));
     }
   }
 
   /**
-   * Classis {@link NūntiusNōminum} est vās classis {@link Nūntius} classī {@link Nōmen.Conditōr}}
-   * @see Nōmen.Conditōr
+   * Classis {@link NūntiusNōminum} est vās classis {@link Nūntius} classī {@link Nōmen}}
+   * @see Nōmen
    */
   @Singleton public static final class NūntiusNōminum extends Nūntius {
     private static @Nullable NūntiusNōminum īnstantia = null;
@@ -753,8 +753,8 @@ public abstract class Nūntius {
   }
 
   /**
-   * Classis {@link NūntiusAdiectīvōrum} est vās classis {@link Nūntius} classī {@link Adiectīvum.Conditōr}}
-   * @see Adiectīvum.Conditōr
+   * Classis {@link NūntiusAdiectīvōrum} est vās classis {@link Nūntius} classī {@link Adiectīvum}}
+   * @see Adiectīvum
    */
   @Singleton public static final class NūntiusAdiectīvōrum extends Nūntius {
     private static @Nullable NūntiusAdiectīvōrum īnstantia = null;
@@ -772,8 +772,8 @@ public abstract class Nūntius {
   }
 
   /**
-   * Classis {@link NūntiusPrōnōminum} est vās classis {@link Nūntius} classī {@link Prōnōmen.Conditōr}}
-   * @see Prōnōmen.Conditōr
+   * Classis {@link NūntiusPrōnōminum} est vās classis {@link Nūntius} classī {@link Prōnōmen}}
+   * @see Prōnōmen
    */
   @Singleton public static final class NūntiusPrōnōminum extends Nūntius {
     private static @Nullable NūntiusPrōnōminum īnstantia = null;
@@ -791,8 +791,8 @@ public abstract class Nūntius {
   }
 
   /**
-   * Classis {@link NūntiusPrōnōminumConiūnctīvōrum} est vās classis {@link Nūntius} classī {@link PrōnōmenConiūnctīvum.Conditōr}}
-   * @see PrōnōmenConiūnctīvum.Conditōr
+   * Classis {@link NūntiusPrōnōminumConiūnctīvōrum} est vās classis {@link Nūntius} classī {@link PrōnōmenConiūnctīvum}}
+   * @see PrōnōmenConiūnctīvum
    */
   @Singleton public static final class NūntiusPrōnōminumConiūnctīvōrum extends Nūntius {
     private static @Nullable NūntiusPrōnōminumConiūnctīvōrum īnstantia = null;
@@ -810,8 +810,8 @@ public abstract class Nūntius {
   }
 
   /**
-   * Classis {@link NūntiusĀctōrum} est vās classis {@link Nūntius} classī {@link Āctum.Conditōr}}
-   * @see Āctum.Conditōr
+   * Classis {@link NūntiusĀctōrum} est vās classis {@link Nūntius} classī {@link Āctum}}
+   * @see Āctum
    */
   @Singleton public static final class NūntiusĀctōrum extends Nūntius {
     private static @Nullable NūntiusĀctōrum īnstantia = null;
@@ -829,8 +829,8 @@ public abstract class Nūntius {
   }
 
   /**
-   * Classis {@link NūntiusVerbōrumPraepositiōnibus} est vās classis {@link Nūntius} classī {@link VerbaPraepositiōne.Conditōr}}
-   * @see VerbaPraepositiōne.Conditōr
+   * Classis {@link NūntiusVerbōrumPraepositiōnibus} est vās classis {@link Nūntius} classī {@link VerbaPraepositiōne}}
+   * @see VerbaPraepositiōne
    */
   public static final class NūntiusVerbōrumPraepositiōnibus extends Nūntius {
     private static @Nullable NūntiusVerbōrumPraepositiōnibus īnstantia = null;
@@ -862,7 +862,7 @@ public abstract class Nūntius {
     public static final @NotNull Supplier <NūntiusErrōribus> fac =
       () -> ObjectUtils.firstNonNull(īnstantia, īnstantia = new NūntiusErrōribus());
 
-    protected NūntiusErrōribus( ) {
+    private NūntiusErrōribus( ) {
       super(ParametrīNūntiī.parā(NūntiusErrōribus.class));
     }
 

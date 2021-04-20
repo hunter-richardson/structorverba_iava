@@ -42,6 +42,7 @@ public final class ConditōrPrōnōminibus extends ConditōrMultiplicibus <Prōn
 
   /**
    * {@inheritDoc}
+   * @return Rem novam classis {@link Prōnōmen}
    */
   public @Override @Nullable Prōnōmen condam( ) {
     if (StringUtils.isNoneBlank(fundāmen, scrīptiō)) {

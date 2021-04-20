@@ -57,10 +57,10 @@ public enum Modus {
   }
 
   /**
-   * Modus hic rem ēnumerātiō {@link Cāsus} ā parametrō dēsignātō advenit.
+   * Modus hic rem ēnumerātiō {@link Cāsus} ā parametrō dēsignātō advenit. <br>
+   * Valōrem {@link #NŪLLUS} refert sī nihil valōrem {@code scrīptiō} quadrat.
    * @param scrīptiō valōrem {@link #scrīptiō} indicat.
-   * @return rem ēnumerātiō {@link Cāsus} quod parametrum dēsignātum quadrat.
-   * @apiNote Modus hic valōrem {@link #NŪLLUS} refert sī nihil valōrem {@code scrīptiō} quadrat
+   * @return Rem ēnumerātiō {@link Cāsus} quod parametrum dēsignātum quadrat.
    */
   public static @NotNull Modus dēfīniam(@NotNull final String scrīptiō) {
     return Stream.of(values())

@@ -46,6 +46,7 @@ public final class Verba {
 
   /**
    * Modus hic ūsūfructuāriōs licet rem classis {@link Coniugiāle} huius allegere.
+   * @param coniūnctīvum coniūnctīvum allegendum
    */
   public void coniūnctīvumAllegō(@NotNull final Coniugiāle coniūnctīvum) {
     this.coniūnctīvum = coniūnctīvum;
@@ -53,6 +54,8 @@ public final class Verba {
 
   /**
    * Modus hic ūsūfructuāriōs licet rēs et classis {@link Coniugiāle} et classis {@link Verba} huius allegere.
+   * @param coniūnctīvum rēs et classis {@link Coniugiāle} allegendum
+   * @param continuāta rēs et classis {@link Verba} allegendum
    */
   public void coniūnctīvumAllegōContinuōque(@NotNull final Coniugiāle coniūnctīvum, @NotNull final Verba continuāta) {
     this.coniūnctīvum = coniūnctīvum;
@@ -60,7 +63,7 @@ public final class Verba {
   }
 
   /**
-   * @return repraesentātiōnem scrīpta reī huius. <br>
+   * @return Repraesentātiōnem scrīpta reī huius. <br>
    * Rēs omnēs contentās cōnsit et cum spatiīs distinet.
    */
   public @NotNull @Override String toString( ) {

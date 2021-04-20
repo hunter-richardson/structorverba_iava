@@ -45,7 +45,7 @@ public abstract class VerbumMultiplex <Hoc extends Verbum <Hoc>> extends Verbum 
   /**
    * Modus hic ūsūfructuāriōs licet valōrem {@link #encliticum} allegere.
    * @param cltm valōrem {@link #encliticum} indicat
-   * @return rem hanc
+   * @return Rem hanc
    * @see Encliticum
    */
   @SuppressWarnings("UnusedReturnValue")
@@ -55,7 +55,7 @@ public abstract class VerbumMultiplex <Hoc extends Verbum <Hoc>> extends Verbum 
   }
 
   /**
-   * @return repraesentātiōnem scrīpta reī huius. <br>
+   * @return Repraesentātiōnem scrīpta reī huius. <br>
    * Valōrem {@link #encliticum} valōrī {@link #scrīptiō} addit.
    */
   public @Override @NotNull String toString( ) {

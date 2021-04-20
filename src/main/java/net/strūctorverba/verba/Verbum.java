@@ -41,7 +41,7 @@ public abstract class Verbum <Hoc extends Verbum <Hoc>> {
   }
 
   /**
-   * @return repraesentātiōnem scrīpta reī classis {@link Verbum}.
+   * @return Repraesentātiōnem scrīpta reī classis {@link Verbum}.
    */
   public abstract @Override @NotNull String toString( );
 }

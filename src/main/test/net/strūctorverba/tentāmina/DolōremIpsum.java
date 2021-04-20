@@ -1,6 +1,6 @@
 package net.strūctorverba.tentāmina;
 
-import lombok.Getter;
+import lombok.*;
 import lombok.experimental.Accessors;
 import net.strūctorverba.mīscella.*;
 import net.strūctorverba.verba.*;
@@ -17,7 +17,7 @@ import java.util.LinkedList;
  * Laudem Marcō Tulliō Cicerōnī cum parte dialogī Sōcraticus "Dē Fīnibus Bonōrum et Mālōrum" in librō prīmō sectiōne decimā versū duotrīcēsimō cōnstruat. <br>
  * Versūs ante triēntem prīmam incipit et post fīnālem fīnit. <br>
  * Pars illa est agnita poēmam istam "Lorem Ipsum" īnspīrāvisse.
- * @see <a href="http://www.thelatinlibrary.com/cicero/fin1.shtml#32">Dē Fīnibus Bonōrum et Mālōrum
+ * @see <a href="http://www.thelatinlibrary.com/cicero/fin1.shtml#32">Dē Fīnibus Bonōrum et Mālōrum</a>
  */
 @SuppressWarnings({ "NonAsciiCharacters", "SpellCheckingInspection", "FieldCanBeLocal" })
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)

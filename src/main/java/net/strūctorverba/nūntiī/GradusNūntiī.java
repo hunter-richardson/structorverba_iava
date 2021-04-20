@@ -87,6 +87,12 @@ enum GradusNūntiī {
                  .findFirst().orElse(OMNIS);
   }
 
+  /**
+   * Modus hic comparātiōnī intrā rēs ēnumerātiōnis huius licet.
+   * @param prīmus valor tentandus
+   * @param secundus valor tentandus
+   * @return valor aut positīvus sī valor {@code prīmus} est maior quam valor {@code secundus} aut negātīvus sī valor {@code prīmus} est minor quam valor {@code secundus} aut nūllus sī valor {@code prīmus} est aequālis valōrī {@code secundus}
+   */
   public static int compareTo(@NotNull final GradusNūntiī prīmus, @NotNull final GradusNūntiī secundus) {
     return Integer.compare(prīmus.praecellentia, secundus.praecellentia);
   }

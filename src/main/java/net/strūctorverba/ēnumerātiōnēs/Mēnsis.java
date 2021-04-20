@@ -100,6 +100,7 @@ public enum Mēnsis {
    *   <li>Valor <a href="https://docs.oracle.com/javase/8/docs/api/java/time/Month.html#DECEMBER">DECEMBER</a> valōrem {@link #DECEMBRIS} cōnsociat.</li>
    * </ul>
    * @param ēnumerātiō valor tentandus.
+   * @return Rem petītam ēnumerātiōnis {@link Mēnsis}
    */
   public static @NotNull Mēnsis indīcam(@NotNull final Month ēnumerātiō) {
     return switch (ēnumerātiō) {

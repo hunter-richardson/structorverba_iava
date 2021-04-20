@@ -109,10 +109,11 @@ public abstract class LēctorMultiplicibus <Hoc extends VerbumMultiplex <Hoc>> e
      * @param numerālis dēsignat adiectīvum possessīvum sīve singulāre (id est aut "meus" aut "tuus") sīve plūrāle (id est aut "noster" aut "vester") petitur
      * @param persōna persōnam adiectīvī petītī dēsignat
      * @param illa seriēs ēnumerātiōnum licent {@link #inventor} colere ēventīs lēctīs
-     * @see <a href="../src/main/resources/adiectīvum/meus.xml">meus.xml</a>
-     * @see <a href="../src/main/resources/adiectīvum/tuus.xml">tuus.xml</a>
-     * @see <a href="../src/main/resources/adiectīvum/noster.xml">noster.xml</a>
-     * @see <a href="../src/main/resources/adiectīvum/vester.xml">vester.xml</a>
+     * @return rem classis {@link Adiectīvum} quam valōrēs et {@code numerālis} et {@code persōna} et {@code illa} quadrat
+     * @see <a href="{@docRoot}/../src/main/resources">auxiliārēs</a>/adiectīva/meus.xml
+     * @see <a href="{@docRoot}/../src/main/resources">auxiliārēs</a>/adiectīva/tuus.xml
+     * @see <a href="{@docRoot}/../src/main/resources">auxiliārēs</a>/adiectīva/noster.xml
+     * @see <a href="{@docRoot}/../src/main/resources">auxiliārēs</a>/adiectīva/vester.xml
      * @see Numerālis
      * @see Persōna
      */
@@ -172,9 +173,10 @@ public abstract class LēctorMultiplicibus <Hoc extends VerbumMultiplex <Hoc>> e
      * Modus hic cōnābitur advenīre rem classis {@link Prōnōmen} quam prōnōmen possessīvum repraesentat et valōrēs {@code illa} quadrat.
      * @param persōna persōnam prōnimis petītī dēsignat
      * @param illa seriēs ēnumerātiōnum licent {@link #inventor} colere ēventīs lēctīs
-     * @see <a href="../src/main/resources/prōnōmina/ego.xml">ego.xml</a>
-     * @see <a href="../src/main/resources/prōnōmina/tū.xml">tū.xml</a>
-     * @see <a href="../src/main/resources/prōnōmina/is.xml">is.xml</a>
+     * @return rem classis {@link Prōnōmen} quam valōrēs et {@code persōna} et {@code illa} quadrat
+     * @see <a href="{@docRoot}/../src/main/resources">auxiliārēs</a>/prōnōmina/ego.xml
+     * @see <a href="{@docRoot}/../src/main/resources">auxiliārēs</a>/prōnōmina/tū.xml
+     * @see <a href="{@docRoot}/../src/main/resources">auxiliārēs</a>/prōnōmina/is.xml
      * @see Persōna
      */
     @SuppressWarnings("unused")
@@ -249,7 +251,8 @@ public abstract class LēctorMultiplicibus <Hoc extends VerbumMultiplex <Hoc>> e
     /**
      * Modus hic cōnābitur advenīre rem classis {@link Āctum} quam fōrma āctī "esse" repraesentat et valōrēs {@code illa} quadrat.
      * @param illa seriēs ēnumerātiōnum licent {@link #inventor} colere ēventīs lēctīs
-     * @see <a href="../src/main/resources/ācta/esse.xml">esse.xml</a>
+     * @return rem classis {@link Āctum} quam valōrem {@code illa} quadrat
+     * @see <a href="{@docRoot}/../src/main/resources">auxiliārēs</a>/ācta/esse.xml
      */
     public @Nullable Āctum adveniam(@NotNull final Enum<?>... illa) {
       return adveniam("esse", illa);

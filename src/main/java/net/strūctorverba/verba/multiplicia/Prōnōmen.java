@@ -12,7 +12,7 @@ import org.jetbrains.annotations.NotNull;
 
 /**
  * Classis {@link Prōnōmen} repraesentat nōmina ut coniectēris. <br>
- * Prōnōmina catēgoriam {@link Catēgoria#PRŌNŌMEN} ūtuntur et cōnservāta sunt in scrīniō <a href="../src/main/resources/prōnōmina">prōnōmina</a>.
+ * Prōnōmina catēgoriam {@link Catēgoria#PRŌNŌMEN} ūtuntur et cōnservāta sunt in scrīniō <a href="{@docRoot}/../src/main/resources">auxiliārēs</a>/prōnōmina.
  * @see LēctorMultiplicibus.LēctorPrōnōminibus
  * @see TenorMultiplicibus.TenorPrōnōminibus
  * @see InventorPrōnōminibus

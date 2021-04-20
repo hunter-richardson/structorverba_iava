@@ -18,7 +18,7 @@ import java.util.stream.*;
 
 /**
  * Classis {@link PrōnōmenConiūnctīvum} repraesentat nōmina ut coniectēris. <br>
- * PrōnōminaConiūnctīva catēgoriam {@link Catēgoria#PRŌNŌMEN_CONIŪNCTĪVUM} ūtuntur et cōnservāta sunt in scrīniō <a href="../src/main/resources/prōnōminaConiūnctīva">prōnōminaConiūnctīva</a>. <br>
+ * PrōnōminaConiūnctīva catēgoriam {@link Catēgoria#PRŌNŌMEN_CONIŪNCTĪVUM} ūtuntur et cōnservāta sunt in scrīniō <a href="{@docRoot}/../src/main/resources">auxiliārēs</a>/prōnōminaConiūnctīva. <br>
  * Discrīmina prīmōria inter classibus hāc et {@link Prōnōmen} est haec modōs {@link Coniugiāle} dēfīnītōs dēdūcit.
  * @see LēctorMultiplicibus.LēctorPrōnōminibusConiūnctīvīs
  * @see TenorMultiplicibus.TenorPrōnōminibusConiūnctīvīs
@@ -44,6 +44,7 @@ public final class PrōnōmenConiūnctīvum extends Nōminālis <PrōnōmenConi�
      * @param prīmus valor prīmus
      * @param secundus valor secundus
      * @param <Ille> classis quae valōrēs et {@code prīmus} et {@code secundus} quadrat
+     * @return Seriēs classis {@link Verbum} quae valōrum et {@code prīmus} et huius et {@code secundus} ōrdine constat
      */
   public <Ille extends Verbum <Ille>> @NotNull LinkedList <Verbum <@Nullable ?>> coniugō(@Nullable final Ille prīmus,
                                                                                          @Nullable final Ille secundus) {
@@ -58,6 +59,7 @@ public final class PrōnōmenConiūnctīvum extends Nōminālis <PrōnōmenConi�
      * {@inheritDoc}
      * @param prīmus valor prīmus
      * @param secundus valor secundus
+     * @return Rēs classis {@link Verba} quae valōrum et {@code prīmus} et huius et {@code secundus} constat
      */
   public @NotNull Verba coniugō(@NotNull final Verba prīmus, @NotNull final Verba secundus) {
     nūntius().plūrimumGarriō("Scrībor ut", prīmus, this, secundus);
@@ -69,6 +71,7 @@ public final class PrōnōmenConiūnctīvum extends Nōminālis <PrōnōmenConi�
      * {@inheritDoc}
      * @param prīmus valor prīmus
      * @param secundus valor secundus
+     * @return Rēs classis {@link Verba} quae valōrum et {@code prīmus} et huius et {@code secundus} constat
      */
   public @NotNull Verba coniugō(@NotNull final Verba prīmus, @NotNull final LinkedList <Verbum <@Nullable ?>> secundus) {
     prīmus.coniūnctīvumAllegōContinuōque(this, Verba.conditōr().seriēs(secundus).condam());

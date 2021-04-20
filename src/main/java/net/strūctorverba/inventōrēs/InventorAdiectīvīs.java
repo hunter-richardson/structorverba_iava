@@ -40,7 +40,8 @@ public final class InventorAdiectīvīs extends Inventor <Adiectīvum> {
   }
 
   /**
-   * @return quaestiōnem quam rēs classis {@link LēctorMultiplicibus.LēctorAdiectīvīs} ūtātur rēs classis {@link Adiectīvum} percōlere
+   * @return Quaestiōnem quam rēs classis {@link LēctorMultiplicibus.LēctorAdiectīvīs} ūtātur rēs classis {@link Adiectīvum} percōlere
+   * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Predicate.html">Prediate</a>
    */
   public @Override @NotNull Predicate <@NotNull Adiectīvum> inquīram( ) {
     return adiectīvum -> speciālitās.equals(adiectīvum.speciālitās)
