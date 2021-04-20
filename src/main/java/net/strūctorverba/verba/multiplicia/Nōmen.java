@@ -24,7 +24,7 @@ public final class Nōmen extends Nōminālis <Nōmen> {
   @Getter(lazy = true) @Accessors(fluent = true)
   private final @NotNull Nūntius.NūntiusNōminum nūntius = Nūntius.NūntiusNōminum.fac.get();
 
-  @Builder(builderClassName = "Conditōr", builderMethodName = "conditōr", buildMethodName = "condam")
+  @Builder(access = AccessLevel.PUBLIC, builderClassName = "Conditōr", builderMethodName = "conditōr", buildMethodName = "condam")
   private Nōmen(@NotNull final Speciālitās speciālitās, @NotNull final Genus genus,
                 @NotNull final Cāsus cāsus, @NotNull final Numerālis numerālis,
                 @NotNull final String fundāmen, @NotNull final String scrīptiō) {

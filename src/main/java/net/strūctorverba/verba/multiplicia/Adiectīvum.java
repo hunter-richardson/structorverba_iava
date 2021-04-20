@@ -31,7 +31,7 @@ public final class Adiectīvum extends Nōminālis <Adiectīvum> {
    */
   public final @NotNull Gradus gradus;
 
-  @Builder(builderClassName = "Conditōr", builderMethodName = "conditōr", buildMethodName = "condam")
+  @Builder(access = AccessLevel.PUBLIC, builderClassName = "Conditōr", builderMethodName = "conditōr", buildMethodName = "condam")
   private Adiectīvum(@NotNull final Speciālitās speciālitās, @NotNull final Genus genus,
                      @NotNull final Cāsus cāsus, @NotNull final Numerālis numerālis,
                      @NotNull final Gradus gradus, @NotNull final String fundāmen,

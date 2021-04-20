@@ -14,7 +14,7 @@ import java.nio.file.Path;
 import java.util.function.Supplier;
 
 /**
- * Classis {@link Lēctor} colliget datum ā scāpō XML intrā scrīnium <a href="../src/main/resources">auxiliārēs</a> rēbus classis {@link Verbum} scrībere.
+ * Classis {@link Lēctor} colliget data ā scāpō XML intrā scrīnium <a href="{@docRoot}/../src/main/resources">auxiliārēs</a> rēbus classis {@link Verbum} scrībere.
  * @param <Hoc> classis extenta classis {@link Verbum}
  */
 @SuppressWarnings({ "NonAsciiCharacters", "SpellCheckingInspection" })
@@ -57,7 +57,7 @@ public abstract class Lēctor <Hoc extends Verbum <Hoc>> {
   }
 
   /**
-   * Modus hic verbum cōnābitur legere ā scāpō XML intrā scrīnium <a href="../src/main/resources">auxiliārēs</a>.
+   * Modus hic verbum cōnābitur legere ā scāpō XML intrā scrīnium <a href="{@docRoot}/../src/main/resources">auxiliārēs</a>.
    * @param verbum fundāmen verbō quod rēs haec cōnābitur legere.
    */
   protected final void legam(@NotNull final String verbum) {

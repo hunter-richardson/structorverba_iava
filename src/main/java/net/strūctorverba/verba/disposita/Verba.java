@@ -1,6 +1,6 @@
 package net.strūctorverba.verba.disposita;
 
-import lombok.Builder;
+import lombok.*;
 import net.strūctorverba.mīscella.Ūtilitās;
 import net.strūctorverba.verba.*;
 import org.apache.commons.lang3.StringUtils;
@@ -19,7 +19,7 @@ public final class Verba {
   private      @Nullable Coniugiāle              coniūnctīvum = null;
   private      @Nullable Verba                   continuāta   = null;
 
-  @Builder(builderClassName = "Conditōr", builderMethodName = "conditōr", buildMethodName = "condam")
+  @Builder(access = AccessLevel.PUBLIC, builderClassName = "Conditōr", builderMethodName = "conditōr", buildMethodName = "condam")
   private Verba(@NotNull final Collection <Verbum <@Nullable ?>> seriēs,
                 @NotNull final Coniugiāle coniūnctīvum, @NotNull final Verba continuāta) {
     seriēs.removeIf(ObjectUtils::isNull);
@@ -29,7 +29,7 @@ public final class Verba {
     this.continuāta = continuāta;
   }
 
-  @Builder(builderClassName = "Conditōr", builderMethodName = "conditōr", buildMethodName = "condam")
+  @Builder(access = AccessLevel.PUBLIC, builderClassName = "Conditōr", builderMethodName = "conditōr", buildMethodName = "condam")
   private Verba(@NotNull final Collection <Verbum <@Nullable ?>> seriēs, @NotNull final Coniugiāle coniūnctīvum) {
     seriēs.removeIf(ObjectUtils::isNull);
     seriēs.removeIf(verbum -> StringUtils.isBlank(verbum.toString()));
@@ -37,7 +37,7 @@ public final class Verba {
     this.coniūnctīvum = coniūnctīvum;
   }
 
-  @Builder(builderClassName = "Conditōr", builderMethodName = "conditōr", buildMethodName = "condam")
+  @Builder(access = AccessLevel.PUBLIC, builderClassName = "Conditōr", builderMethodName = "conditōr", buildMethodName = "condam")
   private Verba(@NotNull final Collection <Verbum <@Nullable ?>> seriēs) {
     seriēs.removeIf(ObjectUtils::isNull);
     seriēs.removeIf(verbum -> StringUtils.isBlank(verbum.toString()));

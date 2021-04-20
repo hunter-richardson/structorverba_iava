@@ -20,7 +20,8 @@ public interface Coniugiāle {
    * @param <Ille> classis quae valōrēs et {@code prīmus} et {@code secundus} quadrat
    * @return Seriēs classis {@link Verbum} quae valōrum et {@code prīmus} et huius et {@code secundus} ōrdine constat
    */
-  <Ille extends Verbum <Ille>> @NotNull LinkedList <Verbum <@Nullable ?>> coniugō(@Nullable final Ille prīmus, @Nullable final Ille secundus);
+  <Ille extends Verbum <Ille>> @NotNull LinkedList <Verbum <@Nullable ?>> coniugō(@Nullable final Ille prīmus,
+                                                                                  @Nullable final Ille secundus);
 
   /**
    * Modus hic valōrēs trēs coniugat.

@@ -12,7 +12,7 @@ import org.jetbrains.annotations.NotNull;
 
 /**
  * Classis {@link VerbaPraepositiōne} rēs classum {@link Nōminālis} et {@link VerbumSimplex.Praepositiō} conciliat. <br>
- * VerbaPraepositiōne catēgoriam {@link Catēgoria#VERBA_PRAEPOSITIŌNE} ūtuntur et sunt generātī statim quam cōnservātī intrā scrīnium <a href="../src/main/resources">auxiliārēs</a>.
+ * VerbaPraepositiōne catēgoriam {@link Catēgoria#VERBA_PRAEPOSITIŌNE} ūtuntur et sunt generātī statim quam cōnservātī in scrīnium <a href="{@docRoot}/../src/main/resources">auxiliārēs</a>.
  * @see Nūntius.NūntiusVerbōrumPraepositiōnibus
  * @see StrūctorVerba
  */
@@ -24,7 +24,7 @@ public final class VerbaPraepositiōne extends VerbumMultiplex <VerbaPraepositi�
   private final @NotNull VerbumSimplex.Praepositiō praepositiō;
   private final @NotNull Nōminālis <?>             rēs;
 
-  @Builder(builderClassName = "Conditōr", builderMethodName = "conditōr", buildMethodName = "condam")
+  @Builder(access = AccessLevel.PUBLIC, builderClassName = "Conditōr", builderMethodName = "conditōr", buildMethodName = "condam")
   private VerbaPraepositiōne(@NotNull final Nōminālis <?> rēs,
                              @NotNull final VerbumSimplex.Praepositiō praepositiō) {
     super(Catēgoria.VERBA_PRAEPOSITIŌNE, rēs.fundāmen, rēs.toString());
@@ -44,7 +44,7 @@ public final class VerbaPraepositiōne extends VerbumMultiplex <VerbaPraepositi�
     nūntius().plūsGarriō("Scrībor ut", toString());
   }
 
-  @Builder(builderClassName = "Conditōr", builderMethodName = "conditōr", buildMethodName = "condam")
+  @Builder(access = AccessLevel.PUBLIC, builderClassName = "Conditōr", builderMethodName = "conditōr", buildMethodName = "condam")
   private VerbaPraepositiōne(@NotNull final Nōminālis <?> rēs) {
     super(Catēgoria.VERBA_PRAEPOSITIŌNE, rēs.fundāmen, rēs.toString());
     praepositiō = VerbumSimplex.Praepositiō.assūme.get();

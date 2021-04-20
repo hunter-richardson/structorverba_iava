@@ -46,7 +46,7 @@ public class Ūtilitās {
 
   /**
    * @param locus locus adveniendus
-   * @return Locus scāpī petītī intrā scrīnium <a href="../src/main/resources">auxiliārēs</a>
+   * @return Locus scāpī petītī intrā scrīnium <a href="{@docRoot}/../src/main/resources">auxiliārēs</a>
    */
   public static @NotNull String auxilior(@NotNull final String locus) {
     return auxilior(locus.split(File.pathSeparator));
@@ -54,7 +54,7 @@ public class Ūtilitās {
 
   /**
    * @param locus partēs locī adveniendī
-   * @return Locus scāpī petītī intrā scrīnium <a href="../src/main/resources">auxiliārēs</a>
+   * @return Locus scāpī petītī intrā scrīnium <a href="{@docRoot}/../src/main/resources">auxiliārēs</a>
    */
   public static @NotNull String auxilior(@NotNull final String... locus) {
     final String[] plūs = Arrays.copyOfRange(locus, 1, locus.length);

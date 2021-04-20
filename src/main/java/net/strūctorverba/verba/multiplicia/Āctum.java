@@ -63,7 +63,7 @@ public final class Āctum extends VerbumMultiplex <Āctum> {
    */
   public final @NotNull Persōna persōna;
 
-  @Builder(builderClassName = "Conditōr", builderMethodName = "conditōr", buildMethodName = "condam")
+  @Builder(access = AccessLevel.PUBLIC, builderClassName = "Conditōr", builderMethodName = "conditōr", buildMethodName = "condam")
   private Āctum(@NotNull final Modus modus, @NotNull final Vōx vōx, @NotNull final Tempus tempus,
                 @NotNull final Numerālis numerālis, @NotNull final Persōna persōna,
                 @NotNull final String fundāmen, @NotNull final String scrīptiō) {

@@ -50,7 +50,7 @@ public abstract class VerbumSimplex <Hoc extends Verbum <Hoc>> extends Verbum <H
 
   /**
    * Classis {@link Adverbium} repraesentat adverbia ut coniectēris. <br>
-   * Adverbia catēgoriam {@link Catēgoria#ADVERBIUM} ūtuntur et cōnservāta sunt in scrīniō <a href="../src/main/resources/adverbia">adverbia</a>.
+   * Adverbia catēgoriam {@link Catēgoria#ADVERBIUM} ūtuntur et cōnservāta sunt in scrīniō <a href="{@docRoot}/../src/main/resources">auxiliārēs</a>/adverbia.
    * @see LēctorSimplicibus.LēctorAdverbiīs
    * @see TenorSimplicibus.TenorAdverbiīs
    * @see ConditōrSimplicibus.ConditōrAdverbiīs
@@ -60,7 +60,7 @@ public abstract class VerbumSimplex <Hoc extends Verbum <Hoc>> extends Verbum <H
     @Getter(lazy = true) @Accessors(fluent = true)
     private final @NotNull Nūntius.NūntiusAdverbiōrum nūntius = Nūntius.NūntiusAdverbiōrum.fac.get();
 
-    @Builder(builderClassName = "Conditōr", builderMethodName = "conditōr", buildMethodName = "condam")
+    @Builder(access = AccessLevel.MODULE, builderClassName = "Conditōr", builderMethodName = "conditōr", buildMethodName = "condam")
     private Adverbium(@NotNull final String fundāmen) {
       super(Catēgoria.ADVERBIUM, fundāmen);
       nūntius().plūsGarriō("Scrībor ut", fundāmen);
@@ -80,7 +80,7 @@ public abstract class VerbumSimplex <Hoc extends Verbum <Hoc>> extends Verbum <H
     @Getter(lazy = true) @Accessors(fluent = true)
     private final @NotNull Nūntius.NūntiusConiūnctīvōrum nūntius = Nūntius.NūntiusConiūnctīvōrum.fac.get();
 
-    @Builder(builderClassName = "Conditōr", builderMethodName = "conditōr", buildMethodName = "condam")
+    @Builder(access = AccessLevel.PUBLIC, builderClassName = "Conditōr", builderMethodName = "conditōr", buildMethodName = "condam")
     private Coniūnctīvum(@NotNull final String fundāmen) {
       super(Catēgoria.CONIŪNCTĪVUM, fundāmen);
       nūntius().plūsGarriō("Scrībor ut", fundāmen);
@@ -140,7 +140,7 @@ public abstract class VerbumSimplex <Hoc extends Verbum <Hoc>> extends Verbum <H
     public static final @NotNull Supplier<Praepositiō> assūme =
       () -> Praepositiō.conditōr().fundāmen(StringUtils.EMPTY).condam();
 
-    @Builder(builderClassName = "Conditōr", builderMethodName = "conditōr", buildMethodName = "condam")
+    @Builder(access = AccessLevel.PUBLIC, builderClassName = "Conditōr", builderMethodName = "conditōr", buildMethodName = "condam")
     private Praepositiō(@NotNull final String fundāmen) {
       super(Catēgoria.PRAEPOSITIŌ, fundāmen);
       nūntius().plūsGarriō("Scrībor ut", fundāmen);
@@ -149,9 +149,11 @@ public abstract class VerbumSimplex <Hoc extends Verbum <Hoc>> extends Verbum <H
 
   /**
    * Classis {@link Numerus} repraesentat numerōs ut coniectēris. <br>
-   * Numerī catēgoriam {@link Catēgoria#NUMERUM} ūtuntur et sunt generātī statim quam cōnservātī intrā scrīnium <a href="../src/main/resources">auxiliārēs</a>. <br>
-   * @see <a href="https://github.com/Chaosfirebolt/RomanNumeralConverter/blob/master/src/main/java/com/github/chaosfirebolt/converter/RomanInteger.java">RomanInteger</a>
+   * Numerī catēgoriam {@link Catēgoria#NUMERUM} ūtuntur et data eīs nōn inveniet scrīnium <a href="{@docRoot}/../src/main/resources">auxiliārēs</a>. <br>
+   * Magis rēs classis huius ā numerīs classis <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Short.html">Short</a> per ūsum classis <a href="https://github.com/Chaosfirebolt/RomanNumeralConverter/blob/master/src/main/java/com/github/chaosfirebolt/converter/RomanInteger.java">RomanInteger</a> fīant.
    * @see Nūntius.NūntiusNumerōrum
+   * @see <a href="https://github.com/Chaosfirebolt/RomanNumeralConverter/blob/master/src/main/java/com/github/chaosfirebolt/converter/RomanInteger.java">RomanInteger</a>
+   * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Short.html">Short</a>
    */
   public static final class Numerus extends VerbumSimplex<Numerus> {
     @Getter(lazy = true) @Accessors(fluent = true)
@@ -163,7 +165,7 @@ public abstract class VerbumSimplex <Hoc extends Verbum <Hoc>> extends Verbum <H
      */
     public final short numerus;
 
-    @Builder(builderClassName = "Conditōr", builderMethodName = "conditōr", buildMethodName = "condam")
+    @Builder(access = AccessLevel.PUBLIC, builderClassName = "Conditōr", builderMethodName = "conditōr", buildMethodName = "condam")
     private Numerus(final short numerus) throws IllegalArgumentException {
       super(Catēgoria.NUMERUM, String.valueOf(numerus));
       this.numerus = Validator.range(Short.toUnsignedInt(numerus)).shortValue();
@@ -189,7 +191,7 @@ public abstract class VerbumSimplex <Hoc extends Verbum <Hoc>> extends Verbum <H
 
     /**
      * @return Rem classis {@link Numerus} quae ēventum additiōnis cum valōre {@code alius} repraesentat.
-     * @param alius Rēs classis {@link Numerus} ūsa additiōnī.
+     * @param alius rēs classis {@link Numerus} ūsa additiōnī.
      * @see <a href="https://github.com/Chaosfirebolt/RomanNumeralConverter/blob/master/src/main/java/com/github/chaosfirebolt/converter/RomanInteger.java">RomanInteger</a>
      */
     public Numerus addō(final @NotNull Numerus alius) {

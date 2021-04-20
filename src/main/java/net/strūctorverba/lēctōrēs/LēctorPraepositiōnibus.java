@@ -16,7 +16,7 @@ import java.util.function.*;
 import java.util.stream.Stream;
 
 /**
- * Classis {@link LēctorPraepositiōnibus} colliget datum ā scāpō XML in scrīnium <a href="{@docRoot}/../src/main/resources">auxiliārēs</a>/praepositiōnēs rēbus classis {@link VerbumSimplex.Praepositiō} scrībere. <br>
+ * Classis {@link LēctorPraepositiōnibus} colliget data ā scāpō XML in scrīnium <a href="{@docRoot}/../src/main/resources">auxiliārēs</a>/praepositiōnēs rēbus classis {@link VerbumSimplex.Praepositiō} scrībere. <br>
  * Dissimilis ā extēnsiōnibus classis {@link Lēctor} est quod scāpum omne seriem longa ēventōrum possibilium continet. Ergō classem {@link Lēctor} nōn extendit. <br>
  * Scāpa quattuor sunt quae reī huic intersunt ut scāpa singulus cāsuī omnī repraesentātō: {@link Cāsus#ABLĀTĪVUS} et {@link Cāsus#ACCŪSĀTĪVUS} et {@link Cāsus#GENITĪVUS} et {@link Cāsus#VOCĀTĪVUS}.
  * @see <a href="{@docRoot}/../src/main/resources">auxiliārēs</a>/praepositiōnēs/ablātīvus.data
