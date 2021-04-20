@@ -18,7 +18,7 @@ public abstract class Inventor <Hoc extends VerbumMultiplex <Hoc>> {
   /**
    * Valor hic est vās classis {@link Nūntius} classī hui.
    */
-  protected final @NotNull Nūntius nūntius;
+  @NotNull protected final Nūntius nūntius;
 
   /**
    * Officium hoc cōnstrūctōrem reī classis huius perpetrat.
@@ -34,7 +34,7 @@ public abstract class Inventor <Hoc extends VerbumMultiplex <Hoc>> {
    * @return Rem huius
    * @see #allegam(Enum)
    */
-  public final @NotNull Inventor <Hoc> allegō(@NotNull final Enum <@NotNull ?>... illa) {
+  @NotNull public final Inventor <Hoc> allegō(@NotNull final Enum <@NotNull ?>... illa) {
     Arrays.stream(illa).forEach(this::allegam);
     return this;
   }
@@ -43,7 +43,7 @@ public abstract class Inventor <Hoc extends VerbumMultiplex <Hoc>> {
    * @return Quaestiōnem quam rēs classis {@link LēctorMultiplicibus} ūtātur rēs classis {@link VerbumMultiplex} percōlere
    * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Predicate.html">Prediate</a>
    */
-  public abstract @NotNull Predicate <@NotNull Hoc> inquīram( );
+  @NotNull public abstract Predicate <@NotNull Hoc> inquīram( );
 
   /**
    * Modus hic rem hanc restituit.

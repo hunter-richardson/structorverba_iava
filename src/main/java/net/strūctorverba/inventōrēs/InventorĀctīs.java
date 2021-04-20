@@ -19,20 +19,20 @@ import java.util.function.*;
 @Singleton
 @DependsOn("NūntiusInventōrīĀctīs")
 public final class InventorĀctīs extends Inventor <Āctum> {
-  private static @Nullable InventorĀctīs īnstantia = null;
+  @Nullable private static InventorĀctīs īnstantia = null;
 
   /**
    * Valor hic viam reī classis huiuc facit.
    * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
    */
-  public static final @NotNull Supplier <InventorĀctīs> fac =
+  @NotNull public static final Supplier <InventorĀctīs> fac =
     () -> ObjectUtils.firstNonNull(īnstantia, īnstantia = new InventorĀctīs());
 
-  private @NotNull Vōx       vōx       = Vōx.NŪLLA;
-  private @NotNull Tempus    tempus    = Tempus.NŪLLUM;
-  private @NotNull Numerālis numerālis = Numerālis.NŪLLUS;
-  private @NotNull Persōna   persōna   = Persōna.NŪLLA;
-  private @NotNull Modus     modus     = Modus.NŪLLUS;
+  @NotNull private Vōx       vōx       = Vōx.NŪLLA;
+  @NotNull private Tempus    tempus    = Tempus.NŪLLUM;
+  @NotNull private Numerālis numerālis = Numerālis.NŪLLUS;
+  @NotNull private Persōna   persōna   = Persōna.NŪLLA;
+  @NotNull private Modus     modus     = Modus.NŪLLUS;
 
   private InventorĀctīs( ) {
     super(Nūntius.NūntiusInventōrīĀctīs.fac);
@@ -40,10 +40,11 @@ public final class InventorĀctīs extends Inventor <Āctum> {
   }
 
   /**
-   * @return Quaestiōnem quam rēs classis {@link LēctorMultiplicibus .LēctorĀctīs} ūtātur rēs classis {@link Āctum} percōlere
+   * @return Quaestiōnem quam rēs classis {@link LēctorMultiplicibus.LēctorĀctīs} ūtātur rēs classis {@link Āctum} percōlere
    * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Predicate.html">Prediate</a>
    */
-  public @Override @NotNull Predicate <@NotNull Āctum> inquīram( ) {
+  @Override @NotNull
+  public Predicate <@NotNull Āctum> inquīram( ) {
     return āctum -> modus.equals(āctum.modus)
                     && vōx.equals(āctum.vōx)
                     && tempus.equals(āctum.tempus)
@@ -53,8 +54,13 @@ public final class InventorĀctīs extends Inventor <Āctum> {
 
   /**
    * {@inheritDoc}
+   * @see Vōx#NŪLLA
+   * @see Tempus#NŪLLUM
+   * @see Numerālis#NŪLLUS
+   * @see Persōna#NŪLLA
+   * @see Modus#NŪLLUS
    */
-  public @Override void restituō( ) {
+  @Override public void restituō( ) {
     vōx = Vōx.NŪLLA;
     tempus = Tempus.NŪLLUM;
     numerālis = Numerālis.NŪLLUS;
@@ -72,7 +78,7 @@ public final class InventorĀctīs extends Inventor <Āctum> {
    * @see Persōna#ut(Enum)
    * @see Modus#ut(Enum)
    */
-  protected @Override void allegam(@NotNull final Enum<@NotNull ?> illud) {
+  @Override protected void allegam(@NotNull final Enum<@NotNull ?> illud) {
     if (illud instanceof Vōx) {
       vōx = Vōx.ut(illud);
       nūntius.garriō("Quastiōnī adiēcī conditiōnem novam:",

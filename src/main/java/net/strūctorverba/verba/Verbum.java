@@ -21,14 +21,14 @@ public abstract class Verbum <Hoc extends Verbum <Hoc>> {
   /**
    * Valor hic repraesentat fōrmam verbī cui rādīcēscit. Quoque nōminātur scāpum XML quō cōnservātum est.
    */
-  public final @NotNull String fundāmen;
+  @NotNull public final String fundāmen;
 
   /**
    * Valor hic extēnsiōnem classī huic reī huic dēsignat.
    * {@link Catēgoria#scrīptiō} quoque nōminātur scrīnium intrā quō scāpum eius cōnservātum est.
    * @see Catēgoria
    */
-  public final @NotNull Catēgoria catēgoria;
+  @NotNull public final Catēgoria catēgoria;
 
   /**
    * Officium hoc cōnstrūctōrem reī classis huius perpetrat.
@@ -43,5 +43,6 @@ public abstract class Verbum <Hoc extends Verbum <Hoc>> {
   /**
    * @return Repraesentātiōnem scrīpta reī classis {@link Verbum}.
    */
-  public abstract @Override @NotNull String toString( );
+  @Override @NotNull
+  public abstract String toString( );
 }

@@ -81,7 +81,7 @@ enum GradusNūntiī {
    * @param gressus valor tentandus
    * @return rēs ēnumerātiōnis huius quam valor {@code gressus} quadrat
    */
-  public static @NotNull GradusNūntiī gradior(@NotNull final Level gressus) {
+  @NotNull public static GradusNūntiī gradior(@NotNull final Level gressus) {
     return Stream.of(values())
                  .filter(gradus -> gradus.gressus.get().intValue() == gressus.intValue())
                  .findFirst().orElse(OMNIS);
@@ -111,15 +111,15 @@ enum GradusNūntiī {
    *   <li>Valor <a href="https://docs.oracle.com/javase/7/docs/api/java/util/logging/Level.html#ALL">ALL</a> valōrem {@link #OMNIS} cōnsociat.</li>
    * </ul>
    */
-  public final Supplier<Level> gressus = () -> switch (this) {
-                                                 case INERS -> Level.OFF;
-                                                 case GRAVIS -> Level.SEVERE;
-                                                 case PRAEMONITŌRIUS -> Level.WARNING;
-                                                 case ĪNFŌRMĀTĪVUS -> Level.INFO;
-                                                 case PRAEGRESSŪRUS -> Level.CONFIG;
-                                                 case SCRŪTĀNS -> Level.FINE;
-                                                 case SCRŪTĀNTIOR -> Level.FINER;
-                                                 case SCRŪTĀNTISSIMUS -> Level.FINEST;
-                                                 case OMNIS -> Level.ALL;
-                                               };
+  @NotNull public final Supplier<@NotNull Level> gressus = () -> switch (this) {
+                                                                   case INERS -> Level.OFF;
+                                                                   case GRAVIS -> Level.SEVERE;
+                                                                   case PRAEMONITŌRIUS -> Level.WARNING;
+                                                                   case ĪNFŌRMĀTĪVUS -> Level.INFO;
+                                                                   case PRAEGRESSŪRUS -> Level.CONFIG;
+                                                                   case SCRŪTĀNS -> Level.FINE;
+                                                                   case SCRŪTĀNTIOR -> Level.FINER;
+                                                                   case SCRŪTĀNTISSIMUS -> Level.FINEST;
+                                                                   case OMNIS -> Level.ALL;
+                                                                 };
 }

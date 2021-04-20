@@ -52,7 +52,7 @@ public enum Gradus {
    * @param scrīptiō valōrem {@link #scrīptiō} indicat.
    * @return Rem ēnumerātiō {@link Gradus} quod parametrum dēsignātum quadrat.
    */
-  public static @NotNull Gradus dēfīniam(@NotNull final String scrīptiō) {
+  @NotNull public static Gradus dēfīniam(@NotNull final String scrīptiō) {
     return Stream.of(values())
                  .filter(gradus -> gradus.scrīptiō.equals(scrīptiō))
                  .findFirst().orElse(NŪLLUS);
@@ -62,7 +62,7 @@ public enum Gradus {
    * @param illud valor tentandus.
    */
   @SuppressWarnings("ConstantConditions")
-  public static @NotNull Gradus ut(@NotNull final Enum<@NotNull ?> illud) {
+  @NotNull public static Gradus ut(@NotNull final Enum<@NotNull ?> illud) {
     final Gradus hoc = (Gradus) illud;
     return hoc.equals(illud) ? hoc
                              : NŪLLUS;

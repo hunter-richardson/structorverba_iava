@@ -36,7 +36,7 @@ public abstract class TenorSimplicibus <Hoc extends VerbumSimplex <Hoc>> extends
   /**
    * {@inheritDoc}
    */
-  protected final @Override void fīniam( ) {
+  @Override protected final void fīniam( ) {
     hoc = condītōr.condam();
     if (Objects.isNull(hoc)) {
       nūntius.moneō("Prōductiō verbī prōcessimus nūllae fōrmae.");
@@ -48,7 +48,7 @@ public abstract class TenorSimplicibus <Hoc extends VerbumSimplex <Hoc>> extends
    * @param scrīptiō fōrmam scrīptam indendus
    * @see Verbum#fundāmen
    */
-  protected @Override void scrībō(@NotNull String scrīptiō) {
+  @Override protected void scrībō(@NotNull String scrīptiō) {
     condītōr.funde(scrīptiō);
   }
 
@@ -60,13 +60,13 @@ public abstract class TenorSimplicibus <Hoc extends VerbumSimplex <Hoc>> extends
    */
   @Singleton @DependsOn({ "CondītōrAdverbiīs", "NūntiusTenōrīAdverbiīs" })
   public static final class TenorAdverbiīs extends TenorSimplicibus <VerbumSimplex.Adverbium> {
-    private static @Nullable TenorAdverbiīs īnstantia = null;
+    @Nullable private static TenorAdverbiīs īnstantia = null;
 
     /**
      * Valor hic viam reī classis huiuc facit.
      * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
      */
-    public static final @NotNull Supplier <TenorAdverbiīs> fac =
+    @NotNull public static final Supplier <TenorAdverbiīs> fac =
       () -> ObjectUtils.firstNonNull(īnstantia, īnstantia = new TenorAdverbiīs());
 
     private TenorAdverbiīs( ) {
@@ -83,13 +83,13 @@ public abstract class TenorSimplicibus <Hoc extends VerbumSimplex <Hoc>> extends
    */
   @Singleton @DependsOn({ "CondītōrConiūnctīvīs", "NūntiusTenōrīConiūnctivīs" })
   public static final class TenorConiūnctivīs extends TenorSimplicibus <VerbumSimplex.Coniūnctīvum> {
-    private static @Nullable TenorConiūnctivīs īnstantia = null;
+    @Nullable private static TenorConiūnctivīs īnstantia = null;
 
     /**
      * Valor hic viam reī classis huiuc facit.
      * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
      */
-    public static final @NotNull Supplier <TenorConiūnctivīs> fac =
+    @NotNull public static final Supplier <TenorConiūnctivīs> fac =
       () -> ObjectUtils.firstNonNull(īnstantia, īnstantia = new TenorConiūnctivīs());
 
     private TenorConiūnctivīs( ) {

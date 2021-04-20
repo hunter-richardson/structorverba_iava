@@ -49,7 +49,7 @@ public abstract class VerbumMultiplex <Hoc extends Verbum <Hoc>> extends Verbum 
    * @see Encliticum
    */
   @SuppressWarnings("UnusedReturnValue")
-  public @NotNull VerbumMultiplex <Hoc> allege(@NotNull final Encliticum cltm) {
+  @NotNull public VerbumMultiplex <Hoc> allege(@NotNull final Encliticum cltm) {
     encliticum = cltm;
     return this;
   }
@@ -58,7 +58,8 @@ public abstract class VerbumMultiplex <Hoc extends Verbum <Hoc>> extends Verbum 
    * @return Repraesentātiōnem scrīpta reī huius. <br>
    * Valōrem {@link #encliticum} valōrī {@link #scrīptiō} addit.
    */
-  public @Override @NotNull String toString( ) {
+  @Override @NotNull
+  public String toString( ) {
     return Encliticum.NŌLĒNS.equals(encliticum) ? scrīptiō
                                                 : String.format("%s%s", scrīptiō, encliticum.scrīptiō);
   }

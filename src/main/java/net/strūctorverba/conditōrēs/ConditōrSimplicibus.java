@@ -20,7 +20,7 @@ public abstract class ConditōrSimplicibus <Hoc extends VerbumSimplex <Hoc>> ext
    * Valor hic viam reī classis huiuc facit.
    * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html">Function</a>
    */
-  protected final @NotNull Function <@NotNull String, @NotNull Hoc> cōnstrūctor;
+  @NotNull protected final Function <@NotNull String, @NotNull Hoc> cōnstrūctor;
 
   /**
    * Officium hoc cōnstrūctōrem reī classis huius perpetrat.
@@ -36,7 +36,8 @@ public abstract class ConditōrSimplicibus <Hoc extends VerbumSimplex <Hoc>> ext
   /**
    * {@inheritDoc}
    */
-  public final @Override @Nullable Hoc condam( ) {
+  @Override @Nullable
+  public final Hoc condam( ) {
     final Hoc hoc = StringUtils.isNotBlank(fundāmen) ? cōnstrūctor.apply(fundāmen)
                                                      : null;
     referō(hoc);
@@ -56,13 +57,13 @@ public abstract class ConditōrSimplicibus <Hoc extends VerbumSimplex <Hoc>> ext
    */
   @Singleton @DependsOn("NūntiusInventōrīAdiectīvīs")
   public static final class ConditōrAdverbiīs extends ConditōrSimplicibus <VerbumSimplex.Adverbium> {
-    private static ConditōrAdverbiīs īnstantia = null;
+    @Nullable private static ConditōrAdverbiīs īnstantia = null;
 
     /**
      * Valor hic viam reī classis huiuc facit.
      * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
      */
-    public static final @NotNull Supplier <ConditōrAdverbiīs> fac =
+    @NotNull public static final Supplier <ConditōrAdverbiīs> fac =
       () -> ObjectUtils.firstNonNull(īnstantia, īnstantia = new ConditōrAdverbiīs());
 
     private ConditōrAdverbiīs( ) {
@@ -74,8 +75,8 @@ public abstract class ConditōrSimplicibus <Hoc extends VerbumSimplex <Hoc>> ext
     /**
      * {@inheritDoc}
      */
-    protected @Override void referō(@Nullable final VerbumSimplex.Adverbium hoc) {
-      if (Objects.nonNull(hoc)) {
+    @Override protected void referō(@Nullable final VerbumSimplex.Adverbium hoc) {
+      if (Objects.isNull(hoc)) {
         nūntius.moneō(VerbumSimplex.Adverbium.class.getSimpleName().replace("um", "ī"),
                       "prōductiō fōrmae nūllae prōcessit.");
       } else {
@@ -91,13 +92,13 @@ public abstract class ConditōrSimplicibus <Hoc extends VerbumSimplex <Hoc>> ext
    */
   @Singleton @DependsOn("NūntiusConditōrīAdverbiīs")
   public static final class ConditōrConiūnctīvīs extends ConditōrSimplicibus <VerbumSimplex.Coniūnctīvum> {
-    private static @Nullable ConditōrConiūnctīvīs īnstantia = null;
+    @Nullable private static ConditōrConiūnctīvīs īnstantia = null;
 
     /**
      * Valor hic viam reī classis huiuc facit.
      * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
      */
-    public static final @NotNull Supplier <ConditōrConiūnctīvīs> fac =
+    @NotNull public static final Supplier <ConditōrConiūnctīvīs> fac =
       () -> ObjectUtils.firstNonNull(īnstantia, īnstantia = new ConditōrConiūnctīvīs());
 
     private ConditōrConiūnctīvīs( ) {
@@ -109,12 +110,12 @@ public abstract class ConditōrSimplicibus <Hoc extends VerbumSimplex <Hoc>> ext
     /**
      * {@inheritDoc}
      */
-    protected @Override void referō(@Nullable final VerbumSimplex.Coniūnctīvum hoc) {
-      if (Objects.nonNull(hoc)) {
+    @Override protected void referō(@Nullable final VerbumSimplex.Coniūnctīvum hoc) {
+      if (Objects.isNull(hoc)) {
+        nūntius.certiōrō(VerbumSimplex.Coniūnctīvum.class.getSimpleName(), fundāmen, "fīnītur prōdūcere.");
+      } else {
         nūntius.moneō(VerbumSimplex.Coniūnctīvum.class.getSimpleName().replace("um", "ī"),
                       "prōductiō fōrmae nūllae prōcessit.");
-      } else {
-        nūntius.certiōrō(VerbumSimplex.Coniūnctīvum.class.getSimpleName(), fundāmen, "fīnītur prōdūcere.");
       }
     }
   }

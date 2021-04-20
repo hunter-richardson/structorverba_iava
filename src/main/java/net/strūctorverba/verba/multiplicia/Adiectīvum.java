@@ -23,13 +23,13 @@ import org.jetbrains.annotations.NotNull;
 @SuppressWarnings({ "NonAsciiCharacters", "SpellCheckingInspection" })
 public final class Adiectīvum extends Nōminālis <Adiectīvum> {
   @Getter(lazy = true) @Accessors(fluent = true)
-  private final @NotNull Nūntius.NūntiusAdiectīvōrum nūntius = Nūntius.NūntiusAdiectīvōrum.fac.get();
+  @NotNull private final Nūntius.NūntiusAdiectīvōrum nūntius = Nūntius.NūntiusAdiectīvōrum.fac.get();
 
   /**
    * Valor hic potentiam reī huius dēsignat.
    * @see Gradus
    */
-  public final @NotNull Gradus gradus;
+  @NotNull public final Gradus gradus;
 
   @Builder(access = AccessLevel.PUBLIC, builderClassName = "Conditōr", builderMethodName = "conditōr", buildMethodName = "condam")
   private Adiectīvum(@NotNull final Speciālitās speciālitās, @NotNull final Genus genus,

@@ -20,20 +20,20 @@ import java.util.function.Supplier;
 @SuppressWarnings({ "NonAsciiCharacters", "SpellCheckingInspection" })
 @Singleton @DependsOn("NūntiusConditōrīĀctīs")
 public final class ConditōrĀctīs extends ConditōrMultiplicibus <Āctum> {
-  private static @Nullable ConditōrĀctīs īnstantia = null;
+  @Nullable private static ConditōrĀctīs īnstantia = null;
 
   /**
    * Valor hic viam reī classis huiuc facit.
    * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
    */
-  public static final @NotNull Supplier <ConditōrĀctīs> fac =
+  @NotNull public static final Supplier <ConditōrĀctīs> fac =
     () -> ObjectUtils.firstNonNull(īnstantia, īnstantia = new ConditōrĀctīs());
 
-  private @NotNull Modus     modus     = Modus.NŪLLUS;
-  private @NotNull Vōx       vōx       = Vōx.NŪLLA;
-  private @NotNull Tempus    tempus    = Tempus.NŪLLUM;
-  private @NotNull Numerālis numerālis = Numerālis.NŪLLUS;
-  private @NotNull Persōna   persōna   = Persōna.NŪLLA;
+  @NotNull private Modus     modus     = Modus.NŪLLUS;
+  @NotNull private Vōx       vōx       = Vōx.NŪLLA;
+  @NotNull private Tempus    tempus    = Tempus.NŪLLUM;
+  @NotNull private Numerālis numerālis = Numerālis.NŪLLUS;
+  @NotNull private Persōna   persōna   = Persōna.NŪLLA;
 
   private ConditōrĀctīs( ) {
     super(Nūntius.NūntiusConditōrīĀctīs.fac);
@@ -42,10 +42,13 @@ public final class ConditōrĀctīs extends ConditōrMultiplicibus <Āctum> {
 
   /**
    * {@inheritDoc}
-   * @return Rem novam classis {@link Āctum}
+   * @return Rem novam classis {@link Āctum}. <br>
+   * Modus hid valōrem {@code null} refert sī nōn valet valor aliquis rēs haec continet.
    */
-  public @Override @Nullable Āctum condam( ) {
-    if (StringUtils.isNoneBlank(fundāmen, scrīptiō)) {
+  @Override @Nullable
+  public Āctum condam( ) {
+    if (ObjectUtils.allNotNull(modus, vōx, tempus, numerālis, persōna, numerālis)
+     && StringUtils.isNoneBlank(fundāmen, scrīptiō)) {
       final Āctum hoc = Āctum.conditōr().fundāmen(fundāmen).modus(modus).vōx(vōx).tempus(tempus)
                              .numerālis(numerālis).persōna(persōna).scrīptiō(scrīptiō).condam();
       if(Objects.isNull(hoc)) {
@@ -72,7 +75,7 @@ public final class ConditōrĀctīs extends ConditōrMultiplicibus <Āctum> {
    * @see Persōna#dēfīniam(String)
    * @see Verbum#fundāmen
    */
-  public @Override void allegō(@NotNull final String nōmen, @NotNull final String dēscrīptor) {
+  @Override public void allegō(@NotNull final String nōmen, @NotNull final String dēscrīptor) {
     switch (nōmen) {
       case "modus" -> modus = Modus.dēfīniam(dēscrīptor);
       case "vōx" -> vōx = Vōx.dēfīniam(dēscrīptor);
@@ -98,7 +101,7 @@ public final class ConditōrĀctīs extends ConditōrMultiplicibus <Āctum> {
    * @see Numerālis#NŪLLUS
    * @see Persōna#NŪLLA
    */
-  public @Override void restituō( ) {
+  @Override public void restituō( ) {
     numerālis = Numerālis.NŪLLUS;
     persōna = Persōna.NŪLLA;
     tempus = Tempus.NŪLLUM;

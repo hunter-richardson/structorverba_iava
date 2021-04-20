@@ -48,7 +48,7 @@ public enum Numerālis {
    * @param scrīptiō valōrem {@link #scrīptiō} indicat.
    * @return Rem ēnumerātiō {@link Numerālis} quod parametrum dēsignātum quadrat.
    */
-  public static @NotNull Numerālis dēfīniam(@NotNull final String scrīptiō) {
+  @NotNull public static Numerālis dēfīniam(@NotNull final String scrīptiō) {
     return Stream.of(values())
                  .filter(numerāle -> numerāle.scrīptiō.equals(scrīptiō))
                  .findFirst().orElse(NŪLLUS);
@@ -59,7 +59,7 @@ public enum Numerālis {
    * @param illud valor tentandus.
    */
   @SuppressWarnings("ConstantConditions")
-  public static @NotNull Numerālis ut(@NotNull final Enum<@NotNull ?> illud) {
+  @NotNull public static Numerālis ut(@NotNull final Enum<@NotNull ?> illud) {
     final Numerālis hoc = (Numerālis) illud;
     return hoc.equals(illud) ? hoc
                              : NŪLLUS;

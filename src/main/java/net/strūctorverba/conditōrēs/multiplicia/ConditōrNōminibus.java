@@ -21,19 +21,19 @@ import java.util.function.Supplier;
 @Singleton
 @DependsOn("NūntiusConditōrīNōminibus")
 public final class ConditōrNōminibus extends ConditōrMultiplicibus <Nōmen> {
-  private static @Nullable ConditōrNōminibus īnstantia = null;
+  @Nullable private static ConditōrNōminibus īnstantia = null;
 
   /**
    * Valor hic viam reī classis huiuc facit.
    * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
    */
-  public static final @NotNull Supplier <ConditōrNōminibus> fac =
+  @NotNull public static final Supplier <ConditōrNōminibus> fac =
     () -> ObjectUtils.firstNonNull(īnstantia, īnstantia = new ConditōrNōminibus());
 
-  private @NotNull Speciālitās speciālitās = Speciālitās.NŪLLUM;
-  private @NotNull Genus       genus       = Genus.NŪLLUM;
-  private @NotNull Numerālis   numerālis   = Numerālis.NŪLLUS;
-  private @NotNull Cāsus       cāsus       = Cāsus.NŪLLUS;
+  @NotNull private Speciālitās speciālitās = Speciālitās.NŪLLUM;
+  @NotNull private Genus       genus       = Genus.NŪLLUM;
+  @NotNull private Numerālis   numerālis   = Numerālis.NŪLLUS;
+  @NotNull private Cāsus       cāsus       = Cāsus.NŪLLUS;
 
   private ConditōrNōminibus( ) {
     super(Nūntius.NūntiusConditōrīNōminibus.fac);
@@ -42,10 +42,13 @@ public final class ConditōrNōminibus extends ConditōrMultiplicibus <Nōmen> {
 
   /**
    * {@inheritDoc}
-   * @return Rem novam classis {@link Nōmen}
+   * @return Rem novam classis {@link Nōmen}. <br>
+   * Modus hid valōrem {@code null} refert sī nōn valet valor aliquis rēs haec continet.
    */
-  public @Override @Nullable Nōmen condam( ) {
-    if (StringUtils.isNoneBlank(fundāmen, scrīptiō)) {
+  @Override @Nullable
+  public Nōmen condam( ) {
+    if (ObjectUtils.allNotNull(speciālitās, genus, cāsus, numerālis)
+     && StringUtils.isNoneBlank(fundāmen, scrīptiō)) {
       final Nōmen hoc = Nōmen.conditōr().fundāmen(fundāmen).speciālitās(speciālitās).genus(genus)
                              .cāsus(cāsus).numerālis(numerālis).scrīptiō(scrīptiō).condam();
       if(Objects.isNull(hoc)) {
@@ -71,7 +74,7 @@ public final class ConditōrNōminibus extends ConditōrMultiplicibus <Nōmen> {
    * @see Numerālis#dēfīniam(String)
    * @see Verbum#fundāmen
    */
-  public @Override void allegō(@NotNull final String nōmen, @NotNull final String dēscrīptor) {
+  @Override public void allegō(@NotNull final String nōmen, @NotNull final String dēscrīptor) {
     switch (nōmen) {
       case "speciālitās" -> speciālitās = Speciālitās.dēfīniam(dēscrīptor);
       case "genus" -> genus = Genus.dēfīniam(dēscrīptor);
@@ -95,7 +98,7 @@ public final class ConditōrNōminibus extends ConditōrMultiplicibus <Nōmen> {
    * @see Cāsus#NŪLLUS
    * @see Numerālis#NŪLLUS
    */
-  public @Override void restituō( ) {
+  @Override public void restituō( ) {
     speciālitās = Speciālitās.NŪLLUM;
     genus = Genus.NŪLLUM;
     cāsus = Cāsus.NŪLLUS;

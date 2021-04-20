@@ -21,20 +21,20 @@ import java.util.function.Supplier;
 @Singleton
 @DependsOn("NūntiusConditōrīAdiectīvīs")
 public final class ConditōrAdiectīvīs extends ConditōrMultiplicibus <Adiectīvum> {
-  private static @Nullable ConditōrAdiectīvīs īnstantia = null;
+  @Nullable private static ConditōrAdiectīvīs īnstantia = null;
 
   /**
    * Valor hic viam reī classis huiuc facit.
    * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
    */
-  public static final @NotNull Supplier <ConditōrAdiectīvīs> fac =
+  @NotNull public static final Supplier <ConditōrAdiectīvīs> fac =
     () -> ObjectUtils.firstNonNull(īnstantia, īnstantia = new ConditōrAdiectīvīs());
 
-  private @NotNull Speciālitās speciālitās = Speciālitās.NŪLLUM;
-  private @NotNull Genus       genus       = Genus.NŪLLUM;
-  private @NotNull Numerālis   numerālis   = Numerālis.NŪLLUS;
-  private @NotNull Cāsus       cāsus       = Cāsus.NŪLLUS;
-  private @NotNull Gradus      gradus      = Gradus.NŪLLUS;
+  @NotNull private Speciālitās speciālitās = Speciālitās.NŪLLUM;
+  @NotNull private Genus       genus       = Genus.NŪLLUM;
+  @NotNull private Numerālis   numerālis   = Numerālis.NŪLLUS;
+  @NotNull private Cāsus       cāsus       = Cāsus.NŪLLUS;
+  @NotNull private Gradus      gradus      = Gradus.NŪLLUS;
 
   private ConditōrAdiectīvīs( ) {
     super(Nūntius.NūntiusConditōrīAdiectīvīs.fac);
@@ -43,10 +43,13 @@ public final class ConditōrAdiectīvīs extends ConditōrMultiplicibus <Adiect�
 
   /**
    * {@inheritDoc}
-   * @return Rem novam classis {@link Adiectīvum}
+   * @return Rem novam classis {@link Adiectīvum}. <br>
+   * Modus hid valōrem {@code null} refert sī nōn valet valor aliquis rēs haec continet.
    */
-  public @Override @Nullable Adiectīvum condam( ) {
-    if (StringUtils.isNoneBlank(fundāmen, scrīptiō)) {
+  @Override @Nullable
+  public Adiectīvum condam( ) {
+    if (ObjectUtils.allNotNull(speciālitās, genus, cāsus, numerālis, gradus)
+     && StringUtils.isNoneBlank(fundāmen, scrīptiō)) {
       final Adiectīvum hoc = Adiectīvum.conditōr().fundāmen(fundāmen).speciālitās(speciālitās).genus(genus)
                                        .cāsus(cāsus).numerālis(numerālis).gradus(gradus).scrīptiō(scrīptiō).condam();
       if(Objects.isNull(hoc)) {
@@ -73,7 +76,7 @@ public final class ConditōrAdiectīvīs extends ConditōrMultiplicibus <Adiect�
    * @see Gradus#dēfīniam(String)
    * @see Verbum#fundāmen
    */
-  public @Override void allegō(@NotNull final String nōmen, @NotNull final String dēscrīptor) {
+  @Override public void allegō(@NotNull final String nōmen, @NotNull final String dēscrīptor) {
     switch (nōmen) {
       case "speciālitās" -> speciālitās = Speciālitās.dēfīniam(dēscrīptor);
       case "genus" -> genus = Genus.dēfīniam(dēscrīptor);
@@ -99,7 +102,7 @@ public final class ConditōrAdiectīvīs extends ConditōrMultiplicibus <Adiect�
    * @see Numerālis#NŪLLUS
    * @see Gradus#NŪLLUS
    */
-  public @Override void restituō( ) {
+  @Override public void restituō( ) {
     speciālitās = Speciālitās.NŪLLUM;
     genus = Genus.NŪLLUM;
     cāsus = Cāsus.NŪLLUS;

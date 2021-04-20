@@ -52,7 +52,7 @@ public enum Persōna {
    * @param scrīptiō valōrem {@link #scrīptiō} indicat.
    * @return Rem ēnumerātiō {@link Persōna} quod parametrum dēsignātum quadrat.
    */
-  public static @NotNull Persōna dēfīniam(@NotNull final String scrīptiō) {
+  @NotNull public static Persōna dēfīniam(@NotNull final String scrīptiō) {
     return Stream.of(values())
                  .filter(persōna -> persōna.scrīptiō.equals(scrīptiō))
                  .findFirst().orElse(NŪLLA);
@@ -63,7 +63,7 @@ public enum Persōna {
    * @param illud valor tentandus.
    */
   @SuppressWarnings("ConstantConditions")
-  public static @NotNull Persōna ut(@NotNull final Enum<@NotNull ?> illud) {
+  @NotNull public static Persōna ut(@NotNull final Enum<@NotNull ?> illud) {
     final Persōna hoc = (Persōna) illud;
     return hoc.equals(illud) ? hoc
                              : NŪLLA;

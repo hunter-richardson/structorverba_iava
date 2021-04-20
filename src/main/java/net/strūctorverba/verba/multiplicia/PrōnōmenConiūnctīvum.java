@@ -10,11 +10,7 @@ import net.strūctorverba.tenōrēs.TenorMultiplicibus;
 import net.strūctorverba.verba.*;
 import net.strūctorverba.verba.disposita.Verba;
 import net.strūctorverba.ēnumerātiōnēs.*;
-import org.apache.commons.lang3.StringUtils;
 import org.jetbrains.annotations.*;
-
-import java.util.*;
-import java.util.stream.*;
 
 /**
  * Classis {@link PrōnōmenConiūnctīvum} repraesentat nōmina ut coniectēris. <br>
@@ -29,7 +25,7 @@ import java.util.stream.*;
 @SuppressWarnings({ "NonAsciiCharacters", "SpellCheckingInspection" })
 public final class PrōnōmenConiūnctīvum extends Nōminālis <PrōnōmenConiūnctīvum> implements Coniugiāle {
   @Getter(lazy = true) @Accessors(fluent = true)
-  private final @NotNull Nūntius.NūntiusPrōnōminumConiūnctīvōrum nūntius = Nūntius.NūntiusPrōnōminumConiūnctīvōrum.fac.get();
+  @NotNull private final Nūntius.NūntiusPrōnōminumConiūnctīvōrum nūntius = Nūntius.NūntiusPrōnōminumConiūnctīvōrum.fac.get();
 
   @Builder(access = AccessLevel.PUBLIC, builderClassName = "Conditōr", builderMethodName = "conditōr", buildMethodName = "condam")
   private PrōnōmenConiūnctīvum(@NotNull final Speciālitās speciālitās, @NotNull final Genus genus,
@@ -46,13 +42,11 @@ public final class PrōnōmenConiūnctīvum extends Nōminālis <PrōnōmenConi�
      * @param <Ille> classis quae valōrēs et {@code prīmus} et {@code secundus} quadrat
      * @return Seriēs classis {@link Verbum} quae valōrum et {@code prīmus} et huius et {@code secundus} ōrdine constat
      */
-  public <Ille extends Verbum <Ille>> @NotNull LinkedList <Verbum <@Nullable ?>> coniugō(@Nullable final Ille prīmus,
-                                                                                         @Nullable final Ille secundus) {
+  @SuppressWarnings("ConstantConditions")
+  @NotNull public <Ille extends Verbum <Ille>> Verba coniugō(@Nullable final Ille prīmus,
+                                                             @Nullable final Ille secundus) {
     nūntius().plūrimumGarriō("Scrībor ut", prīmus, this, secundus);
-    return Stream.of(prīmus, this, secundus)
-                 .filter(Objects::nonNull)
-                 .filter(verbum -> StringUtils.isNotBlank(verbum.toString()))
-                 .collect(Collectors.toCollection(LinkedList::new));
+    return new Verba().addō(prīmus, this, secundus);
   }
 
     /**
@@ -61,20 +55,7 @@ public final class PrōnōmenConiūnctīvum extends Nōminālis <PrōnōmenConi�
      * @param secundus valor secundus
      * @return Rēs classis {@link Verba} quae valōrum et {@code prīmus} et huius et {@code secundus} constat
      */
-  public @NotNull Verba coniugō(@NotNull final Verba prīmus, @NotNull final Verba secundus) {
-    nūntius().plūrimumGarriō("Scrībor ut", prīmus, this, secundus);
-    prīmus.coniūnctīvumAllegōContinuōque(this, secundus);
-    return prīmus;
-  }
-
-    /**
-     * {@inheritDoc}
-     * @param prīmus valor prīmus
-     * @param secundus valor secundus
-     * @return Rēs classis {@link Verba} quae valōrum et {@code prīmus} et huius et {@code secundus} constat
-     */
-  public @NotNull Verba coniugō(@NotNull final Verba prīmus, @NotNull final LinkedList <Verbum <@Nullable ?>> secundus) {
-    prīmus.coniūnctīvumAllegōContinuōque(this, Verba.conditōr().seriēs(secundus).condam());
-    return prīmus;
+  @NotNull public Verba coniugō(@NotNull final Verba prīmus, @NotNull final Verba secundus) {
+    return new Verba().addō(prīmus).addō(this).addō(secundus);
   }
 }

@@ -21,12 +21,12 @@ public abstract class Tenor <Hoc extends Verbum <Hoc>> extends DefaultHandler {
   /**
    * Valor hic est vās classis {@link Nūntius} classī extentī huius.
    */
-  protected final @NotNull Nūntius nūntius;
+  @NotNull protected final Nūntius nūntius;
 
   /**
    * Valor hic rem classis {@link Hoc} tenet et cōnstruenum ā reī aptae classis {@link Conditōr} et praebendum ad rē classis {@link LēctorSimplicibus}.
    */
-  protected @Nullable Hoc hoc;
+  @Nullable protected Hoc hoc;
 
   /**
    * Valor hic seriem rērum classis {@link Hoc} tenet praebendum ad rē classis {@link LēctorMultiplicibus}.
@@ -44,7 +44,7 @@ public abstract class Tenor <Hoc extends Verbum <Hoc>> extends DefaultHandler {
   /**
    * @return Valōrem {@link #hoc}
    */
-  public @Nullable Hoc referō( ) {
+  @Nullable public Hoc referō( ) {
     return hoc;
   }
 
@@ -65,7 +65,7 @@ public abstract class Tenor <Hoc extends Verbum <Hoc>> extends DefaultHandler {
    * @param longitia longitia valōris {@code litterae} ūtendī
    * @see <a href="https://docs.oracle.com/javase/7/docs/api/org/xml/sax/helpers/DefaultHandler.html#characters(char[],%20int,%20int)">DefaultHandler.characters</a>
    */
-  public final @Override void characters(final char[] litterae, final int incepta, final int longitia) {
+  @Override public final void characters(final char[] litterae, final int incepta, final int longitia) {
     String fōrma = new String(litterae, incepta, longitia).trim();
     if(StringUtils.isNotBlank(fōrma)) {
       nūntius.garriō("Verbum illud est", fōrma);

@@ -52,7 +52,7 @@ public enum Genus {
    * @param scrīptiō valōrem {@link #scrīptiō} indicat.
    * @return Rem ēnumerātiō {@link Genus} quod parametrum dēsignātum quadrat.
    */
-  public static @NotNull Genus dēfīniam(@NotNull final String scrīptiō) {
+  @NotNull public static Genus dēfīniam(@NotNull final String scrīptiō) {
     return Stream.of(values())
                  .filter(genus -> genus.scrīptiō.equals(scrīptiō))
                  .findFirst().orElse(NŪLLUM);
@@ -63,7 +63,7 @@ public enum Genus {
    * @param illud valor tentandus.
    */
   @SuppressWarnings("ConstantConditions")
-  public static @NotNull Genus ut(@NotNull final Enum<@NotNull ?> illud) {
+  @NotNull public static Genus ut(@NotNull final Enum<@NotNull ?> illud) {
     final Genus hoc = (Genus) illud;
     return hoc.equals(illud) ? hoc
                              : NŪLLUM;

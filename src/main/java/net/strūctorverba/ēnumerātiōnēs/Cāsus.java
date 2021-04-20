@@ -77,7 +77,7 @@ public enum Cāsus {
    * @param scrīptiō valōrem {@link #scrīptiō} indicat.
    * @return Rem ēnumerātiō {@link Cāsus} quod parametrum dēsignātum quadrat.
    */
-  public static @NotNull Cāsus dēfīniam(@NotNull final String scrīptiō) {
+  @NotNull public static Cāsus dēfīniam(@NotNull final String scrīptiō) {
     return Stream.of(values())
                  .filter(cāsus -> cāsus.scrīptiō.equals(scrīptiō))
                  .findFirst().orElse(NŪLLUS);
@@ -88,7 +88,7 @@ public enum Cāsus {
    * @param illud valor tentandus.
    */
   @SuppressWarnings("ConstantConditions")
-  public static @NotNull Cāsus ut(@NotNull final Enum<@NotNull ?> illud) {
+  @NotNull public static Cāsus ut(@NotNull final Enum<@NotNull ?> illud) {
     final Cāsus hoc = (Cāsus) illud;
     return hoc.equals(illud) ? hoc
                              : NŪLLUS;

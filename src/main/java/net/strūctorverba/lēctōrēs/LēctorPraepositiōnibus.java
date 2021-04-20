@@ -28,19 +28,19 @@ import java.util.stream.Stream;
 @SuppressWarnings({ "NonAsciiCharacters", "SpellCheckingInspection", "unused" })
 @Singleton @DependsOn("NūntiusLēctōrīPraepositiōnibus")
 public final class LēctorPraepositiōnibus {
-  private static @Nullable LēctorPraepositiōnibus īnstantia = null;
+  @Nullable private static LēctorPraepositiōnibus īnstantia = null;
 
   /**
    * Valor hic viam reī classis huiuc facit.
    * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
    */
-  public static final @NotNull Supplier <LēctorPraepositiōnibus> fac =
+  @NotNull public static final Supplier <LēctorPraepositiōnibus> fac =
     () -> ObjectUtils.firstNonNull(īnstantia, īnstantia = new LēctorPraepositiōnibus());
 
   @Getter(lazy = true) @Accessors(fluent = true)
-  private final @NotNull Nūntius.NūntiusLēctōrīPraepositiōnibus nūntius = Nūntius.NūntiusLēctōrīPraepositiōnibus.fac.get();
+  @NotNull private final Nūntius.NūntiusLēctōrīPraepositiōnibus nūntius = Nūntius.NūntiusLēctōrīPraepositiōnibus.fac.get();
 
-  private final @NotNull BiPredicate<@NotNull String, @NotNull Cāsus> quaerō = (verbum, cāsus) -> {
+  @NotNull private final BiPredicate<@NotNull String, @NotNull Cāsus> quaerō = (verbum, cāsus) -> {
     final String nōmen = Path.of(Catēgoria.PRAEPOSITIŌ.scrīptiō, String.format("%s.data", cāsus.scrīptiō)).toString();
     try (final BufferedReader pervidētiō = new BufferedReader(new FileReader(nōmen))) {
       nūntius().notō("Iam legō scāpum auxiliārem", nōmen);
@@ -51,7 +51,7 @@ public final class LēctorPraepositiōnibus {
     }
   };
 
-  private final @NotNull BiFunction<@NotNull String, @NotNull Cāsus, VerbumSimplex.Praepositiō> adveniō = (verbum, cāsus) -> {
+  @NotNull private final BiFunction<@NotNull String, @NotNull Cāsus, VerbumSimplex.Praepositiō> adveniō = (verbum, cāsus) -> {
     final String nōmen = Path.of(Catēgoria.PRAEPOSITIŌ.scrīptiō, String.format("%s.data", cāsus.scrīptiō)).toString();
     try (final BufferedReader pervidētiō = new BufferedReader(new FileReader(Ūtilitās.auxilior(nōmen)))) {
       nūntius().notō("Iam legō scāpum auxiliārem", nōmen);
@@ -82,9 +82,10 @@ public final class LēctorPraepositiōnibus {
   /**
    * Modus hic rem classis {@link VerbumSimplex.Praepositiō} ā scāpō XML in scrīnium <a href="{@docRoot}/../src/main/resources">auxiliārēs</a>/praepositiōnēs cōnābitur advenīre.
    * @param verbum fundāmen praepositiōnī quod rēs haec cōnābitur advenīre
-   * @return Rem classis {@link VerbumSimplex.Praepositiō} quam valōrem {@code verbum} quadrat
+   * @return Rem classis {@link VerbumSimplex.Praepositiō} quam valōrem {@code verbum} quadrat. <br>
+   * Modus hic valōrem {@link VerbumSimplex.Praepositiō#assūme} supplet sī nihil valōrem {@code verbum} quadrat.
    */
-  public @NotNull VerbumSimplex.Praepositiō adveniam(@NotNull final String verbum) {
+  @NotNull public VerbumSimplex.Praepositiō adveniam(@NotNull final String verbum) {
    Cāsus cāsus = Stream.of(Cāsus.ABLĀTĪVUS, Cāsus.ACCŪSĀTĪVUS, Cāsus.GENITĪVUS, Cāsus.VOCĀTĪVUS)
                        .filter(css -> quaerō.test(verbum, css))
                        .findFirst().orElse(Cāsus.NŪLLUS);

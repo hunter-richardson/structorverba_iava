@@ -47,7 +47,7 @@ public enum Vōx {
    * @param scrīptiō valōrem {@link #scrīptiō} indicat.
    * @return Rem ēnumerātiō {@link Vōx} quod parametrum dēsignātum quadrat.
    */
-  public static @NotNull Vōx dēfīniam(@NotNull final String scrīptiō) {
+  @NotNull public static Vōx dēfīniam(@NotNull final String scrīptiō) {
     return Stream.of(values())
                  .filter(vōx -> vōx.scrīptiō.equals(scrīptiō))
                  .findFirst().orElse(NŪLLA);
@@ -58,7 +58,7 @@ public enum Vōx {
    * @param illud valor tentandus.
    */
   @SuppressWarnings("ConstantConditions")
-  public static @NotNull Vōx ut(@NotNull final Enum<@NotNull ?> illud) {
+  @NotNull public static Vōx ut(@NotNull final Enum<@NotNull ?> illud) {
     final Vōx hoc = (Vōx) illud;
     return hoc.equals(illud) ? hoc
                              : NŪLLA;

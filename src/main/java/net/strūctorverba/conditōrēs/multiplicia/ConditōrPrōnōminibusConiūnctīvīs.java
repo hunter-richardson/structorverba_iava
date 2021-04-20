@@ -20,19 +20,19 @@ import java.util.function.Supplier;
 @SuppressWarnings({ "NonAsciiCharacters", "SpellCheckingInspection" })
 @Singleton @DependsOn("NūntiusConditōrīPrōnōmibusConiūnctīvīs")
 public final class ConditōrPrōnōminibusConiūnctīvīs extends ConditōrMultiplicibus <PrōnōmenConiūnctīvum> {
-  private static @Nullable ConditōrPrōnōminibusConiūnctīvīs īnstantia = null;
+  @Nullable private static ConditōrPrōnōminibusConiūnctīvīs īnstantia = null;
 
   /**
    * Valor hic viam reī classis huiuc facit.
    * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
    */
-  public static final @NotNull Supplier <ConditōrPrōnōminibusConiūnctīvīs> fac =
+  @NotNull public static final Supplier <ConditōrPrōnōminibusConiūnctīvīs> fac =
     () -> ObjectUtils.firstNonNull(īnstantia, īnstantia = new ConditōrPrōnōminibusConiūnctīvīs());
 
-  private @NotNull Speciālitās speciālitās = Speciālitās.NŪLLUM;
-  private @NotNull Genus       genus       = Genus.NŪLLUM;
-  private @NotNull Numerālis   numerālis   = Numerālis.NŪLLUS;
-  private @NotNull Cāsus       cāsus       = Cāsus.NŪLLUS;
+  @NotNull private Speciālitās speciālitās = Speciālitās.NŪLLUM;
+  @NotNull private Genus       genus       = Genus.NŪLLUM;
+  @NotNull private Numerālis   numerālis   = Numerālis.NŪLLUS;
+  @NotNull private Cāsus       cāsus       = Cāsus.NŪLLUS;
 
   private ConditōrPrōnōminibusConiūnctīvīs( ) {
     super(Nūntius.NūntiusConditōrīPrōnōmibusConiūnctīvīs.fac);
@@ -41,10 +41,13 @@ public final class ConditōrPrōnōminibusConiūnctīvīs extends ConditōrMulti
 
   /**
    * {@inheritDoc}
-   * @return Rem novam classis {@link PrōnōmenConiūnctīvum}
+   * @return Rem novam classis {@link PrōnōmenConiūnctīvum}. <br>
+   * Modus hid valōrem {@code null} refert sī nōn valet valor aliquis rēs haec continet.
    */
-  public @Override @Nullable PrōnōmenConiūnctīvum condam( ) {
-    if (StringUtils.isNoneBlank(fundāmen, scrīptiō)) {
+  @Override @Nullable
+  public PrōnōmenConiūnctīvum condam( ) {
+    if (ObjectUtils.allNotNull(speciālitās, genus, cāsus, numerālis)
+     && StringUtils.isNoneBlank(fundāmen, scrīptiō)) {
       final PrōnōmenConiūnctīvum hoc = PrōnōmenConiūnctīvum.conditōr().fundāmen(fundāmen).speciālitās(speciālitās)
                                                            .genus(genus).cāsus(cāsus).numerālis(numerālis)
                                                            .scrīptiō(scrīptiō).condam();
@@ -75,7 +78,7 @@ public final class ConditōrPrōnōminibusConiūnctīvīs extends ConditōrMulti
    * @see Numerālis#dēfīniam(String)
    * @see Verbum#fundāmen
    */
-  public @Override void allegō(@NotNull final String nōmen, @NotNull final String dēscrīptor) {
+  @Override public void allegō(@NotNull final String nōmen, @NotNull final String dēscrīptor) {
     switch (nōmen) {
       case "speciālitās" -> speciālitās = Speciālitās.dēfīniam(dēscrīptor);
       case "genus" -> genus = Genus.dēfīniam(dēscrīptor);
@@ -101,7 +104,7 @@ public final class ConditōrPrōnōminibusConiūnctīvīs extends ConditōrMulti
    * @see Cāsus#NŪLLUS
    * @see Numerālis#NŪLLUS
    */
-  public @Override void restituō( ) {
+  @Override public void restituō( ) {
     speciālitās = Speciālitās.NŪLLUM;
     genus = Genus.NŪLLUM;
     cāsus = Cāsus.NŪLLUS;

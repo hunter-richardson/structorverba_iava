@@ -102,7 +102,7 @@ public enum Mēnsis {
    * @param ēnumerātiō valor tentandus.
    * @return Rem petītam ēnumerātiōnis {@link Mēnsis}
    */
-  public static @NotNull Mēnsis indīcam(@NotNull final Month ēnumerātiō) {
+  @NotNull public static Mēnsis indīcam(@NotNull final Month ēnumerātiō) {
     return switch (ēnumerātiō) {
              case JANUARY -> IANUĀRIĪ;
              case FEBRUARY -> FEBRUĀRIĪ;
@@ -122,7 +122,7 @@ public enum Mēnsis {
   /**
    * @return {@link #scrīptiō}
    */
-  public @NotNull String toString() {
+  @NotNull public String toString() {
     return scrīptiō;
   }
 }

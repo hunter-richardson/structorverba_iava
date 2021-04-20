@@ -68,7 +68,7 @@ public enum Tempus {
    * @param scrīptiō valōrem {@link #scrīptiō} indicat.
    * @return Rem ēnumerātiō {@link Tempus} quod parametrum dēsignātum quadrat.
    */
-  public static @NotNull Tempus dēfīniam(@NotNull final String scrīptiō) {
+  @NotNull public static Tempus dēfīniam(@NotNull final String scrīptiō) {
     return Stream.of(values())
                  .filter(tempus -> tempus.scrīptiō.equals(scrīptiō))
                  .findFirst().orElse(NŪLLUM);
@@ -79,7 +79,7 @@ public enum Tempus {
    * @param illud valor tentandus.
    */
   @SuppressWarnings("ConstantConditions")
-  public static @NotNull Tempus ut(@NotNull final Enum<@NotNull ?> illud) {
+  @NotNull public static Tempus ut(@NotNull final Enum<@NotNull ?> illud) {
     final Tempus hoc = (Tempus) illud;
     return hoc.equals(illud) ? hoc
                              : NŪLLUM;

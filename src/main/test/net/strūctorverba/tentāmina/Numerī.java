@@ -22,7 +22,7 @@ public class Numerī {
 
   private final @NotNull String XLII_SCRĪPTIŌ = "XLII";
 
-  private String perpetram(final short numerusPrīmus, final short numerusSecundus, final char operātiō) {
+  @NotNull private String perpetram(final short numerusPrīmus, final short numerusSecundus, final char operātiō) {
     final String labor = switch (operātiō) {
                            case '+' -> "additiōnis";
                            case '-' -> "subtractiōnis";

@@ -16,9 +16,7 @@ import net.strūctorverba.ēnumerātiōnēs.Catēgoria;
 import org.apache.commons.lang3.StringUtils;
 import org.jetbrains.annotations.*;
 
-import java.util.*;
 import java.util.function.Supplier;
-import java.util.stream.*;
 
 /**
  * Classis {@link VerbumSimplex} repraesentat verbum aliquem quod fōrmam ūnam sōlum habent. <br>
@@ -44,7 +42,8 @@ public abstract class VerbumSimplex <Hoc extends Verbum <Hoc>> extends Verbum <H
    * @return Repraesentātiōnem scrīpta reī classis {@link VerbumSimplex}. <br>
    * Sōlum valōrem {@link Verbum#fundāmen} potest referre cum fōrmā ūnā.
    */
-  public @Override @NotNull String toString( ) {
+  @Override @NotNull
+  public String toString( ) {
     return fundāmen;
   }
 
@@ -58,9 +57,9 @@ public abstract class VerbumSimplex <Hoc extends Verbum <Hoc>> extends Verbum <H
    */
   public static final class Adverbium extends VerbumSimplex <Adverbium> {
     @Getter(lazy = true) @Accessors(fluent = true)
-    private final @NotNull Nūntius.NūntiusAdverbiōrum nūntius = Nūntius.NūntiusAdverbiōrum.fac.get();
+    @NotNull private final Nūntius.NūntiusAdverbiōrum nūntius = Nūntius.NūntiusAdverbiōrum.fac.get();
 
-    @Builder(access = AccessLevel.MODULE, builderClassName = "Conditōr", builderMethodName = "conditōr", buildMethodName = "condam")
+    @Builder(access = AccessLevel.PUBLIC, builderClassName = "Conditōr", builderMethodName = "conditōr", buildMethodName = "condam")
     private Adverbium(@NotNull final String fundāmen) {
       super(Catēgoria.ADVERBIUM, fundāmen);
       nūntius().plūsGarriō("Scrībor ut", fundāmen);
@@ -78,7 +77,7 @@ public abstract class VerbumSimplex <Hoc extends Verbum <Hoc>> extends Verbum <H
    */
   public static final class Coniūnctīvum extends VerbumSimplex <Coniūnctīvum> implements Coniugiāle {
     @Getter(lazy = true) @Accessors(fluent = true)
-    private final @NotNull Nūntius.NūntiusConiūnctīvōrum nūntius = Nūntius.NūntiusConiūnctīvōrum.fac.get();
+    @NotNull private final Nūntius.NūntiusConiūnctīvōrum nūntius = Nūntius.NūntiusConiūnctīvōrum.fac.get();
 
     @Builder(access = AccessLevel.PUBLIC, builderClassName = "Conditōr", builderMethodName = "conditōr", buildMethodName = "condam")
     private Coniūnctīvum(@NotNull final String fundāmen) {
@@ -92,13 +91,11 @@ public abstract class VerbumSimplex <Hoc extends Verbum <Hoc>> extends Verbum <H
      * @param secundus valor secundus
      * @param <Ille> classis quae valōrēs et {@code prīmus} et {@code secundus} quadrat
      */
-    public <Ille extends Verbum <Ille>> @NotNull LinkedList <Verbum <@Nullable ?>> coniugō(@Nullable final Ille prīmus,
-                                                                                           @Nullable final Ille secundus) {
+    @SuppressWarnings("ConstantConditions")
+    @NotNull public <Ille extends Verbum <Ille>> Verba coniugō(@Nullable final Ille prīmus,
+                                                               @Nullable final Ille secundus) {
       nūntius().plūrimumGarriō("Scrībor ut", prīmus, this, secundus);
-      return Stream.of(prīmus, this, secundus)
-                   .filter(Objects::nonNull)
-                   .filter(verbum -> StringUtils.isNotBlank(verbum.toString()))
-                   .collect(Collectors.toCollection(LinkedList::new));
+      return new Verba().addō(prīmus, this, secundus);
     }
 
     /**
@@ -106,21 +103,9 @@ public abstract class VerbumSimplex <Hoc extends Verbum <Hoc>> extends Verbum <H
      * @param prīmus valor prīmus
      * @param secundus valor secundus
      */
-    public final @NotNull Verba coniugō(@NotNull final Verba prīmus, @NotNull final Verba secundus) {
+    @NotNull public final Verba coniugō(@NotNull final Verba prīmus, @NotNull final Verba secundus) {
       nūntius().plūrimumGarriō("Scrībor ut", prīmus, this, secundus);
-      prīmus.coniūnctīvumAllegōContinuōque(this, secundus);
-      return prīmus;
-    }
-
-    /**
-     * {@inheritDoc}
-     * @param prīmus valor prīmus
-     * @param secundus valor secundus
-     */
-    public final @NotNull Verba coniugō(@NotNull final Verba prīmus,
-                                        @NotNull final LinkedList <Verbum <@Nullable ?>> secundus) {
-      prīmus.coniūnctīvumAllegōContinuōque(this, Verba.conditōr().seriēs(secundus).condam());
-      return prīmus;
+      return new Verba().addō(prīmus).addō(this).addō(secundus);
     }
   }
 
@@ -132,12 +117,12 @@ public abstract class VerbumSimplex <Hoc extends Verbum <Hoc>> extends Verbum <H
    */
   public static final class Praepositiō extends VerbumSimplex <Praepositiō> {
     @Getter(lazy = true) @Accessors(fluent = true)
-    private final @NotNull Nūntius.NūntiusPraepositiōnum nūntius = Nūntius.NūntiusPraepositiōnum.fac.get();
+    @NotNull private final Nūntius.NūntiusPraepositiōnum nūntius = Nūntius.NūntiusPraepositiōnum.fac.get();
 
     /**
      * Valor hic supplet rem classis {@link Praepositiō} quam praepositiōnem nūlla repraesentat.
      */
-    public static final @NotNull Supplier<Praepositiō> assūme =
+    @NotNull public static final Supplier<Praepositiō> assūme =
       () -> Praepositiō.conditōr().fundāmen(StringUtils.EMPTY).condam();
 
     @Builder(access = AccessLevel.PUBLIC, builderClassName = "Conditōr", builderMethodName = "conditōr", buildMethodName = "condam")
@@ -157,7 +142,7 @@ public abstract class VerbumSimplex <Hoc extends Verbum <Hoc>> extends Verbum <H
    */
   public static final class Numerus extends VerbumSimplex<Numerus> {
     @Getter(lazy = true) @Accessors(fluent = true)
-    private final @NotNull Nūntius.NūntiusNumerōrum nūntius = Nūntius.NūntiusNumerōrum.fac.get();
+    @NotNull private final Nūntius.NūntiusNumerōrum nūntius = Nūntius.NūntiusNumerōrum.fac.get();
 
     /**
      * Valor hic repraesentātiōnem numeriam tenet reī classis {@link Numerus}.
@@ -172,15 +157,17 @@ public abstract class VerbumSimplex <Hoc extends Verbum <Hoc>> extends Verbum <H
       nūntius().plūsGarriō("Scrībor ut", toString());
     }
 
-    private RomanInteger ostendam() throws IllegalArgumentException {
+    @NotNull private RomanInteger ostendam() throws IllegalArgumentException {
       return RomanInteger.parse(String.valueOf(numerus), IntegerType.ARABIC);
     }
 
     /**
-     * @return Repraesentātiōnem scrīpta reī classis {@link Numerus}.
+     * @return Repraesentātiōnem scrīpta reī classis {@link Numerus}. <br>
+     * Modus hic valōrem <a href="https://commons.apache.org/proper/commons-lang/apidocs/org/apache/commons/lang3/StringUtils.html#EMPTY">StringUtils.EMPTY</a> refert sī <a href="https://github.com/Chaosfirebolt/RomanNumeralConverter/blob/master/src/main/java/com/github/chaosfirebolt/converter/RomanInteger.java">RomanInteger</a> errōrem continuātur.
      * @see <a href="https://github.com/Chaosfirebolt/RomanNumeralConverter/blob/master/src/main/java/com/github/chaosfirebolt/converter/RomanInteger.java">RomanInteger</a>
      */
-    public @Override @NotNull String toString() throws IllegalArgumentException {
+    @Override @NotNull
+    public String toString() throws IllegalArgumentException {
       try {
         return Ūtilitās.capitāneāsScrībō(ostendam().toString());
       } catch (IllegalArgumentException e) {
@@ -190,11 +177,12 @@ public abstract class VerbumSimplex <Hoc extends Verbum <Hoc>> extends Verbum <H
     }
 
     /**
-     * @return Rem classis {@link Numerus} quae ēventum additiōnis cum valōre {@code alius} repraesentat.
+     * @return Rem classis {@link Numerus} quae ēventum additiōnis cum valōre {@code alius} repraesentat. <br>
+     * Modus hic valōrem {@code null} refert sī <a href="https://github.com/Chaosfirebolt/RomanNumeralConverter/blob/master/src/main/java/com/github/chaosfirebolt/converter/RomanInteger.java">RomanInteger</a> errōrem continuātur.
      * @param alius rēs classis {@link Numerus} ūsa additiōnī.
      * @see <a href="https://github.com/Chaosfirebolt/RomanNumeralConverter/blob/master/src/main/java/com/github/chaosfirebolt/converter/RomanInteger.java">RomanInteger</a>
      */
-    public Numerus addō(final @NotNull Numerus alius) {
+    @Nullable public Numerus addō(final @NotNull Numerus alius) {
       try {
         return new Numerus(ostendam().add(alius.ostendam()).getArabic().shortValue());
       } catch (IllegalArgumentException e) {
@@ -204,11 +192,12 @@ public abstract class VerbumSimplex <Hoc extends Verbum <Hoc>> extends Verbum <H
     }
 
     /**
-     * @return Rem classis {@link Numerus} quae ēventum subtractiōnis cum valōre {@code alius} repraesentat.
+     * @return Rem classis {@link Numerus} quae ēventum subtractiōnis cum valōre {@code alius} repraesentat. <br>
+     * Modus hic valōrem {@code null} refert sī <a href="https://github.com/Chaosfirebolt/RomanNumeralConverter/blob/master/src/main/java/com/github/chaosfirebolt/converter/RomanInteger.java">RomanInteger</a> errōrem continuātur.
      * @param alius Rēs classis {@link Numerus} ūsa subtractiōnī.
      * @see <a href="https://github.com/Chaosfirebolt/RomanNumeralConverter/blob/master/src/main/java/com/github/chaosfirebolt/converter/RomanInteger.java">RomanInteger</a>
      */
-    public Numerus subtrahō(final @NotNull Numerus alius) {
+    @Nullable public Numerus subtrahō(final @NotNull Numerus alius) {
       try {
         return new Numerus(ostendam().subtract(alius.ostendam()).getArabic().shortValue());
       } catch (IllegalArgumentException e) {
@@ -218,11 +207,12 @@ public abstract class VerbumSimplex <Hoc extends Verbum <Hoc>> extends Verbum <H
     }
 
     /**
-     * @return Rem classis {@link Numerus} quae ēventum multiplicātiōnis cum valōre {@code alius} repraesentat.
+     * @return Rem classis {@link Numerus} quae ēventum multiplicātiōnis cum valōre {@code alius} repraesentat. <br>
+     * Modus hic valōrem {@code null} refert sī <a href="https://github.com/Chaosfirebolt/RomanNumeralConverter/blob/master/src/main/java/com/github/chaosfirebolt/converter/RomanInteger.java">RomanInteger</a> errōrem continuātur.
      * @param alius Rēs classis {@link Numerus} ūsa multiplicātiōnī.
      * @see <a href="https://github.com/Chaosfirebolt/RomanNumeralConverter/blob/master/src/main/java/com/github/chaosfirebolt/converter/RomanInteger.java">RomanInteger</a>
      */
-    public Numerus multiplicō(final @NotNull Numerus alius) {
+    @Nullable public Numerus multiplicō(final @NotNull Numerus alius) {
       try {
         return new Numerus(ostendam().multiply(alius.ostendam()).getArabic().shortValue());
       } catch (IllegalArgumentException e) {
@@ -232,11 +222,12 @@ public abstract class VerbumSimplex <Hoc extends Verbum <Hoc>> extends Verbum <H
     }
 
     /**
-     * @return Rem classis {@link Numerus} quae ēventum dīvīsiōnis cum valōre {@code alius} repraesentat.
+     * @return Rem classis {@link Numerus} quae ēventum dīvīsiōnis cum valōre {@code alius} repraesentat. <br>
+     * Modus hic valōrem {@code null} refert sī <a href="https://github.com/Chaosfirebolt/RomanNumeralConverter/blob/master/src/main/java/com/github/chaosfirebolt/converter/RomanInteger.java">RomanInteger</a> errōrem continuātur.
      * @param alius Rēs classis {@link Numerus} ūsa dīvīsiōnī.
      * @see <a href="https://github.com/Chaosfirebolt/RomanNumeralConverter/blob/master/src/main/java/com/github/chaosfirebolt/converter/RomanInteger.java">RomanInteger</a>
      */
-    public Numerus dīvidō(final @NotNull Numerus alius) {
+    @Nullable public Numerus dīvidō(final @NotNull Numerus alius) {
       try {
         return new Numerus(ostendam().divide(alius.ostendam()).getArabic().shortValue());
       } catch (IllegalArgumentException e) {
@@ -246,11 +237,12 @@ public abstract class VerbumSimplex <Hoc extends Verbum <Hoc>> extends Verbum <H
     }
 
     /**
-     * @return Rem classis {@link Numerus} quae ēventum mānsiōnis cum valōre {@code alius} repraesentat.
+     * @return Rem classis {@link Numerus} quae ēventum mānsiōnis cum valōre {@code alius} repraesentat. <br>
+     * Modus hic valōrem {@code null} refert sī <a href="https://github.com/Chaosfirebolt/RomanNumeralConverter/blob/master/src/main/java/com/github/chaosfirebolt/converter/RomanInteger.java">RomanInteger</a> errōrem continuātur.
      * @param alius Rēs classis {@link Numerus} ūsa mānsiōnī.
      * @see <a href="https://github.com/Chaosfirebolt/RomanNumeralConverter/blob/master/src/main/java/com/github/chaosfirebolt/converter/RomanInteger.java">RomanInteger</a>
      */
-    public Numerus maneō(final @NotNull Numerus alius) {
+    @Nullable public Numerus maneō(final @NotNull Numerus alius) {
       try {
         return new Numerus(ostendam().remainder(alius.ostendam()).getArabic().shortValue());
       } catch (IllegalArgumentException e) {

@@ -19,14 +19,14 @@ final class ParametrīNūntiī {
   /**
    * Valor hic incidat quam verbōsa rēs haec scrībētur.
    */
-  public final @NotNull GradusNūntiī gradusMinimus = GradusNūntiī.OMNIS;
+  @NotNull public final GradusNūntiī gradusMinimus = GradusNūntiī.OMNIS;
 
   /**
    * Valor hic viam reī classis <a href="https://docs.oracle.com/javase/7/docs/api/java/util/logging/Logger.html">Logger</a> facit.
    * @see <a href="https://docs.oracle.com/javase/7/docs/api/java/util/logging/Logger.html">Logger</a>
    * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
    */
-  public final @NotNull Supplier <@NotNull Logger> praecōnium;
+  @NotNull public final Supplier <@NotNull Logger> praecōnium;
 
   private ParametrīNūntiī(@NotNull final Class <?> classis) {
     praecōnium = () -> {
@@ -65,9 +65,9 @@ final class ParametrīNūntiī {
 
   /**
    * @param classis classis apta
-   * @return rem novam classis huius
+   * @return Rem novam classis huius
    */
-  public static @NotNull ParametrīNūntiī parā(@NotNull final Class<?> classis) {
+  @NotNull public static ParametrīNūntiī parā(@NotNull final Class<?> classis) {
     return new ParametrīNūntiī(classis);
   }
 }

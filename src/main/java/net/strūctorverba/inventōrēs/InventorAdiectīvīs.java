@@ -19,20 +19,20 @@ import java.util.function.*;
 @Singleton
 @DependsOn("NūntiusInventōrīAdiectīvīs")
 public final class InventorAdiectīvīs extends Inventor <Adiectīvum> {
-  private static @Nullable InventorAdiectīvīs īnstantia = null;
+  @Nullable private static InventorAdiectīvīs īnstantia = null;
 
   /**
    * Valor hic viam reī classis huiuc facit.
    * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
    */
-  public static final @NotNull Supplier <InventorAdiectīvīs> fac =
+  @NotNull public static final Supplier <InventorAdiectīvīs> fac =
     () -> ObjectUtils.firstNonNull(īnstantia, īnstantia = new InventorAdiectīvīs());
 
-  private @NotNull Speciālitās speciālitās = Speciālitās.NŪLLUM;
-  private @NotNull Genus       genus       = Genus.NŪLLUM;
-  private @NotNull Numerālis   numerālis   = Numerālis.NŪLLUS;
-  private @NotNull Cāsus       cāsus       = Cāsus.NŪLLUS;
-  private @NotNull Gradus      gradus      = Gradus.NŪLLUS;
+  @NotNull private Speciālitās speciālitās = Speciālitās.NŪLLUM;
+  @NotNull private Genus       genus       = Genus.NŪLLUM;
+  @NotNull private Numerālis   numerālis   = Numerālis.NŪLLUS;
+  @NotNull private Cāsus       cāsus       = Cāsus.NŪLLUS;
+  @NotNull private Gradus      gradus      = Gradus.NŪLLUS;
 
   private InventorAdiectīvīs( ) {
     super(Nūntius.NūntiusInventōrīAdiectīvīs.fac);
@@ -43,7 +43,8 @@ public final class InventorAdiectīvīs extends Inventor <Adiectīvum> {
    * @return Quaestiōnem quam rēs classis {@link LēctorMultiplicibus.LēctorAdiectīvīs} ūtātur rēs classis {@link Adiectīvum} percōlere
    * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Predicate.html">Prediate</a>
    */
-  public @Override @NotNull Predicate <@NotNull Adiectīvum> inquīram( ) {
+  @Override @NotNull
+  public Predicate <@NotNull Adiectīvum> inquīram( ) {
     return adiectīvum -> speciālitās.equals(adiectīvum.speciālitās)
                          && genus.equals(adiectīvum.genus)
                          && cāsus.equals(adiectīvum.cāsus)
@@ -53,8 +54,13 @@ public final class InventorAdiectīvīs extends Inventor <Adiectīvum> {
 
   /**
    * {@inheritDoc}
+   * @see Speciālitās#NŪLLUM
+   * @see Genus#NŪLLUM
+   * @see Numerālis#NŪLLUS
+   * @see Cāsus#NŪLLUS
+   * @see Gradus#NŪLLUS
    */
-  public @Override void restituō( ) {
+  @Override public void restituō( ) {
     speciālitās = Speciālitās.NŪLLUM;
     genus = Genus.NŪLLUM;
     numerālis = Numerālis.NŪLLUS;
@@ -72,7 +78,7 @@ public final class InventorAdiectīvīs extends Inventor <Adiectīvum> {
    * @see Cāsus#ut(Enum)
    * @see Gradus#ut(Enum)
    */
-  protected @Override void allegam(@NotNull final Enum<@NotNull ?> illud) {
+  @Override protected void allegam(@NotNull final Enum<@NotNull ?> illud) {
     if (illud instanceof Speciālitās) {
       speciālitās = Speciālitās.ut(illud);
       nūntius.garriō("Quastiōnī adiēcī conditiōnem novam:",

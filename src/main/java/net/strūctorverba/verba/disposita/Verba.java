@@ -2,83 +2,88 @@ package net.strūctorverba.verba.disposita;
 
 import lombok.*;
 import net.strūctorverba.mīscella.Ūtilitās;
-import net.strūctorverba.verba.*;
+import net.strūctorverba.verba.Verbum;
 import org.apache.commons.lang3.StringUtils;
-import org.apache.maven.surefire.util.internal.ObjectUtils;
 import org.jetbrains.annotations.*;
 
 import java.util.*;
+import java.util.stream.Collectors;
 
 /**
- * Classis {@link Verba} rēs classis {@link Verbum} cōnsit. <br>
- * Rēs classis huius et seriem rērum classis {@link Verbum} et rēs classis {@link Coniugiāle} et aliam classis {@link Verba} constat.
+ * Classis {@link Verba} seriēs rērum classis {@link Verbum} cōnstat.
  */
 @SuppressWarnings({ "NonAsciiCharacters", "SpellCheckingInspection", "unused" })
+@NoArgsConstructor(access = AccessLevel.PUBLIC)
 public final class Verba {
-  private final @NotNull LinkedList <Verbum <?>> seriēs       = new LinkedList <>();
-  private      @Nullable Coniugiāle              coniūnctīvum = null;
-  private      @Nullable Verba                   continuāta   = null;
+  /**
+   * Valor hic seriem cōnstātam rērum classis {@link Verbum} continet.
+   */
+  public final @NotNull LinkedList <Verbum <?>> seriēs = new LinkedList <>();
 
-  @Builder(access = AccessLevel.PUBLIC, builderClassName = "Conditōr", builderMethodName = "conditōr", buildMethodName = "condam")
-  private Verba(@NotNull final Collection <Verbum <@Nullable ?>> seriēs,
-                @NotNull final Coniugiāle coniūnctīvum, @NotNull final Verba continuāta) {
-    seriēs.removeIf(ObjectUtils::isNull);
-    seriēs.removeIf(verbum -> StringUtils.isBlank(verbum.toString()));
-    this.seriēs.addAll(seriēs);
-    this.coniūnctīvum = coniūnctīvum;
-    this.continuāta = continuāta;
-  }
+  /**
+   * Modus hic valōrem {@code verbum} addit to {@link #seriēs}.
+   * @param verbum valōrem addendum
+   * @return Rem haec
+   */
+  @NotNull public Verba addō(@NotNull final Verbum<?> verbum) {
+    if(StringUtils.isNotBlank(verbum.toString())) {
+      seriēs.add(verbum);
+    }
 
-  @Builder(access = AccessLevel.PUBLIC, builderClassName = "Conditōr", builderMethodName = "conditōr", buildMethodName = "condam")
-  private Verba(@NotNull final Collection <Verbum <@Nullable ?>> seriēs, @NotNull final Coniugiāle coniūnctīvum) {
-    seriēs.removeIf(ObjectUtils::isNull);
-    seriēs.removeIf(verbum -> StringUtils.isBlank(verbum.toString()));
-    this.seriēs.addAll(seriēs);
-    this.coniūnctīvum = coniūnctīvum;
-  }
-
-  @Builder(access = AccessLevel.PUBLIC, builderClassName = "Conditōr", builderMethodName = "conditōr", buildMethodName = "condam")
-  private Verba(@NotNull final Collection <Verbum <@Nullable ?>> seriēs) {
-    seriēs.removeIf(ObjectUtils::isNull);
-    seriēs.removeIf(verbum -> StringUtils.isBlank(verbum.toString()));
-    this.seriēs.addAll(seriēs);
+    return this;
   }
 
   /**
-   * Modus hic ūsūfructuāriōs licet rem classis {@link Coniugiāle} huius allegere.
-   * @param coniūnctīvum coniūnctīvum allegendum
+   * Modus hic seriēs {@code ōrdō} addit to {@link #seriēs}.
+   * @param ōrdō seriēs valōrum addendōrum
+   * @return Rem haec
    */
-  public void coniūnctīvumAllegō(@NotNull final Coniugiāle coniūnctīvum) {
-    this.coniūnctīvum = coniūnctīvum;
+  @SuppressWarnings("ConstantConditions")
+  @NotNull public Verba addō(@NotNull final Verbum<@Nullable ?>... ōrdō) {
+    seriēs.addAll(Arrays.stream(ōrdō)
+                        .filter(Objects::nonNull)
+                        .filter(verbum -> StringUtils.isBlank(verbum.toString()))
+                        .collect(Collectors.toList()));
+    return this;
   }
 
   /**
-   * Modus hic ūsūfructuāriōs licet rēs et classis {@link Coniugiāle} et classis {@link Verba} huius allegere.
-   * @param coniūnctīvum rēs et classis {@link Coniugiāle} allegendum
-   * @param continuāta rēs et classis {@link Verba} allegendum
+   * Modus hic seriēs {@code verba} addit to {@link #seriēs}.
+   * @param verba seriēs valōrum addendōrum
+   * @return Rem haec
    */
-  public void coniūnctīvumAllegōContinuōque(@NotNull final Coniugiāle coniūnctīvum, @NotNull final Verba continuāta) {
-    this.coniūnctīvum = coniūnctīvum;
-    this.continuāta = continuāta;
+  @NotNull public Verba addō(@NotNull final Verba verba) {
+    seriēs.addAll(verba.seriēs.stream()
+                              .filter(Objects::nonNull)
+                              .filter(verbum -> StringUtils.isBlank(verbum.toString()))
+                              .collect(Collectors.toList()));
+    return this;
+  }
+
+  /**
+   * Modus hic seriēs {@code ōrdō} addit to {@link #seriēs}.
+   * @param ōrdō seriēs seriērum addendārum
+   * @return Rem haec
+   */
+  @NotNull public Verba addō(@Nullable final Verba... ōrdō) {
+    if(ōrdō != null) {
+      Arrays.stream(ōrdō)
+            .filter(Objects::nonNull)
+            .filter(verbum -> StringUtils.isBlank(verbum.toString()))
+            .forEach(this::addō);
+    }
+
+    return this;
   }
 
   /**
    * @return Repraesentātiōnem scrīpta reī huius. <br>
    * Rēs omnēs contentās cōnsit et cum spatiīs distinet.
    */
-  public @NotNull @Override String toString( ) {
+  @NotNull @Override
+  public String toString( ) {
     final StringBuilder strūctor = new StringBuilder();
     seriēs.forEach(verbum -> strūctor.append(verbum).append(' '));
-    if (ObjectUtils.nonNull(coniūnctīvum)
-     && StringUtils.isNotBlank(coniūnctīvum.toString())) {
-      strūctor.append(coniūnctīvum).append(' ');
-
-      if (ObjectUtils.nonNull(continuāta)
-       && StringUtils.isNotBlank(continuāta.toString())) {
-        strūctor.append(continuāta);
-      }
-    }
-
     return Ūtilitās.prīmamCapitāneamScrībō(strūctor.toString());
   }
 }

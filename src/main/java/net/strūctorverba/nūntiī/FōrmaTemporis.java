@@ -16,7 +16,7 @@ import java.util.function.BiFunction;
 final class FōrmaTemporis {
   private final boolean pūnctillaPraecidemne;
 
-  private static final @NotNull BiFunction <@NotNull ZonedDateTime, @NotNull Boolean, @NotNull String> fōrmātiō =
+  @NotNull private static final BiFunction <@NotNull ZonedDateTime, @NotNull Boolean, @NotNull String> fōrmātiō =
     (tempus, praecīsiō) -> {
       String zona = tempus.getZone().getId();
       if(tempus.getZone().getId().length() > 3) {
@@ -47,7 +47,7 @@ final class FōrmaTemporis {
       }
     };
 
-  private final @NotNull ZonedDateTime tempus;
+  @NotNull private final ZonedDateTime tempus;
 
   private FōrmaTemporis() {
     tempus = ZonedDateTime.now();
@@ -82,7 +82,7 @@ final class FōrmaTemporis {
   /**
    * @return scrīptiōnem temporis quem rēs haec continet.
    */
-  public @NotNull String fōrmō( ) {
+  @NotNull public String fōrmō( ) {
     return fōrmātiō.apply(tempus, pūnctillaPraecidemne);
   }
 
@@ -90,7 +90,7 @@ final class FōrmaTemporis {
    * @param tempus tempus fōrmandus
    * @return scrīptiōnem temporis prōvīsus
    */
-  public static @NotNull String fōrmem(final long tempus) {
+  @NotNull public static String fōrmem(final long tempus) {
     return new FōrmaTemporis(tempus).fōrmō();
   }
 
@@ -98,14 +98,14 @@ final class FōrmaTemporis {
    * @param tempus tempus fōrmandus
    * @return scrīptiōnem temporis prōvīsus
    */
-  public static @NotNull String fōrmem(@NotNull final Instant tempus) {
+  @NotNull public static String fōrmem(@NotNull final Instant tempus) {
     return new FōrmaTemporis(tempus).fōrmō();
   }
 
   /**
    * @return scrīptiōnem temporis praesentis
    */
-  public static @NotNull String fōrmem() {
+  @NotNull public static String fōrmem() {
     return new FōrmaTemporis().fōrmō();
   }
 
@@ -114,7 +114,7 @@ final class FōrmaTemporis {
    * @param pūnctillaPraecidemne valōrem {@code true} sī rēs haec valōrem {@code tempus} pūnctilla praecidemne; valōrem {@code false} aliter
    * @return scrīptiōnem temporis prōvīsus
    */
-  public static @NotNull String fōrmem(final long tempus, final boolean pūnctillaPraecidemne) {
+  @NotNull public static String fōrmem(final long tempus, final boolean pūnctillaPraecidemne) {
     return new FōrmaTemporis(tempus, pūnctillaPraecidemne).fōrmō();
   }
 
@@ -123,7 +123,7 @@ final class FōrmaTemporis {
    * @param pūnctillaPraecidemne valōrem {@code true} sī rēs haec valōrem {@code tempus} pūnctilla praecidemne; valōrem {@code false} aliter
    * @return scrīptiōnem temporis prōvīsus
    */
-  public static @NotNull String fōrmem(@NotNull final Instant tempus, final boolean pūnctillaPraecidemne) {
+  @NotNull public static String fōrmem(@NotNull final Instant tempus, final boolean pūnctillaPraecidemne) {
     return new FōrmaTemporis(tempus, pūnctillaPraecidemne).fōrmō();
   }
 
@@ -131,7 +131,7 @@ final class FōrmaTemporis {
    * @param pūnctillaPraecidemne valōrem {@code true} sī rēs haec temporem praesentem pūnctilla praecidemne; valōrem {@code false} aliter
    * @return scrīptiōnem temporis praesentis
    */
-  public static @NotNull String fōrmem(final boolean pūnctillaPraecidemne) {
+  @NotNull public static String fōrmem(final boolean pūnctillaPraecidemne) {
     return new FōrmaTemporis(pūnctillaPraecidemne).fōrmō();
   }
 }

@@ -19,19 +19,19 @@ import java.util.function.*;
 @DependsOn("NūntiusInventōrīĀctīs")
 @SuppressWarnings({ "NonAsciiCharacters", "SpellCheckingInspection" })
 public final class InventorPrōnōminibusConiūnctīvīs extends Inventor <PrōnōmenConiūnctīvum> {
-  private static @Nullable InventorPrōnōminibusConiūnctīvīs īnstantia = null;
+  @Nullable private static InventorPrōnōminibusConiūnctīvīs īnstantia = null;
 
   /**
    * Valor hic viam reī classis huiuc facit.
    * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
    */
-  public static final @NotNull Supplier <InventorPrōnōminibusConiūnctīvīs> fac =
+  @NotNull public static final Supplier <InventorPrōnōminibusConiūnctīvīs> fac =
     () -> ObjectUtils.firstNonNull(īnstantia, īnstantia = new InventorPrōnōminibusConiūnctīvīs());
 
-  private @NotNull Speciālitās speciālitās = Speciālitās.NŪLLUM;
-  private @NotNull Genus       genus       = Genus.NŪLLUM;
-  private @NotNull Numerālis   numerālis   = Numerālis.NŪLLUS;
-  private @NotNull Cāsus       cāsus       = Cāsus.NŪLLUS;
+  @NotNull private Speciālitās speciālitās = Speciālitās.NŪLLUM;
+  @NotNull private Genus       genus       = Genus.NŪLLUM;
+  @NotNull private Numerālis   numerālis   = Numerālis.NŪLLUS;
+  @NotNull private Cāsus       cāsus       = Cāsus.NŪLLUS;
 
   private InventorPrōnōminibusConiūnctīvīs( ) {
     super(Nūntius.NūntiusInventōrīPrōnōmibusConiūnctīvīs.fac);
@@ -42,7 +42,8 @@ public final class InventorPrōnōminibusConiūnctīvīs extends Inventor <Prōn
    * @return Quaestiōnem quam rēs classis {@link LēctorMultiplicibus.LēctorPrōnōminibusConiūnctīvīs} ūtātur rēs classis {@link PrōnōmenConiūnctīvum} percōlere
    * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Predicate.html">Prediate</a>
    */
-  public @Override @NotNull Predicate <@NotNull PrōnōmenConiūnctīvum> inquīram( ) {
+  @Override @NotNull
+  public Predicate <@NotNull PrōnōmenConiūnctīvum> inquīram( ) {
     return prōnōmen -> speciālitās.equals(prōnōmen.speciālitās)
                        && genus.equals(prōnōmen.genus)
                        && cāsus.equals(prōnōmen.cāsus)
@@ -51,8 +52,12 @@ public final class InventorPrōnōminibusConiūnctīvīs extends Inventor <Prōn
 
   /**
    * {@inheritDoc}
+   * @see Speciālitās#NŪLLUM
+   * @see Genus#NŪLLUM
+   * @see Numerālis#NŪLLUS
+   * @see Cāsus#NŪLLUS
    */
-  public @Override void restituō( ) {
+  @Override public void restituō( ) {
     speciālitās = Speciālitās.NŪLLUM;
     genus = Genus.NŪLLUM;
     numerālis = Numerālis.NŪLLUS;
@@ -68,7 +73,7 @@ public final class InventorPrōnōminibusConiūnctīvīs extends Inventor <Prōn
    * @see Numerālis#ut(Enum)
    * @see Cāsus#ut(Enum)
    */
-  protected @Override void allegam(@NotNull final Enum<@NotNull ?> illud) {
+  @Override protected void allegam(@NotNull final Enum<@NotNull ?> illud) {
     if (illud instanceof Speciālitās) {
       speciālitās = Speciālitās.ut(illud);
       nūntius.garriō("Quastiōnī adiēcī conditiōnem novam:",

@@ -15,25 +15,25 @@ public abstract class Nōminālis <Hoc extends VerbumMultiplex <Hoc>> extends Ve
    * Valor hic dēsignat sīve rēs hae repraesentat certum ({@link Speciālitās#PROPRIUM}) sīve incertum ({@link Speciālitās#COMMŪNE}).
    * @see Speciālitās
    */
-  public final @NotNull Speciālitās speciālitās;
+  @NotNull public final Speciālitās speciālitās;
   
   /**
    * Valor hic generem reī huius dēsignat.
    * @see Genus
    */
-  public final @NotNull Genus genus;
+  @NotNull public final Genus genus;
   
   /**
    * Valor hic cāsum reī huius dēsignat.
    * @see Cāsus
    */
-  public final @NotNull Cāsus cāsus;
+  @NotNull public final Cāsus cāsus;
   
   /**
    * Valor hic numerum reī huius dēsignat.
    * @see Numerālis
    */
-  public final @NotNull Numerālis numerālis;
+  @NotNull public final Numerālis numerālis;
 
   /**
    * Officium hoc cōnstrūctōrem reī classis huius perpetrat.

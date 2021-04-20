@@ -62,7 +62,7 @@ public enum Modus {
    * @param scrīptiō valōrem {@link #scrīptiō} indicat.
    * @return Rem ēnumerātiō {@link Cāsus} quod parametrum dēsignātum quadrat.
    */
-  public static @NotNull Modus dēfīniam(@NotNull final String scrīptiō) {
+  @NotNull public static Modus dēfīniam(@NotNull final String scrīptiō) {
     return Stream.of(values())
                  .filter(modus -> modus.scrīptiō.equals(scrīptiō))
                  .findFirst().orElse(NŪLLUS);
@@ -73,7 +73,7 @@ public enum Modus {
    * @param illud valor tentandus.
    */
   @SuppressWarnings("ConstantConditions")
-  public static @NotNull Modus ut(@NotNull final Enum<@NotNull ?> illud) {
+  @NotNull public static Modus ut(@NotNull final Enum<@NotNull ?> illud) {
     final Modus hoc = (Modus) illud;
     return hoc.equals(illud) ? hoc
                              : NŪLLUS;

@@ -17,12 +17,12 @@ public abstract class Conditōr <Hoc extends Verbum <Hoc>> {
   /**
    * Valor hic est vās classis {@link Nūntius} classī hui.
    */
-  protected final @NotNull Nūntius nūntius;
+  @NotNull protected final Nūntius nūntius;
 
   /**
    * Valor hic valōrem {@link Verbum#fundāmen} reī prōductae repraehentat.
    */
-  protected @NotNull String fundāmen = StringUtils.EMPTY;
+  @NotNull protected String fundāmen = StringUtils.EMPTY;
 
   /**
    * Officium hoc cōnstrūctōrem reī classis huius perpetrat.
@@ -42,7 +42,8 @@ public abstract class Conditōr <Hoc extends Verbum <Hoc>> {
 
   /**
    * Modus hic rem classis {@link Hoc} cōnābitur cōnstruere.
-   * @return Rem novam classis {@link Hoc}
+   * @return Rem novam classis {@link Hoc}. <br>
+   * Modus hid valōrem {@code null} refert sī nōn valet valor aliquis rēs haec continet.
    */
-  public abstract @Nullable Hoc condam( );
+  @Nullable public abstract Hoc condam( );
 }

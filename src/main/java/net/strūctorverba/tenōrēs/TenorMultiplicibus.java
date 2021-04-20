@@ -22,7 +22,7 @@ public abstract class TenorMultiplicibus <Hoc extends VerbumMultiplex <Hoc>> ext
   /**
    * Valor hic est vās classis {@link ConditōrMultiplicibus} classī extentī huius.
    */
-  protected final @NotNull ConditōrMultiplicibus <Hoc> condītōr;
+  @NotNull protected final ConditōrMultiplicibus <Hoc> condītōr;
 
   /**
    * Officium hoc cōnstrūctōrem reī classis huius perpetrat.
@@ -43,7 +43,7 @@ public abstract class TenorMultiplicibus <Hoc extends VerbumMultiplex <Hoc>> ext
    * @param attribūta seriēs valōrum nōminumque sociātōrum
    * @see <a href="https://docs.oracle.com/javase/7/docs/api/org/xml/sax/helpers/DefaultHandler.html#startElement(java.lang.String,%20java.lang.String,%20java.lang.String,%20org.xml.sax.Attributes)">DefaultHandler.startElement</a>
    */
-  public final @Override void startElement(@NotNull final String locus, @NotNull final String loculus,
+  @Override public final void startElement(@NotNull final String locus, @NotNull final String loculus,
                                            @NotNull final String quālis, @NotNull final Attributes attribūta) {
 
     for (int i = 0; i < attribūta.getLength(); i++) {
@@ -60,7 +60,7 @@ public abstract class TenorMultiplicibus <Hoc extends VerbumMultiplex <Hoc>> ext
    * @param quālis valōrem hunc modus hic nōn ūtitur sed necessārium est rē classis <a href="https://docs.oracle.com/javase/7/docs/api/org/xml/sax/helpers/DefaultHandler.html">DefaultHandler</a> cōnsociāre
    * @see <a href="https://docs.oracle.com/javase/7/docs/api/org/xml/sax/helpers/DefaultHandler.html#endElement(java.lang.String,%20java.lang.String,%20java.lang.String)">DefaultHandler.endElement</a>
    */
-  public final @Override void endElement(@NotNull final String locus,
+  @Override public final void endElement(@NotNull final String locus,
                                          @NotNull final String loculus, @NotNull final String quālis) {
     condītōr.restituō();
   }
@@ -69,7 +69,7 @@ public abstract class TenorMultiplicibus <Hoc extends VerbumMultiplex <Hoc>> ext
    * {@inheritDoc}
    * @see Tenor#seriēs
    */
-  protected final @Override void fīniam( ) {
+  @Override protected final void fīniam( ) {
     hoc = condītōr.condam();
     if (Objects.isNull(hoc)) {
       nūntius.moneō("Prōductiō verbī prōcessimus nūllae fōrmae.");
@@ -84,7 +84,7 @@ public abstract class TenorMultiplicibus <Hoc extends VerbumMultiplex <Hoc>> ext
    * @param scrīptiō fōrmam scrīptam indendus
    * @see VerbumMultiplex#scrīptiō
    */
-  protected @Override void scrībō(@NotNull String scrīptiō) {
+  @Override protected void scrībō(@NotNull String scrīptiō) {
     condītōr.ut(scrīptiō);
   }
 
@@ -96,13 +96,13 @@ public abstract class TenorMultiplicibus <Hoc extends VerbumMultiplex <Hoc>> ext
    */
   @Singleton @DependsOn({ "CondītōrNōminibus", "NūntiusTenōrīNōminibus" })
   public static final class TenorNōminibus extends TenorMultiplicibus <Nōmen> {
-    private static @Nullable TenorNōminibus īnstantia = null;
+    @Nullable private static TenorNōminibus īnstantia = null;
 
     /**
      * Valor hic viam reī classis huiuc facit.
      * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
      */
-    public static @NotNull final Supplier <TenorNōminibus> fac =
+    @NotNull public static final Supplier <TenorNōminibus> fac =
       () -> ObjectUtils.firstNonNull(īnstantia, īnstantia = new TenorNōminibus());
 
     private TenorNōminibus( ) {
@@ -119,13 +119,13 @@ public abstract class TenorMultiplicibus <Hoc extends VerbumMultiplex <Hoc>> ext
    */
   @Singleton @DependsOn({ "CondītōrAdiectīvīs", "NūntiusTenōrīAdiectīvīs" })
   public static final class TenorAdiectīvīs extends TenorMultiplicibus <Adiectīvum> {
-    private static @Nullable TenorAdiectīvīs īnstantia = null;
+    @Nullable private static TenorAdiectīvīs īnstantia = null;
 
     /**
      * Valor hic viam reī classis huiuc facit.
      * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
      */
-    public static @NotNull final Supplier <TenorAdiectīvīs> fac =
+    @NotNull public static final Supplier <TenorAdiectīvīs> fac =
       () -> ObjectUtils.firstNonNull(īnstantia, īnstantia = new TenorAdiectīvīs());
 
     private TenorAdiectīvīs( ) {
@@ -142,13 +142,13 @@ public abstract class TenorMultiplicibus <Hoc extends VerbumMultiplex <Hoc>> ext
    */
   @Singleton @DependsOn({ "CondītōrPrōnōminibus", "NūntiusTenōrīPrōnōminibus" })
   public static final class TenorPrōnōminibus extends TenorMultiplicibus <Prōnōmen> {
-    private static @Nullable TenorPrōnōminibus īnstantia = null;
+    @Nullable private static TenorPrōnōminibus īnstantia = null;
 
     /**
      * Valor hic viam reī classis huiuc facit.
      * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
      */
-    public static @NotNull final Supplier <TenorPrōnōminibus> fac =
+    @NotNull public static final Supplier <TenorPrōnōminibus> fac =
       () -> ObjectUtils.firstNonNull(īnstantia, īnstantia = new TenorPrōnōminibus());
 
     private TenorPrōnōminibus( ) {
@@ -165,13 +165,13 @@ public abstract class TenorMultiplicibus <Hoc extends VerbumMultiplex <Hoc>> ext
    */
   @Singleton @DependsOn({ "CondītōrPrōnōminiusConiūnctīvīs", "NūntiusTenōrīPrōnōmibusConiūnctīvīs" })
   public static final class TenorPrōnōminibusConiūnctīvīs extends TenorMultiplicibus <PrōnōmenConiūnctīvum> {
-    private static @Nullable TenorPrōnōminibusConiūnctīvīs īnstantia = null;
+    @Nullable private static TenorPrōnōminibusConiūnctīvīs īnstantia = null;
 
     /**
      * Valor hic viam reī classis huiuc facit.
      * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
      */
-    public static @NotNull final Supplier <TenorPrōnōminibusConiūnctīvīs> fac =
+    @NotNull public static final Supplier <TenorPrōnōminibusConiūnctīvīs> fac =
       () -> ObjectUtils.firstNonNull(īnstantia, īnstantia = new TenorPrōnōminibusConiūnctīvīs());
 
     private TenorPrōnōminibusConiūnctīvīs( ) {
@@ -188,13 +188,13 @@ public abstract class TenorMultiplicibus <Hoc extends VerbumMultiplex <Hoc>> ext
    */
   @Singleton @DependsOn({ "CondītōrĀctīs", "NūntiusTenōrīĀctīs" })
   public static final class TenorĀctīs extends TenorMultiplicibus <Āctum> {
-    private static @Nullable TenorĀctīs īnstantia = null;
+    @Nullable private static TenorĀctīs īnstantia = null;
 
     /**
      * Valor hic viam reī classis huiuc facit.
      * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
      */
-    public static @NotNull final Supplier <TenorĀctīs> fac =
+    @NotNull public static final Supplier <TenorĀctīs> fac =
       () -> ObjectUtils.firstNonNull(īnstantia, īnstantia = new TenorĀctīs());
 
     private TenorĀctīs( ) {

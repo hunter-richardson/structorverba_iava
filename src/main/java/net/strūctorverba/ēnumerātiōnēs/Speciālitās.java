@@ -47,7 +47,7 @@ public enum Speciālitās {
    * @param scrīptiō valōrem {@link #scrīptiō} indicat.
    * @return Rem ēnumerātiō {@link Speciālitās} quod parametrum dēsignātum quadrat.
    */
-  public static @NotNull Speciālitās dēfīniam(@NotNull final String scrīptiō) {
+  @NotNull public static Speciālitās dēfīniam(@NotNull final String scrīptiō) {
     return Stream.of(values())
                  .filter(speciālitās -> speciālitās.scrīptiō.equals(scrīptiō))
                  .findFirst().orElse(NŪLLUM);
@@ -58,7 +58,7 @@ public enum Speciālitās {
    * @param illud valor tentandus.
    */
   @SuppressWarnings("ConstantConditions")
-  public static @NotNull Speciālitās ut(@NotNull final Enum<@NotNull ?> illud) {
+  @NotNull public static Speciālitās ut(@NotNull final Enum<@NotNull ?> illud) {
     final Speciālitās hoc = (Speciālitās) illud;
     return hoc.equals(illud) ? hoc
                              : NŪLLUM;

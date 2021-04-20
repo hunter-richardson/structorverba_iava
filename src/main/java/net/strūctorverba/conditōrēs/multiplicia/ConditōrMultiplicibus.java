@@ -17,7 +17,7 @@ public abstract class ConditōrMultiplicibus <Hoc extends VerbumMultiplex <Hoc>>
   /**
    * Valor hic valōrem {@link VerbumMultiplex#scrīptiō} reī prōductae repraehentat.
    */
-  protected @NotNull String scrīptiō = StringUtils.EMPTY;
+  @NotNull protected String scrīptiō = StringUtils.EMPTY;
 
   /**
    * Officium hoc cōnstrūctōrem reī classis huius perpetrat.

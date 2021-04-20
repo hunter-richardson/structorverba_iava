@@ -22,19 +22,19 @@ public abstract class Lēctor <Hoc extends Verbum <Hoc>> {
   /**
    * Valor hic est vās classis {@link Nūntius} classī hui.
    */
-  protected final @NotNull Nūntius nūntius;
+  @NotNull protected final Nūntius nūntius;
 
   /**
    * Valor hic est vās classis {@link Tenor} classī hui.
    */
-  protected final @NotNull Tenor <Hoc> tenor;
+  @NotNull protected final Tenor <Hoc> tenor;
 
   /**
    * Valor hic extēnsiōnem classī {@link Verbum} dēsignat scrībere.
    * {@link Catēgoria#scrīptiō} quoque nōminātur scrīnium intrā quō scāpum eius cōnservātum est.
    * @see Catēgoria
    */
-  protected final @NotNull Catēgoria catēgoria;
+  @NotNull protected final Catēgoria catēgoria;
 
   /**
    * Officium hoc cōnstrūctōrem reī classis huius perpetrat.

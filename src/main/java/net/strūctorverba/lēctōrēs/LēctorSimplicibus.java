@@ -31,9 +31,10 @@ public abstract class LēctorSimplicibus <Hoc extends VerbumSimplex <Hoc>> exten
   /**
    * Modus hic ūtitur modus {@link Lēctor#legam(String)} rem classis {@link Hoc} ā valōre {@link Lēctor#tenor} advenīre.
    * @param verbum fundāmen verbō quod rēs haec cōnābitur advenīre
-   * @return Rem classis {@link Hoc} quam valōrem {@code verbum} quadrat
+   * @return Rem classis {@link Hoc} quam valōrem {@code verbum} quadrat. <br>
+   * Modus hic valōrem {@code null} refert sī nihil quadrat valōrem {@code verbum}.
    */
-  public final @Nullable Hoc adveniam(@NotNull final String verbum) {
+  @Nullable public final Hoc adveniam(@NotNull final String verbum) {
     legam(verbum);
     final Hoc hoc = tenor.referō();
     if(hoc == null) {
@@ -53,13 +54,13 @@ public abstract class LēctorSimplicibus <Hoc extends VerbumSimplex <Hoc>> exten
    */
   @Singleton @DependsOn({ "TenorAdverbiīs", "NūntiusLēctōrīAdverbiīs" })
   public static final class LēctorAdverbiīs extends LēctorSimplicibus <VerbumSimplex.Adverbium> {
-    private static @Nullable LēctorAdverbiīs īnstantia = null;
+    @Nullable private static LēctorAdverbiīs īnstantia = null;
 
     /**
      * Valor hic viam reī classis huiuc facit.
      * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
      */
-    public static final @NotNull Supplier <LēctorAdverbiīs> fac =
+    @NotNull public static final Supplier <LēctorAdverbiīs> fac =
       () -> ObjectUtils.firstNonNull(īnstantia, īnstantia = new LēctorAdverbiīs());
 
     private LēctorAdverbiīs( ) {
@@ -76,13 +77,13 @@ public abstract class LēctorSimplicibus <Hoc extends VerbumSimplex <Hoc>> exten
    */
   @Singleton @DependsOn({ "TenorConiūnctivīs", "NūntiusLēctōrīConiūnctīvīs" })
   public static final class LēctorConiūnctīvīs extends LēctorSimplicibus <VerbumSimplex.Coniūnctīvum> {
-    private static @Nullable LēctorConiūnctīvīs īnstantia = null;
+    @Nullable private static LēctorConiūnctīvīs īnstantia = null;
 
     /**
      * Valor hic viam reī classis huiuc facit.
      * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
      */
-    public static final @NotNull Supplier <LēctorConiūnctīvīs> fac =
+    @NotNull public static final Supplier <LēctorConiūnctīvīs> fac =
       () -> ObjectUtils.firstNonNull(īnstantia, īnstantia = new LēctorConiūnctīvīs());
 
     private LēctorConiūnctīvīs( ) {

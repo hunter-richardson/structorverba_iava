@@ -1,16 +1,15 @@
 package net.strūctorverba.tentāmina;
 
-import lombok.*;
+import lombok.Getter;
 import lombok.experimental.Accessors;
 import net.strūctorverba.mīscella.*;
 import net.strūctorverba.verba.*;
+import net.strūctorverba.verba.disposita.Verba;
 import net.strūctorverba.ēnumerātiōnēs.*;
 import org.apache.commons.collections4.CollectionUtils;
 import org.apache.commons.lang3.*;
 import org.jetbrains.annotations.NotNull;
 import org.junit.jupiter.api.*;
-
-import java.util.LinkedList;
 
 /**
  * Classis {@link DolōremIpsum} versiōnem prīmam tentāminārum programmātī StrūctorVerba dēfīnit. <br>
@@ -144,9 +143,10 @@ public final class DolōremIpsum {
   /**
    * Modus hic partem quārtam tentat. <br>
    * Verba "Sed quia nōnnumquam eius modī tempora incidunt ut labōre et dolōre magnam aliquam quaerat voluptātem" prōdūcat. <br>
-   * Prīncipāliter tentat quod modī et {@link Coniugiāle#coniugō(Verbum, Verbum)} rēctē operat sī tentāmina trēs prīma prosperantur.
+   * Prīncipāliter tentat quod modī et {@link Coniugiāle#coniugō(Verbum, Verbum)} rēctē operat sī tentāmina tria prīma prosperantur.
    */
   @Test @Order(4)
+  @SuppressWarnings("ConstantConditions")
   public void quārta( ) {
     Verbum <?>[] seriēsPrīma = {
       strūctor().coniūnctīvumLege().adveniam("sed"),
@@ -180,32 +180,34 @@ public final class DolōremIpsum {
     Assertions.assertNotNull(coniūnctīvum, "Prōductā quārta est relicta prōductiō verbī et.");
     Assertions.assertTrue(StringUtils.isNotBlank(coniūnctīvum.toString()), "Vacat prōductum verbum et.");
 
-    LinkedList <Verbum <?>> seriēsSecunda = coniūnctīvum.coniugō(
+    final Verba seriēsSecunda = coniūnctīvum.coniugō(
       strūctor().nōmenLege()
                 .adveniam("labor",
                           Speciālitās.COMMŪNE, Genus.MASCULĪNUM, Cāsus.ABLĀTĪVUS, Numerālis.SINGULĀRIS),
       strūctor().nōmenLege()
                 .adveniam("dolor",
                           Speciālitās.COMMŪNE, Genus.MASCULĪNUM, Cāsus.ABLĀTĪVUS, Numerālis.SINGULĀRIS));
-    Assertions.assertFalse(CollectionUtils.isNotEmpty(seriēsSecunda), "Verba prōducta quārta vacant.");
-    seriēsSecunda.add(strūctor().adiectīvumLege()
-                                .adveniam("magnus",
-                                          Speciālitās.COMMŪNE, Genus.FĒMINĪNUM, Cāsus.ACCŪSĀTĪVUS, Numerālis.SINGULĀRIS));
-    seriēsSecunda.add(strūctor().prōnōmenConiūnctīvumLege()
-                                .adveniam("aliquis",
-                                          Speciālitās.COMMŪNE, Genus.FĒMINĪNUM, Cāsus.ACCŪSĀTĪVUS, Numerālis.SINGULĀRIS));
-    seriēsSecunda.add(strūctor().āctumLege()
-                                .adveniam("quaerere",
-                                          Modus.SUBIŪNCTĪVUS, Vōx.ĀCTĪVA, Tempus.PRAESĒNS, Numerālis.SINGULĀRIS, Persōna.TERTIA));
-    seriēsSecunda.add(strūctor().adiectīvumLege()
-                                .adveniam("voluptās",
-                                          Speciālitās.COMMŪNE, Genus.FĒMINĪNUM, Cāsus.ACCŪSĀTĪVUS, Numerālis.SINGULĀRIS));
+    Assertions.assertNotNull(seriēsSecunda, "Verba prōducta quārta vacant.");
+    Assertions.assertTrue(CollectionUtils.isNotEmpty(seriēsSecunda.seriēs), "Verba prōducta quārta vacant.");
+    seriēsSecunda.addō(strūctor().adiectīvumLege()
+                                 .adveniam("magnus",
+                                           Speciālitās.COMMŪNE, Genus.FĒMINĪNUM, Cāsus.ACCŪSĀTĪVUS, Numerālis.SINGULĀRIS),
+                       strūctor().prōnōmenConiūnctīvumLege()
+                                 .adveniam("aliquis",
+                                           Speciālitās.COMMŪNE, Genus.FĒMINĪNUM, Cāsus.ACCŪSĀTĪVUS, Numerālis.SINGULĀRIS),
+                       strūctor().āctumLege()
+                                 .adveniam("quaerere",
+                                           Modus.SUBIŪNCTĪVUS, Vōx.ĀCTĪVA, Tempus.PRAESĒNS, Numerālis.SINGULĀRIS, Persōna.TERTIA),
+                       strūctor().adiectīvumLege()
+                                 .adveniam("voluptās",
+                                           Speciālitās.COMMŪNE, Genus.FĒMINĪNUM, Cāsus.ACCŪSĀTĪVUS, Numerālis.SINGULĀRIS));
 
-    for (int index = 0; index < seriēsSecunda.size(); index++) {
+    for (int index = 0; index < seriēsSecunda.seriēs.size(); index++) {
       final String[] parsQuārta = prōductaQuārta.split("ut")[1].split(String.valueOf(' '));
-      Assertions.assertNotNull(seriēsSecunda.get(index), String.format("Prōductā quārtā est relicta prōductiō verbī %s.",
-                                                                       Ūtilitās.minusculāsScrībō(parsQuārta[index])));
-      Assertions.assertTrue(StringUtils.isNotBlank(seriēsSecunda.get(index).toString()),
+      Assertions.assertNotNull(seriēsSecunda.seriēs.get(index),
+                               String.format("Prōductā quārtā est relicta prōductiō verbī %s.",
+                                             Ūtilitās.minusculāsScrībō(parsQuārta[index])));
+      Assertions.assertTrue(StringUtils.isNotBlank(seriēsSecunda.seriēs.get(index).toString()),
                             String.format("Vacat prōductum verbum %s.", Ūtilitās.minusculāsScrībō(parsQuārta[index])));
     }
 
@@ -214,8 +216,7 @@ public final class DolōremIpsum {
     Assertions.assertTrue(StringUtils.isNotBlank(coniūnctīvumSecundum.toString()),
                           "Vacat prōductum verbum ut.");
 
-    String haec = coniūnctīvumSecundum.coniugō(strūctor().strue(seriēsPrīma),
-                                               strūctor().strue(seriēsSecunda)).toString();
+    String haec = coniūnctīvumSecundum.coniugō(strūctor().strue(seriēsPrīma), seriēsSecunda).toString();
     Assertions.assertEquals(prōductaQuārta, haec, "Verba prōducta quārta expectātiōne eius differt.");
 
     System.out.printf("Prōducta quārta: %s%n", haec);
@@ -227,6 +228,7 @@ public final class DolōremIpsum {
    * Aboriētur sī tentāminum aliquid praevium aborītur atque prosperābitur sī omnēs prosperantur.
    */
   @Test @Order(5)
+  @SuppressWarnings("ConstantConditions")
   public void cūncta() {
     Verbum <?>[] seriēsPrīma = {
       strūctor().coniūnctīvumLege().adveniam("neque"),
@@ -294,33 +296,34 @@ public final class DolōremIpsum {
     Assertions.assertNotNull(coniūnctīvum, "Prōductiō verbī prōductā cūnctā est relicta.");
     Assertions.assertTrue(StringUtils.isNotBlank(coniūnctīvum.toString()), "Verbum prōductum vacat.");
 
-    LinkedList <Verbum <?>> seriēsSecunda = coniūnctīvum.coniugō(
+    final Verba seriēsSecunda = coniūnctīvum.coniugō(
       strūctor().nōmenLege()
                 .adveniam("labor",
                           Speciālitās.COMMŪNE, Genus.MASCULĪNUM, Cāsus.ABLĀTĪVUS, Numerālis.SINGULĀRIS),
       strūctor().nōmenLege()
                 .adveniam("dolor",
                           Speciālitās.COMMŪNE, Genus.MASCULĪNUM, Cāsus.ABLĀTĪVUS, Numerālis.SINGULĀRIS));
-    Assertions.assertFalse(CollectionUtils.isNotEmpty(seriēsSecunda), "Verba prōducta cūncta vacant.");
-    seriēsSecunda.add(strūctor().adiectīvumLege()
-                                .adveniam("magnus",
-                                          Speciālitās.COMMŪNE, Genus.FĒMINĪNUM, Cāsus.ACCŪSĀTĪVUS, Numerālis.SINGULĀRIS));
-    seriēsSecunda.add(strūctor().prōnōmenConiūnctīvumLege()
-                                .adveniam("aliquis",
-                                          Speciālitās.COMMŪNE, Genus.FĒMINĪNUM, Cāsus.ACCŪSĀTĪVUS, Numerālis.SINGULĀRIS));
-    seriēsSecunda.add(strūctor().āctumLege()
-                                .adveniam("quaerere",
-                                          Modus.SUBIŪNCTĪVUS, Vōx.ĀCTĪVA, Tempus.PRAESĒNS, Numerālis.SINGULĀRIS, Persōna.TERTIA));
-    seriēsSecunda.add(strūctor().adiectīvumLege()
-                                .adveniam("voluptās",
-                                          Speciālitās.COMMŪNE, Genus.FĒMINĪNUM, Cāsus.ACCŪSĀTĪVUS, Numerālis.SINGULĀRIS));
+    Assertions.assertNotNull(seriēsSecunda, "Verba prōducta cūncta vacant.");
+    Assertions.assertTrue(CollectionUtils.isNotEmpty(seriēsSecunda.seriēs), "Verba prōducta cūncta vacant.");
+    seriēsSecunda.addō(strūctor().adiectīvumLege()
+                                 .adveniam("magnus",
+                                           Speciālitās.COMMŪNE, Genus.FĒMINĪNUM, Cāsus.ACCŪSĀTĪVUS, Numerālis.SINGULĀRIS),
+                       strūctor().prōnōmenConiūnctīvumLege()
+                                 .adveniam("aliquis",
+                                           Speciālitās.COMMŪNE, Genus.FĒMINĪNUM, Cāsus.ACCŪSĀTĪVUS, Numerālis.SINGULĀRIS),
+                       strūctor().āctumLege()
+                                 .adveniam("quaerere",
+                                           Modus.SUBIŪNCTĪVUS, Vōx.ĀCTĪVA, Tempus.PRAESĒNS, Numerālis.SINGULĀRIS, Persōna.TERTIA),
+                       strūctor().adiectīvumLege()
+                                 .adveniam("voluptās",
+                                           Speciālitās.COMMŪNE, Genus.FĒMINĪNUM, Cāsus.ACCŪSĀTĪVUS, Numerālis.SINGULĀRIS));
 
-    for (int index = 0; index < seriēsSecunda.size(); index++) {
+    for (int index = 0; index < seriēsSecunda.seriēs.size(); index++) {
       final String[] parsQuārta = prōductaCūncta.split("ut")[1].split(String.valueOf(' '));
-      Assertions.assertNotNull(seriēsSecunda.get(index),
+      Assertions.assertNotNull(seriēsSecunda.seriēs.get(index),
                                String.format("Prōductā cūnctā est relicta prōductiō verbī %s.",
                                              Ūtilitās.minusculāsScrībō(parsQuārta[index])));
-      Assertions.assertTrue(StringUtils.isNotBlank(seriēsSecunda.get(index).toString()),
+      Assertions.assertTrue(StringUtils.isNotBlank(seriēsSecunda.seriēs.get(index).toString()),
                             String.format("Vacat prōductum verbum %s.", Ūtilitās.minusculāsScrībō(parsQuārta[index])));
     }
 
@@ -328,8 +331,7 @@ public final class DolōremIpsum {
     Assertions.assertNotNull(coniūnctīvumSecundum, "Prōductiō verbī prōductā cūnctā est relicta.");
     Assertions.assertTrue(StringUtils.isNotBlank(coniūnctīvumSecundum.toString()), "Verbum prōductum vacat.");
 
-    String haec = coniūnctīvumSecundum.coniugō(strūctor().strue(seriēsPrīma),
-                                               strūctor().strue(seriēsSecunda)).toString();
+    String haec = coniūnctīvumSecundum.coniugō(strūctor().strue(seriēsPrīma), seriēsSecunda).toString();
     Assertions.assertEquals(prōductaCūncta, haec, "Verba prōducta cūncta expectātiōne eius differt.");
 
     System.out.printf("Prōducta cūncta: %s%n", haec);

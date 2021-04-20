@@ -19,10 +19,10 @@ import org.jetbrains.annotations.NotNull;
 @SuppressWarnings({ "NonAsciiCharacters", "SpellCheckingInspection", "unused" })
 public final class VerbaPraepositiōne extends VerbumMultiplex <VerbaPraepositiōne> {
   @Getter(lazy = true) @Accessors(fluent = true)
-  private final @NotNull Nūntius.NūntiusVerbōrumPraepositiōnibus nūntius = Nūntius.NūntiusVerbōrumPraepositiōnibus.fac.get();
+  @NotNull private final Nūntius.NūntiusVerbōrumPraepositiōnibus nūntius = Nūntius.NūntiusVerbōrumPraepositiōnibus.fac.get();
 
-  private final @NotNull VerbumSimplex.Praepositiō praepositiō;
-  private final @NotNull Nōminālis <?>             rēs;
+  @NotNull private final VerbumSimplex.Praepositiō praepositiō;
+  @NotNull private final Nōminālis <?>             rēs;
 
   @Builder(access = AccessLevel.PUBLIC, builderClassName = "Conditōr", builderMethodName = "conditōr", buildMethodName = "condam")
   private VerbaPraepositiōne(@NotNull final Nōminālis <?> rēs,
@@ -58,7 +58,8 @@ public final class VerbaPraepositiōne extends VerbumMultiplex <VerbaPraepositi�
    * @return Rem hanc
    */
   @SuppressWarnings("UnusedReturnValue")
-  public @Override @NotNull VerbaPraepositiōne allege(@NotNull final Encliticum cltm) {
+  @Override @NotNull
+  public VerbaPraepositiōne allege(@NotNull final Encliticum cltm) {
     encliticum = cltm;
     rēs.allege(encliticum);
     nūntius().plūrimumGarriō("Encliticum allēctum", encliticum);
@@ -69,7 +70,8 @@ public final class VerbaPraepositiōne extends VerbumMultiplex <VerbaPraepositi�
    * @return Repraesentātiōnem scrīpta reī classis {@link Verbum}. <br>
    * Valōrem rēs classum {@link Nōminālis} et {@link VerbumSimplex.Praepositiō} addit.
    */
-  public @Override @NotNull String toString( ) {
+  @Override @NotNull
+  public String toString( ) {
     if (StringUtils.isNotBlank(praepositiō.fundāmen)) {
       return String.format("%s %s", praepositiō.fundāmen, rēs);
     } else if (Encliticum.NŌLĒNS.equals(encliticum)) {

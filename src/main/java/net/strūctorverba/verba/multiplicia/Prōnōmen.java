@@ -22,7 +22,7 @@ import org.jetbrains.annotations.NotNull;
 @SuppressWarnings({ "NonAsciiCharacters", "SpellCheckingInspection" })
 public final class Prōnōmen extends Nōminālis <Prōnōmen> {
   @Getter(lazy = true) @Accessors(fluent = true)
-  private final @NotNull Nūntius.NūntiusPrōnōminum nūntius = Nūntius.NūntiusPrōnōminum.fac.get();
+  @NotNull private final Nūntius.NūntiusPrōnōminum nūntius = Nūntius.NūntiusPrōnōminum.fac.get();
 
   @Builder(access = AccessLevel.PUBLIC, builderClassName = "Conditōr", builderMethodName = "conditōr", buildMethodName = "condam")
   private Prōnōmen(@NotNull final Speciālitās speciālitās, @NotNull final Genus genus,

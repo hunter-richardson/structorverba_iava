@@ -2,7 +2,7 @@ package net.strūctorverba.mīscella;
 
 import com.github.chaosfirebolt.converter.RomanInteger;
 import com.github.chaosfirebolt.converter.constants.*;
-import lombok.*;
+import lombok.Getter;
 import lombok.experimental.Accessors;
 import net.strūctorverba.lēctōrēs.*;
 import net.strūctorverba.nūntiī.Nūntius;
@@ -14,9 +14,7 @@ import org.apache.commons.lang3.*;
 import org.jetbrains.annotations.*;
 
 import javax.ejb.Singleton;
-import java.util.*;
-import java.util.function.*;
-import java.util.stream.*;
+import java.util.function.Supplier;
 
 /**
  * Classis {@link StrūctorVerba} accessum modīs omnibus programmātis StrūctorVerba prōvidet. <br>
@@ -24,13 +22,13 @@ import java.util.stream.*;
  */
 @Singleton @SuppressWarnings({ "NonAsciiCharacters", "SpellCheckingInspection", "unused" })
 public final class StrūctorVerba {
-  private static @Nullable StrūctorVerba īnstantia = null;
+  @Nullable private static StrūctorVerba īnstantia = null;
 
   /**
    * Valor hic viam reī classis huiuc facit.
    * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
    */
-  public static final @NotNull Supplier <StrūctorVerba> fac =
+  @NotNull public static final Supplier <StrūctorVerba> fac =
     () -> ObjectUtils.firstNonNull(īnstantia, īnstantia = new StrūctorVerba());
 
   private final Range<Short> TRACTUS_NUMERŌRUM = Range.between(Integer.valueOf(1).shortValue(),
@@ -41,82 +39,82 @@ public final class StrūctorVerba {
   }
 
   @Getter(lazy = true) @Accessors(fluent = true)
-  private final @NotNull LēctorMultiplicibus.LēctorAdiectīvīs adiectīva = LēctorMultiplicibus.LēctorAdiectīvīs.fac.get();
+  @NotNull private final LēctorMultiplicibus.LēctorAdiectīvīs adiectīva = LēctorMultiplicibus.LēctorAdiectīvīs.fac.get();
 
   @Getter(lazy = true) @Accessors(fluent = true)
-  private final @NotNull LēctorSimplicibus.LēctorAdverbiīs adverbia = LēctorSimplicibus.LēctorAdverbiīs.fac.get();
+  @NotNull private final LēctorSimplicibus.LēctorAdverbiīs adverbia = LēctorSimplicibus.LēctorAdverbiīs.fac.get();
 
   @Getter(lazy = true) @Accessors(fluent = true)
-  private final @NotNull LēctorSimplicibus.LēctorConiūnctīvīs coniūnctīva = LēctorSimplicibus.LēctorConiūnctīvīs.fac.get();
+  @NotNull private final LēctorSimplicibus.LēctorConiūnctīvīs coniūnctīva = LēctorSimplicibus.LēctorConiūnctīvīs.fac.get();
 
   @Getter(lazy = true) @Accessors(fluent = true)
-  private final @NotNull LēctorMultiplicibus.LēctorNōminibus nōmina = LēctorMultiplicibus.LēctorNōminibus.fac.get();
+  @NotNull private final LēctorMultiplicibus.LēctorNōminibus nōmina = LēctorMultiplicibus.LēctorNōminibus.fac.get();
 
   @Getter(lazy = true) @Accessors(fluent = true)
-  private final @NotNull LēctorPraepositiōnibus praepositiōnēs = LēctorPraepositiōnibus.fac.get();
+  @NotNull private final LēctorPraepositiōnibus praepositiōnēs = LēctorPraepositiōnibus.fac.get();
 
   @Getter(lazy = true) @Accessors(fluent = true)
-  private final @NotNull LēctorMultiplicibus.LēctorPrōnōminibus prōnōmina = LēctorMultiplicibus.LēctorPrōnōminibus.fac.get();
+  @NotNull private final LēctorMultiplicibus.LēctorPrōnōminibus prōnōmina = LēctorMultiplicibus.LēctorPrōnōminibus.fac.get();
 
   @Getter(lazy = true) @Accessors(fluent = true)
-  private final @NotNull LēctorMultiplicibus.LēctorPrōnōminibusConiūnctīvīs prōnōminaConiūnctīva = LēctorMultiplicibus.LēctorPrōnōminibusConiūnctīvīs.fac.get();
+  @NotNull private final LēctorMultiplicibus.LēctorPrōnōminibusConiūnctīvīs prōnōminaConiūnctīva = LēctorMultiplicibus.LēctorPrōnōminibusConiūnctīvīs.fac.get();
 
   @Getter(lazy = true) @Accessors(fluent = true)
-  private final @NotNull LēctorMultiplicibus.LēctorĀctīs ācta = LēctorMultiplicibus.LēctorĀctīs.fac.get();
+  @NotNull private final LēctorMultiplicibus.LēctorĀctīs ācta = LēctorMultiplicibus.LēctorĀctīs.fac.get();
 
   /**
    * @return Rem classis {@link LēctorMultiplicibus.LēctorAdiectīvīs}
    */
-  public @NotNull LēctorMultiplicibus.LēctorAdiectīvīs adiectīvumLege( ) {
+  @NotNull public LēctorMultiplicibus.LēctorAdiectīvīs adiectīvumLege( ) {
     return adiectīva();
   }
 
   /**
    * @return Rem classis {@link LēctorSimplicibus.LēctorAdverbiīs}
    */
-  public @NotNull LēctorSimplicibus.LēctorAdverbiīs adverbiumLege( ) {
+  @NotNull public LēctorSimplicibus.LēctorAdverbiīs adverbiumLege( ) {
     return adverbia();
   }
 
   /**
    * @return Rem classis {@link LēctorSimplicibus.LēctorConiūnctīvīs}
    */
-  public @NotNull LēctorSimplicibus.LēctorConiūnctīvīs coniūnctīvumLege( ) {
+  @NotNull public LēctorSimplicibus.LēctorConiūnctīvīs coniūnctīvumLege( ) {
     return coniūnctīva();
   }
 
   /**
    * @return Rem classis {@link LēctorMultiplicibus.LēctorNōminibus}
    */
-  public @NotNull LēctorMultiplicibus.LēctorNōminibus nōmenLege( ) {
+  @NotNull public LēctorMultiplicibus.LēctorNōminibus nōmenLege( ) {
     return nōmina();
   }
 
   /**
    * @return Rem classis {@link LēctorMultiplicibus.LēctorPrōnōminibus}
    */
-  public @NotNull LēctorMultiplicibus.LēctorPrōnōminibus prōnōmenLege( ) {
+  @NotNull public LēctorMultiplicibus.LēctorPrōnōminibus prōnōmenLege( ) {
     return prōnōmina();
   }
 
   /**
    * @return Rem classis {@link LēctorMultiplicibus.LēctorPrōnōminibusConiūnctīvīs}
    */
-  public @NotNull LēctorMultiplicibus.LēctorPrōnōminibusConiūnctīvīs prōnōmenConiūnctīvumLege( ) {
+  @NotNull public LēctorMultiplicibus.LēctorPrōnōminibusConiūnctīvīs prōnōmenConiūnctīvumLege( ) {
     return prōnōminaConiūnctīva();
   }
 
   /**
    * @return Rem classis {@link LēctorPraepositiōnibus}
    */
-  public @NotNull LēctorPraepositiōnibus praepositiōnemLege( ) {
+  @NotNull public LēctorPraepositiōnibus praepositiōnemLege( ) {
     return praepositiōnēs();
   }
 
   /**
    * @return Rem classis {@link LēctorMultiplicibus.LēctorĀctīs}
    */
-  public @NotNull LēctorMultiplicibus.LēctorĀctīs āctumLege( ) {
+  @NotNull public LēctorMultiplicibus.LēctorĀctīs āctumLege( ) {
     return ācta();
   }
 
@@ -124,7 +122,7 @@ public final class StrūctorVerba {
    * @param rēs rēs classis {@link Nōminālis}
    * @return Rem classis {@link VerbaPraepositiōne} ūsa valōrem {@code rēs}
    */
-  public @NotNull VerbaPraepositiōne verbaPraepositiōneStrue(@NotNull final Nōminālis <@NotNull ?> rēs) {
+  @NotNull public VerbaPraepositiōne verbaPraepositiōneStrue(@NotNull final Nōminālis <@NotNull ?> rēs) {
     return VerbaPraepositiōne.conditōr().rēs(rēs).condam();
   }
 
@@ -133,90 +131,17 @@ public final class StrūctorVerba {
    * @param praepositiō rēs classis {@link VerbumSimplex.Praepositiō}
    * @return Rem classis {@link VerbaPraepositiōne} ūsa valōrēs {@code rēs} et {@code praepositiō}
    */
-  public @NotNull VerbaPraepositiōne verbaPraepositiōneStrue(@NotNull final Nōminālis <@NotNull ?> rēs,
+  @NotNull public VerbaPraepositiōne verbaPraepositiōneStrue(@NotNull final Nōminālis <@NotNull ?> rēs,
                                                              @NotNull final VerbumSimplex.Praepositiō praepositiō) {
     return VerbaPraepositiōne.conditōr().rēs(rēs).praepositiō(praepositiō).condam();
   }
 
   /**
-   * @param seriēs seriēs rērum classis {@link Verbum} effingendus
-   * @return Effigiēs valōris {@code seriēs}
-   */
-  public @NotNull LinkedList <Verbum <@NotNull ?>> colligō(@NotNull final Collection <Verbum <@Nullable ?>> seriēs) {
-    seriēs.removeIf(Objects::isNull);
-    seriēs.removeIf(verbum -> StringUtils.isNotBlank(verbum.toString()));
-    return new LinkedList <>(seriēs);
-  }
-
-  /**
-   * @param seriēs seriēs rērum classis {@link Verbum} effingendus
-   * @return Effigiēs valōris {@code seriēs}
-   */
-  @SuppressWarnings("ConstantConditions")
-  public @NotNull LinkedList <Verbum <@NotNull ?>> colligō(@NotNull final Verbum <@Nullable ?>[] seriēs) {
-    return Stream.of(seriēs)
-                 .filter(Objects::nonNull)
-                 .filter(verbum -> StringUtils.isNotBlank(verbum.toString()))
-                 .collect(Collectors.toCollection(LinkedList::new));
-  }
-
-  /**
    * @param seriēs seriēs rērum classis {@link Verbum}
    * @return Rem classis {@link Verba} ūsa valōrem {@code seriēs}
    */
-  public @NotNull Verba strue(@NotNull final Verbum <@Nullable ?>[] seriēs) {
-    return Verba.conditōr().seriēs(colligō(seriēs)).condam();
-  }
-
-  /**
-   * @param seriēs seriēs rērum classis {@link Verbum}
-   * @return Rem classis {@link Verba} ūsa valōrem {@code seriēs}
-   */
-  public @NotNull Verba strue(@NotNull final Collection <Verbum <@Nullable ?>> seriēs) {
-    return Verba.conditōr().seriēs(seriēs).condam();
-  }
-
-  /**
-   * @param seriēs seriēs rērum classis {@link Verbum}
-   * @param coniūnctīvum rēs classis {@link Coniugiāle}
-   * @return Rem classis {@link Verba} ūsa valōrem {@code seriēs} et {@code coniūnctīvum}
-   */
-  public @NotNull Verba strue(@NotNull final Verbum <@Nullable ?>[] seriēs,
-                              @NotNull final Coniugiāle coniūnctīvum) {
-    return Verba.conditōr().seriēs(colligō(seriēs)).coniūnctīvum(coniūnctīvum).condam();
-  }
-
-  /**
-   * @param seriēs seriēs rērum classis {@link Verbum}
-   * @param coniūnctīvum rēs classis {@link Coniugiāle}
-   * @return Rem classis {@link Verba} ūsa valōrem {@code seriēs} et {@code coniūnctīvum}
-   */
-  public @NotNull Verba strue(@NotNull final Collection <Verbum <@Nullable ?>> seriēs,
-                              @NotNull final VerbumSimplex.Coniūnctīvum coniūnctīvum) {
-    return Verba.conditōr().seriēs(seriēs).coniūnctīvum(coniūnctīvum).condam();
-  }
-
-  /**
-   * @param prīma seriēs rērum classis {@link Verbum}
-   * @param coniūnctīvum rēs classis {@link Coniugiāle}
-   * @param secunda rēs classis {@link Verba} ūsa continuāre prīmae
-   * @return Rem classis {@link Verba} ūsa valōrem {@code seriēs} et {@code coniūnctīvum}
-   */
-  public @NotNull Verba strue(@NotNull final Collection <Verbum <@Nullable ?>> prīma,
-                              @NotNull final Coniugiāle coniūnctīvum, @NotNull final Verba secunda) {
-    return Verba.conditōr().seriēs(prīma).coniūnctīvum(coniūnctīvum).continuāta(secunda).condam();
-  }
-
-  /**
-   * @param prīma seriēs rērum classis {@link Verbum}
-   * @param coniūnctīvum rēs classis {@link Coniugiāle}
-   * @param secunda rēs classis {@link Verba} ūsa continuāre prīmae
-   * @return Rem classis {@link Verba} ūsa valōrem {@code seriēs} et {@code coniūnctīvum}
-   */
-  public @NotNull Verba strue(@NotNull final Collection <Verbum <@Nullable ?>> prīma,
-                              @NotNull final Coniugiāle coniūnctīvum,
-                              @NotNull final Collection <Verbum <@Nullable ?>> secunda) {
-    return Verba.conditōr().seriēs(prīma).coniūnctīvum(coniūnctīvum).continuāta(strue(secunda)).condam();
+  @NotNull public Verba strue(@NotNull final Verbum <@Nullable ?>[] seriēs) {
+    return new Verba().addō(seriēs);
   }
 
   /**

@@ -25,43 +25,43 @@ import java.util.Objects;
 @SuppressWarnings({ "NonAsciiCharacters", "SpellCheckingInspection", "unused" })
 public final class Āctum extends VerbumMultiplex <Āctum> {
   @Getter(lazy = true) @Accessors(fluent = true)
-  private final @NotNull LēctorMultiplicibus.LēctorAdiectīvīs adiectīva = LēctorMultiplicibus.LēctorAdiectīvīs.fac.get();
+  @NotNull private final LēctorMultiplicibus.LēctorAdiectīvīs adiectīva = LēctorMultiplicibus.LēctorAdiectīvīs.fac.get();
 
   @Getter(lazy = true) @Accessors(fluent = true)
-  private final @NotNull LēctorMultiplicibus.LēctorĀctīs ācta = LēctorMultiplicibus.LēctorĀctīs.fac.get();
+  @NotNull private final LēctorMultiplicibus.LēctorĀctīs ācta = LēctorMultiplicibus.LēctorĀctīs.fac.get();
 
   @Getter(lazy = true) @Accessors(fluent = true)
-  private final @NotNull Nūntius.NūntiusĀctōrum nūntius = Nūntius.NūntiusĀctōrum.fac.get();
+  @NotNull private final Nūntius.NūntiusĀctōrum nūntius = Nūntius.NūntiusĀctōrum.fac.get();
 
   /**
    * Valor hic modum reī huius dēsignat.
    * @see Modus
    */
-  public final @NotNull Modus modus;
+  @NotNull public final Modus modus;
 
   /**
    * Valor hic vōcem reī huius dēsignat.
-   * @see Modus
+   * @see Vōx
    */
-  public final @NotNull Vōx vōx;
+  @NotNull public final Vōx vōx;
 
   /**
    * Valor hic temporem reī huius dēsignat.
    * @see Tempus
    */
-  public final @NotNull Tempus tempus;
+  @NotNull public final Tempus tempus;
 
   /**
    * Valor hic numerum reī huius dēsignat.
    * @see Numerālis
    */
-  public final @NotNull Numerālis numerālis;
+  @NotNull public final Numerālis numerālis;
 
   /**
    * Valor hic persōnam reī huius dēsignat.
    * @see Persōna
    */
-  public final @NotNull Persōna persōna;
+  @NotNull public final Persōna persōna;
 
   @Builder(access = AccessLevel.PUBLIC, builderClassName = "Conditōr", builderMethodName = "conditōr", buildMethodName = "condam")
   private Āctum(@NotNull final Modus modus, @NotNull final Vōx vōx, @NotNull final Tempus tempus,
@@ -86,8 +86,9 @@ public final class Āctum extends VerbumMultiplex <Āctum> {
    * @param css valōrem {@link Nōminālis#cāsus} indicat.
    * @param nmrl valōrem {@link Nōminālis#numerālis} indicat.
    * @param grds valōrem {@link Adiectīvum#gradus} indicat.
+   * @see LēctorMultiplicibus.LēctorAdiectīvīs#adveniam(String, Enum[])
    */
-  public @Nullable Adiectīvum participem(@NotNull final Vōx vx, @NotNull final Tempus tmps,
+  @Nullable public Adiectīvum participem(@NotNull final Vōx vx, @NotNull final Tempus tmps,
                                          @NotNull final Speciālitās spclt, @NotNull final Genus gns,
                                          @NotNull final Cāsus css, @NotNull final Numerālis nmrl, @NotNull final Gradus grds) {
     if(Modus.PARTICIPĀLIS.equals(modus)
@@ -110,8 +111,9 @@ public final class Āctum extends VerbumMultiplex <Āctum> {
    * @param css valōrem {@link Nōminālis#cāsus} indicat.
    * @param nmrl valōrem {@link Nōminālis#numerālis} indicat.
    * @param grds valōrem {@link Adiectīvum#gradus} indicat.
+   * @see LēctorMultiplicibus.LēctorAdiectīvīs#adveniam(String, Enum[])
    */
-  public @Nullable Adiectīvum participem(@NotNull final Vōx vx, @NotNull final Speciālitās spclt,
+  @Nullable public Adiectīvum participem(@NotNull final Vōx vx, @NotNull final Speciālitās spclt,
                                          @NotNull final Genus gns, @NotNull final Cāsus css,
                                          @NotNull final Numerālis nmrl, @NotNull final Gradus grds) {
     return participem(vx, tempus, spclt, gns, css, nmrl, grds);
@@ -126,8 +128,9 @@ public final class Āctum extends VerbumMultiplex <Āctum> {
    * @param css valōrem {@link Nōminālis#cāsus} indicat.
    * @param nmrl valōrem {@link Nōminālis#numerālis} indicat.
    * @param grds valōrem {@link Adiectīvum#gradus} indicat.
+   * @see LēctorMultiplicibus.LēctorAdiectīvīs#adveniam(String, Enum[])
    */
-  public @Nullable Adiectīvum participem(@NotNull final Tempus tmps, @NotNull final Speciālitās spclt,
+  @Nullable public Adiectīvum participem(@NotNull final Tempus tmps, @NotNull final Speciālitās spclt,
                                          @NotNull final Genus gns, @NotNull final Cāsus css,
                                          @NotNull final Numerālis nmrl, @NotNull final Gradus grds) {
     return participem(vōx, tmps, spclt, gns, css, nmrl, grds);
@@ -141,8 +144,9 @@ public final class Āctum extends VerbumMultiplex <Āctum> {
    * @param css valōrem {@link Nōminālis#cāsus} indicat.
    * @param nmrl valōrem {@link Nōminālis#numerālis} indicat.
    * @param grds valōrem {@link Adiectīvum#gradus} indicat.
+   * @see LēctorMultiplicibus.LēctorAdiectīvīs#adveniam(String, Enum[])
    */
-  public @Nullable Adiectīvum participem(@NotNull final Speciālitās spclt, @NotNull final Genus gns,
+  @Nullable public Adiectīvum participem(@NotNull final Speciālitās spclt, @NotNull final Genus gns,
                                          @NotNull final Cāsus css, @NotNull final Numerālis nmrl,
                                          @NotNull final Gradus grds) {
     return participem(vōx, tempus, spclt, gns, css, nmrl, grds);
