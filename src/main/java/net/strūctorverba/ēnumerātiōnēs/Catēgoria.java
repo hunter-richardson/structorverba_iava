@@ -33,7 +33,7 @@ public enum Catēgoria {
   ĀCTUM("ācta"),
 
   /**
-   * Valor hic classem {@link VerbumSimplex.Adverbium} respondet.
+   * Valor hic classem {@link Adverbium} respondet.
    */
   ADVERBIUM("adverbia"),
 

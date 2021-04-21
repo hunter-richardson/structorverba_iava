@@ -1,8 +1,8 @@
 package net.strūctorverba.lēctōrēs;
 
-import net.strūctorverba.nūntiī.Nūntius;
 import net.strūctorverba.inventōrēs.*;
-import net.strūctorverba.tenōrēs.TenorMultiplicibus;
+import net.strūctorverba.nūntiī.Nūntius;
+import net.strūctorverba.tenōrēs.*;
 import net.strūctorverba.verba.multiplicia.*;
 import net.strūctorverba.ēnumerātiōnēs.*;
 import org.apache.commons.lang3.ObjectUtils;
@@ -53,6 +53,30 @@ public abstract class LēctorMultiplicibus <Hoc extends VerbumMultiplex <Hoc>> e
     } else {
       nūntius.garriō("Advenī hoc:", hoc);
       return hoc;
+    }
+  }
+
+  /**
+   * Classis {@link LēctorAdverbiīs} est vās classis {@link Lēctor} classī {@link Adverbium}.
+   * @see Catēgoria#ADVERBIUM
+   * @see TenorMultiplicibus.TenorAdverbiīs
+   * @see Nūntius.NūntiusLēctōrīAdverbiīs
+   */
+  @Singleton @DependsOn({ "TenorAdverbiīs", "NūntiusLēctōrīAdverbiīs" })
+  public static final class LēctorAdverbiīs extends LēctorMultiplicibus <Adverbium> {
+    @Nullable private static LēctorAdverbiīs īnstantia = null;
+
+    /**
+     * Valor hic viam reī classis huiuc facit.
+     * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
+     */
+    @NotNull public static final Supplier <LēctorAdverbiīs> fac =
+      () -> ObjectUtils.firstNonNull(īnstantia, īnstantia = new LēctorAdverbiīs());
+
+    private LēctorAdverbiīs( ) {
+      super(Catēgoria.ADVERBIUM, Nūntius.NūntiusLēctōrīAdverbiīs.fac,
+            TenorMultiplicibus.TenorAdverbiīs.fac, InventorAdverbiīs.fac);
+      nūntius.plūrimumGarriō("Factus sum");
     }
   }
 
@@ -231,6 +255,7 @@ public abstract class LēctorMultiplicibus <Hoc extends VerbumMultiplex <Hoc>> e
      * @return rem classis {@link Āctum} quam valōrem {@code illa} quadrat
      * @see <a href="{@docRoot}/../src/main/resources">auxiliārēs</a>/ācta/esse.xml
      */
+    @SuppressWarnings("unused")
     public @Nullable Āctum adveniam(@NotNull final Enum<?>... illa) {
       return adveniam("esse", illa);
     }

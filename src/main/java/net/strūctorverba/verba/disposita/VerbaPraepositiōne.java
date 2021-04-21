@@ -24,7 +24,8 @@ public final class VerbaPraepositiōne extends VerbumMultiplex <VerbaPraepositi�
   @NotNull private final VerbumSimplex.Praepositiō praepositiō;
   @NotNull private final Nōminālis <?>             rēs;
 
-  @Builder(access = AccessLevel.PUBLIC, builderClassName = "Conditōr", builderMethodName = "conditōr", buildMethodName = "condam")
+  @Builder(access = AccessLevel.PUBLIC, builderClassName = "Conditōr",
+           builderMethodName = "conditōr", buildMethodName = "condam")
   private VerbaPraepositiōne(@NotNull final Nōminālis <?> rēs,
                              @NotNull final VerbumSimplex.Praepositiō praepositiō) {
     super(Catēgoria.VERBA_PRAEPOSITIŌNE, rēs.fundāmen, rēs.toString());

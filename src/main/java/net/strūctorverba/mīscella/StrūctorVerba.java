@@ -40,7 +40,7 @@ public final class StrūctorVerba extends Omnum {
   @NotNull private final LēctorMultiplicibus.LēctorAdiectīvīs adiectīva = LēctorMultiplicibus.LēctorAdiectīvīs.fac.get();
 
   @Getter(lazy = true) @Accessors(fluent = true)
-  @NotNull private final LēctorSimplicibus.LēctorAdverbiīs adverbia = LēctorSimplicibus.LēctorAdverbiīs.fac.get();
+  @NotNull private final LēctorMultiplicibus.LēctorAdverbiīs adverbia = LēctorMultiplicibus.LēctorAdverbiīs.fac.get();
 
   @Getter(lazy = true) @Accessors(fluent = true)
   @NotNull private final LēctorSimplicibus.LēctorConiūnctīvīs coniūnctīva = LēctorSimplicibus.LēctorConiūnctīvīs.fac.get();
@@ -65,9 +65,9 @@ public final class StrūctorVerba extends Omnum {
   }
 
   /**
-   * @return Rem classis {@link LēctorSimplicibus.LēctorAdverbiīs}
+   * @return Rem classis {@link LēctorMultiplicibus.LēctorAdverbiīs}
    */
-  @NotNull public LēctorSimplicibus.LēctorAdverbiīs adverbiumLege( ) {
+  @NotNull public LēctorMultiplicibus.LēctorAdverbiīs adverbiumLege( ) {
     return adverbia();
   }
 

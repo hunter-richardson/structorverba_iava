@@ -12,7 +12,7 @@ import org.jetbrains.annotations.NotNull;
 
 /**
  * Classis {@link Nōmen} repraesentat nōmina ut coniectēris. <br>
- * Nōmina catēgoriam {@link Catēgoria#NŌMEN} ūtuntur et cōnservāta sunt in scrīniō <a href="{@docRoot}/../src/main/resources">auxiliārēs</a>/nōmina.
+ * Rēs classis huius catēgoriam {@link Catēgoria#NŌMEN} ūtuntur et cōnservāta sunt in scrīniō <a href="{@docRoot}/../src/main/resources">auxiliārēs</a>/nōmina.
  * @see LēctorMultiplicibus.LēctorNōminibus
  * @see TenorMultiplicibus.TenorNōminibus
  * @see InventorNōminibus
@@ -24,7 +24,8 @@ public final class Nōmen extends Nōminālis <Nōmen> {
   @Getter(lazy = true) @Accessors(fluent = true)
   @NotNull private final Nūntius.NūntiusNōminum nūntius = Nūntius.NūntiusNōminum.fac.get();
 
-  @Builder(access = AccessLevel.PUBLIC, builderClassName = "Conditōr", builderMethodName = "conditōr", buildMethodName = "condam")
+  @Builder(access = AccessLevel.PUBLIC, builderClassName = "Conditōr",
+           builderMethodName = "conditōr", buildMethodName = "condam")
   private Nōmen(@NotNull final Speciālitās speciālitās, @NotNull final Genus genus,
                 @NotNull final Cāsus cāsus, @NotNull final Numerālis numerālis,
                 @NotNull final String fundāmen, @NotNull final String scrīptiō) {

@@ -51,41 +51,6 @@ public abstract class ConditōrSimplicibus <Hoc extends VerbumSimplex <Hoc>> ext
   protected abstract void referō(@Nullable final Hoc hoc);
 
   /**
-   * Classis {@link ConditōrAdverbiīs} est vās classis {@link Tenor} classī {@link VerbumSimplex.Adverbium}.
-   * @see VerbumSimplex.Adverbium
-   * @see Nūntius.NūntiusConditōrīAdverbiīs
-   */
-  @Singleton @DependsOn("NūntiusInventōrīAdiectīvīs")
-  public static final class ConditōrAdverbiīs extends ConditōrSimplicibus <VerbumSimplex.Adverbium> {
-    @Nullable private static ConditōrAdverbiīs īnstantia = null;
-
-    /**
-     * Valor hic viam reī classis huiuc facit.
-     * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
-     */
-    @NotNull public static final Supplier <ConditōrAdverbiīs> fac =
-      () -> ObjectUtils.firstNonNull(īnstantia, īnstantia = new ConditōrAdverbiīs());
-
-    private ConditōrAdverbiīs( ) {
-      super(Nūntius.NūntiusConditōrīAdverbiīs.fac,
-            fundāmen -> VerbumSimplex.Adverbium.conditōr().fundāmen(fundāmen).condam());
-      nūntius.plūrimumGarriō("Factus sum");
-    }
-
-    /**
-     * {@inheritDoc}
-     */
-    @Override protected void referō(@Nullable final VerbumSimplex.Adverbium hoc) {
-      if (Objects.isNull(hoc)) {
-        nūntius.moneō(VerbumSimplex.Adverbium.class.getSimpleName().replace("um", "ī"),
-                      "prōductiō fōrmae nūllae prōcessit.");
-      } else {
-        nūntius.certiōrō(VerbumSimplex.Adverbium.class.getSimpleName(), fundāmen, "fīnītur prōdūcere.");
-      }
-    }
-  }
-
-  /**
    * Classis {@link ConditōrConiūnctīvīs} est vās classis {@link Tenor} classī {@link VerbumSimplex.Coniūnctīvum}.
    * @see VerbumSimplex.Coniūnctīvum
    * @see Nūntius.NūntiusConditōrīConiūnctivīs

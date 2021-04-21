@@ -80,6 +80,29 @@ public abstract class TenorMultiplicibus <Hoc extends VerbumMultiplex <Hoc>> ext
   }
 
   /**
+   * Classis {@link TenorAdverbiīs} est vās classis {@link Tenor} classī {@link Adverbium}
+   * @see Adverbium
+   * @see Nūntius.NūntiusTenōrīAdverbiīs
+   * @see ConditōrAdverbiīs
+   */
+  @Singleton @DependsOn({ "CondītōrAdverbiīs", "NūntiusTenōrīAdverbiīs" })
+  public static final class TenorAdverbiīs extends TenorMultiplicibus <Adverbium> {
+    @Nullable private static TenorAdverbiīs īnstantia = null;
+
+    /**
+     * Valor hic viam reī classis huiuc facit.
+     * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
+     */
+    @NotNull public static final Supplier <TenorAdverbiīs> fac =
+      () -> ObjectUtils.firstNonNull(īnstantia, īnstantia = new TenorAdverbiīs());
+
+    private TenorAdverbiīs( ) {
+      super(Nūntius.NūntiusTenōrīAdverbiīs.fac, ConditōrAdverbiīs.fac);
+      nūntius.plūrimumGarriō("Factus sum");
+    }
+  }
+
+  /**
    * {@inheritDoc}
    * @param scrīptiō fōrmam scrīptam indendus
    * @see VerbumMultiplex#scrīptiō

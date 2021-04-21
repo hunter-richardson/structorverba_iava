@@ -47,27 +47,8 @@ public abstract class VerbumSimplex <Hoc extends Verbum <Hoc>> extends Verbum <H
   }
 
   /**
-   * Classis {@link Adverbium} repraesentat adverbia ut coniectēris. <br>
-   * Adverbia catēgoriam {@link Catēgoria#ADVERBIUM} ūtuntur et cōnservāta sunt in scrīniō <a href="{@docRoot}/../src/main/resources">auxiliārēs</a>/adverbia.
-   * @see LēctorSimplicibus.LēctorAdverbiīs
-   * @see TenorSimplicibus.TenorAdverbiīs
-   * @see ConditōrSimplicibus.ConditōrAdverbiīs
-   * @see Nūntius.NūntiusAdverbiōrum
-   */
-  public static final class Adverbium extends VerbumSimplex <Adverbium> {
-    @Getter(lazy = true) @Accessors(fluent = true)
-    @NotNull private final Nūntius.NūntiusAdverbiōrum nūntius = Nūntius.NūntiusAdverbiōrum.fac.get();
-
-    @Builder(access = AccessLevel.PUBLIC, builderClassName = "Conditōr", builderMethodName = "conditōr", buildMethodName = "condam")
-    private Adverbium(@NotNull final String fundāmen) {
-      super(Catēgoria.ADVERBIUM, fundāmen);
-      nūntius().plūsGarriō("Scrībor ut", fundāmen);
-    }
-  }
-
-  /**
    * Classis {@link Coniūnctīvum} repraesentat coniūnctīva ut coniectēris. <br>
-   * Coniūnctīva catēgoriam {@link Catēgoria#CONIŪNCTĪVUM} ūtuntur et cōnservāta sunt in scrīniō <a href="{@docRoot}/../src/main/resources">auxiliārēs</a>/coniūnctīva. <br>
+   * Rēs classis huius catēgoriam {@link Catēgoria#CONIŪNCTĪVUM} ūtuntur et cōnservāta sunt in scrīniō <a href="{@docRoot}/../src/main/resources">auxiliārēs</a>/coniūnctīva. <br>
    * @see LēctorSimplicibus.LēctorConiūnctīvīs
    * @see TenorSimplicibus.TenorConiūnctivīs
    * @see ConditōrSimplicibus.ConditōrConiūnctīvīs
@@ -77,7 +58,8 @@ public abstract class VerbumSimplex <Hoc extends Verbum <Hoc>> extends Verbum <H
     @Getter(lazy = true) @Accessors(fluent = true)
     @NotNull private final Nūntius.NūntiusConiūnctīvōrum nūntius = Nūntius.NūntiusConiūnctīvōrum.fac.get();
 
-    @Builder(access = AccessLevel.PUBLIC, builderClassName = "Conditōr", builderMethodName = "conditōr", buildMethodName = "condam")
+    @Builder(access = AccessLevel.PUBLIC, builderClassName = "Conditōr",
+             builderMethodName = "conditōr", buildMethodName = "condam")
     private Coniūnctīvum(@NotNull final String fundāmen) {
       super(Catēgoria.CONIŪNCTĪVUM, fundāmen);
       nūntius().plūsGarriō("Scrībor ut", fundāmen);
@@ -86,7 +68,7 @@ public abstract class VerbumSimplex <Hoc extends Verbum <Hoc>> extends Verbum <H
 
   /**
    * Classis {@link Praepositiō} repraesentat praepositiōnēs ut coniectēris. <br>
-   * Praepositiōnēs catēgoriam {@link Catēgoria#PRAEPOSITIŌ} ūtuntur et cōnservāta sunt in scrīniō <a href="{@docRoot}/../src/main/resources">auxiliārēs</a>/praepositiōnēs.
+   * Rēs classis huius catēgoriam {@link Catēgoria#PRAEPOSITIŌ} ūtuntur et cōnservāta sunt in scrīniō <a href="{@docRoot}/../src/main/resources">auxiliārēs</a>/praepositiōnēs.
    * @see LēctorPraepositiōnibus
    * @see Nūntius.NūntiusPraepositiōnum
    */
@@ -100,7 +82,8 @@ public abstract class VerbumSimplex <Hoc extends Verbum <Hoc>> extends Verbum <H
     @NotNull public static final Supplier<Praepositiō> assūme =
       () -> Praepositiō.conditōr().fundāmen(StringUtils.EMPTY).condam();
 
-    @Builder(access = AccessLevel.PUBLIC, builderClassName = "Conditōr", builderMethodName = "conditōr", buildMethodName = "condam")
+    @Builder(access = AccessLevel.PUBLIC, builderClassName = "Conditōr",
+             builderMethodName = "conditōr", buildMethodName = "condam")
     private Praepositiō(@NotNull final String fundāmen) {
       super(Catēgoria.PRAEPOSITIŌ, fundāmen);
       nūntius().plūsGarriō("Scrībor ut", fundāmen);
@@ -109,7 +92,7 @@ public abstract class VerbumSimplex <Hoc extends Verbum <Hoc>> extends Verbum <H
 
   /**
    * Classis {@link Numerus} repraesentat numerōs ut coniectēris. <br>
-   * Numerī catēgoriam {@link Catēgoria#NUMERUM} ūtuntur et data eīs nōn inveniet scrīnium <a href="{@docRoot}/../src/main/resources">auxiliārēs</a>. <br>
+   * Rēs classis huius catēgoriam {@link Catēgoria#NUMERUM} ūtuntur et data eīs nōn inveniet scrīnium <a href="{@docRoot}/../src/main/resources">auxiliārēs</a>. <br>
    * Magis rēs classis huius ā numerīs classis <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Short.html">Short</a> per ūsum classis <a href="https://github.com/Chaosfirebolt/RomanNumeralConverter/blob/master/src/main/java/com/github/chaosfirebolt/converter/RomanInteger.java">RomanInteger</a> fīant.
    * @see Nūntius.NūntiusNumerōrum
    * @see <a href="https://github.com/Chaosfirebolt/RomanNumeralConverter/blob/master/src/main/java/com/github/chaosfirebolt/converter/RomanInteger.java">RomanInteger</a>
@@ -125,7 +108,8 @@ public abstract class VerbumSimplex <Hoc extends Verbum <Hoc>> extends Verbum <H
      */
     public final short numerus;
 
-    @Builder(access = AccessLevel.PUBLIC, builderClassName = "Conditōr", builderMethodName = "conditōr", buildMethodName = "condam")
+    @Builder(access = AccessLevel.PUBLIC, builderClassName = "Conditōr",
+             builderMethodName = "conditōr", buildMethodName = "condam")
     private Numerus(final short numerus) throws IllegalArgumentException {
       super(Catēgoria.NUMERUM, String.valueOf(numerus));
       this.numerus = Validator.range(Short.toUnsignedInt(numerus)).shortValue();

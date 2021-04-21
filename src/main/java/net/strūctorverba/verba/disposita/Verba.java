@@ -53,6 +53,7 @@ public final class Verba extends Omnum {
    * @param verba seriēs valōrum addendōrum
    * @return Rem haec
    */
+  @SuppressWarnings("UnusedReturnValue")
   @NotNull public Verba superaddō(@NotNull final Verba verba) {
     seriēs.addAll(verba.seriēs.stream()
                               .filter(Objects::nonNull)

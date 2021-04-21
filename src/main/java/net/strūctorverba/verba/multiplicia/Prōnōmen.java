@@ -12,7 +12,7 @@ import org.jetbrains.annotations.NotNull;
 
 /**
  * Classis {@link Prōnōmen} repraesentat nōmina ut coniectēris. <br>
- * Prōnōmina catēgoriam {@link Catēgoria#PRŌNŌMEN} ūtuntur et cōnservāta sunt in scrīniō <a href="{@docRoot}/../src/main/resources">auxiliārēs</a>/prōnōmina.
+ * Rēs classis huius catēgoriam {@link Catēgoria#PRŌNŌMEN} ūtuntur et cōnservāta sunt in scrīniō <a href="{@docRoot}/../src/main/resources">auxiliārēs</a>/prōnōmina.
  * @see LēctorMultiplicibus.LēctorPrōnōminibus
  * @see TenorMultiplicibus.TenorPrōnōminibus
  * @see InventorPrōnōminibus
@@ -24,7 +24,8 @@ public final class Prōnōmen extends Nōminālis <Prōnōmen> {
   @Getter(lazy = true) @Accessors(fluent = true)
   @NotNull private final Nūntius.NūntiusPrōnōminum nūntius = Nūntius.NūntiusPrōnōminum.fac.get();
 
-  @Builder(access = AccessLevel.PUBLIC, builderClassName = "Conditōr", builderMethodName = "conditōr", buildMethodName = "condam")
+  @Builder(access = AccessLevel.PUBLIC, builderClassName = "Conditōr",
+           builderMethodName = "conditōr", buildMethodName = "condam")
   private Prōnōmen(@NotNull final Speciālitās speciālitās, @NotNull final Genus genus,
                    @NotNull final Cāsus cāsus, @NotNull final Numerālis numerālis,
                    @NotNull final String fundāmen, @NotNull final String scrīptiō) {

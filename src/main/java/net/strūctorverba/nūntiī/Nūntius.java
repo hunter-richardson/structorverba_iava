@@ -145,8 +145,8 @@ public abstract class Nūntius {
   }
 
   /**
-   * Classis {@link NūntiusTenōrīAdverbiīs} est vās classis {@link Nūntius} classī {@link TenorSimplicibus.TenorAdverbiīs}
-   * @see TenorSimplicibus.TenorAdverbiīs
+   * Classis {@link NūntiusTenōrīAdverbiīs} est vās classis {@link Nūntius} classī {@link TenorMultiplicibus.TenorAdverbiīs}
+   * @see TenorMultiplicibus.TenorAdverbiīs
    */
   @Singleton public static final class NūntiusTenōrīAdverbiīs extends Nūntius {
     @Nullable private static NūntiusTenōrīAdverbiīs īnstantia = null;
@@ -159,7 +159,7 @@ public abstract class Nūntius {
       () -> ObjectUtils.firstNonNull(īnstantia, īnstantia = new NūntiusTenōrīAdverbiīs());
 
     private NūntiusTenōrīAdverbiīs( ) {
-      super(ParametrīNūntiī.parā(TenorSimplicibus.TenorAdverbiīs.class));
+      super(ParametrīNūntiī.parā(TenorMultiplicibus.TenorAdverbiīs.class));
     }
   }
 
@@ -260,8 +260,8 @@ public abstract class Nūntius {
   }
 
   /**
-   * Classis {@link NūntiusConditōrīAdverbiīs} est vās classis {@link Nūntius} classī {@link ConditōrSimplicibus.ConditōrAdverbiīs}
-   * @see ConditōrSimplicibus.ConditōrAdverbiīs
+   * Classis {@link NūntiusConditōrīAdverbiīs} est vās classis {@link Nūntius} classī {@link ConditōrAdverbiīs}
+   * @see ConditōrAdverbiīs
    */
   @Singleton public static final class NūntiusConditōrīAdverbiīs extends Nūntius {
     @Nullable private static NūntiusConditōrīAdverbiīs īnstantia = null;
@@ -274,7 +274,7 @@ public abstract class Nūntius {
       () -> ObjectUtils.firstNonNull(īnstantia, īnstantia = new NūntiusConditōrīAdverbiīs());
 
     private NūntiusConditōrīAdverbiīs( ) {
-      super(ParametrīNūntiī.parā(ConditōrSimplicibus.ConditōrAdverbiīs.class));
+      super(ParametrīNūntiī.parā(ConditōrAdverbiīs.class));
     }
   }
 
@@ -377,6 +377,25 @@ public abstract class Nūntius {
    * Classis {@link NūntiusInventōrīNōminibus} est vās classis {@link Nūntius} classī {@link InventorNōminibus}
    * @see InventorNōminibus
    */
+  @Singleton public static final class NūntiusInventōrīAdverbiīs extends Nūntius {
+    @Nullable private static NūntiusInventōrīAdverbiīs īnstantia = null;
+
+    /**
+     * Valor hic viam reī classis huiuc facit.
+     * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
+     */
+    @NotNull public static final Supplier <NūntiusInventōrīAdverbiīs> fac =
+      () -> ObjectUtils.firstNonNull(īnstantia, īnstantia = new NūntiusInventōrīAdverbiīs());
+
+    private NūntiusInventōrīAdverbiīs( ) {
+      super(ParametrīNūntiī.parā(InventorAdverbiīs.class));
+    }
+  }
+
+  /**
+   * Classis {@link NūntiusInventōrīNōminibus} est vās classis {@link Nūntius} classī {@link InventorNōminibus}
+   * @see InventorNōminibus
+   */
   @Singleton public static final class NūntiusInventōrīNōminibus extends Nūntius {
     @Nullable private static NūntiusInventōrīNōminibus īnstantia = null;
 
@@ -450,8 +469,8 @@ public abstract class Nūntius {
   }
 
   /**
-   * Classis {@link NūntiusLēctōrīAdverbiīs} est vās classis {@link Nūntius} classī {@link LēctorSimplicibus.LēctorAdverbiīs}
-   * @see LēctorSimplicibus.LēctorAdverbiīs
+   * Classis {@link NūntiusLēctōrīAdverbiīs} est vās classis {@link Nūntius} classī {@link LēctorMultiplicibus.LēctorAdverbiīs}
+   * @see LēctorMultiplicibus.LēctorAdverbiīs
    */
   @Singleton public static final class NūntiusLēctōrīAdverbiīs extends Nūntius {
     @Nullable private static NūntiusLēctōrīAdverbiīs īnstantia = null;
@@ -464,7 +483,7 @@ public abstract class Nūntius {
       () -> ObjectUtils.firstNonNull(īnstantia, īnstantia = new NūntiusLēctōrīAdverbiīs());
 
     private NūntiusLēctōrīAdverbiīs( ) {
-      super(ParametrīNūntiī.parā(LēctorSimplicibus.LēctorAdverbiīs.class));
+      super(ParametrīNūntiī.parā(LēctorMultiplicibus.LēctorAdverbiīs.class));
     }
   }
 
@@ -583,8 +602,8 @@ public abstract class Nūntius {
   }
 
   /**
-   * Classis {@link NūntiusAdverbiōrum} est vās classis {@link Nūntius} classī {@link VerbumSimplex.Adverbium}
-   * @see VerbumSimplex.Adverbium
+   * Classis {@link NūntiusAdverbiōrum} est vās classis {@link Nūntius} classī {@link Adverbium}
+   * @see Adverbium
    */
   @Singleton public static final class NūntiusAdverbiōrum extends Nūntius {
     @Nullable private static NūntiusAdverbiōrum īnstantia = null;
@@ -597,7 +616,7 @@ public abstract class Nūntius {
       () -> ObjectUtils.firstNonNull(īnstantia, īnstantia = new NūntiusAdverbiōrum());
 
     private NūntiusAdverbiōrum() {
-      super(ParametrīNūntiī.parā(VerbumSimplex.Adverbium.Conditōr.class));
+      super(ParametrīNūntiī.parā(Adverbium.Conditōr.class));
     }
   }
 

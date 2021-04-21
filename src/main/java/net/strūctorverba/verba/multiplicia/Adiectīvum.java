@@ -12,7 +12,7 @@ import org.jetbrains.annotations.NotNull;
 
 /**
  * Classis {@link Adiectīvum} repraesentat adiectīva ut coniectēris. <br>
- * Adiectīva catēgoriam {@link Catēgoria#NŌMEN} ūtuntur et cōnservāta sunt in scrīniō <a href="{@docRoot}/../src/main/resources">auxiliārēs</a>/adiectīva. <br>
+ * Rēs classis huius catēgoriam {@link Catēgoria#NŌMEN} ūtuntur et cōnservāta sunt in scrīniō <a href="{@docRoot}/../src/main/resources">auxiliārēs</a>/adiectīva. <br>
  * Discrīmina prīmōria inter classibus hāc et {@link Prōnōmen} est huius valor {@link #gradus}.
  * @see LēctorMultiplicibus.LēctorAdiectīvīs
  * @see TenorMultiplicibus.TenorAdiectīvīs
@@ -31,7 +31,8 @@ public final class Adiectīvum extends Nōminālis <Adiectīvum> {
    */
   @NotNull public final Gradus gradus;
 
-  @Builder(access = AccessLevel.PUBLIC, builderClassName = "Conditōr", builderMethodName = "conditōr", buildMethodName = "condam")
+  @Builder(access = AccessLevel.PUBLIC, builderClassName = "Conditōr",
+           builderMethodName = "conditōr", buildMethodName = "condam")
   private Adiectīvum(@NotNull final Speciālitās speciālitās, @NotNull final Genus genus,
                      @NotNull final Cāsus cāsus, @NotNull final Numerālis numerālis,
                      @NotNull final Gradus gradus, @NotNull final String fundāmen,

@@ -6,13 +6,13 @@ Nōn iam! Vōbīs intrōdūcō programma StrūctorVerba scrīpta in linguā [Iav
 
 Programma hoc classēs octō dēfīnit catēgoriās octō verbōrum repraesentāre:
 
-I. [Adverbium](src/main/java/net/strūctorverba/verba/VerbumSimplex.java)
+I. [Coniūnctīvum](src/main/java/net/strūctorverba/verba/VerbumSimplex.java)
 
-II. [Coniūnctīvum](src/main/java/net/strūctorverba/verba/VerbumSimplex.java)
+II. [Praepositiō](src/main/java/net/strūctorverba/verba/VerbumSimplex.java)
 
-III. [Praepositiō](src/main/java/net/strūctorverba/verba/VerbumSimplex.java)
+III. [Numerus](src/main/java/net/strūctorverba/verba/VerbumSimplex.java)
 
-IV. [Numerus](src/main/java/net/strūctorverba/verba/VerbumSimplex.java)
+IV. [Adverbium](src/main/java/net/strūctorverba/verba/multiplicia/Adverbium.java)
 
 V. [Nōmen](src/main/java/net/strūctorverba/verba/multiplicia/Nōmen.java)
 

@@ -47,29 +47,6 @@ public abstract class LēctorSimplicibus <Hoc extends VerbumSimplex <Hoc>> exten
   }
 
   /**
-   * Classis {@link LēctorAdverbiīs} est vās classis {@link Lēctor} classī {@link VerbumSimplex.Adverbium}.
-   * @see Catēgoria#ADVERBIUM
-   * @see TenorSimplicibus.TenorAdverbiīs
-   * @see Nūntius.NūntiusLēctōrīAdverbiīs
-   */
-  @Singleton @DependsOn({ "TenorAdverbiīs", "NūntiusLēctōrīAdverbiīs" })
-  public static final class LēctorAdverbiīs extends LēctorSimplicibus <VerbumSimplex.Adverbium> {
-    @Nullable private static LēctorAdverbiīs īnstantia = null;
-
-    /**
-     * Valor hic viam reī classis huiuc facit.
-     * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
-     */
-    @NotNull public static final Supplier <LēctorAdverbiīs> fac =
-      () -> ObjectUtils.firstNonNull(īnstantia, īnstantia = new LēctorAdverbiīs());
-
-    private LēctorAdverbiīs( ) {
-      super(Catēgoria.ADVERBIUM, Nūntius.NūntiusLēctōrīAdverbiīs.fac, TenorSimplicibus.TenorAdverbiīs.fac);
-      nūntius.plūrimumGarriō("Factus sum");
-    }
-  }
-
-  /**
    * Classis {@link LēctorConiūnctīvīs} est vās classis {@link Lēctor} classī {@link VerbumSimplex.Coniūnctīvum}.
    * @see Catēgoria#CONIŪNCTĪVUM
    * @see TenorSimplicibus.TenorConiūnctivīs

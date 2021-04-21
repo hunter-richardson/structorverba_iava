@@ -7,7 +7,7 @@ import org.jetbrains.annotations.NotNull;
 import java.util.stream.Stream;
 
 /**
- * Ēnumerātiō haec dēsignat sīve verbum est certum sīve incertum.
+ * Ēnumerātiō haec dēsignat utrum verbum est certum necne.
  * @see Āctum
  */
 @SuppressWarnings({ "NonAsciiCharacters", "SpellCheckingInspection", "unused" })

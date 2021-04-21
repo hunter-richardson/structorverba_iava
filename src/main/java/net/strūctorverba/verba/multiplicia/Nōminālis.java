@@ -12,7 +12,7 @@ import org.jetbrains.annotations.NotNull;
 @SuppressWarnings({ "NonAsciiCharacters", "SpellCheckingInspection" })
 public abstract class Nōminālis <Hoc extends VerbumMultiplex <Hoc>> extends VerbumMultiplex <Hoc> {
   /**
-   * Valor hic dēsignat sīve rēs hae repraesentat certum ({@link Speciālitās#PROPRIUM}) sīve incertum ({@link Speciālitās#COMMŪNE}).
+   * Valor hic dēsignat utrum rēs hae repraesentat certum necne.
    * @see Speciālitās
    */
   @NotNull public final Speciālitās speciālitās;

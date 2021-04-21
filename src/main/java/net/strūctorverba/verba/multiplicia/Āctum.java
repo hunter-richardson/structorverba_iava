@@ -15,7 +15,7 @@ import java.util.Objects;
 
 /**
  * Classis {@link Āctum} repraesentat nōmina ut coniectēris. <br>
- * Nōmina catēgoriam {@link Catēgoria#ĀCTUM} ūtuntur et cōnservāta sunt in scrīniō <a href="{@docRoot}/../src/main/resources">auxiliārēs</a>/ācta.
+ * Rēs classis huius catēgoriam {@link Catēgoria#ĀCTUM} ūtuntur et cōnservāta sunt in scrīniō <a href="{@docRoot}/../src/main/resources">auxiliārēs</a>/ācta.
  * @see LēctorMultiplicibus.LēctorĀctīs
  * @see TenorMultiplicibus.TenorĀctīs
  * @see InventorĀctīs
@@ -63,7 +63,8 @@ public final class Āctum extends VerbumMultiplex <Āctum> {
    */
   @NotNull public final Persōna persōna;
 
-  @Builder(access = AccessLevel.PUBLIC, builderClassName = "Conditōr", builderMethodName = "conditōr", buildMethodName = "condam")
+  @Builder(access = AccessLevel.PUBLIC, builderClassName = "Conditōr",
+           builderMethodName = "conditōr", buildMethodName = "condam")
   private Āctum(@NotNull final Modus modus, @NotNull final Vōx vōx, @NotNull final Tempus tempus,
                 @NotNull final Numerālis numerālis, @NotNull final Persōna persōna,
                 @NotNull final String fundāmen, @NotNull final String scrīptiō) {
