@@ -200,33 +200,6 @@ public abstract class LēctorMultiplicibus <Hoc extends VerbumMultiplex <Hoc>> e
     }
   }
 
-
-  /**
-   * Classis {@link LēctorPrōnōminibusConiūnctīvīs} est vās classis {@link Lēctor} classī {@link PrōnōmenConiūnctīvum}.
-   * @see Catēgoria#PRŌNŌMEN_CONIŪNCTĪVUM
-   * @see TenorMultiplicibus.TenorPrōnōminibusConiūnctīvīs
-   * @see Nūntius.NūntiusLēctōrīPrōnōminibusConiūnctīvīs
-   * @see InventorPrōnōminibusConiūnctīvīs
-   */
-  @Singleton @DependsOn({ "TenorPrōnōmibusConiūnctīvīs", "NūntiusLēctōrīPrōnōminibusConiūnctīvīs" })
-  public static final class LēctorPrōnōminibusConiūnctīvīs extends LēctorMultiplicibus <PrōnōmenConiūnctīvum> {
-    private static @Nullable LēctorPrōnōminibusConiūnctīvīs īnstantia = null;
-
-    /**
-     * Valor hic viam reī classis huiuc facit.
-     * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
-     */
-    public static final @NotNull Supplier <LēctorPrōnōminibusConiūnctīvīs> fac =
-      () -> ObjectUtils.firstNonNull(īnstantia, īnstantia = new LēctorPrōnōminibusConiūnctīvīs());
-
-    private LēctorPrōnōminibusConiūnctīvīs( ) {
-      super(Catēgoria.PRŌNŌMEN_CONIŪNCTĪVUM, Nūntius.NūntiusLēctōrīPrōnōminibusConiūnctīvīs.fac,
-            TenorMultiplicibus.TenorPrōnōminibusConiūnctīvīs.fac, InventorPrōnōminibusConiūnctīvīs.fac);
-      nūntius.plūrimumGarriō("Factus sum");
-    }
-  }
-
-
   /**
    * Classis {@link LēctorĀctīs} est vās classis {@link Lēctor} classī {@link Āctum}.
    * @see Catēgoria#ĀCTUM

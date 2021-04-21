@@ -1,97 +1,97 @@
-<prōnōmenConiūnctīvus fundāmen="quisquam">
+<prōnōmen fundāmen="quis">
   <fōrma speciālitās="commūne" genus="masculīnum" numerālis="singulāris" cāsus="nōminātīvus">
-    quisquam
+    quis
   </fōrma>
   <fōrma speciālitās="commūne" genus="masculīnum" numerālis="singulāris" cāsus="genitīvus">
-    cuiusquam
+    cuius
   </fōrma>
   <fōrma speciālitās="commūne" genus="masculīnum" numerālis="singulāris" cāsus="datīvus">
-    cuīquam
+    cuī
   </fōrma>
   <fōrma speciālitās="commūne" genus="masculīnum" numerālis="singulāris" cāsus="accūsātīvus">
-    quemquam
+    quem
   </fōrma>
   <fōrma speciālitās="commūne" genus="masculīnum" numerālis="singulāris" cāsus="ablātīvus">
-    quōquam
+    quō
   </fōrma>
 
   <fōrma speciālitās="commūne" genus="masculīnum" numerālis="plūrālis" cāsus="nōminātīvus">
-    quīquam
+    quī
   </fōrma>
   <fōrma speciālitās="commūne" genus="masculīnum" numerālis="plūrālis" cāsus="genitīvus">
-    quōrumquam
+    quōrum
   </fōrma>
   <fōrma speciālitās="commūne" genus="masculīnum" numerālis="plūrālis" cāsus="datīvus">
-    quibusquam
+    quibus
   </fōrma>
   <fōrma speciālitās="commūne" genus="masculīnum" numerālis="plūrālis" cāsus="accūsātīvus">
-    quōsquam
+    quōs
   </fōrma>
   <fōrma speciālitās="commūne" genus="masculīnum" numerālis="plūrālis" cāsus="ablātīvus">
-    quibusquam
+    quibus
   </fōrma>
 
   <fōrma speciālitās="commūne" genus="fēminīnum" numerālis="singulāris" cāsus="nōminātīvus">
-    quaequam
+    quae
   </fōrma>
   <fōrma speciālitās="commūne" genus="fēminīnum" numerālis="singulāris" cāsus="genitīvus">
-    cuiusquam
+    cuius
   </fōrma>
   <fōrma speciālitās="commūne" genus="fēminīnum" numerālis="singulāris" cāsus="datīvus">
-    cuīquam
+    cuī
   </fōrma>
   <fōrma speciālitās="commūne" genus="fēminīnum" numerālis="singulāris" cāsus="accūsātīvus">
-    quamquam
+    quam
   </fōrma>
   <fōrma speciālitās="commūne" genus="fēminīnum" numerālis="singulāris" cāsus="ablātīvus">
-    quāquam
+    quā
   </fōrma>
 
   <fōrma speciālitās="commūne" genus="fēminīnum" numerālis="plūrālis" cāsus="nōminātīvus">
-    quaequam
+    quae
   </fōrma>
   <fōrma speciālitās="commūne" genus="fēminīnum" numerālis="plūrālis" cāsus="genitīvus">
-    quārumquam
+    quārum
   </fōrma>
   <fōrma speciālitās="commūne" genus="fēminīnum" numerālis="plūrālis" cāsus="datīvus">
-    quibusquam
+    quibus
   </fōrma>
   <fōrma speciālitās="commūne" genus="fēminīnum" numerālis="plūrālis" cāsus="accūsātīvus">
-    quāsquam
+    quās
   </fōrma>
   <fōrma speciālitās="commūne" genus="fēminīnum" numerālis="plūrālis" cāsus="ablātīvus">
-    quibusquam
+    quibus
   </fōrma>
 
   <fōrma speciālitās="commūne" genus="neutrum" numerālis="singulāris" cāsus="nōminātīvus">
-    quidquam
+    quid
   </fōrma>
   <fōrma speciālitās="commūne" genus="neutrum" numerālis="singulāris" cāsus="genitīvus">
-    cuiusquam
+    cuius
   </fōrma>
   <fōrma speciālitās="commūne" genus="neutrum" numerālis="singulāris" cāsus="datīvus">
-    cuīquam
+    cuī
   </fōrma>
   <fōrma speciālitās="commūne" genus="neutrum" numerālis="singulāris" cāsus="accūsātīvus">
-    quidquam
+    quid
   </fōrma>
   <fōrma speciālitās="commūne" genus="neutrum" numerālis="singulāris" cāsus="ablātīvus">
-    quōquam
+    quō
   </fōrma>
 
   <fōrma speciālitās="commūne" genus="neutrum" numerālis="plūrālis" cāsus="nōminātīvus">
-    quaequam
+    quae
   </fōrma>
   <fōrma speciālitās="commūne" genus="neutrum" numerālis="plūrālis" cāsus="genitīvus">
-    quōrumquam
+    quōrum
   </fōrma>
   <fōrma speciālitās="commūne" genus="neutrum" numerālis="plūrālis" cāsus="datīvus">
-    quibusquam
+    quibus
   </fōrma>
   <fōrma speciālitās="commūne" genus="neutrum" numerālis="plūrālis" cāsus="accūsātīvus">
-    quaequam
+    quae
   </fōrma>
   <fōrma speciālitās="commūne" genus="neutrum" numerālis="plūrālis" cāsus="ablātīvus">
-    quibusquam
+    quibus
   </fōrma>
-</prōnōmenConiūnctīvus>
+</prōnōmen>

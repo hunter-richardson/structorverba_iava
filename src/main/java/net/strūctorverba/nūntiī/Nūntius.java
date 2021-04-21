@@ -374,25 +374,6 @@ public abstract class Nūntius {
   }
 
   /**
-   * Classis {@link NūntiusConditōrīPrōnōmibusConiūnctīvīs} est vās classis {@link Nūntius} classī {@link ConditōrPrōnōminibusConiūnctīvīs}
-   * @see ConditōrPrōnōminibusConiūnctīvīs
-   */
-  @Singleton public static final class NūntiusConditōrīPrōnōmibusConiūnctīvīs extends Nūntius {
-    @Nullable private static NūntiusConditōrīPrōnōmibusConiūnctīvīs īnstantia = null;
-
-    /**
-     * Valor hic viam reī classis huiuc facit.
-     * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
-     */
-    @NotNull public static final Supplier <NūntiusConditōrīPrōnōmibusConiūnctīvīs> fac =
-      () -> ObjectUtils.firstNonNull(īnstantia, īnstantia = new NūntiusConditōrīPrōnōmibusConiūnctīvīs());
-
-    private NūntiusConditōrīPrōnōmibusConiūnctīvīs( ) {
-      super(ParametrīNūntiī.parā(ConditōrPrōnōminibusConiūnctīvīs.class));
-    }
-  }
-
-  /**
    * Classis {@link NūntiusConditōrīĀctīs} est vās classis {@link Nūntius} classī {@link ConditōrĀctīs}
    * @see ConditōrĀctīs
    */
@@ -465,25 +446,6 @@ public abstract class Nūntius {
 
     private NūntiusInventōrīPrōnōminibus( ) {
       super(ParametrīNūntiī.parā(InventorPrōnōminibus.class));
-    }
-  }
-
-  /**
-   * Classis {@link NūntiusInventōrīPrōnōmibusConiūnctīvīs} est vās classis {@link Nūntius} classī {@link InventorPrōnōminibusConiūnctīvīs}
-   * @see InventorPrōnōminibusConiūnctīvīs
-   */
-  @Singleton public static final class NūntiusInventōrīPrōnōmibusConiūnctīvīs extends Nūntius {
-    @Nullable private static NūntiusInventōrīPrōnōmibusConiūnctīvīs īnstantia = null;
-
-    /**
-     * Valor hic viam reī classis huiuc facit.
-     * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
-     */
-    @NotNull public static final Supplier <NūntiusInventōrīPrōnōmibusConiūnctīvīs> fac =
-      () -> ObjectUtils.firstNonNull(īnstantia, īnstantia = new NūntiusInventōrīPrōnōmibusConiūnctīvīs());
-
-    private NūntiusInventōrīPrōnōmibusConiūnctīvīs( ) {
-      super(ParametrīNūntiī.parā(InventorPrōnōminibusConiūnctīvīs.class));
     }
   }
 
@@ -598,25 +560,6 @@ public abstract class Nūntius {
 
     private NūntiusLēctōrīPrōnōminibus( ) {
       super(ParametrīNūntiī.parā(LēctorMultiplicibus.LēctorPrōnōminibus.class));
-    }
-  }
-
-  /**
-   * Classis {@link NūntiusLēctōrīPrōnōminibusConiūnctīvīs} est vās classis {@link Nūntius} classī {@link LēctorMultiplicibus.LēctorPrōnōminibusConiūnctīvīs}
-   * @see LēctorMultiplicibus.LēctorPrōnōminibusConiūnctīvīs
-   */
-  @Singleton public static final class NūntiusLēctōrīPrōnōminibusConiūnctīvīs extends Nūntius {
-    @Nullable private static NūntiusLēctōrīPrōnōminibusConiūnctīvīs īnstantia = null;
-
-    /**
-     * Valor hic viam reī classis huiuc facit.
-     * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
-     */
-    @NotNull public static final Supplier <NūntiusLēctōrīPrōnōminibusConiūnctīvīs> fac =
-      () -> ObjectUtils.firstNonNull(īnstantia, īnstantia = new NūntiusLēctōrīPrōnōminibusConiūnctīvīs());
-
-    private NūntiusLēctōrīPrōnōminibusConiūnctīvīs( ) {
-      super(ParametrīNūntiī.parā(LēctorMultiplicibus.LēctorPrōnōminibusConiūnctīvīs.class));
     }
   }
 
@@ -788,25 +731,6 @@ public abstract class Nūntius {
 
     private NūntiusPrōnōminum() {
       super(ParametrīNūntiī.parā(Prōnōmen.Conditōr.class));
-    }
-  }
-
-  /**
-   * Classis {@link NūntiusPrōnōminumConiūnctīvōrum} est vās classis {@link Nūntius} classī {@link PrōnōmenConiūnctīvum}}
-   * @see PrōnōmenConiūnctīvum
-   */
-  @Singleton public static final class NūntiusPrōnōminumConiūnctīvōrum extends Nūntius {
-    @Nullable private static NūntiusPrōnōminumConiūnctīvōrum īnstantia = null;
-
-    /**
-     * Valor hic viam reī classis huiuc facit.
-     * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
-     */
-    @NotNull public static final Supplier <NūntiusPrōnōminumConiūnctīvōrum> fac =
-      () -> ObjectUtils.firstNonNull(īnstantia, īnstantia = new NūntiusPrōnōminumConiūnctīvōrum());
-
-    private NūntiusPrōnōminumConiūnctīvōrum() {
-      super(ParametrīNūntiī.parā(PrōnōmenConiūnctīvum.Conditōr.class));
     }
   }
 

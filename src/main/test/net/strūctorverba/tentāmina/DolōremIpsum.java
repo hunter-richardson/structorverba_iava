@@ -3,11 +3,10 @@ package net.strūctorverba.tentāmina;
 import lombok.Getter;
 import lombok.experimental.Accessors;
 import net.strūctorverba.mīscella.*;
-import net.strūctorverba.verba.*;
 import net.strūctorverba.verba.disposita.Verba;
 import net.strūctorverba.ēnumerātiōnēs.*;
 import org.apache.commons.collections4.CollectionUtils;
-import org.apache.commons.lang3.*;
+import org.apache.commons.lang3.StringUtils;
 import org.jetbrains.annotations.NotNull;
 import org.junit.jupiter.api.*;
 
@@ -27,7 +26,8 @@ public final class DolōremIpsum extends Omnum {
   @NotNull private final String prōductaPrīma   = "Neque porrō quisquam est";
   @NotNull private final String prōductaSecunda = "Quī dolōrem ipsum quia dolor sit amet";
   @NotNull private final String prōductaTertia  = "Cōnsectētur adipīscī velit";
-  @NotNull private final String prōductaQuārta  = "Sed quia nōnnumquam eius modī tempora incidunt ut labōre et dolōre magnam aliquam quaerat voluptātem";
+  @NotNull private final String prōductaQuārta  = "Sed quia nōnnumquam eius modī tempora incidunt";
+  @NotNull private final String prōductaQuīnta  = "Ut labōre et dolōre magnam aliquam quaerat voluptātem";
   @NotNull private final String prōductaCūncta  = "Neque porrō quisquam est quī dolōrem ipsum quia dolor sit amet cōnsectētur adipīscī velit sed quia nōnnumquam eius modī tempora incidunt ut labōre et dolōre magnam aliquam quaerat voluptātem";
 
   /**
@@ -36,13 +36,13 @@ public final class DolōremIpsum extends Omnum {
    */
   @Test @Order(1)
   public void prīma( ) {
-    final Verba verba = strūctor().strue(strūctor().adverbiumLege().adveniam("neque"),
-                                         strūctor().adverbiumLege().adveniam("porrō"),
-                                         strūctor().prōnōmenConiūnctīvumLege()
-                                                   .adveniam("quisquam",
+    final Verba verba = strūctor().strue(strūctor().adveniam("neque", Catēgoria.CONIŪNCTĪVUM),
+                                         strūctor().adveniam("porrō", Catēgoria.ADVERBIUM),
+                                         strūctor().adveniam("quisquam", Catēgoria.PRŌNŌMEN,
                                                              Speciālitās.COMMŪNE, Genus.MASCULĪNUM, Cāsus.NŌMINĀTĪVUS, Numerālis.SINGULĀRIS),
-                                         strūctor().āctumLege()
-                                                   .adveniam(Modus.INDICĀTĪVUS, Vōx.ĀCTĪVA, Tempus.PRAESĒNS, Numerālis.SINGULĀRIS, Persōna.TERTIA));
+                                         strūctor().adveniam("esse", Catēgoria.ĀCTUM,
+                                                             Modus.INDICĀTĪVUS, Vōx.ĀCTĪVA, Tempus.PRAESĒNS,
+                                                             Numerālis.SINGULĀRIS, Persōna.TERTIA));
     Assertions.assertNotNull(verba, "Verba prōducta prīma vacant.");
     Assertions.assertTrue(CollectionUtils.isNotEmpty(verba.seriēs),
                           "Verba prōducta prīma vacant.");
@@ -66,28 +66,23 @@ public final class DolōremIpsum extends Omnum {
    */
   @Test @Order(2)
   public void secunda( ) {
-    final Verba verba = strūctor().strue(strūctor().prōnōmenConiūnctīvumLege()
-                                                   .adveniam("quis",
+    final Verba verba = strūctor().strue(strūctor().adveniam("quis", Catēgoria.PRŌNŌMEN,
                                                              Speciālitās.COMMŪNE, Genus.MASCULĪNUM,
                                                              Cāsus.NŌMINĀTĪVUS, Numerālis.PLŪRĀLIS),
-                                         strūctor().nōmenLege()
-                                                   .adveniam("dolor",
+                                         strūctor().adveniam("dolor", Catēgoria.NŌMEN,
                                                              Speciālitās.COMMŪNE, Genus.MASCULĪNUM,
                                                              Cāsus.ACCŪSĀTĪVUS, Numerālis.SINGULĀRIS),
-                                         strūctor().prōnōmenConiūnctīvumLege()
-                                                   .adveniam("ipsum",
+                                         strūctor().adveniam("ipsum", Catēgoria.PRŌNŌMEN,
                                                              Speciālitās.COMMŪNE, Genus.MASCULĪNUM,
                                                              Cāsus.NŌMINĀTĪVUS, Numerālis.SINGULĀRIS),
-                                         strūctor().adverbiumLege().adveniam("quia"),
-                                         strūctor().nōmenLege()
-                                                   .adveniam("dolor",
+                                         strūctor().adveniam("quia", Catēgoria.ADVERBIUM),
+                                         strūctor().adveniam("dolor", Catēgoria.NŌMEN,
                                                              Speciālitās.COMMŪNE, Genus.MASCULĪNUM,
                                                              Cāsus.NŌMINĀTĪVUS, Numerālis.SINGULĀRIS),
-                                         strūctor().āctumLege()
-                                                   .adveniam(Modus.SUBIŪNCTĪVUS, Vōx.ĀCTĪVA, Tempus.PRAESĒNS,
+                                         strūctor().adveniam("esse", Catēgoria.ĀCTUM,
+                                                             Modus.SUBIŪNCTĪVUS, Vōx.ĀCTĪVA, Tempus.PRAESĒNS,
                                                              Numerālis.SINGULĀRIS, Persōna.TERTIA),
-                                         strūctor().āctumLege()
-                                                   .adveniam("amāre",
+                                         strūctor().adveniam("amāre", Catēgoria.ĀCTUM,
                                                              Modus.SUBIŪNCTĪVUS, Vōx.ĀCTĪVA, Tempus.PRAESĒNS,
                                                              Numerālis.SINGULĀRIS, Persōna.TERTIA));
     Assertions.assertNotNull(verba, "Verba prōducta secunda vacant.");
@@ -113,15 +108,12 @@ public final class DolōremIpsum extends Omnum {
    */
   @Test @Order(3)
   public void tertia( ) {
-    final Verba verba = strūctor().strue(strūctor().āctumLege()
-                                                   .adveniam("cōnsectārī",
+    final Verba verba = strūctor().strue(strūctor().adveniam("cōnsectārī", Catēgoria.ĀCTUM,
                                                              Modus.SUBIŪNCTĪVUS, Vōx.ĀCTĪVA, Tempus.PRAESĒNS,
                                                              Numerālis.SINGULĀRIS, Persōna.TERTIA),
-                                         strūctor().āctumLege()
-                                                   .adveniam("adipīscī",
+                                         strūctor().adveniam("adipīscī", Catēgoria.ĀCTUM,
                                                              Modus.ĪNFĪNĪTĪVUS, Vōx.ĀCTĪVA, Tempus.PRAESĒNS),
-                                         strūctor().āctumLege()
-                                                   .adveniam("velle",
+                                         strūctor().adveniam("velle", Catēgoria.ĀCTUM,
                                                              Modus.SUBIŪNCTĪVUS, Vōx.ĀCTĪVA, Tempus.PRAESĒNS,
                                                              Numerālis.SINGULĀRIS, Persōna.TERTIA));
 
@@ -144,225 +136,180 @@ public final class DolōremIpsum extends Omnum {
 
   /**
    * Modus hic partem quārtam tentat. <br>
-   * Verba "Sed quia nōnnumquam eius modī tempora incidunt ut labōre et dolōre magnam aliquam quaerat voluptātem" prōdūcat. <br>
-   * Prīncipāliter tentat quod modī et {@link Coniugiāle#coniugō(Verbum, Verbum)} rēctē operat sī tentāmina tria prīma prosperantur.
+   * Verba "Sed quia nōnnumquam eius modī tempora incidunt" prōdūcat. <br>
    */
   @Test @Order(4)
   public void quārta( ) {
-    final Verba verbaPrīma = strūctor().strue(strūctor().coniūnctīvumLege().adveniam("sed"),
-                                              strūctor().adverbiumLege().adveniam("quia"),
-                                              strūctor().adverbiumLege().adveniam("nōnnumquam"),
-                                              strūctor().prōnōmenLege()
-                                                        .adveniam("is",
-                                                                  Speciālitās.COMMŪNE, Genus.MASCULĪNUM,
-                                                                  Cāsus.GENITĪVUS, Numerālis.SINGULĀRIS),
-                                              strūctor().nōmenLege()
-                                                        .adveniam("modus",
-                                                                  Speciālitās.COMMŪNE, Genus.MASCULĪNUM,
-                                                                  Cāsus.GENITĪVUS, Numerālis.SINGULĀRIS),
-                                              strūctor().nōmenLege()
-                                                        .adveniam("tempus",
-                                                                  Speciālitās.COMMŪNE, Genus.MASCULĪNUM,
-                                                                  Cāsus.ABLĀTĪVUS, Numerālis.SINGULĀRIS),
-                                              strūctor().āctumLege()
-                                                        .adveniam("incidere",
-                                                                  Modus.INDICĀTĪVUS, Vōx.ĀCTĪVA, Tempus.PRAESĒNS,
-                                                                  Numerālis.PLŪRĀLIS, Persōna.TERTIA));
+    final Verba verba = strūctor().strue(strūctor().adveniam("sed", Catēgoria.CONIŪNCTĪVUM),
+                                         strūctor().adveniam("quia", Catēgoria.ADVERBIUM),
+                                         strūctor().adveniam("nōnnumquam", Catēgoria.ADVERBIUM),
+                                         strūctor().adveniam("is", Catēgoria.PRŌNŌMEN,
+                                                             Speciālitās.COMMŪNE, Genus.MASCULĪNUM,
+                                                             Cāsus.GENITĪVUS, Numerālis.SINGULĀRIS),
+                                         strūctor().adveniam("modus", Catēgoria.NŌMEN,
+                                                             Speciālitās.COMMŪNE, Genus.MASCULĪNUM,
+                                                             Cāsus.GENITĪVUS, Numerālis.SINGULĀRIS),
+                                         strūctor().adveniam("tempus", Catēgoria.NŌMEN,
+                                                             Speciālitās.COMMŪNE, Genus.MASCULĪNUM,
+                                                             Cāsus.ABLĀTĪVUS, Numerālis.SINGULĀRIS),
+                                         strūctor().adveniam("incidere", Catēgoria.ĀCTUM,
+                                                             Modus.INDICĀTĪVUS, Vōx.ĀCTĪVA, Tempus.PRAESĒNS,
+                                                             Numerālis.PLŪRĀLIS, Persōna.TERTIA));
 
-    Assertions.assertNotNull(verbaPrīma, "Verba prōducta quārta vacant.");
-    Assertions.assertTrue(CollectionUtils.isNotEmpty(verbaPrīma.seriēs),
+    Assertions.assertNotNull(verba, "Verba prōducta quārta vacant.");
+    Assertions.assertTrue(CollectionUtils.isNotEmpty(verba.seriēs),
                           "Verba prōducta quārta vacant.");
-    for (int index = 0; index < verbaPrīma.seriēs.size(); index++) {
-      final String[] parsQuārta = prōductaQuārta.split("ut")[0].split(String.valueOf(' '));
-      Assertions.assertNotNull(verbaPrīma.seriēs.get(index),
+    for (int index = 0; index < verba.seriēs.size(); index++) {
+      Assertions.assertNotNull(verba.seriēs.get(index),
                                String.format("Prōductā quārtā est relicta prōductiō verbī %s.",
-                                             Ūtilitās.minusculāsScrībō(parsQuārta[index])));
-      Assertions.assertTrue(StringUtils.isNotBlank(verbaPrīma.seriēs.get(index).toString()),
-                            String.format("Vacat prōductum verbum %s.", Ūtilitās.minusculāsScrībō(parsQuārta[index])));
+                                             Ūtilitās.minusculāsScrībō(prōductaQuārta.split(String.valueOf(' '))[index])));
+      Assertions.assertTrue(StringUtils.isNotBlank(verba.seriēs.get(index).toString()),
+                            String.format("Vacat prōductum verbum %s.",
+                                          Ūtilitās.minusculāsScrībō(prōductaQuārta.split(String.valueOf(' '))[index])));
     }
 
-    VerbumSimplex.Coniūnctīvum coniūnctīvum = strūctor().coniūnctīvumLege().adveniam("et");
-    Assertions.assertNotNull(coniūnctīvum, "Prōductā quārta est relicta prōductiō verbī et.");
-    Assertions.assertTrue(StringUtils.isNotBlank(coniūnctīvum.toString()), "Vacat prōductum verbum et.");
+    Assertions.assertEquals(prōductaQuārta, verba.toString(),
+                            "Verba prōducta quārta expectātiōne eius differt.");
+    System.out.printf("Prōducta quārta: %s%n", verba);
+  }
 
-    final Verba verbaSecunda = coniūnctīvum.coniugō(strūctor().nōmenLege()
-                                                              .adveniam("labor",
-                                                                        Speciālitās.COMMŪNE, Genus.MASCULĪNUM,
-                                                                        Cāsus.ABLĀTĪVUS, Numerālis.SINGULĀRIS),
-                                                    strūctor().nōmenLege()
-                                                              .adveniam("dolor",
-                                                                        Speciālitās.COMMŪNE, Genus.MASCULĪNUM,
-                                                                        Cāsus.ABLĀTĪVUS, Numerālis.SINGULĀRIS));
-    Assertions.assertNotNull(verbaSecunda, "Verba prōducta quārta vacant.");
-    Assertions.assertTrue(CollectionUtils.isNotEmpty(verbaSecunda.seriēs),
-                          "Verba prōducta quārta vacant.");
-    verbaSecunda.addō(strūctor().adiectīvumLege()
-                                 .adveniam("magnus",
-                                           Speciālitās.COMMŪNE, Genus.FĒMINĪNUM,
-                                           Cāsus.ACCŪSĀTĪVUS, Numerālis.SINGULĀRIS),
-                       strūctor().prōnōmenConiūnctīvumLege()
-                                 .adveniam("aliquis",
-                                           Speciālitās.COMMŪNE, Genus.FĒMINĪNUM,
-                                           Cāsus.ACCŪSĀTĪVUS, Numerālis.SINGULĀRIS),
-                       strūctor().āctumLege()
-                                 .adveniam("quaerere",
-                                           Modus.SUBIŪNCTĪVUS, Vōx.ĀCTĪVA, Tempus.PRAESĒNS,
-                                           Numerālis.SINGULĀRIS, Persōna.TERTIA),
-                       strūctor().adiectīvumLege()
-                                 .adveniam("voluptās",
-                                           Speciālitās.COMMŪNE, Genus.FĒMINĪNUM,
-                                           Cāsus.ACCŪSĀTĪVUS, Numerālis.SINGULĀRIS));
+  /**
+   * Modus hic partem quārtam tentat. <br>
+   * Verba "Ut labōre et dolōre magnam aliquam quaerat voluptātem" prōdūcat. <br>
+   */
+  @Test @Order(5)
+  public void quīnta( ) {
+    final Verba verba = strūctor().strue(strūctor().adveniam("ut", Catēgoria.CONIŪNCTĪVUM),
+                                         strūctor().adveniam("labor", Catēgoria.NŌMEN,
+                                                             Speciālitās.COMMŪNE, Genus.MASCULĪNUM,
+                                                             Cāsus.ABLĀTĪVUS, Numerālis.SINGULĀRIS),
+                                         strūctor().adveniam("et", Catēgoria.CONIŪNCTĪVUM),
+                                         strūctor().adveniam("dolor", Catēgoria.NŌMEN,
+                                                             Speciālitās.COMMŪNE, Genus.MASCULĪNUM,
+                                                             Cāsus.ABLĀTĪVUS, Numerālis.SINGULĀRIS),
+                                         strūctor().adveniam("magnus", Catēgoria.ADIECTĪVUM,
+                                                             Speciālitās.COMMŪNE, Genus.FĒMINĪNUM,
+                                                             Cāsus.ACCŪSĀTĪVUS, Numerālis.SINGULĀRIS),
+                                         strūctor().adveniam("aliquis", Catēgoria.PRŌNŌMEN,
+                                                             Speciālitās.COMMŪNE, Genus.FĒMINĪNUM,
+                                                             Cāsus.ACCŪSĀTĪVUS, Numerālis.SINGULĀRIS),
+                                         strūctor().adveniam("quaerere", Catēgoria.ĀCTUM,
+                                                             Modus.SUBIŪNCTĪVUS, Vōx.ĀCTĪVA, Tempus.PRAESĒNS,
+                                                             Numerālis.SINGULĀRIS, Persōna.TERTIA),
+                                         strūctor().adveniam("voluptās", Catēgoria.NŌMEN,
+                                                             Speciālitās.COMMŪNE, Genus.FĒMINĪNUM,
+                                                             Cāsus.ACCŪSĀTĪVUS, Numerālis.SINGULĀRIS));
 
-    for (int index = 0; index < verbaSecunda.seriēs.size(); index++) {
-      final String[] parsQuārta = prōductaQuārta.split("ut")[1].split(String.valueOf(' '));
-      Assertions.assertNotNull(verbaSecunda.seriēs.get(index),
-                               String.format("Prōductā quārtā est relicta prōductiō verbī %s.",
-                                             Ūtilitās.minusculāsScrībō(parsQuārta[index])));
-      Assertions.assertTrue(StringUtils.isNotBlank(verbaSecunda.seriēs.get(index).toString()),
-                            String.format("Vacat prōductum verbum %s.", Ūtilitās.minusculāsScrībō(parsQuārta[index])));
+    Assertions.assertNotNull(verba, "Verba prōducta quīnta vacant.");
+    Assertions.assertTrue(CollectionUtils.isNotEmpty(verba.seriēs),
+                          "Verba prōducta quīnta vacant.");
+    for (int index = 0; index < verba.seriēs.size(); index++) {
+      final String[] parsQuārta = prōductaQuīnta.split("ut")[1].split(String.valueOf(' '));
+      Assertions.assertNotNull(verba.seriēs.get(index),
+                               String.format("Prōductā quīntā est relicta prōductiō verbī %s.",
+                                             Ūtilitās.minusculāsScrībō(prōductaQuīnta.split(String.valueOf(' '))[index])));
+      Assertions.assertTrue(StringUtils.isNotBlank(verba.seriēs.get(index).toString()),
+                            String.format("Vacat prōductum verbum %s.",
+                                          Ūtilitās.minusculāsScrībō(prōductaQuīnta.split(String.valueOf(' '))[index])));
     }
 
-    VerbumSimplex.Coniūnctīvum coniūnctīvumSecundum = strūctor().coniūnctīvumLege().adveniam("ut");
-    Assertions.assertNotNull(coniūnctīvumSecundum, "Prōductā quārtā est relicta prōductiō verbī ut.");
-    Assertions.assertTrue(StringUtils.isNotBlank(coniūnctīvumSecundum.toString()),
-                          "Vacat prōductum verbum ut.");
-
-    String haec = coniūnctīvumSecundum.coniugō(verbaPrīma, verbaSecunda).toString();
-    Assertions.assertEquals(prōductaQuārta, haec, "Verba prōducta quārta expectātiōne eius differt.");
-
-    System.out.printf("Prōducta quārta: %s%n", haec);
+    Assertions.assertEquals(prōductaQuīnta, verba.toString(),
+                            "Verba prōducta quīnta expectātiōne eius differt.");
+    System.out.printf("Prōducta quīnta: %s%n", verba);
   }
 
   /**
    * Modus hic tentāmina omnēs praevia coniugat. <br>
    * Verba "Neque porrō quisquam est quī dolōrem ipsum quia dolor sit amet cōnsectētur adipīscī velit sed quia nōnnumquam eius modī tempora incidunt ut labōre et dolōre magnam aliquam quaerat voluptātem" prōdūcat. <br>
-   * Aboriētur sī tentāminum aliquid praevium aborītur atque prosperābitur sī omnēs prosperantur.
+   * Aboriētur sī tentāminum aliquid praevium aboriuntur atque prosperābitur sī omnēs prosperantur.
    */
-  @Test @Order(5)
+  @Test @Order(6)
   public void cūncta() {
-    final Verba verbaPrīma = strūctor().strue(strūctor().coniūnctīvumLege().adveniam("neque"),
-                                              strūctor().adverbiumLege().adveniam("porrō"),
-                                              strūctor().prōnōmenConiūnctīvumLege()
-                                                        .adveniam("quisquam",
-                                                                  Speciālitās.COMMŪNE, Genus.MASCULĪNUM,
-                                                                  Cāsus.NŌMINĀTĪVUS, Numerālis.SINGULĀRIS),
-                                              strūctor().āctumLege()
-                                                        .adveniam(Modus.INDICĀTĪVUS, Vōx.ĀCTĪVA, Tempus.PRAESĒNS,
-                                                                  Numerālis.SINGULĀRIS, Persōna.TERTIA),
-                                              strūctor().prōnōmenConiūnctīvumLege()
-                                                        .adveniam("quis",
-                                                                  Speciālitās.COMMŪNE, Genus.MASCULĪNUM,
-                                                                  Cāsus.NŌMINĀTĪVUS, Numerālis.PLŪRĀLIS),
-                                              strūctor().nōmenLege()
-                                                        .adveniam("dolor",
-                                                                  Speciālitās.COMMŪNE, Genus.MASCULĪNUM,
-                                                                  Cāsus.ACCŪSĀTĪVUS, Numerālis.SINGULĀRIS),
-                                              strūctor().prōnōmenConiūnctīvumLege()
-                                                        .adveniam("ipsum",
-                                                                  Speciālitās.COMMŪNE, Genus.MASCULĪNUM,
-                                                                  Cāsus.NŌMINĀTĪVUS, Numerālis.SINGULĀRIS),
-                                              strūctor().adverbiumLege().adveniam("quia"),
-                                              strūctor().nōmenLege()
-                                                        .adveniam("dolor",
-                                                                  Speciālitās.COMMŪNE, Genus.MASCULĪNUM,
-                                                                  Cāsus.NŌMINĀTĪVUS, Numerālis.SINGULĀRIS),
-                                              strūctor().āctumLege()
-                                                        .adveniam(Modus.SUBIŪNCTĪVUS, Vōx.ĀCTĪVA, Tempus.PRAESĒNS,
-                                                                  Numerālis.SINGULĀRIS, Persōna.TERTIA),
-                                              strūctor().āctumLege()
-                                                        .adveniam("amāre",
-                                                                  Modus.SUBIŪNCTĪVUS, Vōx.ĀCTĪVA, Tempus.PRAESĒNS,
-                                                                  Numerālis.SINGULĀRIS, Persōna.TERTIA),
-                                              strūctor().āctumLege()
-                                                        .adveniam("cōnsectārī",
-                                                                  Modus.SUBIŪNCTĪVUS, Vōx.ĀCTĪVA, Tempus.PRAESĒNS,
-                                                                  Numerālis.SINGULĀRIS, Persōna.TERTIA),
-                                              strūctor().āctumLege()
-                                                        .adveniam("adipīscī",
-                                                                  Modus.ĪNFĪNĪTĪVUS, Vōx.ĀCTĪVA, Tempus.PRAESĒNS,
-                                                                  Numerālis.SINGULĀRIS, Persōna.TERTIA),
-                                              strūctor().āctumLege()
-                                                        .adveniam("velle",
-                                                                  Modus.SUBIŪNCTĪVUS, Vōx.ĀCTĪVA, Tempus.PRAESĒNS,
-                                                                  Numerālis.SINGULĀRIS, Persōna.TERTIA),
-                                              strūctor().coniūnctīvumLege().adveniam("sed"),
-                                              strūctor().adverbiumLege().adveniam("quia"),
-                                              strūctor().adverbiumLege().adveniam("nōnnumquam"),
-                                              strūctor().prōnōmenLege()
-                                                        .adveniam("is",
-                                                                  Speciālitās.COMMŪNE, Genus.MASCULĪNUM,
-                                                                  Cāsus.GENITĪVUS, Numerālis.SINGULĀRIS),
-                                              strūctor().nōmenLege()
-                                                        .adveniam("modus",
-                                                                  Speciālitās.COMMŪNE, Genus.MASCULĪNUM,
-                                                                  Cāsus.GENITĪVUS, Numerālis.SINGULĀRIS),
-                                              strūctor().nōmenLege()
-                                                        .adveniam("tempus",
-                                                                  Speciālitās.COMMŪNE, Genus.MASCULĪNUM,
-                                                                  Cāsus.ABLĀTĪVUS, Numerālis.SINGULĀRIS),
-                                              strūctor().āctumLege()
-                                                        .adveniam("incidere",
-                                                                  Modus.INDICĀTĪVUS, Vōx.ĀCTĪVA, Tempus.PRAESĒNS,
-                                                                  Numerālis.PLŪRĀLIS, Persōna.TERTIA));
+    final Verba verba = strūctor().strue(strūctor().adveniam("neque", Catēgoria.CONIŪNCTĪVUM),
+                                         strūctor().adveniam("porrō", Catēgoria.ADVERBIUM),
+                                         strūctor().adveniam("quisquam", Catēgoria.PRŌNŌMEN,
+                                                             Speciālitās.COMMŪNE, Genus.MASCULĪNUM,
+                                                             Cāsus.NŌMINĀTĪVUS, Numerālis.SINGULĀRIS),
+                                         strūctor().adveniam("esse", Catēgoria.ĀCTUM,
+                                                             Modus.INDICĀTĪVUS, Vōx.ĀCTĪVA, Tempus.PRAESĒNS,
+                                                             Numerālis.SINGULĀRIS, Persōna.TERTIA),
+                                         strūctor().adveniam("quis", Catēgoria.PRŌNŌMEN,
+                                                             Speciālitās.COMMŪNE, Genus.MASCULĪNUM,
+                                                             Cāsus.NŌMINĀTĪVUS, Numerālis.PLŪRĀLIS),
+                                         strūctor().adveniam("dolor", Catēgoria.NŌMEN,
+                                                             Speciālitās.COMMŪNE, Genus.MASCULĪNUM,
+                                                             Cāsus.ACCŪSĀTĪVUS, Numerālis.SINGULĀRIS),
+                                         strūctor().adveniam("ipsum", Catēgoria.PRŌNŌMEN,
+                                                             Speciālitās.COMMŪNE, Genus.MASCULĪNUM,
+                                                             Cāsus.NŌMINĀTĪVUS, Numerālis.SINGULĀRIS),
+                                         strūctor().adveniam("quia", Catēgoria.ADVERBIUM),
+                                         strūctor().adveniam("dolor", Catēgoria.NŌMEN,
+                                                             Speciālitās.COMMŪNE, Genus.MASCULĪNUM,
+                                                             Cāsus.NŌMINĀTĪVUS, Numerālis.SINGULĀRIS),
+                                         strūctor().adveniam("esse", Catēgoria.ĀCTUM,
+                                                             Modus.SUBIŪNCTĪVUS, Vōx.ĀCTĪVA, Tempus.PRAESĒNS,
+                                                             Numerālis.SINGULĀRIS, Persōna.TERTIA),
+                                         strūctor().adveniam("amāre", Catēgoria.ĀCTUM,
+                                                             Modus.SUBIŪNCTĪVUS, Vōx.ĀCTĪVA, Tempus.PRAESĒNS,
+                                                             Numerālis.SINGULĀRIS, Persōna.TERTIA),
+                                         strūctor().adveniam("cōnsectārī", Catēgoria.ĀCTUM,
+                                                             Modus.SUBIŪNCTĪVUS, Vōx.ĀCTĪVA, Tempus.PRAESĒNS,
+                                                             Numerālis.SINGULĀRIS, Persōna.TERTIA),
+                                         strūctor().adveniam("adipīscī", Catēgoria.ĀCTUM,
+                                                             Modus.ĪNFĪNĪTĪVUS, Vōx.ĀCTĪVA, Tempus.PRAESĒNS,
+                                                             Numerālis.SINGULĀRIS, Persōna.TERTIA),
+                                         strūctor().adveniam("velle", Catēgoria.ĀCTUM,
+                                                             Modus.SUBIŪNCTĪVUS, Vōx.ĀCTĪVA, Tempus.PRAESĒNS,
+                                                             Numerālis.SINGULĀRIS, Persōna.TERTIA),
+                                         strūctor().adveniam("sed", Catēgoria.CONIŪNCTĪVUM),
+                                         strūctor().adveniam("quia", Catēgoria.ADVERBIUM),
+                                         strūctor().adveniam("nōnnumquam", Catēgoria.ADVERBIUM),
+                                         strūctor().adveniam("is", Catēgoria.PRŌNŌMEN,
+                                                             Speciālitās.COMMŪNE, Genus.MASCULĪNUM,
+                                                             Cāsus.GENITĪVUS, Numerālis.SINGULĀRIS),
+                                         strūctor().adveniam("modus", Catēgoria.NŌMEN,
+                                                             Speciālitās.COMMŪNE, Genus.MASCULĪNUM,
+                                                             Cāsus.GENITĪVUS, Numerālis.SINGULĀRIS),
+                                         strūctor().adveniam("tempus", Catēgoria.NŌMEN,
+                                                             Speciālitās.COMMŪNE, Genus.MASCULĪNUM,
+                                                             Cāsus.ABLĀTĪVUS, Numerālis.SINGULĀRIS),
+                                         strūctor().adveniam("incidere", Catēgoria.ĀCTUM,
+                                                             Modus.INDICĀTĪVUS, Vōx.ĀCTĪVA, Tempus.PRAESĒNS,
+                                                             Numerālis.PLŪRĀLIS, Persōna.TERTIA),
+                                         strūctor().adveniam("ut", Catēgoria.CONIŪNCTĪVUM),
+                                         strūctor().adveniam("labor", Catēgoria.NŌMEN,
+                                                             Speciālitās.COMMŪNE, Genus.MASCULĪNUM,
+                                                             Cāsus.ABLĀTĪVUS, Numerālis.SINGULĀRIS),
+                                         strūctor().adveniam("et", Catēgoria.CONIŪNCTĪVUM),
+                                         strūctor().adveniam("dolor", Catēgoria.NŌMEN,
+                                                             Speciālitās.COMMŪNE, Genus.MASCULĪNUM,
+                                                             Cāsus.ABLĀTĪVUS, Numerālis.SINGULĀRIS),
+                                         strūctor().adveniam("magnus", Catēgoria.ADIECTĪVUM,
+                                                             Speciālitās.COMMŪNE, Genus.FĒMINĪNUM,
+                                                             Cāsus.ACCŪSĀTĪVUS, Numerālis.SINGULĀRIS),
+                                         strūctor().adveniam("aliquis", Catēgoria.PRŌNŌMEN,
+                                                             Speciālitās.COMMŪNE, Genus.FĒMINĪNUM,
+                                                             Cāsus.ACCŪSĀTĪVUS, Numerālis.SINGULĀRIS),
+                                         strūctor().adveniam("quaerere", Catēgoria.ĀCTUM,
+                                                             Modus.SUBIŪNCTĪVUS, Vōx.ĀCTĪVA, Tempus.PRAESĒNS,
+                                                             Numerālis.SINGULĀRIS, Persōna.TERTIA),
+                                         strūctor().adveniam("voluptās", Catēgoria.NŌMEN,
+                                                             Speciālitās.COMMŪNE, Genus.FĒMINĪNUM,
+                                                             Cāsus.ACCŪSĀTĪVUS, Numerālis.SINGULĀRIS));
 
-    Assertions.assertNotNull(verbaPrīma, "Verba prōducta cūncta vacant.");
-    Assertions.assertTrue(CollectionUtils.isNotEmpty(verbaPrīma.seriēs), "Verba prōducta cūncta vacant.");
-    for (int index = 0; index < verbaPrīma.seriēs.size(); index++) {
-      final String[] parsQuārta = prōductaCūncta.split("ut")[0].split(String.valueOf(' '));
-      Assertions.assertNotNull(verbaPrīma.seriēs.get(index),
+    Assertions.assertNotNull(verba, "Verba prōducta cūncta vacant.");
+    Assertions.assertTrue(CollectionUtils.isNotEmpty(verba.seriēs), "Verba prōducta cūncta vacant.");
+    for (int index = 0; index < verba.seriēs.size(); index++) {
+      Assertions.assertNotNull(verba.seriēs.get(index),
                                String.format("Prōductā cūnctā est relicta prōductiō verbī %s.",
-                                             Ūtilitās.minusculāsScrībō(parsQuārta[index])));
-      Assertions.assertTrue(StringUtils.isNotBlank(verbaPrīma.seriēs.get(index).toString()),
-                            String.format("Vacat prōductum verbum %s.", Ūtilitās.minusculāsScrībō(parsQuārta[index])));
+                                             Ūtilitās.minusculāsScrībō(prōductaCūncta.split(String.valueOf(' '))[index])));
+      Assertions.assertTrue(StringUtils.isNotBlank(verba.seriēs.get(index).toString()),
+                            String.format("Vacat prōductum verbum %s.",
+                                          Ūtilitās.minusculāsScrībō(prōductaCūncta.split(String.valueOf(' '))[index])));
     }
 
-    VerbumSimplex.Coniūnctīvum coniūnctīvum = strūctor().coniūnctīvumLege().adveniam("et");
-    Assertions.assertNotNull(coniūnctīvum, "Prōductiō verbī prōductā cūnctā est relicta.");
-    Assertions.assertTrue(StringUtils.isNotBlank(coniūnctīvum.toString()), "Verbum prōductum vacat.");
-
-    final Verba verbaSecunda = coniūnctīvum.coniugō(strūctor().nōmenLege()
-                                                              .adveniam("labor",
-                                                                        Speciālitās.COMMŪNE, Genus.MASCULĪNUM,
-                                                                        Cāsus.ABLĀTĪVUS, Numerālis.SINGULĀRIS),
-                                                    strūctor().nōmenLege()
-                                                              .adveniam("dolor",
-                                                                        Speciālitās.COMMŪNE, Genus.MASCULĪNUM,
-                                                                        Cāsus.ABLĀTĪVUS, Numerālis.SINGULĀRIS));
-    Assertions.assertNotNull(verbaSecunda, "Verba prōducta cūncta vacant.");
-    Assertions.assertTrue(CollectionUtils.isNotEmpty(verbaSecunda.seriēs), "Verba prōducta cūncta vacant.");
-    verbaSecunda.addō(strūctor().adiectīvumLege()
-                                 .adveniam("magnus",
-                                           Speciālitās.COMMŪNE, Genus.FĒMINĪNUM,
-                                           Cāsus.ACCŪSĀTĪVUS, Numerālis.SINGULĀRIS),
-                       strūctor().prōnōmenConiūnctīvumLege()
-                                 .adveniam("aliquis",
-                                           Speciālitās.COMMŪNE, Genus.FĒMINĪNUM,
-                                           Cāsus.ACCŪSĀTĪVUS, Numerālis.SINGULĀRIS),
-                       strūctor().āctumLege()
-                                 .adveniam("quaerere",
-                                           Modus.SUBIŪNCTĪVUS, Vōx.ĀCTĪVA, Tempus.PRAESĒNS,
-                                           Numerālis.SINGULĀRIS, Persōna.TERTIA),
-                       strūctor().adiectīvumLege()
-                                 .adveniam("voluptās",
-                                           Speciālitās.COMMŪNE, Genus.FĒMINĪNUM,
-                                           Cāsus.ACCŪSĀTĪVUS, Numerālis.SINGULĀRIS));
-
-    for (int index = 0; index < verbaSecunda.seriēs.size(); index++) {
-      final String[] parsQuārta = prōductaCūncta.split("ut")[1].split(String.valueOf(' '));
-      Assertions.assertNotNull(verbaSecunda.seriēs.get(index),
-                               String.format("Prōductā cūnctā est relicta prōductiō verbī %s.",
-                                             Ūtilitās.minusculāsScrībō(parsQuārta[index])));
-      Assertions.assertTrue(StringUtils.isNotBlank(verbaSecunda.seriēs.get(index).toString()),
-                            String.format("Vacat prōductum verbum %s.", Ūtilitās.minusculāsScrībō(parsQuārta[index])));
-    }
-
-    VerbumSimplex.Coniūnctīvum coniūnctīvumSecundum = strūctor().coniūnctīvumLege().adveniam("ut");
-    Assertions.assertNotNull(coniūnctīvumSecundum, "Prōductiō verbī prōductā cūnctā est relicta.");
-    Assertions.assertTrue(StringUtils.isNotBlank(coniūnctīvumSecundum.toString()), "Verbum prōductum vacat.");
-
-    String haec = coniūnctīvumSecundum.coniugō(verbaPrīma, verbaSecunda).toString();
-    Assertions.assertEquals(prōductaCūncta, haec, "Verba prōducta cūncta expectātiōne eius differt.");
-
-    System.out.printf("Prōducta cūncta: %s%n", haec);
+    Assertions.assertEquals(prōductaCūncta, verba.toString(),
+                            "Verba prōducta cūncta expectātiōne eius differt.");
+    System.out.printf("Prōducta cūncta: %s%n", verba);
   }
 }

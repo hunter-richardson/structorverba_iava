@@ -48,11 +48,6 @@ public enum Catēgoria {
   PRAEPOSITIŌ("praepositiōnēs"),
 
   /**
-   * Valor hic classem {@link PrōnōmenConiūnctīvum} respondet.
-   */
-  PRŌNŌMEN_CONIŪNCTĪVUM("prōnōminaConiūnctīva"),
-
-  /**
    * Valor hic classem {@link VerbumSimplex.Numerus} respondet.
    */
   NUMERUM(StringUtils.EMPTY),

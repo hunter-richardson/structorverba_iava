@@ -53,7 +53,7 @@ public final class Verba extends Omnum {
    * @param verba seriēs valōrum addendōrum
    * @return Rem haec
    */
-  @NotNull public Verba addō(@NotNull final Verba verba) {
+  @NotNull public Verba superaddō(@NotNull final Verba verba) {
     seriēs.addAll(verba.seriēs.stream()
                               .filter(Objects::nonNull)
                               .filter(verbum -> StringUtils.isBlank(verbum.toString()))
@@ -66,12 +66,12 @@ public final class Verba extends Omnum {
    * @param ōrdō seriēs seriērum addendārum
    * @return Rem haec
    */
-  @NotNull public Verba addō(@Nullable final Verba... ōrdō) {
+  @NotNull public Verba superaddō(@Nullable final Verba... ōrdō) {
     if(ōrdō != null) {
       Arrays.stream(ōrdō)
             .filter(Objects::nonNull)
             .filter(verbum -> StringUtils.isBlank(verbum.toString()))
-            .forEach(this::addō);
+            .forEach(this::superaddō);
     }
 
     return this;

@@ -8,13 +8,14 @@ import net.strūctorverba.lēctōrēs.*;
 import net.strūctorverba.verba.*;
 import net.strūctorverba.verba.disposita.*;
 import net.strūctorverba.verba.multiplicia.Nōminālis;
+import net.strūctorverba.ēnumerātiōnēs.Catēgoria;
 import org.apache.commons.lang3.Range;
 import org.apache.commons.lang3.*;
 import org.jetbrains.annotations.*;
 
 import javax.ejb.Singleton;
 import java.util.Objects;
-import java.util.function.Supplier;
+import java.util.function.*;
 
 /**
  * Classis {@link StrūctorVerba} accessum modīs omnibus programmātis StrūctorVerba prōvidet. <br>
@@ -52,9 +53,6 @@ public final class StrūctorVerba extends Omnum {
 
   @Getter(lazy = true) @Accessors(fluent = true)
   @NotNull private final LēctorMultiplicibus.LēctorPrōnōminibus prōnōmina = LēctorMultiplicibus.LēctorPrōnōminibus.fac.get();
-
-  @Getter(lazy = true) @Accessors(fluent = true)
-  @NotNull private final LēctorMultiplicibus.LēctorPrōnōminibusConiūnctīvīs prōnōminaConiūnctīva = LēctorMultiplicibus.LēctorPrōnōminibusConiūnctīvīs.fac.get();
 
   @Getter(lazy = true) @Accessors(fluent = true)
   @NotNull private final LēctorMultiplicibus.LēctorĀctīs ācta = LēctorMultiplicibus.LēctorĀctīs.fac.get();
@@ -95,13 +93,6 @@ public final class StrūctorVerba extends Omnum {
   }
 
   /**
-   * @return Rem classis {@link LēctorMultiplicibus.LēctorPrōnōminibusConiūnctīvīs}
-   */
-  @NotNull public LēctorMultiplicibus.LēctorPrōnōminibusConiūnctīvīs prōnōmenConiūnctīvumLege( ) {
-    return prōnōminaConiūnctīva();
-  }
-
-  /**
    * @return Rem classis {@link LēctorPraepositiōnibus}
    */
   @NotNull public LēctorPraepositiōnibus praepositiōnemLege( ) {
@@ -114,6 +105,35 @@ public final class StrūctorVerba extends Omnum {
   @NotNull public LēctorMultiplicibus.LēctorĀctīs āctumLege( ) {
     return ācta();
   }
+
+  @SuppressWarnings("unchecked")
+  @Nullable public <Ille extends Verbum<Ille>> Ille adveniam(@NotNull final String fundāmen,
+                                                             @NotNull final Catēgoria catēgoria) {
+    return switch (catēgoria) {
+             case CONIŪNCTĪVUM -> (Ille) coniūnctīva().adveniam(fundāmen);
+             case ADVERBIUM -> (Ille) adverbia().adveniam(fundāmen);
+             case PRAEPOSITIŌ -> (Ille) praepositiōnēs().adveniam(fundāmen);
+             default -> null;
+           };
+  }
+
+  @SuppressWarnings("ConstantConditions")
+  @Nullable public <Ille extends Verbum<Ille>> Ille adveniam(@NotNull final String fundāmen,
+                                                             @NotNull final Catēgoria catēgoria,
+                                                             @NotNull final Enum<@NotNull ?>... illa) {
+    try {
+      return (Ille) (switch (catēgoria) {
+                      case ADIECTĪVUM -> adiectīva();
+                      case ĀCTUM -> ācta();
+                      case NŌMEN -> nōmina();
+                      case PRŌNŌMEN -> prōnōmina();
+                      default -> null;
+                    }).adveniam(fundāmen, illa);
+    } catch (NullPointerException e) {
+      return adveniam(fundāmen, catēgoria);
+    }
+  }
+
 
   /**
    * @param rēs rēs classis {@link Nōminālis}

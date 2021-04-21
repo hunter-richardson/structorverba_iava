@@ -11,7 +11,6 @@ import net.strūctorverba.lēctōrēs.*;
 import net.strūctorverba.mīscella.Ūtilitās;
 import net.strūctorverba.nūntiī.Nūntius;
 import net.strūctorverba.tenōrēs.TenorSimplicibus;
-import net.strūctorverba.verba.disposita.Verba;
 import net.strūctorverba.ēnumerātiōnēs.Catēgoria;
 import org.apache.commons.lang3.StringUtils;
 import org.jetbrains.annotations.*;
@@ -69,13 +68,12 @@ public abstract class VerbumSimplex <Hoc extends Verbum <Hoc>> extends Verbum <H
   /**
    * Classis {@link Coniūnctīvum} repraesentat coniūnctīva ut coniectēris. <br>
    * Coniūnctīva catēgoriam {@link Catēgoria#CONIŪNCTĪVUM} ūtuntur et cōnservāta sunt in scrīniō <a href="{@docRoot}/../src/main/resources">auxiliārēs</a>/coniūnctīva. <br>
-   * Prōpositīs programmātis huius classis haec differt classe {@link Adverbium} sōlum in quō classis haec modōs {@link Coniugiāle} dēfīnītōs dēdūcit.
    * @see LēctorSimplicibus.LēctorConiūnctīvīs
    * @see TenorSimplicibus.TenorConiūnctivīs
    * @see ConditōrSimplicibus.ConditōrConiūnctīvīs
    * @see Nūntius.NūntiusConiūnctīvōrum
    */
-  public static final class Coniūnctīvum extends VerbumSimplex <Coniūnctīvum> implements Coniugiāle {
+  public static final class Coniūnctīvum extends VerbumSimplex <Coniūnctīvum> {
     @Getter(lazy = true) @Accessors(fluent = true)
     @NotNull private final Nūntius.NūntiusConiūnctīvōrum nūntius = Nūntius.NūntiusConiūnctīvōrum.fac.get();
 
@@ -83,29 +81,6 @@ public abstract class VerbumSimplex <Hoc extends Verbum <Hoc>> extends Verbum <H
     private Coniūnctīvum(@NotNull final String fundāmen) {
       super(Catēgoria.CONIŪNCTĪVUM, fundāmen);
       nūntius().plūsGarriō("Scrībor ut", fundāmen);
-    }
-
-    /**
-     * {@inheritDoc}
-     * @param prīmus valor prīmus
-     * @param secundus valor secundus
-     * @param <Ille> classis quae valōrēs et {@code prīmus} et {@code secundus} quadrat
-     */
-    @SuppressWarnings("ConstantConditions")
-    @NotNull public <Ille extends Verbum <Ille>> Verba coniugō(@Nullable final Ille prīmus,
-                                                               @Nullable final Ille secundus) {
-      nūntius().plūrimumGarriō("Scrībor ut", prīmus, this, secundus);
-      return new Verba().addō(prīmus, this, secundus);
-    }
-
-    /**
-     * {@inheritDoc}
-     * @param prīmus valor prīmus
-     * @param secundus valor secundus
-     */
-    @NotNull public final Verba coniugō(@NotNull final Verba prīmus, @NotNull final Verba secundus) {
-      nūntius().plūrimumGarriō("Scrībor ut", prīmus, this, secundus);
-      return new Verba().addō(prīmus).addō(this).addō(secundus);
     }
   }
 

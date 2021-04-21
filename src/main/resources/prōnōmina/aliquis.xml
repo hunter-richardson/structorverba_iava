@@ -1,97 +1,97 @@
-<prōnōmenConiūnctīvus fundāmen="quis">
+<prōnōmen fundāmen="aliquis">
   <fōrma speciālitās="commūne" genus="masculīnum" numerālis="singulāris" cāsus="nōminātīvus">
-    quis
+    aliquis
   </fōrma>
   <fōrma speciālitās="commūne" genus="masculīnum" numerālis="singulāris" cāsus="genitīvus">
-    cuius
+    alicuius
   </fōrma>
   <fōrma speciālitās="commūne" genus="masculīnum" numerālis="singulāris" cāsus="datīvus">
-    cuī
+    alicuī
   </fōrma>
   <fōrma speciālitās="commūne" genus="masculīnum" numerālis="singulāris" cāsus="accūsātīvus">
-    quem
+    aliquem
   </fōrma>
   <fōrma speciālitās="commūne" genus="masculīnum" numerālis="singulāris" cāsus="ablātīvus">
-    quō
+    aliquō
   </fōrma>
 
   <fōrma speciālitās="commūne" genus="masculīnum" numerālis="plūrālis" cāsus="nōminātīvus">
-    quī
+    aliquī
   </fōrma>
   <fōrma speciālitās="commūne" genus="masculīnum" numerālis="plūrālis" cāsus="genitīvus">
-    quōrum
+    aliquōrum
   </fōrma>
   <fōrma speciālitās="commūne" genus="masculīnum" numerālis="plūrālis" cāsus="datīvus">
-    quibus
+    aliquibus
   </fōrma>
   <fōrma speciālitās="commūne" genus="masculīnum" numerālis="plūrālis" cāsus="accūsātīvus">
-    quōs
+    aliquōs
   </fōrma>
   <fōrma speciālitās="commūne" genus="masculīnum" numerālis="plūrālis" cāsus="ablātīvus">
-    quibus
+    aliquibus
   </fōrma>
 
   <fōrma speciālitās="commūne" genus="fēminīnum" numerālis="singulāris" cāsus="nōminātīvus">
-    quae
+    aliquis
   </fōrma>
   <fōrma speciālitās="commūne" genus="fēminīnum" numerālis="singulāris" cāsus="genitīvus">
-    cuius
+    alicuius
   </fōrma>
   <fōrma speciālitās="commūne" genus="fēminīnum" numerālis="singulāris" cāsus="datīvus">
-    cuī
+    alicuī
   </fōrma>
   <fōrma speciālitās="commūne" genus="fēminīnum" numerālis="singulāris" cāsus="accūsātīvus">
-    quam
+    aliquem
   </fōrma>
   <fōrma speciālitās="commūne" genus="fēminīnum" numerālis="singulāris" cāsus="ablātīvus">
-    quā
+    aliquō
   </fōrma>
 
   <fōrma speciālitās="commūne" genus="fēminīnum" numerālis="plūrālis" cāsus="nōminātīvus">
-    quae
+    aliquae
   </fōrma>
   <fōrma speciālitās="commūne" genus="fēminīnum" numerālis="plūrālis" cāsus="genitīvus">
-    quārum
+    aliquārum
   </fōrma>
   <fōrma speciālitās="commūne" genus="fēminīnum" numerālis="plūrālis" cāsus="datīvus">
-    quibus
+    aliquibus
   </fōrma>
   <fōrma speciālitās="commūne" genus="fēminīnum" numerālis="plūrālis" cāsus="accūsātīvus">
-    quās
+    aliquās
   </fōrma>
   <fōrma speciālitās="commūne" genus="fēminīnum" numerālis="plūrālis" cāsus="ablātīvus">
-    quibus
+    aliquibus
   </fōrma>
 
   <fōrma speciālitās="commūne" genus="neutrum" numerālis="singulāris" cāsus="nōminātīvus">
-    quid
+    aliquid
   </fōrma>
   <fōrma speciālitās="commūne" genus="neutrum" numerālis="singulāris" cāsus="genitīvus">
-    cuius
+    alicuius
   </fōrma>
   <fōrma speciālitās="commūne" genus="neutrum" numerālis="singulāris" cāsus="datīvus">
-    cuī
+    alicuī
   </fōrma>
   <fōrma speciālitās="commūne" genus="neutrum" numerālis="singulāris" cāsus="accūsātīvus">
-    quid
+    aliquid
   </fōrma>
   <fōrma speciālitās="commūne" genus="neutrum" numerālis="singulāris" cāsus="ablātīvus">
-    quō
+    aliquō
   </fōrma>
 
   <fōrma speciālitās="commūne" genus="neutrum" numerālis="plūrālis" cāsus="nōminātīvus">
-    quae
+    aliquae
   </fōrma>
   <fōrma speciālitās="commūne" genus="neutrum" numerālis="plūrālis" cāsus="genitīvus">
-    quōrum
+    aliquōrum
   </fōrma>
   <fōrma speciālitās="commūne" genus="neutrum" numerālis="plūrālis" cāsus="datīvus">
-    quibus
+    aliquibus
   </fōrma>
   <fōrma speciālitās="commūne" genus="neutrum" numerālis="plūrālis" cāsus="accūsātīvus">
-    quae
+    aliquae
   </fōrma>
   <fōrma speciālitās="commūne" genus="neutrum" numerālis="plūrālis" cāsus="ablātīvus">
-    quibus
+    aliquibus
   </fōrma>
-</prōnōmenConiūnctīvus>
+</prōnōmen>
