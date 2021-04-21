@@ -52,10 +52,10 @@ class Tentāmen {
 }
 ```
 
-> Ingeniārius excōgitat problēmata quae nesciēbās.
+> Ingeniārius invenit problēmata quae ignōrābās.
 > 
-> Eum tibi etiamtum solvat in viam quam ignōrās.
+> Ea tibi etiamtum solvat in modīs quōs vix intellegās.
 > 
-> Atque tibi pretiābit valōrem quem nōn potes praebēre.
+> Tibi atque petet pecūniam quam nōn poteris solvere.
 
 
