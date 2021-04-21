@@ -32,7 +32,7 @@ I. [DolōremIpsum](src/main/test/net/strūctorverba/tentāmina/DolōremIpsum.jav
 
 II. [Numerī](src/main/test/net/strūctorverba/tentāmina/Numerī.java)
 
-Programmātem StrūctorVerba ūtī fac rem classis [StrūctorVerba](src/main/java/net/strūctorverba/mīscella/StrūctorVerba.java). Fūnctiōnēs omnēs per modīs eius accēdās.
+Rem classis [StrūctorVerba](src/main/java/net/strūctorverba/mīscella/StrūctorVerba.java) fac programmātem StrūctorVerba ūtī. Fūnctiōnēs omnēs per modīs eius accēdās.
 
 ```java
 class Tentāmen {
