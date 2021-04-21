@@ -38,12 +38,13 @@ public final class Verba {
    * @param ōrdō seriēs valōrum addendōrum
    * @return Rem haec
    */
-  @SuppressWarnings("ConstantConditions")
-  @NotNull public Verba addō(@NotNull final Verbum<@Nullable ?>... ōrdō) {
-    seriēs.addAll(Arrays.stream(ōrdō)
-                        .filter(Objects::nonNull)
-                        .filter(verbum -> StringUtils.isBlank(verbum.toString()))
-                        .collect(Collectors.toList()));
+  @NotNull public Verba addō(@Nullable final Verbum<@Nullable ?>... ōrdō) {
+    if(Objects.nonNull(ōrdō)) {
+      seriēs.addAll(Arrays.stream(ōrdō)
+                          .filter(Objects::nonNull)
+                          .filter(verbum -> StringUtils.isBlank(verbum.toString()))
+                          .collect(Collectors.toList()));
+    }
     return this;
   }
 

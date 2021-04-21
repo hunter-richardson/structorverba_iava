@@ -14,6 +14,7 @@ import org.apache.commons.lang3.*;
 import org.jetbrains.annotations.*;
 
 import javax.ejb.Singleton;
+import java.util.Objects;
 import java.util.function.Supplier;
 
 /**
@@ -140,8 +141,9 @@ public final class StrūctorVerba {
    * @param seriēs seriēs rērum classis {@link Verbum}
    * @return Rem classis {@link Verba} ūsa valōrem {@code seriēs}
    */
-  @NotNull public Verba strue(@NotNull final Verbum <@Nullable ?>[] seriēs) {
-    return new Verba().addō(seriēs);
+  @NotNull public Verba strue(@Nullable final Verbum <?>... seriēs) {
+    return Objects.isNull(seriēs) ? new Verba()
+                                  : new Verba().addō(seriēs);
   }
 
   /**
