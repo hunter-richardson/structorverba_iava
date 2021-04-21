@@ -204,7 +204,6 @@ public final class DolōremIpsum extends Omnum {
     Assertions.assertTrue(CollectionUtils.isNotEmpty(verba.seriēs),
                           "Verba prōducta quīnta vacant.");
     for (int index = 0; index < verba.seriēs.size(); index++) {
-      final String[] parsQuārta = prōductaQuīnta.split("ut")[1].split(String.valueOf(' '));
       Assertions.assertNotNull(verba.seriēs.get(index),
                                String.format("Prōductā quīntā est relicta prōductiō verbī %s.",
                                              Ūtilitās.minusculāsScrībō(prōductaQuīnta.split(String.valueOf(' '))[index])));
