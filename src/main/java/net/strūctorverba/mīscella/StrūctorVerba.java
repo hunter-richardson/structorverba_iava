@@ -7,7 +7,7 @@ import lombok.experimental.Accessors;
 import net.strūctorverba.lēctōrēs.*;
 import net.strūctorverba.verba.*;
 import net.strūctorverba.verba.disposita.*;
-import net.strūctorverba.verba.multiplicia.Nōminālis;
+import net.strūctorverba.verba.multiplicia.*;
 import net.strūctorverba.ēnumerātiōnēs.Catēgoria;
 import org.apache.commons.lang3.Range;
 import org.apache.commons.lang3.*;
@@ -106,23 +106,42 @@ public final class StrūctorVerba extends Omnum {
     return ācta();
   }
 
+  /**
+   * Modus hic rem apta classis {@link LēctorSimplicibus} valōrī {@code catēgoria} sēligit et valōrēs {@code fundāmen} immittit.
+   * @param fundāmen valōrem {@link Verbum#fundāmen} immittendus
+   * @param catēgoria valor tentendus
+   * @param <Hoc> classis extenta classis {@link VerbumSimplex}
+   * @return rem classis {@link Hoc}
+   * @see Catēgoria
+   * @see #adveniam(String, Catēgoria, Enum[])
+   */
   @SuppressWarnings("unchecked")
-  @Nullable public <Ille extends Verbum<Ille>> Ille adveniam(@NotNull final String fundāmen,
-                                                             @NotNull final Catēgoria catēgoria) {
+  @Nullable public <Hoc extends Verbum<Hoc>> Hoc adveniam(@NotNull final String fundāmen,
+                                                          @NotNull final Catēgoria catēgoria) {
     return switch (catēgoria) {
-             case CONIŪNCTĪVUM -> (Ille) coniūnctīva().adveniam(fundāmen);
-             case ADVERBIUM -> (Ille) adverbia().adveniam(fundāmen);
-             case PRAEPOSITIŌ -> (Ille) praepositiōnēs().adveniam(fundāmen);
+             case CONIŪNCTĪVUM -> (Hoc) coniūnctīva().adveniam(fundāmen);
+             case ADVERBIUM -> (Hoc) adverbia().adveniam(fundāmen);
+             case PRAEPOSITIŌ -> (Hoc) praepositiōnēs().adveniam(fundāmen);
              default -> null;
            };
   }
 
+  /**
+   * Modus hic rem apta classis {@link LēctorMultiplicibus} valōrī {@code catēgoria} sēligit et valōrēs et {@code fundāmen} et {@code illa} immittit. <br>
+   * Valōrēs et {@code fundāmen} et {@code illa} modō {@link #adveniam(String, Catēgoria)} immittit sī rem nūlla classis {@link LēctorMultiplicibus} valōrem {@code catēgoria} quadrat.
+   * @param fundāmen valōrem {@link Verbum#fundāmen} immittendus
+   * @param catēgoria valor tentendus
+   * @param illa valōrēs immittendī
+   * @param <Hoc> classis extenta classis {@link VerbumMultiplex}
+   * @return rem classis {@link Hoc}
+   * @see Catēgoria
+   */
   @SuppressWarnings("ConstantConditions")
-  @Nullable public <Ille extends Verbum<Ille>> Ille adveniam(@NotNull final String fundāmen,
-                                                             @NotNull final Catēgoria catēgoria,
-                                                             @NotNull final Enum<@NotNull ?>... illa) {
+  @Nullable public <Hoc extends Verbum<Hoc>> Hoc adveniam(@NotNull final String fundāmen,
+                                                          @NotNull final Catēgoria catēgoria,
+                                                          @NotNull final Enum<@NotNull ?>... illa) {
     try {
-      return (Ille) (switch (catēgoria) {
+      return (Hoc) (switch (catēgoria) {
                       case ADIECTĪVUM -> adiectīva();
                       case ĀCTUM -> ācta();
                       case NŌMEN -> nōmina();

@@ -241,25 +241,6 @@ public abstract class Nūntius {
   }
 
   /**
-   * Classis {@link NūntiusTenōrīPrōnōmibusConiūnctīvīs} est vās classis {@link Nūntius} classī {@link TenorMultiplicibus.TenorPrōnōminibusConiūnctīvīs}
-   * @see TenorMultiplicibus.TenorPrōnōminibusConiūnctīvīs
-   */
-  @Singleton public static final class NūntiusTenōrīPrōnōmibusConiūnctīvīs extends Nūntius {
-    @Nullable private static NūntiusTenōrīPrōnōmibusConiūnctīvīs īnstantia = null;
-
-    /**
-     * Valor hic viam reī classis huiuc facit.
-     * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
-     */
-    @NotNull public static final Supplier <NūntiusTenōrīPrōnōmibusConiūnctīvīs> fac =
-      () -> ObjectUtils.firstNonNull(īnstantia, īnstantia = new NūntiusTenōrīPrōnōmibusConiūnctīvīs());
-
-    private NūntiusTenōrīPrōnōmibusConiūnctīvīs( ) {
-      super(ParametrīNūntiī.parā(TenorMultiplicibus.TenorPrōnōminibusConiūnctīvīs.class));
-    }
-  }
-
-  /**
    * Classis {@link NūntiusTenōrīĀctīs} est vās classis {@link Nūntius} classī {@link TenorMultiplicibus.TenorĀctīs}
    * @see TenorMultiplicibus.TenorĀctīs
    */

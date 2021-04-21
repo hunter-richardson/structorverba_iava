@@ -158,29 +158,6 @@ public abstract class TenorMultiplicibus <Hoc extends VerbumMultiplex <Hoc>> ext
   }
 
   /**
-   * Classis {@link TenorPrōnōminibusConiūnctīvīs} est vās classis {@link Tenor} classī {@link PrōnōmenConiūnctīvum}
-   * @see PrōnōmenConiūnctīvum
-   * @see Nūntius.NūntiusTenōrīPrōnōmibusConiūnctīvīs
-   * @see ConditōrPrōnōminibusConiūnctīvīs
-   */
-  @Singleton @DependsOn({ "CondītōrPrōnōminiusConiūnctīvīs", "NūntiusTenōrīPrōnōmibusConiūnctīvīs" })
-  public static final class TenorPrōnōminibusConiūnctīvīs extends TenorMultiplicibus <PrōnōmenConiūnctīvum> {
-    @Nullable private static TenorPrōnōminibusConiūnctīvīs īnstantia = null;
-
-    /**
-     * Valor hic viam reī classis huiuc facit.
-     * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
-     */
-    @NotNull public static final Supplier <TenorPrōnōminibusConiūnctīvīs> fac =
-      () -> ObjectUtils.firstNonNull(īnstantia, īnstantia = new TenorPrōnōminibusConiūnctīvīs());
-
-    private TenorPrōnōminibusConiūnctīvīs( ) {
-      super(Nūntius.NūntiusTenōrīPrōnōmibusConiūnctīvīs.fac, ConditōrPrōnōminibusConiūnctīvīs.fac);
-      nūntius.plūrimumGarriō("Factus sum");
-    }
-  }
-
-  /**
    * Classis {@link TenorĀctīs} est vās classis {@link Tenor} classī {@link Āctum}
    * @see Āctum
    * @see Nūntius.NūntiusTenōrīĀctīs
