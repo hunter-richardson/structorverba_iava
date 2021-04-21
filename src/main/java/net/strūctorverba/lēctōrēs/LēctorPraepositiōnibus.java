@@ -2,7 +2,7 @@ package net.strūctorverba.lēctōrēs;
 
 import lombok.*;
 import lombok.experimental.Accessors;
-import net.strūctorverba.mīscella.Ūtilitās;
+import net.strūctorverba.mīscella.*;
 import net.strūctorverba.nūntiī.Nūntius;
 import net.strūctorverba.verba.VerbumSimplex;
 import net.strūctorverba.ēnumerātiōnēs.*;
@@ -27,7 +27,7 @@ import java.util.stream.Stream;
  */
 @SuppressWarnings({ "NonAsciiCharacters", "SpellCheckingInspection", "unused" })
 @Singleton @DependsOn("NūntiusLēctōrīPraepositiōnibus")
-public final class LēctorPraepositiōnibus {
+public final class LēctorPraepositiōnibus extends Omnum {
   @Nullable private static LēctorPraepositiōnibus īnstantia = null;
 
   /**

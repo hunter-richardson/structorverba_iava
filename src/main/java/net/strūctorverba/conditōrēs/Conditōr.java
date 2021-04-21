@@ -1,5 +1,6 @@
 package net.strūctorverba.conditōrēs;
 
+import net.strūctorverba.mīscella.Omnum;
 import net.strūctorverba.nūntiī.Nūntius;
 import net.strūctorverba.tenōrēs.Tenor;
 import net.strūctorverba.verba.Verbum;
@@ -13,7 +14,7 @@ import java.util.function.Supplier;
  * @param <Hoc> classis extenta classis {@link Verbum}
  */
 @SuppressWarnings({ "NonAsciiCharacters", "SpellCheckingInspection" })
-public abstract class Conditōr <Hoc extends Verbum <Hoc>> {
+public abstract class Conditōr <Hoc extends Verbum <Hoc>> extends Omnum {
   /**
    * Valor hic est vās classis {@link Nūntius} classī hui.
    */

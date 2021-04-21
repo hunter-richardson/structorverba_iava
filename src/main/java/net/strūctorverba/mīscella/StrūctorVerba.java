@@ -2,10 +2,9 @@ package net.strūctorverba.mīscella;
 
 import com.github.chaosfirebolt.converter.RomanInteger;
 import com.github.chaosfirebolt.converter.constants.*;
-import lombok.Getter;
+import lombok.*;
 import lombok.experimental.Accessors;
 import net.strūctorverba.lēctōrēs.*;
-import net.strūctorverba.nūntiī.Nūntius;
 import net.strūctorverba.verba.*;
 import net.strūctorverba.verba.disposita.*;
 import net.strūctorverba.verba.multiplicia.Nōminālis;
@@ -21,8 +20,9 @@ import java.util.function.Supplier;
  * Classis {@link StrūctorVerba} accessum modīs omnibus programmātis StrūctorVerba prōvidet. <br>
  * Sōlum reī classis huiuc accēdendus licēre ūsum plēnum programmātis ūsūfructuāriīs.
  */
-@Singleton @SuppressWarnings({ "NonAsciiCharacters", "SpellCheckingInspection", "unused" })
-public final class StrūctorVerba {
+@SuppressWarnings({ "NonAsciiCharacters", "SpellCheckingInspection", "unused" })
+@Singleton @NoArgsConstructor(access = AccessLevel.PRIVATE)
+public final class StrūctorVerba extends Omnum {
   @Nullable private static StrūctorVerba īnstantia = null;
 
   /**
@@ -32,12 +32,8 @@ public final class StrūctorVerba {
   @NotNull public static final Supplier <StrūctorVerba> fac =
     () -> ObjectUtils.firstNonNull(īnstantia, īnstantia = new StrūctorVerba());
 
-  private final Range<Short> TRACTUS_NUMERŌRUM = Range.between(Integer.valueOf(1).shortValue(),
-                                                               Integer.valueOf(4000).shortValue());
-
-  private StrūctorVerba() {
-    Thread.currentThread().setUncaughtExceptionHandler(Nūntius.NūntiusErrōribus.fac.get());
-  }
+  @NotNull private final Range<Short> TRACTUS_NUMERŌRUM = Range.between(Integer.valueOf(1).shortValue(),
+                                                                        Integer.valueOf(4000).shortValue());
 
   @Getter(lazy = true) @Accessors(fluent = true)
   @NotNull private final LēctorMultiplicibus.LēctorAdiectīvīs adiectīva = LēctorMultiplicibus.LēctorAdiectīvīs.fac.get();

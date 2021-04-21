@@ -1,7 +1,7 @@
 package net.strūctorverba.verba.disposita;
 
 import lombok.*;
-import net.strūctorverba.mīscella.Ūtilitās;
+import net.strūctorverba.mīscella.*;
 import net.strūctorverba.verba.Verbum;
 import org.apache.commons.lang3.StringUtils;
 import org.jetbrains.annotations.*;
@@ -14,7 +14,7 @@ import java.util.stream.Collectors;
  */
 @SuppressWarnings({ "NonAsciiCharacters", "SpellCheckingInspection", "unused" })
 @NoArgsConstructor(access = AccessLevel.PUBLIC)
-public final class Verba {
+public final class Verba extends Omnum {
   /**
    * Valor hic seriem cōnstātam rērum classis {@link Verbum} continet.
    */

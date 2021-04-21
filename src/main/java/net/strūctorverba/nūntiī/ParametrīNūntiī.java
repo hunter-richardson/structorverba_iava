@@ -1,6 +1,6 @@
 package net.strūctorverba.nūntiī;
 
-import net.strūctorverba.mīscella.Ūtilitās;
+import net.strūctorverba.mīscella.*;
 import org.apache.commons.lang3.StringUtils;
 import org.jetbrains.annotations.NotNull;
 
@@ -13,7 +13,7 @@ import java.util.logging.*;
  * Classis {@link ParametrīNūntiī} valōrēs continet quōs rem classis {@link Nūntius} iuvat generāre.
  */
 @SuppressWarnings({ "NonAsciiCharacters", "SpellCheckingInspection" })
-final class ParametrīNūntiī {
+final class ParametrīNūntiī extends Omnum {
   private final @NotNull String locus = "logs";
 
   /**

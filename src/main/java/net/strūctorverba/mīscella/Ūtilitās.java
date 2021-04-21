@@ -11,7 +11,7 @@ import java.util.*;
  * Classis {@link Ūtilitās} modōs valōrēsque ūtilēs programmātī StrūctorVerba dēfīnit.
  */
 @SuppressWarnings({ "NonAsciiCharacters", "SpellCheckingInspection" })
-public final class Ūtilitās {
+public final class Ūtilitās extends Omnum {
   @NotNull private static final Locale LOCULUS  = Locale.forLanguageTag("Latn");
 
   /**

@@ -3,10 +3,10 @@ package net.strūctorverba.verba;
 import net.strūctorverba.conditōrēs.Conditōr;
 import net.strūctorverba.inventōrēs.Inventor;
 import net.strūctorverba.lēctōrēs.Lēctor;
+import net.strūctorverba.mīscella.*;
 import net.strūctorverba.tenōrēs.Tenor;
 import net.strūctorverba.verba.multiplicia.VerbumMultiplex;
 import net.strūctorverba.ēnumerātiōnēs.Catēgoria;
-import net.strūctorverba.mīscella.Ūtilitās;
 import org.jetbrains.annotations.NotNull;
 
 /**
@@ -17,7 +17,7 @@ import org.jetbrains.annotations.NotNull;
  * @param <Hoc> Tabellā hāc classis {@link Hoc} extēnsiōnem aptam datīs petītīs repraesentat.
  */
 @SuppressWarnings({ "NonAsciiCharacters", "SpellCheckingInspection" })
-public abstract class Verbum <Hoc extends Verbum <Hoc>> {
+public abstract class Verbum <Hoc extends Verbum <Hoc>> extends Omnum {
   /**
    * Valor hic repraesentat fōrmam verbī cui rādīcēscit. Quoque nōminātur scāpum XML quō cōnservātum est.
    */

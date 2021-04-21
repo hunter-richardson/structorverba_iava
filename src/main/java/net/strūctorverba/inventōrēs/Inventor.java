@@ -1,6 +1,7 @@
 package net.strūctorverba.inventōrēs;
 
 import net.strūctorverba.lēctōrēs.LēctorMultiplicibus;
+import net.strūctorverba.mīscella.Omnum;
 import net.strūctorverba.nūntiī.Nūntius;
 import net.strūctorverba.tenōrēs.TenorMultiplicibus;
 import net.strūctorverba.verba.multiplicia.VerbumMultiplex;
@@ -14,7 +15,7 @@ import java.util.function.*;
  * @param <Hoc> classis extenta classis {@link VerbumMultiplex}
  */
 @SuppressWarnings({ "NonAsciiCharacters", "SpellCheckingInspection" })
-public abstract class Inventor <Hoc extends VerbumMultiplex <Hoc>> {
+public abstract class Inventor <Hoc extends VerbumMultiplex <Hoc>> extends Omnum {
   /**
    * Valor hic est vās classis {@link Nūntius} classī hui.
    */

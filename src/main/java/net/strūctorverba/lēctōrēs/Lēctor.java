@@ -1,6 +1,6 @@
 package net.strūctorverba.lēctōrēs;
 
-import net.strūctorverba.mīscella.Ūtilitās;
+import net.strūctorverba.mīscella.*;
 import net.strūctorverba.nūntiī.Nūntius;
 import net.strūctorverba.tenōrēs.Tenor;
 import net.strūctorverba.verba.Verbum;
@@ -18,7 +18,7 @@ import java.util.function.Supplier;
  * @param <Hoc> classis extenta classis {@link Verbum}
  */
 @SuppressWarnings({ "NonAsciiCharacters", "SpellCheckingInspection" })
-public abstract class Lēctor <Hoc extends Verbum <Hoc>> {
+public abstract class Lēctor <Hoc extends Verbum <Hoc>> extends Omnum {
   /**
    * Valor hic est vās classis {@link Nūntius} classī hui.
    */

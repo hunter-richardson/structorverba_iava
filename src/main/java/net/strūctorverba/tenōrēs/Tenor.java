@@ -38,6 +38,7 @@ public abstract class Tenor <Hoc extends Verbum <Hoc>> extends DefaultHandler {
    * @param nts valōrem {@link #nūntius} supplet.
    */
   protected Tenor(@NotNull final Supplier <@NotNull ? extends Nūntius> nts) {
+    Thread.currentThread().setUncaughtExceptionHandler(Nūntius.NūntiusErrōribus.fac.get());
     nūntius = nts.get();
   }
 

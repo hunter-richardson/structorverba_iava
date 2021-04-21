@@ -2,7 +2,7 @@ package net.strūctorverba.tentāmina;
 
 import lombok.Getter;
 import lombok.experimental.Accessors;
-import net.strūctorverba.mīscella.StrūctorVerba;
+import net.strūctorverba.mīscella.*;
 import net.strūctorverba.verba.VerbumSimplex;
 import org.apache.commons.lang3.StringUtils;
 import org.jetbrains.annotations.NotNull;
@@ -13,11 +13,11 @@ import org.junit.jupiter.api.*;
  */
 @SuppressWarnings({ "NonAsciiCharacters", "SpellCheckingInspection", "FieldCanBeLocal" })
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
-public class Numerī {
+public class Numerī extends Omnum {
   @NotNull @Getter(lazy = true) @Accessors(fluent = true)
   private final StrūctorVerba strūctor = StrūctorVerba.fac.get();
 
-  private final short NUMERUM_MAXIMUM = 3999;
+  private final short NUMERUM_MAXIMUM = 3998;
   private final short XLII_NUMERUM    = 42;
 
   private final @NotNull String XLII_SCRĪPTIŌ = "XLII";
@@ -103,7 +103,7 @@ public class Numerī {
    */
   @Test @Order(3)
   public void combīnātiōnis() {
-    final short numerus = (short) Math.round((NUMERUM_MAXIMUM + 1) * Math.random());
+    final short numerus = (short) Math.round((NUMERUM_MAXIMUM + 1) * Math.random() + 1);
 
     final VerbumSimplex.Numerus prīmus = strūctor().numerus(numerus);
     Assertions.assertNotNull(prīmus, String.format("Prōductō combīnātiōnis est relicta prōductiō numerī %d.", numerus));

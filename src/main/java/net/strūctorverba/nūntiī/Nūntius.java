@@ -31,6 +31,7 @@ public abstract class Nūntius {
    * @param parametrī continet parametrōs ūsōs organum internum reī huius generāre.
    */
   protected Nūntius(@NotNull final ParametrīNūntiī parametrī) {
+    Thread.currentThread().setUncaughtExceptionHandler(Nūntius.NūntiusErrōribus.fac.get());
     gradusMinimus = parametrī.gradusMinimus;
     praecō = parametrī.praecōnium.get();
   }
