@@ -36,23 +36,25 @@ Rem classis [StrūctorVerba](src/main/java/net/strūctorverba/mīscella/Strūcto
 
 ```java
 class Tentāmen {
-  final StrūctorVerba strūctor = StrūctorVerba.fac.get();
-  final Verba verba = strūctor.strue(strūctor.nōmenLege()
-                                             .adveniam("verbum",
-                                                       Speciālitās.COMMŪNE, Genus.NEUTRUM,
-                                                       Cāsus.ACCŪSĀTĪVUS, Numerālis.PLŪRĀLIS),
-                                     strūctor.adiectīvumLege()
-                                             .adveniam("Latīnus",
-                                                       Speciālitās.PROPRIUM, Genus.NEUTRUM,
-                                                       Cāsus.ACCŪSĀTĪVUS, Numerālis.PLŪRĀLIS),
-                                     strūctor.āctumLege()
-                                             .adveniam("iūbilāre",
-                                                       Modus.INDICĀTĪVUS, Vōx.ĀCTĪVA, Tempus.PRAESĒNS,
-                                                       Numerālis.SINGULĀRIS, Persōna.PRĪMA),
-                                     strūctor.āctumLege()
-                                             .adveniam("scrībere",
-                                                       Modus.ĪNFĪNĪTĪVUS, Vōx.ĀCTĪVA, Tempus.PRAESĒNS));
-  System.out.println(verba); // Verba Latīna iūbilō scrībere
+  private void main(String[] args) {
+    final StrūctorVerba strūctor = StrūctorVerba.fac.get();
+    final Verba verba = strūctor.strue(strūctor.nōmenLege()
+                                               .adveniam("verbum",
+                                                         Speciālitās.COMMŪNE, Genus.NEUTRUM,
+                                                         Cāsus.ACCŪSĀTĪVUS, Numerālis.PLŪRĀLIS),
+                                       strūctor.adiectīvumLege()
+                                               .adveniam("Latīnus",
+                                                         Speciālitās.PROPRIUM, Genus.NEUTRUM,
+                                                         Cāsus.ACCŪSĀTĪVUS, Numerālis.PLŪRĀLIS),
+                                       strūctor.āctumLege()
+                                               .adveniam("iūbilāre",
+                                                         Modus.INDICĀTĪVUS, Vōx.ĀCTĪVA, Tempus.PRAESĒNS,
+                                                         Numerālis.SINGULĀRIS, Persōna.PRĪMA),
+                                       strūctor.āctumLege()
+                                               .adveniam("scrībere",
+                                                         Modus.ĪNFĪNĪTĪVUS, Vōx.ĀCTĪVA, Tempus.PRAESĒNS));
+    System.out.println(verba); // Verba Latīna iūbilō scrībere
+  }
 }
 ```
 
