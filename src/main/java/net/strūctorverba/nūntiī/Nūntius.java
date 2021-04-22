@@ -1,12 +1,12 @@
 package net.strūctorverba.nūntiī;
 
-import net.strūctorverba.conditōrēs.ConditōrSimplicibus;
+import net.strūctorverba.conditōrēs.ConditōrConiūnctīvīs;
 import net.strūctorverba.conditōrēs.multiplicia.*;
 import net.strūctorverba.inventōrēs.*;
 import net.strūctorverba.lēctōrēs.*;
+import net.strūctorverba.mīscella.Omnum;
 import net.strūctorverba.tenōrēs.*;
 import net.strūctorverba.verba.VerbumSimplex;
-import net.strūctorverba.verba.disposita.VerbaPraepositiōne;
 import net.strūctorverba.verba.multiplicia.*;
 import org.apache.commons.lang3.*;
 import org.jetbrains.annotations.*;
@@ -28,7 +28,7 @@ public abstract class Nūntius {
 
   /**
    * Officium hoc cōnstrūctōrem reī classis huius perpetrat.
-   * @param parametrī continet parametrōs ūsōs organum internum reī huius generāre.
+   * @param parametrī Valor hic parametrōs ūsōs prō generātiōne organum internum reī huius continet.
    */
   protected Nūntius(@NotNull final ParametrīNūntiī parametrī) {
     Thread.currentThread().setUncaughtExceptionHandler(Nūntius.NūntiusErrōribus.fac.get());
@@ -67,7 +67,7 @@ public abstract class Nūntius {
   }
 
   /**
-   * Modus hic persignat quod exsecūtiōnem programmātis StrūctorVerba continuātur condiciōnem aliquam errōrem indicat.
+   * Modus hic persignat quod exsecūtiōnem programmātis StrūctorVerba continuātur condiciōnem quam errōrem indicat.
    * @param nūntia seriēs reī persignāre
    * @see GradusNūntiī#GRAVIS
    */
@@ -88,7 +88,7 @@ public abstract class Nūntius {
   }
 
   /**
-   * Modus hic persignat quod exsecūtiōnem programmātis StrūctorVerba continuātur condiciōnem aliquam auctōribus programmātis intersit.
+   * Modus hic persignat quod exsecūtiōnem programmātis StrūctorVerba continuātur condiciōnem quam auctōribus programmātis intersit.
    * @param nūntia seriēs reī persignāre
    * @see GradusNūntiī#PRAEGRESSŪRUS
    */
@@ -97,7 +97,7 @@ public abstract class Nūntius {
   }
 
   /**
-   * Modus hic persignat quod exsecūtiōnem programmātis StrūctorVerba continuātur condiciōnem aliquam errōrem addūcat.
+   * Modus hic persignat quod exsecūtiōnem programmātis StrūctorVerba continuātur condiciōnem quam errōrem addūcat.
    * @param nūntia seriēs reī persignāre
    * @see GradusNūntiī#PRAEMONITŌRIUS
    */
@@ -106,7 +106,7 @@ public abstract class Nūntius {
   }
 
   /**
-   * Modus hic persignat quod exsecūtiōnem programmātis StrūctorVerba continuātur condiciōnem aliquam ūsūfructuāriīs programmātis intersit.
+   * Modus hic persignat quod exsecūtiōnem programmātis StrūctorVerba continuātur condiciōnem quam ūsūfructuāriīs programmātis intersit.
    * @param nūntia seriēs reī persignāre
    * @see GradusNūntiī#ĪNFŌRMĀTĪVUS
    */
@@ -115,7 +115,7 @@ public abstract class Nūntius {
   }
 
   /**
-   * Modus hic persignat quod exsecūtiōnem programmātis StrūctorVerba continuātur condiciōnem aliquam nēminī fortasse intersit.
+   * Modus hic persignat quod exsecūtiōnem programmātis StrūctorVerba continuātur condiciōnem quam nēminī fortasse intersit.
    * @param nūntia seriēs reī persignāre
    * @see GradusNūntiī#SCRŪTĀNS
    */
@@ -125,7 +125,7 @@ public abstract class Nūntius {
   }
 
   /**
-   * Modus hic persignat quod exsecūtiōnem programmātis StrūctorVerba continuātur condiciōnem aliquam nēminī probābiliter intersit.
+   * Modus hic persignat quod exsecūtiōnem programmātis StrūctorVerba continuātur condiciōnem quam nēminī probābiliter intersit.
    * @param nūntia seriēs reī persignāre
    * @see GradusNūntiī#SCRŪTĀNTIOR
    */
@@ -135,7 +135,7 @@ public abstract class Nūntius {
   }
 
   /**
-   * Modus hic persignat quod exsecūtiōnem programmātis StrūctorVerba continuātur condiciōnem aliquam nēminī certissime intersit.
+   * Modus hic persignat quod exsecūtiōnem programmātis StrūctorVerba continuātur condiciōnem quam nēminī certissime intersit.
    * @param nūntia seriēs reī persignāre
    * @see GradusNūntiī#SCRŪTĀNTISSIMUS
    */
@@ -164,8 +164,8 @@ public abstract class Nūntius {
   }
 
   /**
-   * Classis {@link NūntiusTenōrīConiūnctivīs} est vās classis {@link Nūntius} classī {@link TenorSimplicibus.TenorConiūnctivīs}
-   * @see TenorSimplicibus.TenorConiūnctivīs
+   * Classis {@link NūntiusTenōrīConiūnctivīs} est vās classis {@link Nūntius} classī {@link TenorConiūnctivīs}
+   * @see TenorConiūnctivīs
    */
   @Singleton public static final class NūntiusTenōrīConiūnctivīs extends Nūntius {
     @Nullable private static NūntiusTenōrīConiūnctivīs īnstantia = null;
@@ -178,7 +178,7 @@ public abstract class Nūntius {
       () -> ObjectUtils.firstNonNull(īnstantia, īnstantia = new NūntiusTenōrīConiūnctivīs());
 
     private NūntiusTenōrīConiūnctivīs( ) {
-      super(ParametrīNūntiī.parā(TenorSimplicibus.TenorConiūnctivīs.class));
+      super(ParametrīNūntiī.parā(TenorConiūnctivīs.class));
     }
   }
 
@@ -279,8 +279,8 @@ public abstract class Nūntius {
   }
 
   /**
-   * Classis {@link NūntiusConditōrīConiūnctivīs} est vās classis {@link Nūntius} classī {@link ConditōrSimplicibus.ConditōrConiūnctīvīs}
-   * @see ConditōrSimplicibus.ConditōrConiūnctīvīs
+   * Classis {@link NūntiusConditōrīConiūnctivīs} est vās classis {@link Nūntius} classī {@link ConditōrConiūnctīvīs}
+   * @see ConditōrConiūnctīvīs
    */
   @Singleton public static final class NūntiusConditōrīConiūnctivīs extends Nūntius {
     @Nullable private static NūntiusConditōrīConiūnctivīs īnstantia = null;
@@ -293,7 +293,7 @@ public abstract class Nūntius {
       () -> ObjectUtils.firstNonNull(īnstantia, īnstantia = new NūntiusConditōrīConiūnctivīs());
 
     private NūntiusConditōrīConiūnctivīs( ) {
-      super(ParametrīNūntiī.parā(ConditōrSimplicibus.ConditōrConiūnctīvīs.class));
+      super(ParametrīNūntiī.parā(ConditōrConiūnctīvīs.class));
     }
   }
 
@@ -488,8 +488,8 @@ public abstract class Nūntius {
   }
 
   /**
-   * Classis {@link NūntiusLēctōrīConiūnctīvīs} est vās classis {@link Nūntius} classī {@link LēctorSimplicibus.LēctorConiūnctīvīs}
-   * @see LēctorSimplicibus.LēctorConiūnctīvīs
+   * Classis {@link NūntiusLēctōrīConiūnctīvīs} est vās classis {@link Nūntius} classī {@link LēctorConiūnctīvīs}
+   * @see LēctorConiūnctīvīs
    */
   @Singleton public static final class NūntiusLēctōrīConiūnctīvīs extends Nūntius {
     @Nullable private static NūntiusLēctōrīConiūnctīvīs īnstantia = null;
@@ -502,7 +502,7 @@ public abstract class Nūntius {
       () -> ObjectUtils.firstNonNull(īnstantia, īnstantia = new NūntiusLēctōrīConiūnctīvīs());
 
     private NūntiusLēctōrīConiūnctīvīs( ) {
-      super(ParametrīNūntiī.parā(LēctorSimplicibus.LēctorConiūnctīvīs.class));
+      super(ParametrīNūntiī.parā(LēctorConiūnctīvīs.class));
     }
   }
 
@@ -754,27 +754,9 @@ public abstract class Nūntius {
   }
 
   /**
-   * Classis {@link NūntiusVerbōrumPraepositiōnibus} est vās classis {@link Nūntius} classī {@link VerbaPraepositiōne}}
-   * @see VerbaPraepositiōne
-   */
-  public static final class NūntiusVerbōrumPraepositiōnibus extends Nūntius {
-    @Nullable private static NūntiusVerbōrumPraepositiōnibus īnstantia = null;
-
-    /**
-     * Valor hic viam reī classis huiuc facit.
-     * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
-     */
-    @NotNull public static final Supplier <NūntiusVerbōrumPraepositiōnibus> fac =
-      () -> ObjectUtils.firstNonNull(īnstantia, īnstantia = new NūntiusVerbōrumPraepositiōnibus());
-
-    private NūntiusVerbōrumPraepositiōnibus() {
-      super(ParametrīNūntiī.parā(VerbaPraepositiōne.Conditōr.class));
-    }
-  }
-
-  /**
    * Classis {@link NūntiusErrōribus} est vās classis {@link Nūntius} ipsīusmet. <br>
    * Indicat quod exsecūtiōnem programmātis StrūctorVerba errōrem inopīnātum continuātur.
+   * @see Omnum
    * @see <a href="https://docs.oracle.com/javase/9/docs/api/java/lang/Thread.UncaughtExceptionHandler.html">Thread.UncaughtExceptionHandler</a>
    */
   @Singleton public static final class NūntiusErrōribus extends Nūntius implements Thread.UncaughtExceptionHandler {
@@ -793,6 +775,7 @@ public abstract class Nūntius {
 
     /**
      * Modus hic invocātur quandōque exsecūtiōnem programmātis StrūctorVerba errōrem inopīnātum continuātur.
+     * @see <a href="https://docs.oracle.com/javase/7/docs/api/java/lang/Thread.UncaughtExceptionHandler.html#uncaughtException(java.lang.Thread,%20java.lang.Throwable)">UncaughtExceptionHandler.uncaughtException</a>
      */
     public final @Override void uncaughtException(@NotNull final Thread līnea, @NotNull final Throwable error) {
       terreō(error);

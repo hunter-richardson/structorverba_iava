@@ -88,6 +88,7 @@ public final class Āctum extends VerbumMultiplex <Āctum> {
    * @param nmrl valōrem {@link Nōminālis#numerālis} indicat.
    * @param grds valōrem {@link Adiectīvum#gradus} indicat.
    * @see LēctorMultiplicibus.LēctorAdiectīvīs#adveniam(String, Enum[])
+   * @see Modus#PARTICIPĀLIS
    */
   @Nullable public Adiectīvum participem(@NotNull final Vōx vx, @NotNull final Tempus tmps,
                                          @NotNull final Speciālitās spclt, @NotNull final Genus gns,
@@ -113,6 +114,8 @@ public final class Āctum extends VerbumMultiplex <Āctum> {
    * @param nmrl valōrem {@link Nōminālis#numerālis} indicat.
    * @param grds valōrem {@link Adiectīvum#gradus} indicat.
    * @see LēctorMultiplicibus.LēctorAdiectīvīs#adveniam(String, Enum[])
+   * @see Modus#PARTICIPĀLIS
+   * @see #participem(Vōx, Tempus, Speciālitās, Genus, Cāsus, Numerālis, Gradus)
    */
   @Nullable public Adiectīvum participem(@NotNull final Vōx vx, @NotNull final Speciālitās spclt,
                                          @NotNull final Genus gns, @NotNull final Cāsus css,
@@ -130,6 +133,8 @@ public final class Āctum extends VerbumMultiplex <Āctum> {
    * @param nmrl valōrem {@link Nōminālis#numerālis} indicat.
    * @param grds valōrem {@link Adiectīvum#gradus} indicat.
    * @see LēctorMultiplicibus.LēctorAdiectīvīs#adveniam(String, Enum[])
+   * @see Modus#PARTICIPĀLIS
+   * @see #participem(Vōx, Tempus, Speciālitās, Genus, Cāsus, Numerālis, Gradus)
    */
   @Nullable public Adiectīvum participem(@NotNull final Tempus tmps, @NotNull final Speciālitās spclt,
                                          @NotNull final Genus gns, @NotNull final Cāsus css,
@@ -146,6 +151,8 @@ public final class Āctum extends VerbumMultiplex <Āctum> {
    * @param nmrl valōrem {@link Nōminālis#numerālis} indicat.
    * @param grds valōrem {@link Adiectīvum#gradus} indicat.
    * @see LēctorMultiplicibus.LēctorAdiectīvīs#adveniam(String, Enum[])
+   * @see Modus#PARTICIPĀLIS
+   * @see #participem(Vōx, Tempus, Speciālitās, Genus, Cāsus, Numerālis, Gradus)
    */
   @Nullable public Adiectīvum participem(@NotNull final Speciālitās spclt, @NotNull final Genus gns,
                                          @NotNull final Cāsus css, @NotNull final Numerālis nmrl,

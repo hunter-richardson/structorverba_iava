@@ -37,7 +37,7 @@ public abstract class LēctorMultiplicibus <Hoc extends VerbumMultiplex <Hoc>> e
   }
 
   /**
-   * Modus hic ūtitur modus {@link Lēctor#legam(String)} rem classis {@link Hoc} ā valōre {@link Lēctor#tenor} advenīre.
+   * Modus hic ūtitur modus {@link Lēctor#legam(String)} ut rem classis {@link Hoc} ā valōre {@link Lēctor#tenor} adveniat.
    * @param fundāmen fundāmen verbō quod rēs haec cōnābitur advenīre
    * @param illa seriēs ēnumerātiōnum quam licet {@link #inventor} cōlere ēventīs lēctīs
    * @return Rem classis {@link Hoc} quam valōrem {@code verbum} quadrat. <br>
@@ -131,7 +131,7 @@ public abstract class LēctorMultiplicibus <Hoc extends VerbumMultiplex <Hoc>> e
 
     /**
      * Modus hic cōnābitur advenīre rem classis {@link Adiectīvum} quam adiectīvum possessīvum repraesentat et valōrēs {@code illa} quadrat.
-     * @param numerālis dēsignat adiectīvum possessīvum sīve singulāre (id est aut "meus" aut "tuus") sīve plūrāle (id est aut "noster" aut "vester") petitur
+     * @param numerālis dēsignat adiectīvum possessīvum sīve singulāre (id est aut {@code meus} aut {@code tuus}) sīve plūrāle (id est aut {@code noster} aut {@code vester}) petitur
      * @param persōna persōnam adiectīvī petītī dēsignat
      * @param illa seriēs ēnumerātiōnum licent {@link #inventor} colere ēventīs lēctīs
      * @return rem classis {@link Adiectīvum} quam valōrēs et {@code numerālis} et {@code persōna} et {@code illa} quadrat. <br>
@@ -142,6 +142,7 @@ public abstract class LēctorMultiplicibus <Hoc extends VerbumMultiplex <Hoc>> e
      * @see <a href="{@docRoot}/../src/main/resources">auxiliārēs</a>/adiectīva/vester.xml
      * @see Numerālis
      * @see Persōna
+     * @see #adveniam(String, Enum[])
      */
     @SuppressWarnings("unused")
     @Nullable public Adiectīvum adveniam(final Numerālis numerālis, final Persōna persōna, final Enum<?>... illa) {
@@ -251,7 +252,7 @@ public abstract class LēctorMultiplicibus <Hoc extends VerbumMultiplex <Hoc>> e
     /**
      * Modus hic cōnābitur advenīre rem classis {@link Āctum} quam fōrma āctī "esse" repraesentat et valōrēs {@code illa} quadrat.
      * @param illa seriēs ēnumerātiōnum licent {@link #inventor} colere ēventīs lēctīs. <br>
-     *      * Modus hic valōrem {@code null} refert sī nihil valōrēs {@code illa} quadrat.
+     * Modus hic valōrem {@code null} refert sī nihil valōrēs {@code illa} quadrat.
      * @return rem classis {@link Āctum} quam valōrem {@code illa} quadrat
      * @see <a href="{@docRoot}/../src/main/resources">auxiliārēs</a>/ācta/esse.xml
      */

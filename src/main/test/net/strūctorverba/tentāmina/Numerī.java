@@ -69,7 +69,7 @@ public class Numerī extends Omnum {
 
   /**
    * Modus hic conversiōnem ā numerō reī classis {@link VerbumSimplex.Numerus} tentat. <br>
-   * Scrīptiunculam "42 = XLII" prōdūcat.
+   * Scrīptiunculam {@code 42 = XLII} prōdūcat.
    */
   @Test @Order(1)
   public void conversiōnis() {
@@ -84,7 +84,7 @@ public class Numerī extends Omnum {
 
   /**
    * Modus hic reversiōnem ā rē classis {@link VerbumSimplex.Numerus} numerō tentat. <br>
-   * Scrīptiunculam "XLII = 42" prōdūcat.
+   * Scrīptiunculam {@code XLII = 42} prōdūcat.
    */
   @Test @Order(2)
   public void reversiōnis() {
@@ -99,7 +99,7 @@ public class Numerī extends Omnum {
 
   /**
    * Modus hic conversiōnem ā numerō reī classis {@link VerbumSimplex.Numerus} atque reversiōnem versam tentat. <br>
-   * Scrīptiunculās et "42 = XLII" et "XLII = 42" dē numerō nescītō inter I et MMMCMXCIX prōdūcat.
+   * Scrīptiunculās et {@code 42 = XLII} et {@code XLII = 42} dē numerō nescītō inter I et MMMCMXCIX prōdūcat.
    */
   @Test @Order(3)
   public void combīnātiōnis() {
@@ -119,7 +119,7 @@ public class Numerī extends Omnum {
 
   /**
    * Modus hic additiōnem rērum duārum classis {@link VerbumSimplex.Numerus}. <br>
-   * Scrīptiunculās et <code>17 = XVIII</code> et <code>3 = III</code> et <code>17 + 3 = 20 = XX</code> prōdūcat.
+   * Scrīptiunculās et {@code 17 = XVIII} et {@code 3 = III} et {@code 17 + 3 = 20 = XX} prōdūcat.
    */
   @Test @Order(4)
   public void additiōnis() {
@@ -128,7 +128,7 @@ public class Numerī extends Omnum {
 
   /**
    * Modus hic subtractiōnem rērum duārum classis {@link VerbumSimplex.Numerus}. <br>
-   * Scrīptiunculās et <code>12 = XII</code> et <code>7 = VII</code> et <code>12 - 7 = 5 = V</code> prōdūcat.
+   * Scrīptiunculās et {@code 12 = XII} et {@code 7 = VII} et {@code 12 - 7 = 5 = V} prōdūcat.
    */
   @Test @Order(5)
   public void subtractiōnis() {
@@ -137,7 +137,7 @@ public class Numerī extends Omnum {
 
   /**
    * Modus hic multiplicātiōnem rērum duārum classis {@link VerbumSimplex.Numerus}. <br>
-   * Scrīptiunculās et <code>3 = III</code> et <code>2 = II</code> et <code>3 * 2 = 6 = VI</code> prōdūcat.
+   * Scrīptiunculās et {@code 3 = III} et {@code 2 = II} et {@code 3 * 2 = 6 = VI} prōdūcat.
    */
   @Test @Order(6)
   public void multiplicātiōnis() {
@@ -146,7 +146,7 @@ public class Numerī extends Omnum {
 
   /**
    * Modus hic dīvīsiōnem rērum duārum classis {@link VerbumSimplex.Numerus}. <br>
-   * Scrīptiunculās et <code>18 = XVII</code> et <code>6 = VI</code> et <code>18 / 6 = 3 = III</code> prōdūcat.
+   * Scrīptiunculās et {@code 18 = XVII} et {@code 6 = VI} et {@code 18 / 6 = 3 = III} prōdūcat.
    */
   @Test @Order(7)
   public void dīvīsiōnis() {
@@ -155,7 +155,7 @@ public class Numerī extends Omnum {
 
   /**
    * Modus hic mānsiōnem rērum duārum classis {@link VerbumSimplex.Numerus}. <br>
-   * Scrīptiunculās et <code>12 = XII</code> et <code>9 = IX</code> et <code>12 % 9 = 3 = III</code> prōdūcat.
+   * Scrīptiunculās et {@code 12 = XII} et {@code 9 = IX} et {@code 12 % 9 = 3 = III} prōdūcat.
    */
   @Test @Order(8)
   public void mānsiōnis() {

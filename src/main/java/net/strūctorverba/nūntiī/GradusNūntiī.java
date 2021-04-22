@@ -77,7 +77,7 @@ enum GradusNūntiī {
   }
 
   /**
-   * Modus hic comparātiōnī intrā rēs ēnumerātiōnis huius et classis <a href="https://docs.oracle.com/javase/7/docs/api/java/util/logging/Level.html">Level</a> licet.
+   * Modus hic comparātiōnī intrā rēs ēnumerātiōnis huius classisque <a href="https://docs.oracle.com/javase/7/docs/api/java/util/logging/Level.html">Level</a> licet.
    * @param gressus valor tentandus
    * @return rēs ēnumerātiōnis huius quam valor {@code gressus} quadrat
    */

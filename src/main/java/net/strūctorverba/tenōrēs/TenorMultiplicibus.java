@@ -37,9 +37,9 @@ public abstract class TenorMultiplicibus <Hoc extends VerbumMultiplex <Hoc>> ext
 
   /**
    * Modus hic ēnumerātiōnēs prōcēdit lēctās ā rēbus classis {@link LēctorMultiplicibus}
-   * @param locus valōrem hunc modus hic nōn ūtitur sed necessārium est rē classis <a href="https://docs.oracle.com/javase/7/docs/api/org/xml/sax/helpers/DefaultHandler.html">DefaultHandler</a> cōnsociāre
-   * @param loculus valōrem hunc modus hic nōn ūtitur sed necessārium est rē classis <a href="https://docs.oracle.com/javase/7/docs/api/org/xml/sax/helpers/DefaultHandler.html">DefaultHandler</a> cōnsociāre
-   * @param quālis valōrem hunc modus hic nōn ūtitur sed necessārium est rē classis <a href="https://docs.oracle.com/javase/7/docs/api/org/xml/sax/helpers/DefaultHandler.html">DefaultHandler</a> cōnsociāre
+   * @param locus valōrem hunc modus hic nōn ūtitur sed necessārium est ut rē classis <a href="https://docs.oracle.com/javase/7/docs/api/org/xml/sax/helpers/DefaultHandler.html">DefaultHandler</a> cōnsociet
+   * @param loculus valōrem hunc modus hic nōn ūtitur sed necessārium est ut rē classis <a href="https://docs.oracle.com/javase/7/docs/api/org/xml/sax/helpers/DefaultHandler.html">DefaultHandler</a> cōnsociet
+   * @param quālis valōrem hunc modus hic nōn ūtitur sed necessārium est ut rē classis <a href="https://docs.oracle.com/javase/7/docs/api/org/xml/sax/helpers/DefaultHandler.html">DefaultHandler</a> cōnsociet
    * @param attribūta seriēs valōrum nōminumque sociātōrum
    * @see <a href="https://docs.oracle.com/javase/7/docs/api/org/xml/sax/helpers/DefaultHandler.html#startElement(java.lang.String,%20java.lang.String,%20java.lang.String,%20org.xml.sax.Attributes)">DefaultHandler.startElement</a>
    */
@@ -55,9 +55,9 @@ public abstract class TenorMultiplicibus <Hoc extends VerbumMultiplex <Hoc>> ext
 
   /**
    * Modus hic rem aptam classis {@link ConditōrMultiplicibus} imperat restituī.
-   * @param locus valōrem hunc modus hic nōn ūtitur sed necessārium est rē classis <a href="https://docs.oracle.com/javase/7/docs/api/org/xml/sax/helpers/DefaultHandler.html">DefaultHandler</a> cōnsociāre
-   * @param loculus valōrem hunc modus hic nōn ūtitur sed necessārium est rē classis <a href="https://docs.oracle.com/javase/7/docs/api/org/xml/sax/helpers/DefaultHandler.html">DefaultHandler</a> cōnsociāre
-   * @param quālis valōrem hunc modus hic nōn ūtitur sed necessārium est rē classis <a href="https://docs.oracle.com/javase/7/docs/api/org/xml/sax/helpers/DefaultHandler.html">DefaultHandler</a> cōnsociāre
+   * @param locus valōrem hunc modus hic nōn ūtitur sed necessārium est ut rē classis <a href="https://docs.oracle.com/javase/7/docs/api/org/xml/sax/helpers/DefaultHandler.html">DefaultHandler</a> cōnsociet
+   * @param loculus valōrem hunc modus hic nōn ūtitur sed necessārium est ut rē classis <a href="https://docs.oracle.com/javase/7/docs/api/org/xml/sax/helpers/DefaultHandler.html">DefaultHandler</a> cōnsociet
+   * @param quālis valōrem hunc modus hic nōn ūtitur sed necessārium est ut rē classis <a href="https://docs.oracle.com/javase/7/docs/api/org/xml/sax/helpers/DefaultHandler.html">DefaultHandler</a> cōnsociet
    * @see <a href="https://docs.oracle.com/javase/7/docs/api/org/xml/sax/helpers/DefaultHandler.html#endElement(java.lang.String,%20java.lang.String,%20java.lang.String)">DefaultHandler.endElement</a>
    */
   @Override public final void endElement(@NotNull final String locus,
@@ -77,6 +77,15 @@ public abstract class TenorMultiplicibus <Hoc extends VerbumMultiplex <Hoc>> ext
       nūntius.garriō("Aggregāvī verbum novum", hoc);
       seriēs.add(hoc);
     }
+  }
+
+  /**
+   * {@inheritDoc}
+   * @param scrīptiō fōrmam scrīptam indendus
+   * @see VerbumMultiplex#scrīptiō
+   */
+  @Override protected void scrībō(@NotNull String scrīptiō) {
+    condītōr.ut(scrīptiō);
   }
 
   /**
@@ -100,15 +109,6 @@ public abstract class TenorMultiplicibus <Hoc extends VerbumMultiplex <Hoc>> ext
       super(Nūntius.NūntiusTenōrīAdverbiīs.fac, ConditōrAdverbiīs.fac);
       nūntius.plūrimumGarriō("Factus sum");
     }
-  }
-
-  /**
-   * {@inheritDoc}
-   * @param scrīptiō fōrmam scrīptam indendus
-   * @see VerbumMultiplex#scrīptiō
-   */
-  @Override protected void scrībō(@NotNull String scrīptiō) {
-    condītōr.ut(scrīptiō);
   }
 
   /**

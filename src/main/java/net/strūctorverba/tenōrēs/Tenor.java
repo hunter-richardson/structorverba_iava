@@ -24,12 +24,12 @@ public abstract class Tenor <Hoc extends Verbum <Hoc>> extends DefaultHandler {
   @NotNull protected final Nūntius nūntius;
 
   /**
-   * Valor hic rem classis {@link Hoc} tenet et cōnstruenum ā reī aptae classis {@link Conditōr} et praebendum ad rē classis {@link LēctorSimplicibus}.
+   * Valor hic rem classis {@link Hoc} tenet et cōnstruenum ā reī aptae classis {@link Conditōr} et praebendum ad rē classis {@link Lēctor}.
    */
   @Nullable protected Hoc hoc;
 
   /**
-   * Valor hic seriem rērum classis {@link Hoc} tenet praebendum ad rē classis {@link LēctorMultiplicibus}.
+   * Valor hic seriem rērum classis {@link Hoc} praebendārum ad rē classis {@link LēctorMultiplicibus} tenet.
    */
   protected final @NotNull List <@NotNull Hoc> seriēs = new ArrayList <>();
 
@@ -50,7 +50,7 @@ public abstract class Tenor <Hoc extends Verbum <Hoc>> extends DefaultHandler {
   }
 
   /**
-   * Modus hic valōrem {@link #seriēs} per valōrem {@code quaestiō} cōlat rem singulam prōdūcere.
+   * Modus hic valōrem {@link #seriēs} per valōrem {@code quaestiō} cōlat ut rem singulam prōdūcat.
    * @param quaestiō quaestiō tentanda
    * @return valōrem {@link #seriēs} valōrem {@code quaestiō} percōlāta
    */
@@ -60,7 +60,7 @@ public abstract class Tenor <Hoc extends Verbum <Hoc>> extends DefaultHandler {
   }
 
   /**
-   * Modus hic fōrmam scrīptam prōcēdit prōvīsam ā rē classis <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.xml/org/xml/sax/XMLReader.html">XMLReader</a>
+   * Modus hic fōrmam scrīptam prōvīsam ā rē classis <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.xml/org/xml/sax/XMLReader.html">XMLReader</a> prōcēdit.
    * @param litterae litterae prōvīsae
    * @param incepta positiō incepta in valōrem {@code litterae}
    * @param longitia longitia valōris {@code litterae} ūtendī
@@ -78,7 +78,7 @@ public abstract class Tenor <Hoc extends Verbum <Hoc>> extends DefaultHandler {
   }
 
   /**
-   * Modus hic rem aptam classis {@link Conditōr} imperat fōrmam scrīptam reī prōductae classis {@link Hoc} indere.
+   * Modus hic rem aptam classis {@link Conditōr} imperat ut fōrmam scrīptam reī prōductae classis {@link Hoc} indat.
    * @param scrīptiō fōrmam scrīptam indendus
    * @see #characters(char[], int, int)
    */

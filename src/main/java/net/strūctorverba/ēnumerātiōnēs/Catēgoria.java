@@ -1,7 +1,6 @@
 package net.strūctorverba.ēnumerātiōnēs;
 
 import net.strūctorverba.verba.*;
-import net.strūctorverba.verba.disposita.VerbaPraepositiōne;
 import net.strūctorverba.verba.multiplicia.*;
 import org.apache.commons.lang3.StringUtils;
 import org.jetbrains.annotations.NotNull;
@@ -50,12 +49,7 @@ public enum Catēgoria {
   /**
    * Valor hic classem {@link VerbumSimplex.Numerus} respondet.
    */
-  NUMERUM(StringUtils.EMPTY),
-
-  /**
-   * Valor hic classem {@link VerbaPraepositiōne} respondet.
-   */
-  VERBA_PRAEPOSITIŌNE(StringUtils.EMPTY);
+  NUMERUM(StringUtils.EMPTY);
 
   /**
    * Valor hic nōminātur scrīnium intrā quō scāpum verbī omnī cōnservātum est.

@@ -15,7 +15,8 @@ import java.util.function.BiFunction;
  */
 @SuppressWarnings({ "NonAsciiCharacters", "SpellCheckingInspection", "unused" })
 final class FōrmaTemporis extends Omnum {
-  private final boolean pūnctillaPraecidemne;
+  @NotNull private final ZonedDateTime tempus;
+           private final boolean       pūnctillaPraecidemne;
 
   @NotNull private static final BiFunction <@NotNull ZonedDateTime, @NotNull Boolean, @NotNull String> fōrmātiō =
     (tempus, praecīsiō) -> {
@@ -47,8 +48,6 @@ final class FōrmaTemporis extends Omnum {
                              RomanInteger.parse(String.valueOf(tempus.getSecond()), IntegerType.ARABIC), zona);
       }
     };
-
-  @NotNull private final ZonedDateTime tempus;
 
   private FōrmaTemporis() {
     tempus = ZonedDateTime.now();

@@ -14,7 +14,7 @@ import java.nio.file.Path;
 import java.util.function.Supplier;
 
 /**
- * Classis {@link Lēctor} colliget data ā scāpō XML intrā scrīnium <a href="{@docRoot}/../src/main/resources">auxiliārēs</a> rēbus classis {@link Verbum} scrībere.
+ * Classis {@link Lēctor} colliget data ā scāpō XML intrā scrīnium <a href="{@docRoot}/../src/main/resources">auxiliārēs</a> ut rēbus classis {@link Verbum} scrībat.
  * @param <Hoc> classis extenta classis {@link Verbum}
  */
 @SuppressWarnings({ "NonAsciiCharacters", "SpellCheckingInspection" })

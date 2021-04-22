@@ -41,7 +41,7 @@ public abstract class Inventor <Hoc extends VerbumMultiplex <Hoc>> extends Omnum
   }
 
   /**
-   * @return Quaestiōnem quam rēs classis {@link LēctorMultiplicibus} ūtātur rēs classis {@link VerbumMultiplex} percōlere
+   * @return Quaestiōnem quam rēs classis {@link LēctorMultiplicibus} ūtātur rēs classis {@link Hoc} percōlere
    * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Predicate.html">Prediate</a>
    */
   @NotNull public abstract Predicate <@NotNull Hoc> inquīram( );

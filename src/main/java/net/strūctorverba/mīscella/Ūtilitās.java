@@ -47,6 +47,7 @@ public final class Ūtilitās extends Omnum {
   /**
    * @param locus locus adveniendus
    * @return Locus scāpī petītī intrā scrīnium <a href="{@docRoot}/../src/main/resources">auxiliārēs</a>
+   * @see #auxilior(String...)
    */
   @NotNull public static String auxilior(@NotNull final String locus) {
     return auxilior(locus.split(File.pathSeparator));

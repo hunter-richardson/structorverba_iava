@@ -1,8 +1,7 @@
-package net.strūctorverba.verba.disposita;
+package net.strūctorverba.verba;
 
 import lombok.*;
 import net.strūctorverba.mīscella.*;
-import net.strūctorverba.verba.Verbum;
 import org.apache.commons.lang3.StringUtils;
 import org.jetbrains.annotations.*;
 

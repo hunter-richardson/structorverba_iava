@@ -6,7 +6,6 @@ import lombok.*;
 import lombok.experimental.Accessors;
 import net.strūctorverba.lēctōrēs.*;
 import net.strūctorverba.verba.*;
-import net.strūctorverba.verba.disposita.*;
 import net.strūctorverba.verba.multiplicia.*;
 import net.strūctorverba.ēnumerātiōnēs.Catēgoria;
 import org.apache.commons.lang3.Range;
@@ -36,78 +35,30 @@ public final class StrūctorVerba extends Omnum {
   @NotNull private final Range<Short> TRACTUS_NUMERŌRUM = Range.between(Integer.valueOf(1).shortValue(),
                                                                         Integer.valueOf(4000).shortValue());
 
-  @Getter(lazy = true) @Accessors(fluent = true)
+  @Getter(value = AccessLevel.PUBLIC, lazy = true) @Accessors(fluent = true)
   @NotNull private final LēctorMultiplicibus.LēctorAdiectīvīs adiectīva = LēctorMultiplicibus.LēctorAdiectīvīs.fac.get();
 
-  @Getter(lazy = true) @Accessors(fluent = true)
+  @Getter(value = AccessLevel.PUBLIC, lazy = true) @Accessors(fluent = true)
   @NotNull private final LēctorMultiplicibus.LēctorAdverbiīs adverbia = LēctorMultiplicibus.LēctorAdverbiīs.fac.get();
 
-  @Getter(lazy = true) @Accessors(fluent = true)
-  @NotNull private final LēctorSimplicibus.LēctorConiūnctīvīs coniūnctīva = LēctorSimplicibus.LēctorConiūnctīvīs.fac.get();
-
-  @Getter(lazy = true) @Accessors(fluent = true)
-  @NotNull private final LēctorMultiplicibus.LēctorNōminibus nōmina = LēctorMultiplicibus.LēctorNōminibus.fac.get();
-
-  @Getter(lazy = true) @Accessors(fluent = true)
-  @NotNull private final LēctorPraepositiōnibus praepositiōnēs = LēctorPraepositiōnibus.fac.get();
-
-  @Getter(lazy = true) @Accessors(fluent = true)
+  @Getter(value = AccessLevel.PUBLIC, lazy = true) @Accessors(fluent = true)
   @NotNull private final LēctorMultiplicibus.LēctorPrōnōminibus prōnōmina = LēctorMultiplicibus.LēctorPrōnōminibus.fac.get();
 
-  @Getter(lazy = true) @Accessors(fluent = true)
+  @Getter(value = AccessLevel.PUBLIC, lazy = true) @Accessors(fluent = true)
   @NotNull private final LēctorMultiplicibus.LēctorĀctīs ācta = LēctorMultiplicibus.LēctorĀctīs.fac.get();
 
-  /**
-   * @return Rem classis {@link LēctorMultiplicibus.LēctorAdiectīvīs}
-   */
-  @NotNull public LēctorMultiplicibus.LēctorAdiectīvīs adiectīvumLege( ) {
-    return adiectīva();
-  }
+  @Getter(value = AccessLevel.PUBLIC, lazy = true) @Accessors(fluent = true)
+  @NotNull private final LēctorMultiplicibus.LēctorNōminibus nōmina = LēctorMultiplicibus.LēctorNōminibus.fac.get();
+
+  @Getter(value = AccessLevel.PUBLIC, lazy = true) @Accessors(fluent = true)
+  @NotNull private final LēctorConiūnctīvīs coniūnctīva = LēctorConiūnctīvīs.fac.get();
+
+  @Getter(value = AccessLevel.PUBLIC, lazy = true) @Accessors(fluent = true)
+  @NotNull private final LēctorPraepositiōnibus praepositiōnēs = LēctorPraepositiōnibus.fac.get();
 
   /**
-   * @return Rem classis {@link LēctorMultiplicibus.LēctorAdverbiīs}
-   */
-  @NotNull public LēctorMultiplicibus.LēctorAdverbiīs adverbiumLege( ) {
-    return adverbia();
-  }
-
-  /**
-   * @return Rem classis {@link LēctorSimplicibus.LēctorConiūnctīvīs}
-   */
-  @NotNull public LēctorSimplicibus.LēctorConiūnctīvīs coniūnctīvumLege( ) {
-    return coniūnctīva();
-  }
-
-  /**
-   * @return Rem classis {@link LēctorMultiplicibus.LēctorNōminibus}
-   */
-  @NotNull public LēctorMultiplicibus.LēctorNōminibus nōmenLege( ) {
-    return nōmina();
-  }
-
-  /**
-   * @return Rem classis {@link LēctorMultiplicibus.LēctorPrōnōminibus}
-   */
-  @NotNull public LēctorMultiplicibus.LēctorPrōnōminibus prōnōmenLege( ) {
-    return prōnōmina();
-  }
-
-  /**
-   * @return Rem classis {@link LēctorPraepositiōnibus}
-   */
-  @NotNull public LēctorPraepositiōnibus praepositiōnemLege( ) {
-    return praepositiōnēs();
-  }
-
-  /**
-   * @return Rem classis {@link LēctorMultiplicibus.LēctorĀctīs}
-   */
-  @NotNull public LēctorMultiplicibus.LēctorĀctīs āctumLege( ) {
-    return ācta();
-  }
-
-  /**
-   * Modus hic rem apta classis {@link LēctorSimplicibus} valōrī {@code catēgoria} sēligit et valōrēs {@code fundāmen} immittit.
+   * Modus hic rem apta classis {@link Lēctor} valōrī {@code catēgoria} sēligit et valōrēs {@code fundāmen} immittit.
+   * Valōrem {@code null} refert sī rem nūlla classis {@link Lēctor} valōrem {@code catēgoria} quadrat.
    * @param fundāmen valōrem {@link Verbum#fundāmen} immittendus
    * @param catēgoria valor tentendus
    * @param <Hoc> classis extenta classis {@link VerbumSimplex}
@@ -120,7 +71,6 @@ public final class StrūctorVerba extends Omnum {
                                                           @NotNull final Catēgoria catēgoria) {
     return switch (catēgoria) {
              case CONIŪNCTĪVUM -> (Hoc) coniūnctīva().adveniam(fundāmen);
-             case ADVERBIUM -> (Hoc) adverbia().adveniam(fundāmen);
              case PRAEPOSITIŌ -> (Hoc) praepositiōnēs().adveniam(fundāmen);
              default -> null;
            };
@@ -143,6 +93,7 @@ public final class StrūctorVerba extends Omnum {
     try {
       return (Hoc) (switch (catēgoria) {
                       case ADIECTĪVUM -> adiectīva();
+                      case ADVERBIUM -> adverbia();
                       case ĀCTUM -> ācta();
                       case NŌMEN -> nōmina();
                       case PRŌNŌMEN -> prōnōmina();
@@ -151,25 +102,6 @@ public final class StrūctorVerba extends Omnum {
     } catch (NullPointerException e) {
       return adveniam(fundāmen, catēgoria);
     }
-  }
-
-
-  /**
-   * @param rēs rēs classis {@link Nōminālis}
-   * @return Rem classis {@link VerbaPraepositiōne} ūsa valōrem {@code rēs}
-   */
-  @NotNull public VerbaPraepositiōne verbaPraepositiōneStrue(@NotNull final Nōminālis <@NotNull ?> rēs) {
-    return VerbaPraepositiōne.conditōr().rēs(rēs).condam();
-  }
-
-  /**
-   * @param rēs rēs classis {@link Nōminālis}
-   * @param praepositiō rēs classis {@link VerbumSimplex.Praepositiō}
-   * @return Rem classis {@link VerbaPraepositiōne} ūsa valōrēs {@code rēs} et {@code praepositiō}
-   */
-  @NotNull public VerbaPraepositiōne verbaPraepositiōneStrue(@NotNull final Nōminālis <@NotNull ?> rēs,
-                                                             @NotNull final VerbumSimplex.Praepositiō praepositiō) {
-    return VerbaPraepositiōne.conditōr().rēs(rēs).praepositiō(praepositiō).condam();
   }
 
   /**

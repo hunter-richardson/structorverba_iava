@@ -3,7 +3,7 @@ package net.strūctorverba.tentāmina;
 import lombok.Getter;
 import lombok.experimental.Accessors;
 import net.strūctorverba.mīscella.*;
-import net.strūctorverba.verba.disposita.Verba;
+import net.strūctorverba.verba.Verba;
 import net.strūctorverba.ēnumerātiōnēs.*;
 import org.apache.commons.collections4.CollectionUtils;
 import org.apache.commons.lang3.StringUtils;
@@ -28,7 +28,11 @@ public final class DolōremIpsum extends Omnum {
   @NotNull private final String prōductaTertia  = "Cōnsectētur adipīscī velit";
   @NotNull private final String prōductaQuārta  = "Sed quia nōnnumquam eius modī tempora incidunt";
   @NotNull private final String prōductaQuīnta  = "Ut labōre et dolōre magnam aliquam quaerat voluptātem";
-  @NotNull private final String prōductaCūncta  = "Neque porrō quisquam est quī dolōrem ipsum quia dolor sit amet cōnsectētur adipīscī velit sed quia nōnnumquam eius modī tempora incidunt ut labōre et dolōre magnam aliquam quaerat voluptātem";
+  @NotNull private final String prōductaCūncta  = "Neque porrō quisquam est " +
+                                                  "quī dolōrem ipsum quia dolor sit amet " +
+                                                  "cōnsectētur adipīscī velit " +
+                                                  "sed quia nōnnumquam eius modī tempora incidunt " +
+                                                  "ut labōre et dolōre magnam aliquam quaerat voluptātem";
 
   /**
    * Modus hic partem prīmam tentat. <br>
