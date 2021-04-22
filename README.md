@@ -36,18 +36,19 @@ Valōrem [StrūctorVerba.fac](src/main/java/net/strūctorverba/mīscella/Strūct
 class Tentāmen {
   private void main(String[] args) {
     final StrūctorVerba strūctor = StrūctorVerba.fac.get();
-    final Verba verba = strūctor.strue(strūctor.adveniam("verbum", Catēgoria.NŌMEN,
-                                                         Speciālitās.COMMŪNE, Genus.NEUTRUM,
-                                                         Cāsus.ACCŪSĀTĪVUS, Numerālis.PLŪRĀLIS),
-                                       strūctor.adveniam("Latīnus", Catēgoria.ADIECTĪVUM,
-                                                         Speciālitās.PROPRIUM, Genus.NEUTRUM,
-                                                         Cāsus.ACCŪSĀTĪVUS, Numerālis.PLŪRĀLIS),
-                                       strūctor.adveniam("iūbilāre", Catēgoria.ĀCTUM,
-                                                         Modus.INDICĀTĪVUS, Vōx.ĀCTĪVA, Tempus.PRAESĒNS,
-                                                         Numerālis.SINGULĀRIS, Persōna.PRĪMA),
-                                       strūctor.adveniam("scrībere", Catēgoria.ĀCTUM,
-                                                         Modus.ĪNFĪNĪTĪVUS, Vōx.ĀCTĪVA, Tempus.PRAESĒNS));
-    System.out.println(verba); // Verba Latīna iūbilō scrībere
+    final Verba verba = strūctor.strue(
+      strūctor.adveniam("lingua", Catēgoria.NŌMEN,
+                        Speciālitās.COMMŪNE, Genus.FĒMINĪNUM,
+                        Cāsus.NŌMINĀTĪVUS, Numerālis.SINGULĀRIS),
+      strūctor.adveniam("Latīnus", Catēgoria.ADIECTĪVUM,
+                        Speciālitās.PROPRIUM, Genus.FĒMINĪNUM,
+                        Cāsus.NŌMINĀTĪVUS, Numerālis.SINGULĀRIS),
+      strūctor.adveniam("plācēre", Catēgoria.ĀCTUM,
+                        Modus.INDICĀTĪVUS, Vōx.ĀCTĪVA, Tempus.PRAESĒNS,
+                        Numerālis.SINGULĀRIS, Persōna.TERTIA),
+      strūctor.adveniam("prōdesse", Catēgoria.ĀCTUM,
+                        Modus.ĪNFĪNĪTĪVUS, Vōx.ĀCTĪVA, Tempus.PRAESĒNS));
+    System.out.println(verba); // Lingua Latīna placet prōdestque
   }
 }
 ```
