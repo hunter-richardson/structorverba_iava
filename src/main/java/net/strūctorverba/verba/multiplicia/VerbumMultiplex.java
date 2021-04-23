@@ -49,7 +49,7 @@ public abstract class VerbumMultiplex <Hoc extends Verbum <Hoc>> extends Verbum 
    * @see Encliticum
    */
   @SuppressWarnings("UnusedReturnValue")
-  @NotNull public VerbumMultiplex <Hoc> allege(@NotNull final Encliticum cltm) {
+  @NotNull public VerbumMultiplex <Hoc> allegō(@NotNull final Encliticum cltm) {
     encliticum = cltm;
     return this;
   }
