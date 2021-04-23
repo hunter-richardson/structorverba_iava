@@ -61,7 +61,8 @@ Officia haec forsit aliquandō acquīrat in coniūnctiōne cum programmātis ali
 Autem experiendus modestē in linguā Latīnā iam est vōbīs ut ūsūfructuāriī programmātis StrūctorVerbae. 
 
 Significētur etiam quod programma hoc cum ūsūfructuāriīs nōn congreditur in modīs sīve vīsuālite sīve scrīptile dum vicem īnfantiae praesertim adest. 
-Officia haec forsit aliquandō acquīrat dum veterēscat autem experiendus modestē in linguā [Iavā](https://docs.oracle.com/javase/10/docs/api/overview-summary.html) cōdicis iam est vōbīs ut ūsūfructuāriī programmātis StrūctorVerbae
+Officia haec forsit aliquandō acquīrat dum veterēscat 
+autem experiendus modestē in linguā [Iavā](https://docs.oracle.com/javase/10/docs/api/overview-summary.html) cōdicis iam est vōbīs ut ūsūfructuāriī programmātis StrūctorVerbae.
 
 > Ingeniārius invenit problēmata quae ignōrābās.
 > 
