@@ -55,7 +55,7 @@ class Tentāmen {
 }
 ```
 
-Significētur quod programma haec erit nōn lexicon. Fundāminēs verbōrum formīs scrīptīs servat inflectere. Officia haec forsit aliquandō acquīrat in coniūnctiōne cum programmātis aliā quā fungitur ut lexicon. Autem habendus pertia linguae Latīnae ūsūfructuāriīs programmātis StrūctorVerbae in tempore praesente est. 
+Significētur quod programma haec erit nōn lexicon. Fundāminēs verbōrum formīs scrīptīs servat īnflectere. Officia haec forsit aliquandō acquīrat in coniūnctiōne cum programmātis aliā quā fungitur ut lexicon. Autem habendus pertia linguae Latīnae ūsūfructuāriīs programmātis StrūctorVerbae in tempore praesente est. 
 
 > Ingeniārius invenit problēmata quae ignōrābās.
 > 
