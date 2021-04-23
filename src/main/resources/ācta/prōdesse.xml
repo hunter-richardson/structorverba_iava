@@ -104,22 +104,22 @@
     prōdfuērunt
   </fōrma>
 
-  <fōrma modus="indicātīvus" vōx="āctīva" tempus="plūperfectum" numerālis="singulāris" persōna="prīmum">
+  <fōrma modus="indicātīvus" vōx="āctīva" tempus="plūsquamperfectum" numerālis="singulāris" persōna="prīmum">
     prōfueram
   </fōrma>
-  <fōrma modus="indicātīvus" vōx="āctīva" tempus="plūperfectum" numerālis="singulāris" persōna="secundum">
+  <fōrma modus="indicātīvus" vōx="āctīva" tempus="plūsquamperfectum" numerālis="singulāris" persōna="secundum">
     prōfuerās
   </fōrma>
-  <fōrma modus="indicātīvus" vōx="āctīva" tempus="plūperfectum" numerālis="singulāris" persōna="tertium">
+  <fōrma modus="indicātīvus" vōx="āctīva" tempus="plūsquamperfectum" numerālis="singulāris" persōna="tertium">
     prōfuerat
   </fōrma>
-  <fōrma modus="indicātīvus" vōx="āctīva" tempus="plūperfectum" numerālis="plūrālis" persōna="prīmum">
+  <fōrma modus="indicātīvus" vōx="āctīva" tempus="plūsquamperfectum" numerālis="plūrālis" persōna="prīmum">
     prōfuerāmus
   </fōrma>
-  <fōrma modus="indicātīvus" vōx="āctīva" tempus="plūperfectum" numerālis="plūrālis" persōna="secundum">
+  <fōrma modus="indicātīvus" vōx="āctīva" tempus="plūsquamperfectum" numerālis="plūrālis" persōna="secundum">
     prōfuerātis
   </fōrma>
-  <fōrma modus="indicātīvus" vōx="āctīva" tempus="plūperfectum" numerālis="plūrālis" persōna="tertium">
+  <fōrma modus="indicātīvus" vōx="āctīva" tempus="plūsquamperfectum" numerālis="plūrālis" persōna="tertium">
     prōfuerant
   </fōrma>
 
@@ -199,22 +199,22 @@
     prōfuerint
   </fōrma>
 
-  <fōrma modus="subiūnctīvus" vōx="āctīva" tempus="plūperfectum" numerālis="singulāris" persōna="prīmum">
+  <fōrma modus="subiūnctīvus" vōx="āctīva" tempus="plūsquamperfectum" numerālis="singulāris" persōna="prīmum">
     prōfuissem
   </fōrma>
-  <fōrma modus="subiūnctīvus" vōx="āctīva" tempus="plūperfectum" numerālis="singulāris" persōna="secundum">
+  <fōrma modus="subiūnctīvus" vōx="āctīva" tempus="plūsquamperfectum" numerālis="singulāris" persōna="secundum">
     prōfuissēs
   </fōrma>
-  <fōrma modus="subiūnctīvus" vōx="āctīva" tempus="plūperfectum" numerālis="singulāris" persōna="tertium">
+  <fōrma modus="subiūnctīvus" vōx="āctīva" tempus="plūsquamperfectum" numerālis="singulāris" persōna="tertium">
     prōfuisset
   </fōrma>
-  <fōrma modus="subiūnctīvus" vōx="āctīva" tempus="plūperfectum" numerālis="plūrālis" persōna="prīmum">
+  <fōrma modus="subiūnctīvus" vōx="āctīva" tempus="plūsquamperfectum" numerālis="plūrālis" persōna="prīmum">
     prōfuissēmus
   </fōrma>
-  <fōrma modus="subiūnctīvus" vōx="āctīva" tempus="plūperfectum" numerālis="plūrālis" persōna="secundum">
+  <fōrma modus="subiūnctīvus" vōx="āctīva" tempus="plūsquamperfectum" numerālis="plūrālis" persōna="secundum">
     prōfuissētis
   </fōrma>
-  <fōrma modus="subiūnctīvus" vōx="āctīva" tempus="plūperfectum" numerālis="plūrālis" persōna="tertium">
+  <fōrma modus="subiūnctīvus" vōx="āctīva" tempus="plūsquamperfectum" numerālis="plūrālis" persōna="tertium">
     fuissent
   </fōrma>
 </āctum>
