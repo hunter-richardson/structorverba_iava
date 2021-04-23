@@ -55,7 +55,7 @@ class Tentāmen {
 }
 ```
 
-Significētur quod programma haec per ipse officia lexicōnī dēest. Verba servat nōn dēfīnīre quam sōlum in formīs īnflexīs petītīs eōrum scrībere. Officia haec forsit aliquandō acquīrat in coniūnctiōne cum programmātis aliā quā fungitur ut lexicon. Autem experiendus modestē in linguā Latīnā programmātis StrūctorVerbae iam est vōbīs ut ūsūfructuāriī. 
+Significētur quod programma hoc per ipse officia lexicōnī dēest. Verba servat nōn dēfīnīre quam sōlum in formīs īnflexīs petītīs eōrum scrībere. Officia haec forsit aliquandō acquīrat in coniūnctiōne cum programmātis aliā quā fungitur ut lexicon. Autem experiendus modestē in linguā Latīnā iam est vōbīs ut ūsūfructuāriī programmātis StrūctorVerbae. 
 
 > Ingeniārius invenit problēmata quae ignōrābās.
 > 
