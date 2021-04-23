@@ -6,7 +6,7 @@ quam āctārum hārum aut generem nōminum illōrum?
 
 Nōn iam! Vōbīs intrōdūcō programma StrūctorVerba scrīptum in linguā [Iavā](https://docs.oracle.com/javase/10/docs/api/overview-summary.html) cōdicis.
 
-Programma hoc classēs octō dēfīnit catēgoriās octō verbōrum repraesentāre:
+Programma hoc dēfīnit classēs octō quās catēgoriās octō verbōrum repraesentent:
 
 I. [Coniūnctīvum](src/main/java/net/strūctorverba/verba/VerbumSimplex.java)
 
@@ -22,10 +22,10 @@ VI. [Prōnōmen](src/main/java/net/strūctorverba/verba/multiplicia/Prōnōmen.j
 
 VII. [Adiectīvum](src/main/java/net/strūctorverba/verba/multiplicia/Adiectīvum.java)
 
-VII. [Āctum](src/main/java/net/strūctorverba/verba/multiplicia/Āctum.java)
+VIII. [Āctum](src/main/java/net/strūctorverba/verba/multiplicia/Āctum.java)
 
 Omne quālitātēs ipsās prōpositaque ipsa habet 
-et ligāmina illa vōs dūcent tabellās aptās perlēgātis.
+et ligāmina illa vōs dūcent ut tabellās aptās perlēgātis.
 
 Praetereā tentāmina duo scrīpsī exsecūtiōnem modōsque programmātis recēnsēre.
 
