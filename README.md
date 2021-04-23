@@ -2,7 +2,7 @@
 
 Verba Latīna scrībere tetendistisne sed nōn potuistisne meminisse coniugātiōnem quam āctārum hārum aut generem nōminum illōrum?
 
-Nōn iam! Vōbīs intrōdūcō programma StrūctorVerba scrīpta in linguā [Iavā](https://docs.oracle.com/javase/10/docs/api/overview-summary.html).
+Nōn iam! Vōbīs intrōdūcō programma StrūctorVerba scrīpta in linguā [Iavā](https://docs.oracle.com/javase/10/docs/api/overview-summary.html) cōdicis.
 
 Programma hoc classēs octō dēfīnit catēgoriās octō verbōrum repraesentāre:
 
