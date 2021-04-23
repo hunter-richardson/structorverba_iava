@@ -14,6 +14,7 @@ import java.util.function.*;
 /**
  * Classis {@link Tenor} data lēcta ā rēbus classis {@link Lēctor} sēliget et reī aptae classis {@link Conditōr} praebet.
  * @param <Hoc> classis extenta classis {@link Verbum}
+ * @see Omnum
  * @see <a href="https://docs.oracle.com/javase/7/docs/api/org/xml/sax/helpers/DefaultHandler.html">DefaultHandler</a>
  */
 @SuppressWarnings({ "NonAsciiCharacters", "SpellCheckingInspection" })
