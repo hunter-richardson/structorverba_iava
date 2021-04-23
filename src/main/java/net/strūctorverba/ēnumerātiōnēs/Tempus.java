@@ -39,9 +39,9 @@ public enum Tempus {
   PERFECTUM("perfectum"),
 
   /**
-   * Valor hic temporem plūperfectum dēsignat.
+   * Valor hic temporem plūsquamperfectum dēsignat.
    */
-  PLUPERFECTUM("plūperfectum"),
+  PLŪSQUAMPERFECTUM("plūsquamperfectum"),
 
   /**
    * Valor hic temporem perfectum futūrum dēsignat.
