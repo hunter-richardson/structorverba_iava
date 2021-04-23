@@ -20,6 +20,7 @@ import java.util.stream.Stream;
 /**
  * Classis {@link Nūntius} nūntia dē exsecūtiōne programmātis StrūctorVerba in scāpīs LOG scrībit. <br>
  * Classēs plūrimae aliae in programmātem StrūctorVerba rem classis huius habet.
+ * @see Omnum
  */
 @SuppressWarnings({ "NonAsciiCharacters", "SpellCheckingInspection" })
 public abstract class Nūntius {
