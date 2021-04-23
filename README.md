@@ -22,7 +22,7 @@ VII. [Adiectīvum](src/main/java/net/strūctorverba/verba/multiplicia/Adiectīvu
 
 VII. [Āctum](src/main/java/net/strūctorverba/verba/multiplicia/Āctum.java)
 
-Omne quālitātēs ipsās prōpositaque ipsa habet et ligāmina illa tabellās aptās dūcet pellēgēre.
+Omne quālitātēs ipsās prōpositaque ipsa habet et ligāmina illa tabellās aptās võs dūcent pellēgēre.
 
 Praetereā tentāmina duo scrīpsī exsecūtiōnem modōsque programmātis recēnsēre.
 
@@ -30,7 +30,7 @@ I. [DolōremIpsum](src/main/test/net/strūctorverba/tentāmina/DolōremIpsum.jav
 
 II. [Numerī](src/main/test/net/strūctorverba/tentāmina/Numerī.java)
 
-Valōrem [StrūctorVerba.fac](src/main/java/net/strūctorverba/mīscella/StrūctorVerba.java) invocā ut fūnctiōnēs omnēs programmātis StrūctorVerba accēdās:
+Valōrem [StrūctorVerba.fac](src/main/java/net/strūctorverba/mīscella/StrūctorVerba.java) invocāte ut fūnctiōnēs omnēs programmātis StrūctorVerba accēdātis:
 
 ```java
 class Tentāmen {
@@ -55,7 +55,7 @@ class Tentāmen {
 }
 ```
 
-Significētur quod programma haec per ipse officia lexicōnī dēest. Verba servat nōn dēfīnīre quam sōlum in formīs īnflexīs petītīs eōrum scrībere. Officia haec forsit aliquandō acquīrat in coniūnctiōne cum programmātis aliā quā fungitur ut lexicon. Autem experiendus modestē in linguā Latīnā ūsūfructuāriīs programmātis StrūctorVerbae iam est. 
+Significētur quod programma haec per ipse officia lexicōnī dēest. Verba servat nōn dēfīnīre quam sōlum in formīs īnflexīs petītīs eōrum scrībere. Officia haec forsit aliquandō acquīrat in coniūnctiōne cum programmātis aliā quā fungitur ut lexicon. Autem experiendus modestē in linguā Latīnā programmātis StrūctorVerbae iam est vōbīs ut ūsūfructuāriī. 
 
 > Ingeniārius invenit problēmata quae ignōrābās.
 > 
