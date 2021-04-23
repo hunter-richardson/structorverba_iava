@@ -4,7 +4,7 @@ import net.strūctorverba.nūntiī.Nūntius;
 import net.strūctorverba.tenōrēs.Tenor;
 
 /**
- * Classem {@link Omnum} classēs omnēs intrā programmāte StrūctorVerba extendit absque classibus et {@link Tenor} et {@link Nūntius}. <br>
+ * Classem {@link Omnum} classēs omnēs intrā programmāte StrūctorVerba extendit absque classibus et {@link Tenor} et {@link Nūntius} propter natūram eārum. <br>
  * Officiīs classum illārum ergō prīmō scrībendus scrīptusque est cōdex sequens: <br>
  * {@code Thread.currentThread().setUncaughtExceptionHandler(Nūntius.NūntiusErrōribus.fac.get());} <br>
  * Classis haec errōrēs inopīnātōs servat intercipere.
