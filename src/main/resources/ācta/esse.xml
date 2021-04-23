@@ -104,22 +104,22 @@
     fuērunt
   </fōrma>
 
-  <fōrma modus="indicātīvus" vōx="āctīva" tempus="plūperfectum" numerālis="singulāris" persōna="prīmum">
+  <fōrma modus="indicātīvus" vōx="āctīva" tempus="plūsquamperfectum" numerālis="singulāris" persōna="prīmum">
     fueram
   </fōrma>
-  <fōrma modus="indicātīvus" vōx="āctīva" tempus="plūperfectum" numerālis="singulāris" persōna="secundum">
+  <fōrma modus="indicātīvus" vōx="āctīva" tempus="plūsquamperfectum" numerālis="singulāris" persōna="secundum">
     fuerās
   </fōrma>
-  <fōrma modus="indicātīvus" vōx="āctīva" tempus="plūperfectum" numerālis="singulāris" persōna="tertium">
+  <fōrma modus="indicātīvus" vōx="āctīva" tempus="plūsquamperfectum" numerālis="singulāris" persōna="tertium">
     fuerat
   </fōrma>
-  <fōrma modus="indicātīvus" vōx="āctīva" tempus="plūperfectum" numerālis="plūrālis" persōna="prīmum">
+  <fōrma modus="indicātīvus" vōx="āctīva" tempus="plūsquamperfectum" numerālis="plūrālis" persōna="prīmum">
     fuerāmus
   </fōrma>
-  <fōrma modus="indicātīvus" vōx="āctīva" tempus="plūperfectum" numerālis="plūrālis" persōna="secundum">
+  <fōrma modus="indicātīvus" vōx="āctīva" tempus="plūsquamperfectum" numerālis="plūrālis" persōna="secundum">
     fuerātis
   </fōrma>
-  <fōrma modus="indicātīvus" vōx="āctīva" tempus="plūperfectum" numerālis="plūrālis" persōna="tertium">
+  <fōrma modus="indicātīvus" vōx="āctīva" tempus="plūsquamperfectum" numerālis="plūrālis" persōna="tertium">
     fuerant
   </fōrma>
 
@@ -199,22 +199,22 @@
     fuerint
   </fōrma>
 
-  <fōrma modus="subiūnctīvus" vōx="āctīva" tempus="plūperfectum" numerālis="singulāris" persōna="prīmum">
+  <fōrma modus="subiūnctīvus" vōx="āctīva" tempus="plūsquamperfectum" numerālis="singulāris" persōna="prīmum">
     fuissem
   </fōrma>
-  <fōrma modus="subiūnctīvus" vōx="āctīva" tempus="plūperfectum" numerālis="singulāris" persōna="secundum">
+  <fōrma modus="subiūnctīvus" vōx="āctīva" tempus="plūsquamperfectum" numerālis="singulāris" persōna="secundum">
     fuissēs
   </fōrma>
-  <fōrma modus="subiūnctīvus" vōx="āctīva" tempus="plūperfectum" numerālis="singulāris" persōna="tertium">
+  <fōrma modus="subiūnctīvus" vōx="āctīva" tempus="plūsquamperfectum" numerālis="singulāris" persōna="tertium">
     fuisset
   </fōrma>
-  <fōrma modus="subiūnctīvus" vōx="āctīva" tempus="plūperfectum" numerālis="plūrālis" persōna="prīmum">
+  <fōrma modus="subiūnctīvus" vōx="āctīva" tempus="plūsquamperfectum" numerālis="plūrālis" persōna="prīmum">
     fuissēmus
   </fōrma>
-  <fōrma modus="subiūnctīvus" vōx="āctīva" tempus="plūperfectum" numerālis="plūrālis" persōna="secundum">
+  <fōrma modus="subiūnctīvus" vōx="āctīva" tempus="plūsquamperfectum" numerālis="plūrālis" persōna="secundum">
     fuissētis
   </fōrma>
-  <fōrma modus="subiūnctīvus" vōx="āctīva" tempus="plūperfectum" numerālis="plūrālis" persōna="tertium">
+  <fōrma modus="subiūnctīvus" vōx="āctīva" tempus="plūsquamperfectum" numerālis="plūrālis" persōna="tertium">
     fuissent
   </fōrma>
 </āctum>
