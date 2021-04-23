@@ -85,22 +85,22 @@
     voluērunt
   </fōrma>
 
-  <fōrma modus="indicātīvus" vōx="āctīva" tempus="plūperfectum" numerālis="singulāris" persōna="prīmum">
+  <fōrma modus="indicātīvus" vōx="āctīva" tempus="plūsquamquamperfectum" numerālis="singulāris" persōna="prīmum">
     volueram
   </fōrma>
-  <fōrma modus="indicātīvus" vōx="āctīva" tempus="plūperfectum" numerālis="singulāris" persōna="secundum">
+  <fōrma modus="indicātīvus" vōx="āctīva" tempus="plūsquamperfectum" numerālis="singulāris" persōna="secundum">
     voluerās
   </fōrma>
-  <fōrma modus="indicātīvus" vōx="āctīva" tempus="plūperfectum" numerālis="singulāris" persōna="tertium">
+  <fōrma modus="indicātīvus" vōx="āctīva" tempus="plūsquamperfectum" numerālis="singulāris" persōna="tertium">
     voluerat
   </fōrma>
-  <fōrma modus="indicātīvus" vōx="āctīva" tempus="plūperfectum" numerālis="plūrālis" persōna="prīmum">
+  <fōrma modus="indicātīvus" vōx="āctīva" tempus="plūsquamperfectum" numerālis="plūrālis" persōna="prīmum">
     voluerāmus
   </fōrma>
-  <fōrma modus="indicātīvus" vōx="āctīva" tempus="plūperfectum" numerālis="plūrālis" persōna="secundum">
+  <fōrma modus="indicātīvus" vōx="āctīva" tempus="plūsquamperfectum" numerālis="plūrālis" persōna="secundum">
     voluerātis
   </fōrma>
-  <fōrma modus="indicātīvus" vōx="āctīva" tempus="plūperfectum" numerālis="plūrālis" persōna="tertium">
+  <fōrma modus="indicātīvus" vōx="āctīva" tempus="plūsquamperfectum" numerālis="plūrālis" persōna="tertium">
     voluerant
   </fōrma>
 
@@ -180,22 +180,22 @@
     voluerint
   </fōrma>
 
-  <fōrma modus="subiūnctīvus" vōx="āctīva" tempus="plūperfectum" numerālis="singulāris" persōna="prīmum">
+  <fōrma modus="subiūnctīvus" vōx="āctīva" tempus="plūsquamperfectum" numerālis="singulāris" persōna="prīmum">
     voluissem
   </fōrma>
-  <fōrma modus="subiūnctīvus" vōx="āctīva" tempus="plūperfectum" numerālis="singulāris" persōna="secundum">
+  <fōrma modus="subiūnctīvus" vōx="āctīva" tempus="plūsquamperfectum" numerālis="singulāris" persōna="secundum">
     voluissēs
   </fōrma>
-  <fōrma modus="subiūnctīvus" vōx="āctīva" tempus="plūperfectum" numerālis="singulāris" persōna="tertium">
+  <fōrma modus="subiūnctīvus" vōx="āctīva" tempus="plūsquamperfectum" numerālis="singulāris" persōna="tertium">
     voluisset
   </fōrma>
-  <fōrma modus="subiūnctīvus" vōx="āctīva" tempus="plūperfectum" numerālis="plūrālis" persōna="prīmum">
+  <fōrma modus="subiūnctīvus" vōx="āctīva" tempus="plūsquamperfectum" numerālis="plūrālis" persōna="prīmum">
     voluissēmus
   </fōrma>
-  <fōrma modus="subiūnctīvus" vōx="āctīva" tempus="plūperfectum" numerālis="plūrālis" persōna="secundum">
+  <fōrma modus="subiūnctīvus" vōx="āctīva" tempus="plūsquamperfectum" numerālis="plūrālis" persōna="secundum">
     voluissētis
   </fōrma>
-  <fōrma modus="subiūnctīvus" vōx="āctīva" tempus="plūperfectum" numerālis="plūrālis" persōna="tertium">
+  <fōrma modus="subiūnctīvus" vōx="āctīva" tempus="plūsquamperfectum" numerālis="plūrālis" persōna="tertium">
     voluissent
   </fōrma>
 </āctum>
