@@ -34,6 +34,7 @@ Valōrem [StrūctorVerba.fac](src/main/java/net/strūctorverba/mīscella/Strūct
 
 ```java
 class Tentāmen {
+  @SuppressWarning("ConstantConditions")
   private void main(String[] args) {
     final StrūctorVerba strūctor = StrūctorVerba.fac.get();
     final Verba verba = strūctor.strue(
@@ -47,7 +48,8 @@ class Tentāmen {
                         Modus.INDICĀTĪVUS, Vōx.ĀCTĪVA, Tempus.PRAESĒNS,
                         Numerālis.SINGULĀRIS, Persōna.TERTIA),
       strūctor.adveniam("prōdesse", Catēgoria.ĀCTUM,
-                        Modus.ĪNFĪNĪTĪVUS, Vōx.ĀCTĪVA, Tempus.PRAESĒNS));
+                        Modus.ĪNFĪNĪTĪVUS, Vōx.ĀCTĪVA, Tempus.PRAESĒNS)
+              .allegō(Encliticum.INTERRŌGANS);
     System.out.println(verba); // Lingua Latīna placet prōdestque
   }
 }
