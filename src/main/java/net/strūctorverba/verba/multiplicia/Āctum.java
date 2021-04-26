@@ -100,7 +100,7 @@ public final class Āctum extends VerbumMultiplex <Āctum> {
     } else {
       Āctum alium = ācta().adveniam(fundāmen, Modus.PARTICIPĀLIS, vx, tmps);
       return Objects.isNull(alium) ? null
-                                   : adiectīva().adveniam(alium.toString(), spclt, gns, css, nmrl, Gradus.NŌRMĀlIS);
+                                   : adiectīva().adveniam(alium.toString(), spclt, gns, css, nmrl, Gradus.POSITĪVUS);
     }
   }
 

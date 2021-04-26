@@ -14,14 +14,14 @@ import java.util.stream.Stream;
 public enum Gradus {
   /**
    * Valor hic ūtātur sī ūsūfructuāriī valōrem validum nōn dēnotat. <br>
-   * Numquam scrīnium <a href="{@docRoot}/../src/main/resources">auxiliārēs</a> inscrībētur.
+   * Scrīnium <a href="{@docRoot}/../src/main/resources">auxiliārēs</a> inscrībētur indicāre quod verbum hoc nōn graditur.
    */
   NŪLLUS(StringUtils.EMPTY),
 
   /**
    * Valor hic potentiam nōrmāle dēsignat.
    */
-  NŌRMĀlIS("nōrmālis"),
+  POSITĪVUS("positīvus"),
 
   /**
    * Valor hic potentiam comparātīvum dēsignat.

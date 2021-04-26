@@ -1,115 +1,115 @@
 <adiectīvum fundāmen="quaerendus">
-  <fōrma speciālitās="commūne" genus="masculīnum" numerālis="singulāris" cāsus="nōminātīvus" gradus="nōrmālis">
+  <fōrma speciālitās="commūne" genus="masculīnum" numerālis="singulāris" cāsus="nōminātīvus" gradus="positīvus">
     quaerendus
   </fōrma>
-  <fōrma speciālitās="commūne" genus="masculīnum" numerālis="singulāris" cāsus="genitīvus" gradus="nōrmālis">
+  <fōrma speciālitās="commūne" genus="masculīnum" numerālis="singulāris" cāsus="genitīvus" gradus="positīvus">
     quaerendī
   </fōrma>
-  <fōrma speciālitās="commūne" genus="masculīnum" numerālis="singulāris" cāsus="datīvus" gradus="nōrmālis">
+  <fōrma speciālitās="commūne" genus="masculīnum" numerālis="singulāris" cāsus="datīvus" gradus="positīvus">
     quaerendō
   </fōrma>
-  <fōrma speciālitās="commūne" genus="masculīnum" numerālis="singulāris" cāsus="accūsātīvus" gradus="nōrmālis">
+  <fōrma speciālitās="commūne" genus="masculīnum" numerālis="singulāris" cāsus="accūsātīvus" gradus="positīvus">
     quaerendum
   </fōrma>
-  <fōrma speciālitās="commūne" genus="masculīnum" numerālis="singulāris" cāsus="ablātīvus" gradus="nōrmālis">
+  <fōrma speciālitās="commūne" genus="masculīnum" numerālis="singulāris" cāsus="ablātīvus" gradus="positīvus">
     quaerendō
   </fōrma>
-  <fōrma speciālitās="commūne" genus="masculīnum" numerālis="singulāris" cāsus="locātīvus" gradus="nōrmālis">
+  <fōrma speciālitās="commūne" genus="masculīnum" numerālis="singulāris" cāsus="locātīvus" gradus="positīvus">
     quaerende
   </fōrma>
 
-  <fōrma speciālitās="commūne" genus="masculīnum" numerālis="plūrālis" cāsus="nōminātīvus" gradus="nōrmālis">
+  <fōrma speciālitās="commūne" genus="masculīnum" numerālis="plūrālis" cāsus="nōminātīvus" gradus="positīvus">
     quaerendī
   </fōrma>
-  <fōrma speciālitās="commūne" genus="masculīnum" numerālis="plūrālis" cāsus="genitīvus" gradus="nōrmālis">
+  <fōrma speciālitās="commūne" genus="masculīnum" numerālis="plūrālis" cāsus="genitīvus" gradus="positīvus">
     quaerendōrum
   </fōrma>
-  <fōrma speciālitās="commūne" genus="masculīnum" numerālis="plūrālis" cāsus="datīvus" gradus="nōrmālis">
+  <fōrma speciālitās="commūne" genus="masculīnum" numerālis="plūrālis" cāsus="datīvus" gradus="positīvus">
     quaerendīs
   </fōrma>
-  <fōrma speciālitās="commūne" genus="masculīnum" numerālis="plūrālis" cāsus="accūsātīvus" gradus="nōrmālis">
+  <fōrma speciālitās="commūne" genus="masculīnum" numerālis="plūrālis" cāsus="accūsātīvus" gradus="positīvus">
     quaerendōs
   </fōrma>
-  <fōrma speciālitās="commūne" genus="masculīnum" numerālis="plūrālis" cāsus="ablātīvus" gradus="nōrmālis">
+  <fōrma speciālitās="commūne" genus="masculīnum" numerālis="plūrālis" cāsus="ablātīvus" gradus="positīvus">
     quaerendīs
   </fōrma>
-  <fōrma speciālitās="commūne" genus="masculīnum" numerālis="plūrālis" cāsus="locātīvus" gradus="nōrmālis">
+  <fōrma speciālitās="commūne" genus="masculīnum" numerālis="plūrālis" cāsus="locātīvus" gradus="positīvus">
     quaerendī
   </fōrma>
 
-  <fōrma speciālitās="commūne" genus="fēminīnum" numerālis="singulāris" cāsus="nōminātīvus" gradus="nōrmālis">
+  <fōrma speciālitās="commūne" genus="fēminīnum" numerālis="singulāris" cāsus="nōminātīvus" gradus="positīvus">
     quaerenda
   </fōrma>
-  <fōrma speciālitās="commūne" genus="fēminīnum" numerālis="singulāris" cāsus="genitīvus" gradus="nōrmālis">
+  <fōrma speciālitās="commūne" genus="fēminīnum" numerālis="singulāris" cāsus="genitīvus" gradus="positīvus">
     quaerendae
   </fōrma>
-  <fōrma speciālitās="commūne" genus="fēminīnum" numerālis="singulāris" cāsus="datīvus" gradus="nōrmālis">
+  <fōrma speciālitās="commūne" genus="fēminīnum" numerālis="singulāris" cāsus="datīvus" gradus="positīvus">
     quaerendā
   </fōrma>
-  <fōrma speciālitās="commūne" genus="fēminīnum" numerālis="singulāris" cāsus="accūsātīvus" gradus="nōrmālis">
+  <fōrma speciālitās="commūne" genus="fēminīnum" numerālis="singulāris" cāsus="accūsātīvus" gradus="positīvus">
     quaerendam
   </fōrma>
-  <fōrma speciālitās="commūne" genus="fēminīnum" numerālis="singulāris" cāsus="ablātīvus" gradus="nōrmālis">
+  <fōrma speciālitās="commūne" genus="fēminīnum" numerālis="singulāris" cāsus="ablātīvus" gradus="positīvus">
     quaerendā
   </fōrma>
-  <fōrma speciālitās="commūne" genus="fēminīnum" numerālis="singulāris" cāsus="locātīvus" gradus="nōrmālis">
+  <fōrma speciālitās="commūne" genus="fēminīnum" numerālis="singulāris" cāsus="locātīvus" gradus="positīvus">
     quaerenda
   </fōrma>
 
-  <fōrma speciālitās="commūne" genus="fēminīnum" numerālis="plūrālis" cāsus="nōminātīvus" gradus="nōrmālis">
+  <fōrma speciālitās="commūne" genus="fēminīnum" numerālis="plūrālis" cāsus="nōminātīvus" gradus="positīvus">
     quaerendae
   </fōrma>
-  <fōrma speciālitās="commūne" genus="fēminīnum" numerālis="plūrālis" cāsus="genitīvus" gradus="nōrmālis">
+  <fōrma speciālitās="commūne" genus="fēminīnum" numerālis="plūrālis" cāsus="genitīvus" gradus="positīvus">
     quaerendārum
   </fōrma>
-  <fōrma speciālitās="commūne" genus="fēminīnum" numerālis="plūrālis" cāsus="datīvus" gradus="nōrmālis">
+  <fōrma speciālitās="commūne" genus="fēminīnum" numerālis="plūrālis" cāsus="datīvus" gradus="positīvus">
     quaerendīs
   </fōrma>
-  <fōrma speciālitās="commūne" genus="fēminīnum" numerālis="plūrālis" cāsus="accūsātīvus" gradus="nōrmālis">
+  <fōrma speciālitās="commūne" genus="fēminīnum" numerālis="plūrālis" cāsus="accūsātīvus" gradus="positīvus">
     quaerendās
   </fōrma>
-  <fōrma speciālitās="commūne" genus="fēminīnum" numerālis="plūrālis" cāsus="ablātīvus" gradus="nōrmālis">
+  <fōrma speciālitās="commūne" genus="fēminīnum" numerālis="plūrālis" cāsus="ablātīvus" gradus="positīvus">
     quaerendīs
   </fōrma>
-  <fōrma speciālitās="commūne" genus="fēminīnum" numerālis="plūrālis" cāsus="locātīvus" gradus="nōrmālis">
+  <fōrma speciālitās="commūne" genus="fēminīnum" numerālis="plūrālis" cāsus="locātīvus" gradus="positīvus">
     quaerendae
   </fōrma>
 
-  <fōrma speciālitās="commūne" genus="neutrum" numerālis="singulāris" cāsus="nōminātīvus" gradus="nōrmālis">
+  <fōrma speciālitās="commūne" genus="neutrum" numerālis="singulāris" cāsus="nōminātīvus" gradus="positīvus">
     quaerendum
   </fōrma>
-  <fōrma speciālitās="commūne" genus="neutrum" numerālis="singulāris" cāsus="genitīvus" gradus="nōrmālis">
+  <fōrma speciālitās="commūne" genus="neutrum" numerālis="singulāris" cāsus="genitīvus" gradus="positīvus">
     quaerendī
   </fōrma>
-  <fōrma speciālitās="commūne" genus="neutrum" numerālis="singulāris" cāsus="datīvus" gradus="nōrmālis">
+  <fōrma speciālitās="commūne" genus="neutrum" numerālis="singulāris" cāsus="datīvus" gradus="positīvus">
     quaerendō
   </fōrma>
-  <fōrma speciālitās="commūne" genus="neutrum" numerālis="singulāris" cāsus="accūsātīvus" gradus="nōrmālis">
+  <fōrma speciālitās="commūne" genus="neutrum" numerālis="singulāris" cāsus="accūsātīvus" gradus="positīvus">
     quaerendum
   </fōrma>
-  <fōrma speciālitās="commūne" genus="neutrum" numerālis="singulāris" cāsus="ablātīvus" gradus="nōrmālis">
+  <fōrma speciālitās="commūne" genus="neutrum" numerālis="singulāris" cāsus="ablātīvus" gradus="positīvus">
     quaerendō
   </fōrma>
-  <fōrma speciālitās="commūne" genus="neutrum" numerālis="singulāris" cāsus="locātīvus" gradus="nōrmālis">
+  <fōrma speciālitās="commūne" genus="neutrum" numerālis="singulāris" cāsus="locātīvus" gradus="positīvus">
     quaerendum
   </fōrma>
 
-  <fōrma speciālitās="commūne" genus="neutrum" numerālis="plūrālis" cāsus="nōminātīvus" gradus="nōrmālis">
+  <fōrma speciālitās="commūne" genus="neutrum" numerālis="plūrālis" cāsus="nōminātīvus" gradus="positīvus">
     quaerenda
   </fōrma>
-  <fōrma speciālitās="commūne" genus="neutrum" numerālis="plūrālis" cāsus="genitīvus" gradus="nōrmālis">
+  <fōrma speciālitās="commūne" genus="neutrum" numerālis="plūrālis" cāsus="genitīvus" gradus="positīvus">
     quaerendōrum
   </fōrma>
-  <fōrma speciālitās="commūne" genus="neutrum" numerālis="plūrālis" cāsus="datīvus" gradus="nōrmālis">
+  <fōrma speciālitās="commūne" genus="neutrum" numerālis="plūrālis" cāsus="datīvus" gradus="positīvus">
     quaerendīs
   </fōrma>
-  <fōrma speciālitās="commūne" genus="neutrum" numerālis="plūrālis" cāsus="accūsātīvus" gradus="nōrmālis">
+  <fōrma speciālitās="commūne" genus="neutrum" numerālis="plūrālis" cāsus="accūsātīvus" gradus="positīvus">
     quaerenda
   </fōrma>
-  <fōrma speciālitās="commūne" genus="neutrum" numerālis="plūrālis" cāsus="ablātīvus" gradus="nōrmālis">
+  <fōrma speciālitās="commūne" genus="neutrum" numerālis="plūrālis" cāsus="ablātīvus" gradus="positīvus">
     quaerendīs
   </fōrma>
-  <fōrma speciālitās="commūne" genus="neutrum" numerālis="plūrālis" cāsus="locātīvus" gradus="nōrmālis">
+  <fōrma speciālitās="commūne" genus="neutrum" numerālis="plūrālis" cāsus="locātīvus" gradus="positīvus">
     quaerenda
   </fōrma>
 

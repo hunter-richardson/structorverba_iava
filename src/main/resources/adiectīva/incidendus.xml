@@ -1,115 +1,115 @@
 <adiectīvum fundāmen="incidendus">
-  <fōrma speciālitās="commūne" genus="masculīnum" numerālis="singulāris" cāsus="nōminātīvus" gradus="nōrmālis">
+  <fōrma speciālitās="commūne" genus="masculīnum" numerālis="singulāris" cāsus="nōminātīvus" gradus="positīvus">
     incidendus
   </fōrma>
-  <fōrma speciālitās="commūne" genus="masculīnum" numerālis="singulāris" cāsus="genitīvus" gradus="nōrmālis">
+  <fōrma speciālitās="commūne" genus="masculīnum" numerālis="singulāris" cāsus="genitīvus" gradus="positīvus">
     incidendī
   </fōrma>
-  <fōrma speciālitās="commūne" genus="masculīnum" numerālis="singulāris" cāsus="datīvus" gradus="nōrmālis">
+  <fōrma speciālitās="commūne" genus="masculīnum" numerālis="singulāris" cāsus="datīvus" gradus="positīvus">
     incidendō
   </fōrma>
-  <fōrma speciālitās="commūne" genus="masculīnum" numerālis="singulāris" cāsus="accūsātīvus" gradus="nōrmālis">
+  <fōrma speciālitās="commūne" genus="masculīnum" numerālis="singulāris" cāsus="accūsātīvus" gradus="positīvus">
     incidendum
   </fōrma>
-  <fōrma speciālitās="commūne" genus="masculīnum" numerālis="singulāris" cāsus="ablātīvus" gradus="nōrmālis">
+  <fōrma speciālitās="commūne" genus="masculīnum" numerālis="singulāris" cāsus="ablātīvus" gradus="positīvus">
     incidendō
   </fōrma>
-  <fōrma speciālitās="commūne" genus="masculīnum" numerālis="singulāris" cāsus="locātīvus" gradus="nōrmālis">
+  <fōrma speciālitās="commūne" genus="masculīnum" numerālis="singulāris" cāsus="locātīvus" gradus="positīvus">
     incidende
   </fōrma>
 
-  <fōrma speciālitās="commūne" genus="masculīnum" numerālis="plūrālis" cāsus="nōminātīvus" gradus="nōrmālis">
+  <fōrma speciālitās="commūne" genus="masculīnum" numerālis="plūrālis" cāsus="nōminātīvus" gradus="positīvus">
     incidendī
   </fōrma>
-  <fōrma speciālitās="commūne" genus="masculīnum" numerālis="plūrālis" cāsus="genitīvus" gradus="nōrmālis">
+  <fōrma speciālitās="commūne" genus="masculīnum" numerālis="plūrālis" cāsus="genitīvus" gradus="positīvus">
     incidendōrum
   </fōrma>
-  <fōrma speciālitās="commūne" genus="masculīnum" numerālis="plūrālis" cāsus="datīvus" gradus="nōrmālis">
+  <fōrma speciālitās="commūne" genus="masculīnum" numerālis="plūrālis" cāsus="datīvus" gradus="positīvus">
     incidendīs
   </fōrma>
-  <fōrma speciālitās="commūne" genus="masculīnum" numerālis="plūrālis" cāsus="accūsātīvus" gradus="nōrmālis">
+  <fōrma speciālitās="commūne" genus="masculīnum" numerālis="plūrālis" cāsus="accūsātīvus" gradus="positīvus">
     incidendōs
   </fōrma>
-  <fōrma speciālitās="commūne" genus="masculīnum" numerālis="plūrālis" cāsus="ablātīvus" gradus="nōrmālis">
+  <fōrma speciālitās="commūne" genus="masculīnum" numerālis="plūrālis" cāsus="ablātīvus" gradus="positīvus">
     incidendīs
   </fōrma>
-  <fōrma speciālitās="commūne" genus="masculīnum" numerālis="plūrālis" cāsus="locātīvus" gradus="nōrmālis">
+  <fōrma speciālitās="commūne" genus="masculīnum" numerālis="plūrālis" cāsus="locātīvus" gradus="positīvus">
     incidendī
   </fōrma>
 
-  <fōrma speciālitās="commūne" genus="fēminīnum" numerālis="singulāris" cāsus="nōminātīvus" gradus="nōrmālis">
+  <fōrma speciālitās="commūne" genus="fēminīnum" numerālis="singulāris" cāsus="nōminātīvus" gradus="positīvus">
     incidenda
   </fōrma>
-  <fōrma speciālitās="commūne" genus="fēminīnum" numerālis="singulāris" cāsus="genitīvus" gradus="nōrmālis">
+  <fōrma speciālitās="commūne" genus="fēminīnum" numerālis="singulāris" cāsus="genitīvus" gradus="positīvus">
     incidendae
   </fōrma>
-  <fōrma speciālitās="commūne" genus="fēminīnum" numerālis="singulāris" cāsus="datīvus" gradus="nōrmālis">
+  <fōrma speciālitās="commūne" genus="fēminīnum" numerālis="singulāris" cāsus="datīvus" gradus="positīvus">
     incidendā
   </fōrma>
-  <fōrma speciālitās="commūne" genus="fēminīnum" numerālis="singulāris" cāsus="accūsātīvus" gradus="nōrmālis">
+  <fōrma speciālitās="commūne" genus="fēminīnum" numerālis="singulāris" cāsus="accūsātīvus" gradus="positīvus">
     incidendam
   </fōrma>
-  <fōrma speciālitās="commūne" genus="fēminīnum" numerālis="singulāris" cāsus="ablātīvus" gradus="nōrmālis">
+  <fōrma speciālitās="commūne" genus="fēminīnum" numerālis="singulāris" cāsus="ablātīvus" gradus="positīvus">
     incidendā
   </fōrma>
-  <fōrma speciālitās="commūne" genus="fēminīnum" numerālis="singulāris" cāsus="locātīvus" gradus="nōrmālis">
+  <fōrma speciālitās="commūne" genus="fēminīnum" numerālis="singulāris" cāsus="locātīvus" gradus="positīvus">
     incidenda
   </fōrma>
 
-  <fōrma speciālitās="commūne" genus="fēminīnum" numerālis="plūrālis" cāsus="nōminātīvus" gradus="nōrmālis">
+  <fōrma speciālitās="commūne" genus="fēminīnum" numerālis="plūrālis" cāsus="nōminātīvus" gradus="positīvus">
     incidendae
   </fōrma>
-  <fōrma speciālitās="commūne" genus="fēminīnum" numerālis="plūrālis" cāsus="genitīvus" gradus="nōrmālis">
+  <fōrma speciālitās="commūne" genus="fēminīnum" numerālis="plūrālis" cāsus="genitīvus" gradus="positīvus">
     incidendārum
   </fōrma>
-  <fōrma speciālitās="commūne" genus="fēminīnum" numerālis="plūrālis" cāsus="datīvus" gradus="nōrmālis">
+  <fōrma speciālitās="commūne" genus="fēminīnum" numerālis="plūrālis" cāsus="datīvus" gradus="positīvus">
     incidendīs
   </fōrma>
-  <fōrma speciālitās="commūne" genus="fēminīnum" numerālis="plūrālis" cāsus="accūsātīvus" gradus="nōrmālis">
+  <fōrma speciālitās="commūne" genus="fēminīnum" numerālis="plūrālis" cāsus="accūsātīvus" gradus="positīvus">
     incidendās
   </fōrma>
-  <fōrma speciālitās="commūne" genus="fēminīnum" numerālis="plūrālis" cāsus="ablātīvus" gradus="nōrmālis">
+  <fōrma speciālitās="commūne" genus="fēminīnum" numerālis="plūrālis" cāsus="ablātīvus" gradus="positīvus">
     incidendīs
   </fōrma>
-  <fōrma speciālitās="commūne" genus="fēminīnum" numerālis="plūrālis" cāsus="locātīvus" gradus="nōrmālis">
+  <fōrma speciālitās="commūne" genus="fēminīnum" numerālis="plūrālis" cāsus="locātīvus" gradus="positīvus">
     incidendae
   </fōrma>
 
-  <fōrma speciālitās="commūne" genus="neutrum" numerālis="singulāris" cāsus="nōminātīvus" gradus="nōrmālis">
+  <fōrma speciālitās="commūne" genus="neutrum" numerālis="singulāris" cāsus="nōminātīvus" gradus="positīvus">
     incidendum
   </fōrma>
-  <fōrma speciālitās="commūne" genus="neutrum" numerālis="singulāris" cāsus="genitīvus" gradus="nōrmālis">
+  <fōrma speciālitās="commūne" genus="neutrum" numerālis="singulāris" cāsus="genitīvus" gradus="positīvus">
     incidendī
   </fōrma>
-  <fōrma speciālitās="commūne" genus="neutrum" numerālis="singulāris" cāsus="datīvus" gradus="nōrmālis">
+  <fōrma speciālitās="commūne" genus="neutrum" numerālis="singulāris" cāsus="datīvus" gradus="positīvus">
     incidendō
   </fōrma>
-  <fōrma speciālitās="commūne" genus="neutrum" numerālis="singulāris" cāsus="accūsātīvus" gradus="nōrmālis">
+  <fōrma speciālitās="commūne" genus="neutrum" numerālis="singulāris" cāsus="accūsātīvus" gradus="positīvus">
     incidendum
   </fōrma>
-  <fōrma speciālitās="commūne" genus="neutrum" numerālis="singulāris" cāsus="ablātīvus" gradus="nōrmālis">
+  <fōrma speciālitās="commūne" genus="neutrum" numerālis="singulāris" cāsus="ablātīvus" gradus="positīvus">
     incidendō
   </fōrma>
-  <fōrma speciālitās="commūne" genus="neutrum" numerālis="singulāris" cāsus="locātīvus" gradus="nōrmālis">
+  <fōrma speciālitās="commūne" genus="neutrum" numerālis="singulāris" cāsus="locātīvus" gradus="positīvus">
     incidendum
   </fōrma>
 
-  <fōrma speciālitās="commūne" genus="neutrum" numerālis="plūrālis" cāsus="nōminātīvus" gradus="nōrmālis">
+  <fōrma speciālitās="commūne" genus="neutrum" numerālis="plūrālis" cāsus="nōminātīvus" gradus="positīvus">
     incidenda
   </fōrma>
-  <fōrma speciālitās="commūne" genus="neutrum" numerālis="plūrālis" cāsus="genitīvus" gradus="nōrmālis">
+  <fōrma speciālitās="commūne" genus="neutrum" numerālis="plūrālis" cāsus="genitīvus" gradus="positīvus">
     incidendōrum
   </fōrma>
-  <fōrma speciālitās="commūne" genus="neutrum" numerālis="plūrālis" cāsus="datīvus" gradus="nōrmālis">
+  <fōrma speciālitās="commūne" genus="neutrum" numerālis="plūrālis" cāsus="datīvus" gradus="positīvus">
     incidendīs
   </fōrma>
-  <fōrma speciālitās="commūne" genus="neutrum" numerālis="plūrālis" cāsus="accūsātīvus" gradus="nōrmālis">
+  <fōrma speciālitās="commūne" genus="neutrum" numerālis="plūrālis" cāsus="accūsātīvus" gradus="positīvus">
     incidenda
   </fōrma>
-  <fōrma speciālitās="commūne" genus="neutrum" numerālis="plūrālis" cāsus="ablātīvus" gradus="nōrmālis">
+  <fōrma speciālitās="commūne" genus="neutrum" numerālis="plūrālis" cāsus="ablātīvus" gradus="positīvus">
     incidendīs
   </fōrma>
-  <fōrma speciālitās="commūne" genus="neutrum" numerālis="plūrālis" cāsus="locātīvus" gradus="nōrmālis">
+  <fōrma speciālitās="commūne" genus="neutrum" numerālis="plūrālis" cāsus="locātīvus" gradus="positīvus">
     incidenda
   </fōrma>
 
