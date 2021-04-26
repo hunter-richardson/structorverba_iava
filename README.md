@@ -62,8 +62,8 @@ Significētur quod programma hoc per ipse officia lexicōnī dēest. Verba serva
 Significētur etiam quod programma hoc cum ūsūfructuāriīs nōn congreditur in modīs sīve vīsuālite sīve scrīptile dum vicem īnfantiae praesertim adest. Iam scrīptum est ut bibliothēcula cōdicis. Officia haec forsit aliquandō acquīrat dum veterēscat 
 autem experiendus modestē in linguā [Iavā](https://docs.oracle.com/javase/10/docs/api/overview-summary.html) cōdicis iam est vōbīs ut ūsūfructuāriī programmātis StrūctorVerbae.
 
-> Ingeniārius invenit problēmata quae ignōrābās.
+> Ingeniārius invenit problēmata quae ignōrābātis.
 > 
-> Ea tibi etiamtum solvat in modīs quōs vix intellegās.
+> Ea vōbīs etiamtum solvat in modīs quōs vix intellegātis.
 > 
-> Tibi atque petet pecūniam quam nōn poteris solvere.
+> Vōbīs atque petet pecūniam quam nōn poteritis solvere.
