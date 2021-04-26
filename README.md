@@ -51,7 +51,7 @@ class Tentāmen {
                         Numerālis.SINGULĀRIS, Persōna.TERTIA),
       strūctor.adveniam("prōdesse", Catēgoria.ĀCTUM,
                         Modus.ĪNFĪNĪTĪVUS, Vōx.ĀCTĪVA, Tempus.PRAESĒNS)
-              .allegō(Encliticum.INTERRŌGANS);
+              .allegō(Encliticum.INTERRŌGANS));
     System.out.println(verba); // Lingua Latīna placet prōdestque
   }
 }
