@@ -160,9 +160,21 @@ public final class Āctum extends VerbumMultiplex <Āctum> {
     return participem(vōx, tempus, spclt, gns, css, nmrl, grds);
   }
 
-  @Nullable public Adiectīvum gerundīvum(@NotNull final Vōx vx, @NotNull final Tempus tmps,
-                                         @NotNull final Speciālitās spclt, @NotNull final Genus gns,
-                                         @NotNull final Cāsus css, @NotNull final Numerālis nmrl, @NotNull final Gradus grds) {
+  /**
+   * Modus hic rem classis {@link Adiectīvum} advenit ā et parametrīs dēsignātīs et {@link Vōx.PASSĪVA} et {@link Tempus.FUTŪRUM} et {@link Speciālitās.COMMŪNE} et {@link Genus.MASCULĪNUM}.
+   * @return Rem classis {@link Adiectīvum} quod parametra dēsignāta quadrat.
+   * @param css valōrem {@link Nōminālis#cāsus} indicat.
+   * @param nmrl valōrem {@link Nōminālis#numerālis} indicat.
+   * @param grds valōrem {@link Adiectīvum#gradus} indicat.
+   * @see LēctorMultiplicibus.LēctorAdiectīvīs#adveniam(String, Enum[])
+   * @see Modus#PARTICIPĀLIS
+   * @see Vōx#PASSĪVA
+   * @see Tempus#FUTŪRUM
+   * @see Speciālitās#COMMŪNE
+   * @see Genus#MASCULĪNUM
+   * @see #participem(Vōx, Tempus, Speciālitās, Genus, Cāsus, Numerālis, Gradus)
+   */
+  @Nullable public Adiectīvum gerundīvum(@NotNull final Cāsus css, @NotNull final Numerālis nmrl, @NotNull final Gradus grds) {
     return participem(Vōx.PASSĪVA, Tempus.FUTŪRUM, Speciālitās.COMMŪNE, Genus.MASCULĪNUM, css, nmrl, grds);
   }
 }
