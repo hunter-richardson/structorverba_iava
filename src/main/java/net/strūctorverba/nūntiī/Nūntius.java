@@ -641,6 +641,25 @@ public abstract class Nūntius {
   }
 
   /**
+   * Classis {@link NūntiusInteriectiōnum} est vās classis {@link Nūntius} classī {@link VerbumSimplex.Interiectiō}}
+   * @see VerbumSimplex.Interiectiō
+   */
+  @Singleton public static final class NūntiusInteriectiōnum extends Nūntius {
+    @Nullable private static NūntiusInteriectiōnum īnstantia = null;
+
+    /**
+     * Valor hic viam reī classis huiuc facit.
+     * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
+     */
+    public static @NotNull Supplier<NūntiusInteriectiōnum> fac =
+      () -> ObjectUtils.firstNonNull(īnstantia, īnstantia = new NūntiusInteriectiōnum());
+
+    private NūntiusInteriectiōnum( ) {
+      super(ParametrīNūntiī.parā(VerbumSimplex.Interiectiō.Conditōr.class));
+    }
+  }
+
+  /**
    * Classis {@link NūntiusPraepositiōnum} est vās classis {@link Nūntius} classī {@link VerbumSimplex.Praepositiō}}
    * @see VerbumSimplex.Praepositiō
    */
