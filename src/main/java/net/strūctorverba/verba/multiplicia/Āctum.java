@@ -159,4 +159,10 @@ public final class Āctum extends VerbumMultiplex <Āctum> {
                                          @NotNull final Gradus grds) {
     return participem(vōx, tempus, spclt, gns, css, nmrl, grds);
   }
+
+  @Nullable public Adiectīvum gerundīvum(@NotNull final Vōx vx, @NotNull final Tempus tmps,
+                                         @NotNull final Speciālitās spclt, @NotNull final Genus gns,
+                                         @NotNull final Cāsus css, @NotNull final Numerālis nmrl, @NotNull final Gradus grds) {
+    return participem(Vōx.PASSĪVA, Tempus.FUTŪRUM, Speciālitās.COMMŪNE, Genus.MASCULĪNUM, css, nmrl, grds);
+  }
 }
