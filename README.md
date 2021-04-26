@@ -4,23 +4,25 @@ Verba Latīna scrībere tetendistisne sed nōn potuistisne meminisse coniugāti�
 
 Nōn iam! Vōbīs intrōdūcō programma StrūctorVerba scrīptum in linguā [Iavā](https://docs.oracle.com/javase/10/docs/api/overview-summary.html) cōdicis.
 
-Programma hoc dēfīnit classēs octō quās catēgoriās octō verbōrum repraesentent:
+Programma hoc dēfīnit classēs novem quās catēgoriās novem verbōrum repraesentent:
 
 I. [Coniūnctīvum](src/main/java/net/strūctorverba/verba/VerbumSimplex.java)
 
 II. [Praepositiō](src/main/java/net/strūctorverba/verba/VerbumSimplex.java)
 
-III. [Numerus](src/main/java/net/strūctorverba/verba/VerbumSimplex.java)
+III. [Interiectiō](src/main/java/net/strūctorverba/verba/VerbumSimplex.java)
 
-IV. [Adverbium](src/main/java/net/strūctorverba/verba/multiplicia/Adverbium.java)
+IV. [Numerus](src/main/java/net/strūctorverba/verba/VerbumSimplex.java)
 
-V. [Nōmen](src/main/java/net/strūctorverba/verba/multiplicia/Nōmen.java)
+V. [Adverbium](src/main/java/net/strūctorverba/verba/multiplicia/Adverbium.java)
 
-VI. [Prōnōmen](src/main/java/net/strūctorverba/verba/multiplicia/Prōnōmen.java)
+VI. [Nōmen](src/main/java/net/strūctorverba/verba/multiplicia/Nōmen.java)
 
-VII. [Adiectīvum](src/main/java/net/strūctorverba/verba/multiplicia/Adiectīvum.java)
+VII. [Prōnōmen](src/main/java/net/strūctorverba/verba/multiplicia/Prōnōmen.java)
 
-VIII. [Āctum](src/main/java/net/strūctorverba/verba/multiplicia/Āctum.java)
+VIII. [Adiectīvum](src/main/java/net/strūctorverba/verba/multiplicia/Adiectīvum.java)
+
+IX. [Āctum](src/main/java/net/strūctorverba/verba/multiplicia/Āctum.java)
 
 Omne quālitātēs ipsās prōpositaque ipsa habet et ligāmina illa vōs dūcent ut tabellās aptās perlēgātis.
 
