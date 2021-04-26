@@ -22,15 +22,15 @@ public abstract class TenorMultiplicibus <Hoc extends VerbumMultiplex <Hoc>> ext
   /**
    * Valor hic est vās classis {@link ConditōrMultiplicibus} classī extentī huius.
    */
-  @NotNull protected final ConditōrMultiplicibus <Hoc> condītōr;
+  @NotNull protected final ConditōrMultiplicibus <@NotNull Hoc> condītōr;
 
   /**
    * Officium hoc cōnstrūctōrem reī classis huius perpetrat.
    * @param nūntius valōrem {@link Tenor#nūntius} supplet.
    * @param cndtr valōrem {@link #condītōr} supplet.
    */
-  protected TenorMultiplicibus(@NotNull final Supplier <? extends Nūntius> nūntius,
-                               @NotNull final Supplier <@NotNull ? extends ConditōrMultiplicibus <Hoc>> cndtr) {
+  protected TenorMultiplicibus(@NotNull final Supplier <@NotNull ? extends Nūntius> nūntius,
+                               @NotNull final Supplier <@NotNull ? extends ConditōrMultiplicibus <@NotNull Hoc>> cndtr) {
     super(nūntius);
     condītōr = cndtr.get();
   }

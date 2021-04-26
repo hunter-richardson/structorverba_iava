@@ -161,7 +161,7 @@ public final class Āctum extends VerbumMultiplex <Āctum> {
   }
 
   /**
-   * Modus hic rem classis {@link Adiectīvum} advenit ā et parametrīs dēsignātīs et {@link Vōx.PASSĪVA} et {@link Tempus.FUTŪRUM} et {@link Speciālitās.COMMŪNE} et {@link Genus.MASCULĪNUM}.
+   * Modus hic rem classis {@link Adiectīvum} advenit ā et parametrīs dēsignātīs et {@link Vōx#PASSĪVA} et {@link Tempus#FUTŪRUM} et {@link Speciālitās#COMMŪNE} et {@link Genus#MASCULĪNUM}.
    * @return Rem classis {@link Adiectīvum} quod parametra dēsignāta quadrat.
    * @param css valōrem {@link Nōminālis#cāsus} indicat.
    * @param nmrl valōrem {@link Nōminālis#numerālis} indicat.

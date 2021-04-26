@@ -2,7 +2,6 @@ package net.strūctorverba.nūntiī;
 
 import com.github.chaosfirebolt.converter.RomanInteger;
 import com.github.chaosfirebolt.converter.constants.IntegerType;
-import net.strūctorverba.mīscella.Omnum;
 import net.strūctorverba.ēnumerātiōnēs.Mēnsis;
 import org.jetbrains.annotations.NotNull;
 
@@ -14,7 +13,7 @@ import java.util.function.BiFunction;
  * Classis {@link FōrmaTemporis} temporem fōrmat scrībī.
  */
 @SuppressWarnings({ "NonAsciiCharacters", "SpellCheckingInspection", "unused" })
-final class FōrmaTemporis extends Omnum {
+final class FōrmaTemporis {
   @NotNull private final ZonedDateTime tempus;
            private final boolean       pūnctillaPraecidemne;
 

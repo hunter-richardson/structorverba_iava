@@ -42,7 +42,7 @@ public abstract class Lēctor <Hoc extends Verbum <Hoc>> extends Omnum {
    * @param nts valōrem {@link #nūntius} supplet.
    * @param tnr valōrem {@link #tenor} supplet.
    */
-  protected Lēctor(@NotNull final Catēgoria ctgr, @NotNull final Supplier <? extends Nūntius> nts,
+  protected Lēctor(@NotNull final Catēgoria ctgr, @NotNull final Supplier <@NotNull ? extends Nūntius> nts,
                    @NotNull final Supplier <@NotNull ? extends Tenor <Hoc>> tnr) {
     nūntius = nts.get();
     tenor = tnr.get();

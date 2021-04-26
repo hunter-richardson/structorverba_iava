@@ -29,7 +29,7 @@ public abstract class LēctorMultiplicibus <Hoc extends VerbumMultiplex <Hoc>> e
    * @param inventor valor hic colit ēventīs multīs possibilibus quibus {@link Lēctor#tenor} referat.
    */
   protected LēctorMultiplicibus(@NotNull final Catēgoria catēgoria,
-                                @NotNull final Supplier <? extends Nūntius> nūntius,
+                                @NotNull final Supplier <@NotNull ? extends Nūntius> nūntius,
                                 @NotNull final Supplier <@NotNull ? extends TenorMultiplicibus <Hoc>> tenor,
                                 @NotNull final Supplier <@NotNull ? extends Inventor <Hoc>> inventor) {
     super(catēgoria, nūntius, tenor);

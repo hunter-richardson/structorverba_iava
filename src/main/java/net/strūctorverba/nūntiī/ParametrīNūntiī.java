@@ -13,7 +13,7 @@ import java.util.logging.*;
  * Classis {@link ParametrīNūntiī} valōrēs continet quōs rem classis {@link Nūntius} iuvat generāre.
  */
 @SuppressWarnings({ "NonAsciiCharacters", "SpellCheckingInspection" })
-final class ParametrīNūntiī extends Omnum {
+final class ParametrīNūntiī {
   private final @NotNull String locus = "logs";
 
   /**

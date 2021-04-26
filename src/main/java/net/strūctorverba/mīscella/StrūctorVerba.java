@@ -51,7 +51,10 @@ public final class StrūctorVerba extends Omnum {
   @NotNull private final LēctorMultiplicibus.LēctorNōminibus nōmina = LēctorMultiplicibus.LēctorNōminibus.fac.get();
 
   @Getter(value = AccessLevel.PUBLIC, lazy = true) @Accessors(fluent = true)
-  @NotNull private final LēctorConiūnctīvīs coniūnctīva = LēctorConiūnctīvīs.fac.get();
+  @NotNull private final LēctorSimplicibus.LēctorConiūnctīvīs coniūnctīva = LēctorSimplicibus.LēctorConiūnctīvīs.fac.get();
+
+  @Getter(value = AccessLevel.PUBLIC, lazy = true) @Accessors(fluent = true)
+  @NotNull private final LēctorSimplicibus.LēctorInteriectiōnibus interiectiōnēs = LēctorSimplicibus.LēctorInteriectiōnibus.fac.get();
 
   @Getter(value = AccessLevel.PUBLIC, lazy = true) @Accessors(fluent = true)
   @NotNull private final LēctorPraepositiōnibus praepositiōnēs = LēctorPraepositiōnibus.fac.get();
@@ -71,6 +74,7 @@ public final class StrūctorVerba extends Omnum {
                                                           @NotNull final Catēgoria catēgoria) {
     return switch (catēgoria) {
              case CONIŪNCTĪVUM -> (Hoc) coniūnctīva().adveniam(fundāmen);
+             case INTERIECTIŌ -> (Hoc) interiectiōnēs().adveniam(fundāmen);
              case PRAEPOSITIŌ -> (Hoc) praepositiōnēs().adveniam(fundāmen);
              default -> null;
            };

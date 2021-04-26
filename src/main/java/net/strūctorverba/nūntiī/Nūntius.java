@@ -1,6 +1,6 @@
 package net.strūctorverba.nūntiī;
 
-import net.strūctorverba.conditōrēs.ConditōrConiūnctīvīs;
+import net.strūctorverba.conditōrēs.ConditōrSimplicibus;
 import net.strūctorverba.conditōrēs.multiplicia.*;
 import net.strūctorverba.inventōrēs.*;
 import net.strūctorverba.lēctōrēs.*;
@@ -32,7 +32,6 @@ public abstract class Nūntius {
    * @param parametrī Valor hic parametrōs ūsōs prō generātiōne organum internum reī huius continet.
    */
   protected Nūntius(@NotNull final ParametrīNūntiī parametrī) {
-    Thread.currentThread().setUncaughtExceptionHandler(Nūntius.NūntiusErrōribus.fac.get());
     gradusMinimus = parametrī.gradusMinimus;
     praecō = parametrī.praecōnium.get();
   }
@@ -165,8 +164,8 @@ public abstract class Nūntius {
   }
 
   /**
-   * Classis {@link NūntiusTenōrīConiūnctivīs} est vās classis {@link Nūntius} classī {@link TenorConiūnctivīs}
-   * @see TenorConiūnctivīs
+   * Classis {@link NūntiusTenōrīConiūnctivīs} est vās classis {@link Nūntius} classī {@link TenorSimplicibus.TenorConiūnctivīs}
+   * @see TenorSimplicibus.TenorConiūnctivīs
    */
   @Singleton public static final class NūntiusTenōrīConiūnctivīs extends Nūntius {
     @Nullable private static NūntiusTenōrīConiūnctivīs īnstantia = null;
@@ -179,7 +178,26 @@ public abstract class Nūntius {
       () -> ObjectUtils.firstNonNull(īnstantia, īnstantia = new NūntiusTenōrīConiūnctivīs());
 
     private NūntiusTenōrīConiūnctivīs( ) {
-      super(ParametrīNūntiī.parā(TenorConiūnctivīs.class));
+      super(ParametrīNūntiī.parā(TenorSimplicibus.TenorConiūnctivīs.class));
+    }
+  }
+
+  /**
+   * Classis {@link NūntiusTenōrīInteriectiōnibus} est vās classis {@link Nūntius} classī {@link TenorSimplicibus.TenorInteriectiōnibus}
+   * @see TenorSimplicibus.TenorInteriectiōnibus
+   */
+  @Singleton public static final class NūntiusTenōrīInteriectiōnibus extends Nūntius {
+    @Nullable private static NūntiusTenōrīInteriectiōnibus īnstantia = null;
+
+    /**
+     * Valor hic viam reī classis huiuc facit.
+     * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
+     */
+    @NotNull public static final Supplier <NūntiusTenōrīInteriectiōnibus> fac =
+      () -> ObjectUtils.firstNonNull(īnstantia, īnstantia = new NūntiusTenōrīInteriectiōnibus());
+
+    private NūntiusTenōrīInteriectiōnibus( ) {
+      super(ParametrīNūntiī.parā(TenorSimplicibus.TenorInteriectiōnibus.class));
     }
   }
 
@@ -280,8 +298,8 @@ public abstract class Nūntius {
   }
 
   /**
-   * Classis {@link NūntiusConditōrīConiūnctivīs} est vās classis {@link Nūntius} classī {@link ConditōrConiūnctīvīs}
-   * @see ConditōrConiūnctīvīs
+   * Classis {@link NūntiusConditōrīConiūnctivīs} est vās classis {@link Nūntius} classī {@link ConditōrSimplicibus.ConditōrConiūnctīvīs}
+   * @see ConditōrSimplicibus.ConditōrConiūnctīvīs
    */
   @Singleton public static final class NūntiusConditōrīConiūnctivīs extends Nūntius {
     @Nullable private static NūntiusConditōrīConiūnctivīs īnstantia = null;
@@ -294,7 +312,26 @@ public abstract class Nūntius {
       () -> ObjectUtils.firstNonNull(īnstantia, īnstantia = new NūntiusConditōrīConiūnctivīs());
 
     private NūntiusConditōrīConiūnctivīs( ) {
-      super(ParametrīNūntiī.parā(ConditōrConiūnctīvīs.class));
+      super(ParametrīNūntiī.parā(ConditōrSimplicibus.ConditōrConiūnctīvīs.class));
+    }
+  }
+
+  /**
+   * Classis {@link NūntiusConditōrīInteriectiōnibus} est vās classis {@link Nūntius} classī {@link ConditōrSimplicibus.ConditōrInteriectiōnibus}
+   * @see ConditōrSimplicibus.ConditōrInteriectiōnibus
+   */
+  @Singleton public static final class NūntiusConditōrīInteriectiōnibus extends Nūntius {
+    @Nullable private static NūntiusConditōrīInteriectiōnibus īnstantia = null;
+
+    /**
+     * Valor hic viam reī classis huiuc facit.
+     * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
+     */
+    @NotNull public static final Supplier <NūntiusConditōrīInteriectiōnibus> fac =
+      () -> ObjectUtils.firstNonNull(īnstantia, īnstantia = new NūntiusConditōrīInteriectiōnibus());
+
+    private NūntiusConditōrīInteriectiōnibus( ) {
+      super(ParametrīNūntiī.parā(ConditōrSimplicibus.ConditōrInteriectiōnibus.class));
     }
   }
 
@@ -489,8 +526,8 @@ public abstract class Nūntius {
   }
 
   /**
-   * Classis {@link NūntiusLēctōrīConiūnctīvīs} est vās classis {@link Nūntius} classī {@link LēctorConiūnctīvīs}
-   * @see LēctorConiūnctīvīs
+   * Classis {@link NūntiusLēctōrīConiūnctīvīs} est vās classis {@link Nūntius} classī {@link LēctorSimplicibus.LēctorConiūnctīvīs}
+   * @see LēctorSimplicibus.LēctorConiūnctīvīs
    */
   @Singleton public static final class NūntiusLēctōrīConiūnctīvīs extends Nūntius {
     @Nullable private static NūntiusLēctōrīConiūnctīvīs īnstantia = null;
@@ -503,7 +540,26 @@ public abstract class Nūntius {
       () -> ObjectUtils.firstNonNull(īnstantia, īnstantia = new NūntiusLēctōrīConiūnctīvīs());
 
     private NūntiusLēctōrīConiūnctīvīs( ) {
-      super(ParametrīNūntiī.parā(LēctorConiūnctīvīs.class));
+      super(ParametrīNūntiī.parā(LēctorSimplicibus.LēctorConiūnctīvīs.class));
+    }
+  }
+
+  /**
+   * Classis {@link NūntiusLēctōrīConiūnctīvīs} est vās classis {@link Nūntius} classī {@link LēctorSimplicibus.LēctorConiūnctīvīs}
+   * @see LēctorSimplicibus.LēctorConiūnctīvīs
+   */
+  @Singleton public static final class NūntiusLēctōrīInteriectiōnibus extends Nūntius {
+    @Nullable private static NūntiusLēctōrīInteriectiōnibus īnstantia = null;
+
+    /**
+     * Valor hic viam reī classis huiuc facit.
+     * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
+     */
+    @NotNull public static final Supplier <NūntiusLēctōrīInteriectiōnibus> fac =
+      () -> ObjectUtils.firstNonNull(īnstantia, īnstantia = new NūntiusLēctōrīInteriectiōnibus());
+
+    private NūntiusLēctōrīInteriectiōnibus( ) {
+      super(ParametrīNūntiī.parā(LēctorSimplicibus.LēctorInteriectiōnibus.class));
     }
   }
 

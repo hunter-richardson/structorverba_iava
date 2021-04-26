@@ -2,6 +2,7 @@ package net.strūctorverba.tenōrēs;
 
 import net.strūctorverba.conditōrēs.Conditōr;
 import net.strūctorverba.lēctōrēs.*;
+import net.strūctorverba.mīscella.Omnum;
 import net.strūctorverba.nūntiī.Nūntius;
 import net.strūctorverba.verba.Verbum;
 import org.apache.commons.lang3.StringUtils;

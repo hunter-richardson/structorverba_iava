@@ -5,12 +5,12 @@ import com.github.chaosfirebolt.converter.constants.IntegerType;
 import com.github.chaosfirebolt.converter.util.Validator;
 import lombok.*;
 import lombok.experimental.Accessors;
-import net.strūctorverba.conditōrēs.ConditōrConiūnctīvīs;
+import net.strūctorverba.conditōrēs.ConditōrSimplicibus;
 import net.strūctorverba.inventōrēs.Inventor;
 import net.strūctorverba.lēctōrēs.*;
 import net.strūctorverba.mīscella.Ūtilitās;
 import net.strūctorverba.nūntiī.Nūntius;
-import net.strūctorverba.tenōrēs.TenorConiūnctivīs;
+import net.strūctorverba.tenōrēs.TenorSimplicibus;
 import net.strūctorverba.ēnumerātiōnēs.Catēgoria;
 import org.apache.commons.lang3.StringUtils;
 import org.jetbrains.annotations.*;
@@ -46,9 +46,10 @@ public abstract class VerbumSimplex <Hoc extends Verbum <Hoc>> extends Verbum <H
   /**
    * Classis {@link Coniūnctīvum} repraesentat coniūnctīva ut coniectēris. <br>
    * Rēs classis huius catēgoriam {@link Catēgoria#CONIŪNCTĪVUM} ūtuntur et cōnservāta sunt in scrīniō <a href="{@docRoot}/../src/main/resources">auxiliārēs</a>/coniūnctīva.
-   * @see LēctorConiūnctīvīs
-   * @see TenorConiūnctivīs
-   * @see ConditōrConiūnctīvīs
+   * Classis haec classisque {@link Interiectiō} ā cōnspectiōne programmātis StrūctorVerba est eaedem.
+   * @see LēctorSimplicibus.LēctorConiūnctīvīs
+   * @see TenorSimplicibus.TenorConiūnctivīs
+   * @see ConditōrSimplicibus.ConditōrConiūnctīvīs
    * @see Nūntius.NūntiusConiūnctīvōrum
    */
   public static final class Coniūnctīvum extends VerbumSimplex <Coniūnctīvum> {
@@ -66,8 +67,13 @@ public abstract class VerbumSimplex <Hoc extends Verbum <Hoc>> extends Verbum <H
   /**
    * Classis {@link Interiectiō} repraesentat interiectiōnem ut coniectēris. <br>
    * Rēs classis huius catēgoriam {@link Catēgoria#CONIŪNCTĪVUM} ūtuntur et cōnservāta sunt in scrīniō <a href="{@docRoot}/../src/main/resources">auxiliārēs</a>/interiectiōnēs.
+   * Classis haec classisque {@link Coniūnctīvum} ā cōnspectiōne programmātis StrūctorVerba est eaedem.
+   * @see LēctorSimplicibus.LēctorInteriectiōnibus
+   * @see TenorSimplicibus.TenorInteriectiōnibus
+   * @see ConditōrSimplicibus.ConditōrInteriectiōnibus
+   * @see Nūntius.NūntiusInteriectiōnum
    */
-  public static final class Interiectiō extends VerbumSimplex <Coniūnctīvum> {
+  public static final class Interiectiō extends VerbumSimplex <Interiectiō> {
     @Getter(lazy = true) @Accessors(fluent = true)
     @NotNull private final Nūntius.NūntiusInteriectiōnum nūntius = Nūntius.NūntiusInteriectiōnum.fac.get();
 

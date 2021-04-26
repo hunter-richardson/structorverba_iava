@@ -25,7 +25,7 @@ public abstract class Inventor <Hoc extends VerbumMultiplex <Hoc>> extends Omnum
    * Officium hoc cōnstrūctōrem reī classis huius perpetrat.
    * @param nts valōrem {@link #nūntius} supplet.
    */
-  protected Inventor(@NotNull final Supplier <? extends Nūntius> nts) {
+  protected Inventor(@NotNull final Supplier <@NotNull ? extends Nūntius> nts) {
     nūntius = nts.get();
   }
 
