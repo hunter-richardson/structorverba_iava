@@ -33,7 +33,7 @@ public final class ConditōrNōminibus extends ConditōrMultiplicibus <Nōmen> {
   @NotNull private Speciālitās speciālitās = Speciālitās.NŪLLUM;
   @NotNull private Genus       genus       = Genus.NŪLLUM;
   @NotNull private Numerālis   numerālis   = Numerālis.NŪLLUS;
-  @NotNull private Cāsus       cāsus       = Cāsus.NŪLLUS;
+  @NotNull private Cāsus       cāsus       = Cāsus.DĒRĒCTUS;
 
   private ConditōrNōminibus( ) {
     super(Nūntius.NūntiusConditōrīNōminibus.fac);
@@ -95,13 +95,13 @@ public final class ConditōrNōminibus extends ConditōrMultiplicibus <Nōmen> {
    * {@inheritDoc}
    * @see Speciālitās#NŪLLUM
    * @see Genus#NŪLLUM
-   * @see Cāsus#NŪLLUS
+   * @see Cāsus#DĒRĒCTUS
    * @see Numerālis#NŪLLUS
    */
   @Override public void restituō( ) {
     speciālitās = Speciālitās.NŪLLUM;
     genus = Genus.NŪLLUM;
-    cāsus = Cāsus.NŪLLUS;
+    cāsus = Cāsus.DĒRĒCTUS;
     numerālis = Numerālis.NŪLLUS;
     scrīptiō = StringUtils.EMPTY;
     nūntius.certiōrō("Restitūtus sum");

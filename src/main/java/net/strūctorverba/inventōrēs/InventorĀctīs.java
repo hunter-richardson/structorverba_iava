@@ -29,7 +29,7 @@ public final class InventorĀctīs extends Inventor <Āctum> {
     () -> ObjectUtils.firstNonNull(īnstantia, īnstantia = new InventorĀctīs());
 
   @NotNull private Vōx       vōx       = Vōx.NŪLLA;
-  @NotNull private Tempus    tempus    = Tempus.NŪLLUM;
+  @NotNull private Tempus    tempus    = Tempus.INTEMPORĀLE;
   @NotNull private Numerālis numerālis = Numerālis.NŪLLUS;
   @NotNull private Persōna   persōna   = Persōna.NŪLLA;
   @NotNull private Modus     modus     = Modus.NŪLLUS;
@@ -55,14 +55,14 @@ public final class InventorĀctīs extends Inventor <Āctum> {
   /**
    * {@inheritDoc}
    * @see Vōx#NŪLLA
-   * @see Tempus#NŪLLUM
+   * @see Tempus#INTEMPORĀLE
    * @see Numerālis#NŪLLUS
    * @see Persōna#NŪLLA
    * @see Modus#NŪLLUS
    */
   @Override public void restituō( ) {
     vōx = Vōx.NŪLLA;
-    tempus = Tempus.NŪLLUM;
+    tempus = Tempus.INTEMPORĀLE;
     numerālis = Numerālis.NŪLLUS;
     persōna = Persōna.NŪLLA;
     modus = Modus.NŪLLUS;

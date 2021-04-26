@@ -33,7 +33,7 @@ public final class ConditōrAdiectīvīs extends ConditōrMultiplicibus <Adiect�
   @NotNull private Speciālitās speciālitās = Speciālitās.NŪLLUM;
   @NotNull private Genus       genus       = Genus.NŪLLUM;
   @NotNull private Numerālis   numerālis   = Numerālis.NŪLLUS;
-  @NotNull private Cāsus       cāsus       = Cāsus.NŪLLUS;
+  @NotNull private Cāsus       cāsus       = Cāsus.DĒRĒCTUS;
   @NotNull private Gradus      gradus      = Gradus.NŪLLUS;
 
   private ConditōrAdiectīvīs( ) {
@@ -98,14 +98,14 @@ public final class ConditōrAdiectīvīs extends ConditōrMultiplicibus <Adiect�
    * {@inheritDoc}
    * @see Speciālitās#NŪLLUM
    * @see Genus#NŪLLUM
-   * @see Cāsus#NŪLLUS
+   * @see Cāsus#DĒRĒCTUS
    * @see Numerālis#NŪLLUS
    * @see Gradus#NŪLLUS
    */
   @Override public void restituō( ) {
     speciālitās = Speciālitās.NŪLLUM;
     genus = Genus.NŪLLUM;
-    cāsus = Cāsus.NŪLLUS;
+    cāsus = Cāsus.DĒRĒCTUS;
     numerālis = Numerālis.NŪLLUS;
     gradus = Gradus.NŪLLUS;
     scrīptiō = StringUtils.EMPTY;

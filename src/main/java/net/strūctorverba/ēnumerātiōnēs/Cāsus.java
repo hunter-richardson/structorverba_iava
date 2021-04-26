@@ -14,9 +14,9 @@ import java.util.stream.Stream;
 public enum Cāsus {
   /**
    * Valor hic ūtātur sī ūsūfructuāriī valōrem validum nōn dēnotat. <br>
-   * Numquam scrīnium <a href="{@docRoot}/../src/main/resources">auxiliārēs</a> inscrībētur.
+   * Sōlum scrīnium <a href="{@docRoot}/../src/main/resources">auxiliārēs</a> ūtitur indicāre quod verbum hoc dērigitur.
    */
-  NŪLLUS(StringUtils.EMPTY),
+  DĒRĒCTUS(StringUtils.EMPTY),
 
   /**
    * Valor hic cāsum nōminātīvum dēsignat.
@@ -73,24 +73,24 @@ public enum Cāsus {
 
   /**
    * Modus hic rem ēnumerātiō {@link Cāsus} ā parametrō dēsignātō advenit. <br>
-   * Valōrem {@link #NŪLLUS} refert sī nihil valōrem {@code scrīptiō} quadrat.
+   * Valōrem {@link #DĒRĒCTUS} refert sī nihil valōrem {@code scrīptiō} quadrat.
    * @param scrīptiō valōrem {@link #scrīptiō} indicat.
    * @return Rem ēnumerātiō {@link Cāsus} quod parametrum dēsignātum quadrat.
    */
   @NotNull public static Cāsus dēfīniam(@NotNull final String scrīptiō) {
     return Stream.of(values())
                  .filter(cāsus -> cāsus.scrīptiō.equals(scrīptiō))
-                 .findFirst().orElse(NŪLLUS);
+                 .findFirst().orElse(DĒRĒCTUS);
   }
 
   /**
-   * @return {@code illud} sī valōrem ēnumerātiō {@link Cāsus} quadrat; {@link #NŪLLUS} aliter.
+   * @return {@code illud} sī valōrem ēnumerātiō {@link Cāsus} quadrat; {@link #DĒRĒCTUS} aliter.
    * @param illud valor tentandus.
    */
   @SuppressWarnings("ConstantConditions")
   @NotNull public static Cāsus ut(@NotNull final Enum<@NotNull ?> illud) {
     final Cāsus hoc = (Cāsus) illud;
     return hoc.equals(illud) ? hoc
-                             : NŪLLUS;
+                             : DĒRĒCTUS;
   }
 }

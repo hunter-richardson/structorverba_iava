@@ -31,7 +31,7 @@ public final class InventorNōminibus extends Inventor <Nōmen> {
   @NotNull private Speciālitās speciālitās = Speciālitās.NŪLLUM;
   @NotNull private Genus       genus       = Genus.NŪLLUM;
   @NotNull private Numerālis   numerālis   = Numerālis.NŪLLUS;
-  @NotNull private Cāsus       cāsus       = Cāsus.NŪLLUS;
+  @NotNull private Cāsus       cāsus       = Cāsus.DĒRĒCTUS;
 
   private InventorNōminibus( ) {
     super(Nūntius.NūntiusInventōrīNōminibus.fac);
@@ -55,13 +55,13 @@ public final class InventorNōminibus extends Inventor <Nōmen> {
    * @see Speciālitās#NŪLLUM
    * @see Genus#NŪLLUM
    * @see Numerālis#NŪLLUS
-   * @see Cāsus#NŪLLUS
+   * @see Cāsus#DĒRĒCTUS
    */
   @Override public void restituō( ) {
     speciālitās = Speciālitās.NŪLLUM;
     genus = Genus.NŪLLUM;
     numerālis = Numerālis.NŪLLUS;
-    cāsus = Cāsus.NŪLLUS;
+    cāsus = Cāsus.DĒRĒCTUS;
     nūntius.certiōrō("Restitūtus sum");
   }
 

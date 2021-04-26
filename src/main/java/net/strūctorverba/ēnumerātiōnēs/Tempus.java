@@ -14,9 +14,9 @@ import java.util.stream.Stream;
 public enum Tempus {
   /**
    * Valor hic ūtātur sī ūsūfructuāriī valōrem validum nōn dēnotat. <br>
-   * Numquam scrīnium <a href="{@docRoot}/../src/main/resources">auxiliārēs</a> inscrībētur.
+   * Sōlum scrīnium <a href="{@docRoot}/../src/main/resources">auxiliārēs</a> ūtitur indicāre quod verbum hoc temporem nōn pertinet.
    */
-  NŪLLUM(StringUtils.EMPTY),
+  INTEMPORĀLE(StringUtils.EMPTY),
 
   /**
    * Valor hic temporem praesēntem dēsignat.
@@ -44,10 +44,10 @@ public enum Tempus {
   PLŪSQUAMPERFECTUM("plūsquamperfectum"),
 
   /**
-   * Valor hic temporem perfectum futūrum dēsignat.
+   * Valor hic temporem futūrum exāctum dēsignat. <br>
    * Curtātum ā verbīs duōbus est scrīptiōnem facilem in scāpīs XML licēre.
    */
-  PERFUTŪRUM("perfutūrum");
+  FUTŪRUM_EXĀCTUM("futrexāctum");
 
   /**
    * Valor hic repraesentātiōnem scrīpta reī huius dēsignat.
@@ -64,24 +64,24 @@ public enum Tempus {
 
   /**
    * Modus hic rem ēnumerātiō {@link Tempus} ā parametrō dēsignātō advenit. <br>
-   * Valōrem {@link #NŪLLUM} refert sī nihil valōrem {@code scrīptiō} quadrat.
+   * Valōrem {@link #INTEMPORĀLE} refert sī nihil valōrem {@code scrīptiō} quadrat.
    * @param scrīptiō valōrem {@link #scrīptiō} indicat.
    * @return Rem ēnumerātiō {@link Tempus} quod parametrum dēsignātum quadrat.
    */
   @NotNull public static Tempus dēfīniam(@NotNull final String scrīptiō) {
     return Stream.of(values())
                  .filter(tempus -> tempus.scrīptiō.equals(scrīptiō))
-                 .findFirst().orElse(NŪLLUM);
+                 .findFirst().orElse(INTEMPORĀLE);
   }
 
   /**
-   * @return {@code illud} sī valōrem ēnumerātiō {@link Tempus} quadrat; {@link #NŪLLUM} aliter.
+   * @return {@code illud} sī valōrem ēnumerātiō {@link Tempus} quadrat; {@link #INTEMPORĀLE} aliter.
    * @param illud valor tentandus.
    */
   @SuppressWarnings("ConstantConditions")
   @NotNull public static Tempus ut(@NotNull final Enum<@NotNull ?> illud) {
     final Tempus hoc = (Tempus) illud;
     return hoc.equals(illud) ? hoc
-                             : NŪLLUM;
+                             : INTEMPORĀLE;
   }
 }

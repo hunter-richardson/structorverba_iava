@@ -14,7 +14,7 @@ import java.util.stream.Stream;
 public enum Modus {
   /**
    * Valor hic ūtātur sī ūsūfructuāriī valōrem validum nōn dēnotat. <br>
-   * Numquam scrīnium <a href="{@docRoot}/../src/main/resources">auxiliārēs</a> inscrībētur.
+   * Numquam scrīnium <a href="{@docRoot}/../src/main/resources">auxiliārēs</a> ūtitur.
    */
   NŪLLUS(StringUtils.EMPTY),
 

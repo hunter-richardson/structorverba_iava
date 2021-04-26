@@ -31,7 +31,7 @@ public final class ConditōrĀctīs extends ConditōrMultiplicibus <Āctum> {
 
   @NotNull private Modus     modus     = Modus.NŪLLUS;
   @NotNull private Vōx       vōx       = Vōx.NŪLLA;
-  @NotNull private Tempus    tempus    = Tempus.NŪLLUM;
+  @NotNull private Tempus    tempus    = Tempus.INTEMPORĀLE;
   @NotNull private Numerālis numerālis = Numerālis.NŪLLUS;
   @NotNull private Persōna   persōna   = Persōna.NŪLLA;
 
@@ -97,14 +97,14 @@ public final class ConditōrĀctīs extends ConditōrMultiplicibus <Āctum> {
    * {@inheritDoc}
    * @see Modus#NŪLLUS
    * @see Vōx#NŪLLA
-   * @see Tempus#NŪLLUM
+   * @see Tempus#INTEMPORĀLE
    * @see Numerālis#NŪLLUS
    * @see Persōna#NŪLLA
    */
   @Override public void restituō( ) {
     numerālis = Numerālis.NŪLLUS;
     persōna = Persōna.NŪLLA;
-    tempus = Tempus.NŪLLUM;
+    tempus = Tempus.INTEMPORĀLE;
     modus = Modus.NŪLLUS;
     vōx = Vōx.NŪLLA;
     scrīptiō = StringUtils.EMPTY;

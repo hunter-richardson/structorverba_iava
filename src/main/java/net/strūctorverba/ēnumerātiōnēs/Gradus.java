@@ -14,7 +14,7 @@ import java.util.stream.Stream;
 public enum Gradus {
   /**
    * Valor hic ūtātur sī ūsūfructuāriī valōrem validum nōn dēnotat. <br>
-   * Scrīnium <a href="{@docRoot}/../src/main/resources">auxiliārēs</a> inscrībētur indicāre quod verbum hoc nōn graditur.
+   * Sōlum scrīnium <a href="{@docRoot}/../src/main/resources">auxiliārēs</a> ūtitur indicāre quod verbum hoc nōn graditur.
    */
   NŪLLUS(StringUtils.EMPTY),
 
@@ -57,6 +57,7 @@ public enum Gradus {
                  .filter(gradus -> gradus.scrīptiō.equals(scrīptiō))
                  .findFirst().orElse(NŪLLUS);
   }
+
   /**
    * @return {@code illud} sī valōrem ēnumerātiō {@link Gradus} quadrat; {@link #NŪLLUS} aliter.
    * @param illud valor tentandus.

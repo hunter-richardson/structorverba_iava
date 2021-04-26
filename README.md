@@ -47,7 +47,7 @@ class Tentāmen {
                         Cāsus.NŌMINĀTĪVUS, Numerālis.SINGULĀRIS),
       strūctor.adveniam("Latīnus", Catēgoria.ADIECTĪVUM,
                         Speciālitās.PROPRIUM, Genus.FĒMINĪNUM,
-                        Cāsus.NŌMINĀTĪVUS, Numerālis.SINGULĀRIS),
+                        Cāsus.NŌMINĀTĪVUS, Numerālis.SINGULĀRIS, Gradus.POSITĪVUS),
       strūctor.adveniam("plācēre", Catēgoria.ĀCTUM,
                         Modus.INDICĀTĪVUS, Vōx.ĀCTĪVA, Tempus.PRAESĒNS,
                         Numerālis.SINGULĀRIS, Persōna.TERTIA),

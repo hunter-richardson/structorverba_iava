@@ -14,6 +14,7 @@ import java.util.stream.Stream;
 public enum Persōna {
   /**
    * Valor hic ūtātur sī ūsūfructuāriī valōrem validum nōn dēnotat. <br>
+   * Sōlum scrīnium <a href="{@docRoot}/../src/main/resources">auxiliārēs</a> ūtitur indicāre quod verbum hoc persōnam nōn pertinet.
    * Numquam scrīnium <a href="{@docRoot}/../src/main/resources">auxiliārēs</a> inscrībētur.
    */
   NŪLLA(StringUtils.EMPTY),

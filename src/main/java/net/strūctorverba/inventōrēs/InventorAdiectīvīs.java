@@ -31,7 +31,7 @@ public final class InventorAdiectīvīs extends Inventor <Adiectīvum> {
   @NotNull private Speciālitās speciālitās = Speciālitās.NŪLLUM;
   @NotNull private Genus       genus       = Genus.NŪLLUM;
   @NotNull private Numerālis   numerālis   = Numerālis.NŪLLUS;
-  @NotNull private Cāsus       cāsus       = Cāsus.NŪLLUS;
+  @NotNull private Cāsus       cāsus       = Cāsus.DĒRĒCTUS;
   @NotNull private Gradus      gradus      = Gradus.NŪLLUS;
 
   private InventorAdiectīvīs( ) {
@@ -57,14 +57,14 @@ public final class InventorAdiectīvīs extends Inventor <Adiectīvum> {
    * @see Speciālitās#NŪLLUM
    * @see Genus#NŪLLUM
    * @see Numerālis#NŪLLUS
-   * @see Cāsus#NŪLLUS
+   * @see Cāsus#DĒRĒCTUS
    * @see Gradus#NŪLLUS
    */
   @Override public void restituō( ) {
     speciālitās = Speciālitās.NŪLLUM;
     genus = Genus.NŪLLUM;
     numerālis = Numerālis.NŪLLUS;
-    cāsus = Cāsus.NŪLLUS;
+    cāsus = Cāsus.DĒRĒCTUS;
     gradus = Gradus.NŪLLUS;
     nūntius.certiōrō("Restitūtus sum");
   }

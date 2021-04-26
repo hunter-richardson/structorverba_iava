@@ -15,7 +15,7 @@ import java.util.stream.Stream;
 public enum Numerālis {
   /**
    * Valor hic ūtātur sī ūsūfructuāriī valōrem validum nōn dēnotat. <br>
-   * Numquam scrīnium <a href="{@docRoot}/../src/main/resources">auxiliārēs</a> inscrībētur.
+   * Sōlum scrīnium <a href="{@docRoot}/../src/main/resources">auxiliārēs</a> ūtitur indicāre quod verbum hoc est innumerābile.
    */
   NŪLLUS(StringUtils.EMPTY),
 
