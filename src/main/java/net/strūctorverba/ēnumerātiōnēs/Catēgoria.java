@@ -42,6 +42,11 @@ public enum Catēgoria {
   CONIŪNCTĪVUM("coniūnctīva"),
 
   /**
+   * Valor hic classem {@link VerbumSimplex.Interiectiō} respondet.
+   */
+  INTERIECTIŌ("interiectiōnēs"),
+
+  /**
    * Valor hic classem {@link VerbumSimplex.Praepositiō} respondet.
    */
   PRAEPOSITIŌ("praepositiōnēs"),
