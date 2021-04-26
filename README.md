@@ -1,8 +1,6 @@
 # Strūctor Verba : Iava
 
-Verba Latīna scrībere tetendistisne 
-sed nōn potuistisne meminisse coniugātiōnem 
-quam āctārum hārum aut generem nōminum illōrum?
+Verba Latīna scrībere tetendistisne sed nōn potuistisne meminisse coniugātiōnem quam āctārum hārum aut generem nōminum illōrum?
 
 Nōn iam! Vōbīs intrōdūcō programma StrūctorVerba scrīptum in linguā [Iavā](https://docs.oracle.com/javase/10/docs/api/overview-summary.html) cōdicis.
 
@@ -24,8 +22,7 @@ VII. [Adiectīvum](src/main/java/net/strūctorverba/verba/multiplicia/Adiectīvu
 
 VIII. [Āctum](src/main/java/net/strūctorverba/verba/multiplicia/Āctum.java)
 
-Omne quālitātēs ipsās prōpositaque ipsa habet 
-et ligāmina illa vōs dūcent ut tabellās aptās perlēgātis.
+Omne quālitātēs ipsās prōpositaque ipsa habet et ligāmina illa vōs dūcent ut tabellās aptās perlēgātis.
 
 Praetereā tentāmina duo scrīpsī exsecūtiōnem modōsque programmātis recēnsēre.
 
@@ -33,8 +30,7 @@ I. [DolōremIpsum](src/main/test/net/strūctorverba/tentāmina/DolōremIpsum.jav
 
 II. [Numerī](src/main/test/net/strūctorverba/tentāmina/Numerī.java)
 
-Valōrem [StrūctorVerba.fac](src/main/java/net/strūctorverba/mīscella/StrūctorVerba.java) invocāte 
-ut fūnctiōnēs omnēs programmātis StrūctorVerba accēdātis:
+Valōrem [StrūctorVerba.fac](src/main/java/net/strūctorverba/mīscella/StrūctorVerba.java) invocāte ut fūnctiōnēs omnēs programmātis StrūctorVerba accēdātis:
 
 ```java
 class Tentāmen {
@@ -59,17 +55,10 @@ class Tentāmen {
 }
 ```
 
-Significētur quod programma hoc per ipse officia lexicōnī dēest. 
-Verba servat nōn dēfīnīre quam sōlum in formīs īnflexīs petītīs eōrum scrībere. 
-Officia haec forsit aliquandō acquīrat in coniūnctiōne cum programmātis aliā quā fungitur ut lexicon. 
-Autem experiendus modestē in linguā Latīnā iam est vōbīs ut ūsūfructuāriī programmātis StrūctorVerbae. 
+Significētur quod programma hoc per ipse officia lexicōnī dēest. Verba servat nōn dēfīnīre quam sōlum in formīs īnflexīs petītīs eōrum scrībere. Officia haec forsit aliquandō acquīrat in coniūnctiōne cum programmātis aliā quā fungitur ut lexicon. Autem experiendus modestē in linguā Latīnā iam est vōbīs ut ūsūfructuāriī programmātis StrūctorVerbae.
 
-Significētur etiam quod programma hoc cum ūsūfructuāriīs nōn congreditur 
-in modīs sīve vīsuālite sīve scrīptile dum vicem īnfantiae praesertim adest. 
-Iam scrīptum est ut bibliothēcula cōdicis. 
-Officia haec forsit aliquandō acquīrat dum veterēscat 
-autem experiendus modestē in linguā [Iavā](https://docs.oracle.com/javase/10/docs/api/overview-summary.html) cōdicis iam est vōbīs 
-ut ūsūfructuāriī programmātis StrūctorVerbae.
+Significētur etiam quod programma hoc cum ūsūfructuāriīs nōn congreditur in modīs sīve vīsuālite sīve scrīptile dum vicem īnfantiae praesertim adest. Iam scrīptum est ut bibliothēcula cōdicis. Officia haec forsit aliquandō acquīrat dum veterēscat 
+autem experiendus modestē in linguā [Iavā](https://docs.oracle.com/javase/10/docs/api/overview-summary.html) cōdicis iam est vōbīs ut ūsūfructuāriī programmātis StrūctorVerbae.
 
 > Ingeniārius invenit problēmata quae ignōrābās.
 > 
