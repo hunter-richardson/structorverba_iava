@@ -64,6 +64,22 @@ public abstract class VerbumSimplex <Hoc extends Verbum <Hoc>> extends Verbum <H
   }
 
   /**
+   * Classis {@link Interiectiō} repraesentat interiectiōnem ut coniectēris. <br>
+   * Rēs classis huius catēgoriam {@link Catēgoria#CONIŪNCTĪVUM} ūtuntur et cōnservāta sunt in scrīniō <a href="{@docRoot}/../src/main/resources">auxiliārēs</a>/interiectiōnēs.
+   */
+  public static final class Interiectiō extends VerbumSimplex <Coniūnctīvum> {
+    @Getter(lazy = true) @Accessors(fluent = true)
+    @NotNull private final Nūntius.NūntiusInteriectiōnum nūntius = Nūntius.NūntiusInteriectiōnum.fac.get();
+
+    @Builder(access = AccessLevel.PUBLIC, builderClassName = "Conditōr",
+             builderMethodName = "conditōr", buildMethodName = "condam")
+    private Interiectiō(@NotNull final String fundāmen) {
+      super(Catēgoria.INTERIECTIŌ, fundāmen);
+      nūntius().plūsGarriō("Scrībor ut", fundāmen);
+    }
+  }
+
+  /**
    * Classis {@link Praepositiō} repraesentat praepositiōnēs ut coniectēris. <br>
    * Rēs classis huius catēgoriam {@link Catēgoria#PRAEPOSITIŌ} ūtuntur et cōnservāta sunt in scrīniō <a href="{@docRoot}/../src/main/resources">auxiliārēs</a>/praepositiōnēs.
    * @see LēctorPraepositiōnibus
