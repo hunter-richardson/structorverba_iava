@@ -27,6 +27,3 @@ hs_err_pid*
 
 # compilation directory
 out/
-
-#generated Javadocs
-docs/
