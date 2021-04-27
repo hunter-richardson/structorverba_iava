@@ -39,6 +39,8 @@ III. [Numerī](src/main/test/net/strūctorverba/tentāmina/Numerī.java)
 Valōrem [StrūctorVerba.fac](src/main/java/net/strūctorverba/mīscella/StrūctorVerba.java#L28) invocāte ut fūnctiōnēs omnēs programmātis StrūctorVerba accēdātis:
 
 ```java
+import net.strūctorverba.ēnumerātiōnēs.Encliticum;
+
 class Tentāmen {
   private void main(String[] args) {
     final StrūctorVerba strūctor = StrūctorVerba.fac.get();
@@ -56,7 +58,7 @@ class Tentāmen {
       strūctor.adveniam("prōdesse", Catēgoria.ĀCTUM,
                         Modus.INDICĀTĪVUS, Vōx.ĀCTĪVA, Tempus.PRAESĒNS,
                         Numerālis.SINGULĀRIS, Persōna.TERTIA)
-              .allegō(Encliticum.INTERROGĀNS));
+              .allegō(Encliticum.CONIUGĀNS));
     System.out.println(verba); // Ecce lingua Latīna placet prōdestque
   }
 }

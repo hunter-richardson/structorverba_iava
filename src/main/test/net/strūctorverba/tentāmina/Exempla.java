@@ -44,7 +44,7 @@ public class Exempla extends Omnum {
                                          strūctor().adveniam("plācēre", Catēgoria.ĀCTUM,
                                                              Modus.INDICĀTĪVUS, Vōx.ĀCTĪVA, Tempus.PRAESĒNS,
                                                              Numerālis.SINGULĀRIS, Persōna.TERTIA),
-                                         prōdest.allegō(Encliticum.INTERROGĀNS));
+                                         prōdest.allegō(Encliticum.CONIUGĀNS));
     Assertions.assertNotNull(verba, "Verba prōducta vacant.");
     Assertions.assertTrue(CollectionUtils.isNotEmpty(verba.seriēs),
                           "Verba prōducta vacant.");
