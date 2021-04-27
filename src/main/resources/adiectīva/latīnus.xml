@@ -1,115 +1,115 @@
 <adiectīvum fundāmen="Latīnus">
-  <fōrma speciālitās="commūne" genus="masculīnum" numerālis="singulāris" cāsus="nōminātīvus">
+  <fōrma speciālitās="proprium" genus="masculīnum" numerālis="singulāris" cāsus="nōminātīvus">
     Latīnus
   </fōrma>
-  <fōrma speciālitās="commūne" genus="masculīnum" numerālis="singulāris" cāsus="genitīvus">
+  <fōrma speciālitās="proprium" genus="masculīnum" numerālis="singulāris" cāsus="genitīvus">
     Latīnī
   </fōrma>
-  <fōrma speciālitās="commūne" genus="masculīnum" numerālis="singulāris" cāsus="datīvus">
+  <fōrma speciālitās="proprium" genus="masculīnum" numerālis="singulāris" cāsus="datīvus">
     Latīnō
   </fōrma>
-  <fōrma speciālitās="commūne" genus="masculīnum" numerālis="singulāris" cāsus="accūsātīvus">
+  <fōrma speciālitās="proprium" genus="masculīnum" numerālis="singulāris" cāsus="accūsātīvus">
     Latīnum
   </fōrma>
-  <fōrma speciālitās="commūne" genus="masculīnum" numerālis="singulāris" cāsus="ablātīvus">
+  <fōrma speciālitās="proprium" genus="masculīnum" numerālis="singulāris" cāsus="ablātīvus">
     Latīnō
   </fōrma>
-  <fōrma speciālitās="commūne" genus="masculīnum" numerālis="singulāris" cāsus="locātīvus">
+  <fōrma speciālitās="proprium" genus="masculīnum" numerālis="singulāris" cāsus="locātīvus">
     Latīne
   </fōrma>
 
-  <fōrma speciālitās="commūne" genus="masculīnum" numerālis="plūrālis" cāsus="nōminātīvus">
+  <fōrma speciālitās="proprium" genus="masculīnum" numerālis="plūrālis" cāsus="nōminātīvus">
     Latīnī
   </fōrma>
-  <fōrma speciālitās="commūne" genus="masculīnum" numerālis="plūrālis" cāsus="genitīvus">
+  <fōrma speciālitās="proprium" genus="masculīnum" numerālis="plūrālis" cāsus="genitīvus">
     Latīnōrum
   </fōrma>
-  <fōrma speciālitās="commūne" genus="masculīnum" numerālis="plūrālis" cāsus="datīvus">
+  <fōrma speciālitās="proprium" genus="masculīnum" numerālis="plūrālis" cāsus="datīvus">
     Latīnīs
   </fōrma>
-  <fōrma speciālitās="commūne" genus="masculīnum" numerālis="plūrālis" cāsus="accūsātīvus">
+  <fōrma speciālitās="proprium" genus="masculīnum" numerālis="plūrālis" cāsus="accūsātīvus">
     Latīnōs
   </fōrma>
-  <fōrma speciālitās="commūne" genus="masculīnum" numerālis="plūrālis" cāsus="ablātīvus">
+  <fōrma speciālitās="proprium" genus="masculīnum" numerālis="plūrālis" cāsus="ablātīvus">
     Latīnīs
   </fōrma>
-  <fōrma speciālitās="commūne" genus="masculīnum" numerālis="plūrālis" cāsus="locātīvus">
+  <fōrma speciālitās="proprium" genus="masculīnum" numerālis="plūrālis" cāsus="locātīvus">
     Latīnī
   </fōrma>
 
-  <fōrma speciālitās="commūne" genus="fēminīnum" numerālis="singulāris" cāsus="nōminātīvus">
+  <fōrma speciālitās="proprium" genus="fēminīnum" numerālis="singulāris" cāsus="nōminātīvus">
     Latīna
   </fōrma>
-  <fōrma speciālitās="commūne" genus="fēminīnum" numerālis="singulāris" cāsus="genitīvus">
+  <fōrma speciālitās="proprium" genus="fēminīnum" numerālis="singulāris" cāsus="genitīvus">
     Latīnae
   </fōrma>
-  <fōrma speciālitās="commūne" genus="fēminīnum" numerālis="singulāris" cāsus="datīvus">
+  <fōrma speciālitās="proprium" genus="fēminīnum" numerālis="singulāris" cāsus="datīvus">
     Latīnā
   </fōrma>
-  <fōrma speciālitās="commūne" genus="fēminīnum" numerālis="singulāris" cāsus="accūsātīvus">
+  <fōrma speciālitās="proprium" genus="fēminīnum" numerālis="singulāris" cāsus="accūsātīvus">
     Latīnam
   </fōrma>
-  <fōrma speciālitās="commūne" genus="fēminīnum" numerālis="singulāris" cāsus="ablātīvus">
+  <fōrma speciālitās="proprium" genus="fēminīnum" numerālis="singulāris" cāsus="ablātīvus">
     Latīnā
   </fōrma>
-  <fōrma speciālitās="commūne" genus="fēminīnum" numerālis="singulāris" cāsus="locātīvus">
+  <fōrma speciālitās="proprium" genus="fēminīnum" numerālis="singulāris" cāsus="locātīvus">
     Latīna
   </fōrma>
 
-  <fōrma speciālitās="commūne" genus="fēminīnum" numerālis="plūrālis" cāsus="nōminātīvus">
+  <fōrma speciālitās="proprium" genus="fēminīnum" numerālis="plūrālis" cāsus="nōminātīvus">
     Latīnae
   </fōrma>
-  <fōrma speciālitās="commūne" genus="fēminīnum" numerālis="plūrālis" cāsus="genitīvus">
+  <fōrma speciālitās="proprium" genus="fēminīnum" numerālis="plūrālis" cāsus="genitīvus">
     Latīnārum
   </fōrma>
-  <fōrma speciālitās="commūne" genus="fēminīnum" numerālis="plūrālis" cāsus="datīvus">
+  <fōrma speciālitās="proprium" genus="fēminīnum" numerālis="plūrālis" cāsus="datīvus">
     Latīnīs
   </fōrma>
-  <fōrma speciālitās="commūne" genus="fēminīnum" numerālis="plūrālis" cāsus="accūsātīvus">
+  <fōrma speciālitās="proprium" genus="fēminīnum" numerālis="plūrālis" cāsus="accūsātīvus">
     Latīnās
   </fōrma>
-  <fōrma speciālitās="commūne" genus="fēminīnum" numerālis="plūrālis" cāsus="ablātīvus">
+  <fōrma speciālitās="proprium" genus="fēminīnum" numerālis="plūrālis" cāsus="ablātīvus">
     Latīnīs
   </fōrma>
-  <fōrma speciālitās="commūne" genus="fēminīnum" numerālis="plūrālis" cāsus="locātīvus">
+  <fōrma speciālitās="proprium" genus="fēminīnum" numerālis="plūrālis" cāsus="locātīvus">
     Latīnae
   </fōrma>
 
-  <fōrma speciālitās="commūne" genus="neutrum" numerālis="singulāris" cāsus="nōminātīvus">
+  <fōrma speciālitās="proprium" genus="neutrum" numerālis="singulāris" cāsus="nōminātīvus">
     Latīnum
   </fōrma>
-  <fōrma speciālitās="commūne" genus="neutrum" numerālis="singulāris" cāsus="genitīvus">
+  <fōrma speciālitās="proprium" genus="neutrum" numerālis="singulāris" cāsus="genitīvus">
     Latīnī
   </fōrma>
-  <fōrma speciālitās="commūne" genus="neutrum" numerālis="singulāris" cāsus="datīvus">
+  <fōrma speciālitās="proprium" genus="neutrum" numerālis="singulāris" cāsus="datīvus">
     Latīnō
   </fōrma>
-  <fōrma speciālitās="commūne" genus="neutrum" numerālis="singulāris" cāsus="accūsātīvus">
+  <fōrma speciālitās="proprium" genus="neutrum" numerālis="singulāris" cāsus="accūsātīvus">
     Latīnum
   </fōrma>
-  <fōrma speciālitās="commūne" genus="neutrum" numerālis="singulāris" cāsus="ablātīvus">
+  <fōrma speciālitās="proprium" genus="neutrum" numerālis="singulāris" cāsus="ablātīvus">
     Latīnō
   </fōrma>
-  <fōrma speciālitās="commūne" genus="neutrum" numerālis="singulāris" cāsus="locātīvus">
+  <fōrma speciālitās="proprium" genus="neutrum" numerālis="singulāris" cāsus="locātīvus">
     Latīnum
   </fōrma>
 
-  <fōrma speciālitās="commūne" genus="neutrum" numerālis="plūrālis" cāsus="nōminātīvus">
+  <fōrma speciālitās="proprium" genus="neutrum" numerālis="plūrālis" cāsus="nōminātīvus">
     Latīna
   </fōrma>
-  <fōrma speciālitās="commūne" genus="neutrum" numerālis="plūrālis" cāsus="genitīvus">
+  <fōrma speciālitās="proprium" genus="neutrum" numerālis="plūrālis" cāsus="genitīvus">
     Latīnōrum
   </fōrma>
-  <fōrma speciālitās="commūne" genus="neutrum" numerālis="plūrālis" cāsus="datīvus">
+  <fōrma speciālitās="proprium" genus="neutrum" numerālis="plūrālis" cāsus="datīvus">
     Latīnīs
   </fōrma>
-  <fōrma speciālitās="commūne" genus="neutrum" numerālis="plūrālis" cāsus="accūsātīvus">
+  <fōrma speciālitās="proprium" genus="neutrum" numerālis="plūrālis" cāsus="accūsātīvus">
     Latīna
   </fōrma>
-  <fōrma speciālitās="commūne" genus="neutrum" numerālis="plūrālis" cāsus="ablātīvus">
+  <fōrma speciālitās="proprium" genus="neutrum" numerālis="plūrālis" cāsus="ablātīvus">
     Latīnīs
   </fōrma>
-  <fōrma speciālitās="commūne" genus="neutrum" numerālis="plūrālis" cāsus="locātīvus">
+  <fōrma speciālitās="proprium" genus="neutrum" numerālis="plūrālis" cāsus="locātīvus">
     Latīna
   </fōrma>
 </adiectīvum>

@@ -40,7 +40,7 @@ public class Exempla extends Omnum {
                                                              Cāsus.NŌMINĀTĪVUS, Numerālis.SINGULĀRIS),
                                          strūctor().adveniam("Latīnus", Catēgoria.ADIECTĪVUM,
                                                              Speciālitās.PROPRIUM, Genus.FĒMINĪNUM,
-                                                             Cāsus.NŌMINĀTĪVUS, Numerālis.SINGULĀRIS, Gradus.POSITĪVUS),
+                                                             Cāsus.NŌMINĀTĪVUS, Numerālis.SINGULĀRIS),
                                          strūctor().adveniam("plācēre", Catēgoria.ĀCTUM,
                                                              Modus.INDICĀTĪVUS, Vōx.ĀCTĪVA, Tempus.PRAESĒNS,
                                                              Numerālis.SINGULĀRIS, Persōna.TERTIA),
