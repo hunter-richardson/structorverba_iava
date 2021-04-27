@@ -62,7 +62,7 @@ class Tentāmen {
 }
 ```
 
-Cōdex superus est scrīptus in tentāmen [Exempla.prōducta](src/main/test/net/strūctorverba/tentāmina/Exempla.java#L26)
+Cōdex superus est scrīptus in tentāmine [Exempla.prōducta](src/main/test/net/strūctorverba/tentāmina/Exempla.java#L26)
 
 ___
 
