@@ -38,7 +38,7 @@ public class Exempla extends Omnum {
                                          strūctor().adveniam("lingua", Catēgoria.NŌMEN,
                                                              Speciālitās.COMMŪNE, Genus.FĒMINĪNUM,
                                                              Cāsus.NŌMINĀTĪVUS, Numerālis.SINGULĀRIS),
-                                         strūctor().adveniam("Latīnus", Catēgoria.ADIECTĪVUM,
+                                         strūctor().adveniam("latīnus", Catēgoria.ADIECTĪVUM,
                                                              Speciālitās.PROPRIUM, Genus.FĒMINĪNUM,
                                                              Cāsus.NŌMINĀTĪVUS, Numerālis.SINGULĀRIS),
                                          strūctor().adveniam("plācēre", Catēgoria.ĀCTUM,
