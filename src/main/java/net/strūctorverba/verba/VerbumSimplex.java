@@ -111,7 +111,7 @@ public abstract class VerbumSimplex <Hoc extends Verbum <Hoc>> extends Verbum <H
 
   /**
    * Classis {@link Numerus} repraesentat numerōs ut coniectēris. <br>
-   * Rēs classis huius catēgoriam {@link Catēgoria#NUMERUM} ūtuntur et data eīs nōn inveniet scrīnium <a href="{@docRoot}/../src/main/resources">auxiliārēs</a>. <br>
+   * Rēs classis huius catēgoriam {@link Catēgoria#NUMERUS} ūtuntur et data eīs nōn inveniet scrīnium <a href="{@docRoot}/../src/main/resources">auxiliārēs</a>. <br>
    * Magis rēs classis huius ā numerīs classis <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Short.html">Short</a> per ūsum classis <a href="https://github.com/Chaosfirebolt/RomanNumeralConverter/blob/master/src/main/java/com/github/chaosfirebolt/converter/RomanInteger.java">RomanInteger</a> fīant.
    * @see Nūntius.NūntiusNumerōrum
    * @see <a href="https://github.com/Chaosfirebolt/RomanNumeralConverter/blob/master/src/main/java/com/github/chaosfirebolt/converter/RomanInteger.java">RomanInteger</a>
@@ -130,7 +130,7 @@ public abstract class VerbumSimplex <Hoc extends Verbum <Hoc>> extends Verbum <H
     @Builder(access = AccessLevel.PUBLIC, builderClassName = "Conditōr",
              builderMethodName = "conditōr", buildMethodName = "condam")
     private Numerus(final short numerus) throws IllegalArgumentException {
-      super(Catēgoria.NUMERUM, String.valueOf(numerus));
+      super(Catēgoria.NUMERUS, String.valueOf(numerus));
       this.numerus = Validator.range(Short.toUnsignedInt(numerus)).shortValue();
       nūntius().plūsGarriō("Scrībor ut", toString());
     }

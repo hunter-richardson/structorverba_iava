@@ -54,7 +54,7 @@ public enum Catēgoria {
   /**
    * Valor hic classem {@link VerbumSimplex.Numerus} respondet.
    */
-  NUMERUM(StringUtils.EMPTY);
+  NUMERUS(StringUtils.EMPTY);
 
   /**
    * Valor hic nōminātur scrīnium intrā quō scāpum verbī omnī cōnservātum est.

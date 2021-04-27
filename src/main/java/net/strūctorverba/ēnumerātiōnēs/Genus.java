@@ -14,7 +14,7 @@ import java.util.stream.Stream;
 public enum Genus {
   /**
    * Valor hic ūtātur sī ūsūfructuāriī valōrem validum nōn dēnotat. <br>
-   * Sōlum scrīnium <a href="{@docRoot}/../src/main/resources">auxiliārēs</a> ūtitur indicāre quod verbum hoc generem nōn habet.
+   * Sōlum scrīnium <a href="{@docRoot}/../src/main/resources">auxiliārēs</a> ūtitur indicāre quod verbum hoc nōn ingenerat.
    */
   NŪLLUM(StringUtils.EMPTY),
 
