@@ -41,7 +41,7 @@ public final class Verba extends Omnum {
     if(Objects.nonNull(ōrdō)) {
       seriēs.addAll(Arrays.stream(ōrdō)
                           .filter(Objects::nonNull)
-                          .filter(verbum -> StringUtils.isBlank(verbum.toString()))
+                          .filter(verbum -> StringUtils.isNotBlank(verbum.toString()))
                           .collect(Collectors.toList()));
     }
     return this;
@@ -56,7 +56,7 @@ public final class Verba extends Omnum {
   @NotNull public Verba superaddō(@NotNull final Verba verba) {
     seriēs.addAll(verba.seriēs.stream()
                               .filter(Objects::nonNull)
-                              .filter(verbum -> StringUtils.isBlank(verbum.toString()))
+                              .filter(verbum -> StringUtils.isNotBlank(verbum.toString()))
                               .collect(Collectors.toList()));
     return this;
   }
@@ -70,7 +70,7 @@ public final class Verba extends Omnum {
     if(ōrdō != null) {
       Arrays.stream(ōrdō)
             .filter(Objects::nonNull)
-            .filter(verbum -> StringUtils.isBlank(verbum.toString()))
+            .filter(verbum -> StringUtils.isNotBlank(verbum.toString()))
             .forEach(this::superaddō);
     }
 

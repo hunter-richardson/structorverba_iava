@@ -21,284 +21,284 @@
     quaerendus
   </fōrma>
 
-  <fōrma modus="imperātīvus" vōx="āctīva" tempus="praesēns" numerālis="singulāris" persōna="secundum">
+  <fōrma modus="imperātīvus" vōx="āctīva" tempus="praesēns" numerālis="singulāris" persōna="secunda">
     quaere
   </fōrma>
-  <fōrma modus="imperātīvus" vōx="āctīva" tempus="futūrum" numerālis="singulāris" persōna="secundum">
+  <fōrma modus="imperātīvus" vōx="āctīva" tempus="futūrum" numerālis="singulāris" persōna="secunda">
     quaeritō
   </fōrma>
-  <fōrma modus="imperātīvus" vōx="āctīva" tempus="futūrum" numerālis="singulāris" persōna="tertium">
+  <fōrma modus="imperātīvus" vōx="āctīva" tempus="futūrum" numerālis="singulāris" persōna="tertia">
     quaeritō
   </fōrma>
-  <fōrma modus="imperātīvus" vōx="āctīva" tempus="praesēns" numerālis="plūrālis" persōna="secundum">
+  <fōrma modus="imperātīvus" vōx="āctīva" tempus="praesēns" numerālis="plūrālis" persōna="secunda">
     quaerite
   </fōrma>
-  <fōrma modus="imperātīvus" vōx="āctīva" tempus="futūrum" numerālis="plūrālis" persōna="secundum">
+  <fōrma modus="imperātīvus" vōx="āctīva" tempus="futūrum" numerālis="plūrālis" persōna="secunda">
     quaeritōte
   </fōrma>
-  <fōrma modus="imperātīvus" vōx="āctīva" tempus="futūrum" numerālis="plūrālis" persōna="tertium">
+  <fōrma modus="imperātīvus" vōx="āctīva" tempus="futūrum" numerālis="plūrālis" persōna="tertia">
     quaeruntō
   </fōrma>
-  <fōrma modus="imperātīvus" vōx="passīva" tempus="praesēns" numerālis="singulāris" persōna="secundum">
+  <fōrma modus="imperātīvus" vōx="passīva" tempus="praesēns" numerālis="singulāris" persōna="secunda">
     quaerere
   </fōrma>
-  <fōrma modus="imperātīvus" vōx="passīva" tempus="futūrum" numerālis="singulāris" persōna="secundum">
+  <fōrma modus="imperātīvus" vōx="passīva" tempus="futūrum" numerālis="singulāris" persōna="secunda">
     quaeritor
   </fōrma>
-  <fōrma modus="imperātīvus" vōx="passīva" tempus="futūrum" numerālis="singulāris" persōna="tertium">
+  <fōrma modus="imperātīvus" vōx="passīva" tempus="futūrum" numerālis="singulāris" persōna="tertia">
     quaeritor
   </fōrma>
-  <fōrma modus="imperātīvus" vōx="passīva" tempus="praesēns" numerālis="plūrālis" persōna="secundum">
+  <fōrma modus="imperātīvus" vōx="passīva" tempus="praesēns" numerālis="plūrālis" persōna="secunda">
     quaeriminī
   </fōrma>
-  <fōrma modus="imperātīvus" vōx="passīva" tempus="futūrum" numerālis="plūrālis" persōna="tertium">
+  <fōrma modus="imperātīvus" vōx="passīva" tempus="futūrum" numerālis="plūrālis" persōna="tertia">
     quaeruntor
   </fōrma>
 
-  <fōrma modus="indicātīvus" vōx="āctīva" tempus="praesēns" numerālis="singulāris" persōna="prīmum">
+  <fōrma modus="indicātīvus" vōx="āctīva" tempus="praesēns" numerālis="singulāris" persōna="prīma">
     quaerō
   </fōrma>
-  <fōrma modus="indicātīvus" vōx="āctīva" tempus="praesēns" numerālis="singulāris" persōna="secundum">
+  <fōrma modus="indicātīvus" vōx="āctīva" tempus="praesēns" numerālis="singulāris" persōna="secunda">
     quaeris
   </fōrma>
-  <fōrma modus="indicātīvus" vōx="āctīva" tempus="praesēns" numerālis="singulāris" persōna="tertium">
+  <fōrma modus="indicātīvus" vōx="āctīva" tempus="praesēns" numerālis="singulāris" persōna="tertia">
     quaerit
   </fōrma>
-  <fōrma modus="indicātīvus" vōx="āctīva" tempus="praesēns" numerālis="plūrālis" persōna="prīmum">
+  <fōrma modus="indicātīvus" vōx="āctīva" tempus="praesēns" numerālis="plūrālis" persōna="prīma">
     quaerimus
   </fōrma>
-  <fōrma modus="indicātīvus" vōx="āctīva" tempus="praesēns" numerālis="plūrālis" persōna="secundum">
+  <fōrma modus="indicātīvus" vōx="āctīva" tempus="praesēns" numerālis="plūrālis" persōna="secunda">
     quaeritis
   </fōrma>
-  <fōrma modus="indicātīvus" vōx="āctīva" tempus="praesēns" numerālis="plūrālis" persōna="tertium">
+  <fōrma modus="indicātīvus" vōx="āctīva" tempus="praesēns" numerālis="plūrālis" persōna="tertia">
     quaerunt
   </fōrma>
 
-  <fōrma modus="indicātīvus" vōx="āctīva" tempus="infectum" numerālis="singulāris" persōna="prīmum">
+  <fōrma modus="indicātīvus" vōx="āctīva" tempus="infectum" numerālis="singulāris" persōna="prīma">
     quaerēbam
   </fōrma>
-  <fōrma modus="indicātīvus" vōx="āctīva" tempus="infectum" numerālis="singulāris" persōna="secundum">
+  <fōrma modus="indicātīvus" vōx="āctīva" tempus="infectum" numerālis="singulāris" persōna="secunda">
     quaerēbās
   </fōrma>
-  <fōrma modus="indicātīvus" vōx="āctīva" tempus="infectum" numerālis="singulāris" persōna="tertium">
+  <fōrma modus="indicātīvus" vōx="āctīva" tempus="infectum" numerālis="singulāris" persōna="tertia">
     quaerēbat
   </fōrma>
-  <fōrma modus="indicātīvus" vōx="āctīva" tempus="infectum" numerālis="plūrālis" persōna="prīmum">
+  <fōrma modus="indicātīvus" vōx="āctīva" tempus="infectum" numerālis="plūrālis" persōna="prīma">
     quaerēbāmus
   </fōrma>
-  <fōrma modus="indicātīvus" vōx="āctīva" tempus="infectum" numerālis="plūrālis" persōna="secundum">
+  <fōrma modus="indicātīvus" vōx="āctīva" tempus="infectum" numerālis="plūrālis" persōna="secunda">
     quaerēbātis
   </fōrma>
-  <fōrma modus="indicātīvus" vōx="āctīva" tempus="infectum" numerālis="plūrālis" persōna="tertium">
+  <fōrma modus="indicātīvus" vōx="āctīva" tempus="infectum" numerālis="plūrālis" persōna="tertia">
     quaerēbant
   </fōrma>
 
-  <fōrma modus="indicātīvus" vōx="āctīva" tempus="futūrum" numerālis="singulāris" persōna="prīmum">
+  <fōrma modus="indicātīvus" vōx="āctīva" tempus="futūrum" numerālis="singulāris" persōna="prīma">
     quaeram
   </fōrma>
-  <fōrma modus="indicātīvus" vōx="āctīva" tempus="futūrum" numerālis="singulāris" persōna="secundum">
+  <fōrma modus="indicātīvus" vōx="āctīva" tempus="futūrum" numerālis="singulāris" persōna="secunda">
     quaerēs
   </fōrma>
-  <fōrma modus="indicātīvus" vōx="āctīva" tempus="futūrum" numerālis="singulāris" persōna="tertium">
+  <fōrma modus="indicātīvus" vōx="āctīva" tempus="futūrum" numerālis="singulāris" persōna="tertia">
     quaeret
   </fōrma>
-  <fōrma modus="indicātīvus" vōx="āctīva" tempus="futūrum" numerālis="plūrālis" persōna="prīmum">
+  <fōrma modus="indicātīvus" vōx="āctīva" tempus="futūrum" numerālis="plūrālis" persōna="prīma">
     quaerēmus
   </fōrma>
-  <fōrma modus="indicātīvus" vōx="āctīva" tempus="futūrum" numerālis="plūrālis" persōna="secundum">
+  <fōrma modus="indicātīvus" vōx="āctīva" tempus="futūrum" numerālis="plūrālis" persōna="secunda">
     quaerētis
   </fōrma>
-  <fōrma modus="indicātīvus" vōx="āctīva" tempus="futūrum" numerālis="plūrālis" persōna="tertium">
+  <fōrma modus="indicātīvus" vōx="āctīva" tempus="futūrum" numerālis="plūrālis" persōna="tertia">
     quaerent
   </fōrma>
 
-  <fōrma modus="indicātīvus" vōx="āctīva" tempus="perfectum" numerālis="singulāris" persōna="prīmum">
+  <fōrma modus="indicātīvus" vōx="āctīva" tempus="perfectum" numerālis="singulāris" persōna="prīma">
     quaesīvī
   </fōrma>
-  <fōrma modus="indicātīvus" vōx="āctīva" tempus="perfectum" numerālis="singulāris" persōna="secundum">
+  <fōrma modus="indicātīvus" vōx="āctīva" tempus="perfectum" numerālis="singulāris" persōna="secunda">
     quaesīvistī
   </fōrma>
-  <fōrma modus="indicātīvus" vōx="āctīva" tempus="perfectum" numerālis="singulāris" persōna="tertium">
+  <fōrma modus="indicātīvus" vōx="āctīva" tempus="perfectum" numerālis="singulāris" persōna="tertia">
     quaesīvit
   </fōrma>
-  <fōrma modus="indicātīvus" vōx="āctīva" tempus="perfectum" numerālis="plūrālis" persōna="prīmum">
+  <fōrma modus="indicātīvus" vōx="āctīva" tempus="perfectum" numerālis="plūrālis" persōna="prīma">
     quaesīvimus
   </fōrma>
-  <fōrma modus="indicātīvus" vōx="āctīva" tempus="perfectum" numerālis="plūrālis" persōna="secundum">
+  <fōrma modus="indicātīvus" vōx="āctīva" tempus="perfectum" numerālis="plūrālis" persōna="secunda">
     quaesīvitis
   </fōrma>
-  <fōrma modus="indicātīvus" vōx="āctīva" tempus="perfectum" numerālis="plūrālis" persōna="tertium">
+  <fōrma modus="indicātīvus" vōx="āctīva" tempus="perfectum" numerālis="plūrālis" persōna="tertia">
     quaesīvērunt
   </fōrma>
 
-  <fōrma modus="indicātīvus" vōx="āctīva" tempus="plūsquamperfectum" numerālis="singulāris" persōna="prīmum">
+  <fōrma modus="indicātīvus" vōx="āctīva" tempus="plūsquamperfectum" numerālis="singulāris" persōna="prīma">
     quaesīveram
   </fōrma>
-  <fōrma modus="indicātīvus" vōx="āctīva" tempus="plūsquamperfectum" numerālis="singulāris" persōna="secundum">
+  <fōrma modus="indicātīvus" vōx="āctīva" tempus="plūsquamperfectum" numerālis="singulāris" persōna="secunda">
     quaesīverās
   </fōrma>
-  <fōrma modus="indicātīvus" vōx="āctīva" tempus="plūsquamperfectum" numerālis="singulāris" persōna="tertium">
+  <fōrma modus="indicātīvus" vōx="āctīva" tempus="plūsquamperfectum" numerālis="singulāris" persōna="tertia">
     quaesīverat
   </fōrma>
-  <fōrma modus="indicātīvus" vōx="āctīva" tempus="plūsquamperfectum" numerālis="plūrālis" persōna="prīmum">
+  <fōrma modus="indicātīvus" vōx="āctīva" tempus="plūsquamperfectum" numerālis="plūrālis" persōna="prīma">
     quaesīverāmus
   </fōrma>
-  <fōrma modus="indicātīvus" vōx="āctīva" tempus="plūsquamperfectum" numerālis="plūrālis" persōna="secundum">
+  <fōrma modus="indicātīvus" vōx="āctīva" tempus="plūsquamperfectum" numerālis="plūrālis" persōna="secunda">
     quaesīverātis
   </fōrma>
-  <fōrma modus="indicātīvus" vōx="āctīva" tempus="plūsquamperfectum" numerālis="plūrālis" persōna="tertium">
+  <fōrma modus="indicātīvus" vōx="āctīva" tempus="plūsquamperfectum" numerālis="plūrālis" persōna="tertia">
     quaesīvērant
   </fōrma>
 
-  <fōrma modus="indicātīvus" vōx="āctīva" tempus="futrexāctum" numerālis="singulāris" persōna="prīmum">
+  <fōrma modus="indicātīvus" vōx="āctīva" tempus="futrexāctum" numerālis="singulāris" persōna="prīma">
     quaesīverō
   </fōrma>
-  <fōrma modus="indicātīvus" vōx="āctīva" tempus="futrexāctum" numerālis="singulāris" persōna="secundum">
+  <fōrma modus="indicātīvus" vōx="āctīva" tempus="futrexāctum" numerālis="singulāris" persōna="secunda">
     quaesīveris
   </fōrma>
-  <fōrma modus="indicātīvus" vōx="āctīva" tempus="futrexāctum" numerālis="singulāris" persōna="tertium">
+  <fōrma modus="indicātīvus" vōx="āctīva" tempus="futrexāctum" numerālis="singulāris" persōna="tertia">
     quaesīverit
   </fōrma>
-  <fōrma modus="indicātīvus" vōx="āctīva" tempus="futrexāctum" numerālis="plūrālis" persōna="prīmum">
+  <fōrma modus="indicātīvus" vōx="āctīva" tempus="futrexāctum" numerālis="plūrālis" persōna="prīma">
     quaesīverimus
   </fōrma>
-  <fōrma modus="indicātīvus" vōx="āctīva" tempus="futrexāctum" numerālis="plūrālis" persōna="secundum">
+  <fōrma modus="indicātīvus" vōx="āctīva" tempus="futrexāctum" numerālis="plūrālis" persōna="secunda">
     quaesīveritis
   </fōrma>
-  <fōrma modus="indicātīvus" vōx="āctīva" tempus="futrexāctum" numerālis="plūrālis" persōna="tertium">
+  <fōrma modus="indicātīvus" vōx="āctīva" tempus="futrexāctum" numerālis="plūrālis" persōna="tertia">
     quaesīvērint
   </fōrma>
 
-  <fōrma modus="indicātīvus" vōx="passīva" tempus="praesēns" numerālis="singulāris" persōna="prīmum">
+  <fōrma modus="indicātīvus" vōx="passīva" tempus="praesēns" numerālis="singulāris" persōna="prīma">
     quaeror
   </fōrma>
-  <fōrma modus="indicātīvus" vōx="passīva" tempus="praesēns" numerālis="singulāris" persōna="secundum">
+  <fōrma modus="indicātīvus" vōx="passīva" tempus="praesēns" numerālis="singulāris" persōna="secunda">
     quaereris
   </fōrma>
-  <fōrma modus="indicātīvus" vōx="passīva" tempus="praesēns" numerālis="singulāris" persōna="tertium">
+  <fōrma modus="indicātīvus" vōx="passīva" tempus="praesēns" numerālis="singulāris" persōna="tertia">
     quaeritur
   </fōrma>
-  <fōrma modus="indicātīvus" vōx="passīva" tempus="praesēns" numerālis="plūrālis" persōna="prīmum">
+  <fōrma modus="indicātīvus" vōx="passīva" tempus="praesēns" numerālis="plūrālis" persōna="prīma">
     quaerimur
   </fōrma>
-  <fōrma modus="indicātīvus" vōx="passīva" tempus="praesēns" numerālis="plūrālis" persōna="secundum">
+  <fōrma modus="indicātīvus" vōx="passīva" tempus="praesēns" numerālis="plūrālis" persōna="secunda">
     quaeriminī
   </fōrma>
-  <fōrma modus="indicātīvus" vōx="passīva" tempus="praesēns" numerālis="plūrālis" persōna="tertium">
+  <fōrma modus="indicātīvus" vōx="passīva" tempus="praesēns" numerālis="plūrālis" persōna="tertia">
     quaeruntur
   </fōrma>
 
-  <fōrma modus="indicātīvus" vōx="passīva" tempus="infectum" numerālis="singulāris" persōna="prīmum">
+  <fōrma modus="indicātīvus" vōx="passīva" tempus="infectum" numerālis="singulāris" persōna="prīma">
     quaerēbar
   </fōrma>
-  <fōrma modus="indicātīvus" vōx="passīva" tempus="infectum" numerālis="singulāris" persōna="secundum">
+  <fōrma modus="indicātīvus" vōx="passīva" tempus="infectum" numerālis="singulāris" persōna="secunda">
     quaerēbāris
   </fōrma>
-  <fōrma modus="indicātīvus" vōx="passīva" tempus="infectum" numerālis="singulāris" persōna="tertium">
+  <fōrma modus="indicātīvus" vōx="passīva" tempus="infectum" numerālis="singulāris" persōna="tertia">
     quaerēbātur
   </fōrma>
-  <fōrma modus="indicātīvus" vōx="passīva" tempus="infectum" numerālis="plūrālis" persōna="prīmum">
+  <fōrma modus="indicātīvus" vōx="passīva" tempus="infectum" numerālis="plūrālis" persōna="prīma">
     quaerēbāmur
   </fōrma>
-  <fōrma modus="indicātīvus" vōx="passīva" tempus="infectum" numerālis="plūrālis" persōna="secundum">
+  <fōrma modus="indicātīvus" vōx="passīva" tempus="infectum" numerālis="plūrālis" persōna="secunda">
     quaerēbāminī
   </fōrma>
-  <fōrma modus="indicātīvus" vōx="passīva" tempus="infectum" numerālis="plūrālis" persōna="tertium">
+  <fōrma modus="indicātīvus" vōx="passīva" tempus="infectum" numerālis="plūrālis" persōna="tertia">
     quaerēbantur
   </fōrma>
 
-  <fōrma modus="indicātīvus" vōx="passīva" tempus="futūrum" numerālis="singulāris" persōna="prīmum">
+  <fōrma modus="indicātīvus" vōx="passīva" tempus="futūrum" numerālis="singulāris" persōna="prīma">
     quaerar
   </fōrma>
-  <fōrma modus="indicātīvus" vōx="passīva" tempus="futūrum" numerālis="singulāris" persōna="secundum">
+  <fōrma modus="indicātīvus" vōx="passīva" tempus="futūrum" numerālis="singulāris" persōna="secunda">
     quaerēris
   </fōrma>
-  <fōrma modus="indicātīvus" vōx="passīva" tempus="futūrum" numerālis="singulāris" persōna="tertium">
+  <fōrma modus="indicātīvus" vōx="passīva" tempus="futūrum" numerālis="singulāris" persōna="tertia">
     quaerētur
   </fōrma>
-  <fōrma modus="indicātīvus" vōx="passīva" tempus="futūrum" numerālis="plūrālis" persōna="prīmum">
+  <fōrma modus="indicātīvus" vōx="passīva" tempus="futūrum" numerālis="plūrālis" persōna="prīma">
     quaerēmur
   </fōrma>
-  <fōrma modus="indicātīvus" vōx="passīva" tempus="futūrum" numerālis="plūrālis" persōna="secundum">
+  <fōrma modus="indicātīvus" vōx="passīva" tempus="futūrum" numerālis="plūrālis" persōna="secunda">
     quaerēminī
   </fōrma>
-  <fōrma modus="indicātīvus" vōx="passīva" tempus="futūrum" numerālis="plūrālis" persōna="tertium">
+  <fōrma modus="indicātīvus" vōx="passīva" tempus="futūrum" numerālis="plūrālis" persōna="tertia">
     quaerentur
   </fōrma>
 
-  <fōrma modus="subiūnctīvus" vōx="āctīva" tempus="praesēns" numerālis="singulāris" persōna="prīmum">
+  <fōrma modus="subiūnctīvus" vōx="āctīva" tempus="praesēns" numerālis="singulāris" persōna="prīma">
     quaeram
   </fōrma>
-  <fōrma modus="subiūnctīvus" vōx="āctīva" tempus="praesēns" numerālis="singulāris" persōna="secundum">
+  <fōrma modus="subiūnctīvus" vōx="āctīva" tempus="praesēns" numerālis="singulāris" persōna="secunda">
     quaerās
   </fōrma>
-  <fōrma modus="subiūnctīvus" vōx="āctīva" tempus="praesēns" numerālis="singulāris" persōna="tertium">
+  <fōrma modus="subiūnctīvus" vōx="āctīva" tempus="praesēns" numerālis="singulāris" persōna="tertia">
     quaerat
   </fōrma>
-  <fōrma modus="subiūnctīvus" vōx="āctīva" tempus="praesēns" numerālis="plūrālis" persōna="prīmum">
+  <fōrma modus="subiūnctīvus" vōx="āctīva" tempus="praesēns" numerālis="plūrālis" persōna="prīma">
     quaerāmus
   </fōrma>
-  <fōrma modus="subiūnctīvus" vōx="āctīva" tempus="praesēns" numerālis="plūrālis" persōna="secundum">
+  <fōrma modus="subiūnctīvus" vōx="āctīva" tempus="praesēns" numerālis="plūrālis" persōna="secunda">
     quaerātis
   </fōrma>
-  <fōrma modus="subiūnctīvus" vōx="āctīva" tempus="praesēns" numerālis="plūrālis" persōna="tertium">
+  <fōrma modus="subiūnctīvus" vōx="āctīva" tempus="praesēns" numerālis="plūrālis" persōna="tertia">
     quaerant
   </fōrma>
 
-  <fōrma modus="subiūnctīvus" vōx="āctīva" tempus="infectum" numerālis="singulāris" persōna="prīmum">
+  <fōrma modus="subiūnctīvus" vōx="āctīva" tempus="infectum" numerālis="singulāris" persōna="prīma">
     quaererem
   </fōrma>
-  <fōrma modus="subiūnctīvus" vōx="āctīva" tempus="infectum" numerālis="singulāris" persōna="secundum">
+  <fōrma modus="subiūnctīvus" vōx="āctīva" tempus="infectum" numerālis="singulāris" persōna="secunda">
     quaererēs
   </fōrma>
-  <fōrma modus="subiūnctīvus" vōx="āctīva" tempus="infectum" numerālis="singulāris" persōna="tertium">
+  <fōrma modus="subiūnctīvus" vōx="āctīva" tempus="infectum" numerālis="singulāris" persōna="tertia">
     quaereret
   </fōrma>
-  <fōrma modus="subiūnctīvus" vōx="āctīva" tempus="infectum" numerālis="plūrālis" persōna="prīmum">
+  <fōrma modus="subiūnctīvus" vōx="āctīva" tempus="infectum" numerālis="plūrālis" persōna="prīma">
     quaererēmus
   </fōrma>
-  <fōrma modus="subiūnctīvus" vōx="āctīva" tempus="infectum" numerālis="plūrālis" persōna="secundum">
+  <fōrma modus="subiūnctīvus" vōx="āctīva" tempus="infectum" numerālis="plūrālis" persōna="secunda">
     quaererētis
   </fōrma>
-  <fōrma modus="subiūnctīvus" vōx="āctīva" tempus="infectum" numerālis="plūrālis" persōna="tertium">
+  <fōrma modus="subiūnctīvus" vōx="āctīva" tempus="infectum" numerālis="plūrālis" persōna="tertia">
     quaererent
   </fōrma>
 
-  <fōrma modus="subiūnctīvus" vōx="āctīva" tempus="perfectum" numerālis="singulāris" persōna="prīmum">
+  <fōrma modus="subiūnctīvus" vōx="āctīva" tempus="perfectum" numerālis="singulāris" persōna="prīma">
     quaesīverim
   </fōrma>
-  <fōrma modus="subiūnctīvus" vōx="āctīva" tempus="perfectum" numerālis="singulāris" persōna="secundum">
+  <fōrma modus="subiūnctīvus" vōx="āctīva" tempus="perfectum" numerālis="singulāris" persōna="secunda">
     quaesīverīs
   </fōrma>
-  <fōrma modus="subiūnctīvus" vōx="āctīva" tempus="perfectum" numerālis="singulāris" persōna="tertium">
+  <fōrma modus="subiūnctīvus" vōx="āctīva" tempus="perfectum" numerālis="singulāris" persōna="tertia">
     quaesīverit
   </fōrma>
-  <fōrma modus="subiūnctīvus" vōx="āctīva" tempus="perfectum" numerālis="plūrālis" persōna="prīmum">
+  <fōrma modus="subiūnctīvus" vōx="āctīva" tempus="perfectum" numerālis="plūrālis" persōna="prīma">
     quaesīverīmus
   </fōrma>
-  <fōrma modus="subiūnctīvus" vōx="āctīva" tempus="perfectum" numerālis="plūrālis" persōna="secundum">
+  <fōrma modus="subiūnctīvus" vōx="āctīva" tempus="perfectum" numerālis="plūrālis" persōna="secunda">
     quaesīverītis
   </fōrma>
-  <fōrma modus="subiūnctīvus" vōx="āctīva" tempus="perfectum" numerālis="plūrālis" persōna="tertium">
+  <fōrma modus="subiūnctīvus" vōx="āctīva" tempus="perfectum" numerālis="plūrālis" persōna="tertia">
     quaesīverint
   </fōrma>
 
-  <fōrma modus="subiūnctīvus" vōx="āctīva" tempus="plūsquamperfectum" numerālis="singulāris" persōna="prīmum">
+  <fōrma modus="subiūnctīvus" vōx="āctīva" tempus="plūsquamperfectum" numerālis="singulāris" persōna="prīma">
     quaesīvissem
   </fōrma>
-  <fōrma modus="subiūnctīvus" vōx="āctīva" tempus="plūsquamperfectum" numerālis="singulāris" persōna="secundum">
+  <fōrma modus="subiūnctīvus" vōx="āctīva" tempus="plūsquamperfectum" numerālis="singulāris" persōna="secunda">
     quaesīvissēs
   </fōrma>
-  <fōrma modus="subiūnctīvus" vōx="āctīva" tempus="plūsqiamperfectum" numerālis="singulāris" persōna="tertium">
+  <fōrma modus="subiūnctīvus" vōx="āctīva" tempus="plūsqiamperfectum" numerālis="singulāris" persōna="tertia">
     quaesīvisset
   </fōrma>
-  <fōrma modus="subiūnctīvus" vōx="āctīva" tempus="plūsquamperfectum" numerālis="plūrālis" persōna="prīmum">
+  <fōrma modus="subiūnctīvus" vōx="āctīva" tempus="plūsquamperfectum" numerālis="plūrālis" persōna="prīma">
     quaesīvissēmus
   </fōrma>
-  <fōrma modus="subiūnctīvus" vōx="āctīva" tempus="plūsquamperfectum" numerālis="plūrālis" persōna="secundum">
+  <fōrma modus="subiūnctīvus" vōx="āctīva" tempus="plūsquamperfectum" numerālis="plūrālis" persōna="secunda">
     quaesīvissētis
   </fōrma>
-  <fōrma modus="subiūnctīvus" vōx="āctīva" tempus="plūsquamperfectum" numerālis="plūrālis" persōna="tertium">
+  <fōrma modus="subiūnctīvus" vōx="āctīva" tempus="plūsquamperfectum" numerālis="plūrālis" persōna="tertia">
     quaesīvissent
   </fōrma>
 

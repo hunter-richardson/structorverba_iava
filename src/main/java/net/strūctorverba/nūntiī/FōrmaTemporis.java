@@ -29,13 +29,9 @@ final class FōrmaTemporis {
       }
 
       if(praecīsiō) {
-        return String.format("[%s %s %s, %s:%s:%s.%d %s]",
-                             RomanInteger.parse(String.valueOf(tempus.getDayOfMonth()), IntegerType.ARABIC),
-                             Mēnsis.indīcam(tempus.getMonth()),
-                             RomanInteger.parse(String.valueOf(tempus.getYear()), IntegerType.ARABIC),
-                             RomanInteger.parse(String.valueOf(tempus.getHour()), IntegerType.ARABIC),
-                             RomanInteger.parse(String.valueOf(tempus.getMinute()), IntegerType.ARABIC),
-                             RomanInteger.parse(String.valueOf(tempus.getSecond()), IntegerType.ARABIC),
+        return String.format("[%d %s %d, %d:%d:%d.%d %s]",
+                             tempus.getDayOfMonth(), Mēnsis.indīcam(tempus.getMonth()),
+                             tempus.getYear(), tempus.getHour(), tempus.getMinute(), tempus.getSecond(),
                              tempus.get(ChronoField.MILLI_OF_SECOND), zona);
       } else {
         return String.format("[%s %s %s, %s:%s:%s %s]",

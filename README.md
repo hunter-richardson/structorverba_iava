@@ -28,11 +28,13 @@ Omne quālitātēs ipsās prōpositaque ipsa habet et ligāmina illa vōs dūcen
 
 ___
 
-Praetereā tentāmina duo scrīpsī ut exsecūtiō modōsque programmātis recēnseantur.
+Praetereā tentāmina tria sunt scrīpsī ut exsecūtiō modōsque programmātis recēnseantur.
 
-I. [DolōremIpsum](./src/main/test/net/strūctorverba/tentāmina/DolōremIpsum.java)
+I. [DolōremIpsum](src/main/test/net/strūctorverba/tentāmina/DolōremIpsum.java)
 
-II. [Numerī](src/main/test/net/strūctorverba/tentāmina/Numerī.java)
+II. [Exempla](src/main/test/net/strūctorverba/tentāmina/Exempla.java)
+
+III. [Numerī](src/main/test/net/strūctorverba/tentāmina/Numerī.java)
 
 Valōrem [StrūctorVerba.fac](src/main/java/net/strūctorverba/mīscella/StrūctorVerba.java#L28) invocāte ut fūnctiōnēs omnēs programmātis StrūctorVerba accēdātis:
 
@@ -52,12 +54,15 @@ class Tentāmen {
                         Modus.INDICĀTĪVUS, Vōx.ĀCTĪVA, Tempus.PRAESĒNS,
                         Numerālis.SINGULĀRIS, Persōna.TERTIA),
       strūctor.adveniam("prōdesse", Catēgoria.ĀCTUM,
-                        Modus.ĪNFĪNĪTĪVUS, Vōx.ĀCTĪVA, Tempus.PRAESĒNS)
-              .allegō(Encliticum.INTERRŌGANS));
+                        Modus.ĪNFĪNĪTĪVUS, Vōx.ĀCTĪVA, Tempus.PRAESĒNS,
+                        Numerālis.SINGULĀRIS, Persōna.TERTIA)
+              .allegō(Encliticum.INTERROGĀNS));
     System.out.println(verba); // Ecce lingua Latīna placet prōdestque
   }
 }
 ```
+
+Cōdex superus est scrīptus in tentāmen [Exempla.prōducta](src/main/test/net/strūctorverba/tentāmina/Exempla.java#L26)
 
 ___
 
