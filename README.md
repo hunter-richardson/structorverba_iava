@@ -1,4 +1,4 @@
-# Strūctor Verba : Iava
+# Strūctor Verba : Iava  [![CodeFactor](https://codefactor.io/repository/github/hunter-richardson/structorverba_iava/badge)](https://www.codefactor.io/repository/github/hunter-richardson/structorverba_iava)
 
 Verba Latīna scrībere tetendistisne sed nōn potuistisne meminisse coniugātiōnem āctārum hārum aut generem nōminum illōrum?
 
