@@ -22,7 +22,7 @@ VII. [Prōnōmen](src/main/java/net/strūctorverba/verba/multiplicia/Prōnōmen.
 
 VIII. [Adiectīvum](src/main/java/net/strūctorverba/verba/multiplicia/Adiectīvum.java)
 
-IX. [Āctum](src/main/java/net/strūctorverba/verba/multiplicia/Āctum.java)
+IX. [Āctus](src/main/java/net/strūctorverba/verba/multiplicia/Āctus.java)
 
 Omne quālitātēs ipsās prōpositaque ipsa habet et ligāmina illa vōs dūcent ut tabellās aptās perlēgātis.
 

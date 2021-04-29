@@ -1,220 +1,220 @@
-<āctum fundāmen="esse">
+<āctus fundāmen="prōdesse">
   <fōrma modus="īnfīnītīvus" vōx="āctīva" tempus="praesēns">
-    esse
+    prōdesse
   </fōrma>
   <fōrma modus="īnfīnītīvus" vōx="āctīva" tempus="perfectum">
-    fuisse
+    prōfuisse
   </fōrma>
   <fōrma modus="participiālis" vōx="āctīva" tempus="futūrum">
-    futūrus
+    prōfutūrus
   </fōrma>
 
   <fōrma modus="imperātīvus" vōx="āctīva" tempus="praesēns" numerālis="singulāris" persōna="secunda">
-    es
+    prōdes
   </fōrma>
   <fōrma modus="imperātīvus" vōx="āctīva" tempus="praesēns" numerālis="plūrālis" persōna="secunda">
-    este
+    prōdeste
   </fōrma>
   <fōrma modus="imperātīvus" vōx="āctīva" tempus="futūrum" numerālis="singulāris" persōna="secunda">
-    estō
+    prōdestō
   </fōrma>
   <fōrma modus="imperātīvus" vōx="āctīva" tempus="futūrum" numerālis="singulāris" persōna="tertia">
-    estō
+    prōdestō
   </fōrma>
   <fōrma modus="imperātīvus" vōx="āctīva" tempus="futūrum" numerālis="plūrālis" persōna="secunda">
-    estōte
+    prōdestōte
   </fōrma>
   <fōrma modus="imperātīvus" vōx="āctīva" tempus="futūrum" numerālis="plūrālis" persōna="tertia">
-    suntō
+    prōsuntō
   </fōrma>
 
   <fōrma modus="indicātīvus" vōx="āctīva" tempus="praesēns" numerālis="singulāris" persōna="prīma">
-    sum
+    prōsum
   </fōrma>
   <fōrma modus="indicātīvus" vōx="āctīva" tempus="praesēns" numerālis="singulāris" persōna="secunda">
-    es
+    prōdes
   </fōrma>
   <fōrma modus="indicātīvus" vōx="āctīva" tempus="praesēns" numerālis="singulāris" persōna="tertia">
-    est
+    prōdest
   </fōrma>
   <fōrma modus="indicātīvus" vōx="āctīva" tempus="praesēns" numerālis="plūrālis" persōna="prīma">
-    sumus
+    prōsumus
   </fōrma>
   <fōrma modus="indicātīvus" vōx="āctīva" tempus="praesēns" numerālis="plūrālis" persōna="secunda">
-    estis
+    prōdestis
   </fōrma>
   <fōrma modus="indicātīvus" vōx="āctīva" tempus="praesēns" numerālis="plūrālis" persōna="tertia">
-    sunt
+    prōsunt
   </fōrma>
 
   <fōrma modus="indicātīvus" vōx="āctīva" tempus="infectum" numerālis="singulāris" persōna="prīma">
-    eram
+    prōderam
   </fōrma>
   <fōrma modus="indicātīvus" vōx="āctīva" tempus="infectum" numerālis="singulāris" persōna="secunda">
-    erās
+    prōderās
   </fōrma>
   <fōrma modus="indicātīvus" vōx="āctīva" tempus="infectum" numerālis="singulāris" persōna="tertia">
-    erat
+    prōderat
   </fōrma>
   <fōrma modus="indicātīvus" vōx="āctīva" tempus="infectum" numerālis="plūrālis" persōna="prīma">
-    erāmus
+    prōderāmus
   </fōrma>
   <fōrma modus="indicātīvus" vōx="āctīva" tempus="infectum" numerālis="plūrālis" persōna="secunda">
-    erātis
+    prōderātis
   </fōrma>
   <fōrma modus="indicātīvus" vōx="āctīva" tempus="infectum" numerālis="plūrālis" persōna="tertia">
-    erant
+    prōderant
   </fōrma>
 
   <fōrma modus="indicātīvus" vōx="āctīva" tempus="futūrum" numerālis="singulāris" persōna="prīma">
-    erō
+    prōderō
   </fōrma>
   <fōrma modus="indicātīvus" vōx="āctīva" tempus="futūrum" numerālis="singulāris" persōna="secunda">
-    eris
+    prōderis
   </fōrma>
   <fōrma modus="indicātīvus" vōx="āctīva" tempus="futūrum" numerālis="singulāris" persōna="tertia">
-    erit
+    prōderit
   </fōrma>
   <fōrma modus="indicātīvus" vōx="āctīva" tempus="futūrum" numerālis="plūrālis" persōna="prīma">
-    erimus
+    prōderimus
   </fōrma>
   <fōrma modus="indicātīvus" vōx="āctīva" tempus="futūrum" numerālis="plūrālis" persōna="secunda">
-    eritis
+    prōderitis
   </fōrma>
   <fōrma modus="indicātīvus" vōx="āctīva" tempus="futūrum" numerālis="plūrālis" persōna="tertia">
-    erunt
+    prōderunt
   </fōrma>
 
   <fōrma modus="indicātīvus" vōx="āctīva" tempus="perfectum" numerālis="singulāris" persōna="prīma">
-    fuī
+    prōdfuī
   </fōrma>
   <fōrma modus="indicātīvus" vōx="āctīva" tempus="perfectum" numerālis="singulāris" persōna="secunda">
-    fuistī
+    prōdfuistī
   </fōrma>
   <fōrma modus="indicātīvus" vōx="āctīva" tempus="perfectum" numerālis="singulāris" persōna="tertia">
-    fuit
+    prōdfuit
   </fōrma>
   <fōrma modus="indicātīvus" vōx="āctīva" tempus="perfectum" numerālis="plūrālis" persōna="prīma">
-    fuimus
+    prōdfuimus
   </fōrma>
   <fōrma modus="indicātīvus" vōx="āctīva" tempus="perfectum" numerālis="plūrālis" persōna="secunda">
-    fuitis
+    prōdfuitis
   </fōrma>
   <fōrma modus="indicātīvus" vōx="āctīva" tempus="perfectum" numerālis="plūrālis" persōna="tertia">
-    fuērunt
+    prōdfuērunt
   </fōrma>
 
   <fōrma modus="indicātīvus" vōx="āctīva" tempus="plūsquamperfectum" numerālis="singulāris" persōna="prīma">
-    fueram
+    prōfueram
   </fōrma>
   <fōrma modus="indicātīvus" vōx="āctīva" tempus="plūsquamperfectum" numerālis="singulāris" persōna="secunda">
-    fuerās
+    prōfuerās
   </fōrma>
   <fōrma modus="indicātīvus" vōx="āctīva" tempus="plūsquamperfectum" numerālis="singulāris" persōna="tertia">
-    fuerat
+    prōfuerat
   </fōrma>
   <fōrma modus="indicātīvus" vōx="āctīva" tempus="plūsquamperfectum" numerālis="plūrālis" persōna="prīma">
-    fuerāmus
+    prōfuerāmus
   </fōrma>
   <fōrma modus="indicātīvus" vōx="āctīva" tempus="plūsquamperfectum" numerālis="plūrālis" persōna="secunda">
-    fuerātis
+    prōfuerātis
   </fōrma>
   <fōrma modus="indicātīvus" vōx="āctīva" tempus="plūsquamperfectum" numerālis="plūrālis" persōna="tertia">
-    fuerant
+    prōfuerant
   </fōrma>
 
   <fōrma modus="indicātīvus" vōx="āctīva" tempus="futrexāctum" numerālis="singulāris" persōna="prīma">
-    fuerō
+    prōfuerō
   </fōrma>
   <fōrma modus="indicātīvus" vōx="āctīva" tempus="futrexāctum" numerālis="singulāris" persōna="secunda">
-    fueris
+    prōfueris
   </fōrma>
   <fōrma modus="indicātīvus" vōx="āctīva" tempus="futrexāctum" numerālis="singulāris" persōna="tertia">
-    fuerit
+    prōfuerit
   </fōrma>
   <fōrma modus="indicātīvus" vōx="āctīva" tempus="futrexāctum" numerālis="plūrālis" persōna="prīma">
-    fuerimus
+    prōfuerimus
   </fōrma>
   <fōrma modus="indicātīvus" vōx="āctīva" tempus="futrexāctum" numerālis="plūrālis" persōna="secunda">
-    fueritis
+    prōfueritis
   </fōrma>
   <fōrma modus="indicātīvus" vōx="āctīva" tempus="futrexāctum" numerālis="plūrālis" persōna="tertia">
-    fuerint
+    prōfuerint
   </fōrma>
 
   <fōrma modus="subiūnctīvus" vōx="āctīva" tempus="praesēns" numerālis="singulāris" persōna="prīma">
-    sis
+    prōsis
   </fōrma>
   <fōrma modus="subiūnctīvus" vōx="āctīva" tempus="praesēns" numerālis="singulāris" persōna="secunda">
-    sīs
+    prōsīs
   </fōrma>
   <fōrma modus="subiūnctīvus" vōx="āctīva" tempus="praesēns" numerālis="singulāris" persōna="tertia">
-    sit
+    prōsit
   </fōrma>
   <fōrma modus="subiūnctīvus" vōx="āctīva" tempus="praesēns" numerālis="plūrālis" persōna="prīma">
-    sīmus
+    prōsīmus
   </fōrma>
   <fōrma modus="subiūnctīvus" vōx="āctīva" tempus="praesēns" numerālis="plūrālis" persōna="secunda">
-    sītis
+    prōsītis
   </fōrma>
   <fōrma modus="subiūnctīvus" vōx="āctīva" tempus="praesēns" numerālis="plūrālis" persōna="tertia">
-    sint
+    prōsint
   </fōrma>
 
   <fōrma modus="subiūnctīvus" vōx="āctīva" tempus="infectum" numerālis="singulāris" persōna="prīma">
-    essem
+    prōdessem
   </fōrma>
   <fōrma modus="subiūnctīvus" vōx="āctīva" tempus="infectum" numerālis="singulāris" persōna="secunda">
-    essēs
+    prōdessēs
   </fōrma>
   <fōrma modus="subiūnctīvus" vōx="āctīva" tempus="infectum" numerālis="singulāris" persōna="tertia">
-    esset
+    prōdesset
   </fōrma>
   <fōrma modus="subiūnctīvus" vōx="āctīva" tempus="infectum" numerālis="plūrālis" persōna="prīma">
-    essēmus
+    prōdessēmus
   </fōrma>
   <fōrma modus="subiūnctīvus" vōx="āctīva" tempus="infectum" numerālis="plūrālis" persōna="secunda">
-    essētis
+    prōdessētis
   </fōrma>
   <fōrma modus="subiūnctīvus" vōx="āctīva" tempus="infectum" numerālis="plūrālis" persōna="tertia">
-    essent
+    prōdessent
   </fōrma>
 
   <fōrma modus="subiūnctīvus" vōx="āctīva" tempus="perfectum" numerālis="singulāris" persōna="prīma">
-    fuerim
+    prōfuerim
   </fōrma>
   <fōrma modus="subiūnctīvus" vōx="āctīva" tempus="perfectum" numerālis="singulāris" persōna="secunda">
-    fuerīs
+    prōfuerīs
   </fōrma>
   <fōrma modus="subiūnctīvus" vōx="āctīva" tempus="perfectum" numerālis="singulāris" persōna="tertia">
-    fuerit
+    prōfuerit
   </fōrma>
   <fōrma modus="subiūnctīvus" vōx="āctīva" tempus="perfectum" numerālis="plūrālis" persōna="prīma">
-    fuerīmus
+    prōfuerīmus
   </fōrma>
   <fōrma modus="subiūnctīvus" vōx="āctīva" tempus="perfectum" numerālis="plūrālis" persōna="secunda">
-    fuerītis
+    prōfuerītis
   </fōrma>
   <fōrma modus="subiūnctīvus" vōx="āctīva" tempus="perfectum" numerālis="plūrālis" persōna="tertia">
-    fuerint
+    prōfuerint
   </fōrma>
 
   <fōrma modus="subiūnctīvus" vōx="āctīva" tempus="plūsquamperfectum" numerālis="singulāris" persōna="prīma">
-    fuissem
+    prōfuissem
   </fōrma>
   <fōrma modus="subiūnctīvus" vōx="āctīva" tempus="plūsquamperfectum" numerālis="singulāris" persōna="secunda">
-    fuissēs
+    prōfuissēs
   </fōrma>
   <fōrma modus="subiūnctīvus" vōx="āctīva" tempus="plūsquamperfectum" numerālis="singulāris" persōna="tertia">
-    fuisset
+    prōfuisset
   </fōrma>
   <fōrma modus="subiūnctīvus" vōx="āctīva" tempus="plūsquamperfectum" numerālis="plūrālis" persōna="prīma">
-    fuissēmus
+    prōfuissēmus
   </fōrma>
   <fōrma modus="subiūnctīvus" vōx="āctīva" tempus="plūsquamperfectum" numerālis="plūrālis" persōna="secunda">
-    fuissētis
+    prōfuissētis
   </fōrma>
   <fōrma modus="subiūnctīvus" vōx="āctīva" tempus="plūsquamperfectum" numerālis="plūrālis" persōna="tertia">
-    fuissent
+    prōfuissent
   </fōrma>
-</āctum>
+</āctus>

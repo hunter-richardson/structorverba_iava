@@ -1,128 +1,128 @@
-<āctum fundāmen="cōnsectārī">
+<āctus fundāmen="adipīscī">
   <fōrma modus="īnfīnītīvus" vōx="āctīva" tempus="praesēns">
-    cōnsectārī
+    adipīscī
   </fōrma>
   <fōrma modus="participiālis" vōx="āctīva" tempus="praesēns">
-    cōnsectāns
+    adipīscēns
   </fōrma>
   <fōrma modus="participiālis" vōx="āctīva" tempus="perfectum">
-    cōnsectātus
+    adeptus
   </fōrma>
   <fōrma modus="participiālis" vōx="āctīva" tempus="futūrum">
-    cōnsectātūrus
+    adeptūrus
   </fōrma>
   <fōrma modus="participiālis" vōx="passīva" tempus="futūrum">
-    cōnsectandus
+    adipīscendus
   </fōrma>
 
   <fōrma modus="imperātīvus" vōx="āctīva" tempus="praesēns" numerālis="singulāris" persōna="secunda">
-    cōnsectāre
+    adipīscere
   </fōrma>
   <fōrma modus="imperātīvus" vōx="āctīva" tempus="praesēns" numerālis="plūrālis" persōna="secunda">
-    cōnsectāminī
+    adipīsciminī
   </fōrma>
   <fōrma modus="imperātīvus" vōx="āctīva" tempus="futūrum" numerālis="singulāris" persōna="secunda">
-    cōnsectātor
+    adipīscitor
   </fōrma>
   <fōrma modus="imperātīvus" vōx="āctīva" tempus="futūrum" numerālis="singulāris" persōna="tertia">
-    cōnsectātor
+    adipīscitor
   </fōrma>
   <fōrma modus="imperātīvus" vōx="āctīva" tempus="futūrum" numerālis="plūrālis" persōna="tertia">
-    cōnsectantor
+    adipīscuntor
   </fōrma>
 
   <fōrma modus="indicātīvus" vōx="āctīva" tempus="praesēns" numerālis="singulāris" persōna="prīma">
-    cōnsector
+    adipīscor
   </fōrma>
   <fōrma modus="indicātīvus" vōx="āctīva" tempus="praesēns" numerālis="singulāris" persōna="secunda">
-    cōnsectāris
+    adipīsceris
   </fōrma>
   <fōrma modus="indicātīvus" vōx="āctīva" tempus="praesēns" numerālis="singulāris" persōna="tertia">
-    cōnsectātur
+    adipīscitur
   </fōrma>
   <fōrma modus="indicātīvus" vōx="āctīva" tempus="praesēns" numerālis="plūrālis" persōna="prīma">
-    cōnsectāmur
+    adipīscimur
   </fōrma>
   <fōrma modus="indicātīvus" vōx="āctīva" tempus="praesēns" numerālis="plūrālis" persōna="secunda">
-    cōnsectāminī
+    adipīsciminī
   </fōrma>
   <fōrma modus="indicātīvus" vōx="āctīva" tempus="praesēns" numerālis="plūrālis" persōna="tertia">
-    cōnsectantur
+    adipīscuntur
   </fōrma>
 
   <fōrma modus="indicātīvus" vōx="āctīva" tempus="infectum" numerālis="singulāris" persōna="prīma">
-    cōnsectābar
+    adipīscēbar
   </fōrma>
   <fōrma modus="indicātīvus" vōx="āctīva" tempus="infectum" numerālis="singulāris" persōna="secunda">
-    cōnsectābāris
+    adipīscēbāris
   </fōrma>
   <fōrma modus="indicātīvus" vōx="āctīva" tempus="infectum" numerālis="singulāris" persōna="tertia">
-    cōnsectābātur
+    adipīscēbātur
   </fōrma>
   <fōrma modus="indicātīvus" vōx="āctīva" tempus="infectum" numerālis="plūrālis" persōna="prīma">
-    cōnsectābāmur
+    adipīscēbāmur
   </fōrma>
   <fōrma modus="indicātīvus" vōx="āctīva" tempus="infectum" numerālis="plūrālis" persōna="secunda">
-    cōnsectābāminī
+    adipīscēbāminī
   </fōrma>
   <fōrma modus="indicātīvus" vōx="āctīva" tempus="infectum" numerālis="plūrālis" persōna="tertia">
-    cōnsectābantur
+    adipīscēbantur
   </fōrma>
 
   <fōrma modus="indicātīvus" vōx="āctīva" tempus="futūrum" numerālis="singulāris" persōna="prīma">
-    cōnsectābor
+    adipīscar
   </fōrma>
   <fōrma modus="indicātīvus" vōx="āctīva" tempus="futūrum" numerālis="singulāris" persōna="secunda">
-    cōnsectāberis
+    adipīscēris
   </fōrma>
   <fōrma modus="indicātīvus" vōx="āctīva" tempus="futūrum" numerālis="singulāris" persōna="tertia">
-    cōnsectābitur
+    adipīscētur
   </fōrma>
   <fōrma modus="indicātīvus" vōx="āctīva" tempus="futūrum" numerālis="plūrālis" persōna="prīma">
-    cōnsectābimur
+    adipīscēmur
   </fōrma>
   <fōrma modus="indicātīvus" vōx="āctīva" tempus="futūrum" numerālis="plūrālis" persōna="secunda">
-    cōnsectābiminī
+    adipīscēminī
   </fōrma>
   <fōrma modus="indicātīvus" vōx="āctīva" tempus="futūrum" numerālis="plūrālis" persōna="tertia">
-    cōnsectābuntur
+    adipīscentur
   </fōrma>
 
   <fōrma modus="subiūnctīvus" vōx="āctīva" tempus="praesēns" numerālis="singulāris" persōna="prīma">
-    cōnsecter
+    adipīscar
   </fōrma>
   <fōrma modus="subiūnctīvus" vōx="āctīva" tempus="praesēns" numerālis="singulāris" persōna="secunda">
-    cōnsectēris
+    adipīscāris
   </fōrma>
   <fōrma modus="subiūnctīvus" vōx="āctīva" tempus="praesēns" numerālis="singulāris" persōna="tertia">
-    cōnsectētur
+    adipīscātur
   </fōrma>
   <fōrma modus="subiūnctīvus" vōx="āctīva" tempus="praesēns" numerālis="plūrālis" persōna="prīma">
-    cōnsectēmur
+    adipīscāmur
   </fōrma>
   <fōrma modus="subiūnctīvus" vōx="āctīva" tempus="praesēns" numerālis="plūrālis" persōna="secunda">
-    cōnsectēminī
+    adipīscāminī
   </fōrma>
   <fōrma modus="subiūnctīvus" vōx="āctīva" tempus="praesēns" numerālis="plūrālis" persōna="tertia">
-    cōnsectentur
+    adipīscantur
   </fōrma>
 
   <fōrma modus="subiūnctīvus" vōx="āctīva" tempus="infectum" numerālis="singulāris" persōna="prīma">
-    cōnsectārer
+    adipīscerer
   </fōrma>
   <fōrma modus="subiūnctīvus" vōx="āctīva" tempus="infectum" numerālis="singulāris" persōna="secunda">
-    cōnsectārēris
+    adipīscerēris
   </fōrma>
   <fōrma modus="subiūnctīvus" vōx="āctīva" tempus="infectum" numerālis="singulāris" persōna="tertia">
-    cōnsectārētur
+    adipīscerētur
   </fōrma>
   <fōrma modus="subiūnctīvus" vōx="āctīva" tempus="infectum" numerālis="plūrālis" persōna="prīma">
-    cōnsectārēmur
+    adipīscerēmur
   </fōrma>
   <fōrma modus="subiūnctīvus" vōx="āctīva" tempus="infectum" numerālis="plūrālis" persōna="secunda">
-    cōnsectārēminī
+    adipīscerēminī
   </fōrma>
   <fōrma modus="subiūnctīvus" vōx="āctīva" tempus="infectum" numerālis="plūrālis" persōna="tertia">
-    cōnsectārentur
+    adipīscerentur
   </fōrma>
-</āctum>
+</āctus>

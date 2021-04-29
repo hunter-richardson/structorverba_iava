@@ -1,6 +1,6 @@
 package net.strūctorverba.ēnumerātiōnēs;
 
-import net.strūctorverba.verba.multiplicia.Āctum;
+import net.strūctorverba.verba.multiplicia.Āctus;
 import org.apache.commons.lang3.StringUtils;
 import org.jetbrains.annotations.NotNull;
 
@@ -8,7 +8,7 @@ import java.util.stream.Stream;
 
 /**
  * Ēnumerātiō haec dēsignat utrum verbum est certum necne.
- * @see Āctum
+ * @see Āctus
  */
 @SuppressWarnings({ "NonAsciiCharacters", "SpellCheckingInspection", "unused" })
 public enum Speciālitās {

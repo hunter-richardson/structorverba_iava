@@ -181,13 +181,13 @@ public abstract class TenorMultiplicibus <Hoc extends VerbumMultiplex <Hoc>> ext
   }
 
   /**
-   * Classis {@link TenorĀctīs} est vās classis {@link Tenor} classī {@link Āctum}
-   * @see Āctum
+   * Classis {@link TenorĀctīs} est vās classis {@link Tenor} classī {@link Āctus}
+   * @see Āctus
    * @see Nūntius.NūntiusTenōrīĀctīs
    * @see ConditōrĀctīs
    */
   @Singleton @DependsOn({ "CondītōrĀctīs", "NūntiusTenōrīĀctīs" })
-  public static final class TenorĀctīs extends TenorMultiplicibus <Āctum> {
+  public static final class TenorĀctīs extends TenorMultiplicibus <Āctus> {
     @Nullable private static TenorĀctīs īnstantia = null;
 
     /**

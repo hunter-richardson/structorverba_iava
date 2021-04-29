@@ -4,7 +4,7 @@ import lombok.Getter;
 import lombok.experimental.Accessors;
 import net.strūctorverba.mīscella.*;
 import net.strūctorverba.verba.Verba;
-import net.strūctorverba.verba.multiplicia.Āctum;
+import net.strūctorverba.verba.multiplicia.Āctus;
 import net.strūctorverba.ēnumerātiōnēs.*;
 import org.apache.commons.collections4.CollectionUtils;
 import org.apache.commons.lang3.StringUtils;
@@ -29,7 +29,7 @@ public class Exempla extends Omnum {
    */
   @Test
   public void prōducta() {
-    final Āctum prōdest = strūctor().adveniam("prōdesse", Catēgoria.ĀCTUM,
+    final Āctus prōdest = strūctor().adveniam("prōdesse", Catēgoria.ĀCTUM,
                                               Modus.INDICĀTĪVUS, Vōx.ĀCTĪVA, Tempus.PRAESĒNS,
                                               Numerālis.SINGULĀRIS, Persōna.TERTIA);
     Assertions.assertNotNull(prōdest, "Verba prōducta vacant.");

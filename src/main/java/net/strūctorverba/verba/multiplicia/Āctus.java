@@ -14,7 +14,7 @@ import org.jetbrains.annotations.*;
 import java.util.Objects;
 
 /**
- * Classis {@link Āctum} repraesentat nōmina ut coniectēris. <br>
+ * Classis {@link Āctus} repraesentat nōmina ut coniectēris. <br>
  * Rēs classis huius catēgoriam {@link Catēgoria#ĀCTUM} ūtuntur et cōnservāta sunt in scrīniō <a href="{@docRoot}/../src/main/resources">auxiliārēs</a>/ācta.
  * @see LēctorMultiplicibus.LēctorĀctīs
  * @see TenorMultiplicibus.TenorĀctīs
@@ -23,7 +23,7 @@ import java.util.Objects;
  * @see Nūntius.NūntiusĀctōrum
  */
 @SuppressWarnings({ "NonAsciiCharacters", "SpellCheckingInspection", "unused" })
-public final class Āctum extends VerbumMultiplex <Āctum> {
+public final class Āctus extends VerbumMultiplex <Āctus> {
   @Getter(lazy = true) @Accessors(fluent = true)
   @NotNull private final LēctorMultiplicibus.LēctorAdiectīvīs adiectīva = LēctorMultiplicibus.LēctorAdiectīvīs.fac.get();
 
@@ -65,7 +65,7 @@ public final class Āctum extends VerbumMultiplex <Āctum> {
 
   @Builder(access = AccessLevel.PUBLIC, builderClassName = "Conditōr",
            builderMethodName = "conditōr", buildMethodName = "condam")
-  private Āctum(@NotNull final Modus modus, @NotNull final Vōx vōx, @NotNull final Tempus tempus,
+  private Āctus(@NotNull final Modus modus, @NotNull final Vōx vōx, @NotNull final Tempus tempus,
                 @NotNull final Numerālis numerālis, @NotNull final Persōna persōna,
                 @NotNull final String fundāmen, @NotNull final String scrīptiō) {
     super(Catēgoria.ĀCTUM, fundāmen, Ūtilitās.minusculāsScrībō(scrīptiō));
@@ -97,7 +97,7 @@ public final class Āctum extends VerbumMultiplex <Āctum> {
        && tempus.equals(tmps)) {
       return adiectīva().adveniam(toString(), spclt, gns, css, nmrl);
     } else {
-      Āctum alium = ācta().adveniam(fundāmen, Modus.PARTICIPĀLIS, vx, tmps);
+      Āctus alium = ācta().adveniam(fundāmen, Modus.PARTICIPĀLIS, vx, tmps);
       return Objects.isNull(alium) ? null
                                    : adiectīva().adveniam(alium.toString(), spclt, gns, css, nmrl);
     }

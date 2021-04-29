@@ -226,14 +226,14 @@ public abstract class LēctorMultiplicibus <Hoc extends VerbumMultiplex <Hoc>> e
   }
 
   /**
-   * Classis {@link LēctorĀctīs} est vās classis {@link Lēctor} classī {@link Āctum}.
+   * Classis {@link LēctorĀctīs} est vās classis {@link Lēctor} classī {@link Āctus}.
    * @see Catēgoria#ĀCTUM
    * @see TenorMultiplicibus.TenorĀctīs
    * @see Nūntius.NūntiusLēctōrīĀctīs
    * @see InventorĀctīs
    */
   @Singleton @DependsOn({ "TenorĀctīs", "NūntiusLēctōrīĀctīs" })
-  public static final class LēctorĀctīs extends LēctorMultiplicibus <Āctum> {
+  public static final class LēctorĀctīs extends LēctorMultiplicibus <Āctus> {
     private static @Nullable LēctorĀctīs īnstantia = null;
 
     /**
@@ -250,14 +250,14 @@ public abstract class LēctorMultiplicibus <Hoc extends VerbumMultiplex <Hoc>> e
     }
 
     /**
-     * Modus hic cōnābitur advenīre rem classis {@link Āctum} quam fōrma āctī "esse" repraesentat et valōrēs {@code illa} quadrat.
+     * Modus hic cōnābitur advenīre rem classis {@link Āctus} quam fōrma āctī "esse" repraesentat et valōrēs {@code illa} quadrat.
      * @param illa seriēs ēnumerātiōnum licent {@link #inventor} colere ēventīs lēctīs. <br>
      * Modus hic valōrem {@code null} refert sī nihil valōrēs {@code illa} quadrat.
-     * @return rem classis {@link Āctum} quam valōrem {@code illa} quadrat
+     * @return rem classis {@link Āctus} quam valōrem {@code illa} quadrat
      * @see <a href="{@docRoot}/../src/main/resources">auxiliārēs</a>/ācta/esse.xml
      */
     @SuppressWarnings("unused")
-    public @Nullable Āctum adveniam(@NotNull final Enum<?>... illa) {
+    public @Nullable Āctus adveniam(@NotNull final Enum<?>... illa) {
       return adveniam("esse", illa);
     }
   }

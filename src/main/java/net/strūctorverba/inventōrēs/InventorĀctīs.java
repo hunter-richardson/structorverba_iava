@@ -2,7 +2,7 @@ package net.strūctorverba.inventōrēs;
 
 import net.strūctorverba.lēctōrēs.LēctorMultiplicibus;
 import net.strūctorverba.nūntiī.Nūntius;
-import net.strūctorverba.verba.multiplicia.Āctum;
+import net.strūctorverba.verba.multiplicia.Āctus;
 import net.strūctorverba.ēnumerātiōnēs.*;
 import org.apache.commons.lang3.ObjectUtils;
 import org.jetbrains.annotations.*;
@@ -11,14 +11,14 @@ import javax.ejb.*;
 import java.util.function.*;
 
 /**
- * Classis {@link InventorĀctīs} est vās classis {@link Inventor} classī {@link Āctum}.
- * @see Āctum
+ * Classis {@link InventorĀctīs} est vās classis {@link Inventor} classī {@link Āctus}.
+ * @see Āctus
  * @see Nūntius.NūntiusInventōrīĀctīs
  */
 @SuppressWarnings({ "NonAsciiCharacters", "SpellCheckingInspection" })
 @Singleton
 @DependsOn("NūntiusInventōrīĀctīs")
-public final class InventorĀctīs extends Inventor <Āctum> {
+public final class InventorĀctīs extends Inventor <Āctus> {
   @Nullable private static InventorĀctīs īnstantia = null;
 
   /**
@@ -40,11 +40,11 @@ public final class InventorĀctīs extends Inventor <Āctum> {
   }
 
   /**
-   * @return Quaestiōnem quam rēs classis {@link LēctorMultiplicibus.LēctorĀctīs} ūtātur rēs classis {@link Āctum} percōlere
+   * @return Quaestiōnem quam rēs classis {@link LēctorMultiplicibus.LēctorĀctīs} ūtātur rēs classis {@link Āctus} percōlere
    * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Predicate.html">Prediate</a>
    */
   @Override @NotNull
-  public Predicate <@NotNull Āctum> inquīram( ) {
+  public Predicate <@NotNull Āctus> inquīram( ) {
     return āctum -> modus.equals(āctum.modus)
                     && vōx.equals(āctum.vōx)
                     && tempus.equals(āctum.tempus)
@@ -100,7 +100,7 @@ public final class InventorĀctīs extends Inventor <Āctum> {
       nūntius.garriō("Quastiōnī adiēcī conditiōnem novam:",
                      Modus.class.getSimpleName(), "est", illud);
     } else {
-      nūntius.moneō(Āctum.class.getSimpleName().replace("um", "ō"),
+      nūntius.moneō(Āctus.class.getSimpleName().replace("um", "ō"),
                     "inquīsītiō inopīnāta est ūsa:", illud);
     }
   }

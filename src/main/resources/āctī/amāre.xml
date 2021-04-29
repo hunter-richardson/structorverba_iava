@@ -1,223 +1,343 @@
-<āctum fundāmen="incidere">
+<āctus fundāmen="amāre">
   <fōrma modus="īnfīnītīvus" vōx="āctīva" tempus="praesēns">
-    incidere
+    amāre
   </fōrma>
   <fōrma modus="īnfīnītīvus" vōx="āctīva" tempus="perfectum">
-    incidisse
+    amāvisse
+  </fōrma>
+  <fōrma modus="īnfīnītīvus" vōx="passīva" tempus="perfectum">
+    amārī
   </fōrma>
   <fōrma modus="participiālis" vōx="āctīva" tempus="praesēns">
-    incidēns
+    amāns
+  </fōrma>
+  <fōrma modus="participiālis" vōx="āctīva" tempus="futūrum">
+    amātūrus
+  </fōrma>
+  <fōrma modus="participiālis" vōx="passīva" tempus="perfectum">
+    amātus
   </fōrma>
   <fōrma modus="participiālis" vōx="passīva" tempus="futūrum">
-    incidendus
+    amandus
   </fōrma>
 
   <fōrma modus="imperātīvus" vōx="āctīva" tempus="praesēns" numerālis="singulāris" persōna="secunda">
-    incide
-  </fōrma>
-  <fōrma modus="imperātīvus" vōx="āctīva" tempus="futūrum" numerālis="singulāris" persōna="secunda">
-    inciditō
-  </fōrma>
-  <fōrma modus="imperātīvus" vōx="āctīva" tempus="futūrum" numerālis="singulāris" persōna="tertia">
-    inciditō
+    amā
   </fōrma>
   <fōrma modus="imperātīvus" vōx="āctīva" tempus="praesēns" numerālis="plūrālis" persōna="secunda">
-    incidite
+    amāte
+  </fōrma>
+  <fōrma modus="imperātīvus" vōx="āctīva" tempus="futūrum" numerālis="singulāris" persōna="secunda">
+    amātō
+  </fōrma>
+  <fōrma modus="imperātīvus" vōx="āctīva" tempus="futūrum" numerālis="singulāris" persōna="tertia">
+    amātō
   </fōrma>
   <fōrma modus="imperātīvus" vōx="āctīva" tempus="futūrum" numerālis="plūrālis" persōna="secunda">
-    inciditōte
+    amātōte
   </fōrma>
   <fōrma modus="imperātīvus" vōx="āctīva" tempus="futūrum" numerālis="plūrālis" persōna="tertia">
-    inciduntō
+    amantō
+  </fōrma>
+
+  <fōrma modus="imperātīvus" vōx="passīva" tempus="praesēns" numerālis="singulāris" persōna="secunda">
+    amāre
+  </fōrma>
+  <fōrma modus="imperātīvus" vōx="passīva" tempus="futūrum" numerālis="singulāris" persōna="secunda">
+    amātor
+  </fōrma>
+  <fōrma modus="imperātīvus" vōx="passīva" tempus="futūrum" numerālis="singulāris" persōna="tertia">
+    amātor
+  </fōrma>
+  <fōrma modus="imperātīvus" vōx="passīva" tempus="praesēns" numerālis="plūrālis" persōna="secunda">
+    amāminī
+  </fōrma>
+  <fōrma modus="imperātīvus" vōx="passīva" tempus="futūrum" numerālis="plūrālis" persōna="tertia">
+    amantor
   </fōrma>
 
   <fōrma modus="indicātīvus" vōx="āctīva" tempus="praesēns" numerālis="singulāris" persōna="prīma">
-    incidō
+    amō
   </fōrma>
   <fōrma modus="indicātīvus" vōx="āctīva" tempus="praesēns" numerālis="singulāris" persōna="secunda">
-    incidis
+    amās
   </fōrma>
   <fōrma modus="indicātīvus" vōx="āctīva" tempus="praesēns" numerālis="singulāris" persōna="tertia">
-    incidit
+    amat
   </fōrma>
   <fōrma modus="indicātīvus" vōx="āctīva" tempus="praesēns" numerālis="plūrālis" persōna="prīma">
-    incidimus
+    amāmus
   </fōrma>
   <fōrma modus="indicātīvus" vōx="āctīva" tempus="praesēns" numerālis="plūrālis" persōna="secunda">
-    inciditis
+    amātis
   </fōrma>
   <fōrma modus="indicātīvus" vōx="āctīva" tempus="praesēns" numerālis="plūrālis" persōna="tertia">
-    incidunt
+    amant
   </fōrma>
 
   <fōrma modus="indicātīvus" vōx="āctīva" tempus="infectum" numerālis="singulāris" persōna="prīma">
-    incidēbam
+    amābam
   </fōrma>
   <fōrma modus="indicātīvus" vōx="āctīva" tempus="infectum" numerālis="singulāris" persōna="secunda">
-    incidēbās
+    amābās
   </fōrma>
   <fōrma modus="indicātīvus" vōx="āctīva" tempus="infectum" numerālis="singulāris" persōna="tertia">
-    incidēbat
+    amābat
   </fōrma>
   <fōrma modus="indicātīvus" vōx="āctīva" tempus="infectum" numerālis="plūrālis" persōna="prīma">
-    incidēbāmus
+    amābāmus
   </fōrma>
   <fōrma modus="indicātīvus" vōx="āctīva" tempus="infectum" numerālis="plūrālis" persōna="secunda">
-    incidēbātis
+    amābātis
   </fōrma>
   <fōrma modus="indicātīvus" vōx="āctīva" tempus="infectum" numerālis="plūrālis" persōna="tertia">
-    incidēbant
+    amābant
   </fōrma>
 
   <fōrma modus="indicātīvus" vōx="āctīva" tempus="futūrum" numerālis="singulāris" persōna="prīma">
-    incidam
+    amābō
   </fōrma>
   <fōrma modus="indicātīvus" vōx="āctīva" tempus="futūrum" numerālis="singulāris" persōna="secunda">
-    incidēs
+    amābis
   </fōrma>
   <fōrma modus="indicātīvus" vōx="āctīva" tempus="futūrum" numerālis="singulāris" persōna="tertia">
-    incidet
+    amābit
   </fōrma>
   <fōrma modus="indicātīvus" vōx="āctīva" tempus="futūrum" numerālis="plūrālis" persōna="prīma">
-    incidēmus
+    amābimus
   </fōrma>
   <fōrma modus="indicātīvus" vōx="āctīva" tempus="futūrum" numerālis="plūrālis" persōna="secunda">
-    incidētis
+    amābitis
   </fōrma>
   <fōrma modus="indicātīvus" vōx="āctīva" tempus="futūrum" numerālis="plūrālis" persōna="tertia">
-    incident
+    amābunt
   </fōrma>
 
   <fōrma modus="indicātīvus" vōx="āctīva" tempus="perfectum" numerālis="singulāris" persōna="prīma">
-    incidī
+    amāvī
   </fōrma>
   <fōrma modus="indicātīvus" vōx="āctīva" tempus="perfectum" numerālis="singulāris" persōna="secunda">
-    incidistī
+    amāvistī
   </fōrma>
   <fōrma modus="indicātīvus" vōx="āctīva" tempus="perfectum" numerālis="singulāris" persōna="tertia">
-    incidit
+    amāvit
   </fōrma>
   <fōrma modus="indicātīvus" vōx="āctīva" tempus="perfectum" numerālis="plūrālis" persōna="prīma">
-    incidimus
+    amāvimus
   </fōrma>
   <fōrma modus="indicātīvus" vōx="āctīva" tempus="perfectum" numerālis="plūrālis" persōna="secunda">
-    inciditis
+    amāvitis
   </fōrma>
   <fōrma modus="indicātīvus" vōx="āctīva" tempus="perfectum" numerālis="plūrālis" persōna="tertia">
-    incidērunt
+    amāvērunt
   </fōrma>
 
   <fōrma modus="indicātīvus" vōx="āctīva" tempus="plūsquamperfectum" numerālis="singulāris" persōna="prīma">
-    incideram
+    amāveram
   </fōrma>
   <fōrma modus="indicātīvus" vōx="āctīva" tempus="plūsquamperfectum" numerālis="singulāris" persōna="secunda">
-    inciderās
+    amāverās
   </fōrma>
   <fōrma modus="indicātīvus" vōx="āctīva" tempus="plūsquamperfectum" numerālis="singulāris" persōna="tertia">
-    inciderat
+    amāverat
   </fōrma>
   <fōrma modus="indicātīvus" vōx="āctīva" tempus="plūsquamperfectum" numerālis="plūrālis" persōna="prīma">
-    inciderāmus
+    amāverāmus
   </fōrma>
   <fōrma modus="indicātīvus" vōx="āctīva" tempus="plūsquamperfectum" numerālis="plūrālis" persōna="secunda">
-    inciderātis
+    amāverātis
   </fōrma>
   <fōrma modus="indicātīvus" vōx="āctīva" tempus="plūsquamperfectum" numerālis="plūrālis" persōna="tertia">
-    incidērant
+    amāvērant
   </fōrma>
 
   <fōrma modus="indicātīvus" vōx="āctīva" tempus="futrexāctum" numerālis="singulāris" persōna="prīma">
-    inciderō
+    amāverō
   </fōrma>
   <fōrma modus="indicātīvus" vōx="āctīva" tempus="futrexāctum" numerālis="singulāris" persōna="secunda">
-    incideris
+    amāveris
   </fōrma>
   <fōrma modus="indicātīvus" vōx="āctīva" tempus="futrexāctum" numerālis="singulāris" persōna="tertia">
-    inciderit
+    amāverit
   </fōrma>
   <fōrma modus="indicātīvus" vōx="āctīva" tempus="futrexāctum" numerālis="plūrālis" persōna="prīma">
-    inciderimus
+    amāverimus
   </fōrma>
   <fōrma modus="indicātīvus" vōx="āctīva" tempus="futrexāctum" numerālis="plūrālis" persōna="secunda">
-    incideritis
+    amāveritis
   </fōrma>
   <fōrma modus="indicātīvus" vōx="āctīva" tempus="futrexāctum" numerālis="plūrālis" persōna="tertia">
-    incidērint
+    amāvērint
+  </fōrma>
+
+  <fōrma modus="indicātīvus" vōx="passīva" tempus="praesēns" numerālis="singulāris" persōna="prīma">
+    amor
+  </fōrma>
+  <fōrma modus="indicātīvus" vōx="passīva" tempus="praesēns" numerālis="singulāris" persōna="secunda">
+    amāris
+  </fōrma>
+  <fōrma modus="indicātīvus" vōx="passīva" tempus="praesēns" numerālis="singulāris" persōna="tertia">
+    amatur
+  </fōrma>
+  <fōrma modus="indicātīvus" vōx="passīva" tempus="praesēns" numerālis="plūrālis" persōna="prīma">
+    amāmur
+  </fōrma>
+  <fōrma modus="indicātīvus" vōx="passīva" tempus="praesēns" numerālis="plūrālis" persōna="secunda">
+    amāminī
+  </fōrma>
+  <fōrma modus="indicātīvus" vōx="passīva" tempus="praesēns" numerālis="plūrālis" persōna="tertia">
+    amantur
+  </fōrma>
+
+  <fōrma modus="indicātīvus" vōx="passīva" tempus="infectum" numerālis="singulāris" persōna="prīma">
+    amābar
+  </fōrma>
+  <fōrma modus="indicātīvus" vōx="passīva" tempus="infectum" numerālis="singulāris" persōna="secunda">
+    amābāris
+  </fōrma>
+  <fōrma modus="indicātīvus" vōx="passīva" tempus="infectum" numerālis="singulāris" persōna="tertia">
+    amābātur
+  </fōrma>
+  <fōrma modus="indicātīvus" vōx="passīva" tempus="infectum" numerālis="plūrālis" persōna="prīma">
+    amābāmur
+  </fōrma>
+  <fōrma modus="indicātīvus" vōx="passīva" tempus="infectum" numerālis="plūrālis" persōna="secunda">
+    amābāminī
+  </fōrma>
+  <fōrma modus="indicātīvus" vōx="passīva" tempus="infectum" numerālis="plūrālis" persōna="tertia">
+    amābantur
+  </fōrma>
+
+  <fōrma modus="indicātīvus" vōx="passīva" tempus="futūrum" numerālis="singulāris" persōna="prīma">
+    amābor
+  </fōrma>
+  <fōrma modus="indicātīvus" vōx="passīva" tempus="futūrum" numerālis="singulāris" persōna="secunda">
+    amāberis
+  </fōrma>
+  <fōrma modus="indicātīvus" vōx="passīva" tempus="futūrum" numerālis="singulāris" persōna="tertia">
+    amābitur
+  </fōrma>
+  <fōrma modus="indicātīvus" vōx="passīva" tempus="futūrum" numerālis="plūrālis" persōna="prīma">
+    amāberimur
+  </fōrma>
+  <fōrma modus="indicātīvus" vōx="passīva" tempus="futūrum" numerālis="plūrālis" persōna="secunda">
+    amābiminī
+  </fōrma>
+  <fōrma modus="indicātīvus" vōx="passīva" tempus="futūrum" numerālis="plūrālis" persōna="tertia">
+    amābuntur
   </fōrma>
 
   <fōrma modus="subiūnctīvus" vōx="āctīva" tempus="praesēns" numerālis="singulāris" persōna="prīma">
-    incidam
+    amem
   </fōrma>
   <fōrma modus="subiūnctīvus" vōx="āctīva" tempus="praesēns" numerālis="singulāris" persōna="secunda">
-    incidās
+    amēs
   </fōrma>
   <fōrma modus="subiūnctīvus" vōx="āctīva" tempus="praesēns" numerālis="singulāris" persōna="tertia">
-    incidat
+    amet
   </fōrma>
   <fōrma modus="subiūnctīvus" vōx="āctīva" tempus="praesēns" numerālis="plūrālis" persōna="prīma">
-    incidāmus
+    amēmus
   </fōrma>
   <fōrma modus="subiūnctīvus" vōx="āctīva" tempus="praesēns" numerālis="plūrālis" persōna="secunda">
-    incidātis
+    amētis
   </fōrma>
   <fōrma modus="subiūnctīvus" vōx="āctīva" tempus="praesēns" numerālis="plūrālis" persōna="tertia">
-    incidant
+    ament
   </fōrma>
 
   <fōrma modus="subiūnctīvus" vōx="āctīva" tempus="infectum" numerālis="singulāris" persōna="prīma">
-    inciderem
+    amārem
   </fōrma>
   <fōrma modus="subiūnctīvus" vōx="āctīva" tempus="infectum" numerālis="singulāris" persōna="secunda">
-    inciderēs
+    amārēs
   </fōrma>
   <fōrma modus="subiūnctīvus" vōx="āctīva" tempus="infectum" numerālis="singulāris" persōna="tertia">
-    incideret
+    amāret
   </fōrma>
   <fōrma modus="subiūnctīvus" vōx="āctīva" tempus="infectum" numerālis="plūrālis" persōna="prīma">
-    inciderēmus
+    amārēmus
   </fōrma>
   <fōrma modus="subiūnctīvus" vōx="āctīva" tempus="infectum" numerālis="plūrālis" persōna="secunda">
-    inciderētis
+    amārētis
   </fōrma>
   <fōrma modus="subiūnctīvus" vōx="āctīva" tempus="infectum" numerālis="plūrālis" persōna="tertia">
-    inciderent
+    amārent
   </fōrma>
 
   <fōrma modus="subiūnctīvus" vōx="āctīva" tempus="perfectum" numerālis="singulāris" persōna="prīma">
-    inciderim
+    amāverim
   </fōrma>
   <fōrma modus="subiūnctīvus" vōx="āctīva" tempus="perfectum" numerālis="singulāris" persōna="secunda">
-    inciderīs
+    amāverīs
   </fōrma>
   <fōrma modus="subiūnctīvus" vōx="āctīva" tempus="perfectum" numerālis="singulāris" persōna="tertia">
-    inciderit
+    amāverit
   </fōrma>
   <fōrma modus="subiūnctīvus" vōx="āctīva" tempus="perfectum" numerālis="plūrālis" persōna="prīma">
-    inciderīmus
+    amāverīmus
   </fōrma>
   <fōrma modus="subiūnctīvus" vōx="āctīva" tempus="perfectum" numerālis="plūrālis" persōna="secunda">
-    inciderītis
+    amāverītis
   </fōrma>
   <fōrma modus="subiūnctīvus" vōx="āctīva" tempus="perfectum" numerālis="plūrālis" persōna="tertia">
-    inciderint
+    amāverint
   </fōrma>
 
   <fōrma modus="subiūnctīvus" vōx="āctīva" tempus="plūsquamperfectum" numerālis="singulāris" persōna="prīma">
-    incidissem
+    amāvissem
   </fōrma>
   <fōrma modus="subiūnctīvus" vōx="āctīva" tempus="plūsquamperfectum" numerālis="singulāris" persōna="secunda">
-    incidissēs
+    amāvissēs
   </fōrma>
   <fōrma modus="subiūnctīvus" vōx="āctīva" tempus="plūsquamperfectum" numerālis="singulāris" persōna="tertia">
-    incidisset
+    amāvisset
   </fōrma>
   <fōrma modus="subiūnctīvus" vōx="āctīva" tempus="plūsquamperfectum" numerālis="plūrālis" persōna="prīma">
-    incidissēmus
+    amāvissēmus
   </fōrma>
   <fōrma modus="subiūnctīvus" vōx="āctīva" tempus="plūsquamperfectum" numerālis="plūrālis" persōna="secunda">
-    incidissētis
+    amāvissētis
   </fōrma>
   <fōrma modus="subiūnctīvus" vōx="āctīva" tempus="plūsquamperfectum" numerālis="plūrālis" persōna="tertia">
-    incidissent
+    amāvissent
   </fōrma>
-</āctum>
+
+  <fōrma modus="subiūnctīvus" vōx="passīva" tempus="praesēns" numerālis="singulāris" persōna="prīma">
+    amer
+  </fōrma>
+  <fōrma modus="subiūnctīvus" vōx="passīva" tempus="praesēns" numerālis="singulāris" persōna="secunda">
+    amēris
+  </fōrma>
+  <fōrma modus="subiūnctīvus" vōx="passīva" tempus="praesēns" numerālis="singulāris" persōna="tertia">
+    amētur
+  </fōrma>
+  <fōrma modus="subiūnctīvus" vōx="passīva" tempus="praesēns" numerālis="plūrālis" persōna="prīma">
+    amēmur
+  </fōrma>
+  <fōrma modus="subiūnctīvus" vōx="passīva" tempus="praesēns" numerālis="plūrālis" persōna="secunda">
+    amēminī
+  </fōrma>
+  <fōrma modus="subiūnctīvus" vōx="passīva" tempus="praesēns" numerālis="plūrālis" persōna="tertia">
+    amentur
+  </fōrma>
+
+  <fōrma modus="subiūnctīvus" vōx="passīva" tempus="infectum" numerālis="singulāris" persōna="prīma">
+    amārer
+  </fōrma>
+  <fōrma modus="subiūnctīvus" vōx="passīva" tempus="infectum" numerālis="singulāris" persōna="secunda">
+    amārēris
+  </fōrma>
+  <fōrma modus="subiūnctīvus" vōx="passīva" tempus="infectum" numerālis="singulāris" persōna="tertia">
+    amārētur
+  </fōrma>
+  <fōrma modus="subiūnctīvus" vōx="passīva" tempus="infectum" numerālis="plūrālis" persōna="prīma">
+    amārēmur
+  </fōrma>
+  <fōrma modus="subiūnctīvus" vōx="passīva" tempus="infectum" numerālis="plūrālis" persōna="secunda">
+    amārēminī
+  </fōrma>
+  <fōrma modus="subiūnctīvus" vōx="passīva" tempus="infectum" numerālis="plūrālis" persōna="tertia">
+    amārentur
+  </fōrma>
+</āctus>

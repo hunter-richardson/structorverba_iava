@@ -9,7 +9,7 @@ import java.util.stream.Stream;
 /**
  * Ēnumerātiō haec numerum verbī omnis dēsignat.
  * @see Nōminālis
- * @see Āctum
+ * @see Āctus
  */
 @SuppressWarnings({ "NonAsciiCharacters", "SpellCheckingInspection", "unused" })
 public enum Numerālis {

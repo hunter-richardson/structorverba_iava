@@ -1,343 +1,305 @@
-<āctum fundāmen="amāre">
+<āctus fundāmen="quaerere">
   <fōrma modus="īnfīnītīvus" vōx="āctīva" tempus="praesēns">
-    amāre
+    quaerere
   </fōrma>
   <fōrma modus="īnfīnītīvus" vōx="āctīva" tempus="perfectum">
-    amāvisse
+    quaesīvisse
   </fōrma>
   <fōrma modus="īnfīnītīvus" vōx="passīva" tempus="perfectum">
-    amārī
+    quaerī
   </fōrma>
   <fōrma modus="participiālis" vōx="āctīva" tempus="praesēns">
-    amāns
+    quaerēns
   </fōrma>
   <fōrma modus="participiālis" vōx="āctīva" tempus="futūrum">
-    amātūrus
+    quaesītūrus
   </fōrma>
   <fōrma modus="participiālis" vōx="passīva" tempus="perfectum">
-    amātus
+    quaesītus
   </fōrma>
   <fōrma modus="participiālis" vōx="passīva" tempus="futūrum">
-    amandus
+    quaerendus
   </fōrma>
 
   <fōrma modus="imperātīvus" vōx="āctīva" tempus="praesēns" numerālis="singulāris" persōna="secunda">
-    amā
-  </fōrma>
-  <fōrma modus="imperātīvus" vōx="āctīva" tempus="praesēns" numerālis="plūrālis" persōna="secunda">
-    amāte
+    quaere
   </fōrma>
   <fōrma modus="imperātīvus" vōx="āctīva" tempus="futūrum" numerālis="singulāris" persōna="secunda">
-    amātō
+    quaeritō
   </fōrma>
   <fōrma modus="imperātīvus" vōx="āctīva" tempus="futūrum" numerālis="singulāris" persōna="tertia">
-    amātō
+    quaeritō
+  </fōrma>
+  <fōrma modus="imperātīvus" vōx="āctīva" tempus="praesēns" numerālis="plūrālis" persōna="secunda">
+    quaerite
   </fōrma>
   <fōrma modus="imperātīvus" vōx="āctīva" tempus="futūrum" numerālis="plūrālis" persōna="secunda">
-    amātōte
+    quaeritōte
   </fōrma>
   <fōrma modus="imperātīvus" vōx="āctīva" tempus="futūrum" numerālis="plūrālis" persōna="tertia">
-    amantō
+    quaeruntō
   </fōrma>
-
   <fōrma modus="imperātīvus" vōx="passīva" tempus="praesēns" numerālis="singulāris" persōna="secunda">
-    amāre
+    quaerere
   </fōrma>
   <fōrma modus="imperātīvus" vōx="passīva" tempus="futūrum" numerālis="singulāris" persōna="secunda">
-    amātor
+    quaeritor
   </fōrma>
   <fōrma modus="imperātīvus" vōx="passīva" tempus="futūrum" numerālis="singulāris" persōna="tertia">
-    amātor
+    quaeritor
   </fōrma>
   <fōrma modus="imperātīvus" vōx="passīva" tempus="praesēns" numerālis="plūrālis" persōna="secunda">
-    amāminī
+    quaeriminī
   </fōrma>
   <fōrma modus="imperātīvus" vōx="passīva" tempus="futūrum" numerālis="plūrālis" persōna="tertia">
-    amantor
+    quaeruntor
   </fōrma>
 
   <fōrma modus="indicātīvus" vōx="āctīva" tempus="praesēns" numerālis="singulāris" persōna="prīma">
-    amō
+    quaerō
   </fōrma>
   <fōrma modus="indicātīvus" vōx="āctīva" tempus="praesēns" numerālis="singulāris" persōna="secunda">
-    amās
+    quaeris
   </fōrma>
   <fōrma modus="indicātīvus" vōx="āctīva" tempus="praesēns" numerālis="singulāris" persōna="tertia">
-    amat
+    quaerit
   </fōrma>
   <fōrma modus="indicātīvus" vōx="āctīva" tempus="praesēns" numerālis="plūrālis" persōna="prīma">
-    amāmus
+    quaerimus
   </fōrma>
   <fōrma modus="indicātīvus" vōx="āctīva" tempus="praesēns" numerālis="plūrālis" persōna="secunda">
-    amātis
+    quaeritis
   </fōrma>
   <fōrma modus="indicātīvus" vōx="āctīva" tempus="praesēns" numerālis="plūrālis" persōna="tertia">
-    amant
+    quaerunt
   </fōrma>
 
   <fōrma modus="indicātīvus" vōx="āctīva" tempus="infectum" numerālis="singulāris" persōna="prīma">
-    amābam
+    quaerēbam
   </fōrma>
   <fōrma modus="indicātīvus" vōx="āctīva" tempus="infectum" numerālis="singulāris" persōna="secunda">
-    amābās
+    quaerēbās
   </fōrma>
   <fōrma modus="indicātīvus" vōx="āctīva" tempus="infectum" numerālis="singulāris" persōna="tertia">
-    amābat
+    quaerēbat
   </fōrma>
   <fōrma modus="indicātīvus" vōx="āctīva" tempus="infectum" numerālis="plūrālis" persōna="prīma">
-    amābāmus
+    quaerēbāmus
   </fōrma>
   <fōrma modus="indicātīvus" vōx="āctīva" tempus="infectum" numerālis="plūrālis" persōna="secunda">
-    amābātis
+    quaerēbātis
   </fōrma>
   <fōrma modus="indicātīvus" vōx="āctīva" tempus="infectum" numerālis="plūrālis" persōna="tertia">
-    amābant
+    quaerēbant
   </fōrma>
 
   <fōrma modus="indicātīvus" vōx="āctīva" tempus="futūrum" numerālis="singulāris" persōna="prīma">
-    amābō
+    quaeram
   </fōrma>
   <fōrma modus="indicātīvus" vōx="āctīva" tempus="futūrum" numerālis="singulāris" persōna="secunda">
-    amābis
+    quaerēs
   </fōrma>
   <fōrma modus="indicātīvus" vōx="āctīva" tempus="futūrum" numerālis="singulāris" persōna="tertia">
-    amābit
+    quaeret
   </fōrma>
   <fōrma modus="indicātīvus" vōx="āctīva" tempus="futūrum" numerālis="plūrālis" persōna="prīma">
-    amābimus
+    quaerēmus
   </fōrma>
   <fōrma modus="indicātīvus" vōx="āctīva" tempus="futūrum" numerālis="plūrālis" persōna="secunda">
-    amābitis
+    quaerētis
   </fōrma>
   <fōrma modus="indicātīvus" vōx="āctīva" tempus="futūrum" numerālis="plūrālis" persōna="tertia">
-    amābunt
+    quaerent
   </fōrma>
 
   <fōrma modus="indicātīvus" vōx="āctīva" tempus="perfectum" numerālis="singulāris" persōna="prīma">
-    amāvī
+    quaesīvī
   </fōrma>
   <fōrma modus="indicātīvus" vōx="āctīva" tempus="perfectum" numerālis="singulāris" persōna="secunda">
-    amāvistī
+    quaesīvistī
   </fōrma>
   <fōrma modus="indicātīvus" vōx="āctīva" tempus="perfectum" numerālis="singulāris" persōna="tertia">
-    amāvit
+    quaesīvit
   </fōrma>
   <fōrma modus="indicātīvus" vōx="āctīva" tempus="perfectum" numerālis="plūrālis" persōna="prīma">
-    amāvimus
+    quaesīvimus
   </fōrma>
   <fōrma modus="indicātīvus" vōx="āctīva" tempus="perfectum" numerālis="plūrālis" persōna="secunda">
-    amāvitis
+    quaesīvitis
   </fōrma>
   <fōrma modus="indicātīvus" vōx="āctīva" tempus="perfectum" numerālis="plūrālis" persōna="tertia">
-    amāvērunt
+    quaesīvērunt
   </fōrma>
 
   <fōrma modus="indicātīvus" vōx="āctīva" tempus="plūsquamperfectum" numerālis="singulāris" persōna="prīma">
-    amāveram
+    quaesīveram
   </fōrma>
   <fōrma modus="indicātīvus" vōx="āctīva" tempus="plūsquamperfectum" numerālis="singulāris" persōna="secunda">
-    amāverās
+    quaesīverās
   </fōrma>
   <fōrma modus="indicātīvus" vōx="āctīva" tempus="plūsquamperfectum" numerālis="singulāris" persōna="tertia">
-    amāverat
+    quaesīverat
   </fōrma>
   <fōrma modus="indicātīvus" vōx="āctīva" tempus="plūsquamperfectum" numerālis="plūrālis" persōna="prīma">
-    amāverāmus
+    quaesīverāmus
   </fōrma>
   <fōrma modus="indicātīvus" vōx="āctīva" tempus="plūsquamperfectum" numerālis="plūrālis" persōna="secunda">
-    amāverātis
+    quaesīverātis
   </fōrma>
   <fōrma modus="indicātīvus" vōx="āctīva" tempus="plūsquamperfectum" numerālis="plūrālis" persōna="tertia">
-    amāvērant
+    quaesīvērant
   </fōrma>
 
   <fōrma modus="indicātīvus" vōx="āctīva" tempus="futrexāctum" numerālis="singulāris" persōna="prīma">
-    amāverō
+    quaesīverō
   </fōrma>
   <fōrma modus="indicātīvus" vōx="āctīva" tempus="futrexāctum" numerālis="singulāris" persōna="secunda">
-    amāveris
+    quaesīveris
   </fōrma>
   <fōrma modus="indicātīvus" vōx="āctīva" tempus="futrexāctum" numerālis="singulāris" persōna="tertia">
-    amāverit
+    quaesīverit
   </fōrma>
   <fōrma modus="indicātīvus" vōx="āctīva" tempus="futrexāctum" numerālis="plūrālis" persōna="prīma">
-    amāverimus
+    quaesīverimus
   </fōrma>
   <fōrma modus="indicātīvus" vōx="āctīva" tempus="futrexāctum" numerālis="plūrālis" persōna="secunda">
-    amāveritis
+    quaesīveritis
   </fōrma>
   <fōrma modus="indicātīvus" vōx="āctīva" tempus="futrexāctum" numerālis="plūrālis" persōna="tertia">
-    amāvērint
+    quaesīvērint
   </fōrma>
 
   <fōrma modus="indicātīvus" vōx="passīva" tempus="praesēns" numerālis="singulāris" persōna="prīma">
-    amor
+    quaeror
   </fōrma>
   <fōrma modus="indicātīvus" vōx="passīva" tempus="praesēns" numerālis="singulāris" persōna="secunda">
-    amāris
+    quaereris
   </fōrma>
   <fōrma modus="indicātīvus" vōx="passīva" tempus="praesēns" numerālis="singulāris" persōna="tertia">
-    amatur
+    quaeritur
   </fōrma>
   <fōrma modus="indicātīvus" vōx="passīva" tempus="praesēns" numerālis="plūrālis" persōna="prīma">
-    amāmur
+    quaerimur
   </fōrma>
   <fōrma modus="indicātīvus" vōx="passīva" tempus="praesēns" numerālis="plūrālis" persōna="secunda">
-    amāminī
+    quaeriminī
   </fōrma>
   <fōrma modus="indicātīvus" vōx="passīva" tempus="praesēns" numerālis="plūrālis" persōna="tertia">
-    amantur
+    quaeruntur
   </fōrma>
 
   <fōrma modus="indicātīvus" vōx="passīva" tempus="infectum" numerālis="singulāris" persōna="prīma">
-    amābar
+    quaerēbar
   </fōrma>
   <fōrma modus="indicātīvus" vōx="passīva" tempus="infectum" numerālis="singulāris" persōna="secunda">
-    amābāris
+    quaerēbāris
   </fōrma>
   <fōrma modus="indicātīvus" vōx="passīva" tempus="infectum" numerālis="singulāris" persōna="tertia">
-    amābātur
+    quaerēbātur
   </fōrma>
   <fōrma modus="indicātīvus" vōx="passīva" tempus="infectum" numerālis="plūrālis" persōna="prīma">
-    amābāmur
+    quaerēbāmur
   </fōrma>
   <fōrma modus="indicātīvus" vōx="passīva" tempus="infectum" numerālis="plūrālis" persōna="secunda">
-    amābāminī
+    quaerēbāminī
   </fōrma>
   <fōrma modus="indicātīvus" vōx="passīva" tempus="infectum" numerālis="plūrālis" persōna="tertia">
-    amābantur
+    quaerēbantur
   </fōrma>
 
   <fōrma modus="indicātīvus" vōx="passīva" tempus="futūrum" numerālis="singulāris" persōna="prīma">
-    amābor
+    quaerar
   </fōrma>
   <fōrma modus="indicātīvus" vōx="passīva" tempus="futūrum" numerālis="singulāris" persōna="secunda">
-    amāberis
+    quaerēris
   </fōrma>
   <fōrma modus="indicātīvus" vōx="passīva" tempus="futūrum" numerālis="singulāris" persōna="tertia">
-    amābitur
+    quaerētur
   </fōrma>
   <fōrma modus="indicātīvus" vōx="passīva" tempus="futūrum" numerālis="plūrālis" persōna="prīma">
-    amāberimur
+    quaerēmur
   </fōrma>
   <fōrma modus="indicātīvus" vōx="passīva" tempus="futūrum" numerālis="plūrālis" persōna="secunda">
-    amābiminī
+    quaerēminī
   </fōrma>
   <fōrma modus="indicātīvus" vōx="passīva" tempus="futūrum" numerālis="plūrālis" persōna="tertia">
-    amābuntur
+    quaerentur
   </fōrma>
 
   <fōrma modus="subiūnctīvus" vōx="āctīva" tempus="praesēns" numerālis="singulāris" persōna="prīma">
-    amem
+    quaeram
   </fōrma>
   <fōrma modus="subiūnctīvus" vōx="āctīva" tempus="praesēns" numerālis="singulāris" persōna="secunda">
-    amēs
+    quaerās
   </fōrma>
   <fōrma modus="subiūnctīvus" vōx="āctīva" tempus="praesēns" numerālis="singulāris" persōna="tertia">
-    amet
+    quaerat
   </fōrma>
   <fōrma modus="subiūnctīvus" vōx="āctīva" tempus="praesēns" numerālis="plūrālis" persōna="prīma">
-    amēmus
+    quaerāmus
   </fōrma>
   <fōrma modus="subiūnctīvus" vōx="āctīva" tempus="praesēns" numerālis="plūrālis" persōna="secunda">
-    amētis
+    quaerātis
   </fōrma>
   <fōrma modus="subiūnctīvus" vōx="āctīva" tempus="praesēns" numerālis="plūrālis" persōna="tertia">
-    ament
+    quaerant
   </fōrma>
 
   <fōrma modus="subiūnctīvus" vōx="āctīva" tempus="infectum" numerālis="singulāris" persōna="prīma">
-    amārem
+    quaererem
   </fōrma>
   <fōrma modus="subiūnctīvus" vōx="āctīva" tempus="infectum" numerālis="singulāris" persōna="secunda">
-    amārēs
+    quaererēs
   </fōrma>
   <fōrma modus="subiūnctīvus" vōx="āctīva" tempus="infectum" numerālis="singulāris" persōna="tertia">
-    amāret
+    quaereret
   </fōrma>
   <fōrma modus="subiūnctīvus" vōx="āctīva" tempus="infectum" numerālis="plūrālis" persōna="prīma">
-    amārēmus
+    quaererēmus
   </fōrma>
   <fōrma modus="subiūnctīvus" vōx="āctīva" tempus="infectum" numerālis="plūrālis" persōna="secunda">
-    amārētis
+    quaererētis
   </fōrma>
   <fōrma modus="subiūnctīvus" vōx="āctīva" tempus="infectum" numerālis="plūrālis" persōna="tertia">
-    amārent
+    quaererent
   </fōrma>
 
   <fōrma modus="subiūnctīvus" vōx="āctīva" tempus="perfectum" numerālis="singulāris" persōna="prīma">
-    amāverim
+    quaesīverim
   </fōrma>
   <fōrma modus="subiūnctīvus" vōx="āctīva" tempus="perfectum" numerālis="singulāris" persōna="secunda">
-    amāverīs
+    quaesīverīs
   </fōrma>
   <fōrma modus="subiūnctīvus" vōx="āctīva" tempus="perfectum" numerālis="singulāris" persōna="tertia">
-    amāverit
+    quaesīverit
   </fōrma>
   <fōrma modus="subiūnctīvus" vōx="āctīva" tempus="perfectum" numerālis="plūrālis" persōna="prīma">
-    amāverīmus
+    quaesīverīmus
   </fōrma>
   <fōrma modus="subiūnctīvus" vōx="āctīva" tempus="perfectum" numerālis="plūrālis" persōna="secunda">
-    amāverītis
+    quaesīverītis
   </fōrma>
   <fōrma modus="subiūnctīvus" vōx="āctīva" tempus="perfectum" numerālis="plūrālis" persōna="tertia">
-    amāverint
+    quaesīverint
   </fōrma>
 
   <fōrma modus="subiūnctīvus" vōx="āctīva" tempus="plūsquamperfectum" numerālis="singulāris" persōna="prīma">
-    amāvissem
+    quaesīvissem
   </fōrma>
   <fōrma modus="subiūnctīvus" vōx="āctīva" tempus="plūsquamperfectum" numerālis="singulāris" persōna="secunda">
-    amāvissēs
+    quaesīvissēs
   </fōrma>
-  <fōrma modus="subiūnctīvus" vōx="āctīva" tempus="plūsquamperfectum" numerālis="singulāris" persōna="tertia">
-    amāvisset
+  <fōrma modus="subiūnctīvus" vōx="āctīva" tempus="plūsqiamperfectum" numerālis="singulāris" persōna="tertia">
+    quaesīvisset
   </fōrma>
   <fōrma modus="subiūnctīvus" vōx="āctīva" tempus="plūsquamperfectum" numerālis="plūrālis" persōna="prīma">
-    amāvissēmus
+    quaesīvissēmus
   </fōrma>
   <fōrma modus="subiūnctīvus" vōx="āctīva" tempus="plūsquamperfectum" numerālis="plūrālis" persōna="secunda">
-    amāvissētis
+    quaesīvissētis
   </fōrma>
   <fōrma modus="subiūnctīvus" vōx="āctīva" tempus="plūsquamperfectum" numerālis="plūrālis" persōna="tertia">
-    amāvissent
+    quaesīvissent
   </fōrma>
 
-  <fōrma modus="subiūnctīvus" vōx="passīva" tempus="praesēns" numerālis="singulāris" persōna="prīma">
-    amer
-  </fōrma>
-  <fōrma modus="subiūnctīvus" vōx="passīva" tempus="praesēns" numerālis="singulāris" persōna="secunda">
-    amēris
-  </fōrma>
-  <fōrma modus="subiūnctīvus" vōx="passīva" tempus="praesēns" numerālis="singulāris" persōna="tertia">
-    amētur
-  </fōrma>
-  <fōrma modus="subiūnctīvus" vōx="passīva" tempus="praesēns" numerālis="plūrālis" persōna="prīma">
-    amēmur
-  </fōrma>
-  <fōrma modus="subiūnctīvus" vōx="passīva" tempus="praesēns" numerālis="plūrālis" persōna="secunda">
-    amēminī
-  </fōrma>
-  <fōrma modus="subiūnctīvus" vōx="passīva" tempus="praesēns" numerālis="plūrālis" persōna="tertia">
-    amentur
-  </fōrma>
-
-  <fōrma modus="subiūnctīvus" vōx="passīva" tempus="infectum" numerālis="singulāris" persōna="prīma">
-    amārer
-  </fōrma>
-  <fōrma modus="subiūnctīvus" vōx="passīva" tempus="infectum" numerālis="singulāris" persōna="secunda">
-    amārēris
-  </fōrma>
-  <fōrma modus="subiūnctīvus" vōx="passīva" tempus="infectum" numerālis="singulāris" persōna="tertia">
-    amārētur
-  </fōrma>
-  <fōrma modus="subiūnctīvus" vōx="passīva" tempus="infectum" numerālis="plūrālis" persōna="prīma">
-    amārēmur
-  </fōrma>
-  <fōrma modus="subiūnctīvus" vōx="passīva" tempus="infectum" numerālis="plūrālis" persōna="secunda">
-    amārēminī
-  </fōrma>
-  <fōrma modus="subiūnctīvus" vōx="passīva" tempus="infectum" numerālis="plūrālis" persōna="tertia">
-    amārentur
-  </fōrma>
-</āctum>
+</āctus>

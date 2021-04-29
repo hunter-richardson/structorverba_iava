@@ -787,7 +787,7 @@ public abstract class Nūntius {
       () -> ObjectUtils.firstNonNull(īnstantia, īnstantia = new NūntiusAdiectīvōrum());
 
     private NūntiusAdiectīvōrum() {
-      super(ParametrīNūntiī.parā(Āctum.Conditōr.class));
+      super(ParametrīNūntiī.parā(Āctus.Conditōr.class));
     }
   }
 
@@ -811,8 +811,8 @@ public abstract class Nūntius {
   }
 
   /**
-   * Classis {@link NūntiusĀctōrum} est vās classis {@link Nūntius} classī {@link Āctum}}
-   * @see Āctum
+   * Classis {@link NūntiusĀctōrum} est vās classis {@link Nūntius} classī {@link Āctus}}
+   * @see Āctus
    */
   @Singleton public static final class NūntiusĀctōrum extends Nūntius {
     @Nullable private static NūntiusĀctōrum īnstantia = null;
@@ -825,7 +825,7 @@ public abstract class Nūntius {
       () -> ObjectUtils.firstNonNull(īnstantia, īnstantia = new NūntiusĀctōrum());
 
     private NūntiusĀctōrum( ) {
-      super(ParametrīNūntiī.parā(Āctum.Conditōr.class));
+      super(ParametrīNūntiī.parā(Āctus.Conditōr.class));
     }
   }
 

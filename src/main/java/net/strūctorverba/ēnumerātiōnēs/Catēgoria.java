@@ -27,9 +27,9 @@ public enum Catēgoria {
   PRŌNŌMEN("prōnōmina"),
 
   /**
-   * Valor hic classem {@link Āctum} respondet.
+   * Valor hic classem {@link Āctus} respondet.
    */
-  ĀCTUM("ācta"),
+  ĀCTUM("āctī"),
 
   /**
    * Valor hic classem {@link Adverbium} respondet.

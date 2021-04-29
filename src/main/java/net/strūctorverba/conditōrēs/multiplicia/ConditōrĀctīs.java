@@ -13,13 +13,13 @@ import java.util.Objects;
 import java.util.function.Supplier;
 
 /**
- * Classis {@link ConditōrĀctīs} est vās classis {@link Conditōr} classī {@link Āctum}.
- * @see Āctum
+ * Classis {@link ConditōrĀctīs} est vās classis {@link Conditōr} classī {@link Āctus}.
+ * @see Āctus
  * @see Nūntius.NūntiusConditōrīĀctīs
  */
 @SuppressWarnings({ "NonAsciiCharacters", "SpellCheckingInspection" })
 @Singleton @DependsOn("NūntiusConditōrīĀctīs")
-public final class ConditōrĀctīs extends ConditōrMultiplicibus <Āctum> {
+public final class ConditōrĀctīs extends ConditōrMultiplicibus <Āctus> {
   @Nullable private static ConditōrĀctīs īnstantia = null;
 
   /**
@@ -42,25 +42,25 @@ public final class ConditōrĀctīs extends ConditōrMultiplicibus <Āctum> {
 
   /**
    * {@inheritDoc}
-   * @return Rem novam classis {@link Āctum}. <br>
+   * @return Rem novam classis {@link Āctus}. <br>
    * Modus hid valōrem {@code null} refert sī nōn valet valor aliquis rēs haec continet.
    */
   @Override @Nullable
-  public Āctum condam( ) {
+  public Āctus condam( ) {
     if (ObjectUtils.allNotNull(modus, vōx, tempus, numerālis, persōna, numerālis)
      && StringUtils.isNoneBlank(fundāmen, scrīptiō)) {
-      final Āctum hoc = Āctum.conditōr().fundāmen(fundāmen).modus(modus).vōx(vōx).tempus(tempus)
+      final Āctus hoc = Āctus.conditōr().fundāmen(fundāmen).modus(modus).vōx(vōx).tempus(tempus)
                              .numerālis(numerālis).persōna(persōna).scrīptiō(scrīptiō).condam();
       if(Objects.isNull(hoc)) {
-        nūntius.moneō(Āctum.class.getSimpleName().replace("um", "ī"),
+        nūntius.moneō(Āctus.class.getSimpleName().replace("um", "ī"),
                       StringUtils.firstNonBlank(fundāmen, scrīptiō), "prōductiō fōrmae nūllae prōcessit.");
         return null;
       } else {
-        nūntius.certiōrō(Āctum.class.getSimpleName(), scrīptiō, "fīnītur prōdūcere.");
+        nūntius.certiōrō(Āctus.class.getSimpleName(), scrīptiō, "fīnītur prōdūcere.");
         return hoc;
       }
     } else {
-      nūntius.moneō(Āctum.class.getSimpleName().replace("um", "ī"),
+      nūntius.moneō(Āctus.class.getSimpleName().replace("um", "ī"),
                     StringUtils.firstNonBlank(fundāmen, scrīptiō), "prōductiō fōrmae nūllae prōcessit.");
       return null;
     }
@@ -84,7 +84,7 @@ public final class ConditōrĀctīs extends ConditōrMultiplicibus <Āctum> {
       case "persōna" -> persōna = Persōna.dēfīniam(dēscrīptor);
       case "fundāmen" -> fundāmen = dēscrīptor.trim();
       default -> {
-        nūntius.moneō(Āctum.class.getSimpleName().replace("um", "ō"),
+        nūntius.moneō(Āctus.class.getSimpleName().replace("um", "ō"),
                       "Attribūta inopīnāta est ūsa:", nōmen, "est", dēscrīptor);
         return;
       }
