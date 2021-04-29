@@ -100,7 +100,7 @@ public final class InventorĀctīs extends Inventor <Āctus> {
       nūntius.garriō("Quastiōnī adiēcī conditiōnem novam:",
                      Modus.class.getSimpleName(), "est", illud);
     } else {
-      nūntius.moneō(Āctus.class.getSimpleName().replace("um", "ō"),
+      nūntius.moneō(Āctus.class.getSimpleName().replace("us", "ō"),
                     "inquīsītiō inopīnāta est ūsa:", illud);
     }
   }

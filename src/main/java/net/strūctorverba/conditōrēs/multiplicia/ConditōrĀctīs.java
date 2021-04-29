@@ -52,7 +52,7 @@ public final class ConditōrĀctīs extends ConditōrMultiplicibus <Āctus> {
       final Āctus hoc = Āctus.conditōr().fundāmen(fundāmen).modus(modus).vōx(vōx).tempus(tempus)
                              .numerālis(numerālis).persōna(persōna).scrīptiō(scrīptiō).condam();
       if(Objects.isNull(hoc)) {
-        nūntius.moneō(Āctus.class.getSimpleName().replace("um", "ī"),
+        nūntius.moneō(Āctus.class.getSimpleName().replace("us", "ī"),
                       StringUtils.firstNonBlank(fundāmen, scrīptiō), "prōductiō fōrmae nūllae prōcessit.");
         return null;
       } else {
@@ -60,7 +60,7 @@ public final class ConditōrĀctīs extends ConditōrMultiplicibus <Āctus> {
         return hoc;
       }
     } else {
-      nūntius.moneō(Āctus.class.getSimpleName().replace("um", "ī"),
+      nūntius.moneō(Āctus.class.getSimpleName().replace("us", "ī"),
                     StringUtils.firstNonBlank(fundāmen, scrīptiō), "prōductiō fōrmae nūllae prōcessit.");
       return null;
     }
@@ -84,7 +84,7 @@ public final class ConditōrĀctīs extends ConditōrMultiplicibus <Āctus> {
       case "persōna" -> persōna = Persōna.dēfīniam(dēscrīptor);
       case "fundāmen" -> fundāmen = dēscrīptor.trim();
       default -> {
-        nūntius.moneō(Āctus.class.getSimpleName().replace("um", "ō"),
+        nūntius.moneō(Āctus.class.getSimpleName().replace("us", "ō"),
                       "Attribūta inopīnāta est ūsa:", nōmen, "est", dēscrīptor);
         return;
       }
