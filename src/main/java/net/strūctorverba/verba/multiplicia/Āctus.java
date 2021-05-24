@@ -15,7 +15,7 @@ import java.util.Objects;
 
 /**
  * Classis {@link Āctus} repraesentat nōmina ut coniectēris. <br>
- * Rēs classis huius catēgoriam {@link Catēgoria#ĀCTUM} ūtuntur et cōnservāta sunt in scrīniō <a href="{@docRoot}/../src/main/resources">auxiliārēs</a>/ācta.
+ * Rēs classis huius catēgoriam {@link Catēgoria#ĀCTUS} ūtuntur et cōnservāta sunt in scrīniō <a href="{@docRoot}/../src/main/resources">auxiliārēs</a>/āctī.
  * @see LēctorMultiplicibus.LēctorĀctīs
  * @see TenorMultiplicibus.TenorĀctīs
  * @see InventorĀctīs
@@ -68,7 +68,7 @@ public final class Āctus extends VerbumMultiplex <Āctus> {
   private Āctus(@NotNull final Modus modus, @NotNull final Vōx vōx, @NotNull final Tempus tempus,
                 @NotNull final Numerālis numerālis, @NotNull final Persōna persōna,
                 @NotNull final String fundāmen, @NotNull final String scrīptiō) {
-    super(Catēgoria.ĀCTUM, fundāmen, Ūtilitās.minusculāsScrībō(scrīptiō));
+    super(Catēgoria.ĀCTUS, fundāmen, Ūtilitās.minusculāsScrībō(scrīptiō));
     this.modus = modus;
     this.vōx = vōx;
     this.tempus = tempus;

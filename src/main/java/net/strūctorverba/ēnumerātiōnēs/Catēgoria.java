@@ -29,7 +29,7 @@ public enum Catēgoria {
   /**
    * Valor hic classem {@link Āctus} respondet.
    */
-  ĀCTUM("āctī"),
+  ĀCTUS("āctī"),
 
   /**
    * Valor hic classem {@link Adverbium} respondet.

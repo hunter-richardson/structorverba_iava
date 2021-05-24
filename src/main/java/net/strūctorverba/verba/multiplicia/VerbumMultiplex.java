@@ -54,6 +54,10 @@ public abstract class VerbumMultiplex <Hoc extends Verbum <Hoc>> extends Verbum 
     return this;
   }
 
+  @NotNull public Encliticum encliticum() {
+    return encliticum;
+  }
+
   /**
    * @return Repraesentātiōnem scrīpta reī huius. <br>
    * Valōrem {@link #encliticum} valōrī {@link #scrīptiō} addit.

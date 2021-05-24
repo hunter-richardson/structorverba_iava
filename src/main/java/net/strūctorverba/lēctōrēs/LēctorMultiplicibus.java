@@ -227,7 +227,7 @@ public abstract class LēctorMultiplicibus <Hoc extends VerbumMultiplex <Hoc>> e
 
   /**
    * Classis {@link LēctorĀctīs} est vās classis {@link Lēctor} classī {@link Āctus}.
-   * @see Catēgoria#ĀCTUM
+   * @see Catēgoria#ĀCTUS
    * @see TenorMultiplicibus.TenorĀctīs
    * @see Nūntius.NūntiusLēctōrīĀctīs
    * @see InventorĀctīs
@@ -244,7 +244,7 @@ public abstract class LēctorMultiplicibus <Hoc extends VerbumMultiplex <Hoc>> e
       () -> ObjectUtils.firstNonNull(īnstantia, īnstantia = new LēctorĀctīs());
 
     private LēctorĀctīs( ) {
-      super(Catēgoria.ĀCTUM, Nūntius.NūntiusLēctōrīĀctīs.fac,
+      super(Catēgoria.ĀCTUS, Nūntius.NūntiusLēctōrīĀctīs.fac,
             TenorMultiplicibus.TenorĀctīs.fac, InventorĀctīs.fac);
       nūntius.plūrimumGarriō("Factus sum");
     }

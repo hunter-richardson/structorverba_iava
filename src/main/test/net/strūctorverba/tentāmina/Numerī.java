@@ -4,7 +4,7 @@ import lombok.Getter;
 import lombok.experimental.Accessors;
 import net.strūctorverba.mīscella.*;
 import net.strūctorverba.verba.VerbumSimplex;
-import org.apache.commons.lang3.StringUtils;
+import org.apache.commons.lang3.Range;
 import org.jetbrains.annotations.NotNull;
 import org.junit.jupiter.api.*;
 
@@ -22,79 +22,24 @@ public class Numerī extends Omnum {
 
   private final @NotNull String XLII_SCRĪPTIŌ = "XLII";
 
-  @NotNull private String perpetram(final short numerusPrīmus, final short numerusSecundus, final char operātiō) {
-    final String labor = switch (operātiō) {
-                           case '+' -> "additiōnis";
-                           case '-' -> "subtractiōnis";
-                           case '*' -> "multiplicātiōnis";
-                           case '/' -> "dīvīsiōnis";
-                           case '%' -> "mānsiōnis";
-                           default -> StringUtils.EMPTY;
-                         };
-    if(StringUtils.isNotBlank(labor)) {
-      final short expectātus = switch (operātiō) {
-                                 case '+' -> (short) (numerusPrīmus + numerusSecundus);
-                                 case '-' -> (short) (numerusPrīmus - numerusSecundus);
-                                 case '*' -> (short) (numerusPrīmus * numerusSecundus);
-                                 case '/' -> (short) (numerusPrīmus / numerusSecundus);
-                                 case '%' -> (short) (numerusPrīmus % numerusSecundus);
-                                 default -> (short) 0;
-                               };
-
-      final VerbumSimplex.Numerus prīmus = strūctor().numerus(numerusPrīmus);
-      Assertions.assertNotNull(prīmus, String.format("Prōductō %s est relicta prōductiō numerī %d.", labor, numerusPrīmus));
-      final VerbumSimplex.Numerus secundus = strūctor().numerus(numerusSecundus);
-      Assertions.assertNotNull(secundus, String.format("Prōductō %s est relicta prōductiō numerī %d.", labor, numerusSecundus));
-
-      final VerbumSimplex.Numerus ēventus = switch (operātiō) {
-                                              case '+' -> prīmus.addō(secundus);
-                                              case '-' -> prīmus.subtrahō(secundus);
-                                              case '*' -> prīmus.multiplicō(secundus);
-                                              case '/' -> prīmus.dīvidō(secundus);
-                                              case '%' -> prīmus.maneō(secundus);
-                                              default -> null;
-                                            };
-
-      Assertions.assertNotNull(ēventus, String.format("Prōductō %s est relicta prōductiō numerī %d.", labor, expectātus));
-      Assertions.assertTrue(StringUtils.isNotBlank(ēventus.toString()),
-                            String.format("Numerum prōductum %s vacat.", labor));
-
-      return String.format("%d = %s%n%d = %s%n%d %c %d = %d = %s%n",
-                           numerusPrīmus, prīmus, numerusSecundus, secundus,
-                           numerusPrīmus, operātiō, numerusSecundus, expectātus, ēventus);
-    } else {
-      return StringUtils.EMPTY;
-    }
-  }
-
   /**
-   * Modus hic conversiōnem ā numerō reī classis {@link VerbumSimplex.Numerus} tentat. <br>
-   * Scrīptiunculam {@code 42 = XLII} prōdūcat.
+   * Modus hic conversiōnem ā numerō reī classis {@link VerbumSimplex.Numerus} tentat. <br> Scrīptiunculam {@code 42 =
+   * XLII} prōdūcat.
    */
   @Test @Order(1)
-  public void conversiōnis() {
-    final VerbumSimplex.Numerus numerus = strūctor().numerus(XLII_NUMERUM);
-    Assertions.assertNotNull(numerus, String.format("Prōductā conversiōnis est relicta prōductiō numerī %s.", XLII_NUMERUM));
-    Assertions.assertTrue(StringUtils.isNotBlank(numerus.toString()), "Numerum prōductum conversiōnis vacat.");
-    Assertions.assertEquals(XLII_SCRĪPTIŌ, numerus.toString(),
-                            "Numerum prōductum conversiōnis expectātiōne eius differt.");
-
-    System.out.printf("%d = %s%n", XLII_NUMERUM, numerus);
+  public void conversiōnis( ) {
+    System.out.println(new Tentāmen.TentāmenNumerāleConversiōnis(XLII_SCRĪPTIŌ, XLII_NUMERUM)
+                         .exsequar(strūctor().numerus(XLII_NUMERUM)));
   }
 
   /**
-   * Modus hic reversiōnem ā rē classis {@link VerbumSimplex.Numerus} numerō tentat. <br>
-   * Scrīptiunculam {@code XLII = 42} prōdūcat.
+   * Modus hic reversiōnem ā rē classis {@link VerbumSimplex.Numerus} numerō tentat. <br> Scrīptiunculam {@code XLII =
+   * 42} prōdūcat.
    */
   @Test @Order(2)
-  public void reversiōnis() {
-    final VerbumSimplex.Numerus numerus = strūctor().numerus(XLII_SCRĪPTIŌ);
-    Assertions.assertNotNull(numerus, String.format("Prōductō reversiōnis est relicta prōductiō numerī %s.",
-                                                    XLII_SCRĪPTIŌ));
-    Assertions.assertEquals(XLII_NUMERUM, numerus.numerus,
-                            "Numerum prōductum reversiōnis expectātiōne eius differt.");
-
-    System.out.printf("%s = %d%n", XLII_SCRĪPTIŌ, numerus.numerus);
+  public void reversiōnis( ) {
+    System.out.println(new Tentāmen.TentāmenNumerāleReversiōnis(XLII_NUMERUM, XLII_SCRĪPTIŌ)
+                         .exsequar(strūctor().numerus(XLII_SCRĪPTIŌ)));
   }
 
   /**
@@ -102,63 +47,64 @@ public class Numerī extends Omnum {
    * Scrīptiunculās et {@code 42 = XLII} et {@code XLII = 42} dē numerō nescītō inter I et MMMCMXCIX prōdūcat.
    */
   @Test @Order(3)
-  public void combīnātiōnis() {
+  public void combīnātiōnis( ) {
     final short numerus = (short) Math.round((NUMERUM_MAXIMUM + 1) * Math.random() + 1);
-
-    final VerbumSimplex.Numerus prīmus = strūctor().numerus(numerus);
-    Assertions.assertNotNull(prīmus, String.format("Prōductō combīnātiōnis est relicta prōductiō numerī %d.", numerus));
-    Assertions.assertTrue(StringUtils.isNotBlank(prīmus.toString()), "Numerum prōductum combīnātiōnis vacat.");
-
-    final VerbumSimplex.Numerus secundus = strūctor().numerus(prīmus.toString());
-    Assertions.assertNotNull(secundus, String.format("Prōductō combīnātiōnis est relicta prōductiō numerī %d.", numerus));
-    Assertions.assertEquals(numerus, secundus.numerus,
-                            "Numerum prōductum combīnātiōnis expectātiōne eius differt.");
-
-    System.out.printf("%s = %d%n%d = %s%n", prīmus, numerus, numerus, secundus);
+    System.out.println(new Tentāmen.TentāmenNumerāleCombīnātiōnis(numerus)
+                         .exsequar(strūctor().numerus(numerus)));
   }
 
   /**
-   * Modus hic additiōnem rērum duārum classis {@link VerbumSimplex.Numerus}. <br>
-   * Scrīptiunculās et {@code 17 = XVIII} et {@code 3 = III} et {@code 17 + 3 = 20 = XX} prōdūcat.
+   * Modus hic additiōnem rērum duārum classis {@link VerbumSimplex.Numerus}. <br> Scrīptiunculās et {@code 17 = XVIII}
+   * et {@code 3 = III} et {@code 17 + 3 = 20 = XX} prōdūcat.
    */
   @Test @Order(4)
-  public void additiōnis() {
-    System.out.println(perpetram((short) 17, (short) 3, '+'));
+  public void additiōnis( ) {
+    @NotNull final Range <Short> range = Range.between((short) 3, (short) 17);
+    System.out.println(new Tentāmen.TentāmenMathēmaticum(range, '+')
+                         .exsequar(strūctor().numerus(range.getMaximum())));
   }
 
   /**
-   * Modus hic subtractiōnem rērum duārum classis {@link VerbumSimplex.Numerus}. <br>
-   * Scrīptiunculās et {@code 12 = XII} et {@code 7 = VII} et {@code 12 - 7 = 5 = V} prōdūcat.
+   * Modus hic subtractiōnem rērum duārum classis {@link VerbumSimplex.Numerus}. <br> Scrīptiunculās et {@code 12 = XII}
+   * et {@code 7 = VII} et {@code 12 - 7 = 5 = V} prōdūcat.
    */
   @Test @Order(5)
-  public void subtractiōnis() {
-    System.out.println(perpetram((short) 12,(short) 7, '-'));
+  public void subtractiōnis( ) {
+    @NotNull final Range <Short> range = Range.between((short) 7, (short) 12);
+    System.out.println(new Tentāmen.TentāmenMathēmaticum(range, '-')
+                         .exsequar(strūctor().numerus(range.getMaximum())));
   }
 
   /**
-   * Modus hic multiplicātiōnem rērum duārum classis {@link VerbumSimplex.Numerus}. <br>
-   * Scrīptiunculās et {@code 3 = III} et {@code 2 = II} et {@code 3 * 2 = 6 = VI} prōdūcat.
+   * Modus hic multiplicātiōnem rērum duārum classis {@link VerbumSimplex.Numerus}. <br> Scrīptiunculās et {@code 3 =
+   * III} et {@code 2 = II} et {@code 3 * 2 = 6 = VI} prōdūcat.
    */
   @Test @Order(6)
-  public void multiplicātiōnis() {
-    System.out.println(perpetram((short) 3,(short) 2, '*'));
+  public void multiplicātiōnis( ) {
+    @NotNull final Range <Short> range = Range.between((short) 2, (short) 3);
+    System.out.println(new Tentāmen.TentāmenMathēmaticum(range, '*')
+                         .exsequar(strūctor().numerus(range.getMaximum())));
   }
 
   /**
-   * Modus hic dīvīsiōnem rērum duārum classis {@link VerbumSimplex.Numerus}. <br>
-   * Scrīptiunculās et {@code 18 = XVII} et {@code 6 = VI} et {@code 18 / 6 = 3 = III} prōdūcat.
+   * Modus hic dīvīsiōnem rērum duārum classis {@link VerbumSimplex.Numerus}. <br> Scrīptiunculās et {@code 18 = XVII}
+   * et {@code 6 = VI} et {@code 18 / 6 = 3 = III} prōdūcat.
    */
   @Test @Order(7)
-  public void dīvīsiōnis() {
-    System.out.println(perpetram((short) 18,(short) 6, '/'));
+  public void dīvīsiōnis( ) {
+    @NotNull final Range <Short> range = Range.between((short) 6, (short) 18);
+    System.out.println(new Tentāmen.TentāmenMathēmaticum(range, '/')
+                         .exsequar(strūctor().numerus(range.getMaximum())));
   }
 
   /**
-   * Modus hic mānsiōnem rērum duārum classis {@link VerbumSimplex.Numerus}. <br>
-   * Scrīptiunculās et {@code 12 = XII} et {@code 9 = IX} et {@code 12 % 9 = 3 = III} prōdūcat.
+   * Modus hic mānsiōnem rērum duārum classis {@link VerbumSimplex.Numerus}. <br> Scrīptiunculās et {@code 12 = XII} et
+   * {@code 9 = IX} et {@code 12 % 9 = 3 = III} prōdūcat.
    */
   @Test @Order(8)
-  public void mānsiōnis() {
-    System.out.println(perpetram((short) 12,(short) 9, '%'));
+  public void mānsiōnis( ) {
+    @NotNull final Range <Short> range = Range.between((short) 9, (short) 12);
+    System.out.println(new Tentāmen.TentāmenMathēmaticum(range, '%')
+                         .exsequar(strūctor().numerus(range.getMaximum())));
   }
 }

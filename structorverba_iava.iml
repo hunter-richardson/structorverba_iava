@@ -6,8 +6,8 @@
       <sourceFolder url="file://$MODULE_DIR$/src/main/java" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/main/resources" type="java-resource" />
       <sourceFolder url="file://$MODULE_DIR$/src/main/test" isTestSource="true" />
-      <excludeFolder url="file://$MODULE_DIR$/logs" />
       <excludeFolder url="file://$MODULE_DIR$/docs" />
+      <excludeFolder url="file://$MODULE_DIR$/logs" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
@@ -39,5 +39,6 @@
     <orderEntry type="library" exported="" name="org.apache.commons:commons-collections4:4.4" level="project" />
     <orderEntry type="library" exported="" name="org.apache.maven.plugins:maven-compiler-plugin:3.8.1" level="project" />
     <orderEntry type="library" exported="" name="com.github.chaosfirebolt.converter:roman-numeral-converter:1.0.0" level="project" />
+    <orderEntry type="library" name="org.projectlombok:lombok:1.18.20" level="project" />
   </component>
 </module>

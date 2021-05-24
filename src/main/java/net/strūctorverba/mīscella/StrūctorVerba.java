@@ -45,7 +45,7 @@ public final class StrūctorVerba extends Omnum {
   @NotNull private final LēctorMultiplicibus.LēctorPrōnōminibus prōnōmina = LēctorMultiplicibus.LēctorPrōnōminibus.fac.get();
 
   @Getter(value = AccessLevel.PUBLIC, lazy = true) @Accessors(fluent = true)
-  @NotNull private final LēctorMultiplicibus.LēctorĀctīs ācta = LēctorMultiplicibus.LēctorĀctīs.fac.get();
+  @NotNull private final LēctorMultiplicibus.LēctorĀctīs āctī = LēctorMultiplicibus.LēctorĀctīs.fac.get();
 
   @Getter(value = AccessLevel.PUBLIC, lazy = true) @Accessors(fluent = true)
   @NotNull private final LēctorMultiplicibus.LēctorNōminibus nōmina = LēctorMultiplicibus.LēctorNōminibus.fac.get();
@@ -98,7 +98,7 @@ public final class StrūctorVerba extends Omnum {
       return (Hoc) (switch (catēgoria) {
                       case ADIECTĪVUM -> adiectīva();
                       case ADVERBIUM -> adverbia();
-                      case ĀCTUM -> ācta();
+                      case ĀCTUS -> āctī();
                       case NŌMEN -> nōmina();
                       case PRŌNŌMEN -> prōnōmina();
                       default -> null;
