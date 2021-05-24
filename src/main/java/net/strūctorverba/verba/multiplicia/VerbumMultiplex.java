@@ -54,6 +54,9 @@ public abstract class VerbumMultiplex <Hoc extends Verbum <Hoc>> extends Verbum 
     return this;
   }
 
+  /**
+   * @return {@link #encliticum}
+   */
   @NotNull public Encliticum encliticum( ) {
     return encliticum;
   }

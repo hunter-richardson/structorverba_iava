@@ -13,7 +13,7 @@ import org.junit.jupiter.api.*;
  */
 @SuppressWarnings({ "NonAsciiCharacters", "SpellCheckingInspection", "FieldCanBeLocal" })
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
-public class Numerī extends Omnum {
+final class Numerī extends Omnum {
   @NotNull @Getter(lazy = true) @Accessors(fluent = true)
   private final StrūctorVerba strūctor = StrūctorVerba.fac.get();
 

@@ -12,7 +12,7 @@ import org.junit.Test;
  * Classis {@link Exempla} exemplum singulum ūsūfructuāriīs iam dēmōnstrat. <br> Exempla additīcia posthāc scrībantur.
  */
 @SuppressWarnings({ "NonAsciiCharacters", "SpellCheckingInspection", "FieldCanBeLocal" })
-public class Exempla extends Omnum {
+public final class Exempla extends Omnum {
   @NotNull @Getter(lazy = true) @Accessors(fluent = true)
   private final StrūctorVerba strūctor = StrūctorVerba.fac.get();
 

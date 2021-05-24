@@ -8,22 +8,48 @@ import org.jetbrains.annotations.*;
 
 import java.util.function.BiFunction;
 
+/**
+ * Classis {@link Tentāmen} tentāmen magnum iterābile repraesentat. Rēs omnis classis huius invocātiōnēs plūrēs
+ * continet.
+ * @param <Illud> Classis reī tentandī
+ * @param <Hoc>   Classis datī exspectandī
+ */
 @SuppressWarnings({ "NonAsciiCharacters", "SpellCheckingInspection" })
-public abstract class Tentāmen <Illud, Hoc> {
+abstract class Tentāmen <Illud, Hoc> {
   @NotNull private final BiFunction <Hoc, Illud, String> exsecūtiō;
   @NotNull private final Hoc                             hoc;
 
+  /**
+   * Officium hoc cōnstrūctōrem reī classis huius perpetrat.
+   * @param hc    valor datum exspectandum continet.
+   * @param exsct modus operātiōnēs dēfīnit reī classis {@link Illud} perfungī.
+   */
   protected Tentāmen(@NotNull final Hoc hc, @NotNull final BiFunction <Hoc, Illud, String> exsct) {
     hoc = hc;
     exsecūtiō = exsct;
   }
 
+  /**
+   * Modus operātiōnēs praefinītās perfungitur. <br> Errōrem <a href="http://junit.sourceforge.net/junit3.8.1/javadoc/junit/framework/AssertionFailedError.html">AssertionFailedError</a>
+   * cum errōre scrīptō iacit sī tentāmen aborītur
+   * @param illud Rēs classis {@link Illud} cui operātiōnēs praefinītās perfungitur
+   * @return Scrīptula quae successum indicat
+   */
   public String exsequar(@Nullable final Illud illud) {
     return exsecūtiō.apply(hoc, illud);
   }
 
-  public static final class TentāmenVerbāle extends Tentāmen <Verba, String> {
-    protected TentāmenVerbāle(@NotNull final String data, @NotNull final String nōmen) {
+  /**
+   * Classis est classem {@link Tentāmen} ūtitur rēs classum {@link Verba} et <a href="https://docs.oracle.com/javase/10/docs/api/java/lang/String.html">String</a>
+   * comparāre.
+   */
+  static final class TentāmenVerbāle extends Tentāmen <Verba, String> {
+    /**
+     * Officium hoc cōnstrūctōrem reī classis huius perpetrat.
+     * @param data  valor datum exspectandum continet.
+     * @param nōmen valor hoc inter multa identificat.
+     */
+    public TentāmenVerbāle(@NotNull final String data, @NotNull final String nōmen) {
       super(data, (hoc, illud) -> {
         new Tentāmiculum.TentāmiculumReī(illud)
           .existat(String.format("Verba prōducta %s vacant.", nōmen));
@@ -45,8 +71,17 @@ public abstract class Tentāmen <Illud, Hoc> {
     }
   }
 
-  public static final class TentāmenNumerāleConversiōnis extends Tentāmen <VerbumSimplex.Numerus, String> {
-    protected TentāmenNumerāleConversiōnis(@NotNull final String data, final short numerus) {
+  /**
+   * Classis est classem {@link Tentāmen} ūtitur rēs classum {@link VerbumSimplex.Numerus} et <a
+   * href="https://docs.oracle.com/javase/10/docs/api/java/lang/String.html">String</a> comparāre.
+   */
+  static final class TentāmenNumerāleConversiōnis extends Tentāmen <VerbumSimplex.Numerus, String> {
+    /**
+     * Officium hoc cōnstrūctōrem reī classis huius perpetrat.
+     * @param data    valor datum exspectandum continet.
+     * @param numerus valor hoc inter multa identificat.
+     */
+    public TentāmenNumerāleConversiōnis(@NotNull final String data, final short numerus) {
       super(data, (hoc, illud) -> {
         new Tentāmiculum.TentāmiculumReī(illud)
           .existat(String.format("Prōductā conversiōnis est relicta prōductiō numerī %d.", numerus));
@@ -59,8 +94,17 @@ public abstract class Tentāmen <Illud, Hoc> {
     }
   }
 
-  public static final class TentāmenNumerāleReversiōnis extends Tentāmen <VerbumSimplex.Numerus, Short> {
-    protected TentāmenNumerāleReversiōnis(@NotNull final Short numerus, @NotNull final String scrīptiō) {
+  /**
+   * Classis est classem {@link Tentāmen} ūtitur rēs classum {@link VerbumSimplex.Numerus} et <a
+   * href="https://docs.oracle.com/javase/10/docs/api/java/lang/Short.html">Short</a> comparāre.
+   */
+  static final class TentāmenNumerāleReversiōnis extends Tentāmen <VerbumSimplex.Numerus, Short> {
+    /**
+     * Officium hoc cōnstrūctōrem reī classis huius perpetrat.
+     * @param numerus  valor datum exspectandum continet.
+     * @param scrīptiō valor hoc inter multa identificat.
+     */
+    public TentāmenNumerāleReversiōnis(@NotNull final Short numerus, @NotNull final String scrīptiō) {
       super(numerus, (hoc, illud) -> {
         new Tentāmiculum.TentāmiculumReī(illud)
           .existat(String.format("Prōductā reversiōnis est relicta prōductiō numerī %s.", scrīptiō));
@@ -71,9 +115,17 @@ public abstract class Tentāmen <Illud, Hoc> {
     }
   }
 
+  /**
+   * Classis est classem {@link Tentāmen} classēs {@link TentāmenNumerāleConversiōnis} et {@link
+   * TentāmenNumerāleReversiōnis} combīnat.
+   */
   @SuppressWarnings("ConstantConditions")
-  public static final class TentāmenNumerāleCombīnātiōnis extends Tentāmen <VerbumSimplex.Numerus, Short> {
-    protected TentāmenNumerāleCombīnātiōnis(@NotNull final Short numerus) {
+  static final class TentāmenNumerāleCombīnātiōnis extends Tentāmen <VerbumSimplex.Numerus, Short> {
+    /**
+     * Officium hoc cōnstrūctōrem reī classis huius perpetrat.
+     * @param numerus valor datum exspectandum continet.
+     */
+    public TentāmenNumerāleCombīnātiōnis(@NotNull final Short numerus) {
       super(numerus, (hoc, prīmus) -> {
         new Tentāmiculum.TentāmiculumReī(prīmus)
           .existat(String.format("Prōductā conversiōnis est relicta prōductiō numerī %d.", numerus));
@@ -92,9 +144,17 @@ public abstract class Tentāmen <Illud, Hoc> {
     }
   }
 
+  /**
+   * Classis {@link TentāmenMathēmaticum} tentāmen operātiōnī mathēmaticae dēfīnit.
+   */
   @SuppressWarnings("ConstantConditions")
-  public static final class TentāmenMathēmaticum extends Tentāmen <VerbumSimplex.Numerus, Range <Short>> {
-    protected TentāmenMathēmaticum(@NotNull final Range <Short> range, final char operātiō) {
+  static final class TentāmenMathēmaticum extends Tentāmen <VerbumSimplex.Numerus, Range <Short>> {
+    /**
+     * Officium hoc cōnstrūctōrem reī classis huius perpetrat.
+     * @param range    valor datum exspectandum continet.
+     * @param operātiō valor operātiōnem mathēmaticam identificat.
+     */
+    public TentāmenMathēmaticum(@NotNull final Range <Short> range, final char operātiō) {
       super(range, (hoc, prīmus) -> {
         new Tentāmiculum.TentāmiculumReī(prīmus)
           .existat(String.format("Prōductā %s est relicta prōductiō numerī %d.", operātiō, range.getMaximum()));
