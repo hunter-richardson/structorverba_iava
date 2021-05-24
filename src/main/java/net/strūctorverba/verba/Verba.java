@@ -24,8 +24,8 @@ public final class Verba extends Omnum {
    * @param verbum valōrem addendum
    * @return Rem haec
    */
-  @NotNull public Verba addō(@NotNull final Verbum<?> verbum) {
-    if(StringUtils.isNotBlank(verbum.toString())) {
+  @NotNull public Verba addō(@NotNull final Verbum <?> verbum) {
+    if (StringUtils.isNotBlank(verbum.toString())) {
       seriēs.add(verbum);
     }
 
@@ -37,8 +37,8 @@ public final class Verba extends Omnum {
    * @param ōrdō seriēs valōrum addendōrum
    * @return Rem haec
    */
-  @NotNull public Verba addō(@Nullable final Verbum<@Nullable ?>... ōrdō) {
-    if(Objects.nonNull(ōrdō)) {
+  @NotNull public Verba addō(@Nullable final Verbum <@Nullable ?>... ōrdō) {
+    if (Objects.nonNull(ōrdō)) {
       seriēs.addAll(Arrays.stream(ōrdō)
                           .filter(Objects::nonNull)
                           .filter(verbum -> StringUtils.isNotBlank(verbum.toString()))
@@ -67,7 +67,7 @@ public final class Verba extends Omnum {
    * @return Rem haec
    */
   @NotNull public Verba superaddō(@Nullable final Verba... ōrdō) {
-    if(ōrdō != null) {
+    if (ōrdō != null) {
       Arrays.stream(ōrdō)
             .filter(Objects::nonNull)
             .filter(verbum -> StringUtils.isNotBlank(verbum.toString()))
@@ -78,8 +78,7 @@ public final class Verba extends Omnum {
   }
 
   /**
-   * @return Repraesentātiōnem scrīpta reī huius. <br>
-   * Rēs omnēs contentās cōnsit et cum spatiīs distinet.
+   * @return Repraesentātiōnem scrīpta reī huius. <br> Rēs omnēs contentās cōnsit et cum spatiīs distinet.
    */
   @NotNull @Override
   public String toString( ) {

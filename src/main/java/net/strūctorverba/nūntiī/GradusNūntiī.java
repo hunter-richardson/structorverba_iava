@@ -71,34 +71,9 @@ enum GradusNūntiī {
    * Valor hic comparātiōnī rērum ēnumerātiōnis huius licet.
    */
   public final int praecellentia;
-
-  GradusNūntiī(@NotNull final Level gressus) {
-    praecellentia = gressus.intValue();
-  }
-
   /**
-   * Modus hic comparātiōnī intrā rēs ēnumerātiōnis huius classisque <a href="https://docs.oracle.com/javase/7/docs/api/java/util/logging/Level.html">Level</a> licet.
-   * @param gressus valor tentandus
-   * @return rēs ēnumerātiōnis huius quam valor {@code gressus} quadrat
-   */
-  @NotNull public static GradusNūntiī gradior(@NotNull final Level gressus) {
-    return Stream.of(values())
-                 .filter(gradus -> gradus.gressus.get().intValue() == gressus.intValue())
-                 .findFirst().orElse(OMNIS);
-  }
-
-  /**
-   * Modus hic comparātiōnī intrā rēs ēnumerātiōnis huius licet.
-   * @param prīmus valor tentandus
-   * @param secundus valor tentandus
-   * @return valor aut positīvus sī valor {@code prīmus} est maior quam valor {@code secundus} aut negātīvus sī valor {@code prīmus} est minor quam valor {@code secundus} aut nūllus sī valor {@code prīmus} est aequālis valōrī {@code secundus}
-   */
-  public static int compareTo(@NotNull final GradusNūntiī prīmus, @NotNull final GradusNūntiī secundus) {
-    return Integer.compare(prīmus.praecellentia, secundus.praecellentia);
-  }
-
-  /**
-   * Modus hic societās intrā rēs ēnumerātiōnēs et huius et <a href="https://docs.oracle.com/javase/7/docs/api/java/util/logging/Level.html">Level</a> dēmōnstrat.
+   * Modus hic societās intrā rēs ēnumerātiōnēs et huius et <a href="https://docs.oracle.com/javase/7/docs/api/java/util/logging/Level.html">Level</a>
+   * dēmōnstrat.
    * <ul>
    *   <li>Valor <a href="https://docs.oracle.com/javase/7/docs/api/java/util/logging/Level.html#OFF">OFF</a> valōrem {@link #INERS} cōnsociat.</li>
    *   <li>Valor <a href="https://docs.oracle.com/javase/7/docs/api/java/util/logging/Level.html#SEVERE">SEVERE</a> valōrem {@link #GRAVIS} cōnsociat.</li>
@@ -111,15 +86,43 @@ enum GradusNūntiī {
    *   <li>Valor <a href="https://docs.oracle.com/javase/7/docs/api/java/util/logging/Level.html#ALL">ALL</a> valōrem {@link #OMNIS} cōnsociat.</li>
    * </ul>
    */
-  @NotNull public final Supplier<@NotNull Level> gressus = () -> switch (this) {
-                                                                   case INERS -> Level.OFF;
-                                                                   case GRAVIS -> Level.SEVERE;
-                                                                   case PRAEMONITŌRIUS -> Level.WARNING;
-                                                                   case ĪNFŌRMĀTĪVUS -> Level.INFO;
-                                                                   case PRAEGRESSŪRUS -> Level.CONFIG;
-                                                                   case SCRŪTĀNS -> Level.FINE;
-                                                                   case SCRŪTĀNTIOR -> Level.FINER;
-                                                                   case SCRŪTĀNTISSIMUS -> Level.FINEST;
-                                                                   case OMNIS -> Level.ALL;
-                                                                 };
+  @NotNull public final Supplier <@NotNull Level> gressus = ( ) -> switch (this) {
+    case INERS -> Level.OFF;
+    case GRAVIS -> Level.SEVERE;
+    case PRAEMONITŌRIUS -> Level.WARNING;
+    case ĪNFŌRMĀTĪVUS -> Level.INFO;
+    case PRAEGRESSŪRUS -> Level.CONFIG;
+    case SCRŪTĀNS -> Level.FINE;
+    case SCRŪTĀNTIOR -> Level.FINER;
+    case SCRŪTĀNTISSIMUS -> Level.FINEST;
+    case OMNIS -> Level.ALL;
+  };
+
+  GradusNūntiī(@NotNull final Level gressus) {
+    praecellentia = gressus.intValue();
+  }
+
+  /**
+   * Modus hic comparātiōnī intrā rēs ēnumerātiōnis huius classisque <a href="https://docs.oracle.com/javase/7/docs/api/java/util/logging/Level.html">Level</a>
+   * licet.
+   * @param gressus valor tentandus
+   * @return rēs ēnumerātiōnis huius quam valor {@code gressus} quadrat
+   */
+  @NotNull public static GradusNūntiī gradior(@NotNull final Level gressus) {
+    return Stream.of(values())
+                 .filter(gradus -> gradus.gressus.get().intValue() == gressus.intValue())
+                 .findFirst().orElse(OMNIS);
+  }
+
+  /**
+   * Modus hic comparātiōnī intrā rēs ēnumerātiōnis huius licet.
+   * @param prīmus   valor tentandus
+   * @param secundus valor tentandus
+   * @return valor aut positīvus sī valor {@code prīmus} est maior quam valor {@code secundus} aut negātīvus sī valor
+   *   {@code prīmus} est minor quam valor {@code secundus} aut nūllus sī valor {@code prīmus} est aequālis valōrī
+   *   {@code secundus}
+   */
+  public static int compareTo(@NotNull final GradusNūntiī prīmus, @NotNull final GradusNūntiī secundus) {
+    return Integer.compare(prīmus.praecellentia, secundus.praecellentia);
+  }
 }

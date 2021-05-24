@@ -1,15 +1,16 @@
 package net.strūctorverba.conditōrēs.multiplicia;
 
-import net.strūctorverba.nūntiī.Nūntius;
 import net.strūctorverba.conditōrēs.Conditōr;
+import net.strūctorverba.nūntiī.Nūntius;
 import net.strūctorverba.verba.multiplicia.VerbumMultiplex;
 import org.apache.commons.lang3.StringUtils;
-import org.jetbrains.annotations.*;
+import org.jetbrains.annotations.NotNull;
 
 import java.util.function.Supplier;
 
 /**
- * Classis {@link ConditōrMultiplicibus} est vās classis {@link Conditōr} classibus omnibus quibus classem {@link VerbumMultiplex} extendit.
+ * Classis {@link ConditōrMultiplicibus} est vās classis {@link Conditōr} classibus omnibus quibus classem {@link
+ * VerbumMultiplex} extendit.
  * @param <Hoc> classis extenta classis {@link VerbumMultiplex}
  */
 @SuppressWarnings({ "NonAsciiCharacters", "SpellCheckingInspection" })
@@ -38,7 +39,7 @@ public abstract class ConditōrMultiplicibus <Hoc extends VerbumMultiplex <Hoc>>
 
   /**
    * Modus hic valōrem cognitum per valōre {@code nōmen} cum valōre {@code dēscrīptor} indit.
-   * @param nōmen valōrem cognendum
+   * @param nōmen      valōrem cognendum
    * @param dēscrīptor valōrem indendum
    */
   public abstract void allegō(@NotNull final String nōmen, @NotNull final String dēscrīptor);

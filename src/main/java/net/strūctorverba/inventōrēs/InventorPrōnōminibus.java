@@ -2,7 +2,7 @@ package net.strūctorverba.inventōrēs;
 
 import net.strūctorverba.lēctōrēs.LēctorMultiplicibus;
 import net.strūctorverba.nūntiī.Nūntius;
-import net.strūctorverba.verba.multiplicia.*;
+import net.strūctorverba.verba.multiplicia.Prōnōmen;
 import net.strūctorverba.ēnumerātiōnēs.*;
 import org.apache.commons.lang3.ObjectUtils;
 import org.jetbrains.annotations.*;
@@ -26,7 +26,7 @@ public final class InventorPrōnōminibus extends Inventor <Prōnōmen> {
    * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
    */
   @NotNull public static final Supplier <InventorPrōnōminibus> fac =
-    () -> ObjectUtils.firstNonNull(īnstantia, īnstantia = new InventorPrōnōminibus());
+    ( ) -> ObjectUtils.firstNonNull(īnstantia, īnstantia = new InventorPrōnōminibus());
 
   @NotNull private Speciālitās speciālitās = Speciālitās.NŪLLUM;
   @NotNull private Genus       genus       = Genus.NŪLLUM;
@@ -39,7 +39,8 @@ public final class InventorPrōnōminibus extends Inventor <Prōnōmen> {
   }
 
   /**
-   * @return Quaestiōnem quam rēs classis {@link LēctorMultiplicibus .LēctorPrōnōminibus} ūtātur rēs classis {@link Prōnōmen} percōlere
+   * @return Quaestiōnem quam rēs classis {@link LēctorMultiplicibus .LēctorPrōnōminibus} ūtātur rēs classis {@link
+   *   Prōnōmen} percōlere
    * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Predicate.html">Prediate</a>
    */
   @Override @NotNull
@@ -73,7 +74,7 @@ public final class InventorPrōnōminibus extends Inventor <Prōnōmen> {
    * @see Numerālis#ut(Enum)
    * @see Cāsus#ut(Enum)
    */
-  @Override protected void allegam(@NotNull final Enum<@NotNull ?> illud) {
+  @Override protected void allegam(@NotNull final Enum <@NotNull ?> illud) {
     if (illud instanceof Speciālitās) {
       speciālitās = Speciālitās.ut(illud);
       nūntius.garriō("Quastiōnī adiēcī conditiōnem novam:",

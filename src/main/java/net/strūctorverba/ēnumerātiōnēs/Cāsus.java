@@ -13,8 +13,8 @@ import java.util.stream.Stream;
 @SuppressWarnings({ "NonAsciiCharacters", "SpellCheckingInspection", "unused" })
 public enum Cāsus {
   /**
-   * Valor hic ūtātur sī ūsūfructuāriī valōrem validum nōn dēnotat. <br>
-   * Sōlum scrīnium <a href="{@docRoot}/../src/main/resources">auxiliārēs</a> ūtitur indicāre quod verbum hoc dērigitur.
+   * Valor hic ūtātur sī ūsūfructuāriī valōrem validum nōn dēnotat. <br> Sōlum scrīnium <a
+   * href="{@docRoot}/../src/main/resources">auxiliārēs</a> ūtitur indicāre quod verbum hoc dērigitur.
    */
   DĒRĒCTUS(StringUtils.EMPTY),
 
@@ -72,8 +72,8 @@ public enum Cāsus {
   }
 
   /**
-   * Modus hic rem ēnumerātiō {@link Cāsus} ā parametrō dēsignātō advenit. <br>
-   * Valōrem {@link #DĒRĒCTUS} refert sī nihil valōrem {@code scrīptiō} quadrat.
+   * Modus hic rem ēnumerātiō {@link Cāsus} ā parametrō dēsignātō advenit. <br> Valōrem {@link #DĒRĒCTUS} refert sī
+   * nihil valōrem {@code scrīptiō} quadrat.
    * @param scrīptiō valōrem {@link #scrīptiō} indicat.
    * @return Rem ēnumerātiō {@link Cāsus} quod parametrum dēsignātum quadrat.
    */
@@ -84,11 +84,11 @@ public enum Cāsus {
   }
 
   /**
-   * @return {@code illud} sī valōrem ēnumerātiō {@link Cāsus} quadrat; {@link #DĒRĒCTUS} aliter.
    * @param illud valor tentandus.
+   * @return {@code illud} sī valōrem ēnumerātiō {@link Cāsus} quadrat; {@link #DĒRĒCTUS} aliter.
    */
   @SuppressWarnings("ConstantConditions")
-  @NotNull public static Cāsus ut(@NotNull final Enum<@NotNull ?> illud) {
+  @NotNull public static Cāsus ut(@NotNull final Enum <@NotNull ?> illud) {
     final Cāsus hoc = (Cāsus) illud;
     return hoc.equals(illud) ? hoc
                              : DĒRĒCTUS;

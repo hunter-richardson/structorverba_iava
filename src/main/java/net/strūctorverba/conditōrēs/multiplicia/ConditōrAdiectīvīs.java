@@ -28,7 +28,7 @@ public final class ConditōrAdiectīvīs extends ConditōrMultiplicibus <Adiect�
    * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
    */
   @NotNull public static final Supplier <ConditōrAdiectīvīs> fac =
-    () -> ObjectUtils.firstNonNull(īnstantia, īnstantia = new ConditōrAdiectīvīs());
+    ( ) -> ObjectUtils.firstNonNull(īnstantia, īnstantia = new ConditōrAdiectīvīs());
 
   @NotNull private Speciālitās speciālitās = Speciālitās.NŪLLUM;
   @NotNull private Genus       genus       = Genus.NŪLLUM;
@@ -43,16 +43,16 @@ public final class ConditōrAdiectīvīs extends ConditōrMultiplicibus <Adiect�
 
   /**
    * {@inheritDoc}
-   * @return Rem novam classis {@link Adiectīvum}. <br>
-   * Modus hid valōrem {@code null} refert sī nōn valet valor aliquis rēs haec continet.
+   * @return Rem novam classis {@link Adiectīvum}. <br> Modus hid valōrem {@code null} refert sī nōn valet valor aliquis
+   *   rēs haec continet.
    */
   @Override @Nullable
   public Adiectīvum condam( ) {
     if (ObjectUtils.allNotNull(speciālitās, genus, cāsus, numerālis, gradus)
-     && StringUtils.isNoneBlank(fundāmen, scrīptiō)) {
+        && StringUtils.isNoneBlank(fundāmen, scrīptiō)) {
       final Adiectīvum hoc = Adiectīvum.conditōr().fundāmen(fundāmen).speciālitās(speciālitās).genus(genus)
                                        .cāsus(cāsus).numerālis(numerālis).gradus(gradus).scrīptiō(scrīptiō).condam();
-      if(Objects.isNull(hoc)) {
+      if (Objects.isNull(hoc)) {
         nūntius.moneō(Adiectīvum.class.getSimpleName().replace("um", "ī"),
                       StringUtils.firstNonBlank(fundāmen, scrīptiō), "prōductiō fōrmae nūllae prōcessit.");
         return null;

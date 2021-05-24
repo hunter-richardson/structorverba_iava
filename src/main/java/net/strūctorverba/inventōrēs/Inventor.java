@@ -11,7 +11,8 @@ import java.util.Arrays;
 import java.util.function.*;
 
 /**
- * Classis {@link Inventor} cōlit rēs classis {@link VerbumMultiplex} quās rēs classis {@link TenorMultiplicibus} referat.
+ * Classis {@link Inventor} cōlit rēs classis {@link VerbumMultiplex} quās rēs classis {@link TenorMultiplicibus}
+ * referat.
  * @param <Hoc> classis extenta classis {@link VerbumMultiplex}
  */
 @SuppressWarnings({ "NonAsciiCharacters", "SpellCheckingInspection" })

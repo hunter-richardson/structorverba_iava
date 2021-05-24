@@ -13,8 +13,8 @@ import java.util.stream.Stream;
 @SuppressWarnings({ "NonAsciiCharacters", "SpellCheckingInspection", "unused" })
 public enum Speciālitās {
   /**
-   * Valor hic ūtātur sī ūsūfructuāriī valōrem validum nōn dēnotat. <br>
-   * Numquam scrīnium <a href="{@docRoot}/../src/main/resources">auxiliārēs</a> ūtitur.
+   * Valor hic ūtātur sī ūsūfructuāriī valōrem validum nōn dēnotat. <br> Numquam scrīnium <a
+   * href="{@docRoot}/../src/main/resources">auxiliārēs</a> ūtitur.
    */
   NŪLLUM(StringUtils.EMPTY),
 
@@ -42,8 +42,8 @@ public enum Speciālitās {
   }
 
   /**
-   * Modus hic rem ēnumerātiō {@link Speciālitās} ā parametrō dēsignātō advenit. <br>
-   * Valōrem {@link #NŪLLUM} refert sī nihil valōrem {@code scrīptiō} quadrat.
+   * Modus hic rem ēnumerātiō {@link Speciālitās} ā parametrō dēsignātō advenit. <br> Valōrem {@link #NŪLLUM} refert sī
+   * nihil valōrem {@code scrīptiō} quadrat.
    * @param scrīptiō valōrem {@link #scrīptiō} indicat.
    * @return Rem ēnumerātiō {@link Speciālitās} quod parametrum dēsignātum quadrat.
    */
@@ -54,11 +54,11 @@ public enum Speciālitās {
   }
 
   /**
-   * @return {@code illud} sī valōrem ēnumerātiō {@link Speciālitās} quadrat; {@link #NŪLLUM} aliter.
    * @param illud valor tentandus.
+   * @return {@code illud} sī valōrem ēnumerātiō {@link Speciālitās} quadrat; {@link #NŪLLUM} aliter.
    */
   @SuppressWarnings("ConstantConditions")
-  @NotNull public static Speciālitās ut(@NotNull final Enum<@NotNull ?> illud) {
+  @NotNull public static Speciālitās ut(@NotNull final Enum <@NotNull ?> illud) {
     final Speciālitās hoc = (Speciālitās) illud;
     return hoc.equals(illud) ? hoc
                              : NŪLLUM;

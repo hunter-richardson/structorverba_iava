@@ -13,7 +13,8 @@ import java.util.*;
 import java.util.function.*;
 
 /**
- * Classis {@link Tenor} data lēcta ā rēbus classis {@link Lēctor} sēliget et reī aptae classis {@link Conditōr} praebet.
+ * Classis {@link Tenor} data lēcta ā rēbus classis {@link Lēctor} sēliget et reī aptae classis {@link Conditōr}
+ * praebet.
  * @param <Hoc> classis extenta classis {@link Verbum}
  * @see Omnum
  * @see <a href="https://docs.oracle.com/javase/7/docs/api/org/xml/sax/helpers/DefaultHandler.html">DefaultHandler</a>
@@ -24,16 +25,15 @@ public abstract class Tenor <Hoc extends Verbum <Hoc>> extends DefaultHandler {
    * Valor hic est vās classis {@link Nūntius} classī extentī huius.
    */
   @NotNull protected final Nūntius nūntius;
-
-  /**
-   * Valor hic rem classis {@link Hoc} tenet et cōnstruenum ā reī aptae classis {@link Conditōr} et praebendum ad rē classis {@link Lēctor}.
-   */
-  @Nullable protected Hoc hoc;
-
   /**
    * Valor hic seriem rērum classis {@link Hoc} praebendārum ad rē classis {@link LēctorMultiplicibus} tenet.
    */
   protected final @NotNull List <@NotNull Hoc> seriēs = new ArrayList <>();
+  /**
+   * Valor hic rem classis {@link Hoc} tenet et cōnstruenum ā reī aptae classis {@link Conditōr} et praebendum ad rē
+   * classis {@link Lēctor}.
+   */
+  @Nullable protected Hoc hoc;
 
   /**
    * Officium hoc cōnstrūctōrem reī classis huius perpetrat.
@@ -62,15 +62,16 @@ public abstract class Tenor <Hoc extends Verbum <Hoc>> extends DefaultHandler {
   }
 
   /**
-   * Modus hic fōrmam scrīptam prōvīsam ā rē classis <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.xml/org/xml/sax/XMLReader.html">XMLReader</a> prōcēdit.
+   * Modus hic fōrmam scrīptam prōvīsam ā rē classis <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.xml/org/xml/sax/XMLReader.html">XMLReader</a>
+   * prōcēdit.
    * @param litterae litterae prōvīsae
-   * @param incepta positiō incepta in valōrem {@code litterae}
+   * @param incepta  positiō incepta in valōrem {@code litterae}
    * @param longitia longitia valōris {@code litterae} ūtendī
    * @see <a href="https://docs.oracle.com/javase/7/docs/api/org/xml/sax/helpers/DefaultHandler.html#characters(char[],%20int,%20int)">DefaultHandler.characters</a>
    */
   @Override public final void characters(final char[] litterae, final int incepta, final int longitia) {
     String fōrma = new String(litterae, incepta, longitia).trim();
-    if(StringUtils.isNotBlank(fōrma)) {
+    if (StringUtils.isNotBlank(fōrma)) {
       nūntius.garriō("Verbum illud est", fōrma);
       scrībō(fōrma);
       fīniam();

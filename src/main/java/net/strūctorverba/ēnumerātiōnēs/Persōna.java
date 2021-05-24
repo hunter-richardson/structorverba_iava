@@ -13,8 +13,8 @@ import java.util.stream.Stream;
 @SuppressWarnings({ "NonAsciiCharacters", "SpellCheckingInspection", "unused" })
 public enum Persōna {
   /**
-   * Valor hic ūtātur sī ūsūfructuāriī valōrem validum nōn dēnotat. <br>
-   * Sōlum scrīnium <a href="{@docRoot}/../src/main/resources">auxiliārēs</a> ūtitur indicāre quod verbum hoc persōnam nōn pertinet.
+   * Valor hic ūtātur sī ūsūfructuāriī valōrem validum nōn dēnotat. <br> Sōlum scrīnium <a
+   * href="{@docRoot}/../src/main/resources">auxiliārēs</a> ūtitur indicāre quod verbum hoc persōnam nōn pertinet.
    */
   NŪLLA(StringUtils.EMPTY),
 
@@ -47,8 +47,8 @@ public enum Persōna {
   }
 
   /**
-   * Modus hic rem ēnumerātiō {@link Persōna} ā parametrō dēsignātō advenit. <br>
-   * Valōrem {@link #NŪLLA} refert sī nihil valōrem {@code scrīptiō} quadrat.
+   * Modus hic rem ēnumerātiō {@link Persōna} ā parametrō dēsignātō advenit. <br> Valōrem {@link #NŪLLA} refert sī nihil
+   * valōrem {@code scrīptiō} quadrat.
    * @param scrīptiō valōrem {@link #scrīptiō} indicat.
    * @return Rem ēnumerātiō {@link Persōna} quod parametrum dēsignātum quadrat.
    */
@@ -59,11 +59,11 @@ public enum Persōna {
   }
 
   /**
-   * @return {@code illud} sī valōrem ēnumerātiō {@link Persōna} quadrat; {@link #NŪLLA} aliter.
    * @param illud valor tentandus.
+   * @return {@code illud} sī valōrem ēnumerātiō {@link Persōna} quadrat; {@link #NŪLLA} aliter.
    */
   @SuppressWarnings("ConstantConditions")
-  @NotNull public static Persōna ut(@NotNull final Enum<@NotNull ?> illud) {
+  @NotNull public static Persōna ut(@NotNull final Enum <@NotNull ?> illud) {
     final Persōna hoc = (Persōna) illud;
     return hoc.equals(illud) ? hoc
                              : NŪLLA;

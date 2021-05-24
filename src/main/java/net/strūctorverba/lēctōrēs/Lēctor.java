@@ -14,7 +14,8 @@ import java.nio.file.Path;
 import java.util.function.Supplier;
 
 /**
- * Classis {@link Lēctor} colliget data ā scāpō XML intrā scrīnium <a href="{@docRoot}/../src/main/resources">auxiliārēs</a> ut rēbus classis {@link Verbum} scrībat.
+ * Classis {@link Lēctor} colliget data ā scāpō XML intrā scrīnium <a href="{@docRoot}/../src/main/resources">auxiliārēs</a>
+ * ut rēbus classis {@link Verbum} scrībat.
  * @param <Hoc> classis extenta classis {@link Verbum}
  */
 @SuppressWarnings({ "NonAsciiCharacters", "SpellCheckingInspection" })
@@ -30,8 +31,8 @@ public abstract class Lēctor <Hoc extends Verbum <Hoc>> extends Omnum {
   @NotNull protected final Tenor <Hoc> tenor;
 
   /**
-   * Valor hic extēnsiōnem classī {@link Verbum} dēsignat scrībere.
-   * {@link Catēgoria#scrīptiō} quoque nōminātur scrīnium intrā quō scāpum eius cōnservātum est.
+   * Valor hic extēnsiōnem classī {@link Verbum} dēsignat scrībere. {@link Catēgoria#scrīptiō} quoque nōminātur scrīnium
+   * intrā quō scāpum eius cōnservātum est.
    * @see Catēgoria
    */
   @NotNull protected final Catēgoria catēgoria;
@@ -39,8 +40,8 @@ public abstract class Lēctor <Hoc extends Verbum <Hoc>> extends Omnum {
   /**
    * Officium hoc cōnstrūctōrem reī classis huius perpetrat.
    * @param ctgr valōrem {@link #catēgoria} indicat.
-   * @param nts valōrem {@link #nūntius} supplet.
-   * @param tnr valōrem {@link #tenor} supplet.
+   * @param nts  valōrem {@link #nūntius} supplet.
+   * @param tnr  valōrem {@link #tenor} supplet.
    */
   protected Lēctor(@NotNull final Catēgoria ctgr, @NotNull final Supplier <@NotNull ? extends Nūntius> nts,
                    @NotNull final Supplier <@NotNull ? extends Tenor <Hoc>> tnr) {
@@ -62,7 +63,7 @@ public abstract class Lēctor <Hoc extends Verbum <Hoc>> extends Omnum {
    */
   protected final void legam(@NotNull final String verbum) {
     final Path nōmen = Path.of(catēgoria.scrīptiō, String.format("%s.xml", Ūtilitās.minusculāsScrībō(verbum)));
-    if(quaerō(verbum)) {
+    if (quaerō(verbum)) {
       try {
         final XMLReader lēctor = SAXParserFactory.newInstance().newSAXParser().getXMLReader();
         lēctor.setContentHandler(tenor);

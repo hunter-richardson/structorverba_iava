@@ -11,12 +11,13 @@ import javax.ejb.*;
 import java.util.function.Supplier;
 
 /**
- * Classis {@link LēctorSimplicibus} est vās classis {@link Lēctor} classibus omnibus quibus classem {@link VerbumSimplex} extendit.
+ * Classis {@link LēctorSimplicibus} est vās classis {@link Lēctor} classibus omnibus quibus classem {@link
+ * VerbumSimplex} extendit.
  * @param <Hoc> classis extenta classis {@link VerbumSimplex}
  * @see TenorSimplicibus
  */
 @SuppressWarnings({ "NonAsciiCharacters", "SpellCheckingInspection" })
-public abstract class LēctorSimplicibus<Hoc extends VerbumSimplex<Hoc>> extends Lēctor<Hoc> {
+public abstract class LēctorSimplicibus <Hoc extends VerbumSimplex <Hoc>> extends Lēctor <Hoc> {
   /**
    * Officium hoc cōnstrūctōrem reī classis huius perpetrat.
    * @param ctgr valōrem {@link Lēctor#catēgoria} indicat.
@@ -30,15 +31,16 @@ public abstract class LēctorSimplicibus<Hoc extends VerbumSimplex<Hoc>> extends
   }
 
   /**
-   * Modus hic ūtitur modus {@link Lēctor#legam(String)} ut rem classis {@link Hoc} ā valōre {@link Lēctor#tenor} adveniat.
+   * Modus hic ūtitur modus {@link Lēctor#legam(String)} ut rem classis {@link Hoc} ā valōre {@link Lēctor#tenor}
+   * adveniat.
    * @param verbum fundāmen verbō quod rēs haec cōnābitur advenīre
-   * @return Rem classis {@link Hoc} quam valōrem {@code verbum} quadrat. <br>
-   * Modus hic valōrem {@code null} refert sī nihil quadrat valōrem {@code verbum}.
+   * @return Rem classis {@link Hoc} quam valōrem {@code verbum} quadrat. <br> Modus hic valōrem {@code null} refert sī
+   *   nihil quadrat valōrem {@code verbum}.
    */
   @Nullable public final Hoc adveniam(@NotNull final String verbum) {
     legam(verbum);
     final Hoc hoc = tenor.referō();
-    if(hoc == null) {
+    if (hoc == null) {
       nūntius.moneō("Nihil advenī");
       return null;
     } else {
@@ -53,7 +55,8 @@ public abstract class LēctorSimplicibus<Hoc extends VerbumSimplex<Hoc>> extends
    * @see TenorSimplicibus.TenorConiūnctivīs
    * @see Nūntius.NūntiusLēctōrīConiūnctīvīs
    */
-  @Singleton @DependsOn({ "TenorConiūnctivīs", "NūntiusLēctōrīConiūnctīvīs" })
+  @Singleton
+  @DependsOn({ "TenorConiūnctivīs", "NūntiusLēctōrīConiūnctīvīs" })
   public static final class LēctorConiūnctīvīs extends LēctorSimplicibus <VerbumSimplex.Coniūnctīvum> {
     @Nullable private static LēctorConiūnctīvīs īnstantia = null;
 
@@ -62,7 +65,7 @@ public abstract class LēctorSimplicibus<Hoc extends VerbumSimplex<Hoc>> extends
      * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
      */
     @NotNull public static final Supplier <LēctorConiūnctīvīs> fac =
-      () -> ObjectUtils.firstNonNull(īnstantia, īnstantia = new LēctorConiūnctīvīs());
+      ( ) -> ObjectUtils.firstNonNull(īnstantia, īnstantia = new LēctorConiūnctīvīs());
 
     private LēctorConiūnctīvīs( ) {
       super(Catēgoria.CONIŪNCTĪVUM, Nūntius.NūntiusLēctōrīConiūnctīvīs.fac, TenorSimplicibus.TenorConiūnctivīs.fac);
@@ -76,7 +79,8 @@ public abstract class LēctorSimplicibus<Hoc extends VerbumSimplex<Hoc>> extends
    * @see TenorSimplicibus.TenorInteriectiōnibus
    * @see Nūntius.NūntiusLēctōrīInteriectiōnibus
    */
-  @Singleton @DependsOn({ "TenorConiūnctivīs", "NūntiusLēctōrīConiūnctīvīs" })
+  @Singleton
+  @DependsOn({ "TenorConiūnctivīs", "NūntiusLēctōrīConiūnctīvīs" })
   public static final class LēctorInteriectiōnibus extends LēctorSimplicibus <VerbumSimplex.Interiectiō> {
     @Nullable private static LēctorInteriectiōnibus īnstantia = null;
 
@@ -85,7 +89,7 @@ public abstract class LēctorSimplicibus<Hoc extends VerbumSimplex<Hoc>> extends
      * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
      */
     @NotNull public static final Supplier <LēctorInteriectiōnibus> fac =
-      () -> ObjectUtils.firstNonNull(īnstantia, īnstantia = new LēctorInteriectiōnibus());
+      ( ) -> ObjectUtils.firstNonNull(īnstantia, īnstantia = new LēctorInteriectiōnibus());
 
     private LēctorInteriectiōnibus( ) {
       super(Catēgoria.INTERIECTIŌ, Nūntius.NūntiusTenōrīInteriectiōnibus.fac,

@@ -9,9 +9,9 @@ import net.strūctorverba.ēnumerātiōnēs.*;
 import org.jetbrains.annotations.NotNull;
 
 /**
- * Classis {@link VerbumMultiplex} repraesentat verbum aliquem quod fōrmās multās habet. <br>
- * Rēs classis {@link Inventor} rēbus classis huius adsunt et ūtilissimae sunt rēs classis huius percōlere. <br>
- * Discrīmina prīmōria inter classibus hāc et {@link VerbumSimplex} sunt huius valōrēs {@link #scrīptiō} et {@link #encliticum}.
+ * Classis {@link VerbumMultiplex} repraesentat verbum aliquem quod fōrmās multās habet. <br> Rēs classis {@link
+ * Inventor} rēbus classis huius adsunt et ūtilissimae sunt rēs classis huius percōlere. <br> Discrīmina prīmōria inter
+ * classibus hāc et {@link VerbumSimplex} sunt huius valōrēs {@link #scrīptiō} et {@link #encliticum}.
  * @param <Hoc> Tabellā hāc classis {@link Hoc} extēnsiōnem aptam datīs petītīs repraesentat.
  * @see LēctorMultiplicibus
  * @see TenorMultiplicibus
@@ -32,8 +32,8 @@ public abstract class VerbumMultiplex <Hoc extends Verbum <Hoc>> extends Verbum 
 
   /**
    * Officium hoc cōnstrūctōrem reī classis huius perpetrat.
-   * @param ctgr valōrem {@link Verbum#catēgoria} indicat.
-   * @param fdmn valōrem {@link Verbum#fundāmen} indicat.
+   * @param ctgr  valōrem {@link Verbum#catēgoria} indicat.
+   * @param fdmn  valōrem {@link Verbum#fundāmen} indicat.
    * @param scrpt valōrem {@link #scrīptiō} indicat.
    */
   protected VerbumMultiplex(@NotNull final Catēgoria ctgr, @NotNull final String fdmn, @NotNull final String scrpt) {
@@ -54,13 +54,12 @@ public abstract class VerbumMultiplex <Hoc extends Verbum <Hoc>> extends Verbum 
     return this;
   }
 
-  @NotNull public Encliticum encliticum() {
+  @NotNull public Encliticum encliticum( ) {
     return encliticum;
   }
 
   /**
-   * @return Repraesentātiōnem scrīpta reī huius. <br>
-   * Valōrem {@link #encliticum} valōrī {@link #scrīptiō} addit.
+   * @return Repraesentātiōnem scrīpta reī huius. <br> Valōrem {@link #encliticum} valōrī {@link #scrīptiō} addit.
    */
   @Override @NotNull
   public String toString( ) {

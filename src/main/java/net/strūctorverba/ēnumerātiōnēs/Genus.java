@@ -13,8 +13,8 @@ import java.util.stream.Stream;
 @SuppressWarnings({ "NonAsciiCharacters", "SpellCheckingInspection", "unused" })
 public enum Genus {
   /**
-   * Valor hic ūtātur sī ūsūfructuāriī valōrem validum nōn dēnotat. <br>
-   * Sōlum scrīnium <a href="{@docRoot}/../src/main/resources">auxiliārēs</a> ūtitur indicāre quod verbum hoc nōn ingenerat.
+   * Valor hic ūtātur sī ūsūfructuāriī valōrem validum nōn dēnotat. <br> Sōlum scrīnium <a
+   * href="{@docRoot}/../src/main/resources">auxiliārēs</a> ūtitur indicāre quod verbum hoc nōn ingenerat.
    */
   NŪLLUM(StringUtils.EMPTY),
 
@@ -47,8 +47,8 @@ public enum Genus {
   }
 
   /**
-   * Modus hic rem ēnumerātiō {@link Genus} ā parametrō dēsignātō advenit. <br>
-   * Valōrem {@link #NŪLLUM} refert sī nihil valōrem {@code scrīptiō} quadrat.
+   * Modus hic rem ēnumerātiō {@link Genus} ā parametrō dēsignātō advenit. <br> Valōrem {@link #NŪLLUM} refert sī nihil
+   * valōrem {@code scrīptiō} quadrat.
    * @param scrīptiō valōrem {@link #scrīptiō} indicat.
    * @return Rem ēnumerātiō {@link Genus} quod parametrum dēsignātum quadrat.
    */
@@ -59,11 +59,11 @@ public enum Genus {
   }
 
   /**
-   * @return {@code illud} sī valōrem ēnumerātiō {@link Genus} quadrat; {@link #NŪLLUM} aliter.
    * @param illud valor tentandus.
+   * @return {@code illud} sī valōrem ēnumerātiō {@link Genus} quadrat; {@link #NŪLLUM} aliter.
    */
   @SuppressWarnings("ConstantConditions")
-  @NotNull public static Genus ut(@NotNull final Enum<@NotNull ?> illud) {
+  @NotNull public static Genus ut(@NotNull final Enum <@NotNull ?> illud) {
     final Genus hoc = (Genus) illud;
     return hoc.equals(illud) ? hoc
                              : NŪLLUM;

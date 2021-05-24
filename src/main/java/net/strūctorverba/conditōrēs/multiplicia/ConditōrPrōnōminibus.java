@@ -3,7 +3,7 @@ package net.strūctorverba.conditōrēs.multiplicia;
 import net.strūctorverba.conditōrēs.Conditōr;
 import net.strūctorverba.nūntiī.Nūntius;
 import net.strūctorverba.verba.Verbum;
-import net.strūctorverba.verba.multiplicia.*;
+import net.strūctorverba.verba.multiplicia.Prōnōmen;
 import net.strūctorverba.ēnumerātiōnēs.*;
 import org.apache.commons.lang3.*;
 import org.jetbrains.annotations.*;
@@ -28,7 +28,7 @@ public final class ConditōrPrōnōminibus extends ConditōrMultiplicibus <Prōn
    * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
    */
   @NotNull public static final Supplier <ConditōrPrōnōminibus> fac =
-    () -> ObjectUtils.firstNonNull(īnstantia, īnstantia = new ConditōrPrōnōminibus());
+    ( ) -> ObjectUtils.firstNonNull(īnstantia, īnstantia = new ConditōrPrōnōminibus());
 
   @NotNull private Speciālitās speciālitās = Speciālitās.NŪLLUM;
   @NotNull private Genus       genus       = Genus.NŪLLUM;
@@ -42,16 +42,16 @@ public final class ConditōrPrōnōminibus extends ConditōrMultiplicibus <Prōn
 
   /**
    * {@inheritDoc}
-   * @return Rem novam classis {@link Prōnōmen}. <br>
-   * Modus hid valōrem {@code null} refert sī nōn valet valor aliquis rēs haec continet.
+   * @return Rem novam classis {@link Prōnōmen}. <br> Modus hid valōrem {@code null} refert sī nōn valet valor aliquis
+   *   rēs haec continet.
    */
   @Override @Nullable
   public Prōnōmen condam( ) {
     if (ObjectUtils.allNotNull(speciālitās, genus, cāsus, numerālis)
-     && StringUtils.isNoneBlank(fundāmen, scrīptiō)) {
+        && StringUtils.isNoneBlank(fundāmen, scrīptiō)) {
       final Prōnōmen hoc = Prōnōmen.conditōr().fundāmen(fundāmen).speciālitās(speciālitās).genus(genus)
                                    .cāsus(cāsus).numerālis(numerālis).scrīptiō(scrīptiō).condam();
-      if(Objects.isNull(hoc)) {
+      if (Objects.isNull(hoc)) {
         nūntius.moneō(Prōnōmen.class.getSimpleName().replace("en", "inis"),
                       StringUtils.firstNonBlank(fundāmen, scrīptiō), "prōductiō fōrmae nūllae prōcessit.");
         return null;

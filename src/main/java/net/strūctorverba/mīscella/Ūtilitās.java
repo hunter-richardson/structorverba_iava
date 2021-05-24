@@ -12,12 +12,11 @@ import java.util.*;
  */
 @SuppressWarnings({ "NonAsciiCharacters", "SpellCheckingInspection" })
 public final class Ūtilitās extends Omnum {
-  @NotNull private static final Locale LOCULUS  = Locale.forLanguageTag("Latn");
-
   /**
    * Valor hic litterās omnēs ūsās per programmāte StrūctorVerba tenet.
    */
   @NotNull public static final Charset LITTERAE = StandardCharsets.UTF_8;
+  @NotNull private static final Locale LOCULUS = Locale.forLanguageTag("Latn");
 
   /**
    * @param haec valor scrībendus
@@ -59,7 +58,7 @@ public final class Ūtilitās extends Omnum {
    */
   @NotNull public static String auxilior(@NotNull final String... locus) {
     final String[] plūs = Arrays.copyOfRange(locus, 1, locus.length);
-    return Path.of("src", "main", "resources", Path.of(locus[0], plūs).toString())
+    return Path.of("src", "main", "resources", Path.of(locus[ 0 ], plūs).toString())
                .toAbsolutePath().toString();
   }
 }

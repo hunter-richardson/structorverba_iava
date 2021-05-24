@@ -5,7 +5,8 @@ import org.apache.commons.lang3.StringUtils;
 import org.jetbrains.annotations.NotNull;
 
 /**
- * Ēnumerātiō haec <a href="https://en.wiktionary.org/wiki/Category:Latin_clitics">encliticum</a> subiūnctum reī omnī classis {@link VerbumMultiplex} dēsignat.
+ * Ēnumerātiō haec <a href="https://en.wiktionary.org/wiki/Category:Latin_clitics">encliticum</a> subiūnctum reī omnī
+ * classis {@link VerbumMultiplex} dēsignat.
  * @see VerbumMultiplex
  */
 @SuppressWarnings({ "NonAsciiCharacters", "SpellCheckingInspection", "unused" })

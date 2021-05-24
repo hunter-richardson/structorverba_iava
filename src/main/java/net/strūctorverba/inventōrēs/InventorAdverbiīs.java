@@ -3,7 +3,7 @@ package net.strūctorverba.inventōrēs;
 import net.strūctorverba.lēctōrēs.LēctorMultiplicibus;
 import net.strūctorverba.nūntiī.Nūntius;
 import net.strūctorverba.verba.multiplicia.Adverbium;
-import net.strūctorverba.ēnumerātiōnēs.*;
+import net.strūctorverba.ēnumerātiōnēs.Gradus;
 import org.apache.commons.lang3.ObjectUtils;
 import org.jetbrains.annotations.*;
 
@@ -18,7 +18,7 @@ import java.util.function.*;
 @SuppressWarnings({ "NonAsciiCharacters", "SpellCheckingInspection" })
 @Singleton
 @DependsOn("NūntiusInventōrīAdverbiīs")
-public class InventorAdverbiīs extends Inventor<Adverbium> {
+public class InventorAdverbiīs extends Inventor <Adverbium> {
   @Nullable private static InventorAdverbiīs īnstantia = null;
 
   /**
@@ -26,7 +26,7 @@ public class InventorAdverbiīs extends Inventor<Adverbium> {
    * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
    */
   @NotNull public static final Supplier <InventorAdverbiīs> fac =
-    () -> ObjectUtils.firstNonNull(īnstantia, īnstantia = new InventorAdverbiīs());
+    ( ) -> ObjectUtils.firstNonNull(īnstantia, īnstantia = new InventorAdverbiīs());
 
   @NotNull private Gradus gradus = Gradus.NŪLLUS;
 
@@ -36,8 +36,8 @@ public class InventorAdverbiīs extends Inventor<Adverbium> {
   }
 
   /**
-   * @return Quaestiōnem quam rēs classis {@link LēctorMultiplicibus.LēctorAdverbiīs} ūtātur rēs classis {@link Adverbium}
-   *   percōlere
+   * @return Quaestiōnem quam rēs classis {@link LēctorMultiplicibus.LēctorAdverbiīs} ūtātur rēs classis {@link
+   *   Adverbium} percōlere
    * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Predicate.html">Prediate</a>
    */
   @Override @NotNull

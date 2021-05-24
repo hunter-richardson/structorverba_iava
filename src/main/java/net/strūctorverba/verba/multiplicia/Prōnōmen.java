@@ -11,8 +11,8 @@ import net.strūctorverba.ēnumerātiōnēs.*;
 import org.jetbrains.annotations.NotNull;
 
 /**
- * Classis {@link Prōnōmen} repraesentat prōnōmina ut coniectēris. <br>
- * Rēs classis huius catēgoriam {@link Catēgoria#PRŌNŌMEN} ūtuntur et cōnservāta sunt in scrīniō <a href="{@docRoot}/../src/main/resources">auxiliārēs</a>/prōnōmina.
+ * Classis {@link Prōnōmen} repraesentat prōnōmina ut coniectēris. <br> Rēs classis huius catēgoriam {@link
+ * Catēgoria#PRŌNŌMEN} ūtuntur et cōnservāta sunt in scrīniō <a href="{@docRoot}/../src/main/resources">auxiliārēs</a>/prōnōmina.
  * @see LēctorMultiplicibus.LēctorPrōnōminibus
  * @see TenorMultiplicibus.TenorPrōnōminibus
  * @see InventorPrōnōminibus

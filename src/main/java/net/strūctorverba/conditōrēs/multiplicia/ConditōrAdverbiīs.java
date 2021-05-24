@@ -4,7 +4,7 @@ import net.strūctorverba.conditōrēs.Conditōr;
 import net.strūctorverba.nūntiī.Nūntius;
 import net.strūctorverba.verba.Verbum;
 import net.strūctorverba.verba.multiplicia.*;
-import net.strūctorverba.ēnumerātiōnēs.*;
+import net.strūctorverba.ēnumerātiōnēs.Gradus;
 import org.apache.commons.lang3.*;
 import org.jetbrains.annotations.*;
 
@@ -17,7 +17,7 @@ import java.util.function.Supplier;
  * @see Nūntius.NūntiusConditōrīAdverbiīs
  */
 @SuppressWarnings({ "NonAsciiCharacters", "SpellCheckingInspection" })
-public class ConditōrAdverbiīs extends ConditōrMultiplicibus<Adverbium> {
+public class ConditōrAdverbiīs extends ConditōrMultiplicibus <Adverbium> {
   @Nullable private static ConditōrAdverbiīs īnstantia = null;
 
   /**
@@ -25,7 +25,7 @@ public class ConditōrAdverbiīs extends ConditōrMultiplicibus<Adverbium> {
    * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
    */
   @NotNull public static final Supplier <ConditōrAdverbiīs> fac =
-    () -> ObjectUtils.firstNonNull(īnstantia, īnstantia = new ConditōrAdverbiīs());
+    ( ) -> ObjectUtils.firstNonNull(īnstantia, īnstantia = new ConditōrAdverbiīs());
 
   @NotNull private Gradus gradus = Gradus.NŪLLUS;
 
@@ -36,8 +36,8 @@ public class ConditōrAdverbiīs extends ConditōrMultiplicibus<Adverbium> {
 
   /**
    * {@inheritDoc}
-   * @return Rem novam classis {@link Adiectīvum}. <br>
-   * Modus hid valōrem {@code null} refert sī nōn valet valor aliquis rēs haec continet.
+   * @return Rem novam classis {@link Adiectīvum}. <br> Modus hid valōrem {@code null} refert sī nōn valet valor aliquis
+   *   rēs haec continet.
    */
   @SuppressWarnings("ConstantConditions")
   @Override @Nullable
@@ -45,7 +45,7 @@ public class ConditōrAdverbiīs extends ConditōrMultiplicibus<Adverbium> {
     if (Objects.nonNull(gradus)
         && StringUtils.isNoneBlank(fundāmen, scrīptiō)) {
       final Adverbium hoc = Adverbium.conditōr().fundāmen(fundāmen).gradus(gradus).scrīptiō(scrīptiō).condam();
-      if(Objects.isNull(hoc)) {
+      if (Objects.isNull(hoc)) {
         nūntius.moneō(Adverbium.class.getSimpleName().replace("um", "ī"),
                       StringUtils.firstNonBlank(fundāmen, scrīptiō), "prōductiō fōrmae nūllae prōcessit.");
         return null;

@@ -14,21 +14,18 @@ import java.util.function.BiFunction;
  */
 @SuppressWarnings({ "NonAsciiCharacters", "SpellCheckingInspection", "unused" })
 final class FōrmaTemporis {
-  @NotNull private final ZonedDateTime tempus;
-           private final boolean       pūnctillaPraecidemne;
-
   @NotNull private static final BiFunction <@NotNull ZonedDateTime, @NotNull Boolean, @NotNull String> fōrmātiō =
     (tempus, praecīsiō) -> {
       String zona = tempus.getZone().getId();
-      if(tempus.getZone().getId().length() > 3) {
-        if(tempus.getZone().getRules().isDaylightSavings(tempus.toInstant())) {
+      if (tempus.getZone().getId().length() > 3) {
+        if (tempus.getZone().getRules().isDaylightSavings(tempus.toInstant())) {
           zona = zona.substring(zona.length() - 3);
         } else {
           zona = zona.substring(0, 3);
         }
       }
 
-      if(praecīsiō) {
+      if (praecīsiō) {
         return String.format("[%d %s %d, %d:%d:%d.%d %s]",
                              tempus.getDayOfMonth(), Mēnsis.indīcam(tempus.getMonth()),
                              tempus.getYear(), tempus.getHour(), tempus.getMinute(), tempus.getSecond(),
@@ -43,8 +40,10 @@ final class FōrmaTemporis {
                              RomanInteger.parse(String.valueOf(tempus.getSecond()), IntegerType.ARABIC), zona);
       }
     };
+  @NotNull private final ZonedDateTime tempus;
+  private final          boolean       pūnctillaPraecidemne;
 
-  private FōrmaTemporis() {
+  private FōrmaTemporis( ) {
     tempus = ZonedDateTime.now();
     pūnctillaPraecidemne = false;
   }
@@ -75,13 +74,6 @@ final class FōrmaTemporis {
   }
 
   /**
-   * @return scrīptiōnem temporis quem rēs haec continet.
-   */
-  @NotNull public String fōrmō( ) {
-    return fōrmātiō.apply(tempus, pūnctillaPraecidemne);
-  }
-
-  /**
    * @param tempus tempus fōrmandus
    * @return scrīptiōnem temporis prōvīsus
    */
@@ -100,13 +92,14 @@ final class FōrmaTemporis {
   /**
    * @return scrīptiōnem temporis praesentis
    */
-  @NotNull public static String fōrmem() {
+  @NotNull public static String fōrmem( ) {
     return new FōrmaTemporis().fōrmō();
   }
 
   /**
-   * @param tempus tempus fōrmandus
-   * @param pūnctillaPraecidemne valōrem {@code true} sī rēs haec valōrem {@code tempus} pūnctilla praecidemne; valōrem {@code false} aliter
+   * @param tempus               tempus fōrmandus
+   * @param pūnctillaPraecidemne valōrem {@code true} sī rēs haec valōrem {@code tempus} pūnctilla praecidemne; valōrem
+   *                             {@code false} aliter
    * @return scrīptiōnem temporis prōvīsus
    */
   @NotNull public static String fōrmem(final long tempus, final boolean pūnctillaPraecidemne) {
@@ -114,8 +107,9 @@ final class FōrmaTemporis {
   }
 
   /**
-   * @param tempus tempus fōrmandus
-   * @param pūnctillaPraecidemne valōrem {@code true} sī rēs haec valōrem {@code tempus} pūnctilla praecidemne; valōrem {@code false} aliter
+   * @param tempus               tempus fōrmandus
+   * @param pūnctillaPraecidemne valōrem {@code true} sī rēs haec valōrem {@code tempus} pūnctilla praecidemne; valōrem
+   *                             {@code false} aliter
    * @return scrīptiōnem temporis prōvīsus
    */
   @NotNull public static String fōrmem(@NotNull final Instant tempus, final boolean pūnctillaPraecidemne) {
@@ -123,10 +117,18 @@ final class FōrmaTemporis {
   }
 
   /**
-   * @param pūnctillaPraecidemne valōrem {@code true} sī rēs haec temporem praesentem pūnctilla praecidemne; valōrem {@code false} aliter
+   * @param pūnctillaPraecidemne valōrem {@code true} sī rēs haec temporem praesentem pūnctilla praecidemne; valōrem
+   *                             {@code false} aliter
    * @return scrīptiōnem temporis praesentis
    */
   @NotNull public static String fōrmem(final boolean pūnctillaPraecidemne) {
     return new FōrmaTemporis(pūnctillaPraecidemne).fōrmō();
+  }
+
+  /**
+   * @return scrīptiōnem temporis quem rēs haec continet.
+   */
+  @NotNull public String fōrmō( ) {
+    return fōrmātiō.apply(tempus, pūnctillaPraecidemne);
   }
 }

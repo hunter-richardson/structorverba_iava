@@ -13,8 +13,8 @@ import java.util.stream.Stream;
 @SuppressWarnings({ "NonAsciiCharacters", "SpellCheckingInspection", "unused" })
 public enum Vōx {
   /**
-   * Valor hic ūtātur sī ūsūfructuāriī valōrem validum nōn dēnotat. <br>
-   * Sōlum scrīnium <a href="{@docRoot}/../src/main/resources">auxiliārēs</a> ūtitur indicāre quod verbum hoc est invocābile.
+   * Valor hic ūtātur sī ūsūfructuāriī valōrem validum nōn dēnotat. <br> Sōlum scrīnium <a
+   * href="{@docRoot}/../src/main/resources">auxiliārēs</a> ūtitur indicāre quod verbum hoc est invocābile.
    */
   NŪLLA(StringUtils.EMPTY),
 
@@ -42,8 +42,8 @@ public enum Vōx {
   }
 
   /**
-   * Modus hic rem ēnumerātiō {@link Vōx} ā parametrō dēsignātō advenit. <br>
-   * Valōrem {@link #NŪLLA} refert sī nihil valōrem {@code scrīptiō} quadrat.
+   * Modus hic rem ēnumerātiō {@link Vōx} ā parametrō dēsignātō advenit. <br> Valōrem {@link #NŪLLA} refert sī nihil
+   * valōrem {@code scrīptiō} quadrat.
    * @param scrīptiō valōrem {@link #scrīptiō} indicat.
    * @return Rem ēnumerātiō {@link Vōx} quod parametrum dēsignātum quadrat.
    */
@@ -54,11 +54,11 @@ public enum Vōx {
   }
 
   /**
-   * @return {@code illud} sī valōrem ēnumerātiō {@link Vōx} quadrat; {@link #NŪLLA} aliter.
    * @param illud valor tentandus.
+   * @return {@code illud} sī valōrem ēnumerātiō {@link Vōx} quadrat; {@link #NŪLLA} aliter.
    */
   @SuppressWarnings("ConstantConditions")
-  @NotNull public static Vōx ut(@NotNull final Enum<@NotNull ?> illud) {
+  @NotNull public static Vōx ut(@NotNull final Enum <@NotNull ?> illud) {
     final Vōx hoc = (Vōx) illud;
     return hoc.equals(illud) ? hoc
                              : NŪLLA;

@@ -3,7 +3,7 @@ package net.strūctorverba.conditōrēs.multiplicia;
 import net.strūctorverba.conditōrēs.Conditōr;
 import net.strūctorverba.nūntiī.Nūntius;
 import net.strūctorverba.verba.Verbum;
-import net.strūctorverba.verba.multiplicia.*;
+import net.strūctorverba.verba.multiplicia.Āctus;
 import net.strūctorverba.ēnumerātiōnēs.*;
 import org.apache.commons.lang3.*;
 import org.jetbrains.annotations.*;
@@ -18,7 +18,8 @@ import java.util.function.Supplier;
  * @see Nūntius.NūntiusConditōrīĀctīs
  */
 @SuppressWarnings({ "NonAsciiCharacters", "SpellCheckingInspection" })
-@Singleton @DependsOn("NūntiusConditōrīĀctīs")
+@Singleton
+@DependsOn("NūntiusConditōrīĀctīs")
 public final class ConditōrĀctīs extends ConditōrMultiplicibus <Āctus> {
   @Nullable private static ConditōrĀctīs īnstantia = null;
 
@@ -27,7 +28,7 @@ public final class ConditōrĀctīs extends ConditōrMultiplicibus <Āctus> {
    * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
    */
   @NotNull public static final Supplier <ConditōrĀctīs> fac =
-    () -> ObjectUtils.firstNonNull(īnstantia, īnstantia = new ConditōrĀctīs());
+    ( ) -> ObjectUtils.firstNonNull(īnstantia, īnstantia = new ConditōrĀctīs());
 
   @NotNull private Modus     modus     = Modus.NŪLLUS;
   @NotNull private Vōx       vōx       = Vōx.NŪLLA;
@@ -42,16 +43,16 @@ public final class ConditōrĀctīs extends ConditōrMultiplicibus <Āctus> {
 
   /**
    * {@inheritDoc}
-   * @return Rem novam classis {@link Āctus}. <br>
-   * Modus hid valōrem {@code null} refert sī nōn valet valor aliquis rēs haec continet.
+   * @return Rem novam classis {@link Āctus}. <br> Modus hid valōrem {@code null} refert sī nōn valet valor aliquis rēs
+   *   haec continet.
    */
   @Override @Nullable
   public Āctus condam( ) {
     if (ObjectUtils.allNotNull(modus, vōx, tempus, numerālis, persōna, numerālis)
-     && StringUtils.isNoneBlank(fundāmen, scrīptiō)) {
+        && StringUtils.isNoneBlank(fundāmen, scrīptiō)) {
       final Āctus hoc = Āctus.conditōr().fundāmen(fundāmen).modus(modus).vōx(vōx).tempus(tempus)
                              .numerālis(numerālis).persōna(persōna).scrīptiō(scrīptiō).condam();
-      if(Objects.isNull(hoc)) {
+      if (Objects.isNull(hoc)) {
         nūntius.moneō(Āctus.class.getSimpleName().replace("us", "ī"),
                       StringUtils.firstNonBlank(fundāmen, scrīptiō), "prōductiō fōrmae nūllae prōcessit.");
         return null;

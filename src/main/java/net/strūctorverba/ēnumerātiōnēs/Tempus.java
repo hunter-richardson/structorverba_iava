@@ -13,8 +13,8 @@ import java.util.stream.Stream;
 @SuppressWarnings({ "NonAsciiCharacters", "SpellCheckingInspection", "unused" })
 public enum Tempus {
   /**
-   * Valor hic ūtātur sī ūsūfructuāriī valōrem validum nōn dēnotat. <br>
-   * Sōlum scrīnium <a href="{@docRoot}/../src/main/resources">auxiliārēs</a> ūtitur indicāre quod verbum hoc temporem nōn pertinet.
+   * Valor hic ūtātur sī ūsūfructuāriī valōrem validum nōn dēnotat. <br> Sōlum scrīnium <a
+   * href="{@docRoot}/../src/main/resources">auxiliārēs</a> ūtitur indicāre quod verbum hoc temporem nōn pertinet.
    */
   INTEMPORĀLE(StringUtils.EMPTY),
 
@@ -44,8 +44,8 @@ public enum Tempus {
   PLŪSQUAMPERFECTUM("plūsquamperfectum"),
 
   /**
-   * Valor hic temporem futūrum exāctum dēsignat. <br>
-   * Curtātum ā verbīs duōbus est scrīptiōnem facilem in scāpīs XML licēre.
+   * Valor hic temporem futūrum exāctum dēsignat. <br> Curtātum ā verbīs duōbus est scrīptiōnem facilem in scāpīs XML
+   * licēre.
    */
   FUTŪRUM_EXĀCTUM("futrexāctum");
 
@@ -63,8 +63,8 @@ public enum Tempus {
   }
 
   /**
-   * Modus hic rem ēnumerātiō {@link Tempus} ā parametrō dēsignātō advenit. <br>
-   * Valōrem {@link #INTEMPORĀLE} refert sī nihil valōrem {@code scrīptiō} quadrat.
+   * Modus hic rem ēnumerātiō {@link Tempus} ā parametrō dēsignātō advenit. <br> Valōrem {@link #INTEMPORĀLE} refert sī
+   * nihil valōrem {@code scrīptiō} quadrat.
    * @param scrīptiō valōrem {@link #scrīptiō} indicat.
    * @return Rem ēnumerātiō {@link Tempus} quod parametrum dēsignātum quadrat.
    */
@@ -75,11 +75,11 @@ public enum Tempus {
   }
 
   /**
-   * @return {@code illud} sī valōrem ēnumerātiō {@link Tempus} quadrat; {@link #INTEMPORĀLE} aliter.
    * @param illud valor tentandus.
+   * @return {@code illud} sī valōrem ēnumerātiō {@link Tempus} quadrat; {@link #INTEMPORĀLE} aliter.
    */
   @SuppressWarnings("ConstantConditions")
-  @NotNull public static Tempus ut(@NotNull final Enum<@NotNull ?> illud) {
+  @NotNull public static Tempus ut(@NotNull final Enum <@NotNull ?> illud) {
     final Tempus hoc = (Tempus) illud;
     return hoc.equals(illud) ? hoc
                              : INTEMPORĀLE;

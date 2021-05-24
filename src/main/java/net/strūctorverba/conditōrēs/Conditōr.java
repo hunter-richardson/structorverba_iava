@@ -10,7 +10,8 @@ import org.jetbrains.annotations.*;
 import java.util.function.Supplier;
 
 /**
- * Classis {@link Conditōr} data ā rēbus classis {@link Tenor} accipit et eacum rēs classis extentārum {@link Verbum} cōnstruet.
+ * Classis {@link Conditōr} data ā rēbus classis {@link Tenor} accipit et eacum rēs classis extentārum {@link Verbum}
+ * cōnstruet.
  * @param <Hoc> classis extenta classis {@link Verbum}
  */
 @SuppressWarnings({ "NonAsciiCharacters", "SpellCheckingInspection" })
@@ -43,8 +44,8 @@ public abstract class Conditōr <Hoc extends Verbum <Hoc>> extends Omnum {
 
   /**
    * Modus hic rem classis {@link Hoc} cōnābitur cōnstruere.
-   * @return Rem novam classis {@link Hoc}. <br>
-   * Modus hid valōrem {@code null} refert sī nōn valet valor aliquis rēs haec continet.
+   * @return Rem novam classis {@link Hoc}. <br> Modus hid valōrem {@code null} refert sī nōn valet valor aliquis rēs
+   *   haec continet.
    */
   @Nullable public abstract Hoc condam( );
 }

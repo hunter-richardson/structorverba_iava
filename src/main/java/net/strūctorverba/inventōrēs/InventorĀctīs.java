@@ -26,7 +26,7 @@ public final class InventorĀctīs extends Inventor <Āctus> {
    * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
    */
   @NotNull public static final Supplier <InventorĀctīs> fac =
-    () -> ObjectUtils.firstNonNull(īnstantia, īnstantia = new InventorĀctīs());
+    ( ) -> ObjectUtils.firstNonNull(īnstantia, īnstantia = new InventorĀctīs());
 
   @NotNull private Vōx       vōx       = Vōx.NŪLLA;
   @NotNull private Tempus    tempus    = Tempus.INTEMPORĀLE;
@@ -40,7 +40,8 @@ public final class InventorĀctīs extends Inventor <Āctus> {
   }
 
   /**
-   * @return Quaestiōnem quam rēs classis {@link LēctorMultiplicibus.LēctorĀctīs} ūtātur rēs classis {@link Āctus} percōlere
+   * @return Quaestiōnem quam rēs classis {@link LēctorMultiplicibus.LēctorĀctīs} ūtātur rēs classis {@link Āctus}
+   *   percōlere
    * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Predicate.html">Prediate</a>
    */
   @Override @NotNull
@@ -78,7 +79,7 @@ public final class InventorĀctīs extends Inventor <Āctus> {
    * @see Persōna#ut(Enum)
    * @see Modus#ut(Enum)
    */
-  @Override protected void allegam(@NotNull final Enum<@NotNull ?> illud) {
+  @Override protected void allegam(@NotNull final Enum <@NotNull ?> illud) {
     if (illud instanceof Vōx) {
       vōx = Vōx.ut(illud);
       nūntius.garriō("Quastiōnī adiēcī conditiōnem novam:",

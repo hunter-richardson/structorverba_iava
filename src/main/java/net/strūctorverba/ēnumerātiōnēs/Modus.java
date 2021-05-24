@@ -13,8 +13,8 @@ import java.util.stream.Stream;
 @SuppressWarnings({ "NonAsciiCharacters", "SpellCheckingInspection", "unused" })
 public enum Modus {
   /**
-   * Valor hic ūtātur sī ūsūfructuāriī valōrem validum nōn dēnotat. <br>
-   * Numquam scrīnium <a href="{@docRoot}/../src/main/resources">auxiliārēs</a> ūtitur.
+   * Valor hic ūtātur sī ūsūfructuāriī valōrem validum nōn dēnotat. <br> Numquam scrīnium <a
+   * href="{@docRoot}/../src/main/resources">auxiliārēs</a> ūtitur.
    */
   NŪLLUS(StringUtils.EMPTY),
 
@@ -57,8 +57,8 @@ public enum Modus {
   }
 
   /**
-   * Modus hic rem ēnumerātiō {@link Cāsus} ā parametrō dēsignātō advenit. <br>
-   * Valōrem {@link #NŪLLUS} refert sī nihil valōrem {@code scrīptiō} quadrat.
+   * Modus hic rem ēnumerātiō {@link Cāsus} ā parametrō dēsignātō advenit. <br> Valōrem {@link #NŪLLUS} refert sī nihil
+   * valōrem {@code scrīptiō} quadrat.
    * @param scrīptiō valōrem {@link #scrīptiō} indicat.
    * @return Rem ēnumerātiō {@link Cāsus} quod parametrum dēsignātum quadrat.
    */
@@ -69,11 +69,11 @@ public enum Modus {
   }
 
   /**
-   * @return {@code illud} sī valōrem ēnumerātiō {@link Cāsus} quadrat; {@link #NŪLLUS} aliter.
    * @param illud valor tentandus.
+   * @return {@code illud} sī valōrem ēnumerātiō {@link Cāsus} quadrat; {@link #NŪLLUS} aliter.
    */
   @SuppressWarnings("ConstantConditions")
-  @NotNull public static Modus ut(@NotNull final Enum<@NotNull ?> illud) {
+  @NotNull public static Modus ut(@NotNull final Enum <@NotNull ?> illud) {
     final Modus hoc = (Modus) illud;
     return hoc.equals(illud) ? hoc
                              : NŪLLUS;

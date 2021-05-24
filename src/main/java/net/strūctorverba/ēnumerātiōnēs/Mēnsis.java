@@ -84,7 +84,8 @@ public enum Mēnsis {
   }
 
   /**
-   * Modus hic societās intrā rēs ēnumerātiōnēs et huius et <a href="https://docs.oracle.com/javase/8/docs/api/java/time/Month.html">Month</a> dēmōnstrat.
+   * Modus hic societās intrā rēs ēnumerātiōnēs et huius et <a href="https://docs.oracle.com/javase/8/docs/api/java/time/Month.html">Month</a>
+   * dēmōnstrat.
    * <ul>
    *   <li>Valor <a href="https://docs.oracle.com/javase/8/docs/api/java/time/Month.html#JANUARY">JANUARY</a> valōrem {@link #IANUĀRIĪ} cōnsociat.</li>
    *   <li>Valor <a href="https://docs.oracle.com/javase/8/docs/api/java/time/Month.html#FEBRUARY">FEBRUARY</a> valōrem {@link #FEBRUĀRIĪ} cōnsociat.</li>
@@ -104,25 +105,25 @@ public enum Mēnsis {
    */
   @NotNull public static Mēnsis indīcam(@NotNull final Month ēnumerātiō) {
     return switch (ēnumerātiō) {
-             case JANUARY -> IANUĀRIĪ;
-             case FEBRUARY -> FEBRUĀRIĪ;
-             case MARCH -> MĀRTIS;
-             case APRIL -> APRĪLIS;
-             case MAY -> MAIĪ;
-             case JUNE -> IŪNIĪ;
-             case JULY -> IŪLIUS;
-             case AUGUST -> AUGUSTĪ;
-             case SEPTEMBER -> SEPTEMBRIS;
-             case OCTOBER -> OCTŌBRIS;
-             case NOVEMBER -> NOVEMBRIS;
-             case DECEMBER -> DECEMBRIS;
+      case JANUARY -> IANUĀRIĪ;
+      case FEBRUARY -> FEBRUĀRIĪ;
+      case MARCH -> MĀRTIS;
+      case APRIL -> APRĪLIS;
+      case MAY -> MAIĪ;
+      case JUNE -> IŪNIĪ;
+      case JULY -> IŪLIUS;
+      case AUGUST -> AUGUSTĪ;
+      case SEPTEMBER -> SEPTEMBRIS;
+      case OCTOBER -> OCTŌBRIS;
+      case NOVEMBER -> NOVEMBRIS;
+      case DECEMBER -> DECEMBRIS;
     };
   }
 
   /**
    * @return {@link #scrīptiō}
    */
-  @NotNull public String toString() {
+  @NotNull public String toString( ) {
     return scrīptiō;
   }
 }

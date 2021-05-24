@@ -11,24 +11,25 @@ import java.util.Objects;
 import java.util.function.Supplier;
 
 /**
- * Classis {@link TenorSimplicibus} est vās classis {@link Tenor} classibus omnibus quibus classem {@link VerbumSimplex} extendit.
+ * Classis {@link TenorSimplicibus} est vās classis {@link Tenor} classibus omnibus quibus classem {@link VerbumSimplex}
+ * extendit.
  * @param <Hoc> classis extenta classis {@link VerbumSimplex}
  * @see ConditōrSimplicibus
  */
 @SuppressWarnings({ "NonAsciiCharacters", "SpellCheckingInspection" })
-public abstract class TenorSimplicibus<Hoc extends VerbumSimplex<Hoc>> extends Tenor<Hoc> {
+public abstract class TenorSimplicibus <Hoc extends VerbumSimplex <Hoc>> extends Tenor <Hoc> {
   /**
    * Valor hic est vās classis {@link ConditōrSimplicibus} classī extentī huius.
    */
-  @NotNull protected final ConditōrSimplicibus<@NotNull Hoc> condītōr;
+  @NotNull protected final ConditōrSimplicibus <@NotNull Hoc> condītōr;
 
   /**
    * Officium hoc cōnstrūctōrem reī classis huius perpetrat.
-   * @param nts valōrem {@link Tenor#nūntius} supplet.
+   * @param nts   valōrem {@link Tenor#nūntius} supplet.
    * @param cndtr valōrem {@link #condītōr} supplet.
    */
   protected TenorSimplicibus(@NotNull final Supplier <@NotNull ? extends Nūntius> nts,
-                             @NotNull final Supplier <@NotNull ? extends ConditōrSimplicibus<@NotNull Hoc>> cndtr) {
+                             @NotNull final Supplier <@NotNull ? extends ConditōrSimplicibus <@NotNull Hoc>> cndtr) {
     super(nts);
     condītōr = cndtr.get();
   }
@@ -68,7 +69,7 @@ public abstract class TenorSimplicibus<Hoc extends VerbumSimplex<Hoc>> extends T
      * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
      */
     @NotNull public static final Supplier <TenorConiūnctivīs> fac =
-      () -> ObjectUtils.firstNonNull(īnstantia, īnstantia = new TenorConiūnctivīs());
+      ( ) -> ObjectUtils.firstNonNull(īnstantia, īnstantia = new TenorConiūnctivīs());
 
     private TenorConiūnctivīs( ) {
       super(Nūntius.NūntiusTenōrīConiūnctivīs.fac, ConditōrSimplicibus.ConditōrConiūnctīvīs.fac);
@@ -92,7 +93,7 @@ public abstract class TenorSimplicibus<Hoc extends VerbumSimplex<Hoc>> extends T
      * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
      */
     @NotNull public static final Supplier <TenorInteriectiōnibus> fac =
-      () -> ObjectUtils.firstNonNull(īnstantia, īnstantia = new TenorInteriectiōnibus());
+      ( ) -> ObjectUtils.firstNonNull(īnstantia, īnstantia = new TenorInteriectiōnibus());
 
     private TenorInteriectiōnibus( ) {
       super(Nūntius.NūntiusTenōrīInteriectiōnibus.fac, ConditōrSimplicibus.ConditōrInteriectiōnibus.fac);
