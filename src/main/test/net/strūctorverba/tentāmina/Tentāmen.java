@@ -6,7 +6,7 @@ import org.apache.commons.lang3.Range;
 import org.apache.commons.lang3.*;
 import org.jetbrains.annotations.*;
 
-import java.util.function.BiFunction;
+import java.util.function.Function;
 
 /**
  * Classis {@link Tentāmen} tentāmen magnum iterābile repraesentat. Rēs omnis classis huius invocātiōnēs plūrēs
@@ -14,18 +14,15 @@ import java.util.function.BiFunction;
  * @param <Illud> Classis reī tentandī
  * @param <Hoc>   Classis datī exspectandī
  */
-@SuppressWarnings({ "NonAsciiCharacters", "SpellCheckingInspection" })
+@SuppressWarnings({ "NonAsciiCharacters", "SpellCheckingInspection", "unused" })
 abstract class Tentāmen <Illud, Hoc> {
-  @NotNull private final BiFunction <Hoc, Illud, String> exsecūtiō;
-  @NotNull private final Hoc                             hoc;
+  @NotNull private final Function <Illud, String> exsecūtiō;
 
   /**
    * Officium hoc cōnstrūctōrem reī classis huius perpetrat.
-   * @param hc    valor datum exspectandum continet.
    * @param exsct modus operātiōnēs dēfīnit reī classis {@link Illud} perfungī.
    */
-  protected Tentāmen(@NotNull final Hoc hc, @NotNull final BiFunction <Hoc, Illud, String> exsct) {
-    hoc = hc;
+  protected Tentāmen(@NotNull final Function <Illud, String> exsct) {
     exsecūtiō = exsct;
   }
 
@@ -36,7 +33,7 @@ abstract class Tentāmen <Illud, Hoc> {
    * @return Scrīptula quae successum indicat
    */
   public String exsequar(@Nullable final Illud illud) {
-    return exsecūtiō.apply(hoc, illud);
+    return exsecūtiō.apply(illud);
   }
 
   /**
@@ -50,7 +47,7 @@ abstract class Tentāmen <Illud, Hoc> {
      * @param nōmen valor hoc inter multa identificat.
      */
     public TentāmenVerbāle(@NotNull final String data, @NotNull final String nōmen) {
-      super(data, (hoc, illud) -> {
+      super(illud -> {
         new Tentāmiculum.TentāmiculumReī(illud)
           .existat(String.format("Verba prōducta %s vacant.", nōmen));
         new Tentāmiculum.TentāmiculumNumerālis <>(0, illud.seriēs.size())
@@ -58,14 +55,14 @@ abstract class Tentāmen <Illud, Hoc> {
         for (int index = 0; index < illud.seriēs.size(); index++) {
           new Tentāmiculum.TentāmiculumReī(illud.seriēs.get(index))
             .existat(String.format("Prōductā %s est relicta prōductiō verbī %s.",
-                                   nōmen, Ūtilitās.minusculāsScrībō(hoc.split(String.valueOf(' '))[ index ])));
+                                   nōmen, Ūtilitās.minusculāsScrībō(data.split(String.valueOf(' '))[ index ])));
           new Tentāmiculum.TentāmiculumVersiculī(illud.seriēs.get(index).toString())
             .aliamContineat(String.format("Prōductā %s est relicta prōductiō verbī %s.",
-                                          nōmen, Ūtilitās.minusculāsScrībō(hoc.split(String.valueOf(' '))[ index ])));
+                                          nōmen, Ūtilitās.minusculāsScrībō(data.split(String.valueOf(' '))[ index ])));
         }
 
-        new Tentāmiculum.TentāmiculumVersiculī(illud.toString())
-          .aliamContineat(String.format("Verba prōducta %s expectātiōne eius differt.", nōmen));
+        new Tentāmiculum.TentāmiculumVersiculī(data, illud.toString())
+          .aequentur(String.format("Verba prōducta %s expectātiōne eius differt.", nōmen));
         return String.format("Prōducta %s: %s", nōmen, illud);
       });
     }
@@ -82,7 +79,7 @@ abstract class Tentāmen <Illud, Hoc> {
      * @param numerus valor hoc inter multa identificat.
      */
     public TentāmenNumerāleConversiōnis(@NotNull final String data, final short numerus) {
-      super(data, (hoc, illud) -> {
+      super(illud -> {
         new Tentāmiculum.TentāmiculumReī(illud)
           .existat(String.format("Prōductā conversiōnis est relicta prōductiō numerī %d.", numerus));
         new Tentāmiculum.TentāmiculumVersiculī(illud.toString())
@@ -105,7 +102,7 @@ abstract class Tentāmen <Illud, Hoc> {
      * @param scrīptiō valor hoc inter multa identificat.
      */
     public TentāmenNumerāleReversiōnis(@NotNull final Short numerus, @NotNull final String scrīptiō) {
-      super(numerus, (hoc, illud) -> {
+      super(illud -> {
         new Tentāmiculum.TentāmiculumReī(illud)
           .existat(String.format("Prōductā reversiōnis est relicta prōductiō numerī %s.", scrīptiō));
         new Tentāmiculum.TentāmiculumNumerālis <>(numerus, illud.numerus)
@@ -126,7 +123,7 @@ abstract class Tentāmen <Illud, Hoc> {
      * @param numerus valor datum exspectandum continet.
      */
     public TentāmenNumerāleCombīnātiōnis(@NotNull final Short numerus) {
-      super(numerus, (hoc, prīmus) -> {
+      super(prīmus -> {
         new Tentāmiculum.TentāmiculumReī(prīmus)
           .existat(String.format("Prōductā conversiōnis est relicta prōductiō numerī %d.", numerus));
         new Tentāmiculum.TentāmiculumVersiculī(prīmus.toString())
@@ -155,7 +152,7 @@ abstract class Tentāmen <Illud, Hoc> {
      * @param operātiō valor operātiōnem mathēmaticam identificat.
      */
     public TentāmenMathēmaticum(@NotNull final Range <Short> range, final char operātiō) {
-      super(range, (hoc, prīmus) -> {
+      super(prīmus -> {
         new Tentāmiculum.TentāmiculumReī(prīmus)
           .existat(String.format("Prōductā %s est relicta prōductiō numerī %d.", operātiō, range.getMaximum()));
         new Tentāmiculum.TentāmiculumVersiculī(prīmus.toString())
@@ -170,17 +167,14 @@ abstract class Tentāmen <Illud, Hoc> {
           default -> StringUtils.EMPTY;
         };
 
-        short expectātus = 0;
-        if (StringUtils.isNotBlank(labor)) {
-          expectātus = switch (operātiō) {
-            case '+' -> (short) (range.getMaximum() + range.getMinimum());
-            case '-' -> (short) (range.getMaximum() - range.getMinimum());
-            case '*' -> (short) (range.getMaximum() * range.getMinimum());
-            case '/' -> (short) (range.getMaximum() / range.getMinimum());
-            case '%' -> (short) (range.getMaximum() % range.getMinimum());
-            default -> (short) 0;
-          };
-        }
+        short expectātus = switch (operātiō) {
+          case '+' -> (short) (range.getMaximum() + range.getMinimum());
+          case '-' -> (short) (range.getMaximum() - range.getMinimum());
+          case '*' -> (short) (range.getMaximum() * range.getMinimum());
+          case '/' -> (short) (range.getMaximum() / range.getMinimum());
+          case '%' -> (short) (range.getMaximum() % range.getMinimum());
+          default -> (short) 0;
+        };
 
         @NotNull final StrūctorVerba strūctor = StrūctorVerba.fac.get();
         @NotNull final VerbumSimplex.Numerus secundus = strūctor.numerus(range.getMinimum());
