@@ -122,6 +122,7 @@ public abstract class VerbumSimplex <Hoc extends Verbum <Hoc>> extends Verbum <H
      * Valor hic repraesentātiōnem numeriam tenet reī huic.
      * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Short.html">Short</a>
      */
+    @Range(from = 1, to = 3999)
     public final short numerus;
     @Getter(lazy = true) @Accessors(fluent = true)
     @NotNull private final Nūntius.NūntiusNumerōrum nūntius = Nūntius.NūntiusNumerōrum.fac.get();
