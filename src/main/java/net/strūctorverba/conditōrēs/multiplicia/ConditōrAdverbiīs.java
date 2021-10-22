@@ -77,7 +77,7 @@ public class ConditōrAdverbiīs extends ConditōrMultiplicibus <Adverbium> {
   @Override public void allegō(@NotNull final String nōmen, @NotNull final String dēscrīptor) {
     switch (nōmen) {
       case "gradus" -> gradus = Gradus.dēfīniam(dēscrīptor);
-      case "fundāmen" -> lemma = dēscrīptor.trim();
+      case "lemma" -> lemma = dēscrīptor.trim();
       default -> {
         nūntius.moneō(Adiectīvum.class.getSimpleName().replace("um", "ō"),
                       "Attribūta inopīnāta est ūsa:", nōmen, "est", dēscrīptor);

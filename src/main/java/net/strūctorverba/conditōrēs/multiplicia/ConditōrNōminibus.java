@@ -91,7 +91,7 @@ public final class ConditōrNōminibus extends ConditōrMultiplicibus <Nōmen> {
       case "numerālis" -> numerālis = Numerālis.dēfīniam(dēscrīptor);
       case "cāsus" -> cāsus = Cāsus.dēfīniam(dēscrīptor);
       case "tempus" -> tempus = Tempus.dēfīniam(dēscrīptor);
-      case "fundāmen" -> lemma = dēscrīptor.trim();
+      case "lemma" -> lemma = dēscrīptor.trim();
       default -> {
         nūntius.moneō(Nōmen.class.getSimpleName().replace("en", "ī"),
                       "Attribūta inopīnāta est ūsa:", nōmen, "est", dēscrīptor);

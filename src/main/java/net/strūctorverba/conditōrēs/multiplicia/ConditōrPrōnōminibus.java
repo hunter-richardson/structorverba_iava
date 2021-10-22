@@ -87,7 +87,7 @@ public final class ConditōrPrōnōminibus extends ConditōrMultiplicibus <Prōn
       case "genus" -> genus = Genus.dēfīniam(dēscrīptor);
       case "numerālis" -> numerālis = Numerālis.dēfīniam(dēscrīptor);
       case "cāsus" -> cāsus = Cāsus.dēfīniam(dēscrīptor);
-      case "fundāmen" -> lemma = dēscrīptor.trim();
+      case "lemma" -> lemma = dēscrīptor.trim();
       default -> {
         nūntius.moneō(Prōnōmen.class.getSimpleName().replace("en", "ī"),
                       "Attribūta inopīnāta est ūsa:", nōmen, "est", dēscrīptor);

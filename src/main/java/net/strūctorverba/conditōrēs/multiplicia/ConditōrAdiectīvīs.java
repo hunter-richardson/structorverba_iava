@@ -91,7 +91,7 @@ public final class ConditōrAdiectīvīs extends ConditōrMultiplicibus <Adiect�
       case "numerālis" -> numerālis = Numerālis.dēfīniam(dēscrīptor);
       case "cāsus" -> cāsus = Cāsus.dēfīniam(dēscrīptor);
       case "gradus" -> gradus = Gradus.dēfīniam(dēscrīptor);
-      case "fundāmen" -> lemma = dēscrīptor.trim();
+      case "lemma" -> lemma = dēscrīptor.trim();
       default -> {
         nūntius.moneō(Adiectīvum.class.getSimpleName().replace("um", "ō"),
                       "Attribūta inopīnāta est ūsa:", nōmen, "est", dēscrīptor);

@@ -91,7 +91,7 @@ public final class ConditōrĀctīs extends ConditōrMultiplicibus <Āctus> {
       case "tempus" -> tempus = Tempus.dēfīniam(dēscrīptor);
       case "numerālis" -> numerālis = Numerālis.dēfīniam(dēscrīptor);
       case "persōna" -> persōna = Persōna.dēfīniam(dēscrīptor);
-      case "fundāmen" -> lemma = dēscrīptor.trim();
+      case "lemma" -> lemma = dēscrīptor.trim();
       default -> {
         nūntius.moneō(Āctus.class.getSimpleName().replace("us", "ō"),
                       "Attribūta inopīnāta est ūsa:", nōmen, "est", dēscrīptor);
