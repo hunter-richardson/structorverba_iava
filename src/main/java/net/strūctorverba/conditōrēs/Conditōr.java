@@ -22,9 +22,9 @@ public abstract class Conditōr <Hoc extends Verbum <Hoc>> extends Omnum {
   @NotNull protected final Nūntius nūntius;
 
   /**
-   * Valor hic valōrem {@link Verbum#fundāmen} reī prōductae repraehentat.
+   * Valor hic valōrem {@link Verbum#lemma} reī prōductae repraehentat.
    */
-  @NotNull protected String fundāmen = StringUtils.EMPTY;
+  @NotNull protected String lemma = StringUtils.EMPTY;
 
   /**
    * Officium hoc cōnstrūctōrem reī classis huius perpetrat.
@@ -35,11 +35,11 @@ public abstract class Conditōr <Hoc extends Verbum <Hoc>> extends Omnum {
   }
 
   /**
-   * Modus hic valōrem {@link #fundāmen} indit.
+   * Modus hic valōrem {@link #lemma} indit.
    * @param fdmn valōrem indendum
    */
   public final void funde(@NotNull final String fdmn) {
-    fundāmen = fdmn.trim();
+    lemma = fdmn.trim();
   }
 
   /**

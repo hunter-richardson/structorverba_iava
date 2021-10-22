@@ -1,0 +1,115 @@
+<adiectīvum lemma="cēnsendus">
+  <fōrma speciālitās="commūne" genus="masculīnum" numerālis="singulāris" cāsus="nōminātīvus">
+    cēnsendus
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="masculīnum" numerālis="singulāris" cāsus="genitīvus">
+    cēnsendī
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="masculīnum" numerālis="singulāris" cāsus="datīvus">
+    cēnsendō
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="masculīnum" numerālis="singulāris" cāsus="accūsātīvus">
+    cēnsendum
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="masculīnum" numerālis="singulāris" cāsus="ablātīvus">
+    cēnsendō
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="masculīnum" numerālis="singulāris" cāsus="locātīvus">
+    cēnsende
+  </fōrma>
+
+  <fōrma speciālitās="commūne" genus="masculīnum" numerālis="plūrālis" cāsus="nōminātīvus">
+    cēnsendī
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="masculīnum" numerālis="plūrālis" cāsus="genitīvus">
+    cēnsendōrum
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="masculīnum" numerālis="plūrālis" cāsus="datīvus">
+    cēnsendīs
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="masculīnum" numerālis="plūrālis" cāsus="accūsātīvus">
+    cēnsendōs
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="masculīnum" numerālis="plūrālis" cāsus="ablātīvus">
+    cēnsendīs
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="masculīnum" numerālis="plūrālis" cāsus="locātīvus">
+    cēnsendī
+  </fōrma>
+
+  <fōrma speciālitās="commūne" genus="fēminīnum" numerālis="singulāris" cāsus="nōminātīvus">
+    cēnsenda
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="fēminīnum" numerālis="singulāris" cāsus="genitīvus">
+    cēnsendae
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="fēminīnum" numerālis="singulāris" cāsus="datīvus">
+    cēnsendae
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="fēminīnum" numerālis="singulāris" cāsus="accūsātīvus">
+    cēnsendam
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="fēminīnum" numerālis="singulāris" cāsus="ablātīvus">
+    cēnsendā
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="fēminīnum" numerālis="singulāris" cāsus="locātīvus">
+    cēnsenda
+  </fōrma>
+
+  <fōrma speciālitās="commūne" genus="fēminīnum" numerālis="plūrālis" cāsus="nōminātīvus">
+    cēnsendae
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="fēminīnum" numerālis="plūrālis" cāsus="genitīvus">
+    cēnsendārum
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="fēminīnum" numerālis="plūrālis" cāsus="datīvus">
+    cēnsendīs
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="fēminīnum" numerālis="plūrālis" cāsus="accūsātīvus">
+    cēnsendās
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="fēminīnum" numerālis="plūrālis" cāsus="ablātīvus">
+    cēnsendīs
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="fēminīnum" numerālis="plūrālis" cāsus="locātīvus">
+    cēnsendae
+  </fōrma>
+
+  <fōrma speciālitās="commūne" genus="neutrum" numerālis="singulāris" cāsus="nōminātīvus">
+    cēnsendum
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="neutrum" numerālis="singulāris" cāsus="genitīvus">
+    cēnsendī
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="neutrum" numerālis="singulāris" cāsus="datīvus">
+    cēnsendō
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="neutrum" numerālis="singulāris" cāsus="accūsātīvus">
+    cēnsendum
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="neutrum" numerālis="singulāris" cāsus="ablātīvus">
+    cēnsendō
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="neutrum" numerālis="singulāris" cāsus="locātīvus">
+    cēnsendum
+  </fōrma>
+
+  <fōrma speciālitās="commūne" genus="neutrum" numerālis="plūrālis" cāsus="nōminātīvus">
+    cēnsenda
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="neutrum" numerālis="plūrālis" cāsus="genitīvus">
+    cēnsendōrum
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="neutrum" numerālis="plūrālis" cāsus="datīvus">
+    cēnsendīs
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="neutrum" numerālis="plūrālis" cāsus="accūsātīvus">
+    cēnsenda
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="neutrum" numerālis="plūrālis" cāsus="ablātīvus">
+    cēnsendīs
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="neutrum" numerālis="plūrālis" cāsus="locātīvus">
+    cēnsenda
+  </fōrma>
+</adiectīvum>

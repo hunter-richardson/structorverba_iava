@@ -1,4 +1,4 @@
-<adiectīvum fundāmen="amandus">
+<adiectīvum lemma="amandus">
   <fōrma speciālitās="commūne" genus="masculīnum" numerālis="singulāris" cāsus="nōminātīvus">
     amandus
   </fōrma>
@@ -44,7 +44,7 @@
     amandae
   </fōrma>
   <fōrma speciālitās="commūne" genus="fēminīnum" numerālis="singulāris" cāsus="datīvus">
-    amandā
+    amandae
   </fōrma>
   <fōrma speciālitās="commūne" genus="fēminīnum" numerālis="singulāris" cāsus="accūsātīvus">
     amandam

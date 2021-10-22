@@ -1,0 +1,270 @@
+<āctus lemma="dēlēre">
+  <fōrma modus="īnfīnītīvus" vōx="āctīva" tempus="praesēns">
+    dēlēre
+  </fōrma>
+  <fōrma modus="īnfīnītīvus" vōx="āctīva" tempus="perfectum">
+    dēlēvisse
+  </fōrma>
+  <fōrma modus="īnfīnītīvus" vōx="passīva" tempus="perfectum">
+    dēlērī
+  </fōrma>
+  <fōrma modus="participiālis" vōx="āctīva" tempus="praesēns">
+    dēlēns
+  </fōrma>
+  <fōrma modus="participiālis" vōx="passīva" tempus="futūrum">
+    dēlendus
+  </fōrma>
+  <fōrma modus="participiālis" vōx="āctīva" tempus="futūrum">
+    dēlētūrus
+  </fōrma>
+  <fōrma modus="participiālis" vōx="āctīva" tempus="perfectum">
+    dēlētus
+  </fōrma>
+
+  <fōrma modus="imperātīvus" vōx="āctīva" tempus="praesēns" numerālis="singulāris" persōna="secunda">
+    dēlē
+  </fōrma>
+  <fōrma modus="imperātīvus" vōx="āctīva" tempus="praesēns" numerālis="plūrālis" persōna="secunda">
+    dēlēte
+  </fōrma>
+  <fōrma modus="imperātīvus" vōx="āctīva" tempus="futūrum" numerālis="singulāris" persōna="secunda">
+    dēlētō
+  </fōrma>
+  <fōrma modus="imperātīvus" vōx="āctīva" tempus="futūrum" numerālis="singulāris" persōna="tertia">
+    dēlētō
+  </fōrma>
+  <fōrma modus="imperātīvus" vōx="āctīva" tempus="futūrum" numerālis="plūrālis" persōna="secunda">
+    dēlētōte
+  </fōrma>
+  <fōrma modus="imperātīvus" vōx="āctīva" tempus="futūrum" numerālis="plūrālis" persōna="tertia">
+    dēlentō
+  </fōrma>
+
+  <fōrma modus="indicātīvus" vōx="āctīva" tempus="praesēns" numerālis="singulāris" persōna="prīma">
+    dēleō
+  </fōrma>
+  <fōrma modus="indicātīvus" vōx="āctīva" tempus="praesēns" numerālis="singulāris" persōna="secunda">
+    dēlēs
+  </fōrma>
+  <fōrma modus="indicātīvus" vōx="āctīva" tempus="praesēns" numerālis="singulāris" persōna="tertia">
+    dēlet
+  </fōrma>
+  <fōrma modus="indicātīvus" vōx="āctīva" tempus="praesēns" numerālis="plūrālis" persōna="prīma">
+    dēlēmus
+  </fōrma>
+  <fōrma modus="indicātīvus" vōx="āctīva" tempus="praesēns" numerālis="plūrālis" persōna="secunda">
+    dēlētis
+  </fōrma>
+  <fōrma modus="indicātīvus" vōx="āctīva" tempus="praesēns" numerālis="plūrālis" persōna="tertia">
+    dēlent
+  </fōrma>
+
+  <fōrma modus="indicātīvus" vōx="āctīva" tempus="infectum" numerālis="singulāris" persōna="prīma">
+    dēlēbam
+  </fōrma>
+  <fōrma modus="indicātīvus" vōx="āctīva" tempus="infectum" numerālis="singulāris" persōna="secunda">
+    dēlēbās
+  </fōrma>
+  <fōrma modus="indicātīvus" vōx="āctīva" tempus="infectum" numerālis="singulāris" persōna="tertia">
+    dēlēbat
+  </fōrma>
+  <fōrma modus="indicātīvus" vōx="āctīva" tempus="infectum" numerālis="plūrālis" persōna="prīma">
+    dēlēbāmus
+  </fōrma>
+  <fōrma modus="indicātīvus" vōx="āctīva" tempus="infectum" numerālis="plūrālis" persōna="secunda">
+    dēlēbātis
+  </fōrma>
+  <fōrma modus="indicātīvus" vōx="āctīva" tempus="infectum" numerālis="plūrālis" persōna="tertia">
+    dēlēbant
+  </fōrma>
+
+  <fōrma modus="indicātīvus" vōx="āctīva" tempus="futūrum" numerālis="singulāris" persōna="prīma">
+    dēlēbō
+  </fōrma>
+  <fōrma modus="indicātīvus" vōx="āctīva" tempus="futūrum" numerālis="singulāris" persōna="secunda">
+    dēlēbis
+  </fōrma>
+  <fōrma modus="indicātīvus" vōx="āctīva" tempus="futūrum" numerālis="singulāris" persōna="tertia">
+    dēlēbit
+  </fōrma>
+  <fōrma modus="indicātīvus" vōx="āctīva" tempus="futūrum" numerālis="plūrālis" persōna="prīma">
+    dēlēbimus
+  </fōrma>
+  <fōrma modus="indicātīvus" vōx="āctīva" tempus="futūrum" numerālis="plūrālis" persōna="secunda">
+    dēlēbitis
+  </fōrma>
+  <fōrma modus="indicātīvus" vōx="āctīva" tempus="futūrum" numerālis="plūrālis" persōna="tertia">
+    dēlēbunt
+  </fōrma>
+
+  <fōrma modus="indicātīvus" vōx="āctīva" tempus="perfectum" numerālis="singulāris" persōna="prīma">
+    dēlēvī
+  </fōrma>
+  <fōrma modus="indicātīvus" vōx="āctīva" tempus="perfectum" numerālis="singulāris" persōna="secunda">
+    dēlēvistī
+  </fōrma>
+  <fōrma modus="indicātīvus" vōx="āctīva" tempus="perfectum" numerālis="singulāris" persōna="tertia">
+    dēlēvit
+  </fōrma>
+  <fōrma modus="indicātīvus" vōx="āctīva" tempus="perfectum" numerālis="plūrālis" persōna="prīma">
+    dēlēvimus
+  </fōrma>
+  <fōrma modus="indicātīvus" vōx="āctīva" tempus="perfectum" numerālis="plūrālis" persōna="secunda">
+    dēlēvitis
+  </fōrma>
+  <fōrma modus="indicātīvus" vōx="āctīva" tempus="perfectum" numerālis="plūrālis" persōna="tertia">
+    dēlēvērunt
+  </fōrma>
+
+  <fōrma modus="indicātīvus" vōx="āctīva" tempus="plūsquamperfectum" numerālis="singulāris" persōna="prīma">
+    dēlēveram
+  </fōrma>
+  <fōrma modus="indicātīvus" vōx="āctīva" tempus="plūsquamperfectum" numerālis="singulāris" persōna="secunda">
+    dēlēverās
+  </fōrma>
+  <fōrma modus="indicātīvus" vōx="āctīva" tempus="plūsquamperfectum" numerālis="singulāris" persōna="tertia">
+    dēlēverat
+  </fōrma>
+  <fōrma modus="indicātīvus" vōx="āctīva" tempus="plūsquamperfectum" numerālis="plūrālis" persōna="prīma">
+    dēlēverāmus
+  </fōrma>
+  <fōrma modus="indicātīvus" vōx="āctīva" tempus="plūsquamperfectum" numerālis="plūrālis" persōna="secunda">
+    dēlēverātis
+  </fōrma>
+  <fōrma modus="indicātīvus" vōx="āctīva" tempus="plūsquamperfectum" numerālis="plūrālis" persōna="tertia">
+    dēlēvērant
+  </fōrma>
+
+  <fōrma modus="indicātīvus" vōx="āctīva" tempus="futrexāctum" numerālis="singulāris" persōna="prīma">
+    dēlēverō
+  </fōrma>
+  <fōrma modus="indicātīvus" vōx="āctīva" tempus="futrexāctum" numerālis="singulāris" persōna="secunda">
+    dēlēveris
+  </fōrma>
+  <fōrma modus="indicātīvus" vōx="āctīva" tempus="futrexāctum" numerālis="singulāris" persōna="tertia">
+    dēlēverit
+  </fōrma>
+  <fōrma modus="indicātīvus" vōx="āctīva" tempus="futrexāctum" numerālis="plūrālis" persōna="prīma">
+    dēlēverimus
+  </fōrma>
+  <fōrma modus="indicātīvus" vōx="āctīva" tempus="futrexāctum" numerālis="plūrālis" persōna="secunda">
+    dēlēveritis
+  </fōrma>
+  <fōrma modus="indicātīvus" vōx="āctīva" tempus="futrexāctum" numerālis="plūrālis" persōna="tertia">
+    dēlēvērint
+  </fōrma>
+
+  <fōrma modus="subiūnctīvus" vōx="āctīva" tempus="praesēns" numerālis="singulāris" persōna="prīma">
+    dēleam
+  </fōrma>
+  <fōrma modus="subiūnctīvus" vōx="āctīva" tempus="praesēns" numerālis="singulāris" persōna="secunda">
+    dēleās
+  </fōrma>
+  <fōrma modus="subiūnctīvus" vōx="āctīva" tempus="praesēns" numerālis="singulāris" persōna="tertia">
+    dēleat
+  </fōrma>
+  <fōrma modus="subiūnctīvus" vōx="āctīva" tempus="praesēns" numerālis="plūrālis" persōna="prīma">
+    dēleāmus
+  </fōrma>
+  <fōrma modus="subiūnctīvus" vōx="āctīva" tempus="praesēns" numerālis="plūrālis" persōna="secunda">
+    dēleātis
+  </fōrma>
+  <fōrma modus="subiūnctīvus" vōx="āctīva" tempus="praesēns" numerālis="plūrālis" persōna="tertia">
+    dēleant
+  </fōrma>
+
+  <fōrma modus="subiūnctīvus" vōx="āctīva" tempus="infectum" numerālis="singulāris" persōna="prīma">
+    dēlērem
+  </fōrma>
+  <fōrma modus="subiūnctīvus" vōx="āctīva" tempus="infectum" numerālis="singulāris" persōna="secunda">
+    dēlērēs
+  </fōrma>
+  <fōrma modus="subiūnctīvus" vōx="āctīva" tempus="infectum" numerālis="singulāris" persōna="tertia">
+    dēlēret
+  </fōrma>
+  <fōrma modus="subiūnctīvus" vōx="āctīva" tempus="infectum" numerālis="plūrālis" persōna="prīma">
+    dēlērēmus
+  </fōrma>
+  <fōrma modus="subiūnctīvus" vōx="āctīva" tempus="infectum" numerālis="plūrālis" persōna="secunda">
+    dēlērētis
+  </fōrma>
+  <fōrma modus="subiūnctīvus" vōx="āctīva" tempus="infectum" numerālis="plūrālis" persōna="tertia">
+    dēlērent
+  </fōrma>
+
+  <fōrma modus="subiūnctīvus" vōx="āctīva" tempus="perfectum" numerālis="singulāris" persōna="prīma">
+    dēlēverim
+  </fōrma>
+  <fōrma modus="subiūnctīvus" vōx="āctīva" tempus="perfectum" numerālis="singulāris" persōna="secunda">
+    dēlēverīs
+  </fōrma>
+  <fōrma modus="subiūnctīvus" vōx="āctīva" tempus="perfectum" numerālis="singulāris" persōna="tertia">
+    dēlēverit
+  </fōrma>
+  <fōrma modus="subiūnctīvus" vōx="āctīva" tempus="perfectum" numerālis="plūrālis" persōna="prīma">
+    dēlēverīmus
+  </fōrma>
+  <fōrma modus="subiūnctīvus" vōx="āctīva" tempus="perfectum" numerālis="plūrālis" persōna="secunda">
+    dēlēverītis
+  </fōrma>
+  <fōrma modus="subiūnctīvus" vōx="āctīva" tempus="perfectum" numerālis="plūrālis" persōna="tertia">
+    dēlēverint
+  </fōrma>
+
+  <fōrma modus="subiūnctīvus" vōx="āctīva" tempus="plūsquamperfectum" numerālis="singulāris" persōna="prīma">
+    dēlēvissem
+  </fōrma>
+  <fōrma modus="subiūnctīvus" vōx="āctīva" tempus="plūsquamperfectum" numerālis="singulāris" persōna="secunda">
+    dēlēvissēs
+  </fōrma>
+  <fōrma modus="subiūnctīvus" vōx="āctīva" tempus="plūsquamperfectum" numerālis="singulāris" persōna="tertia">
+    dēlēvisset
+  </fōrma>
+  <fōrma modus="subiūnctīvus" vōx="āctīva" tempus="plūsquamperfectum" numerālis="plūrālis" persōna="prīma">
+    dēlēvissēmus
+  </fōrma>
+  <fōrma modus="subiūnctīvus" vōx="āctīva" tempus="plūsquamperfectum" numerālis="plūrālis" persōna="secunda">
+    dēlēvissētis
+  </fōrma>
+  <fōrma modus="subiūnctīvus" vōx="āctīva" tempus="plūsquamperfectum" numerālis="plūrālis" persōna="tertia">
+    dēlēvissent
+  </fōrma>
+
+  <fōrma modus="subiūnctīvus" vōx="passīva" tempus="praesēns" numerālis="singulāris" persōna="prīma">
+    dēlear
+  </fōrma>
+  <fōrma modus="subiūnctīvus" vōx="passīva" tempus="praesēns" numerālis="singulāris" persōna="secunda">
+    dēleāris
+  </fōrma>
+  <fōrma modus="subiūnctīvus" vōx="passīva" tempus="praesēns" numerālis="singulāris" persōna="tertia">
+    dēleātur
+  </fōrma>
+  <fōrma modus="subiūnctīvus" vōx="passīva" tempus="praesēns" numerālis="plūrālis" persōna="prīma">
+    dēleāmur
+  </fōrma>
+  <fōrma modus="subiūnctīvus" vōx="passīva" tempus="praesēns" numerālis="plūrālis" persōna="secunda">
+    dēleāminī
+  </fōrma>
+  <fōrma modus="subiūnctīvus" vōx="passīva" tempus="praesēns" numerālis="plūrālis" persōna="tertia">
+    dēleantur
+  </fōrma>
+
+  <fōrma modus="subiūnctīvus" vōx="passīva" tempus="infectum" numerālis="singulāris" persōna="prīma">
+    dēlērer
+  </fōrma>
+  <fōrma modus="subiūnctīvus" vōx="passīva" tempus="infectum" numerālis="singulāris" persōna="secunda">
+    dēlērēris
+  </fōrma>
+  <fōrma modus="subiūnctīvus" vōx="passīva" tempus="infectum" numerālis="singulāris" persōna="tertia">
+    dēlērētur
+  </fōrma>
+  <fōrma modus="subiūnctīvus" vōx="passīva" tempus="infectum" numerālis="plūrālis" persōna="prīma">
+    dēlērēmur
+  </fōrma>
+  <fōrma modus="subiūnctīvus" vōx="passīva" tempus="infectum" numerālis="plūrālis" persōna="secunda">
+    dēlērēminī
+  </fōrma>
+  <fōrma modus="subiūnctīvus" vōx="passīva" tempus="infectum" numerālis="plūrālis" persōna="tertia">
+    dēlērentur
+  </fōrma>
+</āctus>

@@ -1,0 +1,270 @@
+<āctus lemma="cēnsēre">
+  <fōrma modus="īnfīnītīvus" vōx="āctīva" tempus="praesēns">
+    cēnsēre
+  </fōrma>
+  <fōrma modus="īnfīnītīvus" vōx="āctīva" tempus="perfectum">
+    cēnsēvisse
+  </fōrma>
+  <fōrma modus="īnfīnītīvus" vōx="passīva" tempus="perfectum">
+    cēnsērī
+  </fōrma>
+  <fōrma modus="participiālis" vōx="āctīva" tempus="praesēns">
+    cēnsēns
+  </fōrma>
+  <fōrma modus="participiālis" vōx="passīva" tempus="futūrum">
+    cēnsendus
+  </fōrma>
+  <fōrma modus="participiālis" vōx="āctīva" tempus="futūrum">
+    cēnsūrus
+  </fōrma>
+  <fōrma modus="participiālis" vōx="āctīva" tempus="perfectum">
+    cēnsus
+  </fōrma>
+
+  <fōrma modus="imperātīvus" vōx="āctīva" tempus="praesēns" numerālis="singulāris" persōna="secunda">
+    cēnsē
+  </fōrma>
+  <fōrma modus="imperātīvus" vōx="āctīva" tempus="praesēns" numerālis="plūrālis" persōna="secunda">
+    cēnsēte
+  </fōrma>
+  <fōrma modus="imperātīvus" vōx="āctīva" tempus="futūrum" numerālis="singulāris" persōna="secunda">
+    cēnsētō
+  </fōrma>
+  <fōrma modus="imperātīvus" vōx="āctīva" tempus="futūrum" numerālis="singulāris" persōna="tertia">
+    cēnsētō
+  </fōrma>
+  <fōrma modus="imperātīvus" vōx="āctīva" tempus="futūrum" numerālis="plūrālis" persōna="secunda">
+    cēnsētōte
+  </fōrma>
+  <fōrma modus="imperātīvus" vōx="āctīva" tempus="futūrum" numerālis="plūrālis" persōna="tertia">
+    cēnsentō
+  </fōrma>
+
+  <fōrma modus="indicātīvus" vōx="āctīva" tempus="praesēns" numerālis="singulāris" persōna="prīma">
+    cēnseō
+  </fōrma>
+  <fōrma modus="indicātīvus" vōx="āctīva" tempus="praesēns" numerālis="singulāris" persōna="secunda">
+    cēnsēs
+  </fōrma>
+  <fōrma modus="indicātīvus" vōx="āctīva" tempus="praesēns" numerālis="singulāris" persōna="tertia">
+    cēnset
+  </fōrma>
+  <fōrma modus="indicātīvus" vōx="āctīva" tempus="praesēns" numerālis="plūrālis" persōna="prīma">
+    cēnsēmus
+  </fōrma>
+  <fōrma modus="indicātīvus" vōx="āctīva" tempus="praesēns" numerālis="plūrālis" persōna="secunda">
+    cēnsētis
+  </fōrma>
+  <fōrma modus="indicātīvus" vōx="āctīva" tempus="praesēns" numerālis="plūrālis" persōna="tertia">
+    cēnsent
+  </fōrma>
+
+  <fōrma modus="indicātīvus" vōx="āctīva" tempus="infectum" numerālis="singulāris" persōna="prīma">
+    cēnsēbam
+  </fōrma>
+  <fōrma modus="indicātīvus" vōx="āctīva" tempus="infectum" numerālis="singulāris" persōna="secunda">
+    cēnsēbās
+  </fōrma>
+  <fōrma modus="indicātīvus" vōx="āctīva" tempus="infectum" numerālis="singulāris" persōna="tertia">
+    cēnsēbat
+  </fōrma>
+  <fōrma modus="indicātīvus" vōx="āctīva" tempus="infectum" numerālis="plūrālis" persōna="prīma">
+    cēnsēbāmus
+  </fōrma>
+  <fōrma modus="indicātīvus" vōx="āctīva" tempus="infectum" numerālis="plūrālis" persōna="secunda">
+    cēnsēbātis
+  </fōrma>
+  <fōrma modus="indicātīvus" vōx="āctīva" tempus="infectum" numerālis="plūrālis" persōna="tertia">
+    cēnsēbant
+  </fōrma>
+
+  <fōrma modus="indicātīvus" vōx="āctīva" tempus="futūrum" numerālis="singulāris" persōna="prīma">
+    cēnsēbō
+  </fōrma>
+  <fōrma modus="indicātīvus" vōx="āctīva" tempus="futūrum" numerālis="singulāris" persōna="secunda">
+    cēnsēbis
+  </fōrma>
+  <fōrma modus="indicātīvus" vōx="āctīva" tempus="futūrum" numerālis="singulāris" persōna="tertia">
+    cēnsēbit
+  </fōrma>
+  <fōrma modus="indicātīvus" vōx="āctīva" tempus="futūrum" numerālis="plūrālis" persōna="prīma">
+    cēnsēbimus
+  </fōrma>
+  <fōrma modus="indicātīvus" vōx="āctīva" tempus="futūrum" numerālis="plūrālis" persōna="secunda">
+    cēnsēbitis
+  </fōrma>
+  <fōrma modus="indicātīvus" vōx="āctīva" tempus="futūrum" numerālis="plūrālis" persōna="tertia">
+    cēnsēbunt
+  </fōrma>
+
+  <fōrma modus="indicātīvus" vōx="āctīva" tempus="perfectum" numerālis="singulāris" persōna="prīma">
+    cēnsuī
+  </fōrma>
+  <fōrma modus="indicātīvus" vōx="āctīva" tempus="perfectum" numerālis="singulāris" persōna="secunda">
+    cēnsuistī
+  </fōrma>
+  <fōrma modus="indicātīvus" vōx="āctīva" tempus="perfectum" numerālis="singulāris" persōna="tertia">
+    cēnsuit
+  </fōrma>
+  <fōrma modus="indicātīvus" vōx="āctīva" tempus="perfectum" numerālis="plūrālis" persōna="prīma">
+    cēnsuimus
+  </fōrma>
+  <fōrma modus="indicātīvus" vōx="āctīva" tempus="perfectum" numerālis="plūrālis" persōna="secunda">
+    cēnsuitis
+  </fōrma>
+  <fōrma modus="indicātīvus" vōx="āctīva" tempus="perfectum" numerālis="plūrālis" persōna="tertia">
+    cēnsuērunt
+  </fōrma>
+
+  <fōrma modus="indicātīvus" vōx="āctīva" tempus="plūsquamperfectum" numerālis="singulāris" persōna="prīma">
+    cēnsueram
+  </fōrma>
+  <fōrma modus="indicātīvus" vōx="āctīva" tempus="plūsquamperfectum" numerālis="singulāris" persōna="secunda">
+    cēnsuerās
+  </fōrma>
+  <fōrma modus="indicātīvus" vōx="āctīva" tempus="plūsquamperfectum" numerālis="singulāris" persōna="tertia">
+    cēnsuerat
+  </fōrma>
+  <fōrma modus="indicātīvus" vōx="āctīva" tempus="plūsquamperfectum" numerālis="plūrālis" persōna="prīma">
+    cēnsuerāmus
+  </fōrma>
+  <fōrma modus="indicātīvus" vōx="āctīva" tempus="plūsquamperfectum" numerālis="plūrālis" persōna="secunda">
+    cēnsuerātis
+  </fōrma>
+  <fōrma modus="indicātīvus" vōx="āctīva" tempus="plūsquamperfectum" numerālis="plūrālis" persōna="tertia">
+    cēnsuērant
+  </fōrma>
+
+  <fōrma modus="indicātīvus" vōx="āctīva" tempus="futrexāctum" numerālis="singulāris" persōna="prīma">
+    cēnsuerō
+  </fōrma>
+  <fōrma modus="indicātīvus" vōx="āctīva" tempus="futrexāctum" numerālis="singulāris" persōna="secunda">
+    cēnsueris
+  </fōrma>
+  <fōrma modus="indicātīvus" vōx="āctīva" tempus="futrexāctum" numerālis="singulāris" persōna="tertia">
+    cēnsuerit
+  </fōrma>
+  <fōrma modus="indicātīvus" vōx="āctīva" tempus="futrexāctum" numerālis="plūrālis" persōna="prīma">
+    cēnsuerimus
+  </fōrma>
+  <fōrma modus="indicātīvus" vōx="āctīva" tempus="futrexāctum" numerālis="plūrālis" persōna="secunda">
+    cēnsueritis
+  </fōrma>
+  <fōrma modus="indicātīvus" vōx="āctīva" tempus="futrexāctum" numerālis="plūrālis" persōna="tertia">
+    cēnsuērint
+  </fōrma>
+
+  <fōrma modus="subiūnctīvus" vōx="āctīva" tempus="praesēns" numerālis="singulāris" persōna="prīma">
+    cēnseam
+  </fōrma>
+  <fōrma modus="subiūnctīvus" vōx="āctīva" tempus="praesēns" numerālis="singulāris" persōna="secunda">
+    cēnseās
+  </fōrma>
+  <fōrma modus="subiūnctīvus" vōx="āctīva" tempus="praesēns" numerālis="singulāris" persōna="tertia">
+    cēnseat
+  </fōrma>
+  <fōrma modus="subiūnctīvus" vōx="āctīva" tempus="praesēns" numerālis="plūrālis" persōna="prīma">
+    cēnseāmus
+  </fōrma>
+  <fōrma modus="subiūnctīvus" vōx="āctīva" tempus="praesēns" numerālis="plūrālis" persōna="secunda">
+    cēnseātis
+  </fōrma>
+  <fōrma modus="subiūnctīvus" vōx="āctīva" tempus="praesēns" numerālis="plūrālis" persōna="tertia">
+    cēnseant
+  </fōrma>
+
+  <fōrma modus="subiūnctīvus" vōx="āctīva" tempus="infectum" numerālis="singulāris" persōna="prīma">
+    cēnsērem
+  </fōrma>
+  <fōrma modus="subiūnctīvus" vōx="āctīva" tempus="infectum" numerālis="singulāris" persōna="secunda">
+    cēnsērēs
+  </fōrma>
+  <fōrma modus="subiūnctīvus" vōx="āctīva" tempus="infectum" numerālis="singulāris" persōna="tertia">
+    cēnsēret
+  </fōrma>
+  <fōrma modus="subiūnctīvus" vōx="āctīva" tempus="infectum" numerālis="plūrālis" persōna="prīma">
+    cēnsērēmus
+  </fōrma>
+  <fōrma modus="subiūnctīvus" vōx="āctīva" tempus="infectum" numerālis="plūrālis" persōna="secunda">
+    cēnsērētis
+  </fōrma>
+  <fōrma modus="subiūnctīvus" vōx="āctīva" tempus="infectum" numerālis="plūrālis" persōna="tertia">
+    cēnsērent
+  </fōrma>
+
+  <fōrma modus="subiūnctīvus" vōx="āctīva" tempus="perfectum" numerālis="singulāris" persōna="prīma">
+    cēnsuerim
+  </fōrma>
+  <fōrma modus="subiūnctīvus" vōx="āctīva" tempus="perfectum" numerālis="singulāris" persōna="secunda">
+    cēnsuerīs
+  </fōrma>
+  <fōrma modus="subiūnctīvus" vōx="āctīva" tempus="perfectum" numerālis="singulāris" persōna="tertia">
+    cēnsuerit
+  </fōrma>
+  <fōrma modus="subiūnctīvus" vōx="āctīva" tempus="perfectum" numerālis="plūrālis" persōna="prīma">
+    cēnsuerīmus
+  </fōrma>
+  <fōrma modus="subiūnctīvus" vōx="āctīva" tempus="perfectum" numerālis="plūrālis" persōna="secunda">
+    cēnsuerītis
+  </fōrma>
+  <fōrma modus="subiūnctīvus" vōx="āctīva" tempus="perfectum" numerālis="plūrālis" persōna="tertia">
+    cēnsuerint
+  </fōrma>
+
+  <fōrma modus="subiūnctīvus" vōx="āctīva" tempus="plūsquamperfectum" numerālis="singulāris" persōna="prīma">
+    cēnsuissem
+  </fōrma>
+  <fōrma modus="subiūnctīvus" vōx="āctīva" tempus="plūsquamperfectum" numerālis="singulāris" persōna="secunda">
+    cēnsuissēs
+  </fōrma>
+  <fōrma modus="subiūnctīvus" vōx="āctīva" tempus="plūsquamperfectum" numerālis="singulāris" persōna="tertia">
+    cēnsuisset
+  </fōrma>
+  <fōrma modus="subiūnctīvus" vōx="āctīva" tempus="plūsquamperfectum" numerālis="plūrālis" persōna="prīma">
+    cēnsuissēmus
+  </fōrma>
+  <fōrma modus="subiūnctīvus" vōx="āctīva" tempus="plūsquamperfectum" numerālis="plūrālis" persōna="secunda">
+    cēnsuissētis
+  </fōrma>
+  <fōrma modus="subiūnctīvus" vōx="āctīva" tempus="plūsquamperfectum" numerālis="plūrālis" persōna="tertia">
+    cēnsuissent
+  </fōrma>
+
+  <fōrma modus="subiūnctīvus" vōx="passīva" tempus="praesēns" numerālis="singulāris" persōna="prīma">
+    cēnsear
+  </fōrma>
+  <fōrma modus="subiūnctīvus" vōx="passīva" tempus="praesēns" numerālis="singulāris" persōna="secunda">
+    cēnseāris
+  </fōrma>
+  <fōrma modus="subiūnctīvus" vōx="passīva" tempus="praesēns" numerālis="singulāris" persōna="tertia">
+    cēnseātur
+  </fōrma>
+  <fōrma modus="subiūnctīvus" vōx="passīva" tempus="praesēns" numerālis="plūrālis" persōna="prīma">
+    cēnseāmur
+  </fōrma>
+  <fōrma modus="subiūnctīvus" vōx="passīva" tempus="praesēns" numerālis="plūrālis" persōna="secunda">
+    cēnseāminī
+  </fōrma>
+  <fōrma modus="subiūnctīvus" vōx="passīva" tempus="praesēns" numerālis="plūrālis" persōna="tertia">
+    cēnseantur
+  </fōrma>
+
+  <fōrma modus="subiūnctīvus" vōx="passīva" tempus="infectum" numerālis="singulāris" persōna="prīma">
+    cēnsērer
+  </fōrma>
+  <fōrma modus="subiūnctīvus" vōx="passīva" tempus="infectum" numerālis="singulāris" persōna="secunda">
+    cēnsērēris
+  </fōrma>
+  <fōrma modus="subiūnctīvus" vōx="passīva" tempus="infectum" numerālis="singulāris" persōna="tertia">
+    cēnsērētur
+  </fōrma>
+  <fōrma modus="subiūnctīvus" vōx="passīva" tempus="infectum" numerālis="plūrālis" persōna="prīma">
+    cēnsērēmur
+  </fōrma>
+  <fōrma modus="subiūnctīvus" vōx="passīva" tempus="infectum" numerālis="plūrālis" persōna="secunda">
+    cēnsērēminī
+  </fōrma>
+  <fōrma modus="subiūnctīvus" vōx="passīva" tempus="infectum" numerālis="plūrālis" persōna="tertia">
+    cēnsērentur
+  </fōrma>
+</āctus>

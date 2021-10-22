@@ -1,4 +1,4 @@
-<adiectīvum fundāmen="amātus">
+<adiectīvum lemma="amātus">
   <fōrma speciālitās="commūne" genus="masculīnum" numerālis="singulāris" cāsus="nōminātīvus">
     amātus
   </fōrma>
@@ -44,7 +44,7 @@
     amātae
   </fōrma>
   <fōrma speciālitās="commūne" genus="fēminīnum" numerālis="singulāris" cāsus="datīvus">
-    amātā
+    amātae
   </fōrma>
   <fōrma speciālitās="commūne" genus="fēminīnum" numerālis="singulāris" cāsus="accūsātīvus">
     amātam

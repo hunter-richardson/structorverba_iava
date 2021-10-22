@@ -1,4 +1,4 @@
-<adiectīvum fundāmen="Latīnus">
+<adiectīvum lemma="Latīnus">
   <fōrma speciālitās="proprium" genus="masculīnum" numerālis="singulāris" cāsus="nōminātīvus">
     Latīnus
   </fōrma>
@@ -44,7 +44,7 @@
     Latīnae
   </fōrma>
   <fōrma speciālitās="proprium" genus="fēminīnum" numerālis="singulāris" cāsus="datīvus">
-    Latīnā
+    Latīnae
   </fōrma>
   <fōrma speciālitās="proprium" genus="fēminīnum" numerālis="singulāris" cāsus="accūsātīvus">
     Latīnam

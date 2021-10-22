@@ -1,14 +1,20 @@
 package net.strūctorverba.verba.multiplicia;
 
-import lombok.*;
-import lombok.experimental.Accessors;
 import net.strūctorverba.conditōrēs.multiplicia.ConditōrAdiectīvīs;
 import net.strūctorverba.inventōrēs.InventorAdiectīvīs;
 import net.strūctorverba.lēctōrēs.LēctorMultiplicibus;
 import net.strūctorverba.nūntiī.Nūntius;
 import net.strūctorverba.tenōrēs.TenorMultiplicibus;
-import net.strūctorverba.ēnumerātiōnēs.*;
+import net.strūctorverba.ēnumerātiōnēs.Catēgoria;
+import net.strūctorverba.ēnumerātiōnēs.Cāsus;
+import net.strūctorverba.ēnumerātiōnēs.Genus;
+import net.strūctorverba.ēnumerātiōnēs.Gradus;
+import net.strūctorverba.ēnumerātiōnēs.Numerālis;
+import net.strūctorverba.ēnumerātiōnēs.Speciālitās;
+
 import org.jetbrains.annotations.NotNull;
+
+import lombok.Getter;
 
 /**
  * Classis {@link Adiectīvum} repraesentat adiectīva ut coniectēris. <br> Rēs classis huius catēgoriam {@link
@@ -27,18 +33,16 @@ public final class Adiectīvum extends Nōminālis <Adiectīvum> {
    * @see Gradus
    */
   @NotNull public final Gradus gradus;
-  @Getter(lazy = true) @Accessors(fluent = true)
+  @Getter(lazy = true)
   @NotNull private final Nūntius.NūntiusAdiectīvōrum nūntius = Nūntius.NūntiusAdiectīvōrum.fac.get();
 
-  @Builder(access = AccessLevel.PUBLIC, builderClassName = "Conditōr",
-           builderMethodName = "conditōr", buildMethodName = "condam")
-  private Adiectīvum(@NotNull final Speciālitās speciālitās, @NotNull final Genus genus,
+  public Adiectīvum(@NotNull final Speciālitās speciālitās, @NotNull final Genus genus,
                      @NotNull final Cāsus cāsus, @NotNull final Numerālis numerālis,
-                     @NotNull final Gradus gradus, @NotNull final String fundāmen,
+                     @NotNull final Gradus gradus, @NotNull final String lemma,
                      @NotNull final String scrīptiō) {
-    super(Catēgoria.ADIECTĪVUM, speciālitās, genus, cāsus, numerālis, fundāmen, scrīptiō);
+    super(Catēgoria.ADIECTĪVUM, speciālitās, genus, cāsus, numerālis, lemma, scrīptiō);
     this.gradus = gradus;
-    nūntius().plūsGarriō("Scrībor ut", scrīptiō);
+    nūntius.plūsGarriō("Scrībor ut", scrīptiō);
   }
 }
 

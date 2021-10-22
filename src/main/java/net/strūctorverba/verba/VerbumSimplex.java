@@ -3,19 +3,24 @@ package net.strūctorverba.verba;
 import com.github.chaosfirebolt.converter.RomanInteger;
 import com.github.chaosfirebolt.converter.constants.IntegerType;
 import com.github.chaosfirebolt.converter.util.Validator;
-import lombok.*;
-import lombok.experimental.Accessors;
+
 import net.strūctorverba.conditōrēs.ConditōrSimplicibus;
 import net.strūctorverba.inventōrēs.Inventor;
-import net.strūctorverba.lēctōrēs.*;
+import net.strūctorverba.lēctōrēs.LēctorPraepositiōnibus;
+import net.strūctorverba.lēctōrēs.LēctorSimplicibus;
 import net.strūctorverba.mīscella.Ūtilitās;
 import net.strūctorverba.nūntiī.Nūntius;
 import net.strūctorverba.tenōrēs.TenorSimplicibus;
 import net.strūctorverba.ēnumerātiōnēs.Catēgoria;
+
 import org.apache.commons.lang3.StringUtils;
-import org.jetbrains.annotations.*;
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
+import org.jetbrains.annotations.Range;
 
 import java.util.function.Supplier;
+
+import lombok.Getter;
 
 /**
  * Classis {@link VerbumSimplex} repraesentat verbum aliquem quod fōrmam ūnam sōlum habet. <br> Rēs classis {@link
@@ -27,19 +32,19 @@ public abstract class VerbumSimplex <Hoc extends Verbum <Hoc>> extends Verbum <H
   /**
    * Officium hoc cōnstrūctōrem reī classis huius perpetrat.
    * @param ctgr valōrem {@link #catēgoria} indicat.
-   * @param fdmn valōrem {@link #fundāmen} indicat.
+   * @param lm valōrem {@link #lemma} indicat.
    */
-  protected VerbumSimplex(@NotNull final Catēgoria ctgr, @NotNull final String fdmn) {
-    super(ctgr, fdmn);
+  protected VerbumSimplex(@NotNull final Catēgoria ctgr, @NotNull final String lm) {
+    super(ctgr, lm);
   }
 
   /**
-   * @return Repraesentātiōnem scrīpta reī classis {@link VerbumSimplex}. <br> Sōlum valōrem {@link Verbum#fundāmen}
+   * @return Repraesentātiōnem scrīpta reī classis {@link VerbumSimplex}. <br> Sōlum valōrem {@link Verbum#lemma}
    *   potest referre cum fōrmā ūnā.
    */
   @Override @NotNull
   public String toString( ) {
-    return fundāmen;
+    return lemma;
   }
 
   /**
@@ -52,14 +57,12 @@ public abstract class VerbumSimplex <Hoc extends Verbum <Hoc>> extends Verbum <H
    * @see Nūntius.NūntiusConiūnctīvōrum
    */
   public static final class Coniūnctīvum extends VerbumSimplex <Coniūnctīvum> {
-    @Getter(lazy = true) @Accessors(fluent = true)
+    @Getter(lazy = true)
     @NotNull private final Nūntius.NūntiusConiūnctīvōrum nūntius = Nūntius.NūntiusConiūnctīvōrum.fac.get();
 
-    @Builder(access = AccessLevel.PUBLIC, builderClassName = "Conditōr",
-             builderMethodName = "conditōr", buildMethodName = "condam")
-    private Coniūnctīvum(@NotNull final String fundāmen) {
-      super(Catēgoria.CONIŪNCTĪVUM, fundāmen);
-      nūntius().plūsGarriō("Scrībor ut", fundāmen);
+    public Coniūnctīvum(@NotNull final String verbum) {
+      super(Catēgoria.CONIŪNCTĪVUM, verbum);
+      nūntius.plūsGarriō("Scrībor ut", verbum);
     }
   }
 
@@ -73,14 +76,12 @@ public abstract class VerbumSimplex <Hoc extends Verbum <Hoc>> extends Verbum <H
    * @see Nūntius.NūntiusInteriectiōnum
    */
   public static final class Interiectiō extends VerbumSimplex <Interiectiō> {
-    @Getter(lazy = true) @Accessors(fluent = true)
+    @Getter(lazy = true)
     @NotNull private final Nūntius.NūntiusInteriectiōnum nūntius = Nūntius.NūntiusInteriectiōnum.fac.get();
 
-    @Builder(access = AccessLevel.PUBLIC, builderClassName = "Conditōr",
-             builderMethodName = "conditōr", buildMethodName = "condam")
-    private Interiectiō(@NotNull final String fundāmen) {
-      super(Catēgoria.INTERIECTIŌ, fundāmen);
-      nūntius().plūsGarriō("Scrībor ut", fundāmen);
+    public Interiectiō(@NotNull final String verbum) {
+      super(Catēgoria.INTERIECTIŌ, verbum);
+      nūntius.plūsGarriō("Scrībor ut", verbum);
     }
   }
 
@@ -95,15 +96,13 @@ public abstract class VerbumSimplex <Hoc extends Verbum <Hoc>> extends Verbum <H
      * Valor hic supplet rem classis {@link Praepositiō} quam praepositiōnem nūlla repraesentat.
      */
     @NotNull public static final Supplier <Praepositiō> assūme =
-      ( ) -> Praepositiō.conditōr().fundāmen(StringUtils.EMPTY).condam();
-    @Getter(lazy = true) @Accessors(fluent = true)
+      ( ) -> new Praepositiō(StringUtils.EMPTY);
+    @Getter(lazy = true)
     @NotNull private final Nūntius.NūntiusPraepositiōnum nūntius = Nūntius.NūntiusPraepositiōnum.fac.get();
 
-    @Builder(access = AccessLevel.PUBLIC, builderClassName = "Conditōr",
-             builderMethodName = "conditōr", buildMethodName = "condam")
-    private Praepositiō(@NotNull final String fundāmen) {
-      super(Catēgoria.PRAEPOSITIŌ, fundāmen);
-      nūntius().plūsGarriō("Scrībor ut", fundāmen);
+    public Praepositiō(@NotNull final String verbum) {
+      super(Catēgoria.PRAEPOSITIŌ, verbum);
+      nūntius.plūsGarriō("Scrībor ut", verbum);
     }
   }
 
@@ -124,15 +123,13 @@ public abstract class VerbumSimplex <Hoc extends Verbum <Hoc>> extends Verbum <H
      */
     @Range(from = 1, to = 3999)
     public final short numerus;
-    @Getter(lazy = true) @Accessors(fluent = true)
+    @Getter(lazy = true)
     @NotNull private final Nūntius.NūntiusNumerōrum nūntius = Nūntius.NūntiusNumerōrum.fac.get();
 
-    @Builder(access = AccessLevel.PUBLIC, builderClassName = "Conditōr",
-             builderMethodName = "conditōr", buildMethodName = "condam")
-    private Numerus(final short numerus) throws IllegalArgumentException {
+    public Numerus(final short numerus) throws IllegalArgumentException {
       super(Catēgoria.NUMERUS, String.valueOf(numerus));
       this.numerus = Validator.range(Short.toUnsignedInt(numerus)).shortValue();
-      nūntius().plūsGarriō("Scrībor ut", toString());
+      nūntius.plūsGarriō("Scrībor ut", toString());
     }
 
     @NotNull private RomanInteger ostendam( ) throws IllegalArgumentException {
@@ -150,7 +147,7 @@ public abstract class VerbumSimplex <Hoc extends Verbum <Hoc>> extends Verbum <H
       try {
         return Ūtilitās.capitāneāsScrībō(ostendam().toString());
       } catch (IllegalArgumentException e) {
-        nūntius().terreō(e);
+        nūntius.terreō(e);
         return StringUtils.EMPTY;
       }
     }
@@ -166,7 +163,7 @@ public abstract class VerbumSimplex <Hoc extends Verbum <Hoc>> extends Verbum <H
       try {
         return new Numerus(ostendam().add(alius.ostendam()).getArabic().shortValue());
       } catch (IllegalArgumentException e) {
-        nūntius().terreō(e);
+        nūntius.terreō(e);
         return null;
       }
     }
@@ -182,7 +179,7 @@ public abstract class VerbumSimplex <Hoc extends Verbum <Hoc>> extends Verbum <H
       try {
         return new Numerus(ostendam().subtract(alius.ostendam()).getArabic().shortValue());
       } catch (IllegalArgumentException e) {
-        nūntius().terreō(e);
+        nūntius.terreō(e);
         return null;
       }
     }
@@ -198,7 +195,7 @@ public abstract class VerbumSimplex <Hoc extends Verbum <Hoc>> extends Verbum <H
       try {
         return new Numerus(ostendam().multiply(alius.ostendam()).getArabic().shortValue());
       } catch (IllegalArgumentException e) {
-        nūntius().terreō(e);
+        nūntius.terreō(e);
         return null;
       }
     }
@@ -214,7 +211,7 @@ public abstract class VerbumSimplex <Hoc extends Verbum <Hoc>> extends Verbum <H
       try {
         return new Numerus(ostendam().divide(alius.ostendam()).getArabic().shortValue());
       } catch (IllegalArgumentException e) {
-        nūntius().terreō(e);
+        nūntius.terreō(e);
         return null;
       }
     }
@@ -230,7 +227,7 @@ public abstract class VerbumSimplex <Hoc extends Verbum <Hoc>> extends Verbum <H
       try {
         return new Numerus(ostendam().remainder(alius.ostendam()).getArabic().shortValue());
       } catch (IllegalArgumentException e) {
-        nūntius().terreō(e);
+        nūntius.terreō(e);
         return null;
       }
     }

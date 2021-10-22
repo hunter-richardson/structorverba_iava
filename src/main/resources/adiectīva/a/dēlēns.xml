@@ -1,0 +1,115 @@
+<adiectīvum lemma="dēlēns">
+  <fōrma speciālitās="commūne" genus="masculīnum" numerālis="singulāris" cāsus="nōminātīvus">
+    dēlēns
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="masculīnum" numerālis="singulāris" cāsus="genitīvus">
+    dēlentis
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="masculīnum" numerālis="singulāris" cāsus="datīvus">
+    dēlentī
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="masculīnum" numerālis="singulāris" cāsus="accūsātīvus">
+    dēlentem
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="masculīnum" numerālis="singulāris" cāsus="ablātīvus">
+    dēlente
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="masculīnum" numerālis="singulāris" cāsus="vocātīvus">
+    dēlēns
+  </fōrma>
+
+  <fōrma speciālitās="commūne" genus="masculīnum" numerālis="plūrālis" cāsus="nōminātīvus">
+    dēlentēs
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="masculīnum" numerālis="plūrālis" cāsus="genitīvus">
+    dēlentum
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="masculīnum" numerālis="plūrālis" cāsus="datīvus">
+    dēlentibus
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="masculīnum" numerālis="plūrālis" cāsus="accūsātīvus">
+    dēlentēs
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="masculīnum" numerālis="plūrālis" cāsus="ablātīvus">
+    dēlentibus
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="masculīnum" numerālis="plūrālis" cāsus="vocātīvus">
+    dēlentēs
+  </fōrma>
+
+  <fōrma speciālitās="commūne" genus="fēminīnum" numerālis="singulāris" cāsus="nōminātīvus">
+    dēlēns
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="fēminīnum" numerālis="singulāris" cāsus="genitīvus">
+    dēlentis
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="fēminīnum" numerālis="singulāris" cāsus="datīvus">
+    dēlentī
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="fēminīnum" numerālis="singulāris" cāsus="accūsātīvus">
+    dēlentem
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="fēminīnum" numerālis="singulāris" cāsus="ablātīvus">
+    dēlente
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="fēminīnum" numerālis="singulāris" cāsus="vocātīvus">
+    dēlēns
+  </fōrma>
+
+  <fōrma speciālitās="commūne" genus="fēminīnum" numerālis="plūrālis" cāsus="nōminātīvus">
+    dēlentēs
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="fēminīnum" numerālis="plūrālis" cāsus="genitīvus">
+    dēlentum
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="fēminīnum" numerālis="plūrālis" cāsus="datīvus">
+    dēlentibus
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="fēminīnum" numerālis="plūrālis" cāsus="accūsātīvus">
+    dēlentēs
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="fēminīnum" numerālis="plūrālis" cāsus="ablātīvus">
+    dēlentibus
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="fēminīnum" numerālis="plūrālis" cāsus="vocātīvus">
+    dēlentēs
+  </fōrma>
+
+  <fōrma speciālitās="commūne" genus="neutrum" numerālis="singulāris" cāsus="nōminātīvus">
+    dēlēns
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="neutrum" numerālis="singulāris" cāsus="genitīvus">
+    dēlentis
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="neutrum" numerālis="singulāris" cāsus="datīvus">
+    dēlentī
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="neutrum" numerālis="singulāris" cāsus="accūsātīvus">
+    dēlēns
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="neutrum" numerālis="singulāris" cāsus="ablātīvus">
+    dēlente
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="neutrum" numerālis="singulāris" cāsus="vocātīvus">
+    dēlēns
+  </fōrma>
+
+  <fōrma speciālitās="commūne" genus="neutrum" numerālis="plūrālis" cāsus="nōminātīvus">
+    dēlentia
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="neutrum" numerālis="plūrālis" cāsus="genitīvus">
+    dēlentum
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="neutrum" numerālis="plūrālis" cāsus="datīvus">
+    dēlentibus
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="neutrum" numerālis="plūrālis" cāsus="accūsātīvus">
+    dēlentia
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="neutrum" numerālis="plūrālis" cāsus="ablātīvus">
+    dēlentibus
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="neutrum" numerālis="plūrālis" cāsus="vocātīvus">
+    dēlentia
+  </fōrma>
+</adiectīvum>

@@ -3,12 +3,18 @@ package net.strūctorverba.conditōrēs;
 import net.strūctorverba.nūntiī.Nūntius;
 import net.strūctorverba.tenōrēs.Tenor;
 import net.strūctorverba.verba.VerbumSimplex;
-import org.apache.commons.lang3.*;
-import org.jetbrains.annotations.*;
 
-import javax.ejb.*;
+import org.apache.commons.lang3.ObjectUtils;
+import org.apache.commons.lang3.StringUtils;
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
+
 import java.util.Objects;
-import java.util.function.*;
+import java.util.function.Function;
+import java.util.function.Supplier;
+
+import javax.ejb.DependsOn;
+import javax.ejb.Singleton;
 
 /**
  * Classis {@link ConditōrSimplicibus} est vās classis {@link Conditōr} classibus omnibus quibus classem {@link
@@ -39,8 +45,8 @@ public abstract class ConditōrSimplicibus <Hoc extends VerbumSimplex <Hoc>> ext
    */
   @Override @Nullable
   public final Hoc condam( ) {
-    final Hoc hoc = StringUtils.isNotBlank(fundāmen) ? cōnstrūctor.apply(fundāmen)
-                                                     : null;
+    final Hoc hoc = StringUtils.isNotBlank(lemma) ? cōnstrūctor.apply(lemma)
+                                                  : null;
     referō(hoc);
     return hoc;
   }
@@ -69,8 +75,7 @@ public abstract class ConditōrSimplicibus <Hoc extends VerbumSimplex <Hoc>> ext
       ( ) -> ObjectUtils.firstNonNull(īnstantia, īnstantia = new ConditōrConiūnctīvīs());
 
     private ConditōrConiūnctīvīs( ) {
-      super(Nūntius.NūntiusConditōrīConiūnctivīs.fac,
-            fundāmen -> VerbumSimplex.Coniūnctīvum.conditōr().fundāmen(fundāmen).condam());
+      super(Nūntius.NūntiusConditōrīConiūnctivīs.fac, VerbumSimplex.Coniūnctīvum::new);
       nūntius.plūrimumGarriō("Factus sum");
     }
 
@@ -81,7 +86,7 @@ public abstract class ConditōrSimplicibus <Hoc extends VerbumSimplex <Hoc>> ext
      */
     protected void referō(@Nullable final VerbumSimplex.Coniūnctīvum hoc) {
       if (Objects.isNull(hoc)) {
-        nūntius.certiōrō(VerbumSimplex.Coniūnctīvum.class.getSimpleName(), fundāmen, "fīnītur prōdūcere.");
+        nūntius.certiōrō(VerbumSimplex.Coniūnctīvum.class.getSimpleName(), lemma, "fīnītur prōdūcere.");
       } else {
         nūntius.moneō(VerbumSimplex.Coniūnctīvum.class.getSimpleName().replace("um", "ī"),
                       "prōductiō fōrmae nūllae prōcessit.");
@@ -107,8 +112,7 @@ public abstract class ConditōrSimplicibus <Hoc extends VerbumSimplex <Hoc>> ext
       ( ) -> ObjectUtils.firstNonNull(īnstantia, īnstantia = new ConditōrInteriectiōnibus());
 
     private ConditōrInteriectiōnibus( ) {
-      super(Nūntius.NūntiusConditōrīInteriectiōnibus.fac,
-            fundāmen -> VerbumSimplex.Interiectiō.conditōr().fundāmen(fundāmen).condam());
+      super(Nūntius.NūntiusConditōrīInteriectiōnibus.fac, VerbumSimplex.Interiectiō::new);
       nūntius.plūrimumGarriō("Factus sum");
     }
 
@@ -118,7 +122,7 @@ public abstract class ConditōrSimplicibus <Hoc extends VerbumSimplex <Hoc>> ext
      */
     protected void referō(@Nullable final VerbumSimplex.Interiectiō hoc) {
       if (Objects.isNull(hoc)) {
-        nūntius.certiōrō(VerbumSimplex.Interiectiō.class.getSimpleName(), fundāmen, "fīnītur prōdūcere.");
+        nūntius.certiōrō(VerbumSimplex.Interiectiō.class.getSimpleName(), lemma, "fīnītur prōdūcere.");
       } else {
         nūntius.moneō(VerbumSimplex.Interiectiō.class.getSimpleName().replace("um", "ī"),
                       "prōductiō fōrmae nūllae prōcessit.");

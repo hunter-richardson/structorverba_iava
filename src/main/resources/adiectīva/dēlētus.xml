@@ -1,0 +1,115 @@
+<adiectīvum lemma="dēlērus">
+  <fōrma speciālitās="commūne" genus="masculīnum" numerālis="singulāris" cāsus="nōminātīvus">
+    dēlērus
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="masculīnum" numerālis="singulāris" cāsus="genitīvus">
+    dēlērī
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="masculīnum" numerālis="singulāris" cāsus="datīvus">
+    dēlērō
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="masculīnum" numerālis="singulāris" cāsus="accūsātīvus">
+    dēlērum
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="masculīnum" numerālis="singulāris" cāsus="ablātīvus">
+    dēlērō
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="masculīnum" numerālis="singulāris" cāsus="locātīvus">
+    dēlēre
+  </fōrma>
+
+  <fōrma speciālitās="commūne" genus="masculīnum" numerālis="plūrālis" cāsus="nōminātīvus">
+    dēlērī
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="masculīnum" numerālis="plūrālis" cāsus="genitīvus">
+    dēlērōrum
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="masculīnum" numerālis="plūrālis" cāsus="datīvus">
+    dēlērīs
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="masculīnum" numerālis="plūrālis" cāsus="accūsātīvus">
+    dēlērōs
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="masculīnum" numerālis="plūrālis" cāsus="ablātīvus">
+    dēlērīs
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="masculīnum" numerālis="plūrālis" cāsus="locātīvus">
+    dēlērī
+  </fōrma>
+
+  <fōrma speciālitās="commūne" genus="fēminīnum" numerālis="singulāris" cāsus="nōminātīvus">
+    dēlēra
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="fēminīnum" numerālis="singulāris" cāsus="genitīvus">
+    dēlērae
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="fēminīnum" numerālis="singulāris" cāsus="datīvus">
+    dēlērae
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="fēminīnum" numerālis="singulāris" cāsus="accūsātīvus">
+    dēlēram
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="fēminīnum" numerālis="singulāris" cāsus="ablātīvus">
+    dēlērā
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="fēminīnum" numerālis="singulāris" cāsus="locātīvus">
+    dēlēra
+  </fōrma>
+
+  <fōrma speciālitās="commūne" genus="fēminīnum" numerālis="plūrālis" cāsus="nōminātīvus">
+    dēlērae
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="fēminīnum" numerālis="plūrālis" cāsus="genitīvus">
+    dēlērārum
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="fēminīnum" numerālis="plūrālis" cāsus="datīvus">
+    dēlērīs
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="fēminīnum" numerālis="plūrālis" cāsus="accūsātīvus">
+    dēlērās
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="fēminīnum" numerālis="plūrālis" cāsus="ablātīvus">
+    dēlērīs
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="fēminīnum" numerālis="plūrālis" cāsus="locātīvus">
+    dēlērae
+  </fōrma>
+
+  <fōrma speciālitās="commūne" genus="neutrum" numerālis="singulāris" cāsus="nōminātīvus">
+    dēlērum
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="neutrum" numerālis="singulāris" cāsus="genitīvus">
+    dēlērī
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="neutrum" numerālis="singulāris" cāsus="datīvus">
+    dēlērō
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="neutrum" numerālis="singulāris" cāsus="accūsātīvus">
+    dēlērum
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="neutrum" numerālis="singulāris" cāsus="ablātīvus">
+    dēlērō
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="neutrum" numerālis="singulāris" cāsus="locātīvus">
+    dēlērum
+  </fōrma>
+
+  <fōrma speciālitās="commūne" genus="neutrum" numerālis="plūrālis" cāsus="nōminātīvus">
+    dēlēra
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="neutrum" numerālis="plūrālis" cāsus="genitīvus">
+    dēlērōrum
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="neutrum" numerālis="plūrālis" cāsus="datīvus">
+    dēlērīs
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="neutrum" numerālis="plūrālis" cāsus="accūsātīvus">
+    dēlēra
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="neutrum" numerālis="plūrālis" cāsus="ablātīvus">
+    dēlērīs
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="neutrum" numerālis="plūrālis" cāsus="locātīvus">
+    dēlēra
+  </fōrma>
+</adiectīvum>

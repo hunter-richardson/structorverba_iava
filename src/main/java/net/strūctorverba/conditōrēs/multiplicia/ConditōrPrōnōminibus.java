@@ -4,13 +4,21 @@ import net.strūctorverba.conditōrēs.Conditōr;
 import net.strūctorverba.nūntiī.Nūntius;
 import net.strūctorverba.verba.Verbum;
 import net.strūctorverba.verba.multiplicia.Prōnōmen;
-import net.strūctorverba.ēnumerātiōnēs.*;
-import org.apache.commons.lang3.*;
-import org.jetbrains.annotations.*;
+import net.strūctorverba.ēnumerātiōnēs.Cāsus;
+import net.strūctorverba.ēnumerātiōnēs.Genus;
+import net.strūctorverba.ēnumerātiōnēs.Numerālis;
+import net.strūctorverba.ēnumerātiōnēs.Speciālitās;
 
-import javax.ejb.*;
+import org.apache.commons.lang3.ObjectUtils;
+import org.apache.commons.lang3.StringUtils;
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
+
 import java.util.Objects;
 import java.util.function.Supplier;
+
+import javax.ejb.DependsOn;
+import javax.ejb.Singleton;
 
 /**
  * Classis {@link ConditōrPrōnōminibus} est vās classis {@link Conditōr} classī {@link Prōnōmen}.
@@ -45,15 +53,14 @@ public final class ConditōrPrōnōminibus extends ConditōrMultiplicibus <Prōn
    * @return Rem novam classis {@link Prōnōmen}. <br> Modus hid valōrem {@code null} refert sī nōn valet valor aliquis
    *   rēs haec continet.
    */
-  @Override @Nullable
+  @Override @Nullable @SuppressWarnings("ConstantConditions")
   public Prōnōmen condam( ) {
     if (ObjectUtils.allNotNull(speciālitās, genus, cāsus, numerālis)
-        && StringUtils.isNoneBlank(fundāmen, scrīptiō)) {
-      final Prōnōmen hoc = Prōnōmen.conditōr().fundāmen(fundāmen).speciālitās(speciālitās).genus(genus)
-                                   .cāsus(cāsus).numerālis(numerālis).scrīptiō(scrīptiō).condam();
+        && StringUtils.isNoneBlank(lemma, scrīptiō)) {
+      final Prōnōmen hoc = new Prōnōmen(speciālitās, genus, cāsus, numerālis, lemma, scrīptiō);
       if (Objects.isNull(hoc)) {
         nūntius.moneō(Prōnōmen.class.getSimpleName().replace("en", "inis"),
-                      StringUtils.firstNonBlank(fundāmen, scrīptiō), "prōductiō fōrmae nūllae prōcessit.");
+                      StringUtils.firstNonBlank(lemma, scrīptiō), "prōductiō fōrmae nūllae prōcessit.");
         return null;
       } else {
         nūntius.certiōrō(Prōnōmen.class.getSimpleName(), scrīptiō, "fīnītur prōdūcere.");
@@ -61,7 +68,7 @@ public final class ConditōrPrōnōminibus extends ConditōrMultiplicibus <Prōn
       }
     } else {
       nūntius.moneō(Prōnōmen.class.getSimpleName().replace("en", "inis"),
-                    StringUtils.firstNonBlank(fundāmen, scrīptiō), "prōductiō fōrmae nūllae prōcessit.");
+                    StringUtils.firstNonBlank(lemma, scrīptiō), "prōductiō fōrmae nūllae prōcessit.");
       return null;
     }
   }
@@ -72,7 +79,7 @@ public final class ConditōrPrōnōminibus extends ConditōrMultiplicibus <Prōn
    * @see Genus#dēfīniam(String)
    * @see Cāsus#dēfīniam(String)
    * @see Numerālis#dēfīniam(String)
-   * @see Verbum#fundāmen
+   * @see Verbum#lemma
    */
   @Override public void allegō(@NotNull final String nōmen, @NotNull final String dēscrīptor) {
     switch (nōmen) {
@@ -80,7 +87,7 @@ public final class ConditōrPrōnōminibus extends ConditōrMultiplicibus <Prōn
       case "genus" -> genus = Genus.dēfīniam(dēscrīptor);
       case "numerālis" -> numerālis = Numerālis.dēfīniam(dēscrīptor);
       case "cāsus" -> cāsus = Cāsus.dēfīniam(dēscrīptor);
-      case "fundāmen" -> fundāmen = dēscrīptor.trim();
+      case "fundāmen" -> lemma = dēscrīptor.trim();
       default -> {
         nūntius.moneō(Prōnōmen.class.getSimpleName().replace("en", "ī"),
                       "Attribūta inopīnāta est ūsa:", nōmen, "est", dēscrīptor);

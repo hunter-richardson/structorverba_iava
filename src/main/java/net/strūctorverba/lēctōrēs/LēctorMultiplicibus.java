@@ -1,15 +1,31 @@
 package net.strūctorverba.lēctōrēs;
 
-import net.strūctorverba.inventōrēs.*;
+import net.strūctorverba.inventōrēs.Inventor;
+import net.strūctorverba.inventōrēs.InventorAdiectīvīs;
+import net.strūctorverba.inventōrēs.InventorAdverbiīs;
+import net.strūctorverba.inventōrēs.InventorNōminibus;
+import net.strūctorverba.inventōrēs.InventorPrōnōminibus;
+import net.strūctorverba.inventōrēs.InventorĀctīs;
 import net.strūctorverba.nūntiī.Nūntius;
 import net.strūctorverba.tenōrēs.TenorMultiplicibus;
-import net.strūctorverba.verba.multiplicia.*;
-import net.strūctorverba.ēnumerātiōnēs.*;
-import org.apache.commons.lang3.ObjectUtils;
-import org.jetbrains.annotations.*;
+import net.strūctorverba.verba.multiplicia.Adiectīvum;
+import net.strūctorverba.verba.multiplicia.Adverbium;
+import net.strūctorverba.verba.multiplicia.Nōmen;
+import net.strūctorverba.verba.multiplicia.Prōnōmen;
+import net.strūctorverba.verba.multiplicia.VerbumMultiplex;
+import net.strūctorverba.verba.multiplicia.Āctus;
+import net.strūctorverba.ēnumerātiōnēs.Catēgoria;
+import net.strūctorverba.ēnumerātiōnēs.Numerālis;
+import net.strūctorverba.ēnumerātiōnēs.Persōna;
 
-import javax.ejb.*;
+import org.apache.commons.lang3.ObjectUtils;
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
+
 import java.util.function.Supplier;
+
+import javax.ejb.DependsOn;
+import javax.ejb.Singleton;
 
 /**
  * Classis {@link LēctorMultiplicibus} est vās classis {@link Lēctor} classibus omnibus quibus classem {@link
@@ -40,13 +56,13 @@ public abstract class LēctorMultiplicibus <Hoc extends VerbumMultiplex <Hoc>> e
   /**
    * Modus hic ūtitur modus {@link Lēctor#legam(String)} ut rem classis {@link Hoc} ā valōre {@link Lēctor#tenor}
    * adveniat.
-   * @param fundāmen fundāmen verbō quod rēs haec cōnābitur advenīre
+   * @param lemma lemma verbō quod rēs haec cōnābitur advenīre
    * @param illa     seriēs ēnumerātiōnum quam licet {@link #inventor} cōlere ēventīs lēctīs
    * @return Rem classis {@link Hoc} quam valōrem {@code verbum} quadrat. <br> Modus hic valōrem {@code null} refert sī
    *   nihil quadrat valōrem {@code verbum}.
    */
-  @Nullable public final Hoc adveniam(@NotNull final String fundāmen, @NotNull final Enum <@NotNull ?>... illa) {
-    legam(fundāmen);
+  @Nullable public final Hoc adveniam(@NotNull final String lemma, @NotNull final Enum <@NotNull ?>... illa) {
+    legam(lemma);
     Hoc hoc = tenor.referō(inventor.allegō(illa).inquīram());
     inventor.restituō();
     if (hoc == null) {

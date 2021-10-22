@@ -33,11 +33,12 @@ public abstract class VerbumMultiplex <Hoc extends Verbum <Hoc>> extends Verbum 
   /**
    * Officium hoc cōnstrūctōrem reī classis huius perpetrat.
    * @param ctgr  valōrem {@link Verbum#catēgoria} indicat.
-   * @param fdmn  valōrem {@link Verbum#fundāmen} indicat.
+   * @param lm  valōrem {@link Verbum#lemma} indicat.
    * @param scrpt valōrem {@link #scrīptiō} indicat.
    */
-  protected VerbumMultiplex(@NotNull final Catēgoria ctgr, @NotNull final String fdmn, @NotNull final String scrpt) {
-    super(ctgr, fdmn);
+  protected VerbumMultiplex(@NotNull final Catēgoria ctgr,
+                            @NotNull final String lm, @NotNull final String scrpt) {
+    super(ctgr, lm);
     scrīptiō = scrpt;
     encliticum = Encliticum.NŌLĒNS;
   }

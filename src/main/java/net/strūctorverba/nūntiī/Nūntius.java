@@ -1,21 +1,41 @@
 package net.strūctorverba.nūntiī;
 
 import net.strūctorverba.conditōrēs.ConditōrSimplicibus;
-import net.strūctorverba.conditōrēs.multiplicia.*;
-import net.strūctorverba.inventōrēs.*;
-import net.strūctorverba.lēctōrēs.*;
+import net.strūctorverba.conditōrēs.multiplicia.ConditōrAdiectīvīs;
+import net.strūctorverba.conditōrēs.multiplicia.ConditōrAdverbiīs;
+import net.strūctorverba.conditōrēs.multiplicia.ConditōrNōminibus;
+import net.strūctorverba.conditōrēs.multiplicia.ConditōrPrōnōminibus;
+import net.strūctorverba.conditōrēs.multiplicia.ConditōrĀctīs;
+import net.strūctorverba.inventōrēs.InventorAdiectīvīs;
+import net.strūctorverba.inventōrēs.InventorAdverbiīs;
+import net.strūctorverba.inventōrēs.InventorNōminibus;
+import net.strūctorverba.inventōrēs.InventorPrōnōminibus;
+import net.strūctorverba.inventōrēs.InventorĀctīs;
+import net.strūctorverba.lēctōrēs.LēctorMultiplicibus;
+import net.strūctorverba.lēctōrēs.LēctorPraepositiōnibus;
+import net.strūctorverba.lēctōrēs.LēctorSimplicibus;
 import net.strūctorverba.mīscella.Omnum;
-import net.strūctorverba.tenōrēs.*;
+import net.strūctorverba.tenōrēs.TenorMultiplicibus;
+import net.strūctorverba.tenōrēs.TenorSimplicibus;
 import net.strūctorverba.verba.VerbumSimplex;
-import net.strūctorverba.verba.multiplicia.*;
-import org.apache.commons.lang3.*;
-import org.jetbrains.annotations.*;
+import net.strūctorverba.verba.multiplicia.Adiectīvum;
+import net.strūctorverba.verba.multiplicia.Adverbium;
+import net.strūctorverba.verba.multiplicia.Nōmen;
+import net.strūctorverba.verba.multiplicia.Prōnōmen;
+import net.strūctorverba.verba.multiplicia.Āctus;
 
-import javax.ejb.Singleton;
+import org.apache.commons.lang3.ArrayUtils;
+import org.apache.commons.lang3.ObjectUtils;
+import org.apache.commons.lang3.StringUtils;
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
+
 import java.util.Objects;
 import java.util.function.Supplier;
 import java.util.logging.Logger;
 import java.util.stream.Stream;
+
+import javax.ejb.Singleton;
 
 /**
  * Classis {@link Nūntius} nūntia dē exsecūtiōne programmātis StrūctorVerba in scāpīs LOG scrībit. <br> Classēs plūrimae
@@ -123,7 +143,6 @@ public abstract class Nūntius {
    * @param nūntia seriēs reī persignāre
    * @see GradusNūntiī#SCRŪTĀNS
    */
-  @SuppressWarnings("unused")
   public final void garriō(@Nullable final Object... nūntia) {
     nūntiō(GradusNūntiī.SCRŪTĀNS, nūntia);
   }
@@ -134,7 +153,6 @@ public abstract class Nūntius {
    * @param nūntia seriēs reī persignāre
    * @see GradusNūntiī#SCRŪTĀNTIOR
    */
-  @SuppressWarnings("unused")
   public final void plūsGarriō(@Nullable final Object... nūntia) {
     nūntiō(GradusNūntiī.SCRŪTĀNTIOR, nūntia);
   }
@@ -145,7 +163,6 @@ public abstract class Nūntius {
    * @param nūntia seriēs reī persignāre
    * @see GradusNūntiī#SCRŪTĀNTISSIMUS
    */
-  @SuppressWarnings("unused")
   public final void plūrimumGarriō(@Nullable final Object... nūntia) {
     nūntiō(GradusNūntiī.SCRŪTĀNTISSIMUS, nūntia);
   }
@@ -722,7 +739,7 @@ public abstract class Nūntius {
       ( ) -> ObjectUtils.firstNonNull(īnstantia, īnstantia = new NūntiusAdverbiōrum());
 
     private NūntiusAdverbiōrum( ) {
-      super(ParametrīNūntiī.parā(Adverbium.Conditōr.class));
+      super(ParametrīNūntiī.parā(Adverbium.class));
     }
   }
 
@@ -742,7 +759,7 @@ public abstract class Nūntius {
       ( ) -> ObjectUtils.firstNonNull(īnstantia, īnstantia = new NūntiusConiūnctīvōrum());
 
     private NūntiusConiūnctīvōrum( ) {
-      super(ParametrīNūntiī.parā(VerbumSimplex.Coniūnctīvum.Conditōr.class));
+      super(ParametrīNūntiī.parā(VerbumSimplex.Coniūnctīvum.class));
     }
   }
 
@@ -762,7 +779,7 @@ public abstract class Nūntius {
       ( ) -> ObjectUtils.firstNonNull(īnstantia, īnstantia = new NūntiusInteriectiōnum());
 
     private NūntiusInteriectiōnum( ) {
-      super(ParametrīNūntiī.parā(VerbumSimplex.Interiectiō.Conditōr.class));
+      super(ParametrīNūntiī.parā(VerbumSimplex.Interiectiō.class));
     }
   }
 
@@ -782,7 +799,7 @@ public abstract class Nūntius {
       ( ) -> ObjectUtils.firstNonNull(īnstantia, īnstantia = new NūntiusPraepositiōnum());
 
     private NūntiusPraepositiōnum( ) {
-      super(ParametrīNūntiī.parā(VerbumSimplex.Praepositiō.Conditōr.class));
+      super(ParametrīNūntiī.parā(VerbumSimplex.Praepositiō.class));
     }
   }
 
@@ -802,7 +819,7 @@ public abstract class Nūntius {
       ( ) -> ObjectUtils.firstNonNull(īnstantia, īnstantia = new NūntiusNumerōrum());
 
     private NūntiusNumerōrum( ) {
-      super(ParametrīNūntiī.parā(VerbumSimplex.Numerus.Conditōr.class));
+      super(ParametrīNūntiī.parā(VerbumSimplex.Numerus.class));
     }
   }
 
@@ -822,7 +839,7 @@ public abstract class Nūntius {
       ( ) -> ObjectUtils.firstNonNull(īnstantia, īnstantia = new NūntiusNōminum());
 
     private NūntiusNōminum( ) {
-      super(ParametrīNūntiī.parā(Nōmen.Conditōr.class));
+      super(ParametrīNūntiī.parā(Nōmen.class));
     }
   }
 
@@ -842,7 +859,7 @@ public abstract class Nūntius {
       ( ) -> ObjectUtils.firstNonNull(īnstantia, īnstantia = new NūntiusAdiectīvōrum());
 
     private NūntiusAdiectīvōrum( ) {
-      super(ParametrīNūntiī.parā(Āctus.Conditōr.class));
+      super(ParametrīNūntiī.parā(Āctus.class));
     }
   }
 
@@ -862,7 +879,7 @@ public abstract class Nūntius {
       ( ) -> ObjectUtils.firstNonNull(īnstantia, īnstantia = new NūntiusPrōnōminum());
 
     private NūntiusPrōnōminum( ) {
-      super(ParametrīNūntiī.parā(Prōnōmen.Conditōr.class));
+      super(ParametrīNūntiī.parā(Prōnōmen.class));
     }
   }
 
@@ -882,7 +899,7 @@ public abstract class Nūntius {
       ( ) -> ObjectUtils.firstNonNull(īnstantia, īnstantia = new NūntiusĀctōrum());
 
     private NūntiusĀctōrum( ) {
-      super(ParametrīNūntiī.parā(Āctus.Conditōr.class));
+      super(ParametrīNūntiī.parā(Āctus.class));
     }
   }
 

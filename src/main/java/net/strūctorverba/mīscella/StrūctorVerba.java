@@ -1,20 +1,32 @@
 package net.strūctorverba.mīscella;
 
 import com.github.chaosfirebolt.converter.RomanInteger;
-import com.github.chaosfirebolt.converter.constants.*;
-import lombok.*;
-import lombok.experimental.Accessors;
-import net.strūctorverba.lēctōrēs.*;
-import net.strūctorverba.verba.*;
+import com.github.chaosfirebolt.converter.constants.IntegerType;
+import com.github.chaosfirebolt.converter.constants.Patterns;
+
+import net.strūctorverba.lēctōrēs.Lēctor;
+import net.strūctorverba.lēctōrēs.LēctorMultiplicibus;
+import net.strūctorverba.lēctōrēs.LēctorPraepositiōnibus;
+import net.strūctorverba.lēctōrēs.LēctorSimplicibus;
+import net.strūctorverba.verba.Verba;
+import net.strūctorverba.verba.Verbum;
+import net.strūctorverba.verba.VerbumSimplex;
 import net.strūctorverba.verba.multiplicia.VerbumMultiplex;
 import net.strūctorverba.ēnumerātiōnēs.Catēgoria;
-import org.apache.commons.lang3.Range;
-import org.apache.commons.lang3.*;
-import org.jetbrains.annotations.*;
 
-import javax.ejb.Singleton;
+import org.apache.commons.lang3.ObjectUtils;
+import org.apache.commons.lang3.Range;
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
+
 import java.util.Objects;
 import java.util.function.Supplier;
+
+import javax.ejb.Singleton;
+
+import lombok.AccessLevel;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
 
 /**
  * Classis {@link StrūctorVerba} accessum modīs omnibus programmātis StrūctorVerba prōvidet. <br> Sōlum reī classis
@@ -36,38 +48,38 @@ public final class StrūctorVerba extends Omnum {
   @NotNull private final Range <Short> TRACTUS_NUMERŌRUM = Range.between(Integer.valueOf(1).shortValue(),
                                                                          Integer.valueOf(4000).shortValue());
 
-  @Getter(value = AccessLevel.PUBLIC, lazy = true) @Accessors(fluent = true)
+  @Getter(value = AccessLevel.PUBLIC, lazy = true)
   @NotNull private final LēctorMultiplicibus.LēctorAdiectīvīs adiectīva =
     LēctorMultiplicibus.LēctorAdiectīvīs.fac.get();
 
-  @Getter(value = AccessLevel.PUBLIC, lazy = true) @Accessors(fluent = true)
+  @Getter(value = AccessLevel.PUBLIC, lazy = true)
   @NotNull private final LēctorMultiplicibus.LēctorAdverbiīs adverbia = LēctorMultiplicibus.LēctorAdverbiīs.fac.get();
 
-  @Getter(value = AccessLevel.PUBLIC, lazy = true) @Accessors(fluent = true)
+  @Getter(value = AccessLevel.PUBLIC, lazy = true)
   @NotNull private final LēctorMultiplicibus.LēctorPrōnōminibus prōnōmina =
     LēctorMultiplicibus.LēctorPrōnōminibus.fac.get();
 
-  @Getter(value = AccessLevel.PUBLIC, lazy = true) @Accessors(fluent = true)
+  @Getter(value = AccessLevel.PUBLIC, lazy = true)
   @NotNull private final LēctorMultiplicibus.LēctorĀctīs āctī = LēctorMultiplicibus.LēctorĀctīs.fac.get();
 
-  @Getter(value = AccessLevel.PUBLIC, lazy = true) @Accessors(fluent = true)
+  @Getter(value = AccessLevel.PUBLIC, lazy = true)
   @NotNull private final LēctorMultiplicibus.LēctorNōminibus nōmina = LēctorMultiplicibus.LēctorNōminibus.fac.get();
 
-  @Getter(value = AccessLevel.PUBLIC, lazy = true) @Accessors(fluent = true)
+  @Getter(value = AccessLevel.PUBLIC, lazy = true)
   @NotNull private final LēctorSimplicibus.LēctorConiūnctīvīs coniūnctīva =
     LēctorSimplicibus.LēctorConiūnctīvīs.fac.get();
 
-  @Getter(value = AccessLevel.PUBLIC, lazy = true) @Accessors(fluent = true)
+  @Getter(value = AccessLevel.PUBLIC, lazy = true)
   @NotNull private final LēctorSimplicibus.LēctorInteriectiōnibus interiectiōnēs =
     LēctorSimplicibus.LēctorInteriectiōnibus.fac.get();
 
-  @Getter(value = AccessLevel.PUBLIC, lazy = true) @Accessors(fluent = true)
+  @Getter(value = AccessLevel.PUBLIC, lazy = true)
   @NotNull private final LēctorPraepositiōnibus praepositiōnēs = LēctorPraepositiōnibus.fac.get();
 
   /**
-   * Modus hic rem apta classis {@link Lēctor} valōrī {@code catēgoria} sēligit et valōrēs {@code fundāmen} immittit.
+   * Modus hic rem apta classis {@link Lēctor} valōrī {@code catēgoria} sēligit et valōrēs {@code lemma} immittit.
    * Valōrem {@code null} refert sī rem nūlla classis {@link Lēctor} valōrem {@code catēgoria} quadrat.
-   * @param fundāmen  valōrem {@link Verbum#fundāmen} immittendus
+   * @param lemma  valōrem {@link Verbum#lemma} immittendus
    * @param catēgoria valor tentendus
    * @param <Hoc>     classis extenta classis {@link VerbumSimplex}
    * @return rem classis {@link Hoc}
@@ -75,21 +87,21 @@ public final class StrūctorVerba extends Omnum {
    * @see #adveniam(String, Catēgoria, Enum[])
    */
   @SuppressWarnings("unchecked")
-  @Nullable public <Hoc extends Verbum <Hoc>> Hoc adveniam(@NotNull final String fundāmen,
+  @Nullable public <Hoc extends Verbum <Hoc>> Hoc adveniam(@NotNull final String lemma,
                                                            @NotNull final Catēgoria catēgoria) {
     return switch (catēgoria) {
-      case CONIŪNCTĪVUM -> (Hoc) coniūnctīva().adveniam(fundāmen);
-      case INTERIECTIŌ -> (Hoc) interiectiōnēs().adveniam(fundāmen);
-      case PRAEPOSITIŌ -> (Hoc) praepositiōnēs().adveniam(fundāmen);
+      case CONIŪNCTĪVUM -> (Hoc) coniūnctīva.adveniam(lemma);
+      case INTERIECTIŌ -> (Hoc) interiectiōnēs.adveniam(lemma);
+      case PRAEPOSITIŌ -> (Hoc) praepositiōnēs.adveniam(lemma);
       default -> null;
     };
   }
 
   /**
    * Modus hic rem apta classis {@link LēctorMultiplicibus} valōrī {@code catēgoria} sēligit et valōrēs et {@code
-   * fundāmen} et {@code illa} immittit. <br> Valōrēs et {@code fundāmen} et {@code illa} modō {@link #adveniam(String,
+   * lemma} et {@code illa} immittit. <br> Valōrēs et {@code lemma} et {@code illa} modō {@link #adveniam(String,
    * Catēgoria)} immittit sī rem nūlla classis {@link LēctorMultiplicibus} valōrem {@code catēgoria} quadrat.
-   * @param fundāmen  valōrem {@link Verbum#fundāmen} immittendus
+   * @param lemma  valōrem {@link Verbum#lemma} immittendus
    * @param catēgoria valor tentendus
    * @param illa      valōrēs immittendī
    * @param <Hoc>     classis extenta classis {@link VerbumMultiplex}
@@ -97,20 +109,20 @@ public final class StrūctorVerba extends Omnum {
    * @see Catēgoria
    */
   @SuppressWarnings("ConstantConditions")
-  @Nullable public <Hoc extends Verbum <Hoc>> Hoc adveniam(@NotNull final String fundāmen,
+  @Nullable public <Hoc extends Verbum <Hoc>> Hoc adveniam(@NotNull final String lemma,
                                                            @NotNull final Catēgoria catēgoria,
                                                            @NotNull final Enum <@NotNull ?>... illa) {
     try {
       return (Hoc) (switch (catēgoria) {
-        case ADIECTĪVUM -> adiectīva();
-        case ADVERBIUM -> adverbia();
-        case ĀCTUS -> āctī();
-        case NŌMEN -> nōmina();
-        case PRŌNŌMEN -> prōnōmina();
+        case ADIECTĪVUM -> adiectīva;
+        case ADVERBIUM -> adverbia;
+        case ĀCTUS -> āctī;
+        case NŌMEN -> nōmina;
+        case PRŌNŌMEN -> prōnōmina;
         default -> null;
-      }).adveniam(fundāmen, illa);
+      }).adveniam(lemma, illa);
     } catch (NullPointerException e) {
-      return adveniam(fundāmen, catēgoria);
+      return adveniam(lemma, catēgoria);
     }
   }
 
@@ -128,7 +140,7 @@ public final class StrūctorVerba extends Omnum {
    * @return Rem classis {@link VerbumSimplex.Numerus}
    */
   public @Nullable VerbumSimplex.Numerus numerus(final short numerus) {
-    return TRACTUS_NUMERŌRUM.contains(numerus) ? VerbumSimplex.Numerus.conditōr().numerus(numerus).condam()
+    return TRACTUS_NUMERŌRUM.contains(numerus) ? new VerbumSimplex.Numerus(numerus)
                                                : null;
   }
 
@@ -140,7 +152,7 @@ public final class StrūctorVerba extends Omnum {
     if (Patterns.ROMAN_PATTERN.matcher(scrīptiō).matches()) {
       final short numerus = RomanInteger.parse(scrīptiō, IntegerType.ROMAN).getArabic().shortValue();
       if (TRACTUS_NUMERŌRUM.contains(numerus)) {
-        return VerbumSimplex.Numerus.conditōr().numerus(numerus).condam();
+        return new VerbumSimplex.Numerus(numerus);
       } else {
         return null;
       }

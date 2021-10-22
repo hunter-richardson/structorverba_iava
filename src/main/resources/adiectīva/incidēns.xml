@@ -1,4 +1,4 @@
-<adiectīvum fundāmen="incidēns">
+<adiectīvum lemma="incidēns">
   <fōrma speciālitās="commūne" genus="masculīnum" numerālis="singulāris" cāsus="nōminātīvus">
     incidēns
   </fōrma>
@@ -14,8 +14,8 @@
   <fōrma speciālitās="commūne" genus="masculīnum" numerālis="singulāris" cāsus="ablātīvus">
     incidēnte
   </fōrma>
-  <fōrma speciālitās="commūne" genus="masculīnum" numerālis="singulāris" cāsus="locātīvus">
-    dolor
+  <fōrma speciālitās="commūne" genus="masculīnum" numerālis="singulāris" cāsus="vocātīvus">
+    incidēns
   </fōrma>
 
   <fōrma speciālitās="commūne" genus="masculīnum" numerālis="plūrālis" cāsus="nōminātīvus">
@@ -33,7 +33,7 @@
   <fōrma speciālitās="commūne" genus="masculīnum" numerālis="plūrālis" cāsus="ablātīvus">
     incidēntibus
   </fōrma>
-  <fōrma speciālitās="commūne" genus="masculīnum" numerālis="plūrālis" cāsus="locātīvus">
+  <fōrma speciālitās="commūne" genus="masculīnum" numerālis="plūrālis" cāsus="vocātīvus">
     incidēntēs
   </fōrma>
 
@@ -52,8 +52,8 @@
   <fōrma speciālitās="commūne" genus="fēminīnum" numerālis="singulāris" cāsus="ablātīvus">
     incidēnte
   </fōrma>
-  <fōrma speciālitās="commūne" genus="fēminīnum" numerālis="singulāris" cāsus="locātīvus">
-    dolor
+  <fōrma speciālitās="commūne" genus="fēminīnum" numerālis="singulāris" cāsus="vocātīvus">
+    incidēns
   </fōrma>
 
   <fōrma speciālitās="commūne" genus="fēminīnum" numerālis="plūrālis" cāsus="nōminātīvus">
@@ -71,7 +71,7 @@
   <fōrma speciālitās="commūne" genus="fēminīnum" numerālis="plūrālis" cāsus="ablātīvus">
     incidēntibus
   </fōrma>
-  <fōrma speciālitās="commūne" genus="fēminīnum" numerālis="plūrālis" cāsus="locātīvus">
+  <fōrma speciālitās="commūne" genus="fēminīnum" numerālis="plūrālis" cāsus="vocātīvus">
     incidēntēs
   </fōrma>
 
@@ -90,7 +90,7 @@
   <fōrma speciālitās="commūne" genus="neutrum" numerālis="singulāris" cāsus="ablātīvus">
     incidēnte
   </fōrma>
-  <fōrma speciālitās="commūne" genus="neutrum" numerālis="singulāris" cāsus="locātīvus">
+  <fōrma speciālitās="commūne" genus="neutrum" numerālis="singulāris" cāsus="vocātīvus">
     incidēns
   </fōrma>
 
@@ -109,7 +109,7 @@
   <fōrma speciālitās="commūne" genus="neutrum" numerālis="plūrālis" cāsus="ablātīvus">
     incidēntibus
   </fōrma>
-  <fōrma speciālitās="commūne" genus="neutrum" numerālis="plūrālis" cāsus="locātīvus">
+  <fōrma speciālitās="commūne" genus="neutrum" numerālis="plūrālis" cāsus="vocātīvus">
     incidēntia
   </fōrma>
 </adiectīvum>

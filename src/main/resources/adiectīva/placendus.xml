@@ -1,4 +1,4 @@
-<adiectīvum fundāmen="placendus">
+<adiectīvum lemma="placendus">
   <fōrma speciālitās="commūne" genus="masculīnum" numerālis="singulāris" cāsus="nōminātīvus">
     placendus
   </fōrma>
@@ -44,7 +44,7 @@
     placendae
   </fōrma>
   <fōrma speciālitās="commūne" genus="fēminīnum" numerālis="singulāris" cāsus="datīvus">
-    placendā
+    placendae
   </fōrma>
   <fōrma speciālitās="commūne" genus="fēminīnum" numerālis="singulāris" cāsus="accūsātīvus">
     placendam

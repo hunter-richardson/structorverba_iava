@@ -37,19 +37,19 @@ public abstract class Nōminālis <Hoc extends VerbumMultiplex <Hoc>> extends Ve
 
   /**
    * Officium hoc cōnstrūctōrem reī classis huius perpetrat.
-   * @param ctgr  valōrem {@link Verbum#catēgoria} indicat.
+   * @param catēgoria  valōrem {@link Verbum#catēgoria} indicat.
    * @param spclt valōrem {@link Nōminālis#speciālitās} indicat.
    * @param gns   valōrem {@link Nōminālis#genus} indicat.
    * @param css   valōrem {@link Nōminālis#cāsus} indicat.
    * @param nmrl  valōrem {@link Nōminālis#numerālis} indicat.
-   * @param fdmn  valōrem {@link Verbum#fundāmen} indicat.
-   * @param scrpt valōrem {@link #scrīptiō} indicat.
+   * @param lemma  valōrem {@link Verbum#lemma} indicat.
+   * @param scrīptiō valōrem {@link #scrīptiō} indicat.
    */
-  protected Nōminālis(@NotNull final Catēgoria ctgr, @NotNull final Speciālitās spclt,
+  protected Nōminālis(@NotNull final Catēgoria catēgoria, @NotNull final Speciālitās spclt,
                       @NotNull final Genus gns, @NotNull final Cāsus css, @NotNull final Numerālis nmrl,
-                      @NotNull final String fdmn, @NotNull final String scrpt) {
-    super(ctgr, fdmn, Speciālitās.PROPRIUM.equals(spclt) ? Ūtilitās.prīmamCapitāneamScrībō(scrpt)
-                                                         : scrpt);
+                      @NotNull final String lemma, @NotNull final String scrīptiō) {
+    super(catēgoria, lemma, Speciālitās.PROPRIUM.equals(spclt) ? Ūtilitās.prīmamCapitāneamScrībō(scrīptiō)
+                                                         : scrīptiō);
     speciālitās = spclt;
     genus = gns;
     cāsus = css;

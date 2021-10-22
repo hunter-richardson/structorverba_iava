@@ -43,11 +43,11 @@ public class ConditōrAdverbiīs extends ConditōrMultiplicibus <Adverbium> {
   @Override @Nullable
   public Adverbium condam( ) {
     if (Objects.nonNull(gradus)
-        && StringUtils.isNoneBlank(fundāmen, scrīptiō)) {
-      final Adverbium hoc = Adverbium.conditōr().fundāmen(fundāmen).gradus(gradus).scrīptiō(scrīptiō).condam();
+        && StringUtils.isNoneBlank(lemma, scrīptiō)) {
+      final Adverbium hoc = new Adverbium(gradus, lemma, scrīptiō);
       if (Objects.isNull(hoc)) {
         nūntius.moneō(Adverbium.class.getSimpleName().replace("um", "ī"),
-                      StringUtils.firstNonBlank(fundāmen, scrīptiō), "prōductiō fōrmae nūllae prōcessit.");
+                      StringUtils.firstNonBlank(lemma, scrīptiō), "prōductiō fōrmae nūllae prōcessit.");
         return null;
       } else {
         nūntius.certiōrō(Adverbium.class.getSimpleName(), scrīptiō, "fīnītur prōdūcere.");
@@ -55,7 +55,7 @@ public class ConditōrAdverbiīs extends ConditōrMultiplicibus <Adverbium> {
       }
     } else {
       nūntius.moneō(Adverbium.class.getSimpleName().replace("um", "ī"),
-                    StringUtils.firstNonBlank(fundāmen, scrīptiō), "prōductiō fōrmae nūllae prōcessit.");
+                    StringUtils.firstNonBlank(lemma, scrīptiō), "prōductiō fōrmae nūllae prōcessit.");
       return null;
     }
   }
@@ -72,12 +72,12 @@ public class ConditōrAdverbiīs extends ConditōrMultiplicibus <Adverbium> {
   /**
    * {@inheritDoc}
    * @see Gradus#dēfīniam(String)
-   * @see Verbum#fundāmen
+   * @see Verbum#lemma
    */
   @Override public void allegō(@NotNull final String nōmen, @NotNull final String dēscrīptor) {
     switch (nōmen) {
       case "gradus" -> gradus = Gradus.dēfīniam(dēscrīptor);
-      case "fundāmen" -> fundāmen = dēscrīptor.trim();
+      case "fundāmen" -> lemma = dēscrīptor.trim();
       default -> {
         nūntius.moneō(Adiectīvum.class.getSimpleName().replace("um", "ō"),
                       "Attribūta inopīnāta est ūsa:", nōmen, "est", dēscrīptor);

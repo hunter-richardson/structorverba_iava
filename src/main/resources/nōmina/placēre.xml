@@ -1,0 +1,23 @@
+<adiectīvum lemma="placēre">
+  <fōrma speciālitās="commūne" genus="neutrum" cāsus="nōminātīvus" tempus="gerundīvus">
+    placēre
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="neutrum" cāsus="genitīvus" tempus="gerundīvus">
+    placendī
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="neutrum" cāsus="datīvus" tempus="gerundīvus">
+    placendō
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="neutrum" cāsus="accūsātīvus" tempus="gerundīvus">
+    placendum
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="neutrum" cāsus="ablātīvus" tempus="gerundīvus">
+    placendō
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="neutrum" cāsus="accūsātīvus" tempus="supīnus">
+    placitum
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="neutrum" cāsus="ablātīvus" tempus="supīnus">
+    placitū
+  </fōrma>
+</adiectīvum>

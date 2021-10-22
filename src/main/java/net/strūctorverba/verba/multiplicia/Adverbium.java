@@ -1,13 +1,15 @@
 package net.strūctorverba.verba.multiplicia;
 
-import lombok.*;
-import lombok.experimental.Accessors;
 import net.strūctorverba.conditōrēs.multiplicia.ConditōrAdverbiīs;
 import net.strūctorverba.lēctōrēs.LēctorMultiplicibus;
 import net.strūctorverba.nūntiī.Nūntius;
 import net.strūctorverba.tenōrēs.TenorMultiplicibus;
-import net.strūctorverba.ēnumerātiōnēs.*;
+import net.strūctorverba.ēnumerātiōnēs.Catēgoria;
+import net.strūctorverba.ēnumerātiōnēs.Gradus;
+
 import org.jetbrains.annotations.NotNull;
+
+import lombok.Getter;
 
 /**
  * Classis {@link Adverbium} repraesentat adverbia ut coniectēris. <br> Rēs classis huius catēgoriam {@link
@@ -24,14 +26,13 @@ public class Adverbium extends VerbumMultiplex <Adverbium> {
    * @see Gradus
    */
   @NotNull public final Gradus gradus;
-  @Getter(lazy = true) @Accessors(fluent = true)
+  @Getter(lazy = true)
   @NotNull private final Nūntius.NūntiusAdverbiōrum nūntius = Nūntius.NūntiusAdverbiōrum.fac.get();
 
-  @Builder(access = AccessLevel.PUBLIC, builderClassName = "Conditōr",
-           builderMethodName = "conditōr", buildMethodName = "condam")
-  private Adverbium(@NotNull final Gradus gradus, @NotNull final String fundāmen, @NotNull final String scrīptiō) {
-    super(Catēgoria.ADIECTĪVUM, fundāmen, scrīptiō);
+  public Adverbium(@NotNull final Gradus gradus, @NotNull final String lemma,
+                   @NotNull final String scrīptiō) {
+    super(Catēgoria.ADIECTĪVUM, lemma, scrīptiō);
     this.gradus = gradus;
-    nūntius().plūsGarriō("Scrībor ut", scrīptiō);
+    nūntius.plūsGarriō("Scrībor ut", scrīptiō);
   }
 }

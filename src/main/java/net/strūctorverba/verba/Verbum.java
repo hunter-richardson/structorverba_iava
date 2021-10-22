@@ -22,7 +22,7 @@ public abstract class Verbum <Hoc extends Verbum <Hoc>> extends Omnum {
   /**
    * Valor hic repraesentat fōrmam verbī cui rādīcēscit. Quoque nōminātur scāpum XML quō cōnservātum est.
    */
-  @NotNull public final String fundāmen;
+  @NotNull public final String lemma;
 
   /**
    * Valor hic extēnsiōnem classī huic reī huic dēsignat. {@link Catēgoria#scrīptiō} quoque nōminātur scrīnium intrā quō
@@ -34,11 +34,11 @@ public abstract class Verbum <Hoc extends Verbum <Hoc>> extends Omnum {
   /**
    * Officium hoc cōnstrūctōrem reī classis huius perpetrat.
    * @param ctgr valōrem {@link #catēgoria} indicat.
-   * @param fdmn valōrem {@link #fundāmen} indicat.
+   * @param lm valōrem {@link #lemma} indicat.
    */
-  protected Verbum(@NotNull final Catēgoria ctgr, @NotNull final String fdmn) {
+  protected Verbum(@NotNull final Catēgoria ctgr, @NotNull final String lm) {
     catēgoria = ctgr;
-    fundāmen = Ūtilitās.minusculāsScrībō(fdmn);
+    lemma = Ūtilitās.minusculāsScrībō(lm);
   }
 
   /**

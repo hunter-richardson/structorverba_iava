@@ -1,19 +1,30 @@
 package net.strūctorverba.lēctōrēs;
 
-import lombok.Getter;
-import lombok.experimental.Accessors;
-import net.strūctorverba.mīscella.*;
+import net.strūctorverba.mīscella.Omnum;
+import net.strūctorverba.mīscella.Ūtilitās;
 import net.strūctorverba.nūntiī.Nūntius;
 import net.strūctorverba.verba.VerbumSimplex;
-import net.strūctorverba.ēnumerātiōnēs.*;
-import org.apache.commons.lang3.*;
-import org.jetbrains.annotations.*;
+import net.strūctorverba.ēnumerātiōnēs.Catēgoria;
+import net.strūctorverba.ēnumerātiōnēs.Cāsus;
 
-import javax.ejb.*;
-import java.io.*;
+import org.apache.commons.lang3.ObjectUtils;
+import org.apache.commons.lang3.StringUtils;
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
+
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
 import java.nio.file.Path;
-import java.util.function.*;
+import java.util.function.BiFunction;
+import java.util.function.BiPredicate;
+import java.util.function.Supplier;
 import java.util.stream.Stream;
+
+import javax.ejb.DependsOn;
+import javax.ejb.Singleton;
+
+import lombok.Getter;
 
 /**
  * Classis {@link LēctorPraepositiōnibus} colliget data ā scāpō XML in scrīnium <a
@@ -41,17 +52,17 @@ public final class LēctorPraepositiōnibus extends Omnum {
   @NotNull public static final Supplier <LēctorPraepositiōnibus> fac =
     ( ) -> ObjectUtils.firstNonNull(īnstantia, īnstantia = new LēctorPraepositiōnibus());
 
-  @Getter(lazy = true) @Accessors(fluent = true)
+  @Getter(lazy = true)
   @NotNull private final Nūntius.NūntiusLēctōrīPraepositiōnibus nūntius =
     Nūntius.NūntiusLēctōrīPraepositiōnibus.fac.get();
 
   @NotNull private final BiPredicate <@NotNull String, @NotNull Cāsus> quaerō = (verbum, cāsus) -> {
     final String nōmen = Path.of(Catēgoria.PRAEPOSITIŌ.scrīptiō, String.format("%s.data", cāsus.scrīptiō)).toString();
     try (final BufferedReader pervidētiō = new BufferedReader(new FileReader(nōmen))) {
-      nūntius().notō("Iam legō scāpum auxiliārem", nōmen);
+      nūntius.notō("Iam legō scāpum auxiliārem", nōmen);
       return pervidētiō.lines().anyMatch(līnea -> līnea.trim().equals(Ūtilitās.minusculāsScrībō(verbum)));
     } catch (IOException e) {
-      nūntius().terreō(e);
+      nūntius.terreō(e);
       return false;
     }
   };
@@ -60,29 +71,29 @@ public final class LēctorPraepositiōnibus extends Omnum {
     (verbum, cāsus) -> {
       final String nōmen = Path.of(Catēgoria.PRAEPOSITIŌ.scrīptiō, String.format("%s.data", cāsus.scrīptiō)).toString();
       try (final BufferedReader pervidētiō = new BufferedReader(new FileReader(Ūtilitās.auxilior(nōmen)))) {
-        nūntius().notō("Iam legō scāpum auxiliārem", nōmen);
-        final String fundāmen = pervidētiō.lines()
-                                          .filter(līnea -> līnea.trim().equals(Ūtilitās.minusculāsScrībō(verbum)))
-                                          .findFirst().orElse(StringUtils.EMPTY);
-        if (StringUtils.isNotBlank(fundāmen)) {
-          nūntius().garriō("Advenī hoc:", fundāmen);
-          return VerbumSimplex.Praepositiō.conditōr().fundāmen(fundāmen).condam();
+        nūntius.notō("Iam legō scāpum auxiliārem", nōmen);
+        final String lemma = pervidētiō.lines()
+                                       .filter(līnea -> līnea.trim().equals(Ūtilitās.minusculāsScrībō(verbum)))
+                                       .findFirst().orElse(StringUtils.EMPTY);
+        if (StringUtils.isNotBlank(lemma)) {
+          nūntius.garriō("Advenī hoc:", lemma);
+          return new VerbumSimplex.Praepositiō(lemma);
         } else {
-          nūntius().moneō("Nihil advenī verbō", verbum);
-          nūntius().garriō(String.format("%snī", VerbumSimplex.Praepositiō.class.getSimpleName()),
+          nūntius.moneō("Nihil advenī verbō", verbum);
+          nūntius.garriō(String.format("%snī", VerbumSimplex.Praepositiō.class.getSimpleName()),
                            "assūmētur");
           return VerbumSimplex.Praepositiō.assūme.get();
         }
       } catch (IOException e) {
-        nūntius().terreō(e);
-        nūntius().garriō(String.format("%snī", VerbumSimplex.Praepositiō.class.getSimpleName()),
+        nūntius.terreō(e);
+        nūntius.garriō(String.format("%snī", VerbumSimplex.Praepositiō.class.getSimpleName()),
                          "assūmētur");
         return VerbumSimplex.Praepositiō.assūme.get();
       }
     };
 
   private LēctorPraepositiōnibus( ) {
-    nūntius().plūrimumGarriō("Factus sum");
+    nūntius.plūrimumGarriō("Factus sum");
   }
 
   /**
@@ -97,8 +108,8 @@ public final class LēctorPraepositiōnibus extends Omnum {
                         .filter(css -> quaerō.test(verbum, css))
                         .findFirst().orElse(Cāsus.DĒRĒCTUS);
     if (Cāsus.DĒRĒCTUS.equals(cāsus)) {
-      nūntius().moneō("Nihil advenī verbō", verbum);
-      nūntius().garriō(String.format("%snī", VerbumSimplex.Praepositiō.class.getSimpleName()),
+      nūntius.moneō("Nihil advenī verbō", verbum);
+      nūntius.garriō(String.format("%snī", VerbumSimplex.Praepositiō.class.getSimpleName()),
                        "assūmētur");
       return VerbumSimplex.Praepositiō.assūme.get();
     } else {

@@ -2,13 +2,18 @@ package net.strūctorverba.tenōrēs;
 
 import net.strūctorverba.conditōrēs.ConditōrSimplicibus;
 import net.strūctorverba.nūntiī.Nūntius;
-import net.strūctorverba.verba.*;
-import org.apache.commons.lang3.ObjectUtils;
-import org.jetbrains.annotations.*;
+import net.strūctorverba.verba.Verbum;
+import net.strūctorverba.verba.VerbumSimplex;
 
-import javax.ejb.*;
+import org.apache.commons.lang3.ObjectUtils;
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
+
 import java.util.Objects;
 import java.util.function.Supplier;
+
+import javax.ejb.DependsOn;
+import javax.ejb.Singleton;
 
 /**
  * Classis {@link TenorSimplicibus} est vās classis {@link Tenor} classibus omnibus quibus classem {@link VerbumSimplex}
@@ -47,7 +52,7 @@ public abstract class TenorSimplicibus <Hoc extends VerbumSimplex <Hoc>> extends
   /**
    * {@inheritDoc}
    * @param scrīptiō fōrmam scrīptam indendus
-   * @see Verbum#fundāmen
+   * @see Verbum#lemma
    */
   @Override protected void scrībō(@NotNull String scrīptiō) {
     condītōr.funde(scrīptiō);

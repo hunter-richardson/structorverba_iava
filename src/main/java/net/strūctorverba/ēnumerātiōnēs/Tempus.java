@@ -47,7 +47,17 @@ public enum Tempus {
    * Valor hic temporem futūrum exāctum dēsignat. <br> Curtātum ā verbīs duōbus est scrīptiōnem facilem in scāpīs XML
    * licēre.
    */
-  FUTŪRUM_EXĀCTUM("futrexāctum");
+  FUTŪRUM_EXĀCTUM("futrexāctum"),
+
+  /**
+   * Valor hic modum participiālem dēsignat.
+   */
+  GERUNDĪVUS("gerundīvus"),
+
+  /**
+   * Valor hic modum participiālem dēsignat.
+   */
+  SUPĪNUS("supīnus");
 
   /**
    * Valor hic repraesentātiōnem scrīpta reī huius dēsignat.

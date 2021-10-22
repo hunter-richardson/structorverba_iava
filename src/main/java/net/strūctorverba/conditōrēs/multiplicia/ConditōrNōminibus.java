@@ -4,13 +4,22 @@ import net.strūctorverba.conditōrēs.Conditōr;
 import net.strūctorverba.nūntiī.Nūntius;
 import net.strūctorverba.verba.Verbum;
 import net.strūctorverba.verba.multiplicia.Nōmen;
-import net.strūctorverba.ēnumerātiōnēs.*;
-import org.apache.commons.lang3.*;
-import org.jetbrains.annotations.*;
+import net.strūctorverba.ēnumerātiōnēs.Cāsus;
+import net.strūctorverba.ēnumerātiōnēs.Genus;
+import net.strūctorverba.ēnumerātiōnēs.Numerālis;
+import net.strūctorverba.ēnumerātiōnēs.Speciālitās;
+import net.strūctorverba.ēnumerātiōnēs.Tempus;
 
-import javax.ejb.*;
+import org.apache.commons.lang3.ObjectUtils;
+import org.apache.commons.lang3.StringUtils;
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
+
 import java.util.Objects;
 import java.util.function.Supplier;
+
+import javax.ejb.DependsOn;
+import javax.ejb.Singleton;
 
 /**
  * Classis {@link ConditōrNōminibus} est vās classis {@link Conditōr} classī {@link Nōmen}.
@@ -34,6 +43,7 @@ public final class ConditōrNōminibus extends ConditōrMultiplicibus <Nōmen> {
   @NotNull private Genus       genus       = Genus.NŪLLUM;
   @NotNull private Numerālis   numerālis   = Numerālis.NŪLLUS;
   @NotNull private Cāsus       cāsus       = Cāsus.DĒRĒCTUS;
+  @NotNull private Tempus      tempus      = Tempus.INTEMPORĀLE;
 
   private ConditōrNōminibus( ) {
     super(Nūntius.NūntiusConditōrīNōminibus.fac);
@@ -48,12 +58,11 @@ public final class ConditōrNōminibus extends ConditōrMultiplicibus <Nōmen> {
   @Override @Nullable
   public Nōmen condam( ) {
     if (ObjectUtils.allNotNull(speciālitās, genus, cāsus, numerālis)
-        && StringUtils.isNoneBlank(fundāmen, scrīptiō)) {
-      final Nōmen hoc = Nōmen.conditōr().fundāmen(fundāmen).speciālitās(speciālitās).genus(genus)
-                             .cāsus(cāsus).numerālis(numerālis).scrīptiō(scrīptiō).condam();
+        && StringUtils.isNoneBlank(lemma, scrīptiō)) {
+      final Nōmen hoc = new Nōmen(speciālitās, genus, cāsus, numerālis, tempus, lemma, scrīptiō);
       if (Objects.isNull(hoc)) {
         nūntius.moneō(Nōmen.class.getSimpleName().replace("en", "inis"),
-                      StringUtils.firstNonBlank(fundāmen, scrīptiō), "prōductiō fōrmae nūllae prōcessit.");
+                      StringUtils.firstNonBlank(lemma, scrīptiō), "prōductiō fōrmae nūllae prōcessit.");
         return null;
       } else {
         nūntius.certiōrō(Nōmen.class.getSimpleName(), scrīptiō, "fīnītur prōdūcere.");
@@ -61,7 +70,7 @@ public final class ConditōrNōminibus extends ConditōrMultiplicibus <Nōmen> {
       }
     } else {
       nūntius.moneō(Nōmen.class.getSimpleName().replace("en", "inis"),
-                    StringUtils.firstNonBlank(fundāmen, scrīptiō), "prōductiō fōrmae nūllae prōcessit.");
+                    StringUtils.firstNonBlank(lemma, scrīptiō), "prōductiō fōrmae nūllae prōcessit.");
       return null;
     }
   }
@@ -72,7 +81,8 @@ public final class ConditōrNōminibus extends ConditōrMultiplicibus <Nōmen> {
    * @see Genus#dēfīniam(String)
    * @see Cāsus#dēfīniam(String)
    * @see Numerālis#dēfīniam(String)
-   * @see Verbum#fundāmen
+   * @see Tempus#dēfīniam(String)
+   * @see Verbum#lemma
    */
   @Override public void allegō(@NotNull final String nōmen, @NotNull final String dēscrīptor) {
     switch (nōmen) {
@@ -80,7 +90,8 @@ public final class ConditōrNōminibus extends ConditōrMultiplicibus <Nōmen> {
       case "genus" -> genus = Genus.dēfīniam(dēscrīptor);
       case "numerālis" -> numerālis = Numerālis.dēfīniam(dēscrīptor);
       case "cāsus" -> cāsus = Cāsus.dēfīniam(dēscrīptor);
-      case "fundāmen" -> fundāmen = dēscrīptor.trim();
+      case "tempus" -> tempus = Tempus.dēfīniam(dēscrīptor);
+      case "fundāmen" -> lemma = dēscrīptor.trim();
       default -> {
         nūntius.moneō(Nōmen.class.getSimpleName().replace("en", "ī"),
                       "Attribūta inopīnāta est ūsa:", nōmen, "est", dēscrīptor);
@@ -97,12 +108,14 @@ public final class ConditōrNōminibus extends ConditōrMultiplicibus <Nōmen> {
    * @see Genus#NŪLLUM
    * @see Cāsus#DĒRĒCTUS
    * @see Numerālis#NŪLLUS
+   * @see Tempus#INTEMPORĀLE
    */
   @Override public void restituō( ) {
     speciālitās = Speciālitās.NŪLLUM;
     genus = Genus.NŪLLUM;
     cāsus = Cāsus.DĒRĒCTUS;
     numerālis = Numerālis.NŪLLUS;
+    tempus = Tempus.INTEMPORĀLE;
     scrīptiō = StringUtils.EMPTY;
     nūntius.certiōrō("Restitūtus sum");
   }

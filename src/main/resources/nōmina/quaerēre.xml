@@ -1,0 +1,23 @@
+<adiectīvum lemma="placēre">
+  <fōrma speciālitās="commūne" genus="neutrum" cāsus="nōminātīvus" tempus="gerundīvus">
+    quaerēre
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="neutrum" cāsus="genitīvus" tempus="gerundīvus">
+    quaerendī
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="neutrum" cāsus="datīvus" tempus="gerundīvus">
+    quaerendō
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="neutrum" cāsus="accūsātīvus" tempus="gerundīvus">
+    quaerendum
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="neutrum" cāsus="ablātīvus" tempus="gerundīvus">
+    quaerendō
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="neutrum" cāsus="accūsātīvus" tempus="supīnus">
+    quaesītum
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="neutrum" cāsus="ablātīvus" tempus="supīnus">
+    quaesītū
+  </fōrma>
+</adiectīvum>

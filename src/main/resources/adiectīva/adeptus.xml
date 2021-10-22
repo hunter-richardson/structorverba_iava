@@ -1,4 +1,4 @@
-<adiectīvum fundāmen="adeptus">
+<adiectīvum lemma="adeptus">
   <fōrma speciālitās="commūne" genus="masculīnum" numerālis="singulāris" cāsus="nōminātīvus">
     adeptus
   </fōrma>
@@ -44,7 +44,7 @@
     adeptae
   </fōrma>
   <fōrma speciālitās="commūne" genus="fēminīnum" numerālis="singulāris" cāsus="datīvus">
-    adeptā
+    adeptae
   </fōrma>
   <fōrma speciālitās="commūne" genus="fēminīnum" numerālis="singulāris" cāsus="accūsātīvus">
     adeptam

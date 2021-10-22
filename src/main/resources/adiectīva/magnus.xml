@@ -1,4 +1,4 @@
-<adiectīvum fundāmen="magnus">
+<adiectīvum lemma="magnus">
   <fōrma speciālitās="commūne" genus="masculīnum" numerālis="singulāris" cāsus="nōminātīvus" gradus="positīvus">
     magnus
   </fōrma>
@@ -44,7 +44,7 @@
     magnae
   </fōrma>
   <fōrma speciālitās="commūne" genus="fēminīnum" numerālis="singulāris" cāsus="datīvus" gradus="positīvus">
-    magnā
+    magnae
   </fōrma>
   <fōrma speciālitās="commūne" genus="fēminīnum" numerālis="singulāris" cāsus="accūsātīvus" gradus="positīvus">
     magnam

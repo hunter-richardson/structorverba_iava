@@ -1,4 +1,4 @@
-<adiectīvum fundāmen="placitus">
+<adiectīvum lemma="placitus">
   <fōrma speciālitās="commūne" genus="masculīnum" numerālis="singulāris" cāsus="nōminātīvus">
     placitus
   </fōrma>
@@ -44,7 +44,7 @@
     placitae
   </fōrma>
   <fōrma speciālitās="commūne" genus="fēminīnum" numerālis="singulāris" cāsus="datīvus">
-    placitā
+    placitae
   </fōrma>
   <fōrma speciālitās="commūne" genus="fēminīnum" numerālis="singulāris" cāsus="accūsātīvus">
     placitam

@@ -1,12 +1,17 @@
 package net.strūctorverba.tentāmina;
 
-import lombok.Getter;
-import lombok.experimental.Accessors;
-import net.strūctorverba.mīscella.*;
+import net.strūctorverba.mīscella.Omnum;
+import net.strūctorverba.mīscella.StrūctorVerba;
 import net.strūctorverba.verba.VerbumSimplex;
+
 import org.apache.commons.lang3.Range;
 import org.jetbrains.annotations.NotNull;
-import org.junit.jupiter.api.*;
+import org.junit.jupiter.api.MethodOrderer;
+import org.junit.jupiter.api.Order;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.TestMethodOrder;
+
+import lombok.Getter;
 
 /**
  * Classis {@link Numerī} operātiōnēs mathēmaticās rērum classis {@link VerbumSimplex.Numerus} tentat.
@@ -14,7 +19,7 @@ import org.junit.jupiter.api.*;
 @SuppressWarnings({ "NonAsciiCharacters", "SpellCheckingInspection", "FieldCanBeLocal" })
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 final class Numerī extends Omnum {
-  @NotNull @Getter(lazy = true) @Accessors(fluent = true)
+  @NotNull @Getter(lazy = true)
   private final StrūctorVerba strūctor = StrūctorVerba.fac.get();
 
   private final short NUMERUM_MAXIMUM = 3998;
@@ -29,7 +34,7 @@ final class Numerī extends Omnum {
   @Test @Order(1)
   public void conversiōnis( ) {
     System.out.println(new Tentāmen.TentāmenNumerāleConversiōnis(XLII_SCRĪPTIŌ, XLII_NUMERUM)
-                         .exsequar(strūctor().numerus(XLII_NUMERUM)));
+                         .exsequar(strūctor.numerus(XLII_NUMERUM)));
   }
 
   /**
@@ -39,7 +44,7 @@ final class Numerī extends Omnum {
   @Test @Order(2)
   public void reversiōnis( ) {
     System.out.println(new Tentāmen.TentāmenNumerāleReversiōnis(XLII_NUMERUM, XLII_SCRĪPTIŌ)
-                         .exsequar(strūctor().numerus(XLII_SCRĪPTIŌ)));
+                         .exsequar(strūctor.numerus(XLII_SCRĪPTIŌ)));
   }
 
   /**
@@ -50,7 +55,7 @@ final class Numerī extends Omnum {
   public void combīnātiōnis( ) {
     final short numerus = (short) Math.round((NUMERUM_MAXIMUM + 1) * Math.random() + 1);
     System.out.println(new Tentāmen.TentāmenNumerāleCombīnātiōnis(numerus)
-                         .exsequar(strūctor().numerus(numerus)));
+                         .exsequar(strūctor.numerus(numerus)));
   }
 
   /**
@@ -61,7 +66,7 @@ final class Numerī extends Omnum {
   public void additiōnis( ) {
     @NotNull final Range <Short> range = Range.between((short) 3, (short) 17);
     System.out.println(new Tentāmen.TentāmenMathēmaticum(range, '+')
-                         .exsequar(strūctor().numerus(range.getMaximum())));
+                         .exsequar(strūctor.numerus(range.getMaximum())));
   }
 
   /**
@@ -72,7 +77,7 @@ final class Numerī extends Omnum {
   public void subtractiōnis( ) {
     @NotNull final Range <Short> range = Range.between((short) 7, (short) 12);
     System.out.println(new Tentāmen.TentāmenMathēmaticum(range, '-')
-                         .exsequar(strūctor().numerus(range.getMaximum())));
+                         .exsequar(strūctor.numerus(range.getMaximum())));
   }
 
   /**
@@ -83,7 +88,7 @@ final class Numerī extends Omnum {
   public void multiplicātiōnis( ) {
     @NotNull final Range <Short> range = Range.between((short) 2, (short) 3);
     System.out.println(new Tentāmen.TentāmenMathēmaticum(range, '*')
-                         .exsequar(strūctor().numerus(range.getMaximum())));
+                         .exsequar(strūctor.numerus(range.getMaximum())));
   }
 
   /**
@@ -94,7 +99,7 @@ final class Numerī extends Omnum {
   public void dīvīsiōnis( ) {
     @NotNull final Range <Short> range = Range.between((short) 6, (short) 18);
     System.out.println(new Tentāmen.TentāmenMathēmaticum(range, '/')
-                         .exsequar(strūctor().numerus(range.getMaximum())));
+                         .exsequar(strūctor.numerus(range.getMaximum())));
   }
 
   /**
@@ -105,6 +110,6 @@ final class Numerī extends Omnum {
   public void mānsiōnis( ) {
     @NotNull final Range <Short> range = Range.between((short) 9, (short) 12);
     System.out.println(new Tentāmen.TentāmenMathēmaticum(range, '%')
-                         .exsequar(strūctor().numerus(range.getMaximum())));
+                         .exsequar(strūctor.numerus(range.getMaximum())));
   }
 }

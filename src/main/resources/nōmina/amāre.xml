@@ -1,0 +1,23 @@
+<adiectīvum lemma="amāre">
+  <fōrma speciālitās="commūne" genus="neutrum" cāsus="nōminātīvus" tempus="gerundīvus">
+    amāre
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="neutrum" cāsus="genitīvus" tempus="gerundīvus">
+    amandī
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="neutrum" cāsus="datīvus" tempus="gerundīvus">
+    amandō
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="neutrum" cāsus="accūsātīvus" tempus="gerundīvus">
+    amandum
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="neutrum" cāsus="ablātīvus" tempus="gerundīvus">
+    amandō
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="neutrum" cāsus="accūsātīvus" tempus="supīnus">
+    amātum
+  </fōrma>
+  <fōrma speciālitās="commūne" genus="neutrum" cāsus="ablātīvus" tempus="supīnus">
+    amātū
+  </fōrma>
+</adiectīvum>

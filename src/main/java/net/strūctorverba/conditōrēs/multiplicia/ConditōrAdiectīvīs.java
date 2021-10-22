@@ -4,13 +4,22 @@ import net.strūctorverba.conditōrēs.Conditōr;
 import net.strūctorverba.nūntiī.Nūntius;
 import net.strūctorverba.verba.Verbum;
 import net.strūctorverba.verba.multiplicia.Adiectīvum;
-import net.strūctorverba.ēnumerātiōnēs.*;
-import org.apache.commons.lang3.*;
-import org.jetbrains.annotations.*;
+import net.strūctorverba.ēnumerātiōnēs.Cāsus;
+import net.strūctorverba.ēnumerātiōnēs.Genus;
+import net.strūctorverba.ēnumerātiōnēs.Gradus;
+import net.strūctorverba.ēnumerātiōnēs.Numerālis;
+import net.strūctorverba.ēnumerātiōnēs.Speciālitās;
 
-import javax.ejb.*;
+import org.apache.commons.lang3.ObjectUtils;
+import org.apache.commons.lang3.StringUtils;
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
+
 import java.util.Objects;
 import java.util.function.Supplier;
+
+import javax.ejb.DependsOn;
+import javax.ejb.Singleton;
 
 /**
  * Classis {@link ConditōrAdiectīvīs} est vās classis {@link Conditōr} classī {@link Adiectīvum}.
@@ -46,15 +55,14 @@ public final class ConditōrAdiectīvīs extends ConditōrMultiplicibus <Adiect�
    * @return Rem novam classis {@link Adiectīvum}. <br> Modus hid valōrem {@code null} refert sī nōn valet valor aliquis
    *   rēs haec continet.
    */
-  @Override @Nullable
+  @Override @Nullable @SuppressWarnings("ConstantConditions")
   public Adiectīvum condam( ) {
     if (ObjectUtils.allNotNull(speciālitās, genus, cāsus, numerālis, gradus)
-        && StringUtils.isNoneBlank(fundāmen, scrīptiō)) {
-      final Adiectīvum hoc = Adiectīvum.conditōr().fundāmen(fundāmen).speciālitās(speciālitās).genus(genus)
-                                       .cāsus(cāsus).numerālis(numerālis).gradus(gradus).scrīptiō(scrīptiō).condam();
+        && StringUtils.isNoneBlank(lemma, scrīptiō)) {
+      final Adiectīvum hoc = new Adiectīvum(speciālitās, genus, cāsus, numerālis, gradus, lemma, scrīptiō);
       if (Objects.isNull(hoc)) {
         nūntius.moneō(Adiectīvum.class.getSimpleName().replace("um", "ī"),
-                      StringUtils.firstNonBlank(fundāmen, scrīptiō), "prōductiō fōrmae nūllae prōcessit.");
+                      StringUtils.firstNonBlank(lemma, scrīptiō), "prōductiō fōrmae nūllae prōcessit.");
         return null;
       } else {
         nūntius.certiōrō(Adiectīvum.class.getSimpleName(), scrīptiō, "fīnītur prōdūcere.");
@@ -62,7 +70,7 @@ public final class ConditōrAdiectīvīs extends ConditōrMultiplicibus <Adiect�
       }
     } else {
       nūntius.moneō(Adiectīvum.class.getSimpleName().replace("um", "ī"),
-                    StringUtils.firstNonBlank(fundāmen, scrīptiō), "prōductiō fōrmae nūllae prōcessit.");
+                    StringUtils.firstNonBlank(lemma, scrīptiō), "prōductiō fōrmae nūllae prōcessit.");
       return null;
     }
   }
@@ -74,7 +82,7 @@ public final class ConditōrAdiectīvīs extends ConditōrMultiplicibus <Adiect�
    * @see Cāsus#dēfīniam(String)
    * @see Numerālis#dēfīniam(String)
    * @see Gradus#dēfīniam(String)
-   * @see Verbum#fundāmen
+   * @see Verbum#lemma
    */
   @Override public void allegō(@NotNull final String nōmen, @NotNull final String dēscrīptor) {
     switch (nōmen) {
@@ -83,7 +91,7 @@ public final class ConditōrAdiectīvīs extends ConditōrMultiplicibus <Adiect�
       case "numerālis" -> numerālis = Numerālis.dēfīniam(dēscrīptor);
       case "cāsus" -> cāsus = Cāsus.dēfīniam(dēscrīptor);
       case "gradus" -> gradus = Gradus.dēfīniam(dēscrīptor);
-      case "fundāmen" -> fundāmen = dēscrīptor.trim();
+      case "fundāmen" -> lemma = dēscrīptor.trim();
       default -> {
         nūntius.moneō(Adiectīvum.class.getSimpleName().replace("um", "ō"),
                       "Attribūta inopīnāta est ūsa:", nōmen, "est", dēscrīptor);

@@ -1,11 +1,24 @@
 package net.strūctorverba.tentāmina;
 
-import lombok.Getter;
-import lombok.experimental.Accessors;
-import net.strūctorverba.mīscella.*;
-import net.strūctorverba.ēnumerātiōnēs.*;
+import net.strūctorverba.mīscella.Omnum;
+import net.strūctorverba.mīscella.StrūctorVerba;
+import net.strūctorverba.ēnumerātiōnēs.Catēgoria;
+import net.strūctorverba.ēnumerātiōnēs.Cāsus;
+import net.strūctorverba.ēnumerātiōnēs.Genus;
+import net.strūctorverba.ēnumerātiōnēs.Modus;
+import net.strūctorverba.ēnumerātiōnēs.Numerālis;
+import net.strūctorverba.ēnumerātiōnēs.Persōna;
+import net.strūctorverba.ēnumerātiōnēs.Speciālitās;
+import net.strūctorverba.ēnumerātiōnēs.Tempus;
+import net.strūctorverba.ēnumerātiōnēs.Vōx;
+
 import org.jetbrains.annotations.NotNull;
-import org.junit.jupiter.api.*;
+import org.junit.jupiter.api.MethodOrderer;
+import org.junit.jupiter.api.Order;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.TestMethodOrder;
+
+import lombok.Getter;
 
 /**
  * Classis {@link DolōremIpsum} versiōnem prīmam tentāminārum programmātī StrūctorVerba dēfīnit. <br> Laudem Marcō
@@ -17,7 +30,7 @@ import org.junit.jupiter.api.*;
 @SuppressWarnings({ "NonAsciiCharacters", "SpellCheckingInspection", "FieldCanBeLocal" })
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 final class DolōremIpsum extends Omnum {
-  @NotNull @Getter(lazy = true) @Accessors(fluent = true)
+  @NotNull @Getter(lazy = true)
   private final StrūctorVerba strūctor = StrūctorVerba.fac.get();
 
   @NotNull private final String prōductaPrīma   = "Neque porrō quisquam est";
@@ -37,14 +50,14 @@ final class DolōremIpsum extends Omnum {
   @Test @Order(1)
   public void prīma( ) {
     System.out.println(new Tentāmen.TentāmenVerbāle(prōductaPrīma, "prīma")
-                         .exsequar(strūctor().strue(strūctor().adveniam("neque", Catēgoria.CONIŪNCTĪVUM),
-                                                    strūctor().adveniam("porrō", Catēgoria.ADVERBIUM),
-                                                    strūctor().adveniam("quisquam", Catēgoria.PRŌNŌMEN,
-                                                                        Speciālitās.COMMŪNE, Genus.MASCULĪNUM,
-                                                                        Cāsus.NŌMINĀTĪVUS, Numerālis.SINGULĀRIS),
-                                                    strūctor().adveniam("esse", Catēgoria.ĀCTUS,
-                                                                        Modus.INDICĀTĪVUS, Vōx.ĀCTĪVA, Tempus.PRAESĒNS,
-                                                                        Numerālis.SINGULĀRIS, Persōna.TERTIA))));
+                         .exsequar(strūctor.strue(strūctor.adveniam("neque", Catēgoria.CONIŪNCTĪVUM),
+                                                  strūctor.adveniam("porrō", Catēgoria.ADVERBIUM),
+                                                  strūctor.adveniam("quisquam", Catēgoria.PRŌNŌMEN,
+                                                                    Speciālitās.COMMŪNE, Genus.MASCULĪNUM,
+                                                                    Cāsus.NŌMINĀTĪVUS, Numerālis.SINGULĀRIS),
+                                                  strūctor.adveniam("esse", Catēgoria.ĀCTUS,
+                                                                    Modus.INDICĀTĪVUS, Vōx.ĀCTĪVA, Tempus.PRAESĒNS,
+                                                                    Numerālis.SINGULĀRIS, Persōna.TERTIA))));
   }
 
   /**
@@ -53,25 +66,25 @@ final class DolōremIpsum extends Omnum {
   @Test @Order(2)
   public void secunda( ) {
     System.out.println(new Tentāmen.TentāmenVerbāle(prōductaSecunda, "secunda")
-                         .exsequar(strūctor().strue(strūctor().adveniam("quis", Catēgoria.PRŌNŌMEN,
-                                                                        Speciālitās.COMMŪNE, Genus.MASCULĪNUM,
-                                                                        Cāsus.NŌMINĀTĪVUS, Numerālis.PLŪRĀLIS),
-                                                    strūctor().adveniam("dolor", Catēgoria.NŌMEN,
-                                                                        Speciālitās.COMMŪNE, Genus.MASCULĪNUM,
-                                                                        Cāsus.ACCŪSĀTĪVUS, Numerālis.SINGULĀRIS),
-                                                    strūctor().adveniam("ipsum", Catēgoria.PRŌNŌMEN,
-                                                                        Speciālitās.COMMŪNE, Genus.MASCULĪNUM,
-                                                                        Cāsus.NŌMINĀTĪVUS, Numerālis.SINGULĀRIS),
-                                                    strūctor().adveniam("quia", Catēgoria.ADVERBIUM),
-                                                    strūctor().adveniam("dolor", Catēgoria.NŌMEN,
-                                                                        Speciālitās.COMMŪNE, Genus.MASCULĪNUM,
-                                                                        Cāsus.NŌMINĀTĪVUS, Numerālis.SINGULĀRIS),
-                                                    strūctor().adveniam("esse", Catēgoria.ĀCTUS,
-                                                                        Modus.SUBIŪNCTĪVUS, Vōx.ĀCTĪVA, Tempus.PRAESĒNS,
-                                                                        Numerālis.SINGULĀRIS, Persōna.TERTIA),
-                                                    strūctor().adveniam("amāre", Catēgoria.ĀCTUS,
-                                                                        Modus.SUBIŪNCTĪVUS, Vōx.ĀCTĪVA, Tempus.PRAESĒNS,
-                                                                        Numerālis.SINGULĀRIS, Persōna.TERTIA))));
+                         .exsequar(strūctor.strue(strūctor.adveniam("quis", Catēgoria.PRŌNŌMEN,
+                                                                    Speciālitās.COMMŪNE, Genus.MASCULĪNUM,
+                                                                    Cāsus.NŌMINĀTĪVUS, Numerālis.PLŪRĀLIS),
+                                                  strūctor.adveniam("dolor", Catēgoria.NŌMEN,
+                                                                    Speciālitās.COMMŪNE, Genus.MASCULĪNUM,
+                                                                    Cāsus.ACCŪSĀTĪVUS, Numerālis.SINGULĀRIS),
+                                                  strūctor.adveniam("ipsum", Catēgoria.PRŌNŌMEN,
+                                                                    Speciālitās.COMMŪNE, Genus.MASCULĪNUM,
+                                                                    Cāsus.NŌMINĀTĪVUS, Numerālis.SINGULĀRIS),
+                                                  strūctor.adveniam("quia", Catēgoria.ADVERBIUM),
+                                                  strūctor.adveniam("dolor", Catēgoria.NŌMEN,
+                                                                    Speciālitās.COMMŪNE, Genus.MASCULĪNUM,
+                                                                    Cāsus.NŌMINĀTĪVUS, Numerālis.SINGULĀRIS),
+                                                  strūctor.adveniam("esse", Catēgoria.ĀCTUS,
+                                                                    Modus.SUBIŪNCTĪVUS, Vōx.ĀCTĪVA, Tempus.PRAESĒNS,
+                                                                    Numerālis.SINGULĀRIS, Persōna.TERTIA),
+                                                  strūctor.adveniam("amāre", Catēgoria.ĀCTUS,
+                                                                    Modus.SUBIŪNCTĪVUS, Vōx.ĀCTĪVA, Tempus.PRAESĒNS,
+                                                                    Numerālis.SINGULĀRIS, Persōna.TERTIA))));
   }
 
   /**
@@ -80,14 +93,14 @@ final class DolōremIpsum extends Omnum {
   @Test @Order(3)
   public void tertia( ) {
     System.out.println(new Tentāmen.TentāmenVerbāle(prōductaTertia, "tertia")
-                         .exsequar(strūctor().strue(strūctor().adveniam("cōnsectārī", Catēgoria.ĀCTUS,
-                                                                        Modus.SUBIŪNCTĪVUS, Vōx.ĀCTĪVA, Tempus.PRAESĒNS,
-                                                                        Numerālis.SINGULĀRIS, Persōna.TERTIA),
-                                                    strūctor().adveniam("adipīscī", Catēgoria.ĀCTUS,
-                                                                        Modus.ĪNFĪNĪTĪVUS, Vōx.ĀCTĪVA, Tempus.PRAESĒNS),
-                                                    strūctor().adveniam("velle", Catēgoria.ĀCTUS,
-                                                                        Modus.SUBIŪNCTĪVUS, Vōx.ĀCTĪVA, Tempus.PRAESĒNS,
-                                                                        Numerālis.SINGULĀRIS, Persōna.TERTIA))));
+                         .exsequar(strūctor.strue(strūctor.adveniam("cōnsectārī", Catēgoria.ĀCTUS,
+                                                                    Modus.SUBIŪNCTĪVUS, Vōx.ĀCTĪVA, Tempus.PRAESĒNS,
+                                                                    Numerālis.SINGULĀRIS, Persōna.TERTIA),
+                                                  strūctor.adveniam("adipīscī", Catēgoria.ĀCTUS,
+                                                                    Modus.ĪNFĪNĪTĪVUS, Vōx.ĀCTĪVA, Tempus.PRAESĒNS),
+                                                  strūctor.adveniam("velle", Catēgoria.ĀCTUS,
+                                                                    Modus.SUBIŪNCTĪVUS, Vōx.ĀCTĪVA, Tempus.PRAESĒNS,
+                                                                    Numerālis.SINGULĀRIS, Persōna.TERTIA))));
   }
 
   /**
@@ -96,21 +109,21 @@ final class DolōremIpsum extends Omnum {
   @Test @Order(4)
   public void quārta( ) {
     System.out.println(new Tentāmen.TentāmenVerbāle(prōductaQuārta, "quārta")
-                         .exsequar(strūctor().strue(strūctor().adveniam("sed", Catēgoria.CONIŪNCTĪVUM),
-                                                    strūctor().adveniam("quia", Catēgoria.ADVERBIUM),
-                                                    strūctor().adveniam("nōnnumquam", Catēgoria.ADVERBIUM),
-                                                    strūctor().adveniam("is", Catēgoria.PRŌNŌMEN,
-                                                                        Speciālitās.COMMŪNE, Genus.MASCULĪNUM,
-                                                                        Cāsus.GENITĪVUS, Numerālis.SINGULĀRIS),
-                                                    strūctor().adveniam("modus", Catēgoria.NŌMEN,
-                                                                        Speciālitās.COMMŪNE, Genus.MASCULĪNUM,
-                                                                        Cāsus.GENITĪVUS, Numerālis.SINGULĀRIS),
-                                                    strūctor().adveniam("tempus", Catēgoria.NŌMEN,
-                                                                        Speciālitās.COMMŪNE, Genus.MASCULĪNUM,
-                                                                        Cāsus.ABLĀTĪVUS, Numerālis.SINGULĀRIS),
-                                                    strūctor().adveniam("incidere", Catēgoria.ĀCTUS,
-                                                                        Modus.INDICĀTĪVUS, Vōx.ĀCTĪVA, Tempus.PRAESĒNS,
-                                                                        Numerālis.PLŪRĀLIS, Persōna.TERTIA))));
+                         .exsequar(strūctor.strue(strūctor.adveniam("sed", Catēgoria.CONIŪNCTĪVUM),
+                                                  strūctor.adveniam("quia", Catēgoria.ADVERBIUM),
+                                                  strūctor.adveniam("nōnnumquam", Catēgoria.ADVERBIUM),
+                                                  strūctor.adveniam("is", Catēgoria.PRŌNŌMEN,
+                                                                    Speciālitās.COMMŪNE, Genus.MASCULĪNUM,
+                                                                    Cāsus.GENITĪVUS, Numerālis.SINGULĀRIS),
+                                                  strūctor.adveniam("modus", Catēgoria.NŌMEN,
+                                                                    Speciālitās.COMMŪNE, Genus.MASCULĪNUM,
+                                                                    Cāsus.GENITĪVUS, Numerālis.SINGULĀRIS),
+                                                  strūctor.adveniam("tempus", Catēgoria.NŌMEN,
+                                                                    Speciālitās.COMMŪNE, Genus.MASCULĪNUM,
+                                                                    Cāsus.ABLĀTĪVUS, Numerālis.SINGULĀRIS),
+                                                  strūctor.adveniam("incidere", Catēgoria.ĀCTUS,
+                                                                    Modus.INDICĀTĪVUS, Vōx.ĀCTĪVA, Tempus.PRAESĒNS,
+                                                                    Numerālis.PLŪRĀLIS, Persōna.TERTIA))));
   }
 
   /**
@@ -119,26 +132,26 @@ final class DolōremIpsum extends Omnum {
   @Test @Order(5)
   public void quīnta( ) {
     System.out.println(new Tentāmen.TentāmenVerbāle(prōductaQuīnta, "quīnta")
-                         .exsequar(strūctor().strue(strūctor().adveniam("ut", Catēgoria.CONIŪNCTĪVUM),
-                                                    strūctor().adveniam("labor", Catēgoria.NŌMEN,
-                                                                        Speciālitās.COMMŪNE, Genus.MASCULĪNUM,
-                                                                        Cāsus.ABLĀTĪVUS, Numerālis.SINGULĀRIS),
-                                                    strūctor().adveniam("et", Catēgoria.CONIŪNCTĪVUM),
-                                                    strūctor().adveniam("dolor", Catēgoria.NŌMEN,
-                                                                        Speciālitās.COMMŪNE, Genus.MASCULĪNUM,
-                                                                        Cāsus.ABLĀTĪVUS, Numerālis.SINGULĀRIS),
-                                                    strūctor().adveniam("magnus", Catēgoria.ADIECTĪVUM,
-                                                                        Speciālitās.COMMŪNE, Genus.FĒMINĪNUM,
-                                                                        Cāsus.ACCŪSĀTĪVUS, Numerālis.SINGULĀRIS),
-                                                    strūctor().adveniam("aliquis", Catēgoria.PRŌNŌMEN,
-                                                                        Speciālitās.COMMŪNE, Genus.FĒMINĪNUM,
-                                                                        Cāsus.ACCŪSĀTĪVUS, Numerālis.SINGULĀRIS),
-                                                    strūctor().adveniam("quaerere", Catēgoria.ĀCTUS,
-                                                                        Modus.SUBIŪNCTĪVUS, Vōx.ĀCTĪVA, Tempus.PRAESĒNS,
-                                                                        Numerālis.SINGULĀRIS, Persōna.TERTIA),
-                                                    strūctor().adveniam("voluptās", Catēgoria.NŌMEN,
-                                                                        Speciālitās.COMMŪNE, Genus.FĒMINĪNUM,
-                                                                        Cāsus.ACCŪSĀTĪVUS, Numerālis.SINGULĀRIS))));
+                         .exsequar(strūctor.strue(strūctor.adveniam("ut", Catēgoria.CONIŪNCTĪVUM),
+                                                  strūctor.adveniam("labor", Catēgoria.NŌMEN,
+                                                                    Speciālitās.COMMŪNE, Genus.MASCULĪNUM,
+                                                                    Cāsus.ABLĀTĪVUS, Numerālis.SINGULĀRIS),
+                                                  strūctor.adveniam("et", Catēgoria.CONIŪNCTĪVUM),
+                                                  strūctor.adveniam("dolor", Catēgoria.NŌMEN,
+                                                                    Speciālitās.COMMŪNE, Genus.MASCULĪNUM,
+                                                                    Cāsus.ABLĀTĪVUS, Numerālis.SINGULĀRIS),
+                                                  strūctor.adveniam("magnus", Catēgoria.ADIECTĪVUM,
+                                                                    Speciālitās.COMMŪNE, Genus.FĒMINĪNUM,
+                                                                    Cāsus.ACCŪSĀTĪVUS, Numerālis.SINGULĀRIS),
+                                                  strūctor.adveniam("aliquis", Catēgoria.PRŌNŌMEN,
+                                                                    Speciālitās.COMMŪNE, Genus.FĒMINĪNUM,
+                                                                    Cāsus.ACCŪSĀTĪVUS, Numerālis.SINGULĀRIS),
+                                                  strūctor.adveniam("quaerere", Catēgoria.ĀCTUS,
+                                                                    Modus.SUBIŪNCTĪVUS, Vōx.ĀCTĪVA, Tempus.PRAESĒNS,
+                                                                    Numerālis.SINGULĀRIS, Persōna.TERTIA),
+                                                  strūctor.adveniam("voluptās", Catēgoria.NŌMEN,
+                                                                    Speciālitās.COMMŪNE, Genus.FĒMINĪNUM,
+                                                                    Cāsus.ACCŪSĀTĪVUS, Numerālis.SINGULĀRIS))));
   }
 
   /**
@@ -150,76 +163,76 @@ final class DolōremIpsum extends Omnum {
   @Test @Order(6)
   public void cūncta( ) {
     System.out.println(new Tentāmen.TentāmenVerbāle(prōductaCūncta, "cūncta")
-                         .exsequar(strūctor().strue(strūctor().adveniam("neque", Catēgoria.CONIŪNCTĪVUM),
-                                                    strūctor().adveniam("porrō", Catēgoria.ADVERBIUM),
-                                                    strūctor().adveniam("quisquam", Catēgoria.PRŌNŌMEN,
-                                                                        Speciālitās.COMMŪNE, Genus.MASCULĪNUM,
-                                                                        Cāsus.NŌMINĀTĪVUS, Numerālis.SINGULĀRIS),
-                                                    strūctor().adveniam("esse", Catēgoria.ĀCTUS,
-                                                                        Modus.INDICĀTĪVUS, Vōx.ĀCTĪVA, Tempus.PRAESĒNS,
-                                                                        Numerālis.SINGULĀRIS, Persōna.TERTIA),
-                                                    strūctor().adveniam("quis", Catēgoria.PRŌNŌMEN,
-                                                                        Speciālitās.COMMŪNE, Genus.MASCULĪNUM,
-                                                                        Cāsus.NŌMINĀTĪVUS, Numerālis.PLŪRĀLIS),
-                                                    strūctor().adveniam("dolor", Catēgoria.NŌMEN,
-                                                                        Speciālitās.COMMŪNE, Genus.MASCULĪNUM,
-                                                                        Cāsus.ACCŪSĀTĪVUS, Numerālis.SINGULĀRIS),
-                                                    strūctor().adveniam("ipsum", Catēgoria.PRŌNŌMEN,
-                                                                        Speciālitās.COMMŪNE, Genus.MASCULĪNUM,
-                                                                        Cāsus.NŌMINĀTĪVUS, Numerālis.SINGULĀRIS),
-                                                    strūctor().adveniam("quia", Catēgoria.ADVERBIUM),
-                                                    strūctor().adveniam("dolor", Catēgoria.NŌMEN,
-                                                                        Speciālitās.COMMŪNE, Genus.MASCULĪNUM,
-                                                                        Cāsus.NŌMINĀTĪVUS, Numerālis.SINGULĀRIS),
-                                                    strūctor().adveniam("esse", Catēgoria.ĀCTUS,
-                                                                        Modus.SUBIŪNCTĪVUS, Vōx.ĀCTĪVA, Tempus.PRAESĒNS,
-                                                                        Numerālis.SINGULĀRIS, Persōna.TERTIA),
-                                                    strūctor().adveniam("amāre", Catēgoria.ĀCTUS,
-                                                                        Modus.SUBIŪNCTĪVUS, Vōx.ĀCTĪVA, Tempus.PRAESĒNS,
-                                                                        Numerālis.SINGULĀRIS, Persōna.TERTIA),
-                                                    strūctor().adveniam("cōnsectārī", Catēgoria.ĀCTUS,
-                                                                        Modus.SUBIŪNCTĪVUS, Vōx.ĀCTĪVA, Tempus.PRAESĒNS,
-                                                                        Numerālis.SINGULĀRIS, Persōna.TERTIA),
-                                                    strūctor().adveniam("adipīscī", Catēgoria.ĀCTUS,
-                                                                        Modus.ĪNFĪNĪTĪVUS, Vōx.ĀCTĪVA, Tempus.PRAESĒNS,
-                                                                        Numerālis.SINGULĀRIS, Persōna.TERTIA),
-                                                    strūctor().adveniam("velle", Catēgoria.ĀCTUS,
-                                                                        Modus.SUBIŪNCTĪVUS, Vōx.ĀCTĪVA, Tempus.PRAESĒNS,
-                                                                        Numerālis.SINGULĀRIS, Persōna.TERTIA),
-                                                    strūctor().adveniam("sed", Catēgoria.CONIŪNCTĪVUM),
-                                                    strūctor().adveniam("quia", Catēgoria.ADVERBIUM),
-                                                    strūctor().adveniam("nōnnumquam", Catēgoria.ADVERBIUM),
-                                                    strūctor().adveniam("is", Catēgoria.PRŌNŌMEN,
-                                                                        Speciālitās.COMMŪNE, Genus.MASCULĪNUM,
-                                                                        Cāsus.GENITĪVUS, Numerālis.SINGULĀRIS),
-                                                    strūctor().adveniam("modus", Catēgoria.NŌMEN,
-                                                                        Speciālitās.COMMŪNE, Genus.MASCULĪNUM,
-                                                                        Cāsus.GENITĪVUS, Numerālis.SINGULĀRIS),
-                                                    strūctor().adveniam("tempus", Catēgoria.NŌMEN,
-                                                                        Speciālitās.COMMŪNE, Genus.MASCULĪNUM,
-                                                                        Cāsus.ABLĀTĪVUS, Numerālis.SINGULĀRIS),
-                                                    strūctor().adveniam("incidere", Catēgoria.ĀCTUS,
-                                                                        Modus.INDICĀTĪVUS, Vōx.ĀCTĪVA, Tempus.PRAESĒNS,
-                                                                        Numerālis.PLŪRĀLIS, Persōna.TERTIA),
-                                                    strūctor().adveniam("ut", Catēgoria.CONIŪNCTĪVUM),
-                                                    strūctor().adveniam("labor", Catēgoria.NŌMEN,
-                                                                        Speciālitās.COMMŪNE, Genus.MASCULĪNUM,
-                                                                        Cāsus.ABLĀTĪVUS, Numerālis.SINGULĀRIS),
-                                                    strūctor().adveniam("et", Catēgoria.CONIŪNCTĪVUM),
-                                                    strūctor().adveniam("dolor", Catēgoria.NŌMEN,
-                                                                        Speciālitās.COMMŪNE, Genus.MASCULĪNUM,
-                                                                        Cāsus.ABLĀTĪVUS, Numerālis.SINGULĀRIS),
-                                                    strūctor().adveniam("magnus", Catēgoria.ADIECTĪVUM,
-                                                                        Speciālitās.COMMŪNE, Genus.FĒMINĪNUM,
-                                                                        Cāsus.ACCŪSĀTĪVUS, Numerālis.SINGULĀRIS),
-                                                    strūctor().adveniam("aliquis", Catēgoria.PRŌNŌMEN,
-                                                                        Speciālitās.COMMŪNE, Genus.FĒMINĪNUM,
-                                                                        Cāsus.ACCŪSĀTĪVUS, Numerālis.SINGULĀRIS),
-                                                    strūctor().adveniam("quaerere", Catēgoria.ĀCTUS,
-                                                                        Modus.SUBIŪNCTĪVUS, Vōx.ĀCTĪVA, Tempus.PRAESĒNS,
-                                                                        Numerālis.SINGULĀRIS, Persōna.TERTIA),
-                                                    strūctor().adveniam("voluptās", Catēgoria.NŌMEN,
-                                                                        Speciālitās.COMMŪNE, Genus.FĒMINĪNUM,
-                                                                        Cāsus.ACCŪSĀTĪVUS, Numerālis.SINGULĀRIS))));
+                         .exsequar(strūctor.strue(strūctor.adveniam("neque", Catēgoria.CONIŪNCTĪVUM),
+                                                  strūctor.adveniam("porrō", Catēgoria.ADVERBIUM),
+                                                  strūctor.adveniam("quisquam", Catēgoria.PRŌNŌMEN,
+                                                                    Speciālitās.COMMŪNE, Genus.MASCULĪNUM,
+                                                                    Cāsus.NŌMINĀTĪVUS, Numerālis.SINGULĀRIS),
+                                                  strūctor.adveniam("esse", Catēgoria.ĀCTUS,
+                                                                    Modus.INDICĀTĪVUS, Vōx.ĀCTĪVA, Tempus.PRAESĒNS,
+                                                                    Numerālis.SINGULĀRIS, Persōna.TERTIA),
+                                                  strūctor.adveniam("quis", Catēgoria.PRŌNŌMEN,
+                                                                    Speciālitās.COMMŪNE, Genus.MASCULĪNUM,
+                                                                    Cāsus.NŌMINĀTĪVUS, Numerālis.PLŪRĀLIS),
+                                                  strūctor.adveniam("dolor", Catēgoria.NŌMEN,
+                                                                    Speciālitās.COMMŪNE, Genus.MASCULĪNUM,
+                                                                    Cāsus.ACCŪSĀTĪVUS, Numerālis.SINGULĀRIS),
+                                                  strūctor.adveniam("ipsum", Catēgoria.PRŌNŌMEN,
+                                                                    Speciālitās.COMMŪNE, Genus.MASCULĪNUM,
+                                                                    Cāsus.NŌMINĀTĪVUS, Numerālis.SINGULĀRIS),
+                                                  strūctor.adveniam("quia", Catēgoria.ADVERBIUM),
+                                                  strūctor.adveniam("dolor", Catēgoria.NŌMEN,
+                                                                    Speciālitās.COMMŪNE, Genus.MASCULĪNUM,
+                                                                    Cāsus.NŌMINĀTĪVUS, Numerālis.SINGULĀRIS),
+                                                  strūctor.adveniam("esse", Catēgoria.ĀCTUS,
+                                                                    Modus.SUBIŪNCTĪVUS, Vōx.ĀCTĪVA, Tempus.PRAESĒNS,
+                                                                    Numerālis.SINGULĀRIS, Persōna.TERTIA),
+                                                  strūctor.adveniam("amāre", Catēgoria.ĀCTUS,
+                                                                    Modus.SUBIŪNCTĪVUS, Vōx.ĀCTĪVA, Tempus.PRAESĒNS,
+                                                                    Numerālis.SINGULĀRIS, Persōna.TERTIA),
+                                                  strūctor.adveniam("cōnsectārī", Catēgoria.ĀCTUS,
+                                                                    Modus.SUBIŪNCTĪVUS, Vōx.ĀCTĪVA, Tempus.PRAESĒNS,
+                                                                    Numerālis.SINGULĀRIS, Persōna.TERTIA),
+                                                  strūctor.adveniam("adipīscī", Catēgoria.ĀCTUS,
+                                                                    Modus.ĪNFĪNĪTĪVUS, Vōx.ĀCTĪVA, Tempus.PRAESĒNS,
+                                                                    Numerālis.SINGULĀRIS, Persōna.TERTIA),
+                                                  strūctor.adveniam("velle", Catēgoria.ĀCTUS,
+                                                                    Modus.SUBIŪNCTĪVUS, Vōx.ĀCTĪVA, Tempus.PRAESĒNS,
+                                                                    Numerālis.SINGULĀRIS, Persōna.TERTIA),
+                                                  strūctor.adveniam("sed", Catēgoria.CONIŪNCTĪVUM),
+                                                  strūctor.adveniam("quia", Catēgoria.ADVERBIUM),
+                                                  strūctor.adveniam("nōnnumquam", Catēgoria.ADVERBIUM),
+                                                  strūctor.adveniam("is", Catēgoria.PRŌNŌMEN,
+                                                                    Speciālitās.COMMŪNE, Genus.MASCULĪNUM,
+                                                                    Cāsus.GENITĪVUS, Numerālis.SINGULĀRIS),
+                                                  strūctor.adveniam("modus", Catēgoria.NŌMEN,
+                                                                    Speciālitās.COMMŪNE, Genus.MASCULĪNUM,
+                                                                    Cāsus.GENITĪVUS, Numerālis.SINGULĀRIS),
+                                                  strūctor.adveniam("tempus", Catēgoria.NŌMEN,
+                                                                    Speciālitās.COMMŪNE, Genus.MASCULĪNUM,
+                                                                    Cāsus.ABLĀTĪVUS, Numerālis.SINGULĀRIS),
+                                                  strūctor.adveniam("incidere", Catēgoria.ĀCTUS,
+                                                                    Modus.INDICĀTĪVUS, Vōx.ĀCTĪVA, Tempus.PRAESĒNS,
+                                                                    Numerālis.PLŪRĀLIS, Persōna.TERTIA),
+                                                  strūctor.adveniam("ut", Catēgoria.CONIŪNCTĪVUM),
+                                                  strūctor.adveniam("labor", Catēgoria.NŌMEN,
+                                                                    Speciālitās.COMMŪNE, Genus.MASCULĪNUM,
+                                                                    Cāsus.ABLĀTĪVUS, Numerālis.SINGULĀRIS),
+                                                  strūctor.adveniam("et", Catēgoria.CONIŪNCTĪVUM),
+                                                  strūctor.adveniam("dolor", Catēgoria.NŌMEN,
+                                                                    Speciālitās.COMMŪNE, Genus.MASCULĪNUM,
+                                                                    Cāsus.ABLĀTĪVUS, Numerālis.SINGULĀRIS),
+                                                  strūctor.adveniam("magnus", Catēgoria.ADIECTĪVUM,
+                                                                    Speciālitās.COMMŪNE, Genus.FĒMINĪNUM,
+                                                                    Cāsus.ACCŪSĀTĪVUS, Numerālis.SINGULĀRIS),
+                                                  strūctor.adveniam("aliquis", Catēgoria.PRŌNŌMEN,
+                                                                    Speciālitās.COMMŪNE, Genus.FĒMINĪNUM,
+                                                                    Cāsus.ACCŪSĀTĪVUS, Numerālis.SINGULĀRIS),
+                                                  strūctor.adveniam("quaerere", Catēgoria.ĀCTUS,
+                                                                    Modus.SUBIŪNCTĪVUS, Vōx.ĀCTĪVA, Tempus.PRAESĒNS,
+                                                                    Numerālis.SINGULĀRIS, Persōna.TERTIA),
+                                                  strūctor.adveniam("voluptās", Catēgoria.NŌMEN,
+                                                                    Speciālitās.COMMŪNE, Genus.FĒMINĪNUM,
+                                                                    Cāsus.ACCŪSĀTĪVUS, Numerālis.SINGULĀRIS))));
   }
 }

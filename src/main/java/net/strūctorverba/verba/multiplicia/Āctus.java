@@ -1,17 +1,27 @@
 package net.strūctorverba.verba.multiplicia;
 
-import lombok.*;
-import lombok.experimental.Accessors;
 import net.strūctorverba.conditōrēs.multiplicia.ConditōrĀctīs;
 import net.strūctorverba.inventōrēs.InventorĀctīs;
 import net.strūctorverba.lēctōrēs.LēctorMultiplicibus;
 import net.strūctorverba.mīscella.Ūtilitās;
 import net.strūctorverba.nūntiī.Nūntius;
 import net.strūctorverba.tenōrēs.TenorMultiplicibus;
-import net.strūctorverba.ēnumerātiōnēs.*;
-import org.jetbrains.annotations.*;
+import net.strūctorverba.ēnumerātiōnēs.Catēgoria;
+import net.strūctorverba.ēnumerātiōnēs.Cāsus;
+import net.strūctorverba.ēnumerātiōnēs.Genus;
+import net.strūctorverba.ēnumerātiōnēs.Modus;
+import net.strūctorverba.ēnumerātiōnēs.Numerālis;
+import net.strūctorverba.ēnumerātiōnēs.Persōna;
+import net.strūctorverba.ēnumerātiōnēs.Speciālitās;
+import net.strūctorverba.ēnumerātiōnēs.Tempus;
+import net.strūctorverba.ēnumerātiōnēs.Vōx;
+
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 
 import java.util.Objects;
+
+import lombok.Getter;
 
 /**
  * Classis {@link Āctus} repraesentat nōmina ut coniectēris. <br> Rēs classis huius catēgoriam {@link Catēgoria#ĀCTUS}
@@ -49,33 +59,31 @@ public final class Āctus extends VerbumMultiplex <Āctus> {
    * @see Persōna
    */
   @NotNull public final Persōna persōna;
-  @Getter(lazy = true) @Accessors(fluent = true)
-  @NotNull private final LēctorMultiplicibus.LēctorAdiectīvīs adiectīva =
-    LēctorMultiplicibus.LēctorAdiectīvīs.fac.get();
-  @Getter(lazy = true) @Accessors(fluent = true)
+  @Getter(lazy = true)
+  @NotNull private final LēctorMultiplicibus.LēctorAdiectīvīs adiectīva = LēctorMultiplicibus.LēctorAdiectīvīs.fac.get();
+  @Getter(lazy = true)
+  @NotNull private final LēctorMultiplicibus.LēctorNōminibus nōmina = LēctorMultiplicibus.LēctorNōminibus.fac.get();
+  @Getter(lazy = true)
   @NotNull private final LēctorMultiplicibus.LēctorĀctīs ācta = LēctorMultiplicibus.LēctorĀctīs.fac.get();
-  @Getter(lazy = true) @Accessors(fluent = true)
+  @Getter(lazy = true)
   @NotNull private final Nūntius.NūntiusĀctōrum nūntius = Nūntius.NūntiusĀctōrum.fac.get();
 
-  @Builder(access = AccessLevel.PUBLIC, builderClassName = "Conditōr",
-           builderMethodName = "conditōr", buildMethodName = "condam")
-  private Āctus(@NotNull final Modus modus, @NotNull final Vōx vōx, @NotNull final Tempus tempus,
-                @NotNull final Numerālis numerālis, @NotNull final Persōna persōna,
-                @NotNull final String fundāmen, @NotNull final String scrīptiō) {
-    super(Catēgoria.ĀCTUS, fundāmen, Ūtilitās.minusculāsScrībō(scrīptiō));
+  public Āctus(@NotNull final Modus modus, @NotNull final Vōx vōx, @NotNull final Tempus tempus,
+               @NotNull final Numerālis numerālis, @NotNull final Persōna persōna,
+               @NotNull final String lemma, @NotNull final String scrīptiō) {
+    super(Catēgoria.ĀCTUS, lemma, Ūtilitās.minusculāsScrībō(scrīptiō));
     this.modus = modus;
     this.vōx = vōx;
     this.tempus = tempus;
     this.numerālis = numerālis;
     this.persōna = persōna;
-    nūntius().plūsGarriō("Scrībor ut", scrīptiō);
+    nūntius.plūsGarriō("Scrībor ut", scrīptiō);
   }
 
   /**
    * Modus hic rem classis {@link Adiectīvum} ā parametrīs dēsignātīs advenit.
    * @param vx    valōrem {@link #vōx} indicat.
    * @param tmps  valōrem {@link #tempus} indicat.
-   * @param spclt valōrem {@link Nōminālis#speciālitās} indicat.
    * @param gns   valōrem {@link Nōminālis#genus} indicat.
    * @param css   valōrem {@link Nōminālis#cāsus} indicat.
    * @param nmrl  valōrem {@link Nōminālis#numerālis} indicat.
@@ -84,86 +92,101 @@ public final class Āctus extends VerbumMultiplex <Āctus> {
    * @see Modus#PARTICIPĀLIS
    */
   @Nullable public Adiectīvum participem(@NotNull final Vōx vx, @NotNull final Tempus tmps,
-                                         @NotNull final Speciālitās spclt, @NotNull final Genus gns,
-                                         @NotNull final Cāsus css, @NotNull final Numerālis nmrl) {
+                                         @NotNull final Genus gns, @NotNull final Cāsus css,
+                                         @NotNull final Numerālis nmrl) {
     if (Modus.PARTICIPĀLIS.equals(modus)
         && vōx.equals(vx)
         && tempus.equals(tmps)) {
-      return adiectīva().adveniam(toString(), spclt, gns, css, nmrl);
+      return adiectīva.adveniam(toString(), Speciālitās.COMMŪNE, gns, css, nmrl);
     } else {
-      Āctus alium = ācta().adveniam(fundāmen, Modus.PARTICIPĀLIS, vx, tmps);
+      Āctus alium = ācta.adveniam(lemma, Modus.PARTICIPĀLIS, vx, tmps);
       return Objects.isNull(alium) ? null
-                                   : adiectīva().adveniam(alium.toString(), spclt, gns, css, nmrl);
+                                   : adiectīva.adveniam(alium.toString(),
+                                                        Speciālitās.COMMŪNE, gns, css, nmrl);
     }
   }
 
   /**
    * Modus hic rem classis {@link Adiectīvum} ā parametrīs dēsignātīs advenit.
    * @param vx    valōrem {@link #vōx} indicat.
-   * @param spclt valōrem {@link Nōminālis#speciālitās} indicat.
    * @param gns   valōrem {@link Nōminālis#genus} indicat.
    * @param css   valōrem {@link Nōminālis#cāsus} indicat.
    * @param nmrl  valōrem {@link Nōminālis#numerālis} indicat.
    * @return Rem classis {@link Adiectīvum} quod parametra dēsignāta quadrat.
    * @see LēctorMultiplicibus.LēctorAdiectīvīs#adveniam(String, Enum[])
    * @see Modus#PARTICIPĀLIS
-   * @see #participem(Vōx, Tempus, Speciālitās, Genus, Cāsus, Numerālis)
+   * @see #participem(Vōx, Tempus, Genus, Cāsus, Numerālis)
    */
-  @Nullable public Adiectīvum participem(@NotNull final Vōx vx, @NotNull final Speciālitās spclt,
-                                         @NotNull final Genus gns, @NotNull final Cāsus css,
-                                         @NotNull final Numerālis nmrl) {
-    return participem(vx, tempus, spclt, gns, css, nmrl);
+  @Nullable public Adiectīvum participem(@NotNull final Vōx vx, @NotNull final Genus gns,
+                                         @NotNull final Cāsus css, @NotNull final Numerālis nmrl) {
+    return participem(vx, tempus, gns, css, nmrl);
   }
 
   /**
    * Modus hic rem classis {@link Adiectīvum} ā parametrīs dēsignātīs advenit.
    * @param tmps  valōrem {@link #tempus} indicat.
-   * @param spclt valōrem {@link Nōminālis#speciālitās} indicat.
    * @param gns   valōrem {@link Nōminālis#genus} indicat.
    * @param css   valōrem {@link Nōminālis#cāsus} indicat.
    * @param nmrl  valōrem {@link Nōminālis#numerālis} indicat.
    * @return Rem classis {@link Adiectīvum} quod parametra dēsignāta quadrat.
    * @see LēctorMultiplicibus.LēctorAdiectīvīs#adveniam(String, Enum[])
    * @see Modus#PARTICIPĀLIS
-   * @see #participem(Vōx, Tempus, Speciālitās, Genus, Cāsus, Numerālis)
+   * @see #participem(Vōx, Tempus, Genus, Cāsus, Numerālis)
    */
-  @Nullable public Adiectīvum participem(@NotNull final Tempus tmps, @NotNull final Speciālitās spclt,
-                                         @NotNull final Genus gns, @NotNull final Cāsus css,
-                                         @NotNull final Numerālis nmrl) {
-    return participem(vōx, tmps, spclt, gns, css, nmrl);
+  @Nullable public Adiectīvum participem(@NotNull final Tempus tmps, @NotNull final Genus gns,
+                                         @NotNull final Cāsus css, @NotNull final Numerālis nmrl) {
+    return participem(vōx, tmps, gns, css, nmrl);
   }
 
   /**
    * Modus hic rem classis {@link Adiectīvum} ā parametrīs dēsignātīs advenit.
-   * @param spclt valōrem {@link Nōminālis#speciālitās} indicat.
    * @param gns   valōrem {@link Nōminālis#genus} indicat.
    * @param css   valōrem {@link Nōminālis#cāsus} indicat.
    * @param nmrl  valōrem {@link Nōminālis#numerālis} indicat.
    * @return Rem classis {@link Adiectīvum} quod parametra dēsignāta quadrat.
    * @see LēctorMultiplicibus.LēctorAdiectīvīs#adveniam(String, Enum[])
    * @see Modus#PARTICIPĀLIS
-   * @see #participem(Vōx, Tempus, Speciālitās, Genus, Cāsus, Numerālis)
+   * @see #participem(Vōx, Tempus, Genus, Cāsus, Numerālis)
    */
-  @Nullable public Adiectīvum participem(@NotNull final Speciālitās spclt, @NotNull final Genus gns,
-                                         @NotNull final Cāsus css, @NotNull final Numerālis nmrl) {
-    return participem(vōx, tempus, spclt, gns, css, nmrl);
+  @Nullable public Adiectīvum participem(@NotNull final Genus gns, @NotNull final Cāsus css,
+                                         @NotNull final Numerālis nmrl) {
+    return participem(vōx, tempus, gns, css, nmrl);
   }
 
   /**
-   * Modus hic rem classis {@link Adiectīvum} advenit ā et parametrīs dēsignātīs et {@link Vōx#PASSĪVA} et {@link
-   * Tempus#FUTŪRUM} et {@link Speciālitās#COMMŪNE} et {@link Genus#MASCULĪNUM}.
-   * @param css  valōrem {@link Nōminālis#cāsus} indicat.
-   * @param nmrl valōrem {@link Nōminālis#numerālis} indicat.
-   * @return Rem classis {@link Adiectīvum} quod parametra dēsignāta quadrat.
-   * @see LēctorMultiplicibus.LēctorAdiectīvīs#adveniam(String, Enum[])
-   * @see Modus#PARTICIPĀLIS
-   * @see Vōx#PASSĪVA
-   * @see Tempus#FUTŪRUM
+   * Modus hic rem classis {@link Nōmen} ā parametrīs dēsignātīs advenit.
+   * @param tmps  valōrem {@link Nōmen#tempus} indicat.
+   * @param css   valōrem {@link Nōminālis#cāsus} indicat.
+   * @return Rem classis {@link Nōmen} quod parametra dēsignāta quadrat.
+   * @see LēctorMultiplicibus.LēctorNōminibus#adveniam(String, Enum[])
+   * @see Tempus#GERUNDĪVUS
+   * @see Tempus#SUPĪNUS
+   * @see Genus#NEUTRUM
    * @see Speciālitās#COMMŪNE
-   * @see Genus#MASCULĪNUM
-   * @see #participem(Vōx, Tempus, Speciālitās, Genus, Cāsus, Numerālis)
    */
-  @Nullable public Adiectīvum gerundīvum(@NotNull final Cāsus css, @NotNull final Numerālis nmrl) {
-    return participem(Vōx.PASSĪVA, Tempus.FUTŪRUM, Speciālitās.COMMŪNE, Genus.MASCULĪNUM, css, nmrl);
+  @Nullable public Nōmen nōmen(@NotNull final Tempus tmps, @NotNull final Cāsus css) {
+    return nōmina.adveniam(lemma, tmps, css, Genus.NEUTRUM, Speciālitās.COMMŪNE);
+  }
+
+  /**
+   * Modus hic rem classis {@link Nōmen} ā rē {@link Cāsus} rēque {@link Tempus#GERUNDĪVUS} dēsignātīs advenit.
+   * @param css   valōrem {@link Nōminālis#cāsus} indicat.
+   * @return Rem classis {@link Nōmen} quod parametra dēsignāta quadrat.
+   * @see Tempus#GERUNDĪVUS
+   * @see #nōmen(Tempus, Cāsus)
+   */
+  @Nullable public Nōmen gerundīvus(@NotNull final Cāsus css) {
+    return nōmen(Tempus.GERUNDĪVUS, css);
+  }
+
+  /**
+   * Modus hic rem classis {@link Nōmen} ā rē {@link Cāsus} rēque {@link Tempus#SUPĪNUS} dēsignātīs advenit.
+   * @param css   valōrem {@link Nōminālis#cāsus} indicat.
+   * @return Rem classis {@link Nōmen} quod parametra dēsignāta quadrat.
+   * @see Tempus#SUPĪNUS
+   * @see #nōmen(Tempus, Cāsus)
+   */
+  @Nullable public Nōmen supīnus(@NotNull final Cāsus css) {
+    return nōmen(Tempus.SUPĪNUS, css);
   }
 }

@@ -1,14 +1,19 @@
 package net.strūctorverba.verba.multiplicia;
 
-import lombok.*;
-import lombok.experimental.Accessors;
 import net.strūctorverba.conditōrēs.multiplicia.ConditōrPrōnōminibus;
 import net.strūctorverba.inventōrēs.InventorPrōnōminibus;
 import net.strūctorverba.lēctōrēs.LēctorMultiplicibus;
 import net.strūctorverba.nūntiī.Nūntius;
 import net.strūctorverba.tenōrēs.TenorMultiplicibus;
-import net.strūctorverba.ēnumerātiōnēs.*;
+import net.strūctorverba.ēnumerātiōnēs.Catēgoria;
+import net.strūctorverba.ēnumerātiōnēs.Cāsus;
+import net.strūctorverba.ēnumerātiōnēs.Genus;
+import net.strūctorverba.ēnumerātiōnēs.Numerālis;
+import net.strūctorverba.ēnumerātiōnēs.Speciālitās;
+
 import org.jetbrains.annotations.NotNull;
+
+import lombok.Getter;
 
 /**
  * Classis {@link Prōnōmen} repraesentat prōnōmina ut coniectēris. <br> Rēs classis huius catēgoriam {@link
@@ -21,15 +26,13 @@ import org.jetbrains.annotations.NotNull;
  */
 @SuppressWarnings({ "NonAsciiCharacters", "SpellCheckingInspection" })
 public final class Prōnōmen extends Nōminālis <Prōnōmen> {
-  @Getter(lazy = true) @Accessors(fluent = true)
+  @Getter(lazy = true)
   @NotNull private final Nūntius.NūntiusPrōnōminum nūntius = Nūntius.NūntiusPrōnōminum.fac.get();
 
-  @Builder(access = AccessLevel.PUBLIC, builderClassName = "Conditōr",
-           builderMethodName = "conditōr", buildMethodName = "condam")
-  private Prōnōmen(@NotNull final Speciālitās speciālitās, @NotNull final Genus genus,
+  public Prōnōmen(@NotNull final Speciālitās speciālitās, @NotNull final Genus genus,
                    @NotNull final Cāsus cāsus, @NotNull final Numerālis numerālis,
-                   @NotNull final String fundāmen, @NotNull final String scrīptiō) {
-    super(Catēgoria.PRŌNŌMEN, speciālitās, genus, cāsus, numerālis, fundāmen, scrīptiō);
-    nūntius().plūsGarriō("Scrībor ut", scrīptiō);
+                   @NotNull final String lemma, @NotNull final String scrīptiō) {
+    super(Catēgoria.PRŌNŌMEN, speciālitās, genus, cāsus, numerālis, lemma, scrīptiō);
+    nūntius.plūsGarriō("Scrībor ut", scrīptiō);
   }
 }
