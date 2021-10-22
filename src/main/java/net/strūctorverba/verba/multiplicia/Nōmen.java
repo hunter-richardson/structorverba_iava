@@ -29,7 +29,7 @@ import lombok.Getter;
 @SuppressWarnings({ "NonAsciiCharacters", "SpellCheckingInspection" })
 public final class Nōmen extends Nōminālis <Nōmen> {
   /**
-   * Valor hic modum reī huius dēsignat.
+   * Valor hic tempus reī huius dēsignat.
    * @see Modus
    */
   @NotNull public final Tempus tempus;
