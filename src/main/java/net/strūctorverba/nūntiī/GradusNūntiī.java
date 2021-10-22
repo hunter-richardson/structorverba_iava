@@ -7,7 +7,7 @@ import java.util.logging.Level;
 import java.util.stream.Stream;
 
 /**
- * Ēnumerātiō hic persignat et gravitātem nūntiae singulārem et quam verbōsa rēs classis {@link Nūntius} scrībētur.
+ * Ēnumerātiō hic persignat gravitātemque nūntiae singulārem et quam verbōsa rēs classis {@link Nūntius} scrībētur.
  * @see ParametrīNūntiī#gradusMinimus
  * @see <a href="https://docs.oracle.com/javase/7/docs/api/java/util/logging/Level.html">Level</a>
  */
@@ -72,7 +72,7 @@ enum GradusNūntiī {
    */
   public final int praecellentia;
   /**
-   * Modus hic societās intrā rēs ēnumerātiōnēs et huius et <a href="https://docs.oracle.com/javase/7/docs/api/java/util/logging/Level.html">Level</a>
+   * Modus hic societās intrā rēs ēnumerātiōnēs huius rēsque <a href="https://docs.oracle.com/javase/7/docs/api/java/util/logging/Level.html">Level</a>
    * dēmōnstrat.
    * <ul>
    *   <li>Valor <a href="https://docs.oracle.com/javase/7/docs/api/java/util/logging/Level.html#OFF">OFF</a> valōrem {@link #INERS} cōnsociat.</li>

@@ -13,7 +13,7 @@ import lombok.Getter;
 
 /**
  * Classis {@link Adverbium} repraesentat adverbia ut coniectēris. <br> Rēs classis huius catēgoriam {@link
- * Catēgoria#ADVERBIUM} ūtuntur et cōnservāta sunt in scrīniō <a href="{@docRoot}/../src/main/resources">auxiliārēs</a>/adverbia.
+ * Catēgoria#ADVERBIUM} ūtuntur cōnservātaque sunt in scrīniō <a href="{@docRoot}/../src/main/resources">auxiliārēs</a>/adverbia.
  * @see LēctorMultiplicibus.LēctorAdverbiīs
  * @see TenorMultiplicibus.TenorAdverbiīs
  * @see ConditōrAdverbiīs

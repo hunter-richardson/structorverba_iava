@@ -1,12 +1,19 @@
 package net.strūctorverba.verba;
 
-import lombok.*;
-import net.strūctorverba.mīscella.*;
-import org.apache.commons.lang3.StringUtils;
-import org.jetbrains.annotations.*;
+import net.strūctorverba.mīscella.Omnum;
+import net.strūctorverba.mīscella.Ūtilitās;
 
-import java.util.*;
+import org.apache.commons.lang3.StringUtils;
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
+
+import java.util.Arrays;
+import java.util.LinkedList;
+import java.util.Objects;
 import java.util.stream.Collectors;
+
+import lombok.AccessLevel;
+import lombok.NoArgsConstructor;
 
 /**
  * Classis {@link Verba} seriēs rērum classis {@link Verbum} cōnstat.
@@ -78,7 +85,7 @@ public final class Verba extends Omnum {
   }
 
   /**
-   * @return Repraesentātiōnem scrīpta reī huius. <br> Rēs omnēs contentās cōnsit et cum spatiīs distinet.
+   * @return Repraesentātiōnem scrīpta reī huius. <br> Rēs omnēs contentās cōnsit cumque spatiīs distinet.
    */
   @NotNull @Override
   public String toString( ) {

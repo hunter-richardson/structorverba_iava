@@ -17,7 +17,7 @@ import lombok.Getter;
 
 /**
  * Classis {@link Prōnōmen} repraesentat prōnōmina ut coniectēris. <br> Rēs classis huius catēgoriam {@link
- * Catēgoria#PRŌNŌMEN} ūtuntur et cōnservāta sunt in scrīniō <a href="{@docRoot}/../src/main/resources">auxiliārēs</a>/prōnōmina.
+ * Catēgoria#PRŌNŌMEN} ūtuntur cōnservātaque sunt in scrīniō <a href="{@docRoot}/../src/main/resources">auxiliārēs</a>/prōnōmina.
  * @see LēctorMultiplicibus.LēctorPrōnōminibus
  * @see TenorMultiplicibus.TenorPrōnōminibus
  * @see InventorPrōnōminibus

@@ -52,7 +52,7 @@ public abstract class ConditōrSimplicibus <Hoc extends VerbumSimplex <Hoc>> ext
   }
 
   /**
-   * Modus hic rem classis {@link Hoc} accipit et valōrī {@link Conditōr#nūntius} ita refert.
+   * Modus hic rem classis {@link Hoc} accipit valōrīque {@link Conditōr#nūntius} ita refert.
    * @param hoc rem tentanda
    */
   protected abstract void referō(@Nullable final Hoc hoc);
@@ -80,7 +80,7 @@ public abstract class ConditōrSimplicibus <Hoc extends VerbumSimplex <Hoc>> ext
     }
 
     /**
-     * Modus hic rem classis {@link VerbumSimplex.Coniūnctīvum} accipit et valōrī {@link ConditōrConiūnctīvīs#nūntius}
+     * Modus hic rem classis {@link VerbumSimplex.Coniūnctīvum} accipit valōrīque {@link ConditōrConiūnctīvīs#nūntius}
      * ita refert.
      * @param hoc rem tentanda
      */
@@ -117,7 +117,7 @@ public abstract class ConditōrSimplicibus <Hoc extends VerbumSimplex <Hoc>> ext
     }
 
     /**
-     * Modus hic rem classis {@link VerbumSimplex.Coniūnctīvum} accipit et valōrī {@link Conditōr#nūntius} ita refert.
+     * Modus hic rem classis {@link VerbumSimplex.Coniūnctīvum} accipit valōrīque {@link Conditōr#nūntius} ita refert.
      * @param hoc rem tentanda
      */
     protected void referō(@Nullable final VerbumSimplex.Interiectiō hoc) {

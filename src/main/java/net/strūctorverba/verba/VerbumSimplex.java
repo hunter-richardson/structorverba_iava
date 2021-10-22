@@ -49,7 +49,7 @@ public abstract class VerbumSimplex <Hoc extends Verbum <Hoc>> extends Verbum <H
 
   /**
    * Classis {@link Coniūnctīvum} repraesentat coniūnctīva ut coniectēris. <br> Rēs classis huius catēgoriam {@link
-   * Catēgoria#CONIŪNCTĪVUM} ūtuntur et cōnservāta sunt in scrīniō <a href="{@docRoot}/../src/main/resources">auxiliārēs</a>/coniūnctīva.
+   * Catēgoria#CONIŪNCTĪVUM} ūtuntur cōnservātaque sunt in scrīniō <a href="{@docRoot}/../src/main/resources">auxiliārēs</a>/coniūnctīva.
    * Classis haec classisque {@link Interiectiō} ā cōnspectiōne programmātis StrūctorVerba est eaedem.
    * @see LēctorSimplicibus.LēctorConiūnctīvīs
    * @see TenorSimplicibus.TenorConiūnctivīs
@@ -68,7 +68,7 @@ public abstract class VerbumSimplex <Hoc extends Verbum <Hoc>> extends Verbum <H
 
   /**
    * Classis {@link Interiectiō} repraesentat interiectiōnem ut coniectēris. <br> Rēs classis huius catēgoriam {@link
-   * Catēgoria#CONIŪNCTĪVUM} ūtuntur et cōnservāta sunt in scrīniō <a href="{@docRoot}/../src/main/resources">auxiliārēs</a>/interiectiōnēs.
+   * Catēgoria#CONIŪNCTĪVUM} ūtuntur cōnservātaque sunt in scrīniō <a href="{@docRoot}/../src/main/resources">auxiliārēs</a>/interiectiōnēs.
    * Classis haec classisque {@link Coniūnctīvum} ā cōnspectiōne programmātis StrūctorVerba est eaedem.
    * @see LēctorSimplicibus.LēctorInteriectiōnibus
    * @see TenorSimplicibus.TenorInteriectiōnibus
@@ -87,7 +87,7 @@ public abstract class VerbumSimplex <Hoc extends Verbum <Hoc>> extends Verbum <H
 
   /**
    * Classis {@link Praepositiō} repraesentat praepositiōnēs ut coniectēris. <br> Rēs classis huius catēgoriam {@link
-   * Catēgoria#PRAEPOSITIŌ} ūtuntur et cōnservāta sunt in scrīniō <a href="{@docRoot}/../src/main/resources">auxiliārēs</a>/praepositiōnēs.
+   * Catēgoria#PRAEPOSITIŌ} ūtuntur cōnservātaque sunt in scrīniō <a href="{@docRoot}/../src/main/resources">auxiliārēs</a>/praepositiōnēs.
    * @see LēctorPraepositiōnibus
    * @see Nūntius.NūntiusPraepositiōnum
    */
@@ -108,7 +108,7 @@ public abstract class VerbumSimplex <Hoc extends Verbum <Hoc>> extends Verbum <H
 
   /**
    * Classis {@link Numerus} repraesentat numerōs ut coniectēris. <br> Rēs classis huius catēgoriam {@link
-   * Catēgoria#NUMERUS} ūtuntur et data eīs nōn inveniet scrīnium <a href="{@docRoot}/../src/main/resources">auxiliārēs</a>.
+   * Catēgoria#NUMERUS} ūtuntur dataque eīs nōn inveniet scrīnium <a href="{@docRoot}/../src/main/resources">auxiliārēs</a>.
    * <br> Magis rēs classis huius ā numerīs classis <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Short.html">Short</a>
    * per ūsum classis <a href="https://github.com/Chaosfirebolt/RomanNumeralConverter/blob/master/src/main/java/com/github/chaosfirebolt/converter/RomanInteger.java">RomanInteger</a>
    * fīant.

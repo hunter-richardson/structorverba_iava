@@ -77,7 +77,7 @@ public final class StrūctorVerba extends Omnum {
   @NotNull private final LēctorPraepositiōnibus praepositiōnēs = LēctorPraepositiōnibus.fac.get();
 
   /**
-   * Modus hic rem apta classis {@link Lēctor} valōrī {@code catēgoria} sēligit et valōrēs {@code lemma} immittit.
+   * Modus hic rem apta classis {@link Lēctor} valōrī {@code catēgoria} sēligit valōrem {@code lemma} immittit.
    * Valōrem {@code null} refert sī rem nūlla classis {@link Lēctor} valōrem {@code catēgoria} quadrat.
    * @param lemma  valōrem {@link Verbum#lemma} immittendus
    * @param catēgoria valor tentendus
@@ -98,8 +98,8 @@ public final class StrūctorVerba extends Omnum {
   }
 
   /**
-   * Modus hic rem apta classis {@link LēctorMultiplicibus} valōrī {@code catēgoria} sēligit et valōrēs et {@code
-   * lemma} et {@code illa} immittit. <br> Valōrēs et {@code lemma} et {@code illa} modō {@link #adveniam(String,
+   * Modus hic rem apta classis {@link LēctorMultiplicibus} valōrī {@code catēgoria} sēligit valōrēs {@code
+   * lemma}que {@code illa}que immittit. <br> Valōrēs {@code lemma}que {@code illa}que modō {@link #adveniam(String,
    * Catēgoria)} immittit sī rem nūlla classis {@link LēctorMultiplicibus} valōrem {@code catēgoria} quadrat.
    * @param lemma  valōrem {@link Verbum#lemma} immittendus
    * @param catēgoria valor tentendus

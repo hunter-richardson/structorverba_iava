@@ -31,8 +31,8 @@ import lombok.Getter;
  * href="{@docRoot}/../src/main/resources">auxiliārēs</a>/praepositiōnēs rēbus classis {@link VerbumSimplex.Praepositiō}
  * scrībere. <br> Dissimilis ā extēnsiōnibus classis {@link Lēctor} est quod scāpum omne seriem longa ēventōrum
  * possibilium continet. Ergō classem {@link Lēctor} nōn extendit. <br> Scāpa quattuor sunt quae reī huic intersunt ut
- * scāpa singulus cāsuī omnī repraesentātō: {@link Cāsus#ABLĀTĪVUS} et {@link Cāsus#ACCŪSĀTĪVUS} et {@link
- * Cāsus#GENITĪVUS} et {@link Cāsus#VOCĀTĪVUS}.
+ * scāpa singulus cāsuī omnī repraesentātō: {@link Cāsus#ABLĀTĪVUS}QUE {@link Cāsus#ACCŪSĀTĪVUS}QUE {@link
+ * Cāsus#GENITĪVUS}QUE {@link Cāsus#VOCĀTĪVUS}QUE.
  * @see <a href="{@docRoot}/../src/main/resources">auxiliārēs</a>/praepositiōnēs/ablātīvus.data
  * @see <a href="{@docRoot}/../src/main/resources">auxiliārēs</a>/praepositiōnēs/accūsātīvus.data
  * @see <a href="{@docRoot}/../src/main/resources">auxiliārēs</a>/praepositiōnēs/genitīvus.data

@@ -19,7 +19,7 @@ import lombok.Getter;
 
 /**
  * Classis {@link Nōmen} repraesentat nōmina ut coniectēris. <br> Rēs classis huius catēgoriam {@link Catēgoria#NŌMEN}
- * ūtuntur et cōnservāta sunt in scrīniō <a href="{@docRoot}/../src/main/resources">auxiliārēs</a>/nōmina.
+ * ūtuntur cōnservātaque sunt in scrīniō <a href="{@docRoot}/../src/main/resources">auxiliārēs</a>/nōmina.
  * @see LēctorMultiplicibus.LēctorNōminibus
  * @see TenorMultiplicibus.TenorNōminibus
  * @see InventorNōminibus

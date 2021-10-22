@@ -84,7 +84,7 @@ public enum Mēnsis {
   }
 
   /**
-   * Modus hic societās intrā rēs ēnumerātiōnēs et huius et <a href="https://docs.oracle.com/javase/8/docs/api/java/time/Month.html">Month</a>
+   * Modus hic societās intrā rēs ēnumerātiōnēs huius rēsque <a href="https://docs.oracle.com/javase/8/docs/api/java/time/Month.html">Month</a>
    * dēmōnstrat.
    * <ul>
    *   <li>Valor <a href="https://docs.oracle.com/javase/8/docs/api/java/time/Month.html#JANUARY">JANUARY</a> valōrem {@link #IANUĀRIĪ} cōnsociat.</li>

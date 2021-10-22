@@ -13,7 +13,7 @@ import java.util.*;
 import java.util.function.*;
 
 /**
- * Classis {@link Tenor} data lēcta ā rēbus classis {@link Lēctor} sēliget et reī aptae classis {@link Conditōr}
+ * Classis {@link Tenor} data lēcta ā rēbus classis {@link Lēctor} sēliget reīque aptae classis {@link Conditōr}
  * praebet.
  * @param <Hoc> classis extenta classis {@link Verbum}
  * @see Omnum
@@ -30,7 +30,7 @@ public abstract class Tenor <Hoc extends Verbum <Hoc>> extends DefaultHandler {
    */
   protected final @NotNull List <@NotNull Hoc> seriēs = new ArrayList <>();
   /**
-   * Valor hic rem classis {@link Hoc} tenet et cōnstruenum ā reī aptae classis {@link Conditōr} et praebendum ad rē
+   * Valor hic rem classis {@link Hoc} tenet cōnstruenumque ā reī aptae classis {@link Conditōr} praebendumque ad rē
    * classis {@link Lēctor}.
    */
   @Nullable protected Hoc hoc;

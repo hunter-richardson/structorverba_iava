@@ -10,7 +10,7 @@ import org.jetbrains.annotations.*;
 import java.util.function.Supplier;
 
 /**
- * Classis {@link Conditōr} data ā rēbus classis {@link Tenor} accipit et eacum rēs classis extentārum {@link Verbum}
+ * Classis {@link Conditōr} data ā rēbus classis {@link Tenor} accipit eacumque rēs classis extentārum {@link Verbum}
  * cōnstruet.
  * @param <Hoc> classis extenta classis {@link Verbum}
  */

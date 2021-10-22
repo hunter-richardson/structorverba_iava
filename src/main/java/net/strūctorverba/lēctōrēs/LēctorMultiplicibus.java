@@ -151,15 +151,15 @@ public abstract class LēctorMultiplicibus <Hoc extends VerbumMultiplex <Hoc>> e
     }
 
     /**
-     * Modus hic cōnābitur advenīre rem classis {@link Adiectīvum} quam adiectīvum possessīvum repraesentat et valōrēs
+     * Modus hic cōnābitur advenīre rem classis {@link Adiectīvum} quam adiectīvum possessīvum repraesentat valōrēsque
      * {@code illa} quadrat.
      * @param numerālis dēsignat adiectīvum possessīvum sīve singulāre (id est aut {@code meus} aut {@code tuus}) sīve
      *                  plūrāle (id est aut {@code noster} aut {@code vester}) petitur
      * @param persōna   persōnam adiectīvī petītī dēsignat
      * @param illa      seriēs ēnumerātiōnum licent {@link #inventor} colere ēventīs lēctīs
-     * @return rem classis {@link Adiectīvum} quam valōrēs et {@code numerālis} et {@code persōna} et {@code illa}
-     *   quadrat. <br> Modus hic valōrem {@code null} refert sī nihil valōrēs et {@code numerālis} et {@code persōna} et
-     *   {@code illa} quadrat.
+     * @return rem classis {@link Adiectīvum} quam valōrēs {@code numerālis}que {@code persōna}que {@code illa}que
+     *   quadrat. <br> Modus hic valōrem {@code null} refert sī nihil valōrēs {@code numerālis}que {@code persōna}que
+     *   {@code illa}que quadrat.
      * @see <a href="{@docRoot}/../src/main/resources">auxiliārēs</a>/adiectīva/meus.xml
      * @see <a href="{@docRoot}/../src/main/resources">auxiliārēs</a>/adiectīva/tuus.xml
      * @see <a href="{@docRoot}/../src/main/resources">auxiliārēs</a>/adiectīva/noster.xml
@@ -222,12 +222,12 @@ public abstract class LēctorMultiplicibus <Hoc extends VerbumMultiplex <Hoc>> e
     }
 
     /**
-     * Modus hic cōnābitur advenīre rem classis {@link Prōnōmen} quam prōnōmen possessīvum repraesentat et valōrēs
+     * Modus hic cōnābitur advenīre rem classis {@link Prōnōmen} quam prōnōmen possessīvum repraesentat valōrēsque
      * {@code illa} quadrat.
      * @param persōna persōnam prōnimis petītī dēsignat
      * @param illa    seriēs ēnumerātiōnum licent {@link #inventor} colere ēventīs lēctīs
-     * @return rem classis {@link Prōnōmen} quam valōrēs et {@code persōna} et {@code illa} quadrat. <br> Modus hic
-     *   valōrem {@code null} refert sī nihil valōrēs et {@code persōna} et {@code illa} quadrat.
+     * @return rem classis {@link Prōnōmen} quam valōrēs {@code persōna}que {@code illa}que quadrat. <br> Modus hic
+     *   valōrem {@code null} refert sī nihil valōrēs {@code persōna}que {@code illa}que quadrat.
      * @see <a href="{@docRoot}/../src/main/resources">auxiliārēs</a>/prōnōmina/ego.xml
      * @see <a href="{@docRoot}/../src/main/resources">auxiliārēs</a>/prōnōmina/tū.xml
      * @see <a href="{@docRoot}/../src/main/resources">auxiliārēs</a>/prōnōmina/is.xml
@@ -277,7 +277,7 @@ public abstract class LēctorMultiplicibus <Hoc extends VerbumMultiplex <Hoc>> e
     }
 
     /**
-     * Modus hic cōnābitur advenīre rem classis {@link Āctus} quam fōrma āctī "esse" repraesentat et valōrēs {@code
+     * Modus hic cōnābitur advenīre rem classis {@link Āctus} quam fōrma āctī "esse" repraesentat valōrēs {@code
      * illa} quadrat.
      * @param illa seriēs ēnumerātiōnum licent {@link #inventor} colere ēventīs lēctīs. <br> Modus hic valōrem {@code
      *             null} refert sī nihil valōrēs {@code illa} quadrat.
