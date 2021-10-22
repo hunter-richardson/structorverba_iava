@@ -36,10 +36,10 @@ public abstract class Conditōr <Hoc extends Verbum <Hoc>> extends Omnum {
 
   /**
    * Modus hic valōrem {@link #lemma} indit.
-   * @param fdmn valōrem indendum
+   * @param lm valōrem indendum
    */
-  public final void funde(@NotNull final String fdmn) {
-    lemma = fdmn.trim();
+  public final void funde(@NotNull final String lm) {
+    lemma = lm.trim();
   }
 
   /**
