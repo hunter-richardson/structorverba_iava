@@ -28,7 +28,7 @@ Omne quālitātēs ipsās prōpositaque ipsa habet et ligāmina illa vōs dūcen
 
 ___
 
-Praetereā tentāmina tria sunt scrīpsī ut exsecūtiō modōsque programmātis recēnseantur.
+Praetereā tentāmina quattuor sunt scrīpsī ut exsecūtiō modōsque programmātis recēnseantur.
 
 I. [DolōremIpsum](src/main/test/net/strūctorverba/tentāmina/DolōremIpsum.java)
 
