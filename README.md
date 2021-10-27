@@ -32,7 +32,7 @@ Praetereā tentāmina tria sunt scrīpsī ut exsecūtiō modōsque programmātis
 
 I. [DolōremIpsum](src/main/test/net/strūctorverba/tentāmina/DolōremIpsum.java)
 
-II. [Carthāgō](src/main/test/net/structorverba/tentāmina/Carthāgō.java)
+II. [Carthāgō](src/main/test/net/strūctorverba/tentāmina/Carthāgō.java)
 
 III. [Exempla](src/main/test/net/strūctorverba/tentāmina/Exempla.java)
 
