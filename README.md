@@ -70,7 +70,7 @@ class Tentāmen {
 }
 ```
 
-Versiō simplificātus cōdics superī est scrīptus in tentāmine [Exempla.prōducta](src/main/test/net/strūctorverba/tentāmina/Exempla.java#L26)
+Versiō simplificātus cōdicis superī est scrīptus in tentāmine [Exempla.prōducta](src/main/test/net/strūctorverba/tentāmina/Exempla.java#L26)
 
 ___
 
