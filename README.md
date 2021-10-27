@@ -32,17 +32,17 @@ Praetereā tentāmina tria sunt scrīpsī ut exsecūtiō modōsque programmātis
 
 I. [DolōremIpsum](src/main/test/net/strūctorverba/tentāmina/DolōremIpsum.java)
 
-II. [Exempla](src/main/test/net/strūctorverba/tentāmina/Exempla.java)
+II. [Carthāgō](src/main/test/net/structorverba_iava/tentāmina/Carthāgō.java)
 
-III. [Numerī](src/main/test/net/strūctorverba/tentāmina/Numerī.java)
+III. [Exempla](src/main/test/net/strūctorverba/tentāmina/Exempla.java)
+
+IV. [Numerī](src/main/test/net/strūctorverba/tentāmina/Numerī.java)
 
 Valōrem [StrūctorVerba.fac](src/main/java/net/strūctorverba/mīscella/StrūctorVerba.java#L28) invocāte ut fūnctiōnēs omnēs programmātis StrūctorVerba accēdātis:
 
 ```java
-import net.strūctorverba.ēnumerātiōnēs.Encliticum;
-
 class Tentāmen {
-  private void main(String[] args) {
+  public void main(String[] args) {
     final StrūctorVerba strūctor = StrūctorVerba.fac.get();
     final Verba verba = strūctor.strue(
       strūctor.adveniam("ecce", Catēgoria.INTERIECTIŌ),
