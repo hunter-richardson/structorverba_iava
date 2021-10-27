@@ -41,24 +41,30 @@ IV. [Numerī](src/main/test/net/strūctorverba/tentāmina/Numerī.java)
 Valōrem [StrūctorVerba.fac](src/main/java/net/strūctorverba/mīscella/StrūctorVerba.java#L28) invocāte ut fūnctiōnēs omnēs programmātis StrūctorVerba accēdātis:
 
 ```java
+import net.strūctorverba.ēnumerātiōnēs.*;
+import net.strūctorverba.mīscella.StrūctorVerba;
+import net.strūctorverba.verba.Verba;
+import net.strūctorverba.verba.multiplicia.*;
+
 class Tentāmen {
+  @SuppressWarnings("ConstantConditions")
   public void main(String[] args) {
     final StrūctorVerba strūctor = StrūctorVerba.fac.get();
     final Verba verba = strūctor.strue(
-      strūctor.adveniam("ecce", Catēgoria.INTERIECTIŌ),
-      strūctor.adveniam("lingua", Catēgoria.NŌMEN,
-                        Speciālitās.COMMŪNE, Genus.FĒMINĪNUM,
-                        Cāsus.NŌMINĀTĪVUS, Numerālis.SINGULĀRIS),
-      strūctor.adveniam("latīnus", Catēgoria.ADIECTĪVUM,
-                        Speciālitās.PROPRIUM, Genus.FĒMINĪNUM,
-                        Cāsus.NŌMINĀTĪVUS, Numerālis.SINGULĀRIS, Gradus.POSITĪVUS),
-      strūctor.adveniam("plācēre", Catēgoria.ĀCTUM,
-                        Modus.INDICĀTĪVUS, Vōx.ĀCTĪVA, Tempus.PRAESĒNS,
-                        Numerālis.SINGULĀRIS, Persōna.TERTIA),
-      strūctor.adveniam("prōdesse", Catēgoria.ĀCTUM,
-                        Modus.INDICĀTĪVUS, Vōx.ĀCTĪVA, Tempus.PRAESĒNS,
-                        Numerālis.SINGULĀRIS, Persōna.TERTIA)
-              .allegō(Encliticum.CONIUGĀNS));
+          strūctor.adveniam("ecce", Catēgoria.INTERIECTIŌ),
+          strūctor.adveniam("lingua", Catēgoria.NŌMEN,
+                            Speciālitās.COMMŪNE, Genus.FĒMINĪNUM,
+                            Cāsus.NŌMINĀTĪVUS, Numerālis.SINGULĀRIS),
+          strūctor.adveniam("latīnus", Catēgoria.ADIECTĪVUM,
+                            Speciālitās.PROPRIUM, Genus.FĒMINĪNUM,
+                            Cāsus.NŌMINĀTĪVUS, Numerālis.SINGULĀRIS, Gradus.POSITĪVUS),
+          strūctor.adveniam("plācēre", Catēgoria.ĀCTUM,
+                            Modus.INDICĀTĪVUS, Vōx.ĀCTĪVA, Tempus.PRAESĒNS,
+                            Numerālis.SINGULĀRIS, Persōna.TERTIA),
+ ((Āctus) strūctor.adveniam("prōdesse", Catēgoria.ĀCTUM,
+                            Modus.INDICĀTĪVUS, Vōx.ĀCTĪVA, Tempus.PRAESĒNS,
+                            Numerālis.SINGULĀRIS, Persōna.TERTIA))
+                  .allegō(Encliticum.CONIUGĀNS));
     System.out.println(verba); // Ecce lingua Latīna placet prōdestque
   }
 }
