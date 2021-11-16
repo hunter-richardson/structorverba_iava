@@ -25,7 +25,7 @@ import lombok.Getter;
  * Tulliō Cicerōnī cum parte dialogī Sōcraticus "Dē Fīnibus Bonōrum et Mālōrum" in librō prīmō sectiōne decimā versū
  * duotrīcēsimō cōnstruat. <br> Versūs ante triēntem prīmam incipit et post fīnālem fīnit. <br> Pars illa est agnita
  * poēmam istam "Lorem Ipsum" īnspīrāvisse.
- * @see <a href="http://www.thelatinlibrary.com/cicero/fin1.shtml#32">Dē Fīnibus Bonōrum et Mālōrum</a>
+ * @see <a href="http://www.thelatinlibrary.com/cicero/fin1.shtml#32">Dē Fīnibus Bonōrum et Malōrum</a>
  */
 @SuppressWarnings({ "NonAsciiCharacters", "SpellCheckingInspection", "FieldCanBeLocal" })
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
