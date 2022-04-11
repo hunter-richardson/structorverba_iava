@@ -160,10 +160,10 @@ public abstract class LēctorMultiplicibus <Hoc extends VerbumMultiplex <Hoc>> e
      * @return rem classis {@link Adiectīvum} quam valōrēs {@code numerālis}que {@code persōna}que {@code illa}que
      *   quadrat. <br> Modus hic valōrem {@code null} refert sī nihil valōrēs {@code numerālis}que {@code persōna}que
      *   {@code illa}que quadrat.
-     * @see <a href="{@docRoot}/../src/main/resources">auxiliārēs</a>/adiectīva/meus.xml
-     * @see <a href="{@docRoot}/../src/main/resources">auxiliārēs</a>/adiectīva/tuus.xml
-     * @see <a href="{@docRoot}/../src/main/resources">auxiliārēs</a>/adiectīva/noster.xml
-     * @see <a href="{@docRoot}/../src/main/resources">auxiliārēs</a>/adiectīva/vester.xml
+     * @see <a href="{@docRoot}/../src/main/resources">auxiliārēs</a>/adiectīva/meum.xml
+     * @see <a href="{@docRoot}/../src/main/resources">auxiliārēs</a>/adiectīva/tuum.xml
+     * @see <a href="{@docRoot}/../src/main/resources">auxiliārēs</a>/adiectīva/nostrum.xml
+     * @see <a href="{@docRoot}/../src/main/resources">auxiliārēs</a>/adiectīva/vestrum.xml
      * @see Numerālis
      * @see Persōna
      * @see #adveniam(String, Enum[])
@@ -230,7 +230,7 @@ public abstract class LēctorMultiplicibus <Hoc extends VerbumMultiplex <Hoc>> e
      *   valōrem {@code null} refert sī nihil valōrēs {@code persōna}que {@code illa}que quadrat.
      * @see <a href="{@docRoot}/../src/main/resources">auxiliārēs</a>/prōnōmina/ego.xml
      * @see <a href="{@docRoot}/../src/main/resources">auxiliārēs</a>/prōnōmina/tū.xml
-     * @see <a href="{@docRoot}/../src/main/resources">auxiliārēs</a>/prōnōmina/is.xml
+     * @see <a href="{@docRoot}/../src/main/resources">auxiliārēs</a>/prōnōmina/id.xml
      * @see Persōna
      */
     @SuppressWarnings("unused")

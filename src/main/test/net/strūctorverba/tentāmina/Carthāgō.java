@@ -40,7 +40,7 @@ public class Carthāgō extends Omnum {
                                                   strūctor.adveniam("cēnsēre", Catēgoria.ĀCTUS,
                                                                     Modus.INDICĀTĪVUS, Vōx.ĀCTĪVA, Tempus.PRAESĒNS,
                                                                     Numerālis.SINGULĀRIS, Persōna.PRĪMA),
-                                                  strūctor.adveniam("Carthāgō", Catēgoria.NŌMEN,
+                                                  strūctor.adveniam("carthāgō", Catēgoria.NŌMEN,
                                                                     Speciālitās.PROPRIUM, Genus.FĒMINĪNUM,
                                                                     Cāsus.ACCŪSĀTĪVUS, Numerālis.SINGULĀRIS),
                                                   strūctor.adveniam("esse", Catēgoria.ĀCTUS,
