@@ -17,7 +17,7 @@ import javax.ejb.DependsOn;
 import javax.ejb.Singleton;
 
 /**
- * Classis {@link ConditōrSimplicibus} est vās classis {@link Conditōr} classibus omnibus quibus classem {@link
+ * Classis {@link Condit\ufffdrSimplicibus} est vās classis {@link Conditōr} classibus omnibus quibus classem {@link
  * VerbumSimplex} extendit.
  * @param <Hoc> classis extenta classis {@link VerbumSimplex}
  */

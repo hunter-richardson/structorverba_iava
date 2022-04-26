@@ -16,13 +16,13 @@ IV. [Numerus](structorverba-lib/src/main/java/java/net/structorverba/bibliotheca
 
 V. [Adverbium](structorverba-lib/src/main/java/java/net/structorverba/bibliotheca/verba/multiplicia/Adverbium.java)
 
-VI. [Nōmen](structorverba-lib/src/main/java/java/net/structorverba/bibliotheca/verba/multiplicia/Nōmen.java)
+VI. [Nōmen](structorverba-lib/src/main/java/java/net/structorverba/bibliotheca/verba/multiplicia/Nomen.java)
 
-VII. [Prōnōmen](structorverba-lib/src/main/java/java/net/structorverba/bibliotheca/verba/multiplicia/Prōnōmen.java)
+VII. [Prōnōmen](structorverba-lib/src/main/java/java/net/structorverba/bibliotheca/verba/multiplicia/Pronomen.java)
 
-VIII. [Adiectīvum](structorverba-lib/src/main/java/java/net/structorverba/bibliotheca/verba/multiplicia/Adiectīvum.java)
+VIII. [Adiectīvum](structorverba-lib/src/main/java/java/net/structorverba/bibliotheca/verba/multiplicia/Adiectivum.java)
 
-IX. [Āctus](structorverba-lib/src/main/java/java/net/structorverba/bibliotheca/verba/multiplicia/Āctus.java)
+IX. [Āctus](structorverba-lib/src/main/java/java/net/structorverba/bibliotheca/verba/multiplicia/Actus.java)
 
 Omne quālitātēs ipsās prōpositaque ipsa habet et ligāmina illa vōs dūcent ut tabellās aptās perlēgātis.
 
@@ -38,7 +38,7 @@ III. [Exempla](structorverba-lib/src/test/net/strūctorverba/tentāmina/Exempla.
 
 IV. [Numerī](structorverba-lib/src/test/net/strūctorverba/tentāmina/Numerī.java)
 
-Valōrem [StrūctorVerba.fac](structorverba-lib/src/main/java/java/net/structorverba/bibliotheca/miscella/StrūctorVerba.java#L28) invocāte ut fūnctiōnēs omnēs programmātis StrūctorVerba accēdātis:
+Valōrem [StrūctorVerba.fac](structorverba-lib/src/main/java/java/net/structorverba/bibliotheca/miscella/StructorVerba.java#L28) invocāte ut fūnctiōnēs omnēs programmātis StrūctorVerba accēdātis:
 
 ```java
 import net.strūctorverba.ēnumerātiōnēs.*;
