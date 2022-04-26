@@ -1,0 +1,2 @@
+include ':structorverba-lib'
+rootProject.name = "structorverba"

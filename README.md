@@ -6,23 +6,23 @@ Nōn iam! Vōbīs intrōdūcō programma StrūctorVerba scrīptum in linguā [Ia
 
 Programma hoc dēfīnit classēs novem quās catēgoriās novem verbōrum repraesentent:
 
-I. [Coniūnctīvum](src/main/java/net/strūctorverba/verba/VerbumSimplex.java#L46)
+I. [Coniūnctīvum](structorverba-lib/src/main/java/java/net/structorverba/bibliotheca/verba/VerbumSimplex.java#L46)
 
-II. [Interiectiō](src/main/java/net/strūctorverba/verba/VerbumSimplex.java#L67)
+II. [Interiectiō](structorverba-lib/src/main/java/java/net/structorverba/bibliotheca/verba/VerbumSimplex.java#L67)
 
-III. [Praepositiō](src/main/java/net/strūctorverba/verba/VerbumSimplex.java#L88)
+III. [Praepositiō](structorverba-lib/src/main/java/java/net/structorverba/bibliotheca/verba/VerbumSimplex.java#L88)
 
-IV. [Numerus](src/main/java/net/strūctorverba/verba/VerbumSimplex.java#L112)
+IV. [Numerus](structorverba-lib/src/main/java/java/net/structorverba/bibliotheca/verba/VerbumSimplex.java#L112)
 
-V. [Adverbium](src/main/java/net/strūctorverba/verba/multiplicia/Adverbium.java)
+V. [Adverbium](structorverba-lib/src/main/java/java/net/structorverba/bibliotheca/verba/multiplicia/Adverbium.java)
 
-VI. [Nōmen](src/main/java/net/strūctorverba/verba/multiplicia/Nōmen.java)
+VI. [Nōmen](structorverba-lib/src/main/java/java/net/structorverba/bibliotheca/verba/multiplicia/Nōmen.java)
 
-VII. [Prōnōmen](src/main/java/net/strūctorverba/verba/multiplicia/Prōnōmen.java)
+VII. [Prōnōmen](structorverba-lib/src/main/java/java/net/structorverba/bibliotheca/verba/multiplicia/Prōnōmen.java)
 
-VIII. [Adiectīvum](src/main/java/net/strūctorverba/verba/multiplicia/Adiectīvum.java)
+VIII. [Adiectīvum](structorverba-lib/src/main/java/java/net/structorverba/bibliotheca/verba/multiplicia/Adiectīvum.java)
 
-IX. [Āctus](src/main/java/net/strūctorverba/verba/multiplicia/Āctus.java)
+IX. [Āctus](structorverba-lib/src/main/java/java/net/structorverba/bibliotheca/verba/multiplicia/Āctus.java)
 
 Omne quālitātēs ipsās prōpositaque ipsa habet et ligāmina illa vōs dūcent ut tabellās aptās perlēgātis.
 
@@ -30,15 +30,15 @@ ___
 
 Praetereā tentāmina quattuor sunt scrīpsī ut exsecūtiō modōsque programmātis recēnseantur.
 
-I. [DolōremIpsum](src/main/test/net/strūctorverba/tentāmina/DolōremIpsum.java)
+I. [DolōremIpsum](structorverba-lib/src/test/net/strūctorverba/tentāmina/DolōremIpsum.java)
 
-II. [Carthāgō](src/main/test/net/strūctorverba/tentāmina/Carthāgō.java)
+II. [Carthāgō](structorverba-lib/src/test/net/strūctorverba/tentāmina/Carthāgō.java)
 
-III. [Exempla](src/main/test/net/strūctorverba/tentāmina/Exempla.java)
+III. [Exempla](structorverba-lib/src/test/net/strūctorverba/tentāmina/Exempla.java)
 
-IV. [Numerī](src/main/test/net/strūctorverba/tentāmina/Numerī.java)
+IV. [Numerī](structorverba-lib/src/test/net/strūctorverba/tentāmina/Numerī.java)
 
-Valōrem [StrūctorVerba.fac](src/main/java/net/strūctorverba/mīscella/StrūctorVerba.java#L28) invocāte ut fūnctiōnēs omnēs programmātis StrūctorVerba accēdātis:
+Valōrem [StrūctorVerba.fac](structorverba-lib/src/main/java/java/net/structorverba/bibliotheca/miscella/StrūctorVerba.java#L28) invocāte ut fūnctiōnēs omnēs programmātis StrūctorVerba accēdātis:
 
 ```java
 import net.strūctorverba.ēnumerātiōnēs.*;
@@ -70,7 +70,7 @@ class Tentāmen {
 }
 ```
 
-Versiō simplificātus cōdicis superī est scrīptus in tentāmine [Exempla.prōducta](src/main/test/net/strūctorverba/tentāmina/Exempla.java#L26)
+Versiō simplificātus cōdicis superī est scrīptus in tentāmine [Exempla.prōducta](structorverba-lib/src/test/net/strūctorverba/tentāmina/Exempla.java#L26)
 
 ___
 

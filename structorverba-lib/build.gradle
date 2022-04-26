@@ -1,0 +1,15 @@
+apply plugin: 'java-library'
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    compileOnly             "$jetbrains:$annotations:23.0.0"
+    annotationProcessor     "$projectlombok:$lombok:1.18.24"
+    implementation          "$apache:$collections:4.4"
+    implementation          "$apache:$lang:3.12.0"
+    implementation          "$chaosfirebolt:$numeralConverter:2.0.1"
+
+    testImplementation      "$junit:$junit:4.1"
+    testCompileOnly         "$projectlombok:$lombok:1.18.24"
+    testAnnotationProcessor "$projectlombok:$lombok:1.18.24"
+}
