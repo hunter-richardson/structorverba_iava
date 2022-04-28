@@ -6,16 +6,13 @@ import officia.src.main.java.com.structorverba.officia.verba.Verbum;
 import officia.src.main.java.com.structorverba.officia.verba.multiplicia.Actus;
 import officia.src.main.java.com.structorverba.officia.enumerationes.*;
 
-import org.apache.commons.lang3.ObjectUtils;
-import org.apache.commons.lang3.StringUtils;
-import org.jetbrains.annotations.NotNull;
-import org.jetbrains.annotations.Nullable;
+import org.apache.commons.lang3.*;
+import org.jetbrains.annotations.*;
 
 import java.util.Objects;
 import java.util.function.Supplier;
 
-import javax.ejb.DependsOn;
-import javax.ejb.Singleton;
+import javax.ejb.*;
 
 /**
  * Classis {@link ConditorActis} est v\u0101s classis {@link Conditor} class\u012B {@link Actus}.

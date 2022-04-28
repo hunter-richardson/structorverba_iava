@@ -2,7 +2,7 @@ package officia.src.main.java.com.structorverba.officia.nuntii;
 
 import officia.src.main.java.com.structorverba.officia.conditores.ConditorSimplicibus;
 import officia.src.main.java.com.structorverba.officia.conditores.multiplicia.*;
-import officia.src.main.java.com.structorverba.officia.inventeres.*;
+import officia.src.main.java.com.structorverba.officia.inventores.*;
 import officia.src.main.java.com.structorverba.officia.lectores.*;
 import officia.src.main.java.com.structorverba.officia.miscella.Omnum;
 import officia.src.main.java.com.structorverba.officia.tenores.*;

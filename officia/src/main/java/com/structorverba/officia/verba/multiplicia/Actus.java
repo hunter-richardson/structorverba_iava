@@ -8,8 +8,7 @@ import officia.src.main.java.com.structorverba.officia.nuntii.Nuntius;
 import officia.src.main.java.com.structorverba.officia.tenores.TenorMultiplicibus;
 import officia.src.main.java.com.structorverba.officia.enumerationes.*;
 
-import org.jetbrains.annotations.NotNull;
-import org.jetbrains.annotations.Nullable;
+import org.jetbrains.annotations.*;
 
 import java.util.Objects;
 

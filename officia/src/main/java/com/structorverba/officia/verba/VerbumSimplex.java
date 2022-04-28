@@ -6,17 +6,14 @@ import com.github.chaosfirebolt.converter.util.Validator;
 
 import officia.src.main.java.com.structorverba.officia.conditores.ConditorSimplicibus;
 import officia.src.main.java.com.structorverba.officia.inventores.Inventor;
-import officia.src.main.java.com.structorverba.officia.lectores.LectorPraepositionibus;
-import officia.src.main.java.com.structorverba.officia.lectores.LectorSimplicibus;
+import officia.src.main.java.com.structorverba.officia.lectores.*;
 import officia.src.main.java.com.structorverba.officia.miscella.Utilitas;
 import officia.src.main.java.com.structorverba.officia.nuntii.Nuntius;
 import officia.src.main.java.com.structorverba.officia.tenores.TenorSimplicibus;
 import officia.src.main.java.com.structorverba.officia.enumerationes.Categoria;
 
 import org.apache.commons.lang3.StringUtils;
-import org.jetbrains.annotations.NotNull;
-import org.jetbrains.annotations.Nullable;
-import org.jetbrains.annotations.Range;
+import org.jetbrains.annotations.*;
 
 import java.util.function.Supplier;
 

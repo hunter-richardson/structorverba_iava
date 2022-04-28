@@ -38,7 +38,7 @@ public enum Persona {
   /**
    * Valor hic reparesent\u0101ti\u014Dnem scr\u012Bpta \u0113numer\u0101ti\u014Dnis d\u0113signat.
    */
-  public static final @NotNull String pittacium = Utilitas.minimasScribo(Persona.class.getSimpleName().replace('o', '\u014D'));
+  public static final @NotNull String pittacium = Utilitas.minisculasScribo(Persona.class.getSimpleName().replace('o', '\u014D'));
 
   /**
    * Valor hic repraesent\u0101ti\u014Dnem scr\u012Bpta re\u012B huius d\u0113signat.

@@ -1,9 +1,9 @@
 package officia.src.main.java.com.structorverba.officia.inventores;
 
-import com.structorverba.lectores.LectorMultiplicibus;
-import com.structorverba.nuntii.Nuntius;
-import com.structorverba.verba.multiplicia.Adverbium;
-import com.structorverba.enumerationes.Gradus;
+import officia.src.main.java.com.structorverba.officia.lectores.LectorMultiplicibus;
+import officia.src.main.java.com.structorverba.officia.nuntii.Nuntius;
+import officia.src.main.java.com.structorverba.officia.verba.multiplicia.Adverbium;
+import officia.src.main.java.com.structorverba.officia.enumerationes.Gradus;
 
 import org.apache.commons.lang3.ObjectUtils;
 import org.jetbrains.annotations.*;

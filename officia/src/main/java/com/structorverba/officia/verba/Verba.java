@@ -3,21 +3,17 @@ package officia.src.main.java.com.structorverba.officia.verba;
 import officia.src.main.java.com.structorverba.officia.miscella.*;
 
 import org.apache.commons.lang3.StringUtils;
-import org.jetbrains.annotations.NotNull;
-import org.jetbrains.annotations.Nullable;
+import org.jetbrains.annotations.*;
 
-import java.util.Arrays;
-import java.util.LinkedList;
-import java.util.Objects;
+import java.util.*;
 import java.util.stream.Collectors;
 
-import lombok.AccessLevel;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 /**
  * Classis {@link Verba} seri\u0113s r\u0113rum classis {@link Verbum} c\u014Dnstat.
  */
-@SuppressWarnings( "SpellCheckingInspection", "unused" })
+@SuppressWarnings({ "SpellCheckingInspection", "unused" })
 @NoArgsConstructor(access = AccessLevel.PUBLIC)
 public final class Verba extends Omne {
   /**

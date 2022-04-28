@@ -12,7 +12,6 @@ import org.xml.sax.*;
 import javax.xml.parsers.*;
 import java.io.*;
 import java.nio.file.Path;
-import java.util.function.Supplier;
 
 /**
  * Classis {@link Lector} colliget data \u0101 sc\u0101p\u014D XML intr\u0101

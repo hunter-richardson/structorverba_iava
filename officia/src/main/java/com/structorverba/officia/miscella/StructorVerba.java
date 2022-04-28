@@ -1,29 +1,22 @@
 package officia.src.main.java.com.structorverba.officia.miscella;
 
 import com.github.chaosfirebolt.converter.RomanInteger;
-import com.github.chaosfirebolt.converter.constants.IntegerType;
-import com.github.chaosfirebolt.converter.constants.Patterns;
+import com.github.chaosfirebolt.converter.constants.*;
 
 import officia.src.main.java.com.structorverba.officia.lectores.*;
-import officia.src.main.java.com.structorverba.officia.verba.Verba;
-import officia.src.main.java.com.structorverba.officia.verba.Verbum;
-import officia.src.main.java.com.structorverba.officia.verba.VerbumSimplex;
+import officia.src.main.java.com.structorverba.officia.verba.*;
 import officia.src.main.java.com.structorverba.officia.verba.multiplicia.VerbumMultiplex;
 import officia.src.main.java.com.structorverba.officia.enumerationes.Categoria;
 
-import org.apache.commons.lang3.ObjectUtils;
-import org.apache.commons.lang3.Range;
-import org.jetbrains.annotations.NotNull;
-import org.jetbrains.annotations.Nullable;
+import org.apache.commons.lang3.*;
+import org.jetbrains.annotations.*;
 
 import java.util.Objects;
 import java.util.function.Supplier;
 
 import javax.ejb.Singleton;
 
-import lombok.AccessLevel;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 /**
  * Classis {@link StructorVerba} accessum mod\u012Bs omnibus programm\u0101tis Str\u016BctorVerba pr\u014Dvidet. <br>

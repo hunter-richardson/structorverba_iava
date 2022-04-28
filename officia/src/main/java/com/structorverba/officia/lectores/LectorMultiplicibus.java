@@ -7,13 +7,11 @@ import officia.src.main.java.com.structorverba.officia.verba.multiplicia.*;
 import officia.src.main.java.com.structorverba.officia.enumerationes.*;
 
 import org.apache.commons.lang3.ObjectUtils;
-import org.jetbrains.annotations.NotNull;
-import org.jetbrains.annotations.Nullable;
+import org.jetbrains.annotations.*;
 
 import java.util.function.Supplier;
 
-import javax.ejb.DependsOn;
-import javax.ejb.Singleton;
+import javax.ejb.*;
 
 /**
  * Classis {@link LectorMultiplicibus} est v\u0101s classis {@link Lector} classibus omnibus quibus classem {@link

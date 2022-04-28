@@ -2,18 +2,15 @@ package officia.src.main.java.com.structorverba.officia.tenores;
 
 import officia.src.main.java.com.structorverba.officia.conditores.ConditorSimplicibus;
 import officia.src.main.java.com.structorverba.officia.nuntii.Nuntius;
-import officia.src.main.java.com.structorverba.officia.verba.Verbum;
-import officia.src.main.java.com.structorverba.officia.verba.VerbumSimplex;
+import officia.src.main.java.com.structorverba.officia.verba.*;
 
 import org.apache.commons.lang3.ObjectUtils;
-import org.jetbrains.annotations.NotNull;
-import org.jetbrains.annotations.Nullable;
+import org.jetbrains.annotations.*;
 
 import java.util.Objects;
 import java.util.function.Supplier;
 
-import javax.ejb.DependsOn;
-import javax.ejb.Singleton;
+import javax.ejb.*;
 
 /**
  * Classis {@link TenorSimplicibus} est v\u0101s classis {@link Tenor} classibus omnibus quibus classem {@link VerbumSimplex}

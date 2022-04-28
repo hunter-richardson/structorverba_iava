@@ -1,19 +1,16 @@
 package officia.src.main.java.com.structorverba.officia.inventores;
 
 import officia.src.main.java.com.structorverba.officia.lectores.LectorMultiplicibus;
-import officia.src.main.java.com.structorverba.officia.nuntie.Nuntius;
+import officia.src.main.java.com.structorverba.officia.nuntii.Nuntius;
 import officia.src.main.java.com.structorverba.officia.verba.multiplicia.Nomen;
 import officia.src.main.java.com.structorverba.officia.enumerationes.*;
 
 import org.apache.commons.lang3.ObjectUtils;
-import org.jetbrains.annotations.NotNull;
-import org.jetbrains.annotations.Nullable;
+import org.jetbrains.annotations.*;
 
-import java.util.function.Predicate;
-import java.util.function.Supplier;
+import java.util.function.*;
 
-import javax.ejb.DependsOn;
-import javax.ejb.Singleton;
+import javax.ejb.*;
 
 /**
  * Classis {@link InventorNominibus} est v\u0101s classis {@link Inventor} class\u012B {@link Nomen}.

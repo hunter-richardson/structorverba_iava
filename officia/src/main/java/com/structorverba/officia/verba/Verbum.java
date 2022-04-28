@@ -13,9 +13,9 @@ import org.jetbrains.annotations.NotNull;
 /**
  * Classis {@link Verbum} repraesentat verba Lat\u012Bna, f\u014Drm\u0101s omn\u0113s
  * dat\u014Drum qu\u0101s \u016Bs\u016Bfructu\u0101ri\u012B petunt. <br>
- * Rem omnem classis huius r\u0113s classis {@link Lactor} colliget
+ * Rem omnem classis huius r\u0113s classis {@link Lector} colliget
  * r\u0113s classis {@link Tenor} s\u0113liget r\u0113sque classis {@link Conditor} tandem c\u014Dnstruet. <br>
- * R\u0113s classis {@link Lactor} colliget data \u0101 sc\u0101p\u014D XML intr\u0101
+ * R\u0113s classis {@link Lector} colliget data \u0101 sc\u0101p\u014D XML intr\u0101
  * scr\u012Bnium <a href="{@docRoot}/../src/main/resources">auxili\u0101r\u0113s</a>. <br>
  * R\u0113s classis {@link Inventor} \u016Btitur c\u014Dl\u0101re r\u0113s
  * multiplic\u0113s classis huius quae classem {@link VerbumMultiplex} extendit.
@@ -36,14 +36,14 @@ public abstract class Verbum <Hoc extends Verbum <Hoc>> extends Omne {
    * intr\u0101 qu\u014D sc\u0101pum eius c\u014Dnserv\u0101tum est.
    * @see Catagoria
    */
-  @NotNull public final Catagoria catagoria;
+  @NotNull public final Categoria catagoria;
 
   /**
    * Officium hoc c\u014Dnstr\u016Bct\u014Drem re\u012B classis huius perpetrat.
    * @param ctgr val\u014Drem {@link #catagoria} indicat.
    * @param lm val\u014Drem {@link #lemma} indicat.
    */
-  protected Verbum(@NotNull final Catagoria ctgr, @NotNull final String lm) {
+  protected Verbum(@NotNull final Categoria ctgr, @NotNull final String lm) {
     catagoria = ctgr;
     lemma = Utilitas.minusculaScribo(lm);
   }

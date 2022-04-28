@@ -48,7 +48,7 @@ public enum Modus {
   /**
    * Valor hic reparesent\u0101ti\u014Dnem scr\u012Bpta \u0113numer\u0101ti\u014Dnis d\u0113signat.
    */
-  public static final @NotNull String pittacium = Utilitas.minimasScribo(Modus.class.getSimpleName());
+  public static final @NotNull String pittacium = Utilitas.minisculasScribo(Modus.class.getSimpleName());
 
   /**
    * Valor hic repraesent\u0101ti\u014Dnem scr\u012Bpta re\u012B huius d\u0113signat.
