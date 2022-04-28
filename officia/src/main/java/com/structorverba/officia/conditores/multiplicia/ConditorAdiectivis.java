@@ -94,8 +94,8 @@ public final class ConditorAdiectivis extends ConditorMultiplicibus <Adiectivum>
     } else if (pittaciumLemmae.equals(nomen)) {
       lemma = descriptor.trim();
     } else {
-      nuntius.moneo(Adiectivum.class.getSimpleName().replace("us", '\u014D'),
-                    "attrib\u016Bta inop\u012Bnata est \u016Bsa:", nomen, "est", descriptor);
+      nuntius.moneo(Adiectivum.class.getSimpleName().replace("us", "\u014D"),
+                    "attrib\u016Bta inop\u012Bnata \u016Bsa'st:", nomen, descriptor);
       return;
     }
 

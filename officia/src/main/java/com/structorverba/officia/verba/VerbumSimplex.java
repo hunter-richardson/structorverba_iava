@@ -1,9 +1,5 @@
 package officia.src.main.java.com.structorverba.officia.verba;
 
-import com.github.chaosfirebolt.converter.RomanInteger;
-import com.github.chaosfirebolt.converter.constants.IntegerType;
-import com.github.chaosfirebolt.converter.util.Validator;
-
 import officia.src.main.java.com.structorverba.officia.conditores.ConditorSimplicibus;
 import officia.src.main.java.com.structorverba.officia.inventores.Inventor;
 import officia.src.main.java.com.structorverba.officia.lectores.*;
@@ -11,6 +7,10 @@ import officia.src.main.java.com.structorverba.officia.miscella.Utilitas;
 import officia.src.main.java.com.structorverba.officia.nuntii.Nuntius;
 import officia.src.main.java.com.structorverba.officia.tenores.TenorSimplicibus;
 import officia.src.main.java.com.structorverba.officia.enumerationes.Categoria;
+
+import com.github.chaosfirebolt.converter.RomanInteger;
+import com.github.chaosfirebolt.converter.constants.IntegerType;
+import com.github.chaosfirebolt.converter.util.Validator;
 
 import org.apache.commons.lang3.StringUtils;
 import org.jetbrains.annotations.*;
@@ -60,7 +60,7 @@ public abstract class VerbumSimplex <Hoc extends Verbum <Hoc>> extends Verbum <H
 
     public Coniunctivum(@NotNull final String verbum) {
       super(Categoria.CONIUNCTIVUM, verbum);
-      nuntius.plusGarrio("Scribor ut", verbum);
+      nuntius.plusGarrio("Scr\u012Bbor ut", verbum);
     }
   }
 
@@ -80,7 +80,7 @@ public abstract class VerbumSimplex <Hoc extends Verbum <Hoc>> extends Verbum <H
 
     public Interiectio(@NotNull final String verbum) {
       super(Categoria.INTERIECTIO, verbum);
-      nuntius.plusGarrio("Scribor ut", verbum);
+      nuntius.plusGarrio("Scr\u012Bbor ut", verbum);
     }
   }
 

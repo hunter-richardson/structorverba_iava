@@ -65,7 +65,7 @@ public abstract class Nuntius {
                                              .findFirst().orElse(error.getStackTrace()[ 0 ]);
     praeco.throwing(historia.getClassName(), historia.getMethodName(), error);
     terreo("Modus", historia.getMethodName(), "classe",
-           historia.getClassName(), "contin\u0101tum est errorem:",
+           historia.getClassName(), "contin\u0101tu'st errorem:",
            error.getClass().getSimpleName(), error.getMessage());
   }
 

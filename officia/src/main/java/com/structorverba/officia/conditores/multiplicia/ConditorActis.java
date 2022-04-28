@@ -94,12 +94,13 @@ public final class ConditorActis extends ConditorMultiplicibus <Actus> {
     } else if (pittaciumLemmae.equals(nomen)) {
       lemma = descriptor.trim();
     } else {
-      nuntius.moneo(Actus.class.getSimpleName().replace("us", '\u014D'),
-                    "attrib\u016Bta inop\u012Bnata est \u016Bsa:", nomen, "est", descriptor);
+      nuntius.moneo(Actus.class.getSimpleName().replace("us", "\u014D"),
+                    "attrib\u016Bta inop\u012Bnata \u016Bsa'st:", nomen, descriptor);
       return;
     }
 
-    nuntius.garrio("C\u014Dntr\u016Bcti\u014Dn\u012B adi\u0113c\u012B conditi\u014Dnem novam:", nomen, "est", descriptor);
+    nuntius.garrio("C\u014Dntr\u016Bcti\u014Dn\u012B adi\u0113c\u012B conditi\u014Dnem novam:",
+                   nomen, descriptor);
   }
 
   /**

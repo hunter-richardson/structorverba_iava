@@ -83,9 +83,9 @@ public abstract class ConditorSimplicibus <Hoc extends VerbumSimplex <Hoc>> exte
     protected void refero(@Nullable final VerbumSimplex.Coniunctivum hoc) {
       if (Objects.isNull(hoc)) {
         nuntius.certioro(VerbumSimplex.Coniunctivum.class.getSimpleName(),
-                         lemma, "finitur pr\u014Dd\u016Bcere.");
+                         lemma, "f\u012Bn\u012Btur pr\u014Dd\u016Bcere.");
       } else {
-        nuntius.moneo(VerbumSimplex.Coniunctivum.class.getSimpleName().replace("um", "i"),
+        nuntius.moneo(VerbumSimplex.Coniunctivum.class.getSimpleName().replace("um", "\u012B"),
                       "pr\u014Dducti\u014D formae n\u016Bllae pr\u014Dcessit.");
       }
     }
@@ -122,7 +122,7 @@ public abstract class ConditorSimplicibus <Hoc extends VerbumSimplex <Hoc>> exte
         nuntius.certioro(VerbumSimplex.Interiectio.class.getSimpleName(), lemma,
                          "f\u012Bn\u012Btur pr\u014Dd\u016Bcere.");
       } else {
-        nuntius.moneo(VerbumSimplex.Interiectio.class.getSimpleName().replace("um", '\u012B'),
+        nuntius.moneo(VerbumSimplex.Interiectio.class.getSimpleName().replace("o", "\u014Dnis"),
                       "pr\u014Dducti\u014D f\u014Drmae n\u016Bllae pr\u014Dcessit.");
       }
     }

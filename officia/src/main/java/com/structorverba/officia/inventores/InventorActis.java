@@ -84,26 +84,26 @@ public final class InventorActis extends Inventor <Actus> {
     if (illud instanceof Vox) {
       vox = Vox.ut(illud);
       nuntius.garrio("Quaestion\u012B adi\u0113c\u012B conditi\u014Dnem novam:",
-                     Vox.class.getSimpleName(), "est", illud);
+                     Vox.class.getSimpleName(), illud);
     } else if (illud instanceof Tempus) {
       tempus = Tempus.ut(illud);
       nuntius.garrio("Quaestion\u012B adi\u0113c\u012B conditi\u014Dnem novam:",
-                     Tempus.class.getSimpleName(), "est", illud);
+                     Tempus.class.getSimpleName(), illud);
     } else if (illud instanceof Numeralis) {
       numeralis = Numeralis.ut(illud);
       nuntius.garrio("Quaestion\u012B adi\u0113c\u012B conditi\u014Dnem novam:",
-                     Numeralis.class.getSimpleName(), "est", illud);
+                     Numeralis.class.getSimpleName(), illud);
     } else if (illud instanceof Persona) {
       persona = Persona.ut(illud);
       nuntius.garrio("Quaestion\u012B adi\u0113c\u012B conditi\u014Dnem novam:",
-                     Persona.class.getSimpleName(), "est", illud);
+                     Persona.class.getSimpleName(), illud);
     } else if (illud instanceof Modus) {
       modus = Modus.ut(illud);
       nuntius.garrio("Quaestion\u012B adi\u0113c\u012B conditi\u014Dnem novam:",
-                     Modus.class.getSimpleName(), "est", illud);
+                     Modus.class.getSimpleName(), illud);
     } else {
-      nuntius.moneo(Actus.class.getSimpleName().replace("us", '\u014D'),
-                    "inqu\u012Bs\u012Bti\u014D inop\u012Bn\u0101ta est \u016Bsa:", illud);
+      nuntius.moneo(Actus.class.getSimpleName().replace("us", "\u014D"),
+                    "inqu\u012Bs\u012Bti\u014D inop\u012Bn\u0101ta \u016Bsa'st:", illud);
     }
   }
 }

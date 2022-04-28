@@ -83,27 +83,28 @@ public final class InventorAdiectivis extends Inventor <Adiectivum> {
   @Override protected void allegam(@NotNull final Enum <@NotNull ?> illud) {
     if (illud instanceof Specialitas) {
       specialitas = Specialitas.ut(illud);
-      nuntius.garrio("Quasti\u014Dn\u012B adi\u0113c\u012B conditi\u014Dnem novam:",
-                     Specialitas.class.getSimpleName(), "est", illud);
+      nuntius.garrio("Quaesti\u014Dn\u012B adi\u0113c\u012B conditi\u014Dnem novam:",
+                     Specialitas.class.getSimpleName(), illud);
     } else if (illud instanceof Genus) {
       genus = Genus.ut(illud);
-      nuntius.garrio("Quasti\u014Dn\u012B adi\u0113c\u012B conditi\u014Dnem novam:",
-                     Genus.class.getSimpleName(), "est", illud);
+      nuntius.garrio("Quaesti\u014Dn\u012B adi\u0113c\u012B conditi\u014Dnem novam:",
+                     Genus.class.getSimpleName(), illud);
     } else if (illud instanceof Numeralis) {
       numeralis = Numeralis.ut(illud);
-      nuntius.garrio("Quasti\u014Dn\u012B adi\u0113c\u012B conditi\u014Dnem novam:",
-                     Numeralis.class.getSimpleName(), "est", illud);
+      nuntius.garrio("Quaesti\u014Dn\u012B adi\u0113c\u012B conditi\u014Dnem novam:",
+                     Numeralis.class.getSimpleName(), illud);
     } else if (illud instanceof Casus) {
       casus = Casus.ut(illud);
-      nuntius.garrio("Quasti\u014Dn\u012B adi\u0113c\u012B conditi\u014Dnem novam:",
-                     Casus.class.getSimpleName(), "est", illud);
+      nuntius.garrio("Quaesti\u014Dn\u012B adi\u0113c\u012B conditi\u014Dnem novam:",
+                     Casus.class.getSimpleName(), illud);
     } else if (illud instanceof Gradus) {
       gradus = Gradus.ut(illud);
-      nuntius.garrio("Quasti\u014Dn\u012B adi\u0113c\u012B conditi\u014Dnem novam:",
-                     Gradus.class.getSimpleName(), "est", illud);
+      nuntius.garrio("Quaesti\u014Dn\u012B adi\u0113c\u012B conditi\u014Dnem novam:",
+                     Gradus.class.getSimpleName(), illud);
     } else {
-      nuntius.moneo(Adiectivum.class.getSimpleName().replace("um", '\u014D'),
-                    "inqu\u012Bs\u012Bti\u014D adiect\u012Bv\u014D inop\u012Bn\u0101ta est \u016Bsa:", illud.toString());
+      nuntius.moneo(Adiectivum.class.getSimpleName().replace("um", "\u014D"),
+                    "inqu\u012Bs\u012Bti\u014D adiect\u012Bv\u014D inop\u012Bn\u0101ta \u016Bsa'st:",
+                    illud);
     }
   }
 }

@@ -32,9 +32,9 @@ public abstract class Verbum <Hoc extends Verbum <Hoc>> extends Omne {
 
   /**
    * Valor hic ext\u0113nsi\u014Dnem class\u012B huic re\u012B huic d\u0113signat.
-   * {@link Catagoria#scriptio} quoque n\u014Dmin\u0101tur scr\u012Bnium
+   * {@link Categoria#scriptio} quoque n\u014Dmin\u0101tur scr\u012Bnium
    * intr\u0101 qu\u014D sc\u0101pum eius c\u014Dnserv\u0101tum est.
-   * @see Catagoria
+   * @see Categoria
    */
   @NotNull public final Categoria catagoria;
 

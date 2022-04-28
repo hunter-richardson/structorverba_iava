@@ -91,13 +91,13 @@ public final class ConditorPronominibus extends ConditorMultiplicibus <Pronomen>
     } else if (pittaciumLemmae.equals(nomen)) {
       lemma = descriptor.trim();
     } else {
-      nuntius.moneo(Pronomen.class.getSimpleName().replace("us", '\u014D'),
-                    "attrib\u016Bta inop\u012Bnata est \u016Bsa:", nomen, "est", descriptor);
+      nuntius.moneo(Pronomen.class.getSimpleName().replace("en", "\u012B"),
+                    "attrib\u016Bta inop\u012Bnata \u016Bsa'st:", nomen, descriptor);
       return;
     }
 
     nuntius.garrio("C\u014Dntr\u016Bcti\u014Dn\u012B adi\u0113c\u012B conditi\u014Dnem novam:",
-                   nomen, "est", descriptor);
+                   nomen, descriptor);
   }
 
   /**

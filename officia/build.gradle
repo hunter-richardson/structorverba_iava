@@ -10,7 +10,7 @@ android {
         versionCode 1
         versionName "1.0"
 
-        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        testInstrumentationRunner "$testRunner"
         consumerProguardFiles "consumer-rules.pro"
     }
 
@@ -20,11 +20,16 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_12
+        targetCompatibility JavaVersion.VERSION_12
+    }
 }
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation "$compatx:$compat:1.4.1"
+
+    implementation              "$compatx:$compat:1.4.1"
 
     compileOnly                 "$jetbrains:$annotations:23.0.0"
     annotationProcessor         "$projectlombok:$lombok:1.18.24"

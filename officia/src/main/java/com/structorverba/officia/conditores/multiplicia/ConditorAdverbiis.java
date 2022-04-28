@@ -87,11 +87,11 @@ public class ConditorAdverbiis extends ConditorMultiplicibus <Adverbium> {
     } else {
         nuntius.moneo(Adiectivum.class.getSimpleName().replace("um", '\u014D'),
                       "attrib\u016Bta inop\u012Bn\u0101ta est \u016Bsa:",
-                      nomen, "est", descriptor);
+                      nomen, descriptor);
         return;
       }
 
     nuntius.garrio("C\u014Dntr\u016Bcti\u014Dn\u012B adi\u0113c\u012B conditi\u014Dnem novam:",
-                   nomen, "est", descriptor);
+                   nomen, descriptor);
   }
 }

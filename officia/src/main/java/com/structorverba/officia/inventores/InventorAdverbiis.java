@@ -2,6 +2,7 @@ package officia.src.main.java.com.structorverba.officia.inventores;
 
 import officia.src.main.java.com.structorverba.officia.lectores.LectorMultiplicibus;
 import officia.src.main.java.com.structorverba.officia.nuntii.Nuntius;
+import officia.src.main.java.com.structorverba.officia.verba.multiplicia.Adiectivum;
 import officia.src.main.java.com.structorverba.officia.verba.multiplicia.Adverbium;
 import officia.src.main.java.com.structorverba.officia.enumerationes.Gradus;
 
@@ -60,6 +61,14 @@ public class InventorAdverbiis extends Inventor <Adverbium> {
    * @see Gradus#ut(Enum)
    */
   @Override protected void allegam(Enum <@NotNull ?> illud) {
-    gradus = Gradus.ut(illud);
+    if (illud instanceof Gradus) {
+      gradus = Gradus.ut(illud);
+      nuntius.garrio("Quaesti\u014Dn\u012B adi\u0113c\u012B conditi\u014Dnem novam:",
+                     Gradus.class.getSimpleName(), illud);
+    } else {
+      nuntius.moneo(Adverbium.class.getSimpleName().replace("um", "\u014D"),
+                    "inqu\u012Bs\u012Bti\u014D adiect\u012Bv\u014D inop\u012Bn\u0101ta \u016Bsa'st:",
+                    illud);
+    }
   }
 }

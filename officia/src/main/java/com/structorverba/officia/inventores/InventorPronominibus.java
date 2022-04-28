@@ -79,22 +79,22 @@ public final class InventorPronominibus extends Inventor <Pronomen> {
     if (illud instanceof Specialitas) {
       specialitas = Specialitas.ut(illud);
       nuntius.garrio("Quaesti\u014Dn\u012B adi\u0113c\u012B conditi\u014Dnem novam:",
-                     Specialitas.class.getSimpleName(), "est", illud);
+                     Specialitas.class.getSimpleName(), illud);
     } else if (illud instanceof Genus) {
       genus = Genus.ut(illud);
       nuntius.garrio("Quaesti\u014Dn\u012B adi\u0113c\u012B conditi\u014Dnem novam:",
-                     Genus.class.getSimpleName(), "est", illud);
+                     Genus.class.getSimpleName(), illud);
     } else if (illud instanceof Numeralis) {
       numeralis = Numeralis.ut(illud);
       nuntius.garrio("Quaesti\u014Dn\u012B adi\u0113c\u012B conditi\u014Dnem novam:",
-                     Numeralis.class.getSimpleName(), "est", illud);
+                     Numeralis.class.getSimpleName(), illud);
     } else if (illud instanceof Casus) {
       casus = Casus.ut(illud);
       nuntius.garrio("Quaesti\u014Dn\u012B adi\u0113c\u012B conditi\u014Dnem novam:",
-                     Casus.class.getSimpleName(), "est", illud);
+                     Casus.class.getSimpleName(), illud);
     } else {
-      nuntius.moneo(Pronomen.class.getSimpleName().replace("en", '\u012B'),
-                    "inqu\u012Bs\u012Bti\u014D inop\u012Bn\u016Bta est \u016Bsa:", illud);
+      nuntius.moneo(Pronomen.class.getSimpleName().replace("en", "\u012B"),
+                    "inqu\u012Bs\u012Bti\u014D inop\u012Bn\u016Bta \u016Bsa'st:", illud);
     }
   }
 }

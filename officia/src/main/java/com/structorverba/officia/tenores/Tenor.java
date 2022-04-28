@@ -73,7 +73,7 @@ public abstract class Tenor <Hoc extends Verbum <Hoc>> extends DefaultHandler {
   @Override public final void characters(final char[] litterae, final int incepta, final int longitia) {
     String forma = new String(litterae, incepta, longitia).trim();
     if (StringUtils.isNotBlank(forma)) {
-      nuntius.garrio("Verbum illud est", forma);
+      nuntius.garrio("Verbum illu'st", forma);
       scribo(forma);
       finiam();
     } else {

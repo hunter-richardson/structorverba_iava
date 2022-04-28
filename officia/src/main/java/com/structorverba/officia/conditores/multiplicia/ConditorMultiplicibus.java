@@ -41,7 +41,7 @@ public abstract class ConditorMultiplicibus <Hoc extends VerbumMultiplex <Hoc>> 
    */
   public final void ut(@NotNull final String scrpt) {
     scriptio = scrpt;
-    nuntius.garrio("C\u014Dntr\u016Bcti\u014Dn\u012B adiec\u012B conditi\u014Dnem novam: scr\u012Bpti\u014D est", scrpt);
+    nuntius.garrio("C\u014Dntr\u016Bcti\u014Dn\u012B adiec\u012B conditi\u014Dnem novam: scr\u012Bptu'st", scrpt);
   }
 
   /**

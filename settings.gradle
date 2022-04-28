@@ -1,4 +1,3 @@
 include ':officia'
-include ':officium2'
-include ':officium'
 rootProject.name = "structorverba"
+gradle.ext.group = "com.structorverba"

@@ -161,18 +161,20 @@ public abstract class LectorMultiplicibus <Hoc extends VerbumMultiplex <Hoc>> ex
           case PRIMA -> switch (numeralis) {
             case SINGULARIS -> "meum";
             case PLURALIS -> "nostrum";
-            case NULLUS -> throw new IllegalArgumentException(String.format("\u016Asus pr\u0101vus est \u0113numer\u0101ti\u014Dnis %s",
-                                                                            Numeralis.NULLUS));
+            case NULLUS -> throw new IllegalArgumentException(String.format("\u016Asus pr\u0101vu'st %s %s",
+                                                                            Numeralis.pittacium,
+                                                                            numeralis));
           };
           case SECUNDA -> switch (numeralis) {
             case SINGULARIS -> "tuum";
             case PLURALIS -> "vestrum";
-            case NULLUS -> throw new IllegalArgumentException(String.format("\u016Asus pr\u0101vus est \u0113numer\u0101ti\u014Dnis %s",
-                                                                            Numeralis.NULLUS));
+            case NULLUS -> throw new IllegalArgumentException(String.format("\u016Asus pr\u0101vu'st %s %s",
+                                                                            Numeralis.pittacium, numeralis));
           };
           case TERTIA -> "suum";
-          case NULLA -> throw new IllegalArgumentException(String.format("\u016Asus pr\u0101vus est \u0113numer\u0101ti\u014Dnis %s",
-                                                                         Persona.NULLA));
+          case NULLA -> throw new IllegalArgumentException(String.format("\u016Asus pr\u0101vu'st %s %s",
+                                                                         Persona.pittacium.replace("a", "ae"),
+                                                                         persona));
         }, illa);
       } catch (IllegalArgumentException e) {
         nuntius.terreo(e);
@@ -226,8 +228,9 @@ public abstract class LectorMultiplicibus <Hoc extends VerbumMultiplex <Hoc>> ex
           case PRIMA -> "ego";
           case SECUNDA -> "t\u016B";
           case TERTIA -> "id";
-          case NULLA -> throw new IllegalArgumentException(String.format("\u016Asus pr\u0101vus est \u0113numer\u0101ti\u014Dnis %s",
-                                                                         Numeralis.NULLUS));
+          case NULLA -> throw new IllegalArgumentException(String.format("\u016Asus pr\u0101vu'st %s %s",
+                                                                         Persona.pittacium.replace("a", "ae"),
+                                                                         persona));
         }, illa);
       } catch (IllegalArgumentException e) {
         nuntius.terreo(e);
