@@ -84,18 +84,22 @@ public final class ConditorActis extends ConditorMultiplicibus <Actus> {
    * @see Verbum#lemma
    */
   @Override public void allego(@NotNull final String nomen, @NotNull final String descriptor) {
-    switch (nomen) {
-      case "modus" -> modus = Modus.definiam(descriptor);
-      case "v\u014Dx" -> vox = Vox.definiam(descriptor);
-      case "tempus" -> tempus = Tempus.definiam(descriptor);
-      case "numer\u0101lis" -> numeralis = Numeralis.definiam(descriptor);
-      case "pers\u014Dna" -> persona = Persona.definiam(descriptor);
-      case "lemma" -> lemma = descriptor.trim();
-      default -> {
-        nuntius.moneo(Actus.class.getSimpleName().replace("us", '\u014D'),
-                      "attrib\u016Bta inop\u012Bnata est \u016Bsa:", nomen, "est", descriptor);
-        return;
-      }
+    if(Modus.pittacium.equals(nomen)) {
+      modus = Modus.definiam(descriptor);
+    } else if (Vox.pittacium.equals(nomen)) {
+      vox = Vox.definiam(descriptor);
+    } else if (Tempus.pittacium.equals(nomen)) {
+      tempus = Tempus.definiam(descriptor);
+    } else if (Numeralis.pittacium.equals(nomen)) {
+      numeralis = Numeralis.definiam(descriptor);
+    } else if (Persona.pittacium.equals(nomen)) {
+      persona = Persona.definiam(descriptor);
+    } else if (pittaciumLemmae.equals(nomen)) {
+      lemma = descriptor.trim();
+    } else {
+      nuntius.moneo(Actus.class.getSimpleName().replace("us", '\u014D'),
+                    "attrib\u016Bta inop\u012Bnata est \u016Bsa:", nomen, "est", descriptor);
+      return;
     }
 
     nuntius.garrio("C\u014Dntr\u016Bcti\u014Dn\u012B adi\u0113c\u012B conditi\u014Dnem novam:", nomen, "est", descriptor);

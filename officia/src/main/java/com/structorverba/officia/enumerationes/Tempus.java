@@ -1,6 +1,7 @@
 package officia.src.main.java.com.structorverba.officia.enumerationes;
 
-import com.structorverba.verba.bibliotheca.multiplicia.Actus;
+import officia.src.main.java.com.structorverba.officia.miscella.Utilitas;
+import officia.src.main.java.com.structorverba.officia.verba.multiplicia.Actus;
 
 import org.apache.commons.lang3.StringUtils;
 import org.jetbrains.annotations.NotNull;
@@ -59,6 +60,11 @@ public enum Tempus {
    * Valor hic modum participi\u0101lem d\u0113signat.
    */
   SUPINUS("sup\u012Bnus");
+
+  /**
+   * Valor hic reparesent\u0101ti\u014Dnem scr\u012Bpta \u0113numer\u0101ti\u014Dnis d\u0113signat.
+   */
+  public static final @NotNull String pittacium = Utilitas.minimasScribo(Tempus.class.getSimpleName());
 
   /**
    * Valor hic repraesent\u0101ti\u014Dnem scr\u012Bpta re\u012B huius d\u0113signat.

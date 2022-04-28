@@ -1,5 +1,6 @@
 package officia.src.main.java.com.structorverba.officia.enumerationes;
 
+import officia.src.main.java.com.structorverba.officia.miscella.Utilitas;
 import officia.src.main.java.com.structorverba.officia.verba.multiplicia.Actus;
 
 import org.apache.commons.lang3.StringUtils;
@@ -28,6 +29,11 @@ public enum Specialitas {
    * Valor hic verbum incertum d\u0113signat.
    */
   PROPRIUM("proprium");
+
+  /**
+   * Valor hic reparesent\u0101ti\u014Dnem scr\u012Bpta \u0113numer\u0101ti\u014Dnis d\u0113signat.
+   */
+  public static final @NotNull String pittacium = Utilitas.minimasScribo(Specialitas.class.getSimpleName().replace('a', '\u0101'));
 
   /**
    * Valor hic repraesent\u0101ti\u014Dnem scr\u012Bpta re\u012B huius d\u0113signat.

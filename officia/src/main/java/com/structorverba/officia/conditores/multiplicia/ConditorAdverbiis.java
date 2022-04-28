@@ -11,6 +11,7 @@ import org.jetbrains.annotations.*;
 
 import java.util.Objects;
 import java.util.function.Supplier;
+import java.util.logging.Level;
 
 /**
  * Classis {@link ConditorAdverbiis} est v\u0101s classis {@link Conditor} class\u012B {@link Adverbium}.
@@ -79,16 +80,16 @@ public class ConditorAdverbiis extends ConditorMultiplicibus <Adverbium> {
    * @see Verbum#lemma
    */
   @Override public void allego(@NotNull final String nomen, @NotNull final String descriptor) {
-    switch (nomen) {
-      case "gradus" -> gradus = Gradus.definiam(descriptor);
-      case "lemma" -> lemma = descriptor.trim();
-      default -> {
+    if(Gradus.pittacium.equals(nomen)) {
+      gradus = Gradus.definiam(descriptor);
+    } else if(pittaciumLemmae.equals(nomen)) {
+      lemma = descriptor.trim();
+    } else {
         nuntius.moneo(Adiectivum.class.getSimpleName().replace("um", '\u014D'),
                       "attrib\u016Bta inop\u012Bn\u0101ta est \u016Bsa:",
                       nomen, "est", descriptor);
         return;
       }
-    }
 
     nuntius.garrio("C\u014Dntr\u016Bcti\u014Dn\u012B adi\u0113c\u012B conditi\u014Dnem novam:",
                    nomen, "est", descriptor);

@@ -27,7 +27,7 @@ import lombok.Getter;
  * R\u0113s classis {@link Inventor} r\u0113bus classis huius absunt atque in\u016Btil\u0113s fuerint. <br>
  * @param <Hoc> Tabell\u0101 h\u0101c classis {@link Hoc} ext\u0113nsi\u014Dnem aptam dat\u012Bs pet\u012Bt\u012Bs repraesentat.
  */
-@SuppressWarnings("SpellCheckingInspction")
+@SuppressWarnings("SpellCheckingInspection")
 public abstract class VerbumSimplex <Hoc extends Verbum <Hoc>> extends Verbum <Hoc> {
   /**
    * Officium hoc c\u014Dnstr\u016Bct\u014Drem re\u012B classis huius perpetrat.

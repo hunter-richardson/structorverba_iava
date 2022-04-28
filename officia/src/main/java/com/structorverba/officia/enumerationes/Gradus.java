@@ -1,5 +1,6 @@
 package officia.src.main.java.com.structorverba.officia.enumerationes;
 
+import officia.src.main.java.com.structorverba.officia.miscella.Utilitas;
 import officia.src.main.java.com.structorverba.officia.verba.multiplicia.Adiectivum;
 
 import org.apache.commons.lang3.StringUtils;
@@ -33,6 +34,11 @@ public enum Gradus {
    * Valor hic potentiam superl\u0101t\u012Bvum d\u0113signat.
    */
   SUPERLATIVUS("superl\u0101t\u012Bvus");
+
+  /**
+   * Valor hic reparesent\u0101ti\u014Dnem scr\u012Bpta \u0113numer\u0101ti\u014Dnis d\u0113signat.
+   */
+  public static final @NotNull String pittacium = Utilitas.minimasScribo(Gradus.class.getSimpleName());
 
   /**
    * Valor hic repraesent\u0101ti\u014Dnem scr\u012Bpta re\u012B huius d\u0113signat.

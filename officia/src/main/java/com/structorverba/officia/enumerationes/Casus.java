@@ -1,5 +1,6 @@
 package officia.src.main.java.com.structorverba.officia.enumerationes;
 
+import officia.src.main.java.com.structorverba.officia.miscella.Utilitas;
 import officia.src.main.java.com.structorverba.officia.verba.multiplicia.Nominalis;
 
 import org.apache.commons.lang3.StringUtils;
@@ -58,6 +59,11 @@ public enum Casus {
    * Valor hic c\u0101sum \u012Bnstr\u016Bment\u0101lem d\u0113signat.
    */
   INSTRUMENTALIS("\u012Bnstr\u016Bment\u0101lis");
+
+  /**
+   * Valor hic reparesent\u0101ti\u014Dnem scr\u012Bpta \u0113numer\u0101ti\u014Dnis d\u0113signat.
+   * */
+  public static final @NotNull String pittacium = Utilitas.minimasScribo(Casus.class.getSimpleName().replace('a', '\u0101'));
 
   /**
    * Valor hic repraesent\u0101ti\u014Dnem scr\u012Bpta re\u012B huius d\u0113signat.

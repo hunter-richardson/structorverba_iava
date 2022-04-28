@@ -46,8 +46,8 @@ import net.structorverba.miscella.StructorVerba;
 import net.structorverba.verba.Verba;
 import net.structorverba.verba.multiplicia.*;
 
+@SuppressWarnings({ "ConstantConditions", "SpellCheckingInspection" })
 class Tentamen {
-  @SuppressWarnings("ConstantConditions")
   public void main(String[] args) {
     final StructorVerba structor = StructorVerba.fac.get();
     final Verba verba = structor.strue(
@@ -58,7 +58,7 @@ class Tentamen {
           structor.adveniam("latīnum", Categoria.ADIECTIVUM,
                             Specialitas.PROPRIUM, Genus.FEMININUM,
                             Casus.NOMINATIVUS, Numeralis.SINGULARIS, Gradus.POSITIVUS),
-          structor.adveniam("plācēre", Catēgoria.ACTUM,
+          structor.adveniam("placēre", Catēgoria.ACTUM,
                             Modus.INDICATIVUS, Vōx.ACTIVA, Tempus.PRAESENS,
                             Numeralis.SINGULARIS, Persona.TERTIA),
  ((Actus) structor.adveniam("prōdesse", Categoria.ACTUM,

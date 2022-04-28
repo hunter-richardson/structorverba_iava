@@ -3,6 +3,7 @@ package officia.src.main.java.com.structorverba.officia.conditores.multiplicia;
 import officia.src.main.java.com.structorverba.officia.conditores.Conditor;
 import officia.src.main.java.com.structorverba.officia.nuntii.Nuntius;
 import officia.src.main.java.com.structorverba.officia.verba.Verbum;
+import officia.src.main.java.com.structorverba.officia.verba.multiplicia.Adiectivum;
 import officia.src.main.java.com.structorverba.officia.verba.multiplicia.Pronomen;
 import officia.src.main.java.com.structorverba.officia.enumerationes.*;
 
@@ -82,17 +83,20 @@ public final class ConditorPronominibus extends ConditorMultiplicibus <Pronomen>
    * @see Verbum#lemma
    */
   @Override public void allego(@NotNull final String nomen, @NotNull final String descriptor) {
-    switch (nomen) {
-      case "speci\u0101lit\u0101s" -> specialitas = Specialitas.definiam(descriptor);
-      case "genus" -> genus = Genus.definiam(descriptor);
-      case "numer\u0101lis" -> numeralis = Numeralis.definiam(descriptor);
-      case "c\u0101sus" -> casus = Casus.definiam(descriptor);
-      case "lemma" -> lemma = descriptor.trim();
-      default -> {
-        nuntius.moneo(Pronomen.class.getSimpleName().replace("en", '\u012B'),
-                      "attrib\u016Bta inop\u012Bn\u0101ta est \u016Bsa:", nomen, "est", descriptor);
-        return;
-      }
+    if (Specialitas.pittacium.equals(nomen)) {
+      specialitas = Specialitas.definiam(descriptor);
+    } else if (Genus.pittacium.equals(nomen)) {
+      genus = Genus.definiam(descriptor);
+    } else if (Numeralis.pittacium.equals(nomen)) {
+      numeralis = Numeralis.definiam(descriptor);
+    } else if (Persona.pittacium.equals(nomen)) {
+      casus = Casus.definiam(descriptor);
+    } else if (pittaciumLemmae.equals(nomen)) {
+      lemma = descriptor.trim();
+    } else {
+      nuntius.moneo(Pronomen.class.getSimpleName().replace("us", '\u014D'),
+                    "attrib\u016Bta inop\u012Bnata est \u016Bsa:", nomen, "est", descriptor);
+      return;
     }
 
     nuntius.garrio("C\u014Dntr\u016Bcti\u014Dn\u012B adi\u0113c\u012B conditi\u014Dnem novam:",

@@ -1,6 +1,7 @@
 package officia.src.main.java.com.structorverba.officia.conditores.multiplicia;
 
 import officia.src.main.java.com.structorverba.officia.conditores.Conditor;
+import officia.src.main.java.com.structorverba.officia.enumerationes.Modus;
 import officia.src.main.java.com.structorverba.officia.nuntii.Nuntius;
 import officia.src.main.java.com.structorverba.officia.verba.multiplicia.VerbumMultiplex;
 
@@ -16,6 +17,11 @@ import java.util.function.Supplier;
  */
 @SuppressWarnings("SpellCheckingInspection")
 public abstract class ConditorMultiplicibus <Hoc extends VerbumMultiplex <Hoc>> extends Conditor <Hoc> {
+  /**
+   * Valor hic reparesent\u0101ti\u014Dnem scr\u012Bpta lemmae d\u0113signat.
+   */
+  public static final @NotNull String pittaciumLemmae = "lemma";
+
   /**
    * Valor hic val\u014Drem {@link VerbumMultiplex#scriptio} re\u012B pr\u014Dductae repraehentat.
    */
