@@ -28,7 +28,7 @@ public class InventorAdverbiis extends Inventor <Adverbium> {
    * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
    */
   @NotNull public static final Supplier <InventorAdverbiis> fac =
-    ( ) -> ObjectUtils.firstNonNull(instantia, instantia = new InventorAdverbiis());
+    () -> ObjectUtils.firstNonNull(instantia, instantia = new InventorAdverbiis());
 
   @NotNull private Gradus gradus = Gradus.NULLUS;
 
@@ -64,7 +64,7 @@ public class InventorAdverbiis extends Inventor <Adverbium> {
     if (illud instanceof Gradus) {
       gradus = Gradus.ut(illud);
       nuntius.garrio("Quaesti\u014Dn\u012B adi\u0113c\u012B conditi\u014Dnem novam:",
-                     Gradus.class.getSimpleName(), illud);
+                     Gradus.pittacium, illud);
     } else {
       nuntius.moneo(Adverbium.class.getSimpleName().replace("um", "\u014D"),
                     "inqu\u012Bs\u012Bti\u014D adiect\u012Bv\u014D inop\u012Bn\u0101ta \u016Bsa'st:",

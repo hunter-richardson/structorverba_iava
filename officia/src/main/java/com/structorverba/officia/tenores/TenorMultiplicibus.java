@@ -84,7 +84,7 @@ public abstract class TenorMultiplicibus <Hoc extends VerbumMultiplex <Hoc>> ext
    * {@inheritDoc}
    * @see Tenor#series
    */
-  @Override protected final void finiam( ) {
+  @Override protected final void finiam() {
     hoc = conditor.condam();
     if (Objects.isNull(hoc)) {
       nuntius.moneo("Pr\u014Dducti\u014D verb\u012B pr\u014Dcessimus n\u016Bllae f\u014Drmae.");
@@ -119,9 +119,9 @@ public abstract class TenorMultiplicibus <Hoc extends VerbumMultiplex <Hoc>> ext
      * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
      */
     @NotNull public static final Supplier <TenorAdverbiis> fac =
-      ( ) -> ObjectUtils.firstNonNull(instantia, instantia = new TenorAdverbiis());
+      () -> ObjectUtils.firstNonNull(instantia, instantia = new TenorAdverbiis());
 
-    private TenorAdverbiis( ) {
+    private TenorAdverbiis() {
       super(Nuntius.NuntiusTenoriAdverbiis.fac, ConditorAdverbiis.fac);
       nuntius.plurimumGarrio("Factus sum");
     }
@@ -143,9 +143,9 @@ public abstract class TenorMultiplicibus <Hoc extends VerbumMultiplex <Hoc>> ext
      * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
      */
     @NotNull public static final Supplier <TenorNominibus> fac =
-      ( ) -> ObjectUtils.firstNonNull(instantia, instantia = new TenorNominibus());
+      () -> ObjectUtils.firstNonNull(instantia, instantia = new TenorNominibus());
 
-    private TenorNominibus( ) {
+    private TenorNominibus() {
       super(Nuntius.NuntiusTenoriNominibus.fac, ConditorNominibus.fac);
       nuntius.plurimumGarrio("Factus sum");
     }
@@ -167,7 +167,7 @@ public abstract class TenorMultiplicibus <Hoc extends VerbumMultiplex <Hoc>> ext
      * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
      */
     @NotNull public static final Supplier <TenorAdiectivis> fac =
-      ( ) -> ObjectUtils.firstNonNull(instantia, instantia = new TenorAdiectivis());
+      () -> ObjectUtils.firstNonNull(instantia, instantia = new TenorAdiectivis());
 
     private TenorAdiectivis() {
       super(Nuntius.NuntiusTenoriAdiectivis.fac, ConditorAdiectivis.fac);
@@ -191,9 +191,9 @@ public abstract class TenorMultiplicibus <Hoc extends VerbumMultiplex <Hoc>> ext
      * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
      */
     @NotNull public static final Supplier <TenorPronominibus> fac =
-      ( ) -> ObjectUtils.firstNonNull(instantia, instantia = new TenorPronominibus());
+      () -> ObjectUtils.firstNonNull(instantia, instantia = new TenorPronominibus());
 
-    private TenorPronominibus( ) {
+    private TenorPronominibus() {
       super(Nuntius.NuntiusTenoriPronominibus.fac, ConditorPronominibus.fac);
       nuntius.plurimumGarrio("Factus sum");
     }
@@ -215,9 +215,9 @@ public abstract class TenorMultiplicibus <Hoc extends VerbumMultiplex <Hoc>> ext
      * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
      */
     @NotNull public static final Supplier <TenorActis> fac =
-      ( ) -> ObjectUtils.firstNonNull(instantia, instantia = new TenorActis());
+      () -> ObjectUtils.firstNonNull(instantia, instantia = new TenorActis());
 
-    private TenorActis( ) {
+    private TenorActis() {
       super(Nuntius.NuntiusTenoriActis.fac, ConditorActis.fac);
       nuntius.plurimumGarrio("Factus sum");
     }

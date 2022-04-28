@@ -79,19 +79,19 @@ public final class InventorPronominibus extends Inventor <Pronomen> {
     if (illud instanceof Specialitas) {
       specialitas = Specialitas.ut(illud);
       nuntius.garrio("Quaesti\u014Dn\u012B adi\u0113c\u012B conditi\u014Dnem novam:",
-                     Specialitas.class.getSimpleName(), illud);
+                     Specialitas.pittacium, illud);
     } else if (illud instanceof Genus) {
       genus = Genus.ut(illud);
       nuntius.garrio("Quaesti\u014Dn\u012B adi\u0113c\u012B conditi\u014Dnem novam:",
-                     Genus.class.getSimpleName(), illud);
+                     Genus.pittacium, illud);
     } else if (illud instanceof Numeralis) {
       numeralis = Numeralis.ut(illud);
       nuntius.garrio("Quaesti\u014Dn\u012B adi\u0113c\u012B conditi\u014Dnem novam:",
-                     Numeralis.class.getSimpleName(), illud);
+                     Numeralis.pittacium, illud);
     } else if (illud instanceof Casus) {
       casus = Casus.ut(illud);
       nuntius.garrio("Quaesti\u014Dn\u012B adi\u0113c\u012B conditi\u014Dnem novam:",
-                     Casus.class.getSimpleName(), illud);
+                     Casus.pittacium, illud);
     } else {
       nuntius.moneo(Pronomen.class.getSimpleName().replace("en", "\u012B"),
                     "inqu\u012Bs\u012Bti\u014D inop\u012Bn\u016Bta \u016Bsa'st:", illud);

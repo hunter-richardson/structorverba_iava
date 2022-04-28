@@ -33,7 +33,7 @@ public final class StructorVerba extends Omne {
    * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
    */
   @NotNull public static final Supplier <StructorVerba> fac =
-    ( ) -> ObjectUtils.firstNonNull(instantia, instantia = new StructorVerba());
+    () -> ObjectUtils.firstNonNull(instantia, instantia = new StructorVerba());
 
   @NotNull private final Range <Short> TRACTUS_NUMERORUM = Range.between(Integer.valueOf(1).shortValue(),
                                                                          Integer.valueOf(4000).shortValue());

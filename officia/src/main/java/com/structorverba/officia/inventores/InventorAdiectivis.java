@@ -27,7 +27,7 @@ public final class InventorAdiectivis extends Inventor <Adiectivum> {
    * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
    */
   @NotNull public static final Supplier <InventorAdiectivis> fac =
-    ( ) -> ObjectUtils.firstNonNull(instantia, instantia = new InventorAdiectivis());
+    () -> ObjectUtils.firstNonNull(instantia, instantia = new InventorAdiectivis());
 
   @NotNull private Specialitas specialitas = Specialitas.NULLUM;
   @NotNull private Genus       genus       = Genus.NULLUM;
@@ -35,7 +35,7 @@ public final class InventorAdiectivis extends Inventor <Adiectivum> {
   @NotNull private Casus       casus       = Casus.DERECTUS;
   @NotNull private Gradus      gradus      = Gradus.NULLUS;
 
-  private InventorAdiectivis( ) {
+  private InventorAdiectivis() {
     super(Nuntius.NuntiusInventoriAdiectivis.fac);
     nuntius.plurimumGarrio("Factus sum");
   }
@@ -62,7 +62,7 @@ public final class InventorAdiectivis extends Inventor <Adiectivum> {
    * @see Casus#DERECTUS
    * @see Gradus#NULLUS
    */
-  @Override public void restituo( ) {
+  @Override public void restituo() {
     specialitas = Specialitas.NULLUM;
     genus = Genus.NULLUM;
     numeralis = Numeralis.NULLUS;
@@ -84,23 +84,23 @@ public final class InventorAdiectivis extends Inventor <Adiectivum> {
     if (illud instanceof Specialitas) {
       specialitas = Specialitas.ut(illud);
       nuntius.garrio("Quaesti\u014Dn\u012B adi\u0113c\u012B conditi\u014Dnem novam:",
-                     Specialitas.class.getSimpleName(), illud);
+                     Specialitas.pittacium, illud);
     } else if (illud instanceof Genus) {
       genus = Genus.ut(illud);
       nuntius.garrio("Quaesti\u014Dn\u012B adi\u0113c\u012B conditi\u014Dnem novam:",
-                     Genus.class.getSimpleName(), illud);
+                     Genus.pittacium, illud);
     } else if (illud instanceof Numeralis) {
       numeralis = Numeralis.ut(illud);
       nuntius.garrio("Quaesti\u014Dn\u012B adi\u0113c\u012B conditi\u014Dnem novam:",
-                     Numeralis.class.getSimpleName(), illud);
+                     Numeralis.pittacium, illud);
     } else if (illud instanceof Casus) {
       casus = Casus.ut(illud);
       nuntius.garrio("Quaesti\u014Dn\u012B adi\u0113c\u012B conditi\u014Dnem novam:",
-                     Casus.class.getSimpleName(), illud);
+                     Casus.pittacium, illud);
     } else if (illud instanceof Gradus) {
       gradus = Gradus.ut(illud);
       nuntius.garrio("Quaesti\u014Dn\u012B adi\u0113c\u012B conditi\u014Dnem novam:",
-                     Gradus.class.getSimpleName(), illud);
+                     Gradus.pittacium, illud);
     } else {
       nuntius.moneo(Adiectivum.class.getSimpleName().replace("um", "\u014D"),
                     "inqu\u012Bs\u012Bti\u014D adiect\u012Bv\u014D inop\u012Bn\u0101ta \u016Bsa'st:",

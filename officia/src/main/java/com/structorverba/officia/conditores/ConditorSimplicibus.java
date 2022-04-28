@@ -68,9 +68,9 @@ public abstract class ConditorSimplicibus <Hoc extends VerbumSimplex <Hoc>> exte
      * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
      */
     @NotNull public static final Supplier <ConditorConiunctivis> fac =
-      ( ) -> ObjectUtils.firstNonNull(instantia, instantia = new ConditorConiunctivis());
+      () -> ObjectUtils.firstNonNull(instantia, instantia = new ConditorConiunctivis());
 
-    private ConditorConiunctivis( ) {
+    private ConditorConiunctivis() {
       super(Nuntius.NuntiusConditoriConiunctivis.fac, VerbumSimplex.Coniunctivum::new);
       nuntius.plurimumGarrio("Factus sum");
     }
@@ -106,9 +106,9 @@ public abstract class ConditorSimplicibus <Hoc extends VerbumSimplex <Hoc>> exte
      * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
      */
     @NotNull public static final Supplier <ConditorInteriectionibus> fac =
-      ( ) -> ObjectUtils.firstNonNull(instantia, instantia = new ConditorInteriectionibus());
+      () -> ObjectUtils.firstNonNull(instantia, instantia = new ConditorInteriectionibus());
 
-    private ConditorInteriectionibus( ) {
+    private ConditorInteriectionibus() {
       super(Nuntius.NuntiusConditoriInteriectionibus.fac, VerbumSimplex.Interiectio::new);
       nuntius.plurimumGarrio("Factus sum");
     }

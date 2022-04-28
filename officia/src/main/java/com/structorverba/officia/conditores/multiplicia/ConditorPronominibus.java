@@ -31,14 +31,14 @@ public final class ConditorPronominibus extends ConditorMultiplicibus <Pronomen>
    * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
    */
   @NotNull public static final Supplier <ConditorPronominibus> fac =
-    ( ) -> ObjectUtils.firstNonNull(instantia, instantia = new ConditorPronominibus());
+    () -> ObjectUtils.firstNonNull(instantia, instantia = new ConditorPronominibus());
 
   @NotNull private Specialitas specialitas = Specialitas.NULLUM;
   @NotNull private Genus       genus       = Genus.NULLUM;
   @NotNull private Numeralis   numeralis   = Numeralis.NULLUS;
   @NotNull private Casus       casus       = Casus.DERECTUS;
 
-  private ConditorPronominibus( ) {
+  private ConditorPronominibus() {
     super(Nuntius.NuntiusConditoriPronominibus.fac);
     nuntius.plurimumGarrio("Factus sum");
   }
@@ -91,7 +91,7 @@ public final class ConditorPronominibus extends ConditorMultiplicibus <Pronomen>
     } else if (pittaciumLemmae.equals(nomen)) {
       lemma = descriptor.trim();
     } else {
-      nuntius.moneo(Pronomen.class.getSimpleName().replace("en", "\u012B"),
+      nuntius.moneo(Pronomen.class.getSimpleName().replace("en", "inis"),
                     "attrib\u016Bta inop\u012Bnata \u016Bsa'st:", nomen, descriptor);
       return;
     }
@@ -107,7 +107,7 @@ public final class ConditorPronominibus extends ConditorMultiplicibus <Pronomen>
    * @see Casus#DERECTUS
    * @see Numeralis#NULLUS
    */
-  @Override public void restituo( ) {
+  @Override public void restituo() {
     specialitas = Specialitas.NULLUM;
     genus = Genus.NULLUM;
     casus = Casus.DERECTUS;

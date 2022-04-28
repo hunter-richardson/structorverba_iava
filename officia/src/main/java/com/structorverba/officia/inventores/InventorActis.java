@@ -27,7 +27,7 @@ public final class InventorActis extends Inventor <Actus> {
    * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
    */
   @NotNull public static final Supplier <InventorActis> fac =
-    ( ) -> ObjectUtils.firstNonNull(instantia, instantia = new InventorActis());
+    () -> ObjectUtils.firstNonNull(instantia, instantia = new InventorActis());
 
   @NotNull private Vox       vox       = Vox.NULLA;
   @NotNull private Tempus    tempus    = Tempus.INTEMPORALE;
@@ -35,7 +35,7 @@ public final class InventorActis extends Inventor <Actus> {
   @NotNull private Persona   persona   = Persona.NULLA;
   @NotNull private Modus     modus     = Modus.NULLUS;
 
-  private InventorActis( ) {
+  private InventorActis() {
     super(Nuntius.NuntiusInventoriActis.fac);
     nuntius.plurimumGarrio("Factus sum");
   }
@@ -62,7 +62,7 @@ public final class InventorActis extends Inventor <Actus> {
    * @see Persona#NULLA
    * @see Modus#NULLUS
    */
-  @Override public void restituo( ) {
+  @Override public void restituo() {
     vox = Vox.NULLA;
     tempus = Tempus.INTEMPORALE;
     numeralis = Numeralis.NULLUS;
@@ -84,23 +84,23 @@ public final class InventorActis extends Inventor <Actus> {
     if (illud instanceof Vox) {
       vox = Vox.ut(illud);
       nuntius.garrio("Quaestion\u012B adi\u0113c\u012B conditi\u014Dnem novam:",
-                     Vox.class.getSimpleName(), illud);
+                     Vox.pittacium, illud);
     } else if (illud instanceof Tempus) {
       tempus = Tempus.ut(illud);
       nuntius.garrio("Quaestion\u012B adi\u0113c\u012B conditi\u014Dnem novam:",
-                     Tempus.class.getSimpleName(), illud);
+                     Tempus.pittacium, illud);
     } else if (illud instanceof Numeralis) {
       numeralis = Numeralis.ut(illud);
       nuntius.garrio("Quaestion\u012B adi\u0113c\u012B conditi\u014Dnem novam:",
-                     Numeralis.class.getSimpleName(), illud);
+                     Numeralis.pittacium, illud);
     } else if (illud instanceof Persona) {
       persona = Persona.ut(illud);
       nuntius.garrio("Quaestion\u012B adi\u0113c\u012B conditi\u014Dnem novam:",
-                     Persona.class.getSimpleName(), illud);
+                     Persona.pittacium, illud);
     } else if (illud instanceof Modus) {
       modus = Modus.ut(illud);
       nuntius.garrio("Quaestion\u012B adi\u0113c\u012B conditi\u014Dnem novam:",
-                     Modus.class.getSimpleName(), illud);
+                     Modus.pittacium, illud);
     } else {
       nuntius.moneo(Actus.class.getSimpleName().replace("us", "\u014D"),
                     "inqu\u012Bs\u012Bti\u014D inop\u012Bn\u0101ta \u016Bsa'st:", illud);

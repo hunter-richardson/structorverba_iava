@@ -96,7 +96,7 @@ public abstract class VerbumSimplex <Hoc extends Verbum <Hoc>> extends Verbum <H
      * Valor hic supplet rem classis {@link Praepositio} quam praepositi\u014Dnem n\u016Blla repraesentat.
      */
     @NotNull public static final Supplier <Praepositio> assume =
-      ( ) -> new Praepositio(StringUtils.EMPTY);
+      () -> new Praepositio(StringUtils.EMPTY);
     @Getter(lazy = true)
     @NotNull private final Nuntius.NuntiusPraepositionum nuntius = Nuntius.NuntiusPraepositionum.fac.get();
 

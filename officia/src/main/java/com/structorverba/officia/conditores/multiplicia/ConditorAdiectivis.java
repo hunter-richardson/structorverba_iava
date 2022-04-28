@@ -30,7 +30,7 @@ public final class ConditorAdiectivis extends ConditorMultiplicibus <Adiectivum>
    * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
    */
   @NotNull public static final Supplier <ConditorAdiectivis> fac =
-    ( ) -> ObjectUtils.firstNonNull(instantia, instantia = new ConditorAdiectivis());
+    () -> ObjectUtils.firstNonNull(instantia, instantia = new ConditorAdiectivis());
 
   @NotNull private Specialitas specialitas = Specialitas.NULLUM;
   @NotNull private Genus       genus       = Genus.NULLUM;
@@ -54,7 +54,7 @@ public final class ConditorAdiectivis extends ConditorMultiplicibus <Adiectivum>
         && StringUtils.isNoneBlank(lemma, scriptio)) {
       final Adiectivum hoc = new Adiectivum(specialitas, genus, casus, numeralis, gradus, lemma, scriptio);
       if (Objects.isNull(hoc)) {
-        nuntius.moneo(Adiectivum.class.getSimpleName().replace("um", '\u012B'),
+        nuntius.moneo(Adiectivum.class.getSimpleName().replace("um", "\u012B"),
                       StringUtils.firstNonBlank(lemma, scriptio),
                       "pr\u014Dducti\u014D f\u014Drmae n\u016Bllae pr\u014Dcessit.");
         return null;
@@ -64,7 +64,7 @@ public final class ConditorAdiectivis extends ConditorMultiplicibus <Adiectivum>
         return hoc;
       }
     } else {
-      nuntius.moneo(Adiectivum.class.getSimpleName().replace("um", '\u012B'),
+      nuntius.moneo(Adiectivum.class.getSimpleName().replace("um", "\u012B"),
                     StringUtils.firstNonBlank(lemma, scriptio),
                     "pr\u014Dducti\u014D f\u014Drmae n\u016Bllae pr\u014Dcessit.");
       return null;
@@ -111,7 +111,7 @@ public final class ConditorAdiectivis extends ConditorMultiplicibus <Adiectivum>
    * @see Numeralis#NULLUS
    * @see Gradus#NULLUS
    */
-  @Override public void restituo( ) {
+  @Override public void restituo() {
     specialitas = Specialitas.NULLUM;
     genus = Genus.NULLUM;
     casus = Casus.DERECTUS;

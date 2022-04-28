@@ -27,11 +27,11 @@ public class ConditorAdverbiis extends ConditorMultiplicibus <Adverbium> {
    * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
    */
   @NotNull public static final Supplier <ConditorAdverbiis> fac =
-    ( ) -> ObjectUtils.firstNonNull(instantia, instantia = new ConditorAdverbiis());
+    () -> ObjectUtils.firstNonNull(instantia, instantia = new ConditorAdverbiis());
 
   @NotNull private Gradus gradus = Gradus.NULLUS;
 
-  private ConditorAdverbiis( ) {
+  private ConditorAdverbiis() {
     super(Nuntius.NuntiusConditoriAdverbiis.fac);
     nuntius.plurimumGarrio("Factus sum");
   }
@@ -48,7 +48,7 @@ public class ConditorAdverbiis extends ConditorMultiplicibus <Adverbium> {
         && StringUtils.isNoneBlank(lemma, scriptio)) {
       final Adverbium hoc = new Adverbium(gradus, lemma, scriptio);
       if (Objects.isNull(hoc)) {
-        nuntius.moneo(Adverbium.class.getSimpleName().replace("um", '\u012B'),
+        nuntius.moneo(Adverbium.class.getSimpleName().replace("um", "\u012B"),
                       StringUtils.firstNonBlank(lemma, scriptio),
                       "pr\u014Dducti\u014D f\u014Drmae n\u016Bllae pr\u014Dcessit.");
         return null;
@@ -58,7 +58,7 @@ public class ConditorAdverbiis extends ConditorMultiplicibus <Adverbium> {
         return hoc;
       }
     } else {
-      nuntius.moneo(Adverbium.class.getSimpleName().replace("um", '\u012B'),
+      nuntius.moneo(Adverbium.class.getSimpleName().replace("um", "\u012B"),
                     StringUtils.firstNonBlank(lemma, scriptio),
                     "pr\u014Dducti\u014D f\u014Drmae n\u016Bllae pr\u014Dcessit.");
       return null;
@@ -85,7 +85,7 @@ public class ConditorAdverbiis extends ConditorMultiplicibus <Adverbium> {
     } else if(pittaciumLemmae.equals(nomen)) {
       lemma = descriptor.trim();
     } else {
-        nuntius.moneo(Adiectivum.class.getSimpleName().replace("um", '\u014D'),
+        nuntius.moneo(Adiectivum.class.getSimpleName().replace("um", "\u014D"),
                       "attrib\u016Bta inop\u012Bn\u0101ta est \u016Bsa:",
                       nomen, descriptor);
         return;

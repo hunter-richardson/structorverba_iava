@@ -76,7 +76,7 @@ public abstract class LectorMultiplicibus <Hoc extends VerbumMultiplex <Hoc>> ex
      * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
      */
     @NotNull public static final Supplier <LectorAdverbiis> fac =
-      ( ) -> ObjectUtils.firstNonNull(instantia, instantia = new LectorAdverbiis());
+      () -> ObjectUtils.firstNonNull(instantia, instantia = new LectorAdverbiis());
 
     private LectorAdverbiis() {
       super(Categoria.ADVERBIUM, Nuntius.NuntiusLectoriAdverbiis.fac,
@@ -102,9 +102,9 @@ public abstract class LectorMultiplicibus <Hoc extends VerbumMultiplex <Hoc>> ex
      * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
      */
     @NotNull public static final Supplier <LectorNominibus> fac =
-      ( ) -> ObjectUtils.firstNonNull(instantia, instantia = new LectorNominibus());
+      () -> ObjectUtils.firstNonNull(instantia, instantia = new LectorNominibus());
 
-    private LectorNominibus( ) {
+    private LectorNominibus() {
       super(Categoria.NOMEN, Nuntius.NuntiusLectoriNominibus.fac,
             TenorMultiplicibus.TenorNominibus.fac, InventorNominibus.fac);
       nuntius.plurimumGarrio("Factus sum");
@@ -201,9 +201,9 @@ public abstract class LectorMultiplicibus <Hoc extends VerbumMultiplex <Hoc>> ex
      * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
      */
     public static final @NotNull Supplier <LectorPronominibus> fac =
-      ( ) -> ObjectUtils.firstNonNull(instantia, instantia = new LectorPronominibus());
+      () -> ObjectUtils.firstNonNull(instantia, instantia = new LectorPronominibus());
 
-    private LectorPronominibus( ) {
+    private LectorPronominibus() {
       super(Categoria.PRONOMEN, Nuntius.NuntiusLectoriPronominibus.fac,
             TenorMultiplicibus.TenorPronominibus.fac, InventorPronominibus.fac);
       nuntius.plurimumGarrio("Factus sum");
@@ -257,9 +257,9 @@ public abstract class LectorMultiplicibus <Hoc extends VerbumMultiplex <Hoc>> ex
      * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
      */
     public static final @NotNull Supplier <LectorActis> fac =
-      ( ) -> ObjectUtils.firstNonNull(instantia, instantia = new LectorActis());
+      () -> ObjectUtils.firstNonNull(instantia, instantia = new LectorActis());
 
-    private LectorActis( ) {
+    private LectorActis() {
       super(Categoria.ACTUS, Nuntius.NuntiusLectoriActis.fac,
             TenorMultiplicibus.TenorActis.fac, InventorActis.fac);
       nuntius.plurimumGarrio("Factus sum");

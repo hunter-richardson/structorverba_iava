@@ -86,17 +86,18 @@ enum GradusNuntii {
    *   <li>Valor <a href="https://docs.oracle.com/javase/7/docs/api/java/util/logging/Level.html#ALL">ALL</a> val\u014Drem {@link #OMNIS} c\u014Dnsociat.</li>
    * </ul>
    */
-  @NotNull public final Supplier <@NotNull Level> gressus = ( ) -> switch (this) {
-    case INERS -> Level.OFF;
-    case GRAVIS -> Level.SEVERE;
-    case PRAEMONITORIUS -> Level.WARNING;
-    case INFORMATIVUS -> Level.INFO;
-    case PRAEGRESSURUS -> Level.CONFIG;
-    case SCRUTANS -> Level.FINE;
-    case SCRUTANTIOR -> Level.FINER;
-    case SCRUTANTISSIMUS -> Level.FINEST;
-    case OMNIS -> Level.ALL;
-  };
+  @NotNull public final Supplier <@NotNull Level> gressus = () ->
+    switch (this) {
+      case INERS -> Level.OFF;
+      case GRAVIS -> Level.SEVERE;
+      case PRAEMONITORIUS -> Level.WARNING;
+      case INFORMATIVUS -> Level.INFO;
+      case PRAEGRESSURUS -> Level.CONFIG;
+      case SCRUTANS -> Level.FINE;
+      case SCRUTANTIOR -> Level.FINER;
+      case SCRUTANTISSIMUS -> Level.FINEST;
+      case OMNIS -> Level.ALL;
+    };
 
   GradusNuntii(@NotNull final Level gressus) {
     praecellentia = gressus.intValue();

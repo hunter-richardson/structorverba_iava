@@ -30,7 +30,7 @@ public final class ConditorActis extends ConditorMultiplicibus <Actus> {
    * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
    */
   @NotNull public static final Supplier <ConditorActis> fac =
-    ( ) -> ObjectUtils.firstNonNull(instantia, instantia = new ConditorActis());
+    () -> ObjectUtils.firstNonNull(instantia, instantia = new ConditorActis());
 
   @NotNull private Modus     modus     = Modus.NULLUS;
   @NotNull private Vox       vox       = Vox.NULLA;
@@ -54,7 +54,7 @@ public final class ConditorActis extends ConditorMultiplicibus <Actus> {
         && StringUtils.isNoneBlank(lemma, scriptio)) {
       final Actus hoc = new Actus(modus, vox, tempus, numeralis, persona, lemma, scriptio);
       if (Objects.isNull(hoc)) {
-        nuntius.moneo(Actus.class.getSimpleName().replace("us", '\u012B'),
+        nuntius.moneo(Actus.class.getSimpleName().replace("us", "\u012B"),
                       StringUtils.firstNonBlank(lemma, scriptio),
                       "pr\u014Dducti\u014D f\u014Drmae n\u016Bllae pr\u014Dcessit.");
         return null;
@@ -64,7 +64,7 @@ public final class ConditorActis extends ConditorMultiplicibus <Actus> {
         return hoc;
       }
     } else {
-      nuntius.moneo(Actus.class.getSimpleName().replace("us", '\u012B'),
+      nuntius.moneo(Actus.class.getSimpleName().replace("us", "\u012B"),
                     StringUtils.firstNonBlank(lemma, scriptio),
                     "pr\u014Dducti\u014D f\u014Drmae n\u016Bllae pr\u014Dcessit.");
       return null;

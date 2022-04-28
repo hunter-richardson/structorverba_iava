@@ -66,7 +66,7 @@ public abstract class LectorSimplicibus <Hoc extends VerbumSimplex <Hoc>> extend
      * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
      */
     @NotNull public static final Supplier <LectorConiunctivis> fac =
-      ( ) -> ObjectUtils.firstNonNull(instantia, instantia = new LectorConiunctivis());
+      () -> ObjectUtils.firstNonNull(instantia, instantia = new LectorConiunctivis());
 
     private LectorConiunctivis() {
       super(Categoria.CONIUNCTIVUM, Nuntius.NuntiusLectoriConiunctivis.fac, TenorSimplicibus.TenorConiunctivis.fac);
@@ -90,9 +90,9 @@ public abstract class LectorSimplicibus <Hoc extends VerbumSimplex <Hoc>> extend
      * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
      */
     @NotNull public static final Supplier <LectorInteriectionibus> fac =
-      ( ) -> ObjectUtils.firstNonNull(instantia, instantia = new LectorInteriectionibus());
+      () -> ObjectUtils.firstNonNull(instantia, instantia = new LectorInteriectionibus());
 
-    private LectorInteriectionibus( ) {
+    private LectorInteriectionibus() {
       super(Categoria.INTERIECTIO, Nuntius.NuntiusTenoriInteriectionibus.fac,
             TenorSimplicibus.TenorInteriectionibus.fac);
       nuntius.plurimumGarrio("Factus sum");

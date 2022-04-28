@@ -71,7 +71,7 @@ public abstract class TenorSimplicibus <Hoc extends VerbumSimplex <Hoc>> extends
      * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
      */
     @NotNull public static final Supplier <TenorConiunctivis> fac =
-      ( ) -> ObjectUtils.firstNonNull(instantia, instantia = new TenorConiunctivis());
+      () -> ObjectUtils.firstNonNull(instantia, instantia = new TenorConiunctivis());
 
     private TenorConiunctivis() {
       super(Nuntius.NuntiusTenoriConiunctivis.fac, ConditorSimplicibus.ConditorConiunctivis.fac);
@@ -95,7 +95,7 @@ public abstract class TenorSimplicibus <Hoc extends VerbumSimplex <Hoc>> extends
      * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
      */
     @NotNull public static final Supplier <TenorInteriectionibus> fac =
-      ( ) -> ObjectUtils.firstNonNull(instantia, instantia = new TenorInteriectionibus());
+      () -> ObjectUtils.firstNonNull(instantia, instantia = new TenorInteriectionibus());
 
     private TenorInteriectionibus() {
       super(Nuntius.NuntiusTenoriInteriectionibus.fac, ConditorSimplicibus.ConditorInteriectionibus.fac);

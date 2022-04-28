@@ -163,9 +163,9 @@ public abstract class Nuntius {
      * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
      */
     @NotNull public static final Supplier <NuntiusTenoriAdverbiis> fac =
-      ( ) -> ObjectUtils.firstNonNull(instantia, instantia = new NuntiusTenoriAdverbiis());
+      () -> ObjectUtils.firstNonNull(instantia, instantia = new NuntiusTenoriAdverbiis());
 
-    private NuntiusTenoriAdverbiis( ) {
+    private NuntiusTenoriAdverbiis() {
       super(ParametriNuntii.para(TenorMultiplicibus.TenorAdverbiis.class));
     }
   }
@@ -184,9 +184,9 @@ public abstract class Nuntius {
      * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
      */
     @NotNull public static final Supplier <NuntiusTenoriConiunctivis> fac =
-      ( ) -> ObjectUtils.firstNonNull(instantia, instantia = new NuntiusTenoriConiunctivis());
+      () -> ObjectUtils.firstNonNull(instantia, instantia = new NuntiusTenoriConiunctivis());
 
-    private NuntiusTenoriConiunctivis( ) {
+    private NuntiusTenoriConiunctivis() {
       super(ParametriNuntii.para(TenorSimplicibus.TenorConiunctivis.class));
     }
   }
@@ -205,9 +205,9 @@ public abstract class Nuntius {
      * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
      */
     @NotNull public static final Supplier <NuntiusTenoriInteriectionibus> fac =
-      ( ) -> ObjectUtils.firstNonNull(instantia, instantia = new NuntiusTenoriInteriectionibus());
+      () -> ObjectUtils.firstNonNull(instantia, instantia = new NuntiusTenoriInteriectionibus());
 
-    private NuntiusTenoriInteriectionibus( ) {
+    private NuntiusTenoriInteriectionibus() {
       super(ParametriNuntii.para(TenorSimplicibus.TenorInteriectionibus.class));
     }
   }
@@ -227,9 +227,9 @@ public abstract class Nuntius {
      * @see TenorMultiplicibus.TenorNominibus
      */
     @NotNull public static final Supplier <NuntiusTenoriNominibus> fac =
-      ( ) -> ObjectUtils.firstNonNull(instantia, instantia = new NuntiusTenoriNominibus());
+      () -> ObjectUtils.firstNonNull(instantia, instantia = new NuntiusTenoriNominibus());
 
-    private NuntiusTenoriNominibus( ) {
+    private NuntiusTenoriNominibus() {
       super(ParametriNuntii.para(TenorMultiplicibus.TenorNominibus.class));
     }
   }
@@ -248,9 +248,9 @@ public abstract class Nuntius {
      * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
      */
     @NotNull public static final Supplier <NuntiusTenoriAdiectivis> fac =
-      ( ) -> ObjectUtils.firstNonNull(instantia, instantia = new NuntiusTenoriAdiectivis());
+      () -> ObjectUtils.firstNonNull(instantia, instantia = new NuntiusTenoriAdiectivis());
 
-    private NuntiusTenoriAdiectivis( ) {
+    private NuntiusTenoriAdiectivis() {
       super(ParametriNuntii.para(TenorMultiplicibus.TenorAdiectivis.class));
     }
   }
@@ -269,9 +269,9 @@ public abstract class Nuntius {
      * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
      */
     @NotNull public static final Supplier <NuntiusTenoriPronominibus> fac =
-      ( ) -> ObjectUtils.firstNonNull(instantia, instantia = new NuntiusTenoriPronominibus());
+      () -> ObjectUtils.firstNonNull(instantia, instantia = new NuntiusTenoriPronominibus());
 
-    private NuntiusTenoriPronominibus( ) {
+    private NuntiusTenoriPronominibus() {
       super(ParametriNuntii.para(TenorMultiplicibus.TenorPronominibus.class));
     }
   }
@@ -289,9 +289,9 @@ public abstract class Nuntius {
      * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
      */
     @NotNull public static final Supplier <NuntiusTenoriActis> fac =
-      ( ) -> ObjectUtils.firstNonNull(instantia, instantia = new NuntiusTenoriActis());
+      () -> ObjectUtils.firstNonNull(instantia, instantia = new NuntiusTenoriActis());
 
-    private NuntiusTenoriActis( ) {
+    private NuntiusTenoriActis() {
       super(ParametriNuntii.para(TenorMultiplicibus.TenorActis.class));
     }
   }
@@ -309,9 +309,9 @@ public abstract class Nuntius {
      * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
      */
     @NotNull public static final Supplier <NuntiusConditoriAdverbiis> fac =
-      ( ) -> ObjectUtils.firstNonNull(instantia, instantia = new NuntiusConditoriAdverbiis());
+      () -> ObjectUtils.firstNonNull(instantia, instantia = new NuntiusConditoriAdverbiis());
 
-    private NuntiusConditoriAdverbiis( ) {
+    private NuntiusConditoriAdverbiis() {
       super(ParametriNuntii.para(ConditorAdverbiis.class));
     }
   }
@@ -330,9 +330,9 @@ public abstract class Nuntius {
      * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
      */
     @NotNull public static final Supplier <NuntiusConditoriConiunctivis> fac =
-      ( ) -> ObjectUtils.firstNonNull(instantia, instantia = new NuntiusConditoriConiunctivis());
+      () -> ObjectUtils.firstNonNull(instantia, instantia = new NuntiusConditoriConiunctivis());
 
-    private NuntiusConditoriConiunctivis( ) {
+    private NuntiusConditoriConiunctivis() {
       super(ParametriNuntii.para(ConditorSimplicibus.ConditorConiunctivis.class));
     }
   }
@@ -351,9 +351,9 @@ public abstract class Nuntius {
      * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
      */
     @NotNull public static final Supplier <NuntiusConditoriInteriectionibus> fac =
-      ( ) -> ObjectUtils.firstNonNull(instantia, instantia = new NuntiusConditoriInteriectionibus());
+      () -> ObjectUtils.firstNonNull(instantia, instantia = new NuntiusConditoriInteriectionibus());
 
-    private NuntiusConditoriInteriectionibus( ) {
+    private NuntiusConditoriInteriectionibus() {
       super(ParametriNuntii.para(ConditorSimplicibus.ConditorInteriectionibus.class));
     }
   }
@@ -371,9 +371,9 @@ public abstract class Nuntius {
      * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
      */
     @NotNull public static final Supplier <NuntiusConditoriNominibus> fac =
-      ( ) -> ObjectUtils.firstNonNull(instantia, instantia = new NuntiusConditoriNominibus());
+      () -> ObjectUtils.firstNonNull(instantia, instantia = new NuntiusConditoriNominibus());
 
-    private NuntiusConditoriNominibus( ) {
+    private NuntiusConditoriNominibus() {
       super(ParametriNuntii.para(ConditorNominibus.class));
     }
   }
@@ -391,9 +391,9 @@ public abstract class Nuntius {
      * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
      */
     @NotNull public static final Supplier <NuntiusConditoriAdiectivis> fac =
-      ( ) -> ObjectUtils.firstNonNull(instantia, instantia = new NuntiusConditoriAdiectivis());
+      () -> ObjectUtils.firstNonNull(instantia, instantia = new NuntiusConditoriAdiectivis());
 
-    private NuntiusConditoriAdiectivis( ) {
+    private NuntiusConditoriAdiectivis() {
       super(ParametriNuntii.para(ConditorAdiectivis.class));
     }
   }
@@ -411,9 +411,9 @@ public abstract class Nuntius {
      * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
      */
     @NotNull public static final Supplier <NuntiusConditoriPronominibus> fac =
-      ( ) -> ObjectUtils.firstNonNull(instantia, instantia = new NuntiusConditoriPronominibus());
+      () -> ObjectUtils.firstNonNull(instantia, instantia = new NuntiusConditoriPronominibus());
 
-    private NuntiusConditoriPronominibus( ) {
+    private NuntiusConditoriPronominibus() {
       super(ParametriNuntii.para(ConditorPronominibus.class));
     }
   }
@@ -431,9 +431,9 @@ public abstract class Nuntius {
      * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
      */
     @NotNull public static final Supplier <NuntiusConditoriActis> fac =
-      ( ) -> ObjectUtils.firstNonNull(instantia, instantia = new NuntiusConditoriActis());
+      () -> ObjectUtils.firstNonNull(instantia, instantia = new NuntiusConditoriActis());
 
-    private NuntiusConditoriActis( ) {
+    private NuntiusConditoriActis() {
       super(ParametriNuntii.para(ConditorActis.class));
     }
   }
@@ -451,9 +451,9 @@ public abstract class Nuntius {
      * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
      */
     @NotNull public static final Supplier <NuntiusInventoriAdverbiis> fac =
-      ( ) -> ObjectUtils.firstNonNull(instantia, instantia = new NuntiusInventoriAdverbiis());
+      () -> ObjectUtils.firstNonNull(instantia, instantia = new NuntiusInventoriAdverbiis());
 
-    private NuntiusInventoriAdverbiis( ) {
+    private NuntiusInventoriAdverbiis() {
       super(ParametriNuntii.para(InventorAdverbiis.class));
     }
   }
@@ -471,9 +471,9 @@ public abstract class Nuntius {
      * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
      */
     @NotNull public static final Supplier <NuntiusInventoriNominibus> fac =
-      ( ) -> ObjectUtils.firstNonNull(instantia, instantia = new NuntiusInventoriNominibus());
+      () -> ObjectUtils.firstNonNull(instantia, instantia = new NuntiusInventoriNominibus());
 
-    private NuntiusInventoriNominibus( ) {
+    private NuntiusInventoriNominibus() {
       super(ParametriNuntii.para(InventorNominibus.class));
     }
   }
@@ -491,9 +491,9 @@ public abstract class Nuntius {
      * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
      */
     @NotNull public static final Supplier <NuntiusInventoriAdiectivis> fac =
-      ( ) -> ObjectUtils.firstNonNull(instantia, instantia = new NuntiusInventoriAdiectivis());
+      () -> ObjectUtils.firstNonNull(instantia, instantia = new NuntiusInventoriAdiectivis());
 
-    private NuntiusInventoriAdiectivis( ) {
+    private NuntiusInventoriAdiectivis() {
       super(ParametriNuntii.para(InventorAdiectivis.class));
     }
   }
@@ -511,9 +511,9 @@ public abstract class Nuntius {
      * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
      */
     @NotNull public static final Supplier <NuntiusInventoriPronominibus> fac =
-      ( ) -> ObjectUtils.firstNonNull(instantia, instantia = new NuntiusInventoriPronominibus());
+      () -> ObjectUtils.firstNonNull(instantia, instantia = new NuntiusInventoriPronominibus());
 
-    private NuntiusInventoriPronominibus( ) {
+    private NuntiusInventoriPronominibus() {
       super(ParametriNuntii.para(InventorPronominibus.class));
     }
   }
@@ -531,9 +531,9 @@ public abstract class Nuntius {
      * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
      */
     @NotNull public static final Supplier <NuntiusInventoriActis> fac =
-      ( ) -> ObjectUtils.firstNonNull(instantia, instantia = new NuntiusInventoriActis());
+      () -> ObjectUtils.firstNonNull(instantia, instantia = new NuntiusInventoriActis());
 
-    private NuntiusInventoriActis( ) {
+    private NuntiusInventoriActis() {
       super(ParametriNuntii.para(InventorActis.class));
     }
   }
@@ -551,9 +551,9 @@ public abstract class Nuntius {
      * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
      */
     @NotNull public static final Supplier <NuntiusLectoriAdverbiis> fac =
-      ( ) -> ObjectUtils.firstNonNull(instantia, instantia = new NuntiusLectoriAdverbiis());
+      () -> ObjectUtils.firstNonNull(instantia, instantia = new NuntiusLectoriAdverbiis());
 
-    private NuntiusLectoriAdverbiis( ) {
+    private NuntiusLectoriAdverbiis() {
       super(ParametriNuntii.para(LectorMultiplicibus.LectorAdverbiis.class));
     }
   }
@@ -572,9 +572,9 @@ public abstract class Nuntius {
      * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
      */
     @NotNull public static final Supplier <NuntiusLectoriConiunctivis> fac =
-      ( ) -> ObjectUtils.firstNonNull(instantia, instantia = new NuntiusLectoriConiunctivis());
+      () -> ObjectUtils.firstNonNull(instantia, instantia = new NuntiusLectoriConiunctivis());
 
-    private NuntiusLectoriConiunctivis( ) {
+    private NuntiusLectoriConiunctivis() {
       super(ParametriNuntii.para(LectorSimplicibus.LectorConiunctivis.class));
     }
   }
@@ -593,9 +593,9 @@ public abstract class Nuntius {
      * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
      */
     @NotNull public static final Supplier <NuntiusLectoriInteriectionibus> fac =
-      ( ) -> ObjectUtils.firstNonNull(instantia, instantia = new NuntiusLectoriInteriectionibus());
+      () -> ObjectUtils.firstNonNull(instantia, instantia = new NuntiusLectoriInteriectionibus());
 
-    private NuntiusLectoriInteriectionibus( ) {
+    private NuntiusLectoriInteriectionibus() {
       super(ParametriNuntii.para(LectorSimplicibus.LectorInteriectionibus.class));
     }
   }
@@ -614,9 +614,9 @@ public abstract class Nuntius {
      * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
      */
     @NotNull public static final Supplier <NuntiusLectoriNominibus> fac =
-      ( ) -> ObjectUtils.firstNonNull(instantia, instantia = new NuntiusLectoriNominibus());
+      () -> ObjectUtils.firstNonNull(instantia, instantia = new NuntiusLectoriNominibus());
 
-    private NuntiusLectoriNominibus( ) {
+    private NuntiusLectoriNominibus() {
       super(ParametriNuntii.para(LectorMultiplicibus.LectorNominibus.class));
     }
   }
@@ -635,9 +635,9 @@ public abstract class Nuntius {
      * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
      */
     @NotNull public static final Supplier <NuntiusLectoriAdiectivis> fac =
-      ( ) -> ObjectUtils.firstNonNull(instantia, instantia = new NuntiusLectoriAdiectivis());
+      () -> ObjectUtils.firstNonNull(instantia, instantia = new NuntiusLectoriAdiectivis());
 
-    private NuntiusLectoriAdiectivis( ) {
+    private NuntiusLectoriAdiectivis() {
       super(ParametriNuntii.para(LectorMultiplicibus.LectorAdiectivis.class));
     }
   }
@@ -656,9 +656,9 @@ public abstract class Nuntius {
      * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
      */
     @NotNull public static final Supplier <NuntiusLectoriPronominibus> fac =
-      ( ) -> ObjectUtils.firstNonNull(instantia, instantia = new NuntiusLectoriPronominibus());
+      () -> ObjectUtils.firstNonNull(instantia, instantia = new NuntiusLectoriPronominibus());
 
-    private NuntiusLectoriPronominibus( ) {
+    private NuntiusLectoriPronominibus() {
       super(ParametriNuntii.para(LectorMultiplicibus.LectorPronominibus.class));
     }
   }
@@ -676,9 +676,9 @@ public abstract class Nuntius {
      * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
      */
     @NotNull public static final Supplier <NuntiusLectoriActis> fac =
-      ( ) -> ObjectUtils.firstNonNull(instantia, instantia = new NuntiusLectoriActis());
+      () -> ObjectUtils.firstNonNull(instantia, instantia = new NuntiusLectoriActis());
 
-    private NuntiusLectoriActis( ) {
+    private NuntiusLectoriActis() {
       super(ParametriNuntii.para(LectorMultiplicibus.LectorActis.class));
     }
   }
@@ -697,9 +697,9 @@ public abstract class Nuntius {
      * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
      */
     @NotNull public static final Supplier <NuntiusLectoriPraepositionibus> fac =
-      ( ) -> ObjectUtils.firstNonNull(instantia, instantia = new NuntiusLectoriPraepositionibus());
+      () -> ObjectUtils.firstNonNull(instantia, instantia = new NuntiusLectoriPraepositionibus());
 
-    private NuntiusLectoriPraepositionibus( ) {
+    private NuntiusLectoriPraepositionibus() {
       super(ParametriNuntii.para(LectorPraepositionibus.class));
     }
   }
@@ -717,9 +717,9 @@ public abstract class Nuntius {
      * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
      */
     public static @NotNull Supplier <NuntiusAdverbiorum> fac =
-      ( ) -> ObjectUtils.firstNonNull(instantia, instantia = new NuntiusAdverbiorum());
+      () -> ObjectUtils.firstNonNull(instantia, instantia = new NuntiusAdverbiorum());
 
-    private NuntiusAdverbiorum( ) {
+    private NuntiusAdverbiorum() {
       super(ParametriNuntii.para(Adverbium.class));
     }
   }
@@ -737,9 +737,9 @@ public abstract class Nuntius {
      * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
      */
     public static @NotNull Supplier <NuntiusConiunctivorum> fac =
-      ( ) -> ObjectUtils.firstNonNull(instantia, instantia = new NuntiusConiunctivorum());
+      () -> ObjectUtils.firstNonNull(instantia, instantia = new NuntiusConiunctivorum());
 
-    private NuntiusConiunctivorum( ) {
+    private NuntiusConiunctivorum() {
       super(ParametriNuntii.para(VerbumSimplex.Coniunctivum.class));
     }
   }
@@ -757,9 +757,9 @@ public abstract class Nuntius {
      * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
      */
     public static @NotNull Supplier <NuntiusInteriectionum> fac =
-      ( ) -> ObjectUtils.firstNonNull(instantia, instantia = new NuntiusInteriectionum());
+      () -> ObjectUtils.firstNonNull(instantia, instantia = new NuntiusInteriectionum());
 
-    private NuntiusInteriectionum( ) {
+    private NuntiusInteriectionum() {
       super(ParametriNuntii.para(VerbumSimplex.Interiectio.class));
     }
   }
@@ -777,9 +777,9 @@ public abstract class Nuntius {
      * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
      */
     public static @NotNull Supplier <NuntiusPraepositionum> fac =
-      ( ) -> ObjectUtils.firstNonNull(instantia, instantia = new NuntiusPraepositionum());
+      () -> ObjectUtils.firstNonNull(instantia, instantia = new NuntiusPraepositionum());
 
-    private NuntiusPraepositionum( ) {
+    private NuntiusPraepositionum() {
       super(ParametriNuntii.para(VerbumSimplex.Praepositio.class));
     }
   }
@@ -797,9 +797,9 @@ public abstract class Nuntius {
      * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
      */
     @NotNull public static final Supplier <NuntiusNumerorum> fac =
-      ( ) -> ObjectUtils.firstNonNull(instantia, instantia = new NuntiusNumerorum());
+      () -> ObjectUtils.firstNonNull(instantia, instantia = new NuntiusNumerorum());
 
-    private NuntiusNumerorum( ) {
+    private NuntiusNumerorum() {
       super(ParametriNuntii.para(VerbumSimplex.Numerus.class));
     }
   }
@@ -817,9 +817,9 @@ public abstract class Nuntius {
      * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
      */
     @NotNull public static final Supplier <NuntiusNominum> fac =
-      ( ) -> ObjectUtils.firstNonNull(instantia, instantia = new NuntiusNominum());
+      () -> ObjectUtils.firstNonNull(instantia, instantia = new NuntiusNominum());
 
-    private NuntiusNominum( ) {
+    private NuntiusNominum() {
       super(ParametriNuntii.para(Nomen.class));
     }
   }
@@ -837,9 +837,9 @@ public abstract class Nuntius {
      * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
      */
     @NotNull public static final Supplier <NuntiusAdiectivorum> fac =
-      ( ) -> ObjectUtils.firstNonNull(instantia, instantia = new NuntiusAdiectivorum());
+      () -> ObjectUtils.firstNonNull(instantia, instantia = new NuntiusAdiectivorum());
 
-    private NuntiusAdiectivorum( ) {
+    private NuntiusAdiectivorum() {
       super(ParametriNuntii.para(Actus.class));
     }
   }
@@ -857,9 +857,9 @@ public abstract class Nuntius {
      * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
      */
     @NotNull public static final Supplier <NuntiusPronominum> fac =
-      ( ) -> ObjectUtils.firstNonNull(instantia, instantia = new NuntiusPronominum());
+      () -> ObjectUtils.firstNonNull(instantia, instantia = new NuntiusPronominum());
 
-    private NuntiusPronominum( ) {
+    private NuntiusPronominum() {
       super(ParametriNuntii.para(Pronomen.class));
     }
   }
@@ -877,9 +877,9 @@ public abstract class Nuntius {
      * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
      */
     @NotNull public static final Supplier <NuntiusActorum> fac =
-      ( ) -> ObjectUtils.firstNonNull(instantia, instantia = new NuntiusActorum());
+      () -> ObjectUtils.firstNonNull(instantia, instantia = new NuntiusActorum());
 
-    private NuntiusActorum( ) {
+    private NuntiusActorum() {
       super(ParametriNuntii.para(Actus.class));
     }
   }
@@ -899,9 +899,9 @@ public abstract class Nuntius {
      * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
      */
     @NotNull public static final Supplier <NuntiusErroribus> fac =
-      ( ) -> ObjectUtils.firstNonNull(instantia, instantia = new NuntiusErroribus());
+      () -> ObjectUtils.firstNonNull(instantia, instantia = new NuntiusErroribus());
 
-    private NuntiusErroribus( ) {
+    private NuntiusErroribus() {
       super(ParametriNuntii.para(NuntiusErroribus.class));
     }
 

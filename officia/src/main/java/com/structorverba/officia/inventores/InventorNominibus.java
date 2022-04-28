@@ -28,7 +28,7 @@ public final class InventorNominibus extends Inventor <Nomen> {
    * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
    */
   @NotNull public static final Supplier <InventorNominibus> fac =
-    ( ) -> ObjectUtils.firstNonNull(instantia, instantia = new InventorNominibus());
+    () -> ObjectUtils.firstNonNull(instantia, instantia = new InventorNominibus());
 
   @NotNull private Specialitas specialitas = Specialitas.NULLUM;
   @NotNull private Genus       genus       = Genus.NULLUM;
@@ -85,23 +85,23 @@ public final class InventorNominibus extends Inventor <Nomen> {
     if (illud instanceof Specialitas) {
       specialitas = Specialitas.ut(illud);
       nuntius.garrio("Quaesti\u014Dn\u012B adi\u0113c\u012B conditi\u014Dnem novam:",
-                     Specialitas.class.getSimpleName(), illud);
+                     Specialitas.pittacium, illud);
     } else if (illud instanceof Genus) {
       genus = Genus.ut(illud);
       nuntius.garrio("Quaesti\u014Dn\u012B adi\u0113c\u012B conditi\u014Dnem novam:",
-                     Genus.class.getSimpleName(), illud);
+                     Genus.pittacium, illud);
     } else if (illud instanceof Numeralis) {
       numeralis = Numeralis.ut(illud);
       nuntius.garrio("Quaesti\u014Dn\u012B adi\u0113c\u012B conditi\u014Dnem novam:",
-                     Numeralis.class.getSimpleName(), illud);
+                     Numeralis.pittacium, illud);
     } else if (illud instanceof Casus) {
       casus = Casus.ut(illud);
       nuntius.garrio("Quaesti\u014Dn\u012B adi\u0113c\u012B conditi\u014Dnem novam:",
-                     Casus.class.getSimpleName(), illud);
+                     Casus.pittacium, illud);
     } else if (illud instanceof Tempus) {
       tempus = Tempus.ut(illud);
       nuntius.garrio("Quaesti\u014Dn\u012B adi\u0113c\u012B conditi\u014Dnem novam:",
-                     Tempus.class.getSimpleName(), illud);
+                     Tempus.pittacium, illud);
     } else {
       nuntius.moneo(Nomen.class.getSimpleName().replace("en", "\u012B"),
                     "inqu\u012Bs\u012Bti\u014D n\u014Dmin\u012B inop\u012Bn\u0101ta \u016Bsa'st:",

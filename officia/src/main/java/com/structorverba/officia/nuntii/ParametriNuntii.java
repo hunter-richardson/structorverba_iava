@@ -28,7 +28,7 @@ final class ParametriNuntii {
   private final @NotNull String locus = "logs";
 
   private ParametriNuntii(@NotNull final Class <?> classis) {
-    praeconium = ( ) -> {
+    praeconium = () -> {
       final Logger praeco = Logger.getLogger(classis.getSimpleName());
       praeco.setParent(Logger.getGlobal());
       praeco.setUseParentHandlers(false);

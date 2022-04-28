@@ -30,7 +30,7 @@ public final class ConditorNominibus extends ConditorMultiplicibus <Nomen> {
    * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
    */
   @NotNull public static final Supplier <ConditorNominibus> fac =
-    ( ) -> ObjectUtils.firstNonNull(instantia, instantia = new ConditorNominibus());
+    () -> ObjectUtils.firstNonNull(instantia, instantia = new ConditorNominibus());
 
   @NotNull private Specialitas specialitas = Specialitas.NULLUM;
   @NotNull private Genus       genus       = Genus.NULLUM;
@@ -48,6 +48,7 @@ public final class ConditorNominibus extends ConditorMultiplicibus <Nomen> {
    * @return Rem novam classis {@link Nomen}. <br>
    * Modus hid val\u014Drem {@code null} refert s\u012B n\u014Dn valet valor aliquis r\u0113s haec continet.
    */
+  @SuppressWarnings("ConstantConditions")
   @Override @Nullable
   public Nomen condam() {
     if (ObjectUtils.allNotNull(specialitas, genus, casus, numeralis)
@@ -110,7 +111,7 @@ public final class ConditorNominibus extends ConditorMultiplicibus <Nomen> {
    * @see Numeralis#NULLUS
    * @see Tempus#INTEMPORALE
    */
-  @Override public void restituo( ) {
+  @Override public void restituo() {
     specialitas = Specialitas.NULLUM;
     genus = Genus.NULLUM;
     casus = Casus.DERECTUS;
