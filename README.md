@@ -6,23 +6,23 @@ Nōn iam! Vōbīs intrōdūcō programma StrūctorVerba scrīptum in linguā [Ia
 
 Programma hoc dēfīnit classēs novem quās catēgoriās novem verbōrum repraesentent:
 
-I. [Coniūnctīvum](structorverba-lib/src/main/java/java/net/structorverba/bibliotheca/verba/VerbumSimplex.java#L46)
+I. [Coniunctivum](officia/src/main/java/com/structorverba/officia/verba/VerbumSimplex.java#L46)
 
-II. [Interiectiō](structorverba-lib/src/main/java/java/net/structorverba/bibliotheca/verba/VerbumSimplex.java#L67)
+II. [Interiectio](officia/src/main/java/com/structorverba/officia/verba/VerbumSimplex.java#L67)
 
-III. [Praepositiō](structorverba-lib/src/main/java/java/net/structorverba/bibliotheca/verba/VerbumSimplex.java#L88)
+III. [Praepositio](officia/src/main/java/com/structorverba/officia/verba/VerbumSimplex.java#L88)
 
-IV. [Numerus](structorverba-lib/src/main/java/java/net/structorverba/bibliotheca/verba/VerbumSimplex.java#L112)
+IV. [Numerus](officia/src/main/java/com/structorverba/officia/verba/VerbumSimplex.java#L112)
 
-V. [Adverbium](structorverba-lib/src/main/java/java/net/structorverba/bibliotheca/verba/multiplicia/Adverbium.java)
+V. [Adverbium](officia/src/main/java/com/structorverba/officia/verba/multiplicia/Adverbium.java)
 
-VI. [Nōmen](structorverba-lib/src/main/java/java/net/structorverba/bibliotheca/verba/multiplicia/Nomen.java)
+VI. [Nomen](officia/src/main/java/com/structorverba/officia/verba/multiplicia/Nomen.java)
 
-VII. [Prōnōmen](structorverba-lib/src/main/java/java/net/structorverba/bibliotheca/verba/multiplicia/Pronomen.java)
+VII. [Pronomen](officia/src/main/java/com/structorverba/officia/verba/multiplicia/Pronomen.java)
 
-VIII. [Adiectīvum](structorverba-lib/src/main/java/java/net/structorverba/bibliotheca/verba/multiplicia/Adiectivum.java)
+VIII. [Adiectivum](officia/src/main/java/com/structorverba/officia/verba/multiplicia/Adiectivum.java)
 
-IX. [Āctus](structorverba-lib/src/main/java/java/net/structorverba/bibliotheca/verba/multiplicia/Actus.java)
+IX. [Actus](officia/src/main/java/com/structorverba/officia/verba/multiplicia/Actus.java)
 
 Omne quālitātēs ipsās prōpositaque ipsa habet et ligāmina illa vōs dūcent ut tabellās aptās perlēgātis.
 
@@ -30,47 +30,47 @@ ___
 
 Praetereā tentāmina quattuor sunt scrīpsī ut exsecūtiō modōsque programmātis recēnseantur.
 
-I. [DolōremIpsum](structorverba-lib/src/test/net/strūctorverba/tentāmina/DolōremIpsum.java)
+I. [DolōremIpsum](officium/src/test/net/strūctorverba/tentāmina/DolōremIpsum.java)
 
-II. [Carthāgō](structorverba-lib/src/test/net/strūctorverba/tentāmina/Carthāgō.java)
+II. [Carthāgō](officium/src/test/net/strūctorverba/tentāmina/Carthāgō.java)
 
-III. [Exempla](structorverba-lib/src/test/net/strūctorverba/tentāmina/Exempla.java)
+III. [Exempla](officium/src/test/net/strūctorverba/tentāmina/Exempla.java)
 
-IV. [Numerī](structorverba-lib/src/test/net/strūctorverba/tentāmina/Numerī.java)
+IV. [Numerī](officium/src/test/net/strūctorverba/tentāmina/Numerī.java)
 
-Valōrem [StrūctorVerba.fac](structorverba-lib/src/main/java/java/net/structorverba/bibliotheca/miscella/StructorVerba.java#L28) invocāte ut fūnctiōnēs omnēs programmātis StrūctorVerba accēdātis:
+Valōrem [StructorVerba.fac](officia/src/main/java/com/structorverba/officia/miscella/StructorVerba.java#L28) invocāte ut fūnctiōnēs omnēs programmātis StrūctorVerba accēdātis:
 
 ```java
-import net.strūctorverba.ēnumerātiōnēs.*;
-import net.strūctorverba.mīscella.StrūctorVerba;
-import net.strūctorverba.verba.Verba;
-import net.strūctorverba.verba.multiplicia.*;
+import net.structorverba.enumerationes.*;
+import net.structorverba.miscella.StructorVerba;
+import net.structorverba.verba.Verba;
+import net.structorverba.verba.multiplicia.*;
 
-class Tentāmen {
+class Tentamen {
   @SuppressWarnings("ConstantConditions")
   public void main(String[] args) {
-    final StrūctorVerba strūctor = StrūctorVerba.fac.get();
-    final Verba verba = strūctor.strue(
-          strūctor.adveniam("ecce", Catēgoria.INTERIECTIŌ),
-          strūctor.adveniam("lingua", Catēgoria.NŌMEN,
-                            Speciālitās.COMMŪNE, Genus.FĒMINĪNUM,
-                            Cāsus.NŌMINĀTĪVUS, Numerālis.SINGULĀRIS),
-          strūctor.adveniam("latīnum", Catēgoria.ADIECTĪVUM,
-                            Speciālitās.PROPRIUM, Genus.FĒMINĪNUM,
-                            Cāsus.NŌMINĀTĪVUS, Numerālis.SINGULĀRIS, Gradus.POSITĪVUS),
-          strūctor.adveniam("plācēre", Catēgoria.ĀCTUM,
-                            Modus.INDICĀTĪVUS, Vōx.ĀCTĪVA, Tempus.PRAESĒNS,
-                            Numerālis.SINGULĀRIS, Persōna.TERTIA),
- ((Āctus) strūctor.adveniam("prōdesse", Catēgoria.ĀCTUM,
-                            Modus.INDICĀTĪVUS, Vōx.ĀCTĪVA, Tempus.PRAESĒNS,
-                            Numerālis.SINGULĀRIS, Persōna.TERTIA))
-                  .allegō(Encliticum.CONIUGĀNS));
+    final StructorVerba structor = StructorVerba.fac.get();
+    final Verba verba = structor.strue(
+          structor.adveniam("ecce", Categoria.INTERIECTIO),
+          structor.adveniam("lingua", Categoria.NOMEN,
+                            Specialitas.COMMUNE, Genus.FEMININUM,
+                            Casus.NOMINATIVUS, Numeralis.SINGULARIS),
+          structor.adveniam("latīnum", Categoria.ADIECTIVUM,
+                            Specialitas.PROPRIUM, Genus.FEMININUM,
+                            Casus.NOMINATIVUS, Numeralis.SINGULARIS, Gradus.POSITIVUS),
+          structor.adveniam("plācēre", Catēgoria.ACTUM,
+                            Modus.INDICATIVUS, Vōx.ACTIVA, Tempus.PRAESENS,
+                            Numeralis.SINGULARIS, Persona.TERTIA),
+ ((Actus) structor.adveniam("prōdesse", Categoria.ACTUM,
+                            Modus.INDICATIVUS, Vōx.ACTIVA, Tempus.PRAESENS,
+                            Numeralis.SINGULARIS, Persona.TERTIA))
+                  .allego(Encliticum.CONIUGANS));
     System.out.println(verba); // Ecce lingua Latīna placet prōdestque
   }
 }
 ```
 
-Versiō simplificātus cōdicis superī est scrīptus in tentāmine [Exempla.prōducta](structorverba-lib/src/test/net/strūctorverba/tentāmina/Exempla.java#L26)
+Versiō simplificātus cōdicis superī est scrīptus in tentāmine [Exempla.prōducta](officium/src/test/net/strūctorverba/tentāmina/Exempla.java#L26)
 
 ___
 

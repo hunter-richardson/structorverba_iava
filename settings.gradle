@@ -1,2 +1,4 @@
-include ':structorverba-lib'
+include ':officia'
+include ':officium2'
+include ':officium'
 rootProject.name = "structorverba"
