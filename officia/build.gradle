@@ -5,7 +5,8 @@ android {
     buildToolsVersion "32.0.0"
 
     defaultConfig {
-        minSdkVersion 32
+        applicationId "com.structorverba"
+        minSdkVersion 26
         targetSdkVersion 32
         versionCode 1
         versionName "1.0"
