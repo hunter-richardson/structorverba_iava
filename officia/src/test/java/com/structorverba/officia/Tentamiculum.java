@@ -209,17 +209,33 @@ abstract class Tentamiculum<Hoc> extends Omnum {
       super(expct, prdctm);
     }
 
-    @SuppressWarnings("ConstantConditions")
+    /**
+     * {@inheritDoc}
+     *
+     * @param prdctm valor {@link #productum} indicat.
+     */
+    public TentamiculumVersiculi(@NotNull Object prdctm) {
+      super(prdctm.toString());
+    }
+
+    /**
+     * {@inheritDoc}
+     *
+     * @param expct  valor {@link #expectatio} indicat.
+     * @param prdctm valor {@link #productum} indicat.
+     */
+    public TentamiculumVersiculi(@NotNull String expct, @NotNull Object prdctm) {
+      super(expct, prdctm.toString());
+    }
+
     private boolean aequanturne( ) {
       return ObjectUtils.allNotNull(expectatio, productum) && expectatio.equals(productum);
     }
 
-    @SuppressWarnings("ConstantConditions")
     private boolean differuntne( ) {
       return ObjectUtils.allNotNull(expectatio, productum) && !expectatio.equals(productum);
     }
 
-    @SuppressWarnings("ConstantConditions")
     private boolean continetne( ) {
       return ObjectUtils.allNotNull(expectatio, productum) && productum.contains(expectatio);
     }

@@ -58,12 +58,12 @@ abstract class Tentamen<Illud, Hoc> {
           new Tentamiculum.TentamiculumRei(illud.series.get(index))
             .existat(String.format("Pr\u014Dduct\u0101 %s relicta'st pr\u014Dducti\u014D verb\u012B %s.",
                                    nomen, Utilitas.minusculasScribo(data.split(String.valueOf(' '))[ index ])));
-          new Tentamiculum.TentamiculumVersiculi(illud.series.get(index).toString())
+          new Tentamiculum.TentamiculumVersiculi(illud.series.get(index))
             .aliamContineat(String.format("Pr\u014Dduct\u0101 %s relicta'st pr\u014Dducti\u014D verb\u012B %s.",
                                           nomen, Utilitas.minusculasScribo(data.split(String.valueOf(' '))[ index ])));
         }
 
-        new Tentamiculum.TentamiculumVersiculi(data, illud.toString())
+        new Tentamiculum.TentamiculumVersiculi(data, illud)
           .aequentur(String.format("Verba pr\u014Dducta %s expect\u0101ti\u014Dne eius differt.", nomen));
         return String.format("Pr\u014Dducta %s: %s", nomen, illud);
       });
@@ -84,9 +84,9 @@ abstract class Tentamen<Illud, Hoc> {
       super(illud -> {
         new Tentamiculum.TentamiculumRei(illud)
           .existat(String.format("Pr\u014Dduct\u0101 conversi\u014Dnis relicta'st pr\u014Dducti\u014D numer\u012B %d.", numerus));
-        new Tentamiculum.TentamiculumVersiculi(illud.toString())
+        new Tentamiculum.TentamiculumVersiculi(illud)
           .aliamContineat("Numerum pr\u014Dductum conversi\u014Dnis vacat.");
-        new Tentamiculum.TentamiculumVersiculi(data, illud.toString())
+        new Tentamiculum.TentamiculumVersiculi(data, illud)
           .aequentur("Numerum pr\u014Dductum conversi\u014Dnis expect\u0101ti\u014Dne eius differt.");
         return String.format("%d = %s", numerus, illud);
       });
@@ -128,7 +128,7 @@ abstract class Tentamen<Illud, Hoc> {
       super(primus -> {
         new Tentamiculum.TentamiculumRei(primus)
           .existat(String.format("Pr\u014Dduct\u0101 conversi\u014Dnis relicta'st pr\u014Dducti\u014D numer\u012B %d.", numerus));
-        new Tentamiculum.TentamiculumVersiculi(primus.toString())
+        new Tentamiculum.TentamiculumVersiculi(primus)
           .aliamContineat("Numerum pr\u014Dductum conversi\u014Dnis vacat.");
 
         @NotNull final StructorVerba structor = StructorVerba.fac.get();
@@ -157,7 +157,7 @@ abstract class Tentamen<Illud, Hoc> {
       super(primus -> {
         new Tentamiculum.TentamiculumRei(primus)
           .existat(String.format("Pr\u014Dduct\u0101 %s relicta'st pr\u014Dducti\u014D numer\u012B %d.", operatio, range.getMaximum()));
-        new Tentamiculum.TentamiculumVersiculi(primus.toString())
+        new Tentamiculum.TentamiculumVersiculi(primus)
           .aliamContineat(String.format("Numerum pr\u014Dductum %s vacat.", operatio));
 
         final String labor = switch (operatio) {
@@ -182,7 +182,7 @@ abstract class Tentamen<Illud, Hoc> {
         @NotNull final VerbumSimplex.Numerus secundus = structor.numerus(range.getMinimum());
         new Tentamiculum.TentamiculumRei(secundus)
           .existat(String.format("Pr\u014Dduct\u0101 %s relicta'st pr\u014Dducti\u014D numer\u012B %d.", operatio, range.getMinimum()));
-        new Tentamiculum.TentamiculumVersiculi(secundus.toString())
+        new Tentamiculum.TentamiculumVersiculi(secundus)
           .aliamContineat(String.format("Numerum pr\u014Dductum %s vacat.", operatio));
 
         final VerbumSimplex.Numerus eventus = switch (operatio) {
@@ -196,7 +196,7 @@ abstract class Tentamen<Illud, Hoc> {
 
         new Tentamiculum.TentamiculumRei(eventus)
           .existat(String.format("Pr\u014Dduct\u0101 %s relicta'st pr\u014Dducti\u014D numer\u012B %d.", operatio, expectatus));
-        new Tentamiculum.TentamiculumVersiculi(eventus.toString())
+        new Tentamiculum.TentamiculumVersiculi(eventus)
           .aliamContineat(String.format("Numerum pr\u014Dductum %s vacat.", operatio));
         new Tentamiculum.TentamiculumNumeralis <>(expectatus, eventus.numerus)
           .aequentur(String.format("Numerum pr\u014Dductum %s expect\u0101ti\u014Dne eius differt.", operatio));
