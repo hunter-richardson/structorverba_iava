@@ -26,4 +26,8 @@ hs_err_pid*
 .idea/
 
 # compilation directory
-out/
+/build/out/
+
+# local settings file
+local.properties
+gradle-local.properties
