@@ -1,6 +1,7 @@
 package officia.src.main.java.com.structorverba.officia.conditores.multiplicia;
 
 import officia.src.main.java.com.structorverba.officia.conditores.Conditor;
+import officia.src.main.java.com.structorverba.officia.miscella.Utilitas;
 import officia.src.main.java.com.structorverba.officia.nuntii.Nuntius;
 import officia.src.main.java.com.structorverba.officia.verba.Verbum;
 import officia.src.main.java.com.structorverba.officia.verba.multiplicia.Actus;
@@ -54,17 +55,17 @@ public final class ConditorActis extends ConditorMultiplicibus <Actus> {
         && StringUtils.isNoneBlank(lemma, scriptio)) {
       final Actus hoc = new Actus(modus, vox, tempus, numeralis, persona, lemma, scriptio);
       if (Objects.isNull(hoc)) {
-        nuntius.moneo(Actus.class.getSimpleName().replace("us", "\u012B"),
+        nuntius.moneo(Utilitas.primamCapitaneamScribo(Categoria.ACTUS.scriptio),
                       StringUtils.firstNonBlank(lemma, scriptio),
                       "pr\u014Dducti\u014D f\u014Drmae n\u016Bllae pr\u014Dcessit.");
         return null;
       } else {
-        nuntius.certioro(Actus.class.getSimpleName(), scriptio,
-                         "f\u012Bn\u012Btur pr\u014Dd\u016Bcere.");
+        nuntius.certioro(Utilitas.primamCapitaneamScribo(Categoria.ACTUS.scriptio.replace("a", "us")),
+                         scriptio, "f\u012Bn\u012Btur pr\u014Dd\u016Bcere.");
         return hoc;
       }
     } else {
-      nuntius.moneo(Actus.class.getSimpleName().replace("us", "\u012B"),
+      nuntius.moneo(Utilitas.primamCapitaneamScribo(Categoria.ACTUS.scriptio),
                     StringUtils.firstNonBlank(lemma, scriptio),
                     "pr\u014Dducti\u014D f\u014Drmae n\u016Bllae pr\u014Dcessit.");
       return null;
@@ -94,8 +95,9 @@ public final class ConditorActis extends ConditorMultiplicibus <Actus> {
     } else if (pittaciumLemmae.equals(nomen)) {
       lemma = descriptor.trim();
     } else {
-      nuntius.moneo(Actus.class.getSimpleName().replace("us", "\u014D"),
-                    "attrib\u016Bta inop\u012Bnata \u016Bsa'st:", nomen, descriptor);
+      nuntius.moneo(Utilitas.primamCapitaneamScribo(Categoria.ACTUS.scriptio),
+                    "attrib\u016Bta inop\u012Bnata \u016Bsa'st:",
+                    nomen, descriptor);
       return;
     }
 

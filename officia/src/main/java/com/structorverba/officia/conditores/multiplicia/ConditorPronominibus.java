@@ -1,6 +1,7 @@
 package officia.src.main.java.com.structorverba.officia.conditores.multiplicia;
 
 import officia.src.main.java.com.structorverba.officia.conditores.Conditor;
+import officia.src.main.java.com.structorverba.officia.miscella.Utilitas;
 import officia.src.main.java.com.structorverba.officia.nuntii.Nuntius;
 import officia.src.main.java.com.structorverba.officia.verba.Verbum;
 import officia.src.main.java.com.structorverba.officia.verba.multiplicia.*;
@@ -54,17 +55,17 @@ public final class ConditorPronominibus extends ConditorMultiplicibus <Pronomen>
         && StringUtils.isNoneBlank(lemma, scriptio)) {
       final Pronomen hoc = new Pronomen(specialitas, genus, casus, numeralis, lemma, scriptio);
       if (Objects.isNull(hoc)) {
-        nuntius.moneo(Pronomen.class.getSimpleName().replace("en", "inis"),
+        nuntius.moneo(Utilitas.primamCapitaneamScribo(Categoria.PRONOMEN.scriptio.replaceLast("a", "is")),
                       StringUtils.firstNonBlank(lemma, scriptio),
                       "pr\u014Dducti\u014D f\u014Drmae nullae pr\u014Dcessit.");
         return null;
       } else {
-        nuntius.certioro(Pronomen.class.getSimpleName(),
+        nuntius.certioro(Utilitas.primamCapitaneamScribo(Categoria.PRONOMEN.scriptio.replaceLast("ina", "en")),
                          scriptio, "f\u012Bn\u012Btur pr\u014Dd\u016Bcere.");
         return hoc;
       }
     } else {
-      nuntius.moneo(Pronomen.class.getSimpleName().replace("en", "inis"),
+      nuntius.moneo(Utilitas.primamCapitaneamScribo(Categoria.PRONOMEN.scriptio.replaceLast("a", "is")),
                     StringUtils.firstNonBlank(lemma, scriptio),
                     "pr\u014Dducti\u014D f\u014Drmae n\u016Bllae pr\u014Dcessit.");
       return null;
@@ -91,7 +92,7 @@ public final class ConditorPronominibus extends ConditorMultiplicibus <Pronomen>
     } else if (pittaciumLemmae.equals(nomen)) {
       lemma = descriptor.trim();
     } else {
-      nuntius.moneo(Pronomen.class.getSimpleName().replace("en", "inis"),
+      nuntius.moneo(Utilitas.primamCapitaneamScribo(Categoria.PRONOMEN.scriptio.replaceLast("a", "is")),
                     "attrib\u016Bta inop\u012Bnata \u016Bsa'st:", nomen, descriptor);
       return;
     }

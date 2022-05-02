@@ -1,5 +1,6 @@
 package officia.src.main.java.com.structorverba.officia.conditores;
 
+import officia.src.main.java.com.structorverba.officia.miscella.Utilitas;
 import officia.src.main.java.com.structorverba.officia.nuntii.Nuntius;
 import officia.src.main.java.com.structorverba.officia.tenores.Tenor;
 import officia.src.main.java.com.structorverba.officia.verba.VerbumSimplex;
@@ -82,10 +83,10 @@ public abstract class ConditorSimplicibus <Hoc extends VerbumSimplex <Hoc>> exte
      */
     protected void refero(@Nullable final VerbumSimplex.Coniunctivum hoc) {
       if (Objects.isNull(hoc)) {
-        nuntius.certioro(VerbumSimplex.Coniunctivum.class.getSimpleName(),
+        nuntius.certioro(Utilitas.primamCapitaneamScribo(Categoria.CONIUNCTIVUM.scriptio.replaceLast("a", "um")),
                          lemma, "f\u012Bn\u012Btur pr\u014Dd\u016Bcere.");
       } else {
-        nuntius.moneo(VerbumSimplex.Coniunctivum.class.getSimpleName().replace("um", "\u012B"),
+        nuntius.moneo(Utilitas.primamCapitaneamScribo(Categoria.CONIUNCTIVUM.scriptio.replaceLast('a', '\u012B')),
                       "pr\u014Dducti\u014D formae n\u016Bllae pr\u014Dcessit.");
       }
     }
@@ -119,10 +120,10 @@ public abstract class ConditorSimplicibus <Hoc extends VerbumSimplex <Hoc>> exte
      */
     protected void refero(@Nullable final VerbumSimplex.Interiectio hoc) {
       if (Objects.isNull(hoc)) {
-        nuntius.certioro(VerbumSimplex.Interiectio.class.getSimpleName(), lemma,
-                         "f\u012Bn\u012Btur pr\u014Dd\u016Bcere.");
+        nuntius.certioro(Utilitas.primamCapitaneamScribo(Categoria.INTERIECTIO.scriptio.replaceLast("n\u0113s", StringUtils.EMPTY)),
+                         lemma, "f\u012Bn\u012Btur pr\u014Dd\u016Bcere.");
       } else {
-        nuntius.moneo(VerbumSimplex.Interiectio.class.getSimpleName().replace("o", "\u014Dnis"),
+        nuntius.moneo(Utilitas.primamCapitaneamScribo(Categoria.INTERIECTIO.scriptio.replaceLast("\u0113s", "\u012B")),
                       "pr\u014Dducti\u014D f\u014Drmae n\u016Bllae pr\u014Dcessit.");
       }
     }

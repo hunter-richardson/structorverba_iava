@@ -102,7 +102,7 @@ public final class InventorActis extends Inventor <Actus> {
       nuntius.garrio("Quaestion\u012B adi\u0113c\u012B conditi\u014Dnem novam:",
                      Modus.pittacium, illud);
     } else {
-      nuntius.moneo(Actus.class.getSimpleName().replace("us", "\u014D"),
+      nuntius.moneo(Utilitas.primamCapitaneamScribo(Categoria.ACTUS.scriptio.replaceLast('\u012B', '\u014D')),
                     "inqu\u012Bs\u012Bti\u014D inop\u012Bn\u0101ta \u016Bsa'st:", illud);
     }
   }

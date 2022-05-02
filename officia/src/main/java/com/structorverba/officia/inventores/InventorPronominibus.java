@@ -93,7 +93,8 @@ public final class InventorPronominibus extends Inventor <Pronomen> {
       nuntius.garrio("Quaesti\u014Dn\u012B adi\u0113c\u012B conditi\u014Dnem novam:",
                      Casus.pittacium, illud);
     } else {
-      nuntius.moneo(Pronomen.class.getSimpleName().replace("en", "\u012B"),
+      nuntius.moneo(
+        Utilitas.primamCapitaneamScribo(Categoria.PRONOMEN.scriptio.replaceLast('a', '\u012B')),
                     "inqu\u012Bs\u012Bti\u014D inop\u012Bn\u016Bta \u016Bsa'st:", illud);
     }
   }

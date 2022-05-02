@@ -73,13 +73,13 @@ public final class LectorPraepositionibus extends Omnum {
           return new VerbumSimplex.Praepositio(lemma);
         } else {
           nuntius.moneo("N\u012Bl adven\u012B verb\u014D", verbum);
-          nuntius.garrio(VerbumSimplex.Praepositio.class.getSimpleName().replace("o","\u014Dn\u012B"),
+          nuntius.garrio(Utilitas.Utilitas.primamCapitaneamScribo(Categoria.PRAEPOSITIO.scriptio.replaceLast('s', '\u012B')),
                            "ass\u016Bm\u0113tur");
           return VerbumSimplex.Praepositio.assume.get();
         }
       } catch (IOException e) {
         nuntius.terreo(e);
-        nuntius.garrio(VerbumSimplex.Praepositio.class.getSimpleName().replace("o", "\u014Dn\u012B"),
+        nuntius.garrio(Utilitas.Utilitas.primamCapitaneamScribo(Categoria.PRAEPOSITIO.scriptio.replaceLast('s', '\u012B')),
                          "ass\u016Bm\u0113tur");
         return VerbumSimplex.Praepositio.assume.get();
       }
@@ -102,7 +102,7 @@ public final class LectorPraepositionibus extends Omnum {
                         .findFirst().orElse(Casus.DERECTUS);
     if (Casus.DERECTUS.equals(casus)) {
       nuntius.moneo("N\u012Bl adven\u012B verb\u014D", verbum);
-      nuntius.garrio(VerbumSimplex.Praepositio.class.getSimpleName().replace("o", "\u014Dn\u012B"),
+      nuntius.garrio(Utilitas.Utilitas.primamCapitaneamScribo(Categoria.PRAEPOSITIO.scriptio.replaceLast('s', '\u012B')),
                        "ass\u016Bm\u0113tur");
       return VerbumSimplex.Praepositio.assume.get();
     } else {

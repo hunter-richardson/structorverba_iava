@@ -1,6 +1,7 @@
 package officia.src.main.java.com.structorverba.officia.conditores.multiplicia;
 
 import officia.src.main.java.com.structorverba.officia.conditores.Conditor;
+import officia.src.main.java.com.structorverba.officia.miscella.Utilitas;
 import officia.src.main.java.com.structorverba.officia.nuntii.Nuntius;
 import officia.src.main.java.com.structorverba.officia.verba.Verbum;
 import officia.src.main.java.com.structorverba.officia.verba.multiplicia.*;
@@ -48,17 +49,17 @@ public class ConditorAdverbiis extends ConditorMultiplicibus <Adverbium> {
         && StringUtils.isNoneBlank(lemma, scriptio)) {
       final Adverbium hoc = new Adverbium(gradus, lemma, scriptio);
       if (Objects.isNull(hoc)) {
-        nuntius.moneo(Adverbium.class.getSimpleName().replace("um", "\u012B"),
+        nuntius.moneo(Utilitas.primamCapitaneamScribo(Categoria.ADVERBIUM.scriptio.replaceLast('a', '\u012B')),
                       StringUtils.firstNonBlank(lemma, scriptio),
                       "pr\u014Dducti\u014D f\u014Drmae n\u016Bllae pr\u014Dcessit.");
         return null;
       } else {
-        nuntius.certioro(Adverbium.class.getSimpleName(), scriptio,
-                         "f\u012Bn\u012Btur pr\u014Dd\u016Bcere.");
+        nuntius.certioro(Utilitas.primamCapitaneamScribo(Categoria.ADVERBIUM.scriptio.replaceLast("a", "um")),
+                         scriptio, "f\u012Bn\u012Btur pr\u014Dd\u016Bcere.");
         return hoc;
       }
     } else {
-      nuntius.moneo(Adverbium.class.getSimpleName().replace("um", "\u012B"),
+      nuntius.moneo(Utilitas.primamCapitaneamScribo(Categoria.ADVERBIUM.scriptio.replaceLast('a', '\u012B')),
                     StringUtils.firstNonBlank(lemma, scriptio),
                     "pr\u014Dducti\u014D f\u014Drmae n\u016Bllae pr\u014Dcessit.");
       return null;
@@ -85,7 +86,7 @@ public class ConditorAdverbiis extends ConditorMultiplicibus <Adverbium> {
     } else if(pittaciumLemmae.equals(nomen)) {
       lemma = descriptor.trim();
     } else {
-        nuntius.moneo(Adiectivum.class.getSimpleName().replace("um", "\u014D"),
+        nuntius.moneo(Utilitas.primamCapitaneamScribo(Categoria.ADVERBIUM.scriptio.replaceLast('a', '\u012B')),
                       "attrib\u016Bta inop\u012Bn\u0101ta est \u016Bsa:",
                       nomen, descriptor);
         return;

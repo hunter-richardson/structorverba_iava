@@ -66,7 +66,7 @@ public class InventorAdverbiis extends Inventor <Adverbium> {
       nuntius.garrio("Quaesti\u014Dn\u012B adi\u0113c\u012B conditi\u014Dnem novam:",
                      Gradus.pittacium, illud);
     } else {
-      nuntius.moneo(Adverbium.class.getSimpleName().replace("um", "\u014D"),
+      nuntius.moneo(Utilitas.primamCapitaneamScribo(Categoria.ADVERBIUM.scriptio.replaceLast('a', '\u014D')),
                     "inqu\u012Bs\u012Bti\u014D adiect\u012Bv\u014D inop\u012Bn\u0101ta \u016Bsa'st:",
                     illud);
     }
