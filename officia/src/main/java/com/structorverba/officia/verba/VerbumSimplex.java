@@ -1,19 +1,19 @@
-package officia.src.main.java.com.structorverba.officia.verba;
+package com.structorverba.officia.verba;
 
-import officia.src.main.java.com.structorverba.officia.conditores.ConditorSimplicibus;
-import officia.src.main.java.com.structorverba.officia.inventores.Inventor;
-import officia.src.main.java.com.structorverba.officia.lectores.*;
-import officia.src.main.java.com.structorverba.officia.miscella.Utilitas;
-import officia.src.main.java.com.structorverba.officia.nuntii.Nuntius;
-import officia.src.main.java.com.structorverba.officia.tenores.TenorSimplicibus;
-import officia.src.main.java.com.structorverba.officia.enumerationes.Categoria;
+import androidx.annotation.NonNull;
+import com.structorverba.officia.conditores.ConditorSimplicibus;
+import com.structorverba.officia.inventores.Inventor;
+import com.structorverba.officia.lectores.*;
+import com.structorverba.officia.miscella.Utilitas;
+import com.structorverba.officia.nuntii.Nuntius;
+import com.structorverba.officia.tenores.TenorSimplicibus;
+import com.structorverba.officia.enumerationes.Categoria;
 
 import com.github.chaosfirebolt.converter.RomanInteger;
 import com.github.chaosfirebolt.converter.constants.IntegerType;
 import com.github.chaosfirebolt.converter.util.Validator;
 
 import org.apache.commons.lang3.StringUtils;
-import org.jetbrains.annotations.*;
 
 import java.util.function.Supplier;
 
@@ -31,7 +31,7 @@ public abstract class VerbumSimplex <Hoc extends Verbum <Hoc>> extends Verbum <H
    * @param ctgr val\u014Drem {@link #categoria} indicat.
    * @param lm val\u014Drem {@link #lemma} indicat.
    */
-  protected VerbumSimplex(@NotNull final Categoria ctgr, @NotNull final String lm) {
+  protected VerbumSimplex(@NonNull final Categoria ctgr, @NonNull final String lm) {
     super(ctgr, lm);
   }
 
@@ -39,7 +39,7 @@ public abstract class VerbumSimplex <Hoc extends Verbum <Hoc>> extends Verbum <H
    * @return Repraesent\u0101ti\u014Dnem scr\u012Bpta re\u012B classis {@link VerbumSimplex}. <br>
    * S\u014Dlum val\u014Drem {@link Verbum#lemma} potest referre cum f\u014Drm\u0101 \u016Bn\u0101.
    */
-  @Override @NotNull
+  @Override @NonNull
   public String toString() {
     return lemma;
   }
@@ -56,9 +56,9 @@ public abstract class VerbumSimplex <Hoc extends Verbum <Hoc>> extends Verbum <H
    */
   public static final class Coniunctivum extends VerbumSimplex <Coniunctivum> {
     @Getter(lazy = true)
-    @NotNull private final Nuntius.NuntiusConiunctivorum nuntius = Nuntius.NuntiusConiunctivorum.fac.get();
+    @NonNull private final Nuntius.NuntiusConiunctivorum nuntius = Nuntius.NuntiusConiunctivorum.fac.get();
 
-    public Coniunctivum(@NotNull final String verbum) {
+    public Coniunctivum(@NonNull final String verbum) {
       super(Categoria.CONIUNCTIVUM, verbum);
       nuntius.plusGarrio("Scr\u012Bbor ut", verbum);
     }
@@ -76,9 +76,9 @@ public abstract class VerbumSimplex <Hoc extends Verbum <Hoc>> extends Verbum <H
    */
   public static final class Interiectio extends VerbumSimplex <Interiectio> {
     @Getter(lazy = true)
-    @NotNull private final Nuntius.NuntiusInteriectionum nuntius = Nuntius.NuntiusInteriectionum.fac.get();
+    @NonNull private final Nuntius.NuntiusInteriectionum nuntius = Nuntius.NuntiusInteriectionum.fac.get();
 
-    public Interiectio(@NotNull final String verbum) {
+    public Interiectio(@NonNull final String verbum) {
       super(Categoria.INTERIECTIO, verbum);
       nuntius.plusGarrio("Scr\u012Bbor ut", verbum);
     }
@@ -95,12 +95,12 @@ public abstract class VerbumSimplex <Hoc extends Verbum <Hoc>> extends Verbum <H
     /**
      * Valor hic supplet rem classis {@link Praepositio} quam praepositi\u014Dnem n\u016Blla repraesentat.
      */
-    @NotNull public static final Supplier <Praepositio> assume =
+    @NonNull public static final Supplier <Praepositio> assume =
       () -> new Praepositio(StringUtils.EMPTY);
     @Getter(lazy = true)
-    @NotNull private final Nuntius.NuntiusPraepositionum nuntius = Nuntius.NuntiusPraepositionum.fac.get();
+    @NonNull private final Nuntius.NuntiusPraepositionum nuntius = Nuntius.NuntiusPraepositionum.fac.get();
 
-    public Praepositio(@NotNull final String verbum) {
+    public Praepositio(@NonNull final String verbum) {
       super(Categoria.PRAEPOSITIO, verbum);
       nuntius.plusGarrio("Scr\u012Bbor ut", verbum);
     }
@@ -125,7 +125,7 @@ public abstract class VerbumSimplex <Hoc extends Verbum <Hoc>> extends Verbum <H
     @Range(from = 1, to = 3999)
     public final short numerus;
     @Getter(lazy = true)
-    @NotNull private final Nuntius.NuntiusNumerorum nuntius = Nuntius.NuntiusNumerorum.fac.get();
+    @NonNull private final Nuntius.NuntiusNumerorum nuntius = Nuntius.NuntiusNumerorum.fac.get();
 
     public Numerus(final short numerus) throws IllegalArgumentException {
       super(Categoria.NUMERUS, String.valueOf(numerus));
@@ -133,7 +133,7 @@ public abstract class VerbumSimplex <Hoc extends Verbum <Hoc>> extends Verbum <H
       nuntius.plusGarrio("Scr\u012Bbor ut", toString());
     }
 
-    @NotNull private RomanInteger ostendam() throws IllegalArgumentException {
+    @NonNull private RomanInteger ostendam() throws IllegalArgumentException {
       return RomanInteger.parse(String.valueOf(numerus), IntegerType.ARABIC);
     }
 
@@ -144,7 +144,7 @@ public abstract class VerbumSimplex <Hoc extends Verbum <Hoc>> extends Verbum <H
      * err\u014Drem continu\u0101tur.
      * @see <a href="https://github.com/Chaosfirebolt/RomanNumeralConverter/blob/master/src/main/java/com/github/chaosfirebolt/converter/RomanInteger.java">RomanInteger</a>
      */
-    @Override @NotNull
+    @Override @NonNull
     public String toString() throws IllegalArgumentException {
       try {
         return Utilitas.capitaneasScribo(ostendam().toString());
@@ -161,7 +161,7 @@ public abstract class VerbumSimplex <Hoc extends Verbum <Hoc>> extends Verbum <H
      * err\u014Drem continu\u0101tur.
      * @see <a href="https://github.com/Chaosfirebolt/RomanNumeralConverter/blob/master/src/main/java/com/github/chaosfirebolt/converter/RomanInteger.java">RomanInteger</a>
      */
-    @Nullable public Numerus addo(final @NotNull Numerus alius) {
+    @Nullable public Numerus addo(final @NonNull Numerus alius) {
       try {
         return new Numerus(ostendam().add(alius.ostendam()).getArabic().shortValue());
       } catch (IllegalArgumentException e) {
@@ -177,7 +177,7 @@ public abstract class VerbumSimplex <Hoc extends Verbum <Hoc>> extends Verbum <H
      * err\u014Drem continu\u0101tur.
      * @see <a href="https://github.com/Chaosfirebolt/RomanNumeralConverter/blob/master/src/main/java/com/github/chaosfirebolt/converter/RomanInteger.java">RomanInteger</a>
      */
-    @Nullable public Numerus subtraho(final @NotNull Numerus alius) {
+    @Nullable public Numerus subtraho(final @NonNull Numerus alius) {
       try {
         return new Numerus(ostendam().subtract(alius.ostendam()).getArabic().shortValue());
       } catch (IllegalArgumentException e) {
@@ -193,7 +193,7 @@ public abstract class VerbumSimplex <Hoc extends Verbum <Hoc>> extends Verbum <H
      * err\u014Drem continu\u0101tur.
      * @see <a href="https://github.com/Chaosfirebolt/RomanNumeralConverter/blob/master/src/main/java/com/github/chaosfirebolt/converter/RomanInteger.java">RomanInteger</a>
      */
-    @Nullable public Numerus multiplico(final @NotNull Numerus alius) {
+    @Nullable public Numerus multiplico(final @NonNull Numerus alius) {
       try {
         return new Numerus(ostendam().multiply(alius.ostendam()).getArabic().shortValue());
       } catch (IllegalArgumentException e) {
@@ -209,7 +209,7 @@ public abstract class VerbumSimplex <Hoc extends Verbum <Hoc>> extends Verbum <H
      * err\u014Drem continu\u0101tur.
      * @see <a href="https://github.com/Chaosfirebolt/RomanNumeralConverter/blob/master/src/main/java/com/github/chaosfirebolt/converter/RomanInteger.java">RomanInteger</a>
      */
-    @Nullable public Numerus divido(final @NotNull Numerus alius) {
+    @Nullable public Numerus divido(final @NonNull Numerus alius) {
       try {
         return new Numerus(ostendam().divide(alius.ostendam()).getArabic().shortValue());
       } catch (IllegalArgumentException e) {
@@ -225,7 +225,7 @@ public abstract class VerbumSimplex <Hoc extends Verbum <Hoc>> extends Verbum <H
      * err\u014Drem continu\u0101tur.
      * @see <a href="https://github.com/Chaosfirebolt/RomanNumeralConverter/blob/master/src/main/java/com/github/chaosfirebolt/converter/RomanInteger.java">RomanInteger</a>
      */
-    @Nullable public Numerus maneo(final @NotNull Numerus alius) {
+    @Nullable public Numerus maneo(final @NonNull Numerus alius) {
       try {
         return new Numerus(ostendam().remainder(alius.ostendam()).getArabic().shortValue());
       } catch (IllegalArgumentException e) {

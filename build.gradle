@@ -2,20 +2,17 @@ buildscript {
     repositories {
         mavenLocal()
         maven {
-            url "$gradleUrl/"
+            url "$gradleUrl"
         }
         maven {
-            url "$googleUrl/"
+            url "$googleUrl"
         }
         maven {
-            url "$mavenUrl/"
+            url "$mavenUrl"
         }
-
-        google()
-        jcenter()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:7.1.3'
+        classpath 'com.android.tools.build:gradle:4.0.2'
     }
 }
 
@@ -30,6 +27,10 @@ allprojects {
     repositories {
         mavenLocal()
         google()
-        jcenter()
     }
+}
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_1_8
+    targetCompatibility = JavaVersion.VERSION_1_8
 }

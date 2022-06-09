@@ -1,10 +1,10 @@
-package officia.src.test.java.com.structorverba.officia;
+package com.structorverba.officia;
 
-import officia.src.main.java.com.structorverba.officia.miscella.*;
-import officia.src.main.java.com.structorverba.officia.verba.VerbumSimplex;
+import androidx.annotation.NonNull;
+import com.structorverba.officia.miscella.*;
+import com.structorverba.officia.verba.VerbumSimplex;
 
 import org.apache.commons.lang3.Range;
-import org.jetbrains.annotations.NotNull;
 import org.junit.jupiter.api.MethodOrderer;
 import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Test;
@@ -17,14 +17,15 @@ import lombok.Getter;
  */
 @SuppressWarnings({ "SpellCheckingInspection", "FieldCanBeLocal" })
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
-final class Numeri extends Omnum {
-  @NotNull @Getter(lazy = true)
+final class Numeri extends Omne {
+  @NonNull
+  @Getter(lazy = true)
   private final StructorVerba structor = StructorVerba.fac.get();
 
   private final short NUMERUM_MAXIMUM = 3998;
   private final short XLII_NUMERUM    = 42;
 
-  private final @NotNull String XLII_SCRIPTIO = "XLII";
+  private final @NonNull String XLII_SCRIPTIO = "XLII";
 
   /**
    * Modus hic conversi\u014Dnem \u0101 numer\u014D re\u012B classis {@link VerbumSimplex.Numerus} tentat. <br>
@@ -63,7 +64,7 @@ final class Numeri extends Omnum {
    */
   @Test @Order(4)
   public void additionis( ) {
-    @NotNull final Range <Short> range = Range.between((short) 3, (short) 17);
+    @NonNull final Range <Short> range = Range.between((short) 3, (short) 17);
     System.out.println(new Tentamen.TentamenMathēmaticum(range, '+')
                          .exsequar(structor.numerus(range.getMaximum())));
   }
@@ -74,7 +75,7 @@ final class Numeri extends Omnum {
    */
   @Test @Order(5)
   public void subtractionis( ) {
-    @NotNull final Range <Short> range = Range.between((short) 7, (short) 12);
+    @NonNull final Range <Short> range = Range.between((short) 7, (short) 12);
     System.out.println(new Tentamen.TentamenMathēmaticum(range, '-')
                          .exsequar(structor.numerus(range.getMaximum())));
   }
@@ -85,7 +86,7 @@ final class Numeri extends Omnum {
    */
   @Test @Order(6)
   public void multiplicationis( ) {
-    @NotNull final Range <Short> range = Range.between((short) 2, (short) 3);
+    @NonNull final Range <Short> range = Range.between((short) 2, (short) 3);
     System.out.println(new Tentamen.TentamenMathēmaticum(range, '*')
                          .exsequar(structor.numerus(range.getMaximum())));
   }
@@ -96,7 +97,7 @@ final class Numeri extends Omnum {
    */
   @Test @Order(7)
   public void divisionis( ) {
-    @NotNull final Range <Short> range = Range.between((short) 6, (short) 18);
+    @NonNull final Range <Short> range = Range.between((short) 6, (short) 18);
     System.out.println(new Tentamen.TentamenMathēmaticum(range, '/')
                          .exsequar(structor.numerus(range.getMaximum())));
   }
@@ -107,7 +108,7 @@ final class Numeri extends Omnum {
    */
   @Test @Order(8)
   public void mansionis( ) {
-    @NotNull final Range <Short> range = Range.between((short) 9, (short) 12);
+    @NonNull final Range <Short> range = Range.between((short) 9, (short) 12);
     System.out.println(new Tentamen.TentamenMathēmaticum(range, '%')
                          .exsequar(structor.numerus(range.getMaximum())));
   }

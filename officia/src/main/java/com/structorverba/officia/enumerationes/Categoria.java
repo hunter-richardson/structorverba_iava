@@ -1,7 +1,7 @@
-package officia.src.main.java.com.structorverba.officia.enumerationes;
+package com.structorverba.officia.enumerationes;
 
-import officia.src.main.java.com.structorverba.officia.verba.*;
-import officia.src.main.java.com.structorverba.officia.verba.multiplicia.*;
+import com.structorverba.officia.verba.*;
+import com.structorverba.officia.verba.multiplicia.*;
 
 import org.apache.commons.lang3.StringUtils;
 import org.jetbrains.annotations.NotNull;

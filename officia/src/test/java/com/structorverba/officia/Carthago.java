@@ -1,10 +1,10 @@
-package officia.src.test.java.com.structorverba.officia;
+package com.structorverba.officia;
 
-import officia.src.main.java.com.structorverba.officia.miscella.*;
-import officia.src.main.java.com.structorverba.officia.verba.multiplicia.Actus;
-import officia.src.main.java.com.structorverba.officia.enumerationes.*;
+import com.structorverba.officia.miscella.*;
+import com.structorverba.officia.verba.multiplicia.Actus;
+import com.structorverba.officia.enumerationes.*;
 
-import org.jetbrains.annotations.NotNull;
+import androidx.annotation.NonNull;
 import org.junit.Test;
 
 import lombok.Getter;
@@ -14,11 +14,11 @@ import lombok.Getter;
  * M\u0101rc\u014D Porci\u014D Cat\u014Dn\u012B Mai\u014Dr\u012B laudat cum vehement\u012B eius "c\u0113terum c\u0113nse\u014D Carth\u0101ginem esse d\u0113lendam".
  * */
 @SuppressWarnings({ "SpellCheckingInspection", "FieldCanBeLocal" })
-public class Carthago extends Omnum {
-  @NotNull @Getter(lazy = true)
+public class Carthago extends Omne {
+  @NonNull @Getter(lazy = true)
   private final StructorVerba structor = StructorVerba.fac.get();
 
-  @NotNull private final String producta = "C\u0113terum c\u0113nse\u014D Carth\u0101ginem esse d\u0113lendam";
+  @NonNull private final String producta = "C\u0113terum c\u0113nse\u014D Carth\u0101ginem esse d\u0113lendam";
 
   /**
    * Modus hic tent\u0101men agit. <br> Verba "c\u0113terum c\u0113nse\u014D Carth\u0101ginem esse d\u0113lendam" pr\u014Dd\u016Bcat

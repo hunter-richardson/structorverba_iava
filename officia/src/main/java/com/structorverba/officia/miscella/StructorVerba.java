@@ -1,17 +1,16 @@
-package officia.src.main.java.com.structorverba.officia.miscella;
+package com.structorverba.officia.miscella;
 
 import com.github.chaosfirebolt.converter.RomanInteger;
 import com.github.chaosfirebolt.converter.constants.*;
 
-import officia.src.main.java.com.structorverba.officia.lectores.*;
-import officia.src.main.java.com.structorverba.officia.verba.*;
-import officia.src.main.java.com.structorverba.officia.verba.multiplicia.VerbumMultiplex;
-import officia.src.main.java.com.structorverba.officia.enumerationes.Categoria;
+import com.structorverba.officia.lectores.*;
+import com.structorverba.officia.verba.*;
+import com.structorverba.officia.verba.multiplicia.VerbumMultiplex;
+import com.structorverba.officia.enumerationes.Categoria;
 
 import org.apache.commons.lang3.*;
-import org.jetbrains.annotations.*;
+import androidx.annotation.*;
 
-import java.util.Objects;
 import java.util.function.Supplier;
 
 import javax.ejb.Singleton;
@@ -32,39 +31,39 @@ public final class StructorVerba extends Omne {
    * Valor hic viam re\u012B classis huiuc facit.
    * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
    */
-  @NotNull public static final Supplier <StructorVerba> fac =
+  @NonNull public static final Supplier <StructorVerba> fac =
     () -> ObjectUtils.firstNonNull(instantia, instantia = new StructorVerba());
 
-  @NotNull private final Range <Short> TRACTUS_NUMERORUM = Range.between(Integer.valueOf(1).shortValue(),
+  @NonNull private final Range <Short> TRACTUS_NUMERORUM = Range.between(Integer.valueOf(1).shortValue(),
                                                                          Integer.valueOf(4000).shortValue());
 
   @Getter(value = AccessLevel.PUBLIC, lazy = true)
-  @NotNull private final LectorMultiplicibus.LectorAdiectivis adiectiva =
+  @NonNull private final LectorMultiplicibus.LectorAdiectivis adiectiva =
     LectorMultiplicibus.LectorAdiectivis.fac.get();
 
   @Getter(value = AccessLevel.PUBLIC, lazy = true)
-  @NotNull private final LectorMultiplicibus.LectorAdverbiis adverbia = LectorMultiplicibus.LectorAdverbiis.fac.get();
+  @NonNull private final LectorMultiplicibus.LectorAdverbiis adverbia = LectorMultiplicibus.LectorAdverbiis.fac.get();
 
   @Getter(value = AccessLevel.PUBLIC, lazy = true)
-  @NotNull private final LectorMultiplicibus.LectorPronominibus pronomina =
+  @NonNull private final LectorMultiplicibus.LectorPronominibus pronomina =
     LectorMultiplicibus.LectorPronominibus.fac.get();
 
   @Getter(value = AccessLevel.PUBLIC, lazy = true)
-  @NotNull private final LectorMultiplicibus.LectorActis acti = LectorMultiplicibus.LectorActis.fac.get();
+  @NonNull private final LectorMultiplicibus.LectorActis acti = LectorMultiplicibus.LectorActis.fac.get();
 
   @Getter(value = AccessLevel.PUBLIC, lazy = true)
-  @NotNull private final LectorMultiplicibus.LectorNominibus nomina = LectorMultiplicibus.LectorNominibus.fac.get();
+  @NonNull private final LectorMultiplicibus.LectorNominibus nomina = LectorMultiplicibus.LectorNominibus.fac.get();
 
   @Getter(value = AccessLevel.PUBLIC, lazy = true)
-  @NotNull private final LectorSimplicibus.LectorConiunctivis coniunctiva =
+  @NonNull private final LectorSimplicibus.LectorConiunctivis coniunctiva =
     LectorSimplicibus.LectorConiunctivis.fac.get();
 
   @Getter(value = AccessLevel.PUBLIC, lazy = true)
-  @NotNull private final LectorSimplicibus.LectorInteriectionibus interiectiones =
+  @NonNull private final LectorSimplicibus.LectorInteriectionibus interiectiones =
     LectorSimplicibus.LectorInteriectionibus.fac.get();
 
   @Getter(value = AccessLevel.PUBLIC, lazy = true)
-  @NotNull private final LectorPraepositionibus praepositiones = LectorPraepositionibus.fac.get();
+  @NonNull private final LectorPraepositionibus praepositiones = LectorPraepositionibus.fac.get();
 
   /**
    * Modus hic rem apta classis {@link Lector} val\u014Dr\u012B {@code categoria} s\u0113ligit val\u014Drem {@code lemma} immittit.
@@ -77,8 +76,8 @@ public final class StructorVerba extends Omne {
    * @see #adveniam(String, Categoria, Enum[])
    */
   @SuppressWarnings("unchecked")
-  @Nullable public <Hoc extends Verbum <Hoc>> Hoc adveniam(@NotNull final String lemma,
-                                                           @NotNull final Categoria categoria) {
+  @Nullable public <Hoc extends Verbum <Hoc>> Hoc adveniam(@NonNull final String lemma,
+                                                           @NonNull final Categoria categoria) {
     return switch (categoria) {
       case CONIUNCTIVUM -> (Hoc) coniunctiva.adveniam(lemma);
       case INTERIECTIO -> (Hoc) interiectiones.adveniam(lemma);
@@ -99,9 +98,9 @@ public final class StructorVerba extends Omne {
    * @see Categoria
    */
   @SuppressWarnings("ConstantConditions")
-  @Nullable public <Hoc extends Verbum <Hoc>> Hoc adveniam(@NotNull final String lemma,
-                                                           @NotNull final Categoria categoria,
-                                                           @NotNull final Enum <@NotNull ?>... illa) {
+  @Nullable public <Hoc extends Verbum <Hoc>> Hoc adveniam(@NonNull final String lemma,
+                                                           @NonNull final Categoria categoria,
+                                                           @NonNull final Enum <@NonNull ?>... illa) {
     try {
       return (Hoc) (switch (categoria) {
         case ADIECTIVUM -> adiectiva;
@@ -120,9 +119,8 @@ public final class StructorVerba extends Omne {
    * @param series seri\u0113s r\u0113rum classis {@link Verbum}
    * @return Rem classis {@link Verba} \u016Bsa val\u014Drem {@code series}
    */
-  @NotNull public Verba strue(@Nullable final Verbum <?>... series) {
-    return Objects.isNull(series) ? new Verba()
-                                  : new Verba().addo(series);
+  @NonNull public Verba strue(@Nullable final Verbum <?>... series) {
+    return new Verba().addo(series);
   }
 
   /**
@@ -138,7 +136,7 @@ public final class StructorVerba extends Omne {
    * @param scriptio repraesent\u0101ti\u014Dnem scr\u012Bpta numer\u012B math\u0113matic\u012B
    * @return Rem classis {@link VerbumSimplex.Numerus}
    */
-  public @Nullable VerbumSimplex.Numerus numerus(final @NotNull String scriptio) {
+  public @Nullable VerbumSimplex.Numerus numerus(final @NonNull String scriptio) {
     if (Patterns.ROMAN_PATTERN.matcher(scriptio).matches()) {
       final short numerus = RomanInteger.parse(scriptio, IntegerType.ROMAN).getArabic().shortValue();
       if (TRACTUS_NUMERORUM.contains(numerus)) {

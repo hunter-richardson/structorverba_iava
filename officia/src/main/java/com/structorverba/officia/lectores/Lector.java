@@ -1,17 +1,18 @@
-package officia.src.main.java.com.structorverba.officia.lectores;
+package com.structorverba.officia.lectores;
 
-import officia.src.main.java.com.structorverba.officia.miscella.*;
-import officia.src.main.java.com.structorverba.officia.nuntii.Nuntius;
-import officia.src.main.java.com.structorverba.officia.tenores.Tenor;
-import officia.src.main.java.com.structorverba.officia.verba.Verbum;
-import net.structorverba.bibliotheca.enumerationes.Categoria;
+import com.structorverba.officia.miscella.*;
+import com.structorverba.officia.nuntii.Nuntius;
+import com.structorverba.officia.tenores.Tenor;
+import com.structorverba.officia.verba.Verbum;
+import com.structorverba.officia.enumerationes.Categoria;
 
-import org.jetbrains.annotations.NotNull;
+import androidx.annotation.NonNull;
 import org.xml.sax.*;
 
 import javax.xml.parsers.*;
 import java.io.*;
 import java.nio.file.Path;
+import java.util.function.Supplier;
 
 /**
  * Classis {@link Lector} colliget data \u0101 sc\u0101p\u014D XML intr\u0101
@@ -24,12 +25,12 @@ public abstract class Lector <Hoc extends Verbum <Hoc>> extends Omne {
   /**
    * Valor hic est v\u0101s classis {@link Nuntius} class\u012B hui.
    */
-  @NotNull protected final Nuntius nuntius;
+  @NonNull protected final Nuntius nuntius;
 
   /**
    * Valor hic est v\u0101s classis {@link Tenor} class\u012B hui.
    */
-  @NotNull protected final Tenor <Hoc> tenor;
+  @NonNull protected final Tenor <Hoc> tenor;
 
   /**
    * Valor hic ext\u0113nsi\u014Dnem class\u012B {@link Verbum} d\u0113signat scr\u012Bbere.
@@ -37,7 +38,7 @@ public abstract class Lector <Hoc extends Verbum <Hoc>> extends Omne {
    * intr\u0101 qu\u014D sc\u0101pum eius c\u014Dnserv\u0101tum est.
    * @see Categoria
    */
-  @NotNull protected final Categoria categoria;
+  @NonNull protected final Categoria categoria;
 
   /**
    * Officium hoc c\u014Dnstr\u016Bct\u014Drem re\u012B classis huius perpetrat.
@@ -45,14 +46,14 @@ public abstract class Lector <Hoc extends Verbum <Hoc>> extends Omne {
    * @param nts  val\u014Drem {@link #nuntius} supplet.
    * @param tnr  val\u014Drem {@link #tenor} supplet.
    */
-  protected Lector(@NotNull final Categoria ctgr, @NotNull final Supplier <@NotNull ? extends Nuntius> nts,
-                   @NotNull final Supplier <@NotNull ? extends Tenor <Hoc>> tnr) {
+  protected Lector(@NonNull final Categoria ctgr, @NonNull final Supplier <@NonNull ? extends Nuntius> nts,
+                   @NonNull final Supplier<? extends Tenor <Hoc>> tnr) {
     nuntius = nts.get();
     tenor = tnr.get();
     categoria = ctgr;
   }
 
-  private boolean quaero(@NotNull final String verbum) {
+  private boolean quaero(@NonNull final String verbum) {
     final Path nomen = Path.of(categoria.scriptio, String.format("%s.xml", Utilitas.minusculasScribo(verbum)));
     nuntius.noto("Iam exspect\u014D sc\u0101pum auxili\u0101rem", nomen);
     final File scapus = Path.of(Utilitas.auxilior(nomen.toString())).toFile();
@@ -64,7 +65,7 @@ public abstract class Lector <Hoc extends Verbum <Hoc>> extends Omne {
    * scr\u012Bnium <a href="{@docRoot}/../src/main/resources">auxili\u0101r\u0113s</a>.
    * @param verbum lemma verb\u014D quod r\u0113s haec c\u014Dn\u0101bitur legere.
    */
-  protected final void legam(@NotNull final String verbum) {
+  protected final void legam(@NonNull final String verbum) {
     final Path nomen = Path.of(categoria.scriptio, String.format("%s.xml", Utilitas.minusculasScribo(verbum)));
     if (quaero(verbum)) {
       try {

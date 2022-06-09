@@ -1,13 +1,13 @@
-package officia.src.main.java.com.structorverba.officia.lectores;
+package com.structorverba.officia.lectores;
 
-import officia.src.main.java.com.structorverba.officia.inventores.*;
-import officia.src.main.java.com.structorverba.officia.nuntii.Nuntius;
-import officia.src.main.java.com.structorverba.officia.tenores.TenorMultiplicibus;
-import officia.src.main.java.com.structorverba.officia.verba.multiplicia.*;
-import officia.src.main.java.com.structorverba.officia.enumerationes.*;
+import androidx.annotation.*;
+import com.structorverba.officia.inventores.*;
+import com.structorverba.officia.nuntii.Nuntius;
+import com.structorverba.officia.tenores.TenorMultiplicibus;
+import com.structorverba.officia.verba.multiplicia.*;
+import com.structorverba.officia.enumerationes.*;
 
 import org.apache.commons.lang3.ObjectUtils;
-import org.jetbrains.annotations.*;
 
 import java.util.function.Supplier;
 
@@ -22,7 +22,7 @@ import javax.ejb.*;
  */
 @SuppressWarnings("SpellCheckingInspection")
 public abstract class LectorMultiplicibus <Hoc extends VerbumMultiplex <Hoc>> extends Lector <Hoc> {
-  @NotNull private final Inventor <Hoc> inventor;
+  @NonNull private final Inventor <Hoc> inventor;
 
   /**
    * Officium hoc c\u014Dnstr\u016Bct\u014Drem re\u012B classis huius perpetrat.
@@ -31,10 +31,10 @@ public abstract class LectorMultiplicibus <Hoc extends VerbumMultiplex <Hoc>> ex
    * @param tenor     val\u014Drem {@link Lector#tenor} supplet.
    * @param inventor  valor hic colit \u0113vent\u012Bs mult\u012Bs possibilibus quibus {@link Lector#tenor} referat.
    */
-  protected LectorMultiplicibus(@NotNull final Categoria categoria,
-                                @NotNull final Supplier <@NotNull ? extends Nuntius> nuntius,
-                                @NotNull final Supplier <@NotNull ? extends TenorMultiplicibus <Hoc>> tenor,
-                                @NotNull final Supplier <@NotNull ? extends Inventor <Hoc>> inventor) {
+  protected LectorMultiplicibus(@NonNull final Categoria categoria,
+                                @NonNull final Supplier <? extends Nuntius> nuntius,
+                                @NonNull final Supplier <? extends TenorMultiplicibus <Hoc>> tenor,
+                                @NonNull final Supplier <? extends Inventor <Hoc>> inventor) {
     super(categoria, nuntius, tenor);
     this.inventor = inventor.get();
   }
@@ -47,7 +47,7 @@ public abstract class LectorMultiplicibus <Hoc extends VerbumMultiplex <Hoc>> ex
    * @return Rem classis {@link Hoc} quam val\u014Drem {@code verbum} quadrat. <br>
    * Modus hic val\u014Drem {@code null} refert s\u012B n\u012Bl quadrat val\u014Drem {@code verbum}.
    */
-  @Nullable public final Hoc adveniam(@NotNull final String lemma, @NotNull final Enum <@NotNull ?>... illa) {
+  @Nullable public final Hoc adveniam(@NonNull final String lemma, @NonNull final Enum <?>... illa) {
     legam(lemma);
     Hoc hoc = tenor.refero(inventor.allego(illa).inquiram());
     inventor.restituo();
@@ -75,7 +75,7 @@ public abstract class LectorMultiplicibus <Hoc extends VerbumMultiplex <Hoc>> ex
      * Valor hic viam re\u012B classis huiuc facit.
      * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
      */
-    @NotNull public static final Supplier <LectorAdverbiis> fac =
+    @NonNull public static final Supplier <LectorAdverbiis> fac =
       () -> ObjectUtils.firstNonNull(instantia, instantia = new LectorAdverbiis());
 
     private LectorAdverbiis() {
@@ -101,7 +101,7 @@ public abstract class LectorMultiplicibus <Hoc extends VerbumMultiplex <Hoc>> ex
      * Valor hic viam rei classis huiuc facit.
      * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
      */
-    @NotNull public static final Supplier <LectorNominibus> fac =
+    @NonNull public static final Supplier <LectorNominibus> fac =
       () -> ObjectUtils.firstNonNull(instantia, instantia = new LectorNominibus());
 
     private LectorNominibus() {
@@ -127,7 +127,7 @@ public abstract class LectorMultiplicibus <Hoc extends VerbumMultiplex <Hoc>> ex
      * Valor hic viam re\u012B classis huiuc facit.
      * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
      */
-    @NotNull public static final Supplier <LectorAdiectivis> fac =
+    @NonNull public static final Supplier <LectorAdiectivis> fac =
       ( ) -> ObjectUtils.firstNonNull(instantia, instantia = new LectorAdiectivis());
 
     private LectorAdiectivis() {
@@ -200,7 +200,7 @@ public abstract class LectorMultiplicibus <Hoc extends VerbumMultiplex <Hoc>> ex
      * Valor hic viam rei classis huiuc facit.
      * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
      */
-    public static final @NotNull Supplier <LectorPronominibus> fac =
+    public static final @NonNull Supplier <LectorPronominibus> fac =
       () -> ObjectUtils.firstNonNull(instantia, instantia = new LectorPronominibus());
 
     private LectorPronominibus() {
@@ -256,7 +256,7 @@ public abstract class LectorMultiplicibus <Hoc extends VerbumMultiplex <Hoc>> ex
      * Valor hic viam rei classis huiuc facit.
      * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
      */
-    public static final @NotNull Supplier <LectorActis> fac =
+    public static final @NonNull Supplier <LectorActis> fac =
       () -> ObjectUtils.firstNonNull(instantia, instantia = new LectorActis());
 
     private LectorActis() {
@@ -274,7 +274,7 @@ public abstract class LectorMultiplicibus <Hoc extends VerbumMultiplex <Hoc>> ex
      * @see <a href="{@docRoot}/../src/main/resources">auxili\u0101r\u0113s</a>/\u0101cta/esse.xml
      */
     @SuppressWarnings("unused")
-    public @Nullable Actus adveniam(@NotNull final Enum <?>... illa) {
+    public @Nullable Actus adveniam(@NonNull final Enum <?>... illa) {
       return adveniam("esse", illa);
     }
   }

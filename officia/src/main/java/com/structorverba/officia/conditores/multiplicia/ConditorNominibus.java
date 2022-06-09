@@ -1,14 +1,14 @@
-package officia.src.main.java.com.structorverba.officia.conditores.multiplicia;
+package com.structorverba.officia.conditores.multiplicia;
 
-import officia.src.main.java.com.structorverba.officia.conditores.Conditor;
-import officia.src.main.java.com.structorverba.officia.miscella.Utilitas;
-import officia.src.main.java.com.structorverba.officia.nuntii.Nuntius;
-import officia.src.main.java.com.structorverba.officia.verba.Verbum;
-import officia.src.main.java.com.structorverba.officia.verba.multiplicia.*;
-import officia.src.main.java.com.structorverba.officia.enumerationes.*;
+import com.structorverba.officia.conditores.Conditor;
+import com.structorverba.officia.miscella.Utilitas;
+import com.structorverba.officia.nuntii.Nuntius;
+import com.structorverba.officia.verba.Verbum;
+import com.structorverba.officia.verba.multiplicia.*;
+import com.structorverba.officia.enumerationes.*;
 
 import org.apache.commons.lang3.*;
-import org.jetbrains.annotations.*;
+import androidx.annotation.*;
 
 import java.util.Objects;
 import java.util.function.Supplier;
@@ -30,14 +30,14 @@ public final class ConditorNominibus extends ConditorMultiplicibus <Nomen> {
    * Valor hic viam re\u012B classis huiuc facit.
    * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
    */
-  @NotNull public static final Supplier <ConditorNominibus> fac =
+  @NonNull public static final Supplier <ConditorNominibus> fac =
     () -> ObjectUtils.firstNonNull(instantia, instantia = new ConditorNominibus());
 
-  @NotNull private Specialitas specialitas = Specialitas.NULLUM;
-  @NotNull private Genus       genus       = Genus.NULLUM;
-  @NotNull private Numeralis   numeralis   = Numeralis.NULLUS;
-  @NotNull private Casus       casus       = Casus.DERECTUS;
-  @NotNull private Tempus      tempus      = Tempus.INTEMPORALE;
+  @NonNull private Specialitas specialitas = Specialitas.NULLUM;
+  @NonNull private Genus       genus       = Genus.NULLUM;
+  @NonNull private Numeralis   numeralis   = Numeralis.NULLUS;
+  @NonNull private Casus       casus       = Casus.DERECTUS;
+  @NonNull private Tempus      tempus      = Tempus.INTEMPORALE;
 
   private ConditorNominibus() {
     super(Nuntius.NuntiusConditoriNominibus.fac);
@@ -52,10 +52,10 @@ public final class ConditorNominibus extends ConditorMultiplicibus <Nomen> {
   @SuppressWarnings("ConstantConditions")
   @Override @Nullable
   public Nomen condam() {
-    if (ObjectUtils.allNotNull(specialitas, genus, casus, numeralis)
-        && StringUtils.isNoneBlank(lemma, scriptio)) {
+    if (ObjectUtils.allNonNull(specialitas, genus, casus, numeralis) &&
+        StringUtils.isNoneBlank(lemma, scriptio)) {
       final Nomen hoc = new Nomen(specialitas, genus, casus, numeralis, tempus, lemma, scriptio);
-      if (Objects.isNull(hoc)) {
+      if (hoc == null) {
         nuntius.moneo(Utilitas.primamCapitaneamScribo(Categoria.NOMEN.scriptio.replaceLast("a", "is")),
                       StringUtils.firstNonBlank(lemma, scriptio),
                       "pr\u014Dducti\u014D f\u014Drmae n\u016Bllae pr\u014Dcessit.");
@@ -82,7 +82,7 @@ public final class ConditorNominibus extends ConditorMultiplicibus <Nomen> {
    * @see Tempus#definiam(String)
    * @see Verbum#lemma
    */
-  @Override public void allego(@NotNull final String nomen, @NotNull final String descriptor) {
+  @Override public void allego(@NonNull final String nomen, @NonNull final String descriptor) {
     if (Specialitas.pittacium.equals(nomen)) {
       specialitas = Specialitas.definiam(descriptor);
     } else if (Genus.pittacium.equals(nomen)) {

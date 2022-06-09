@@ -1,13 +1,13 @@
-package officia.src.main.java.com.structorverba.officia.verba.multiplicia;
+package com.structorverba.officia.verba.multiplicia;
 
-import officia.src.main.java.com.structorverba.officia.conditores.multiplicia.ConditorMultiplicibus;
-import officia.src.main.java.com.structorverba.officia.inventores.Inventor;
-import officia.src.main.java.com.structorverba.officia.lectores.LectorMultiplicibus;
-import officia.src.main.java.com.structorverba.officia.tenores.TenorMultiplicibus;
-import officia.src.main.java.com.structorverba.officia.verba.*;
-import officia.src.main.java.com.structorverba.officia.enumerationes.*;
+import com.structorverba.officia.conditores.multiplicia.ConditorMultiplicibus;
+import com.structorverba.officia.inventores.Inventor;
+import com.structorverba.officia.lectores.LectorMultiplicibus;
+import com.structorverba.officia.tenores.TenorMultiplicibus;
+import com.structorverba.officia.verba.*;
+import com.structorverba.officia.enumerationes.*;
 
-import org.jetbrains.annotations.NotNull;
+import androidx.annotation.NonNull;
 
 /**
  * Classis {@link VerbumMultiplex} repraesentat verbum aliquem quod f\u014Drm\u0101s mult\u0101s habet. <br>
@@ -25,13 +25,13 @@ public abstract class VerbumMultiplex <Hoc extends Verbum <Hoc>> extends Verbum 
    * Valor hic f\u014Drmam f\u012Bnem verb\u012B repraesentat. <br>
    * Condici\u014Dnibus pl\u016Brim\u012Bs est ut \u016Bs\u016Bfructu\u0101ri\u012B pet\u012Bvit.
    */
-  public final @NotNull String scriptio;
+  public final @NonNull String scriptio;
 
   /**
    * Valor hic <a href="https://en.wiktionary.org/wiki/Category:Latin_clitics">encliticum</a> subi\u016Bnctum d\u0113signat.
    * @see Encliticum
    */
-  protected @NotNull Encliticum encliticum;
+  protected @NonNull Encliticum encliticum;
 
   /**
    * Officium hoc c\u014Dnstr\u016Bct\u014Drem re\u012B classis huius perpetrat.
@@ -39,8 +39,8 @@ public abstract class VerbumMultiplex <Hoc extends Verbum <Hoc>> extends Verbum 
    * @param lm  val\u014Drem {@link Verbum#lemma} indicat.
    * @param scrpt val\u014Drem {@link #scriptio} indicat.
    */
-  protected VerbumMultiplex(@NotNull final Categoria ctgr,
-                            @NotNull final String lm, @NotNull final String scrpt) {
+  protected VerbumMultiplex(@NonNull final Categoria ctgr,
+                            @NonNull final String lm, @NonNull final String scrpt) {
     super(ctgr, lm);
     scriptio = scrpt;
     encliticum = Encliticum.NOLENS;
@@ -53,7 +53,7 @@ public abstract class VerbumMultiplex <Hoc extends Verbum <Hoc>> extends Verbum 
    * @see Encliticum
    */
   @SuppressWarnings("UnusedReturnValue")
-  @NotNull public VerbumMultiplex <Hoc> allego(@NotNull final Encliticum cltm) {
+  @NonNull public VerbumMultiplex <Hoc> allego(@NonNull final Encliticum cltm) {
     encliticum = Stream.of(Encliticum.values())
                        .anyMatch(e -> lemma.endsWith(e.scriptio)) ? Encliticum.NOLENS
                                                                   : cltm;
@@ -63,7 +63,7 @@ public abstract class VerbumMultiplex <Hoc extends Verbum <Hoc>> extends Verbum 
   /**
    * @return {@link #encliticum}
    */
-  @NotNull public Encliticum encliticum() {
+  @NonNull public Encliticum encliticum() {
     return encliticum;
   }
 
@@ -71,7 +71,7 @@ public abstract class VerbumMultiplex <Hoc extends Verbum <Hoc>> extends Verbum 
    * @return Repraesent\u0101ti\u014Dnem scr\u012Bpta re\u012B huius. <br>
    * Val\u014Drem {@link #encliticum} val\u014Dr\u012B {@link #scriptio} addit.
    */
-  @Override @NotNull
+  @Override @NonNull
   public String toString() {
     return Encliticum.NOLENS.equals(encliticum) ? scriptio
                                                 : String.format("%s%s", scriptio, encliticum.scriptio);

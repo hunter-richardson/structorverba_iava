@@ -1,12 +1,12 @@
-package officia.src.main.java.com.structorverba.officia.lectores;
+package com.structorverba.officia.lectores;
 
-import officia.src.main.java.com.structorverba.officia.miscella.*;
-import officia.src.main.java.com.structorverba.officia.nuntii.Nuntius;
-import officia.src.main.java.com.structorverba.officia.verba.VerbumSimplex;
-import officia.src.main.java.com.structorverba.officia.enumerationes.*;
+import com.structorverba.officia.miscella.*;
+import com.structorverba.officia.nuntii.Nuntius;
+import com.structorverba.officia.verba.VerbumSimplex;
+import com.structorverba.officia.enumerationes.*;
 
 import org.apache.commons.lang3.*;
-import org.jetbrains.annotations.*;
+import androidx.annotation.NonNull;
 
 import java.io.*;
 import java.nio.file.Path;
@@ -42,14 +42,14 @@ public final class LectorPraepositionibus extends Omnum {
    * Valor hic viam re\u012B classis huiuc facit.
    * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
    */
-  @NotNull public static final Supplier <LectorPraepositionibus> fac =
+  @NonNull public static final Supplier <LectorPraepositionibus> fac =
     () -> ObjectUtils.firstNonNull(instantia, instantia = new LectorPraepositionibus());
 
   @Getter(lazy = true)
-  @NotNull private final Nuntius.NuntiusLectoriPraepositionibus nuntius =
+  @NonNull private final Nuntius.NuntiusLectoriPraepositionibus nuntius =
     Nuntius.NuntiusLectoriPraepositionibus.fac.get();
 
-  @NotNull private final BiPredicate <@NotNull String, @NotNull Casus> quaero = (verbum, casus) -> {
+  @NonNull private final BiPredicate <String, Casus> quaero = (verbum, casus) -> {
     final String nomen = Path.of(Categoria.PRAEPOSITIO.scriptio, String.format("%s.data", casus.scriptio)).toString();
     try (final BufferedReader pervidetio = new BufferedReader(new FileReader(nomen))) {
       nuntius.noto("Iam leg\u014D sc\u0101pum auxili\u0101rem", nomen);
@@ -60,7 +60,7 @@ public final class LectorPraepositionibus extends Omnum {
     }
   };
 
-  @NotNull private final BiFunction <@NotNull String, @NotNull Casus, VerbumSimplex.Praepositio> advenio =
+  @NonNull private final BiFunction <String, Casus, VerbumSimplex.Praepositio> advenio =
     (verbum, casus) -> {
       final String nomen = Path.of(Categoria.PRAEPOSITIO.scriptio, String.format("%s.data", casus.scriptio)).toString();
       try (final BufferedReader pervidetio = new BufferedReader(new FileReader(Utilitas.auxilior(nomen)))) {
@@ -96,13 +96,13 @@ public final class LectorPraepositionibus extends Omnum {
    * @return Rem classis {@link VerbumSimplex.Praepositio} quam valorem {@code verbum} quadrat. <br> Modus hic valorem
    *   {@link VerbumSimplex.Praepositio#assume} supplet s\u012B nihil valorem {@code verbum} quadrat.
    */
-  @NotNull public VerbumSimplex.Praepositio adveniam(@NotNull final String verbum) {
+  @NonNull public VerbumSimplex.Praepositio adveniam(@NonNull final String verbum) {
     Casus casus = Stream.of(Casus.ABLATIVUS, Casus.ACCUSATIVUS, Casus.GENITIVUS, Casus.VOCATIVUS)
                         .filter(css -> quaero.test(verbum, css))
                         .findFirst().orElse(Casus.DERECTUS);
     if (Casus.DERECTUS.equals(casus)) {
       nuntius.moneo("N\u012Bl adven\u012B verb\u014D", verbum);
-      nuntius.garrio(Utilitas.Utilitas.primamCapitaneamScribo(Categoria.PRAEPOSITIO.scriptio.replaceLast('s', '\u012B')),
+      nuntius.garrio(Utilitas.primamCapitaneamScribo(Categoria.PRAEPOSITIO.scriptio.replaceLast("\u0113s", '\u012B')),
                        "ass\u016Bm\u0113tur");
       return VerbumSimplex.Praepositio.assume.get();
     } else {

@@ -1,13 +1,13 @@
-package officia.src.main.java.com.structorverba.officia.verba.multiplicia;
+package com.structorverba.officia.verba.multiplicia;
 
-import officia.src.main.java.com.structorverba.officia.conditores.multiplicia.ConditorNominibus;
-import officia.src.main.java.com.structorverba.officia.inventores.InventorNominibus;
-import officia.src.main.java.com.structorverba.officia.lectores.LectorMultiplicibus;
-import officia.src.main.java.com.structorverba.officia.nuntii.Nuntius;
-import officia.src.main.java.com.structorverba.officia.tenores.TenorMultiplicibus;
-import officia.src.main.java.com.structorverba.officia.enumerationes.*;
+import com.structorverba.officia.conditores.multiplicia.ConditorNominibus;
+import com.structorverba.officia.inventores.InventorNominibus;
+import com.structorverba.officia.lectores.LectorMultiplicibus;
+import com.structorverba.officia.nuntii.Nuntius;
+import com.structorverba.officia.tenores.TenorMultiplicibus;
+import com.structorverba.officia.enumerationes.*;
 
-import org.jetbrains.annotations.NotNull;
+import androidx.annotation.NonNull;
 
 import lombok.Getter;
 
@@ -27,15 +27,15 @@ public final class Nomen extends Nominalis <Nomen> {
    * Valor hic tempus re\u012B huius d\u0113signat.
    * @see Modus
    */
-  @NotNull public final Tempus tempus;
+  @NonNull public final Tempus tempus;
 
   @Getter(lazy = true)
-  @NotNull private final Nuntius.NuntiusNominum nuntius = Nuntius.NuntiusNominum.fac.get();
+  @NonNull private final Nuntius.NuntiusNominum nuntius = Nuntius.NuntiusNominum.fac.get();
 
-  public Nomen(@NotNull final Specialitas specialitas, @NotNull final Genus genus,
-                @NotNull final Casus casus, @NotNull final Numeralis numeralis,
-                @NotNull final Tempus tmps, @NotNull final String lemma,
-                @NotNull final String scriptio) {
+  public Nomen(@NonNull final Specialitas specialitas, @NonNull final Genus genus,
+                @NonNull final Casus casus, @NonNull final Numeralis numeralis,
+                @NonNull final Tempus tmps, @NonNull final String lemma,
+                @NonNull final String scriptio) {
     super(Categoria.NOMEN, specialitas, genus, casus, numeralis, lemma, scriptio);
     tempus = tmps;
     nuntius.plusGarrio("Scr\u016Bbor ut", scriptio);

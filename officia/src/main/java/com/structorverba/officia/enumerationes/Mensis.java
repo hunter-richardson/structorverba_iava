@@ -1,6 +1,6 @@
-package officia.src.main.java.com.structorverba.officia.enumerationes;
+package com.structorverba.officia.enumerationes;
 
-import org.jetbrains.annotations.NotNull;
+import androidx.annotation.NonNull;
 
 import java.time.Month;
 
@@ -73,13 +73,13 @@ public enum Mensis {
   /**
    * Valor hic repraesent\u0101ti\u014Dnem scr\u012Bpta re\u012B huius d\u0113signat.
    */
-  public final @NotNull String scriptio;
+  public final @NonNull String scriptio;
 
   /**
    * Officium hoc c\u014Dnstr\u016Bct\u014Drem re\u012B classis huius perpetrat.
    * @param scrpt val\u014Drem {@link #scriptio} indicat.
    */
-  Mensis(@NotNull final String scrpt) {
+  Mensis(@NonNull final String scrpt) {
     scriptio = scrpt;
   }
 
@@ -112,10 +112,10 @@ public enum Mensis {
    *   <li>Valor <a href="https://docs.oracle.com/javase/8/docs/api/java/time/Month.html#DECEMBER">DECEMBER</a>
    *   val\u014Drem {@link #DECEMBRIS} c\u014Dnsociat.</li>
    * </ul>
-   * @param \u0113numer\u0101ti\u014D valor tentandus.
+   * @param enumeratio valor tentandus.
    * @return Rem pet\u012Btam \u0113numer\u0101ti\u014Dnis {@link Mensis}
    */
-  @NotNull public static Mensis indicam(@NotNull final Month enumeratio) {
+  @NonNull public static Mensis indicam(@NonNull final Month enumeratio) {
     return switch (enumeratio) {
       case JANUARY -> IANUARII;
       case FEBRUARY -> FEBRUARII;
@@ -135,7 +135,7 @@ public enum Mensis {
   /**
    * @return {@link #scriptio}
    */
-  @NotNull public String toString( ) {
+  @NonNull public String toString( ) {
     return scriptio;
   }
 }

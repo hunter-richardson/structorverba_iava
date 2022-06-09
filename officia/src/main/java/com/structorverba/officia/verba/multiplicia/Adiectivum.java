@@ -1,13 +1,13 @@
-package officia.src.main.java.com.structorverba.officia.verba.multiplicia;
+package com.structorverba.officia.verba.multiplicia;
 
-import officia.src.main.java.com.structorverba.officia.conditores.multiplicia.ConditorAdiectivis;
-import officia.src.main.java.com.structorverba.officia.inventores.InventorAdiectivis;
-import officia.src.main.java.com.structorverba.officia.lectores.LectorMultiplicibus;
-import officia.src.main.java.com.structorverba.officia.nuntii.Nuntius;
-import officia.src.main.java.com.structorverba.officia.tenores.TenorMultiplicibus;
-import officia.src.main.java.com.structorverba.officia.enumerationes.*;
+import com.structorverba.officia.conditores.multiplicia.ConditorAdiectivis;
+import com.structorverba.officia.inventores.InventorAdiectivis;
+import com.structorverba.officia.lectores.LectorMultiplicibus;
+import com.structorverba.officia.nuntii.Nuntius;
+import com.structorverba.officia.tenores.TenorMultiplicibus;
+import com.structorverba.officia.enumerationes.*;
 
-import org.jetbrains.annotations.NotNull;
+import androidx.annotation.NonNull;
 
 import lombok.Getter;
 
@@ -28,14 +28,14 @@ public final class Adiectivum extends Nominalis <Adiectivum> {
    * Valor hic potentiam re\u012B huius d\u0113signat.
    * @see Gradus
    */
-  @NotNull public final Gradus gradus;
+  @NonNull public final Gradus gradus;
   @Getter(lazy = true)
-  @NotNull private final Nuntius.NuntiusAdiectivorum nuntius = Nuntius.NuntiusAdiectivorum.fac.get();
+  @NonNull private final Nuntius.NuntiusAdiectivorum nuntius = Nuntius.NuntiusAdiectivorum.fac.get();
 
-  public Adiectivum(@NotNull final Specialitas specialitas, @NotNull final Genus genus,
-                     @NotNull final Casus casus, @NotNull final Numeralis numeralis,
-                     @NotNull final Gradus gradus, @NotNull final String lemma,
-                     @NotNull final String scriptio) {
+  public Adiectivum(@NonNull final Specialitas specialitas, @NonNull final Genus genus,
+                     @NonNull final Casus casus, @NonNull final Numeralis numeralis,
+                     @NonNull final Gradus gradus, @NonNull final String lemma,
+                     @NonNull final String scriptio) {
     super(Categoria.ADIECTIVUM, specialitas, genus, casus, numeralis, lemma, scriptio);
     this.gradus = gradus;
     nuntius.plusGarrio("Scr\u016Bbor ut", scriptio);

@@ -1,20 +1,18 @@
-package officia.src.test.java.com.structorverba.officia;
+package com.structorverba.officia;
 
-import officia.src.main.java.com.structorverba.officia.miscella.Omnum;
+import androidx.annotation.*;
+import com.structorverba.officia.miscella.Omne;
 
 import org.apache.commons.collections4.comparators.NullComparator;
 import org.apache.commons.lang3.*;
-import org.jetbrains.annotations.*;
 import org.junit.jupiter.api.Assertions;
-
-import java.util.*;
 
 /**
  * Classis {@link Tentamiculum} tent\u0101men singul\u0101rem repraesentat exsequendum dat\u0101 simplic\u012B.
  * @param <Hoc> Classis dat\u012B tentand\u012B
  */
 @SuppressWarnings({ "SpellCheckingInspection", "UnusedReturnValue", "unused" })
-abstract class Tentamiculum<Hoc> extends Omnum {
+abstract class Tentamiculum<Hoc> extends Omne {
   /**
    * Valor hic repraesentat datum exspectandum
    */
@@ -39,13 +37,13 @@ abstract class Tentamiculum<Hoc> extends Omnum {
    * @param expct  valor {@link #expectatio} indicat.
    * @param prdctm valor {@link #productum} indicat.
    */
-  protected Tentamiculum(@NotNull final Hoc expct, @Nullable final Hoc prdctm) {
+  protected Tentamiculum(@NonNull final Hoc expct, @Nullable final Hoc prdctm) {
     productum = prdctm;
     expectatio = expct;
   }
 
   private boolean existitne( ) {
-    return Objects.nonNull(productum);
+    return productum != null;
   }
 
   /**
@@ -53,7 +51,7 @@ abstract class Tentamiculum<Hoc> extends Omnum {
    * @param error Error scr\u012Bbendus s\u012B hoc abor\u012Btur
    * @return Valor hic
    */
-  public Tentamiculum<Hoc> existat(@NotNull final String error) {
+  public Tentamiculum<Hoc> existat(@NonNull final String error) {
     Assertions.assertTrue(existitne(), error);
     return this;
   }
@@ -82,7 +80,7 @@ abstract class Tentamiculum<Hoc> extends Omnum {
      * @param expct  valor {@link #expectatio} indicat.
      * @param prdctm valor {@link #productum} indicat.
      */
-    public TentamiculumNumeralis(@NotNull Illud expct, @Nullable Illud prdctm) {
+    public TentamiculumNumeralis(@NonNull Illud expct, @Nullable Illud prdctm) {
       super(expct, prdctm);
     }
 
@@ -121,7 +119,7 @@ abstract class Tentamiculum<Hoc> extends Omnum {
      * @param error Error scr\u012Bbendus s\u012B hoc abor\u012Btur
      * @return Valor hic
      */
-    public TentamiculumNumeralis <Illud> aequentur(@NotNull final String error) {
+    public TentamiculumNumeralis <Illud> aequentur(@NonNull final String error) {
       Assertions.assertTrue(aequanturne(), error);
       return this;
     }
@@ -133,7 +131,7 @@ abstract class Tentamiculum<Hoc> extends Omnum {
      * @param error Error scr\u012Bbendus s\u012B hoc abor\u012Btur
      * @return Valor hic
      */
-    public TentamiculumNumeralis <Illud> differant(@NotNull final String error) {
+    public TentamiculumNumeralis <Illud> differant(@NonNull final String error) {
       Assertions.assertTrue(differuntne(), error);
       return this;
     }
@@ -145,7 +143,7 @@ abstract class Tentamiculum<Hoc> extends Omnum {
      * @param error Error scr\u012Bbendus s\u012B hoc abor\u012Btur
      * @return Valor hic
      */
-    public TentamiculumNumeralis <Illud> subsit(@NotNull final String error) {
+    public TentamiculumNumeralis <Illud> subsit(@NonNull final String error) {
       Assertions.assertTrue(subestne(), error);
       return this;
     }
@@ -157,7 +155,7 @@ abstract class Tentamiculum<Hoc> extends Omnum {
      * @param error Error scr\u012Bbendus s\u012B hoc abor\u012Btur
      * @return Valor hic
      */
-    public TentamiculumNumeralis <Illud> superet(@NotNull final String error) {
+    public TentamiculumNumeralis <Illud> superet(@NonNull final String error) {
       Assertions.assertTrue(superatne(), error);
       return this;
     }
@@ -169,7 +167,7 @@ abstract class Tentamiculum<Hoc> extends Omnum {
      * @param error Error scr\u012Bbendus s\u012B hoc abor\u012Btur
      * @return Valor hic
      */
-    public TentamiculumNumeralis <Illud> autSubsitAutAequentur(@NotNull final String error) {
+    public TentamiculumNumeralis <Illud> autSubsitAutAequentur(@NonNull final String error) {
       Assertions.assertTrue(autSubestneAutAequanturne(), error);
       return this;
     }
@@ -181,7 +179,7 @@ abstract class Tentamiculum<Hoc> extends Omnum {
      * @param error Error scr\u012Bbendus s\u012B hoc abor\u012Btur
      * @return Valor hic
      */
-    public TentamiculumNumeralis <Illud> autSuperetAutAequentur(@NotNull final String error) {
+    public TentamiculumNumeralis <Illud> autSuperetAutAequentur(@NonNull final String error) {
       Assertions.assertTrue(autSuperatneAutAequanturne(), error);
       return this;
     }
@@ -205,7 +203,7 @@ abstract class Tentamiculum<Hoc> extends Omnum {
      * @param expct  valor {@link #expectatio} indicat.
      * @param prdctm valor {@link #productum} indicat.
      */
-    public TentamiculumVersiculi(@NotNull String expct, @Nullable String prdctm) {
+    public TentamiculumVersiculi(@NonNull String expct, @Nullable String prdctm) {
       super(expct, prdctm);
     }
 
@@ -214,7 +212,7 @@ abstract class Tentamiculum<Hoc> extends Omnum {
      *
      * @param prdctm valor {@link #productum} indicat.
      */
-    public TentamiculumVersiculi(@NotNull Object prdctm) {
+    public TentamiculumVersiculi(@NonNull Object prdctm) {
       super(prdctm.toString());
     }
 
@@ -224,20 +222,20 @@ abstract class Tentamiculum<Hoc> extends Omnum {
      * @param expct  valor {@link #expectatio} indicat.
      * @param prdctm valor {@link #productum} indicat.
      */
-    public TentamiculumVersiculi(@NotNull String expct, @NotNull Object prdctm) {
+    public TentamiculumVersiculi(@NonNull String expct, @NonNull Object prdctm) {
       super(expct, prdctm.toString());
     }
 
     private boolean aequanturne( ) {
-      return ObjectUtils.allNotNull(expectatio, productum) && expectatio.equals(productum);
+      return ObjectUtils.allNonNull(expectatio, productum) && expectatio.equals(productum);
     }
 
     private boolean differuntne( ) {
-      return ObjectUtils.allNotNull(expectatio, productum) && !expectatio.equals(productum);
+      return ObjectUtils.allNonNull(expectatio, productum) && !expectatio.equals(productum);
     }
 
     private boolean continetne( ) {
-      return ObjectUtils.allNotNull(expectatio, productum) && productum.contains(expectatio);
+      return ObjectUtils.allNonNull(expectatio, productum) && productum.contains(expectatio);
     }
 
     private boolean vacatne( ) {
@@ -255,7 +253,7 @@ abstract class Tentamiculum<Hoc> extends Omnum {
      * @param error Error scr\u012Bbendus s\u012B hoc abor\u012Btur
      * @return Valor hic
      */
-    public TentamiculumVersiculi aequentur(@NotNull final String error) {
+    public TentamiculumVersiculi aequentur(@NonNull final String error) {
       Assertions.assertTrue(aequanturne(), error);
       return this;
     }
@@ -267,7 +265,7 @@ abstract class Tentamiculum<Hoc> extends Omnum {
      * @param error Error scr\u012Bbendus s\u012B hoc abor\u012Btur
      * @return Valor hic
      */
-    public TentamiculumVersiculi differant(@NotNull final String error) {
+    public TentamiculumVersiculi differant(@NonNull final String error) {
       Assertions.assertTrue(differuntne(), error);
       return this;
     }
@@ -279,7 +277,7 @@ abstract class Tentamiculum<Hoc> extends Omnum {
      * @param error Error scr\u012Bbendus s\u012B hoc abor\u012Btur
      * @return Valor hic
      */
-    public TentamiculumVersiculi contineat(@NotNull final String error) {
+    public TentamiculumVersiculi contineat(@NonNull final String error) {
       Assertions.assertTrue(continetne(), error);
       return this;
     }
@@ -291,7 +289,7 @@ abstract class Tentamiculum<Hoc> extends Omnum {
      * @param error Error scr\u012Bbendus s\u012B hoc abor\u012Btur
      * @return Valor hic
      */
-    public TentamiculumVersiculi vacet(@NotNull final String error) {
+    public TentamiculumVersiculi vacet(@NonNull final String error) {
       Assertions.assertTrue(vacatne(), error);
       return this;
     }
@@ -303,7 +301,7 @@ abstract class Tentamiculum<Hoc> extends Omnum {
      * @param error Error scr\u012Bbendus s\u012B hoc abor\u012Btur
      * @return Valor hic
      */
-    public TentamiculumVersiculi aliamContineat(@NotNull final String error) {
+    public TentamiculumVersiculi aliamContineat(@NonNull final String error) {
       Assertions.assertTrue(aliamContinetne(), error);
       return this;
     }

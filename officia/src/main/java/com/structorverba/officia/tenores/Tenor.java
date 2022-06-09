@@ -1,13 +1,14 @@
-package officia.src.main.java.com.structorverba.officia.tenores;
+package com.structorverba.officia.tenores;
 
-import officia.src.main.java.com.structorverba.officia.conditores.Conditor;
-import officia.src.main.java.com.structorverba.officia.lectores.*;
-import officia.src.main.java.com.structorverba.officia.miscella.Omnum;
-import officia.src.main.java.com.structorverba.officia.nuntii.Nuntius;
-import officia.src.main.java.com.structorverba.officia.verba.Verbum;
+import com.structorverba.officia.conditores.Conditor;
+import com.structorverba.officia.lectores.*;
+import com.structorverba.officia.miscella.Omnum;
+import com.structorverba.officia.nuntii.Nuntius;
+import com.structorverba.officia.verba.Verbum;
 
 import org.apache.commons.lang3.StringUtils;
-import org.jetbrains.annotations.*;
+import androidx.annotation.NonNull;
+
 import org.xml.sax.helpers.DefaultHandler;
 
 import java.util.*;
@@ -25,11 +26,11 @@ public abstract class Tenor <Hoc extends Verbum <Hoc>> extends DefaultHandler {
   /**
    * Valor hic est v\u0101s classis {@link Nuntius} class\u012B extent\u012B huius.
    */
-  @NotNull protected final Nuntius nuntius;
+  @NonNull protected final Nuntius nuntius;
   /**
    * Valor hic seriem r\u0113rum classis {@link Hoc} praebend\u0101rum ad r\u0113 classis {@link LectorMultiplicibus} tenet.
    */
-  protected final @NotNull List <@NotNull Hoc> series = new ArrayList <>();
+  protected final @NonNull List <@NonNull Hoc> series = new ArrayList <>();
   /**
    * Valor hic rem classis {@link Hoc} tenet c\u014Dnstruenumque \u0101 re\u012B aptae classis {@link Conditor} praebendumque ad r\u0113
    * classis {@link Lector}.
@@ -40,7 +41,7 @@ public abstract class Tenor <Hoc extends Verbum <Hoc>> extends DefaultHandler {
    * Officium hoc c\u014Dnstr\u016Bct\u014Drem re\u012B classis huius perpetrat.
    * @param nts val\u014Drem {@link #nuntius} supplet.
    */
-  protected Tenor(@NotNull final Supplier <@NotNull ? extends Nuntius> nts) {
+  protected Tenor(@NonNull final Supplier <@NonNull ? extends Nuntius> nts) {
     Thread.currentThread().setUncaughtExceptionHandler(Nuntius.NuntiusErroribus.fac.get());
     nuntius = nts.get();
   }
@@ -57,7 +58,7 @@ public abstract class Tenor <Hoc extends Verbum <Hoc>> extends DefaultHandler {
    * @param quaestio quaesti\u014D tentanda
    * @return val\u014Drem {@link #series} val\u014Drem {@code quaestio} perc\u014Dl\u0101ta
    */
-  public final @Nullable Hoc refero(Predicate <@NotNull Hoc> quaestio) {
+  public final @Nullable Hoc refero(Predicate <@NonNull Hoc> quaestio) {
     return series.stream().filter(quaestio)
                  .findFirst().orElse(null);
   }
@@ -86,7 +87,7 @@ public abstract class Tenor <Hoc extends Verbum <Hoc>> extends DefaultHandler {
    * @param scripti\u014D f\u014Drmam scr\u012Bptam indendus
    * @see #characters(char[], int, int)
    */
-  protected abstract void scribo(@NotNull final String scriptio);
+  protected abstract void scribo(@NonNull final String scriptio);
 
   /**
    * Modus hic rem aptam classis {@link Conditor} imperat c\u014Dnstr\u016Bcti\u014Dnem re\u012Bpr\u014Dductae classis {@link Hoc} f\u012Bn\u012Bre.

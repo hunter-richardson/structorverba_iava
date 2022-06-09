@@ -1,9 +1,9 @@
-package officia.src.main.java.com.structorverba.officia.enumerationes;
+package com.structorverba.officia.enumerationes;
 
-import officia.src.main.java.com.structorverba.officia.verba.multiplicia.VerbumMultiplex;
+import com.structorverba.officia.verba.multiplicia.VerbumMultiplex;
 
 import org.apache.commons.lang3.StringUtils;
-import org.jetbrains.annotations.NotNull;
+import androidx.annotation.NonNull;
 
 /**
  * \u0112numer\u0101ti\u014D haec <a href="https://en.wiktionary.org/wiki/Category:Latin_clitics">encliticum</a>
@@ -42,7 +42,7 @@ public enum Encliticum {
    * Officium hoc c\u014Dnstr\u016Bct\u014Drem re\u012B classis huius perpetrat.
    * @param scrpt val\u014Drem {@link #scriptio} indicat.
    */
-  Encliticum(@NotNull final String scrpt) {
+  Encliticum(@NonNull final String scrpt) {
     scriptio = scrpt;
   }
 }

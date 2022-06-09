@@ -1,16 +1,16 @@
-package officia.src.main.java.com.structorverba.officia.nuntii;
+package com.structorverba.officia.nuntii;
 
-import officia.src.main.java.com.structorverba.officia.conditores.ConditorSimplicibus;
-import officia.src.main.java.com.structorverba.officia.conditores.multiplicia.*;
-import officia.src.main.java.com.structorverba.officia.inventores.*;
-import officia.src.main.java.com.structorverba.officia.lectores.*;
-import officia.src.main.java.com.structorverba.officia.miscella.Omnum;
-import officia.src.main.java.com.structorverba.officia.tenores.*;
-import officia.src.main.java.com.structorverba.officia.verba.VerbumSimplex;
-import officia.src.main.java.com.structorverba.officia.verba.multiplicia.*;
+import androidx.annotation.*;
+import com.structorverba.officia.conditores.ConditorSimplicibus;
+import com.structorverba.officia.conditores.multiplicia.*;
+import com.structorverba.officia.inventores.*;
+import com.structorverba.officia.lectores.*;
+import com.structorverba.officia.miscella.Omne;
+import com.structorverba.officia.tenores.*;
+import com.structorverba.officia.verba.VerbumSimplex;
+import com.structorverba.officia.verba.multiplicia.*;
 
 import org.apache.commons.lang3.*;
-import org.jetbrains.annotations.*;
 
 import java.util.Objects;
 import java.util.function.Supplier;
@@ -22,23 +22,23 @@ import javax.ejb.Singleton;
 /**
  * Classis {@link Nuntius} n\u016Bntia d\u0113 exsec\u016Bti\u014Dne programm\u0101tis Str\u016BctorVerba in sc\u0101p\u012Bs LOG scr\u012Bbit. <br>
  * Class\u0113s pl\u016Brimae aliae in programm\u0101tem Str\u016BctorVerba rem classis huius habet.
- * @see Omnum
+ * @see Omne
  */
 @SuppressWarnings("SpellCheckingInspection")
 public abstract class Nuntius {
-  @NotNull private final GradusNuntii gradusMinimus;
-  @NotNull private final Logger       praeco;
+  @NonNull private final GradusNuntii gradusMinimus;
+  @NonNull private final Logger       praeco;
 
   /**
    * Officium hoc c\u014Dnstr\u016Bct\u014Drem re\u012B classis huius perpetrat.
    * @param parametri Valor hic parametr\u014Ds \u016Bs\u014Ds pr\u014D gener\u0101ti\u014Dne organum internum re\u012B huius continet.
    */
-  protected Nuntius(@NotNull final ParametriNuntii parametri) {
+  protected Nuntius(@NonNull final ParametriNuntii parametri) {
     gradusMinimus = parametri.gradusMinimus;
     praeco = parametri.praeconium.get();
   }
 
-  private void nuntio(@NotNull final GradusNuntii gradus, @Nullable final Object... nuntia) {
+  private void nuntio(@NonNull final GradusNuntii gradus, @Nullable final Object... nuntia) {
     if (GradusNuntii.compareTo(gradus, gradusMinimus) >= 0) {
       if (nuntia != null) {
         final StringBuilder structor = new StringBuilder();
@@ -58,10 +58,9 @@ public abstract class Nuntius {
    * @param error error continu\u0101tus
    * @see #terreo(Object...)
    */
-  public final void terreo(@NotNull final Throwable error) {
+  public final void terreo(@NonNull final Throwable error) {
     final StackTraceElement historia = Stream.of(error.getStackTrace())
-                                             .filter(historicus -> historicus.getModuleName().contains(
-                                               getClass().getModule().getName()))
+                                             .filter(historicus -> historicus.getModuleName().contains(getClass().getModule().getName()))
                                              .findFirst().orElse(error.getStackTrace()[ 0 ]);
     praeco.throwing(historia.getClassName(), historia.getMethodName(), error);
     terreo("Modus", historia.getMethodName(), "classe",
@@ -162,7 +161,7 @@ public abstract class Nuntius {
      * Valor hic viam re\u012B classis huiuc facit.
      * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
      */
-    @NotNull public static final Supplier <NuntiusTenoriAdverbiis> fac =
+    @NonNull public static final Supplier <NuntiusTenoriAdverbiis> fac =
       () -> ObjectUtils.firstNonNull(instantia, instantia = new NuntiusTenoriAdverbiis());
 
     private NuntiusTenoriAdverbiis() {
@@ -183,7 +182,7 @@ public abstract class Nuntius {
      * Valor hic viam re\u012B classis huiuc facit.
      * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
      */
-    @NotNull public static final Supplier <NuntiusTenoriConiunctivis> fac =
+    @NonNull public static final Supplier <NuntiusTenoriConiunctivis> fac =
       () -> ObjectUtils.firstNonNull(instantia, instantia = new NuntiusTenoriConiunctivis());
 
     private NuntiusTenoriConiunctivis() {
@@ -204,7 +203,7 @@ public abstract class Nuntius {
      * Valor hic viam re\u012B classis huiuc facit.
      * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
      */
-    @NotNull public static final Supplier <NuntiusTenoriInteriectionibus> fac =
+    @NonNull public static final Supplier <NuntiusTenoriInteriectionibus> fac =
       () -> ObjectUtils.firstNonNull(instantia, instantia = new NuntiusTenoriInteriectionibus());
 
     private NuntiusTenoriInteriectionibus() {
@@ -226,7 +225,7 @@ public abstract class Nuntius {
      * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
      * @see TenorMultiplicibus.TenorNominibus
      */
-    @NotNull public static final Supplier <NuntiusTenoriNominibus> fac =
+    @NonNull public static final Supplier <NuntiusTenoriNominibus> fac =
       () -> ObjectUtils.firstNonNull(instantia, instantia = new NuntiusTenoriNominibus());
 
     private NuntiusTenoriNominibus() {
@@ -247,7 +246,7 @@ public abstract class Nuntius {
      * Valor hic viam re\u012B classis huiuc facit.
      * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
      */
-    @NotNull public static final Supplier <NuntiusTenoriAdiectivis> fac =
+    @NonNull public static final Supplier <NuntiusTenoriAdiectivis> fac =
       () -> ObjectUtils.firstNonNull(instantia, instantia = new NuntiusTenoriAdiectivis());
 
     private NuntiusTenoriAdiectivis() {
@@ -268,7 +267,7 @@ public abstract class Nuntius {
      * Valor hic viam re\u012B classis huiuc facit.
      * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
      */
-    @NotNull public static final Supplier <NuntiusTenoriPronominibus> fac =
+    @NonNull public static final Supplier <NuntiusTenoriPronominibus> fac =
       () -> ObjectUtils.firstNonNull(instantia, instantia = new NuntiusTenoriPronominibus());
 
     private NuntiusTenoriPronominibus() {
@@ -288,7 +287,7 @@ public abstract class Nuntius {
      * Valor hic viam re\u012B classis huiuc facit.
      * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
      */
-    @NotNull public static final Supplier <NuntiusTenoriActis> fac =
+    @NonNull public static final Supplier <NuntiusTenoriActis> fac =
       () -> ObjectUtils.firstNonNull(instantia, instantia = new NuntiusTenoriActis());
 
     private NuntiusTenoriActis() {
@@ -308,7 +307,7 @@ public abstract class Nuntius {
      * Valor hic viam re\u012B classis huiuc facit.
      * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
      */
-    @NotNull public static final Supplier <NuntiusConditoriAdverbiis> fac =
+    @NonNull public static final Supplier <NuntiusConditoriAdverbiis> fac =
       () -> ObjectUtils.firstNonNull(instantia, instantia = new NuntiusConditoriAdverbiis());
 
     private NuntiusConditoriAdverbiis() {
@@ -329,7 +328,7 @@ public abstract class Nuntius {
      * Valor hic viam re\u012B classis huiuc facit.
      * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
      */
-    @NotNull public static final Supplier <NuntiusConditoriConiunctivis> fac =
+    @NonNull public static final Supplier <NuntiusConditoriConiunctivis> fac =
       () -> ObjectUtils.firstNonNull(instantia, instantia = new NuntiusConditoriConiunctivis());
 
     private NuntiusConditoriConiunctivis() {
@@ -350,7 +349,7 @@ public abstract class Nuntius {
      * Valor hic viam re\u012B classis huiuc facit.
      * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
      */
-    @NotNull public static final Supplier <NuntiusConditoriInteriectionibus> fac =
+    @NonNull public static final Supplier <NuntiusConditoriInteriectionibus> fac =
       () -> ObjectUtils.firstNonNull(instantia, instantia = new NuntiusConditoriInteriectionibus());
 
     private NuntiusConditoriInteriectionibus() {
@@ -370,7 +369,7 @@ public abstract class Nuntius {
      * Valor hic viam re\u012B classis huiuc facit.
      * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
      */
-    @NotNull public static final Supplier <NuntiusConditoriNominibus> fac =
+    @NonNull public static final Supplier <NuntiusConditoriNominibus> fac =
       () -> ObjectUtils.firstNonNull(instantia, instantia = new NuntiusConditoriNominibus());
 
     private NuntiusConditoriNominibus() {
@@ -390,7 +389,7 @@ public abstract class Nuntius {
      * Valor hic viam rei classis huiuc facit.
      * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
      */
-    @NotNull public static final Supplier <NuntiusConditoriAdiectivis> fac =
+    @NonNull public static final Supplier <NuntiusConditoriAdiectivis> fac =
       () -> ObjectUtils.firstNonNull(instantia, instantia = new NuntiusConditoriAdiectivis());
 
     private NuntiusConditoriAdiectivis() {
@@ -410,7 +409,7 @@ public abstract class Nuntius {
      * Valor hic viam re\u012B classis huiuc facit.
      * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
      */
-    @NotNull public static final Supplier <NuntiusConditoriPronominibus> fac =
+    @NonNull public static final Supplier <NuntiusConditoriPronominibus> fac =
       () -> ObjectUtils.firstNonNull(instantia, instantia = new NuntiusConditoriPronominibus());
 
     private NuntiusConditoriPronominibus() {
@@ -430,7 +429,7 @@ public abstract class Nuntius {
      * Valor hic viam re\u012B classis huiuc facit.
      * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
      */
-    @NotNull public static final Supplier <NuntiusConditoriActis> fac =
+    @NonNull public static final Supplier <NuntiusConditoriActis> fac =
       () -> ObjectUtils.firstNonNull(instantia, instantia = new NuntiusConditoriActis());
 
     private NuntiusConditoriActis() {
@@ -450,7 +449,7 @@ public abstract class Nuntius {
      * Valor hic viam re\u012B classis huiuc facit.
      * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
      */
-    @NotNull public static final Supplier <NuntiusInventoriAdverbiis> fac =
+    @NonNull public static final Supplier <NuntiusInventoriAdverbiis> fac =
       () -> ObjectUtils.firstNonNull(instantia, instantia = new NuntiusInventoriAdverbiis());
 
     private NuntiusInventoriAdverbiis() {
@@ -470,7 +469,7 @@ public abstract class Nuntius {
      * Valor hic viam re\u012B classis huiuc facit.
      * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
      */
-    @NotNull public static final Supplier <NuntiusInventoriNominibus> fac =
+    @NonNull public static final Supplier <NuntiusInventoriNominibus> fac =
       () -> ObjectUtils.firstNonNull(instantia, instantia = new NuntiusInventoriNominibus());
 
     private NuntiusInventoriNominibus() {
@@ -490,7 +489,7 @@ public abstract class Nuntius {
      * Valor hic viam re\u012B classis huiuc facit.
      * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
      */
-    @NotNull public static final Supplier <NuntiusInventoriAdiectivis> fac =
+    @NonNull public static final Supplier <NuntiusInventoriAdiectivis> fac =
       () -> ObjectUtils.firstNonNull(instantia, instantia = new NuntiusInventoriAdiectivis());
 
     private NuntiusInventoriAdiectivis() {
@@ -510,7 +509,7 @@ public abstract class Nuntius {
      * Valor hic viam re\u012B classis huiuc facit.
      * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
      */
-    @NotNull public static final Supplier <NuntiusInventoriPronominibus> fac =
+    @NonNull public static final Supplier <NuntiusInventoriPronominibus> fac =
       () -> ObjectUtils.firstNonNull(instantia, instantia = new NuntiusInventoriPronominibus());
 
     private NuntiusInventoriPronominibus() {
@@ -530,7 +529,7 @@ public abstract class Nuntius {
      * Valor hic viam re\u012B classis huiuc facit.
      * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
      */
-    @NotNull public static final Supplier <NuntiusInventoriActis> fac =
+    @NonNull public static final Supplier <NuntiusInventoriActis> fac =
       () -> ObjectUtils.firstNonNull(instantia, instantia = new NuntiusInventoriActis());
 
     private NuntiusInventoriActis() {
@@ -550,7 +549,7 @@ public abstract class Nuntius {
      * Valor hic viam re\u012Bclassis huiuc facit.
      * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
      */
-    @NotNull public static final Supplier <NuntiusLectoriAdverbiis> fac =
+    @NonNull public static final Supplier <NuntiusLectoriAdverbiis> fac =
       () -> ObjectUtils.firstNonNull(instantia, instantia = new NuntiusLectoriAdverbiis());
 
     private NuntiusLectoriAdverbiis() {
@@ -571,7 +570,7 @@ public abstract class Nuntius {
      * Valor hic viam re\u012B classis huiuc facit.
      * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
      */
-    @NotNull public static final Supplier <NuntiusLectoriConiunctivis> fac =
+    @NonNull public static final Supplier <NuntiusLectoriConiunctivis> fac =
       () -> ObjectUtils.firstNonNull(instantia, instantia = new NuntiusLectoriConiunctivis());
 
     private NuntiusLectoriConiunctivis() {
@@ -592,7 +591,7 @@ public abstract class Nuntius {
      * Valor hic viam re\u012B classis huiuc facit.
      * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
      */
-    @NotNull public static final Supplier <NuntiusLectoriInteriectionibus> fac =
+    @NonNull public static final Supplier <NuntiusLectoriInteriectionibus> fac =
       () -> ObjectUtils.firstNonNull(instantia, instantia = new NuntiusLectoriInteriectionibus());
 
     private NuntiusLectoriInteriectionibus() {
@@ -613,7 +612,7 @@ public abstract class Nuntius {
      * Valor hic viam re\u012B classis huiuc facit.
      * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
      */
-    @NotNull public static final Supplier <NuntiusLectoriNominibus> fac =
+    @NonNull public static final Supplier <NuntiusLectoriNominibus> fac =
       () -> ObjectUtils.firstNonNull(instantia, instantia = new NuntiusLectoriNominibus());
 
     private NuntiusLectoriNominibus() {
@@ -634,7 +633,7 @@ public abstract class Nuntius {
      * Valor hic viam re\u012B classis huiuc facit.
      * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
      */
-    @NotNull public static final Supplier <NuntiusLectoriAdiectivis> fac =
+    @NonNull public static final Supplier <NuntiusLectoriAdiectivis> fac =
       () -> ObjectUtils.firstNonNull(instantia, instantia = new NuntiusLectoriAdiectivis());
 
     private NuntiusLectoriAdiectivis() {
@@ -655,7 +654,7 @@ public abstract class Nuntius {
      * Valor hic viam re\u012B classis huiuc facit.
      * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
      */
-    @NotNull public static final Supplier <NuntiusLectoriPronominibus> fac =
+    @NonNull public static final Supplier <NuntiusLectoriPronominibus> fac =
       () -> ObjectUtils.firstNonNull(instantia, instantia = new NuntiusLectoriPronominibus());
 
     private NuntiusLectoriPronominibus() {
@@ -675,7 +674,7 @@ public abstract class Nuntius {
      * Valor hic viam re\u012B classis huiuc facit.
      * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
      */
-    @NotNull public static final Supplier <NuntiusLectoriActis> fac =
+    @NonNull public static final Supplier <NuntiusLectoriActis> fac =
       () -> ObjectUtils.firstNonNull(instantia, instantia = new NuntiusLectoriActis());
 
     private NuntiusLectoriActis() {
@@ -696,7 +695,7 @@ public abstract class Nuntius {
      * Valor hic viam re\u012B classis huiuc facit.
      * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
      */
-    @NotNull public static final Supplier <NuntiusLectoriPraepositionibus> fac =
+    @NonNull public static final Supplier <NuntiusLectoriPraepositionibus> fac =
       () -> ObjectUtils.firstNonNull(instantia, instantia = new NuntiusLectoriPraepositionibus());
 
     private NuntiusLectoriPraepositionibus() {
@@ -716,7 +715,7 @@ public abstract class Nuntius {
      * Valor hic viam re\u012B classis huiuc facit.
      * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
      */
-    public static @NotNull Supplier <NuntiusAdverbiorum> fac =
+    public static @NonNull Supplier <NuntiusAdverbiorum> fac =
       () -> ObjectUtils.firstNonNull(instantia, instantia = new NuntiusAdverbiorum());
 
     private NuntiusAdverbiorum() {
@@ -736,7 +735,7 @@ public abstract class Nuntius {
      * Valor hic viam re\u012B classis huiuc facit.
      * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
      */
-    public static @NotNull Supplier <NuntiusConiunctivorum> fac =
+    public static @NonNull Supplier <NuntiusConiunctivorum> fac =
       () -> ObjectUtils.firstNonNull(instantia, instantia = new NuntiusConiunctivorum());
 
     private NuntiusConiunctivorum() {
@@ -756,7 +755,7 @@ public abstract class Nuntius {
      * Valor hic viam re\u012B classis huiuc facit.
      * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
      */
-    public static @NotNull Supplier <NuntiusInteriectionum> fac =
+    public static @NonNull Supplier <NuntiusInteriectionum> fac =
       () -> ObjectUtils.firstNonNull(instantia, instantia = new NuntiusInteriectionum());
 
     private NuntiusInteriectionum() {
@@ -776,7 +775,7 @@ public abstract class Nuntius {
      * Valor hic viam re\u012B classis huiuc facit.
      * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
      */
-    public static @NotNull Supplier <NuntiusPraepositionum> fac =
+    public static @NonNull Supplier <NuntiusPraepositionum> fac =
       () -> ObjectUtils.firstNonNull(instantia, instantia = new NuntiusPraepositionum());
 
     private NuntiusPraepositionum() {
@@ -796,7 +795,7 @@ public abstract class Nuntius {
      * Valor hic viam re\u012B classis huiuc facit.
      * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
      */
-    @NotNull public static final Supplier <NuntiusNumerorum> fac =
+    @NonNull public static final Supplier <NuntiusNumerorum> fac =
       () -> ObjectUtils.firstNonNull(instantia, instantia = new NuntiusNumerorum());
 
     private NuntiusNumerorum() {
@@ -816,7 +815,7 @@ public abstract class Nuntius {
      * Valor hic viam re\u012B classis huiuc facit.
      * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
      */
-    @NotNull public static final Supplier <NuntiusNominum> fac =
+    @NonNull public static final Supplier <NuntiusNominum> fac =
       () -> ObjectUtils.firstNonNull(instantia, instantia = new NuntiusNominum());
 
     private NuntiusNominum() {
@@ -836,7 +835,7 @@ public abstract class Nuntius {
      * Valor hic viam re\u012B classis huiuc facit.
      * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
      */
-    @NotNull public static final Supplier <NuntiusAdiectivorum> fac =
+    @NonNull public static final Supplier <NuntiusAdiectivorum> fac =
       () -> ObjectUtils.firstNonNull(instantia, instantia = new NuntiusAdiectivorum());
 
     private NuntiusAdiectivorum() {
@@ -856,7 +855,7 @@ public abstract class Nuntius {
      * Valor hic viam re\u012B classis huiuc facit.
      * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
      */
-    @NotNull public static final Supplier <NuntiusPronominum> fac =
+    @NonNull public static final Supplier <NuntiusPronominum> fac =
       () -> ObjectUtils.firstNonNull(instantia, instantia = new NuntiusPronominum());
 
     private NuntiusPronominum() {
@@ -876,7 +875,7 @@ public abstract class Nuntius {
      * Valor hic viam re\u012B classis huiuc facit.
      * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
      */
-    @NotNull public static final Supplier <NuntiusActorum> fac =
+    @NonNull public static final Supplier <NuntiusActorum> fac =
       () -> ObjectUtils.firstNonNull(instantia, instantia = new NuntiusActorum());
 
     private NuntiusActorum() {
@@ -898,7 +897,7 @@ public abstract class Nuntius {
      * Valor hic viam re\u012B classis huiuc facit.
      * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
      */
-    @NotNull public static final Supplier <NuntiusErroribus> fac =
+    @NonNull public static final Supplier <NuntiusErroribus> fac =
       () -> ObjectUtils.firstNonNull(instantia, instantia = new NuntiusErroribus());
 
     private NuntiusErroribus() {
@@ -909,7 +908,7 @@ public abstract class Nuntius {
      * Modus hic invoc\u0101tur quand\u014Dque exsec\u016Bti\u014Dnem programm\u0101tis Str\u016BctorVerba err\u014Drem inop\u012Bn\u0101tum continu\u0101tur.
      * @see <a href="https://docs.oracle.com/javase/7/docs/api/java/lang/Thread.UncaughtExceptionHandler.html#uncaughtException(java.lang.Thread,%20java.lang.Throwable)">UncaughtExceptionHandler.uncaughtException</a>
      */
-    public final @Override void uncaughtException(@NotNull final Thread linea, @NotNull final Throwable error) {
+    public @Override void uncaughtException(@NonNull final Thread linea, @NonNull final Throwable error) {
       terreo(error);
     }
   }

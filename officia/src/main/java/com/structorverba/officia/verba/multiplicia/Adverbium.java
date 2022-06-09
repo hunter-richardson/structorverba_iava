@@ -1,12 +1,12 @@
-package officia.src.main.java.com.structorverba.officia.verba.multiplicia;
+package com.structorverba.officia.verba.multiplicia;
 
-import officia.src.main.java.com.structorverba.officia.conditores.multiplicia.ConditorAdverbiis;
-import officia.src.main.java.com.structorverba.officia.lectores.LectorMultiplicibus;
-import officia.src.main.java.com.structorverba.officia.nuntii.Nuntius;
-import officia.src.main.java.com.structorverba.officia.tenores.TenorMultiplicibus;
-import officia.src.main.java.com.structorverba.officia.enumerationes.*;
+import com.structorverba.officia.conditores.multiplicia.ConditorAdverbiis;
+import com.structorverba.officia.lectores.LectorMultiplicibus;
+import com.structorverba.officia.nuntii.Nuntius;
+import com.structorverba.officia.tenores.TenorMultiplicibus;
+import com.structorverba.officia.enumerationes.*;
 
-import org.jetbrains.annotations.NotNull;
+import androidx.annotation.NonNull;
 
 import lombok.Getter;
 
@@ -25,12 +25,12 @@ public class Adverbium extends VerbumMultiplex <Adverbium> {
    * Valor hic potentiam re\u012B huius d\u0113signat.
    * @see Gradus
    */
-  @NotNull public final Gradus gradus;
+  @NonNull public final Gradus gradus;
   @Getter(lazy = true)
-  @NotNull private final Nuntius.NuntiusAdverbiorum nuntius = Nuntius.NuntiusAdverbiorum.fac.get();
+  @NonNull private final Nuntius.NuntiusAdverbiorum nuntius = Nuntius.NuntiusAdverbiorum.fac.get();
 
-  public Adverbium(@NotNull final Gradus gradus, @NotNull final String lemma,
-                   @NotNull final String scriptio) {
+  public Adverbium(@NonNull final Gradus gradus, @NonNull final String lemma,
+                   @NonNull final String scriptio) {
     super(Categoria.ADIECTIVUM, lemma, scriptio);
     this.gradus = gradus;
     nuntius.plusGarrio("Scr\u012Bbor ut", scriptio);

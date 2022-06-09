@@ -1,10 +1,10 @@
-package officia.src.main.java.com.structorverba.officia.enumerationes;
+package com.structorverba.officia.enumerationes;
 
-import officia.src.main.java.com.structorverba.officia.miscella.Utilitas;
-import officia.src.main.java.com.structorverba.officia.verba.multiplicia.Adiectivum;
+import com.structorverba.officia.miscella.Utilitas;
+import com.structorverba.officia.verba.multiplicia.Adiectivum;
 
 import org.apache.commons.lang3.StringUtils;
-import org.jetbrains.annotations.NotNull;
+import androidx.annotation.NonNull;
 
 import java.util.stream.Stream;
 
@@ -38,28 +38,28 @@ public enum Gradus {
   /**
    * Valor hic reparesent\u0101ti\u014Dnem scr\u012Bpta \u0113numer\u0101ti\u014Dnis d\u0113signat.
    */
-  public static final @NotNull String pittacium = Utilitas.minisculasScribo(Gradus.class.getSimpleName());
+  public static final @NonNull String pittacium = Utilitas.minusculasScribo(Gradus.class.getSimpleName());
 
   /**
    * Valor hic repraesent\u0101ti\u014Dnem scr\u012Bpta re\u012B huius d\u0113signat.
    */
-  public final @NotNull String scriptio;
+  public final @NonNull String scriptio;
 
   /**
    * Officium hoc c\u014Dnstr\u016Bct\u014Drem re\u012B classis huius perpetrat.
    * @param scrpt val\u014Drem {@link #scriptio} indicat.
    */
-  Gradus(@NotNull final String scrpt) {
+  Gradus(@NonNull final String scrpt) {
     scriptio = scrpt;
   }
 
   /**
    * Modus hic rem \u0113numer\u0101ti\u014D {@link Gradus} \u0101 parametr\u014D d\u0113sign\u0101t\u014D advenit. <br>
    * Val\u014Drem {@link #NULLUS} refert s\u012B nihil val\u014Drem {@code scriptio} quadrat.
-   * @param scr\u012Bpti\u014D val\u014Drem {@link #scriptio} indicat.
+   * @param scriptio val\u014Drem {@link #scriptio} indicat.
    * @return Rem \u0113numer\u0101tio {@link Gradus} quod parametrum d\u0113sign\u0101tum quadrat.
    */
-  @NotNull public static Gradus definiam(@NotNull final String scriptio) {
+  @NonNull public static Gradus definiam(@NonNull final String scriptio) {
     return Stream.of(values())
                  .filter(gradus -> gradus.scriptio.equals(scriptio))
                  .findFirst().orElse(NULLUS);
@@ -70,7 +70,7 @@ public enum Gradus {
    * @return {@code illud} s\u012B val\u014Drem \u0113numer\u0101ti\u014D {@link Gradus} quadrat; {@link #NULLUS} aliter.
    */
   @SuppressWarnings("ConstantConditions")
-  @NotNull public static Gradus ut(@NotNull final Enum <@NotNull ?> illud) {
+  @NonNull public static Gradus ut(@NonNull final Enum <?> illud) {
     final Gradus hoc = (Gradus) illud;
     return hoc.equals(illud) ? hoc
                              : NULLUS;

@@ -1,7 +1,8 @@
-package officia.src.test.java.com.structorverba.officia;
+package com.structorverba.officia;
 
-import officia.src.main.java.com.structorverba.officia.miscella.*;
-import officia.src.main.java.com.structorverba.officia.verba.*;
+import androidx.annotation.*;
+import com.structorverba.officia.miscella.*;
+import com.structorverba.officia.verba.*;
 
 import org.apache.commons.lang3.Range;
 import org.apache.commons.lang3.*;
@@ -17,13 +18,13 @@ import java.util.function.Function;
  */
 @SuppressWarnings({ "SpellCheckingInspection", "unused" })
 abstract class Tentamen<Illud, Hoc> {
-  @NotNull private final Function <Illud, String> exsecutio;
+  @NonNull private final Function <Illud, String> exsecutio;
 
   /**
    * Officium hoc c\u014Dnstr\u016Bct\u014Drem re\u012B classis huius perpetrat.
    * @param exsct modus oper\u0101ti\u014Dn\u0113s d\u0113f\u012Bnit re\u012B classis {@link Illud} perfung\u012B.
    */
-  protected Tentamen(@NotNull final Function <Illud, String> exsct) {
+  protected Tentamen(@NonNull final Function <Illud, String> exsct) {
     exsecutio = exsct;
   }
 
@@ -48,7 +49,7 @@ abstract class Tentamen<Illud, Hoc> {
      * @param data  valor datum exspectandum continet.
      * @param nomen valor hoc inter multa identificat.
      */
-    public TentamenVerbale(@NotNull final String data, @NotNull final String nomen) {
+    public TentamenVerbale(@NonNull final String data, @NonNull final String nomen) {
       super(illud -> {
         new Tentamiculum.TentamiculumRei(illud)
           .existat(String.format("Verba pr\u014Dducta %s vacant.", nomen));
@@ -80,7 +81,7 @@ abstract class Tentamen<Illud, Hoc> {
      * @param data    valor datum exspectandum continet.
      * @param numerus valor hoc inter multa identificat.
      */
-    public TentamenNumeraleConversionis(@NotNull final String data, final short numerus) {
+    public TentamenNumeraleConversionis(@NonNull final String data, final short numerus) {
       super(illud -> {
         new Tentamiculum.TentamiculumRei(illud)
           .existat(String.format("Pr\u014Dduct\u0101 conversi\u014Dnis relicta'st pr\u014Dducti\u014D numer\u012B %d.", numerus));
@@ -103,7 +104,7 @@ abstract class Tentamen<Illud, Hoc> {
      * @param numerus  valor datum exspectandum continet.
      * @param scriptio valor hoc inter multa identificat.
      */
-    public TentamenNumeraleReversionis(@NotNull final Short numerus, @NotNull final String scriptio) {
+    public TentamenNumeraleReversionis(@NonNull final Short numerus, @NonNull final String scriptio) {
       super(illud -> {
         new Tentamiculum.TentamiculumRei(illud)
           .existat(String.format("Pr\u014Dduct\u0101 reversi\u014Dnis relicta'st pr\u014Dducti\u014D numer\u012B %s.", scriptio));
@@ -124,15 +125,15 @@ abstract class Tentamen<Illud, Hoc> {
      * Officium hoc c\u014Dnstr\u016Bct\u014Drem re\u012B classis huius perpetrat.
      * @param numerus valor datum exspectandum continet.
      */
-    public TentamenNumeraleCombinationis(@NotNull final Short numerus) {
+    public TentamenNumeraleCombinationis(@NonNull final Short numerus) {
       super(primus -> {
         new Tentamiculum.TentamiculumRei(primus)
           .existat(String.format("Pr\u014Dduct\u0101 conversi\u014Dnis relicta'st pr\u014Dducti\u014D numer\u012B %d.", numerus));
         new Tentamiculum.TentamiculumVersiculi(primus)
           .aliamContineat("Numerum pr\u014Dductum conversi\u014Dnis vacat.");
 
-        @NotNull final StructorVerba structor = StructorVerba.fac.get();
-        @NotNull final VerbumSimplex.Numerus secundus = structor.numerus(primus.toString());
+        @NonNull final StructorVerba structor = StructorVerba.fac.get();
+        @NonNull final VerbumSimplex.Numerus secundus = structor.numerus(primus.toString());
         new Tentamiculum.TentamiculumRei(secundus)
           .existat(String.format("Pr\u014Dduct\u0101 conversi\u014Dnis relicta'st pr\u014Dducti\u014D numer\u012B %d.", numerus));
         new Tentamiculum.TentamiculumNumeralis <>(numerus, secundus.numerus)
@@ -153,7 +154,7 @@ abstract class Tentamen<Illud, Hoc> {
      * @param range    valor datum exspectandum continet.
      * @param operatio valor oper\u0101ti\u014Dnem math\u0113maticam identificat.
      */
-    public TentamenMathematicum(@NotNull final Range <Short> range, final char operatio) {
+    public TentamenMathematicum(@NonNull final Range <Short> range, final char operatio) {
       super(primus -> {
         new Tentamiculum.TentamiculumRei(primus)
           .existat(String.format("Pr\u014Dduct\u0101 %s relicta'st pr\u014Dducti\u014D numer\u012B %d.", operatio, range.getMaximum()));
@@ -178,8 +179,8 @@ abstract class Tentamen<Illud, Hoc> {
           default -> (short) 0;
         };
 
-        @NotNull final StructorVerba structor = StructorVerba.fac.get();
-        @NotNull final VerbumSimplex.Numerus secundus = structor.numerus(range.getMinimum());
+        @NonNull final StructorVerba structor = StructorVerba.fac.get();
+        @NonNull final VerbumSimplex.Numerus secundus = structor.numerus(range.getMinimum());
         new Tentamiculum.TentamiculumRei(secundus)
           .existat(String.format("Pr\u014Dduct\u0101 %s relicta'st pr\u014Dducti\u014D numer\u012B %d.", operatio, range.getMinimum()));
         new Tentamiculum.TentamiculumVersiculi(secundus)

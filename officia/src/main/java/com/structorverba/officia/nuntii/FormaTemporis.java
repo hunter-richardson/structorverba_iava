@@ -1,21 +1,23 @@
-package officia.src.main.java.com.structorverba.officia.nuntii;
+package com.structorverba.officia.nuntii;
 
 import com.github.chaosfirebolt.converter.RomanInteger;
 import com.github.chaosfirebolt.converter.constants.IntegerType;
 
-import com.structorverba.enumerationes.Mensis;
-
-import org.jetbrains.annotations.NotNull;
+import com.structorverba.officia.enumerationes.Mensis;
+import androidx.annotation.NonNull;
+import com.structorverba.officia.miscella.StructorVerba;
+import com.structorverba.officia.miscella.Utilitas;
 
 import java.time.*;
 import java.time.temporal.*;
+import java.util.function.BiFunction;
 
 /**
  * Classis {@link FormaTemporis} temporem f\u014Drmat scr\u012Bb\u012B.
  */
 @SuppressWarnings({ "SpellCheckingInspection", "unused" })
 final class FormaTemporis {
-  @NotNull private static final BiFunction <@NotNull ZonedDateTime, @NotNull Boolean, @NotNull String> formatio =
+  @NonNull private static final BiFunction<ZonedDateTime, Boolean, String> formatio =
     (tempus, praecisio) -> {
       String zona = tempus.getZone().getId();
       if (tempus.getZone().getId().length() > 3) {
@@ -27,7 +29,7 @@ final class FormaTemporis {
       }
 
       if (praecisio) {
-        return String.format("[%d %s %d, %d:%d:%d.%d %s]",
+        return String.format(Utilitas.LOCULUS, "[%d %s %d, %d:%d:%d.%d %s]",
                              tempus.getDayOfMonth(), Mensis.indicam(tempus.getMonth()),
                              tempus.getYear(), tempus.getHour(), tempus.getMinute(), tempus.getSecond(),
                              tempus.get(ChronoField.MILLI_OF_SECOND), zona);
@@ -41,7 +43,7 @@ final class FormaTemporis {
                              RomanInteger.parse(String.valueOf(tempus.getSecond()), IntegerType.ARABIC), zona);
       }
     };
-  @NotNull private final ZonedDateTime tempus;
+  @NonNull private final ZonedDateTime tempus;
   private final          boolean       punctillaPraecidemne;
 
   private FormaTemporis( ) {
@@ -54,7 +56,7 @@ final class FormaTemporis {
     punctillaPraecidemne = false;
   }
 
-  private FormaTemporis(@NotNull final Instant instans) {
+  private FormaTemporis(@NonNull final Instant instans) {
     tempus = ZonedDateTime.ofInstant(instans, ZoneId.systemDefault());
     punctillaPraecidemne = false;
   }
@@ -69,7 +71,7 @@ final class FormaTemporis {
     this.punctillaPraecidemne = punctillaPraecidemne;
   }
 
-  private FormaTemporis(@NotNull final Instant instans, final boolean punctillaPraecidemne) {
+  private FormaTemporis(@NonNull final Instant instans, final boolean punctillaPraecidemne) {
     tempus = ZonedDateTime.ofInstant(instans, ZoneId.systemDefault());
     this.punctillaPraecidemne = punctillaPraecidemne;
   }
@@ -78,7 +80,7 @@ final class FormaTemporis {
    * @param tempus tempus f\u014Drmandus
    * @return scr\u012Bpti\u014Dnem temporis pr\u014Dv\u012Bs\u012B
    */
-  @NotNull public static String formem(final long tempus) {
+  @NonNull public static String formem(final long tempus) {
     return new FormaTemporis(tempus).formo();
   }
 
@@ -86,14 +88,14 @@ final class FormaTemporis {
    * @param tempus tempus f\u014Drmandus
    * @return scr\u012Bpti\u014Dnem temporis pr\u014Dv\u012Bs\u012B
    */
-  @NotNull public static String formem(@NotNull final Instant tempus) {
+  @NonNull public static String formem(@NonNull final Instant tempus) {
     return new FormaTemporis(tempus).formo();
   }
 
   /**
    * @return scr\u012Bpti\u014Dnem temporis praesentis
    */
-  @NotNull public static String formem() {
+  @NonNull public static String formem() {
     return new FormaTemporis().formo();
   }
 
@@ -103,7 +105,7 @@ final class FormaTemporis {
    *                             val\u014Drem {@code false} aliter
    * @return scr\u012Bpti\u014Dnem temporis pr\u014Dv\u012Bs\u012B
    */
-  @NotNull public static String formem(final long tempus, final boolean punctillaPraecidemne) {
+  @NonNull public static String formem(final long tempus, final boolean punctillaPraecidemne) {
     return new FormaTemporis(tempus, punctillaPraecidemne).formo();
   }
 
@@ -113,7 +115,7 @@ final class FormaTemporis {
    *                             val\u014Drem {@code false} aliter
    * @return scr\u012Bpti\u014Dnem temporis pr\u014Dv\u012Bs\u012B
    */
-  @NotNull public static String formem(@NotNull final Instant tempus, final boolean punctillaPraecidemne) {
+  @NonNull public static String formem(@NonNull final Instant tempus, final boolean punctillaPraecidemne) {
     return new FormaTemporis(tempus, punctillaPraecidemne).formo();
   }
 
@@ -122,14 +124,14 @@ final class FormaTemporis {
    *                             val\u014Drem {@code false} aliter
    * @return scr\u012Bpti\u014Dnem temporis praesentis
    */
-  @NotNull public static String formem(final boolean punctillaPraecidemne) {
+  @NonNull public static String formem(final boolean punctillaPraecidemne) {
     return new FormaTemporis(punctillaPraecidemne).formo();
   }
 
   /**
    * @return scr\u012Bpti\u014Dnem temporis quem r\u0113s haec continet.
    */
-  @NotNull public String formo() {
+  @NonNull public String formo() {
     return formatio.apply(tempus, punctillaPraecidemne);
   }
 }

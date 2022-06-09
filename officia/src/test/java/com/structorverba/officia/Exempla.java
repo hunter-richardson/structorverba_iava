@@ -1,9 +1,9 @@
-package officia.src.test.java.com.structorverba.officia;
+package com.structorverba.officia;
 
-import officia.src.main.java.com.structorverba.officia.miscella.*;
-import officia.src.main.java.com.structorverba.officia.enumerationes.*;
+import com.structorverba.officia.miscella.*;
+import com.structorverba.officia.enumerationes.*;
 
-import org.jetbrains.annotations.NotNull;
+import androidx.annotation.NonNull;
 import org.junit.Test;
 
 import lombok.Getter;
@@ -13,11 +13,11 @@ import lombok.Getter;
  * Exempla addit\u012Bcia posth\u0101c scr\u012Bbantur.
  */
 @SuppressWarnings({ "SpellCheckingInspection", "FieldCanBeLocal" })
-public final class Exempla extends Omnum {
-  @NotNull @Getter(lazy = true)
+public final class Exempla extends Omne {
+  @NonNull @Getter(lazy = true)
   private final StructorVerba structor = StructorVerba.fac.get();
 
-  @NotNull private final String producta = "Ecce lingua Lat\u012Bna placet pr\u014Ddestque";
+  @NonNull private final String producta = "Ecce lingua Lat\u012Bna placet pr\u014Ddestque";
 
   /**
    * Modus hic exemplum tentat. <br>

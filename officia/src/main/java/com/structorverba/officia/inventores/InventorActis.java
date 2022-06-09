@@ -1,12 +1,13 @@
-package officia.src.main.java.com.structorverba.officia.inventores;
+package com.structorverba.officia.inventores;
 
-import officia.src.main.java.com.structorverba.officia.lectores.LectorMultiplicibus;
-import officia.src.main.java.com.structorverba.officia.nuntii.Nuntius;
-import officia.src.main.java.com.structorverba.officia.verba.multiplicia.Actus;
-import officia.src.main.java.com.structorverba.officia.enumerationes.*;
+import com.structorverba.officia.lectores.LectorMultiplicibus;
+import com.structorverba.officia.miscella.Utilitas;
+import com.structorverba.officia.nuntii.Nuntius;
+import com.structorverba.officia.verba.multiplicia.Actus;
+import com.structorverba.officia.enumerationes.*;
 
 import org.apache.commons.lang3.ObjectUtils;
-import org.jetbrains.annotations.*;
+import androidx.annotation.*;
 
 import javax.ejb.*;
 import java.util.function.*;
@@ -26,14 +27,14 @@ public final class InventorActis extends Inventor <Actus> {
    * Valor hic viam re\u012B classis huiuc facit.
    * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
    */
-  @NotNull public static final Supplier <InventorActis> fac =
+  @NonNull public static final Supplier <InventorActis> fac =
     () -> ObjectUtils.firstNonNull(instantia, instantia = new InventorActis());
 
-  @NotNull private Vox       vox       = Vox.NULLA;
-  @NotNull private Tempus    tempus    = Tempus.INTEMPORALE;
-  @NotNull private Numeralis numeralis = Numeralis.NULLUS;
-  @NotNull private Persona   persona   = Persona.NULLA;
-  @NotNull private Modus     modus     = Modus.NULLUS;
+  @NonNull private Vox       vox       = Vox.NULLA;
+  @NonNull private Tempus    tempus    = Tempus.INTEMPORALE;
+  @NonNull private Numeralis numeralis = Numeralis.NULLUS;
+  @NonNull private Persona   persona   = Persona.NULLA;
+  @NonNull private Modus     modus     = Modus.NULLUS;
 
   private InventorActis() {
     super(Nuntius.NuntiusInventoriActis.fac);
@@ -45,8 +46,8 @@ public final class InventorActis extends Inventor <Actus> {
    *   perc\u014Dlere
    * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Predicate.html">Prediate</a>
    */
-  @Override @NotNull
-  public Predicate <@NotNull Actus> inquiram() {
+  @Override @NonNull
+  public Predicate <Actus> inquiram() {
     return actum -> modus.equals(actum.modus)
                     && vox.equals(actum.vox)
                     && tempus.equals(actum.tempus)
@@ -80,7 +81,7 @@ public final class InventorActis extends Inventor <Actus> {
    * @see Persona#ut(Enum)
    * @see Modus#ut(Enum)
    */
-  @Override protected void allegam(@NotNull final Enum <@NotNull ?> illud) {
+  @Override protected void allegam(@NonNull final Enum <?> illud) {
     if (illud instanceof Vox) {
       vox = Vox.ut(illud);
       nuntius.garrio("Quaestion\u012B adi\u0113c\u012B conditi\u014Dnem novam:",

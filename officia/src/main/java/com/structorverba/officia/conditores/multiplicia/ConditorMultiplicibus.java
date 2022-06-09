@@ -1,12 +1,11 @@
-package officia.src.main.java.com.structorverba.officia.conditores.multiplicia;
+package com.structorverba.officia.conditores.multiplicia;
 
-import officia.src.main.java.com.structorverba.officia.conditores.Conditor;
-import officia.src.main.java.com.structorverba.officia.enumerationes.Modus;
-import officia.src.main.java.com.structorverba.officia.nuntii.Nuntius;
-import officia.src.main.java.com.structorverba.officia.verba.multiplicia.VerbumMultiplex;
+import com.structorverba.officia.conditores.Conditor;
+import com.structorverba.officia.nuntii.Nuntius;
+import com.structorverba.officia.verba.multiplicia.VerbumMultiplex;
 
 import org.apache.commons.lang3.StringUtils;
-import org.jetbrains.annotations.NotNull;
+import androidx.annotation.NonNull;
 
 import java.util.function.Supplier;
 
@@ -20,18 +19,18 @@ public abstract class ConditorMultiplicibus <Hoc extends VerbumMultiplex <Hoc>> 
   /**
    * Valor hic reparesent\u0101ti\u014Dnem scr\u012Bpta lemmae d\u0113signat.
    */
-  public static final @NotNull String pittaciumLemmae = "lemma";
+  public static final @NonNull String pittaciumLemmae = "lemma";
 
   /**
    * Valor hic val\u014Drem {@link VerbumMultiplex#scriptio} re\u012B pr\u014Dductae repraehentat.
    */
-  @NotNull protected String scriptio = StringUtils.EMPTY;
+  @NonNull protected String scriptio = StringUtils.EMPTY;
 
   /**
    * Officium hoc c\u014Dnstr\u016Bct\u014Drem re\u012B classis huius perpetrat.
    * @param nuntius val\u014Drem {@link Conditor#nuntius} supplet.
    */
-  public ConditorMultiplicibus(@NotNull final Supplier <@NotNull ? extends Nuntius> nuntius) {
+  public ConditorMultiplicibus(@NonNull final Supplier <? extends Nuntius> nuntius) {
     super(nuntius);
   }
 
@@ -39,7 +38,7 @@ public abstract class ConditorMultiplicibus <Hoc extends VerbumMultiplex <Hoc>> 
    * Modus hic val\u014Drem {@link #scriptio} indit.
    * @param scrpt val\u014Drem indendum
    */
-  public final void ut(@NotNull final String scrpt) {
+  public final void ut(@NonNull final String scrpt) {
     scriptio = scrpt;
     nuntius.garrio("C\u014Dntr\u016Bcti\u014Dn\u012B adiec\u012B conditi\u014Dnem novam: scr\u012Bptu'st", scrpt);
   }
@@ -49,7 +48,7 @@ public abstract class ConditorMultiplicibus <Hoc extends VerbumMultiplex <Hoc>> 
    * @param nomen      val\u014Drem cognendum
    * @param descriptor val\u014Drem indendum
    */
-  public abstract void allego(@NotNull final String nomen, @NotNull final String descriptor);
+  public abstract void allego(@NonNull final String nomen, @NonNull final String descriptor);
 
   /**
    * Modus hic rem hanc restituit.

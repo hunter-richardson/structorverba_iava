@@ -1,12 +1,13 @@
-package officia.src.main.java.com.structorverba.officia.inventores;
+package com.structorverba.officia.inventores;
 
-import officia.src.main.java.com.structorverba.officia.lectores.LectorMultiplicibus;
-import officia.src.main.java.com.structorverba.officia.nuntii.Nuntius;
-import officia.src.main.java.com.structorverba.officia.verba.multiplicia.Nomen;
-import officia.src.main.java.com.structorverba.officia.enumerationes.*;
+import com.structorverba.officia.lectores.LectorMultiplicibus;
+import com.structorverba.officia.miscella.Utilitas;
+import com.structorverba.officia.nuntii.Nuntius;
+import com.structorverba.officia.verba.multiplicia.Nomen;
+import com.structorverba.officia.enumerationes.*;
 
 import org.apache.commons.lang3.ObjectUtils;
-import org.jetbrains.annotations.*;
+import androidx.annotation.*;
 
 import java.util.function.*;
 
@@ -27,14 +28,14 @@ public final class InventorNominibus extends Inventor <Nomen> {
    * Valor hic viam re\u012B classis huiuc facit.
    * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
    */
-  @NotNull public static final Supplier <InventorNominibus> fac =
+  @NonNull public static final Supplier <InventorNominibus> fac =
     () -> ObjectUtils.firstNonNull(instantia, instantia = new InventorNominibus());
 
-  @NotNull private Specialitas specialitas = Specialitas.NULLUM;
-  @NotNull private Genus       genus       = Genus.NULLUM;
-  @NotNull private Numeralis   numeralis   = Numeralis.NULLUS;
-  @NotNull private Casus       casus       = Casus.DERECTUS;
-  @NotNull private Tempus      tempus      = Tempus.INTEMPORALE;
+  @NonNull private Specialitas specialitas = Specialitas.NULLUM;
+  @NonNull private Genus       genus       = Genus.NULLUM;
+  @NonNull private Numeralis   numeralis   = Numeralis.NULLUS;
+  @NonNull private Casus       casus       = Casus.DERECTUS;
+  @NonNull private Tempus      tempus      = Tempus.INTEMPORALE;
 
   private InventorNominibus() {
     super(Nuntius.NuntiusInventoriNominibus.fac);
@@ -46,8 +47,8 @@ public final class InventorNominibus extends Inventor <Nomen> {
    *   percolere
    * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Predicate.html">Prediate</a>
    */
-  @Override @NotNull
-  public Predicate <@NotNull Nomen> inquiram() {
+  @Override @NonNull
+  public Predicate <Nomen> inquiram() {
     return nomen -> specialitas.equals(nomen.specialitas)
                     && genus.equals(nomen.genus)
                     && casus.equals(nomen.casus)
@@ -81,7 +82,7 @@ public final class InventorNominibus extends Inventor <Nomen> {
    * @see Casus#ut(Enum)
    * @see Tempus#ut(Enum)
    */
-  @Override protected void allegam(@NotNull final Enum <@NotNull ?> illud) {
+  @Override protected void allegam(@NonNull final Enum <?> illud) {
     if (illud instanceof Specialitas) {
       specialitas = Specialitas.ut(illud);
       nuntius.garrio("Quaesti\u014Dn\u012B adi\u0113c\u012B conditi\u014Dnem novam:",

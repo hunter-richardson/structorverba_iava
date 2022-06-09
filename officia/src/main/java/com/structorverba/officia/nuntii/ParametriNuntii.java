@@ -1,12 +1,13 @@
-package officia.src.main.java.com.structorverba.officia.nuntii;
+package com.structorverba.officia.nuntii;
 
-import officia.src.main.java.com.structorverba.officia.miscella.Utilitas;
+import com.structorverba.officia.miscella.Utilitas;
 
 import org.apache.commons.lang3.StringUtils;
-import org.jetbrains.annotations.NotNull;
+import androidx.annotation.NonNull;
 
 import java.io.IOException;
 import java.nio.file.Path;
+import java.util.function.Supplier;
 import java.util.logging.*;
 
 /**
@@ -17,17 +18,17 @@ final class ParametriNuntii {
   /**
    * Valor hic incidat quam verb\u014Dsa r\u0113s haec scr\u012Bb\u0113tur.
    */
-  @NotNull public final GradusNuntii gradusMinimus = GradusNuntii.OMNIS;
+  @NonNull public final GradusNuntii gradusMinimus = GradusNuntii.OMNIS;
   /**
    * Valor hic viam re\u012B classis <a href="https://docs.oracle.com/javase/7/docs/api/java/util/logging/Logger.html">Logger</a>
    * facit.
    * @see <a href="https://docs.oracle.com/javase/7/docs/api/java/util/logging/Logger.html">Logger</a>
    * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
    */
-  @NotNull public final Supplier <@NotNull Logger> praeconium;
-  private final @NotNull String locus = "logs";
+  @NonNull public final Supplier<Logger> praeconium;
+  private final @NonNull String locus = "logs";
 
-  private ParametriNuntii(@NotNull final Class <?> classis) {
+  private ParametriNuntii(@NonNull final Class <?> classis) {
     praeconium = () -> {
       final Logger praeco = Logger.getLogger(classis.getSimpleName());
       praeco.setParent(Logger.getGlobal());
@@ -66,7 +67,7 @@ final class ParametriNuntii {
    * @param classis classis apta
    * @return Rem novam classis huius
    */
-  @NotNull public static ParametriNuntii para(@NotNull final Class <?> classis) {
+  @NonNull public static ParametriNuntii para(@NonNull final Class <?> classis) {
     return new ParametriNuntii(classis);
   }
 }

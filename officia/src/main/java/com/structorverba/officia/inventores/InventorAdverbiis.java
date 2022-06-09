@@ -1,13 +1,13 @@
-package officia.src.main.java.com.structorverba.officia.inventores;
+package com.structorverba.officia.inventores;
 
-import officia.src.main.java.com.structorverba.officia.lectores.LectorMultiplicibus;
-import officia.src.main.java.com.structorverba.officia.nuntii.Nuntius;
-import officia.src.main.java.com.structorverba.officia.verba.multiplicia.Adiectivum;
-import officia.src.main.java.com.structorverba.officia.verba.multiplicia.Adverbium;
-import officia.src.main.java.com.structorverba.officia.enumerationes.Gradus;
+import com.structorverba.officia.lectores.LectorMultiplicibus;
+import com.structorverba.officia.miscella.Utilitas;
+import com.structorverba.officia.nuntii.Nuntius;
+import com.structorverba.officia.verba.multiplicia.Adverbium;
+import com.structorverba.officia.enumerationes.Gradus;
 
 import org.apache.commons.lang3.ObjectUtils;
-import org.jetbrains.annotations.*;
+import androidx.annotation.*;
 
 import javax.ejb.*;
 import java.util.function.*;
@@ -27,10 +27,10 @@ public class InventorAdverbiis extends Inventor <Adverbium> {
    * Valor hic viam re\u012B classis huiuc facit.
    * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
    */
-  @NotNull public static final Supplier <InventorAdverbiis> fac =
+  @NonNull public static final Supplier <InventorAdverbiis> fac =
     () -> ObjectUtils.firstNonNull(instantia, instantia = new InventorAdverbiis());
 
-  @NotNull private Gradus gradus = Gradus.NULLUS;
+  @NonNull private Gradus gradus = Gradus.NULLUS;
 
   private InventorAdverbiis() {
     super(Nuntius.NuntiusInventoriAdverbiis.fac);
@@ -42,8 +42,8 @@ public class InventorAdverbiis extends Inventor <Adverbium> {
    *   Adverbium} perc\u012Blere
    * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Predicate.html">Prediate</a>
    */
-  @Override @NotNull
-  public Predicate <@NotNull Adverbium> inquiram() {
+  @Override @NonNull
+  public Predicate <Adverbium> inquiram() {
     return adverbium -> gradus.equals(adverbium.gradus);
   }
 
@@ -60,7 +60,7 @@ public class InventorAdverbiis extends Inventor <Adverbium> {
    * @param illud \u0113numer\u0101ti\u012Bnem indendam
    * @see Gradus#ut(Enum)
    */
-  @Override protected void allegam(Enum <@NotNull ?> illud) {
+  @Override protected void allegam(Enum <?> illud) {
     if (illud instanceof Gradus) {
       gradus = Gradus.ut(illud);
       nuntius.garrio("Quaesti\u014Dn\u012B adi\u0113c\u012B conditi\u014Dnem novam:",

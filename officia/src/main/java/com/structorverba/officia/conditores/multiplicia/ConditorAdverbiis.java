@@ -1,14 +1,15 @@
-package officia.src.main.java.com.structorverba.officia.conditores.multiplicia;
+package com.structorverba.officia.conditores.multiplicia;
 
-import officia.src.main.java.com.structorverba.officia.conditores.Conditor;
-import officia.src.main.java.com.structorverba.officia.miscella.Utilitas;
-import officia.src.main.java.com.structorverba.officia.nuntii.Nuntius;
-import officia.src.main.java.com.structorverba.officia.verba.Verbum;
-import officia.src.main.java.com.structorverba.officia.verba.multiplicia.*;
-import officia.src.main.java.com.structorverba.officia.enumerationes.Gradus;
+import com.structorverba.officia.conditores.Conditor;
+import com.structorverba.officia.enumerationes.Categoria;
+import com.structorverba.officia.miscella.Utilitas;
+import com.structorverba.officia.nuntii.Nuntius;
+import com.structorverba.officia.verba.Verbum;
+import com.structorverba.officia.verba.multiplicia.*;
+import com.structorverba.officia.enumerationes.Gradus;
 
 import org.apache.commons.lang3.*;
-import org.jetbrains.annotations.*;
+import androidx.annotation.*;
 
 import java.util.Objects;
 import java.util.function.Supplier;
@@ -27,10 +28,10 @@ public class ConditorAdverbiis extends ConditorMultiplicibus <Adverbium> {
    * Valor hic viam re\u012B classis huiuc facit.
    * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
    */
-  @NotNull public static final Supplier <ConditorAdverbiis> fac =
+  @NonNull public static final Supplier <ConditorAdverbiis> fac =
     () -> ObjectUtils.firstNonNull(instantia, instantia = new ConditorAdverbiis());
 
-  @NotNull private Gradus gradus = Gradus.NULLUS;
+  @NonNull private Gradus gradus = Gradus.NULLUS;
 
   private ConditorAdverbiis() {
     super(Nuntius.NuntiusConditoriAdverbiis.fac);
@@ -45,10 +46,10 @@ public class ConditorAdverbiis extends ConditorMultiplicibus <Adverbium> {
   @SuppressWarnings("ConstantConditions")
   @Override @Nullable
   public Adverbium condam() {
-    if (Objects.nonNull(gradus)
-        && StringUtils.isNoneBlank(lemma, scriptio)) {
+    if (Objects.nonNull(gradus) &&
+        StringUtils.isNoneBlank(lemma, scriptio)) {
       final Adverbium hoc = new Adverbium(gradus, lemma, scriptio);
-      if (Objects.isNull(hoc)) {
+      if (hoc == null) {
         nuntius.moneo(Utilitas.primamCapitaneamScribo(Categoria.ADVERBIUM.scriptio.replaceLast('a', '\u012B')),
                       StringUtils.firstNonBlank(lemma, scriptio),
                       "pr\u014Dducti\u014D f\u014Drmae n\u016Bllae pr\u014Dcessit.");
@@ -80,7 +81,7 @@ public class ConditorAdverbiis extends ConditorMultiplicibus <Adverbium> {
    * @see Gradus#definiam(String)
    * @see Verbum#lemma
    */
-  @Override public void allego(@NotNull final String nomen, @NotNull final String descriptor) {
+  @Override public void allego(@NonNull final String nomen, @NonNull final String descriptor) {
     if(Gradus.pittacium.equals(nomen)) {
       gradus = Gradus.definiam(descriptor);
     } else if(pittaciumLemmae.equals(nomen)) {

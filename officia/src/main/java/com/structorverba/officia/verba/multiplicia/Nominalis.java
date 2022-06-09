@@ -1,10 +1,10 @@
-package officia.src.main.java.com.structorverba.officia.verba.multiplicia;
+package com.structorverba.officia.verba.multiplicia;
 
-import officia.src.main.java.com.structorverba.officia.miscella.Utilitas;
-import officia.src.main.java.com.structorverba.officia.verba.Verbum;
-import officia.src.main.java.com.structorverba.officia.enumerationes.*;
+import com.structorverba.officia.miscella.Utilitas;
+import com.structorverba.officia.verba.Verbum;
+import com.structorverba.officia.enumerationes.*;
 
-import org.jetbrains.annotations.NotNull;
+import androidx.annotation.NonNull;
 
 /**
  * Classis {@link Nominalis} verbum aliquem d\u0113cl\u012Bn\u0101tum repraesentat.
@@ -16,25 +16,25 @@ public abstract class Nominalis <Hoc extends VerbumMultiplex <Hoc>> extends Verb
    * Valor hic d\u0113signat utrum r\u0113s hae repraesentat certum necne.
    * @see Specialitas
    */
-  @NotNull public final Specialitas specialitas;
+  @NonNull public final Specialitas specialitas;
 
   /**
    * Valor hic generem re\u012B huius d\u0113signat.
    * @see Genus
    */
-  @NotNull public final Genus genus;
+  @NonNull public final Genus genus;
 
   /**
    * Valor hic c\u0101sum re\u012B huius d\u0113signat.
    * @see Casus
    */
-  @NotNull public final Casus casus;
+  @NonNull public final Casus casus;
 
   /**
    * Valor hic numerum re\u012B huius d\u0113signat.
    * @see Numeralis
    */
-  @NotNull public final Numeralis numeralis;
+  @NonNull public final Numeralis numeralis;
 
   /**
    * Officium hoc c\u014Dnstr\u016Bct\u014Drem re\u012B classis huius perpetrat.
@@ -46,9 +46,9 @@ public abstract class Nominalis <Hoc extends VerbumMultiplex <Hoc>> extends Verb
    * @param lemma  val\u014Drem {@link Verbum#lemma} indicat.
    * @param scriptio val\u014Drem {@link #scriptio} indicat.
    */
-  protected Nominalis(@NotNull final Categoria categoria, @NotNull final Specialitas spclt,
-                      @NotNull final Genus gns, @NotNull final Casus css, @NotNull final Numeralis nmrl,
-                      @NotNull final String lemma, @NotNull final String scriptio) {
+  protected Nominalis(@NonNull final Categoria categoria, @NonNull final Specialitas spclt,
+                      @NonNull final Genus gns, @NonNull final Casus css, @NonNull final Numeralis nmrl,
+                      @NonNull final String lemma, @NonNull final String scriptio) {
     super(categoria, lemma, Specialitas.PROPRIUM.equals(spclt) ? Utilitas.primamCapitaneamScribo(scriptio)
                                                                : scriptio);
     specialitas = spclt;

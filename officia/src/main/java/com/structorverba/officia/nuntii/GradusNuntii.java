@@ -1,7 +1,6 @@
-package officia.src.main.java.com.structorverba.officia.nuntii;
+package com.structorverba.officia.nuntii;
 
-import org.jetbrains.annotations.NotNull;
-
+import androidx.annotation.NonNull;
 import java.util.function.Supplier;
 import java.util.logging.Level;
 import java.util.stream.Stream;
@@ -86,7 +85,7 @@ enum GradusNuntii {
    *   <li>Valor <a href="https://docs.oracle.com/javase/7/docs/api/java/util/logging/Level.html#ALL">ALL</a> val\u014Drem {@link #OMNIS} c\u014Dnsociat.</li>
    * </ul>
    */
-  @NotNull public final Supplier <@NotNull Level> gressus = () ->
+  @NonNull public final Supplier <Level> gressus = () ->
     switch (this) {
       case INERS -> Level.OFF;
       case GRAVIS -> Level.SEVERE;
@@ -99,7 +98,7 @@ enum GradusNuntii {
       case OMNIS -> Level.ALL;
     };
 
-  GradusNuntii(@NotNull final Level gressus) {
+  GradusNuntii(@NonNull final Level gressus) {
     praecellentia = gressus.intValue();
   }
 
@@ -109,7 +108,7 @@ enum GradusNuntii {
    * @param gressus valor tentandus
    * @return r\u0113s \u0113numer\u0101ti\u014Dnis huius quam valor {@code gressus} quadrat
    */
-  @NotNull public static GradusNuntii gradior(@NotNull final Level gressus) {
+  @NonNull public static GradusNuntii gradior(@NonNull final Level gressus) {
     return Stream.of(values())
                  .filter(gradus -> gradus.gressus.get().intValue() == gressus.intValue())
                  .findFirst().orElse(OMNIS);
@@ -123,7 +122,7 @@ enum GradusNuntii {
    *   {@code primus} est minor quam valor {@code secundus} aut n\u016Bllus s\u012B valor {@code primus} est aequ\u0101lis val\u014Dr\u012B
    *   {@code secundus}
    */
-  public static int compareTo(@NotNull final GradusNuntii primus, @NotNull final GradusNuntii secundus) {
+  public static int compareTo(@NonNull final GradusNuntii primus, @NonNull final GradusNuntii secundus) {
     return Integer.compare(primus.praecellentia, secundus.praecellentia);
   }
 }

@@ -1,12 +1,12 @@
-package officia.src.main.java.com.structorverba.officia.conditores;
+package com.structorverba.officia.conditores;
 
-import officia.src.main.java.com.structorverba.officia.miscella.Omne;
-import officia.src.main.java.com.structorverba.officia.nuntii.Nuntius;
-import officia.src.main.java.com.structorverba.officia.tenores.Tenor;
-import officia.src.main.java.com.structorverba.officia.verba.Verbum;
+import com.structorverba.officia.miscella.Omne;
+import com.structorverba.officia.nuntii.Nuntius;
+import com.structorverba.officia.tenores.Tenor;
+import com.structorverba.officia.verba.Verbum;
 
 import org.apache.commons.lang3.StringUtils;
-import org.jetbrains.annotations.*;
+import androidx.annotation.*;
 
 import java.util.function.Supplier;
 
@@ -20,18 +20,18 @@ public abstract class Conditor <Hoc extends Verbum <Hoc>> extends Omne {
   /**
    * Valor hic est v\u0101s classis {@link Nuntius} class\u012B hui.
    */
-  @NotNull protected final Nuntius nuntius;
+  @NonNull protected final Nuntius nuntius;
 
   /**
    * Valor hic val\u014Drem {@link Verbum#lemma} re\u012B pr\u014Dductae repraehentat.
    */
-  @NotNull protected String lemma = StringUtils.EMPTY;
+  @NonNull protected String lemma = StringUtils.EMPTY;
 
   /**
    * Officium hoc c\u014Dnstr\u016Bct\u014Drem re\u012B classis huius perpetrat.
    * @param nts val\u014Drem {@link #nuntius} supplet.
    */
-  protected Conditor(@NotNull final Supplier <@NotNull ? extends Nuntius> nts) {
+  protected Conditor(@NonNull final Supplier <? extends Nuntius> nts) {
     nuntius = nts.get();
   }
 
@@ -39,7 +39,7 @@ public abstract class Conditor <Hoc extends Verbum <Hoc>> extends Omne {
    * Modus hic val\u014Drem {@link #lemma} indit.
    * @param lm val\u014Drem indendum
    */
-  public final void funde(@NotNull final String lm) {
+  public final void funde(@NonNull final String lm) {
     lemma = lm.trim();
   }
 

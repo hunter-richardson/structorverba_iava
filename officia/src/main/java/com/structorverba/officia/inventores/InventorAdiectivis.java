@@ -1,12 +1,13 @@
-package officia.src.main.java.com.structorverba.officia.inventores;
+package com.structorverba.officia.inventores;
 
-import officia.src.main.java.com.structorverba.officia.lectores.LectorMultiplicibus;
-import officia.src.main.java.com.structorverba.officia.nuntii.Nuntius;
-import officia.src.main.java.com.structorverba.officia.verba.multiplicia.Adiectivum;
-import officia.src.main.java.com.structorverba.officia.enumerationes.*;
+import com.structorverba.officia.lectores.LectorMultiplicibus;
+import com.structorverba.officia.miscella.Utilitas;
+import com.structorverba.officia.nuntii.Nuntius;
+import com.structorverba.officia.verba.multiplicia.Adiectivum;
+import com.structorverba.officia.enumerationes.*;
 
 import org.apache.commons.lang3.ObjectUtils;
-import org.jetbrains.annotations.*;
+import androidx.annotation.*;
 
 import javax.ejb.*;
 import java.util.function.*;
@@ -26,14 +27,14 @@ public final class InventorAdiectivis extends Inventor <Adiectivum> {
    * Valor hic viam re\u012B classis huiuc facit.
    * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
    */
-  @NotNull public static final Supplier <InventorAdiectivis> fac =
+  @NonNull public static final Supplier <InventorAdiectivis> fac =
     () -> ObjectUtils.firstNonNull(instantia, instantia = new InventorAdiectivis());
 
-  @NotNull private Specialitas specialitas = Specialitas.NULLUM;
-  @NotNull private Genus       genus       = Genus.NULLUM;
-  @NotNull private Numeralis   numeralis   = Numeralis.NULLUS;
-  @NotNull private Casus       casus       = Casus.DERECTUS;
-  @NotNull private Gradus      gradus      = Gradus.NULLUS;
+  @NonNull private Specialitas specialitas = Specialitas.NULLUM;
+  @NonNull private Genus       genus       = Genus.NULLUM;
+  @NonNull private Numeralis   numeralis   = Numeralis.NULLUS;
+  @NonNull private Casus       casus       = Casus.DERECTUS;
+  @NonNull private Gradus      gradus      = Gradus.NULLUS;
 
   private InventorAdiectivis() {
     super(Nuntius.NuntiusInventoriAdiectivis.fac);
@@ -45,8 +46,8 @@ public final class InventorAdiectivis extends Inventor <Adiectivum> {
    *   Adiectivum} perc\u014Dlere
    * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Predicate.html">Prediate</a>
    */
-  @Override @NotNull
-  public Predicate <@NotNull Adiectivum> inquiram() {
+  @Override @NonNull
+  public Predicate <Adiectivum> inquiram() {
     return adiectivum -> specialitas.equals(adiectivum.specialitas)
                          && genus.equals(adiectivum.genus)
                          && casus.equals(adiectivum.casus)
@@ -80,7 +81,7 @@ public final class InventorAdiectivis extends Inventor <Adiectivum> {
    * @see Casus#ut(Enum)
    * @see Gradus#ut(Enum)
    */
-  @Override protected void allegam(@NotNull final Enum <@NotNull ?> illud) {
+  @Override protected void allegam(@NonNull final Enum <?> illud) {
     if (illud instanceof Specialitas) {
       specialitas = Specialitas.ut(illud);
       nuntius.garrio("Quaesti\u014Dn\u012B adi\u0113c\u012B conditi\u014Dnem novam:",

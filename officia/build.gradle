@@ -22,8 +22,8 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_12
-        targetCompatibility JavaVersion.VERSION_12
+        sourceCompatibility JavaVersion.VERSION_HIGHER
+        targetCompatibility JavaVersion.VERSION_HIGHER
     }
 }
 
@@ -32,14 +32,13 @@ dependencies {
 
     implementation              "$compatx:$compat:1.4.1"
 
-    compileOnly                 "$jetbrains:$annotations:23.0.0"
     annotationProcessor         "$projectlombok:$lombok:1.18.24"
     implementation              "$apache:$collections:4.4"
     implementation              "$apache:$lang:3.12.0"
     implementation              "$chaosfirebolt:$numeralConverter:2.0.1"
 
-    testImplementation          "$junit:$junit:4.1"
-    testCompileOnly             "$projectlombok:$lombok:1.18.24"
+    testImplementation          "$junit:$junit:4.13.2"
+    testImplementation          "$jupiter:$jupiter_api:5.8.2"
     testAnnotationProcessor     "$projectlombok:$lombok:1.18.24"
 
     androidTestImplementation   "$testx:$junit:1.1.3"

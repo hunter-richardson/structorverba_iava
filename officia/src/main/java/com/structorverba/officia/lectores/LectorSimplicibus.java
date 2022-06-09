@@ -1,12 +1,12 @@
-package officia.src.main.java.com.structorverba.officia.lectores;
+package com.structorverba.officia.lectores;
 
-import officia.src.main.java.com.structorverba.officia.nuntii.Nuntius;
-import officia.src.main.java.com.structorverba.officia.tenores.*;
-import officia.src.main.java.com.structorverba.officia.verba.VerbumSimplex;
-import officia.src.main.java.com.structorverba.officia.enumerationes.Categoria;
+import com.structorverba.officia.nuntii.Nuntius;
+import com.structorverba.officia.tenores.*;
+import com.structorverba.officia.verba.VerbumSimplex;
+import com.structorverba.officia.enumerationes.Categoria;
 
 import org.apache.commons.lang3.ObjectUtils;
-import org.jetbrains.annotations.*;
+import androidx.annotation.*;
 
 import javax.ejb.*;
 import java.util.function.Supplier;
@@ -25,9 +25,9 @@ public abstract class LectorSimplicibus <Hoc extends VerbumSimplex <Hoc>> extend
    * @param nts  val\u014Drem {@link Lector#nuntius} supplet.
    * @param tnr  val\u014Drem {@link Lector#tenor} supplet.
    */
-  protected LectorSimplicibus(@NotNull Categoria ctgr,
-                              @NotNull Supplier <@NotNull ? extends Nuntius> nts,
-                              @NotNull Supplier <@NotNull ? extends Tenor <Hoc>> tnr) {
+  protected LectorSimplicibus(@NonNull Categoria ctgr,
+                              @NonNull Supplier <? extends Nuntius> nts,
+                              @NonNull Supplier <? extends Tenor <Hoc>> tnr) {
     super(ctgr, nts, tnr);
   }
 
@@ -38,7 +38,7 @@ public abstract class LectorSimplicibus <Hoc extends VerbumSimplex <Hoc>> extend
    * @return Rem classis {@link Hoc} quam val\u014Drem {@code verbum} quadrat. <br>
    * Modus hic val\u014Drem {@code null} refert s\u012B nihil quadrat val\u014Drem {@code verbum}.
    */
-  @Nullable public final Hoc adveniam(@NotNull final String verbum) {
+  @Nullable public final Hoc adveniam(@NonNull final String verbum) {
     legam(verbum);
     final Hoc hoc = tenor.refero();
     if (hoc == null) {
@@ -65,7 +65,7 @@ public abstract class LectorSimplicibus <Hoc extends VerbumSimplex <Hoc>> extend
      * Valor hic viam re\u012B classis huiuc facit.
      * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
      */
-    @NotNull public static final Supplier <LectorConiunctivis> fac =
+    @NonNull public static final Supplier <LectorConiunctivis> fac =
       () -> ObjectUtils.firstNonNull(instantia, instantia = new LectorConiunctivis());
 
     private LectorConiunctivis() {
@@ -89,7 +89,7 @@ public abstract class LectorSimplicibus <Hoc extends VerbumSimplex <Hoc>> extend
      * Valor hic viam re\u012B classis huiuc facit.
      * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
      */
-    @NotNull public static final Supplier <LectorInteriectionibus> fac =
+    @NonNull public static final Supplier <LectorInteriectionibus> fac =
       () -> ObjectUtils.firstNonNull(instantia, instantia = new LectorInteriectionibus());
 
     private LectorInteriectionibus() {

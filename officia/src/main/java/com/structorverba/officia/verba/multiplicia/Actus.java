@@ -1,16 +1,14 @@
-package officia.src.main.java.com.structorverba.officia.verba.multiplicia;
+package com.structorverba.officia.verba.multiplicia;
 
-import officia.src.main.java.com.structorverba.officia.conditores.multiplicia.ConditorActis;
-import officia.src.main.java.com.structorverba.officia.inventores.InventorActis;
-import officia.src.main.java.com.structorverba.officia.lectores.LectorMultiplicibus;
-import officia.src.main.java.com.structorverba.officia.miscella.Utilitas;
-import officia.src.main.java.com.structorverba.officia.nuntii.Nuntius;
-import officia.src.main.java.com.structorverba.officia.tenores.TenorMultiplicibus;
-import officia.src.main.java.com.structorverba.officia.enumerationes.*;
+import com.structorverba.officia.conditores.multiplicia.ConditorActis;
+import com.structorverba.officia.inventores.InventorActis;
+import com.structorverba.officia.lectores.LectorMultiplicibus;
+import com.structorverba.officia.miscella.Utilitas;
+import com.structorverba.officia.nuntii.Nuntius;
+import com.structorverba.officia.tenores.TenorMultiplicibus;
+import com.structorverba.officia.enumerationes.*;
 
-import org.jetbrains.annotations.*;
-
-import java.util.Objects;
+import androidx.annotation.NonNull;
 
 import lombok.Getter;
 
@@ -30,39 +28,39 @@ public final class Actus extends VerbumMultiplex <Actus> {
    * Valor hic modum re\u012B huius d\u0113signat.
    * @see Modus
    */
-  @NotNull public final Modus modus;
+  @NonNull public final Modus modus;
   /**
    * Valor hic v\u014Dcem re\u012B huius d\u0113signat.
    * @see Vox
    */
-  @NotNull public final Vox vox;
+  @NonNull public final Vox vox;
   /**
    * Valor hic temporem re\u012B huius d\u0113signat.
    * @see Tempus
    */
-  @NotNull public final Tempus tempus;
+  @NonNull public final Tempus tempus;
   /**
    * Valor hic numerum re\u012B huius d\u0113signat.
    * @see Numeralis
    */
-  @NotNull public final Numeralis numeralis;
+  @NonNull public final Numeralis numeralis;
   /**
    * Valor hic pers\u014Dnam re\u012B huius d\u0113signat.
    * @see Persona
    */
-  @NotNull public final Persona persona;
+  @NonNull public final Persona persona;
   @Getter(lazy = true)
-  @NotNull private final LectorMultiplicibus.LectorAdiectivis adiectiva = LectorMultiplicibus.LectorAdiectivis.fac.get();
+  @NonNull private final LectorMultiplicibus.LectorAdiectivis adiectiva = LectorMultiplicibus.LectorAdiectivis.fac.get();
   @Getter(lazy = true)
-  @NotNull private final LectorMultiplicibus.LectorNominibus nomina = LectorMultiplicibus.LectorNominibus.fac.get();
+  @NonNull private final LectorMultiplicibus.LectorNominibus nomina = LectorMultiplicibus.LectorNominibus.fac.get();
   @Getter(lazy = true)
-  @NotNull private final LectorMultiplicibus.LectorActis acta = LectorMultiplicibus.LectorActis.fac.get();
+  @NonNull private final LectorMultiplicibus.LectorActis acta = LectorMultiplicibus.LectorActis.fac.get();
   @Getter(lazy = true)
-  @NotNull private final Nuntius.NuntiusActorum nuntius = Nuntius.NuntiusActorum.fac.get();
+  @NonNull private final Nuntius.NuntiusActorum nuntius = Nuntius.NuntiusActorum.fac.get();
 
-  public Actus(@NotNull final Modus modus, @NotNull final Vox vox, @NotNull final Tempus tempus,
-               @NotNull final Numeralis numeralis, @NotNull final Persona persona,
-               @NotNull final String lemma, @NotNull final String scriptio) {
+  public Actus(@NonNull final Modus modus, @NonNull final Vox vox, @NonNull final Tempus tempus,
+               @NonNull final Numeralis numeralis, @NonNull final Persona persona,
+               @NonNull final String lemma, @NonNull final String scriptio) {
     super(Categoria.ACTUS, lemma, Utilitas.minusculasScribo(scriptio));
     this.modus = modus;
     this.vox = vox;
@@ -83,18 +81,17 @@ public final class Actus extends VerbumMultiplex <Actus> {
    * @see LectorMultiplicibus.LectorAdiectivis#adveniam(String, Enum[])
    * @see Modus#PARTICIPALIS
    */
-  @Nullable public Adiectivum participem(@NotNull final Vox vx, @NotNull final Tempus tmps,
-                                         @NotNull final Genus gns, @NotNull final Casus css,
-                                         @NotNull final Numeralis nmrl) {
-    if (Modus.PARTICIPALIS.equals(modus)
-        && vox.equals(vx)
-        && tempus.equals(tmps)) {
+  @Nullable public Adiectivum participem(@NonNull final Vox vx, @NonNull final Tempus tmps,
+                                         @NonNull final Genus gns, @NonNull final Casus css,
+                                         @NonNull final Numeralis nmrl) {
+    if (Modus.PARTICIPALIS.equals(modus) &&
+        vox.equals(vx) &&
+        tempus.equals(tmps)) {
       return adiectiva.adveniam(toString(), Specialitas.COMMUNE, gns, css, nmrl);
     } else {
       Actus alium = acta.adveniam(lemma, Modus.PARTICIPALIS, vx, tmps);
-      return Objects.isNull(alium) ? null
-                                   : adiectiva.adveniam(alium.toString(),
-                                                        Specialitas.COMMUNE, gns, css, nmrl);
+      return alium == null ? null
+                           : adiectiva.adveniam(alium.toString(), Specialitas.COMMUNE, gns, css, nmrl);
     }
   }
 
@@ -109,8 +106,8 @@ public final class Actus extends VerbumMultiplex <Actus> {
    * @see Modus#PARTICIPALIS
    * @see #participem(Vox, Tempus, Genus, Casus, Numeralis)
    */
-  @Nullable public Adiectivum participem(@NotNull final Vox vx, @NotNull final Genus gns,
-                                         @NotNull final Casus css, @NotNull final Numeralis nmrl) {
+  @Nullable public Adiectivum participem(@NonNull final Vox vx, @NonNull final Genus gns,
+                                         @NonNull final Casus css, @NonNull final Numeralis nmrl) {
     return participem(vx, tempus, gns, css, nmrl);
   }
 
@@ -125,8 +122,8 @@ public final class Actus extends VerbumMultiplex <Actus> {
    * @see Modus#PARTICIPALIS
    * @see #participem(Vox, Tempus, Genus, Casus, Numeralis)
    */
-  @Nullable public Adiectivum participem(@NotNull final Tempus tmps, @NotNull final Genus gns,
-                                         @NotNull final Casus css, @NotNull final Numeralis nmrl) {
+  @Nullable public Adiectivum participem(@NonNull final Tempus tmps, @NonNull final Genus gns,
+                                         @NonNull final Casus css, @NonNull final Numeralis nmrl) {
     return participem(vox, tmps, gns, css, nmrl);
   }
 
@@ -140,8 +137,8 @@ public final class Actus extends VerbumMultiplex <Actus> {
    * @see Modus#PARTICIPALIS
    * @see #participem(Vox, Tempus, Genus, Casus, Numeralis)
    */
-  @Nullable public Adiectivum participem(@NotNull final Genus gns, @NotNull final Casus css,
-                                         @NotNull final Numeralis nmrl) {
+  @Nullable public Adiectivum participem(@NonNull final Genus gns, @NonNull final Casus css,
+                                         @NonNull final Numeralis nmrl) {
     return participem(vox, tempus, gns, css, nmrl);
   }
 
@@ -156,7 +153,7 @@ public final class Actus extends VerbumMultiplex <Actus> {
    * @see Genus#NEUTRUM
    * @see Specialitas#COMMUNE
    */
-  @Nullable public Nomen nomen(@NotNull final Tempus tmps, @NotNull final Casus css) {
+  @Nullable public Nomen nomen(@NonNull final Tempus tmps, @NonNull final Casus css) {
     return nomina.adveniam(lemma, tmps, css, Genus.NEUTRUM, Specialitas.COMMUNE);
   }
 
@@ -168,7 +165,7 @@ public final class Actus extends VerbumMultiplex <Actus> {
    * @see Tempus#GERUNDIVUS
    * @see #nomen(Tempus, Casus)
    */
-  @Nullable public Nomen gerundivus(@NotNull final Casus css) {
+  @Nullable public Nomen gerundivus(@NonNull final Casus css) {
     return nomen(Tempus.GERUNDIVUS, css);
   }
 
@@ -180,7 +177,7 @@ public final class Actus extends VerbumMultiplex <Actus> {
    * @see Tempus#SUPINUS
    * @see #nomen(Tempus, Casus)
    */
-  @Nullable public Nomen supinus(@NotNull final Casus css) {
+  @Nullable public Nomen supinus(@NonNull final Casus css) {
     return nomen(Tempus.SUPINUS, css);
   }
 }

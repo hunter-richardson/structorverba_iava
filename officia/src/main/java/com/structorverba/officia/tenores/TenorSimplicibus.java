@@ -1,13 +1,12 @@
-package officia.src.main.java.com.structorverba.officia.tenores;
+package com.structorverba.officia.tenores;
 
-import officia.src.main.java.com.structorverba.officia.conditores.ConditorSimplicibus;
-import officia.src.main.java.com.structorverba.officia.nuntii.Nuntius;
-import officia.src.main.java.com.structorverba.officia.verba.*;
+import com.structorverba.officia.conditores.ConditorSimplicibus;
+import com.structorverba.officia.nuntii.Nuntius;
+import com.structorverba.officia.verba.*;
 
 import org.apache.commons.lang3.ObjectUtils;
-import org.jetbrains.annotations.*;
+import androidx.annotation.NonNull;
 
-import java.util.Objects;
 import java.util.function.Supplier;
 
 import javax.ejb.*;
@@ -23,15 +22,15 @@ public abstract class TenorSimplicibus <Hoc extends VerbumSimplex <Hoc>> extends
   /**
    * Valor hic est v\u0101s classis {@link ConditorSimplicibus} class\u012B extent\u012B huius.
    */
-  @NotNull protected final ConditorSimplicibus <@NotNull Hoc> conditor;
+  @NonNull protected final ConditorSimplicibus <Hoc> conditor;
 
   /**
    * Officium hoc c\u014dnstr\u016Bct\u014drem re\u012B classis huius perpetrat.
    * @param nts   val\u014drem {@link Tenor#nuntius} supplet.
    * @param cndtr val\u014drem {@link #conditor} supplet.
    */
-  protected TenorSimplicibus(@NotNull final Supplier <@NotNull ? extends Nuntius> nts,
-                             @NotNull final Supplier <@NotNull ? extends ConditorSimplicibus <@NotNull Hoc>> cndtr) {
+  protected TenorSimplicibus(@NonNull final Supplier <? extends Nuntius> nts,
+                             @NonNull final Supplier <? extends ConditorSimplicibus <Hoc>> cndtr) {
     super(nts);
     conditor = cndtr.get();
   }
@@ -41,7 +40,7 @@ public abstract class TenorSimplicibus <Hoc extends VerbumSimplex <Hoc>> extends
    */
   @Override protected final void finiam() {
     hoc = conditor.condam();
-    if (Objects.isNull(hoc)) {
+    if (hoc == null) {
       nuntius.moneo("Pr\u014dducti\u014d verb\u012B pr\u014dcessimus n\u016Bllae f\u014drmae.");
     }
   }
@@ -51,7 +50,7 @@ public abstract class TenorSimplicibus <Hoc extends VerbumSimplex <Hoc>> extends
    * @param scriptio f\u014drmam scr\u012Bptam indendus
    * @see Verbum#lemma
    */
-  @Override protected void scribo(@NotNull String scriptio) {
+  @Override protected void scribo(@NonNull String scriptio) {
     conditor.funde(scriptio);
   }
 
@@ -70,7 +69,7 @@ public abstract class TenorSimplicibus <Hoc extends VerbumSimplex <Hoc>> extends
      * Valor hic viam re\u012B classis huiuc facit.
      * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
      */
-    @NotNull public static final Supplier <TenorConiunctivis> fac =
+    @NonNull public static final Supplier <TenorConiunctivis> fac =
       () -> ObjectUtils.firstNonNull(instantia, instantia = new TenorConiunctivis());
 
     private TenorConiunctivis() {
@@ -94,7 +93,7 @@ public abstract class TenorSimplicibus <Hoc extends VerbumSimplex <Hoc>> extends
      * Valor hic viam re\u012B classis huiuc facit.
      * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
      */
-    @NotNull public static final Supplier <TenorInteriectionibus> fac =
+    @NonNull public static final Supplier <TenorInteriectionibus> fac =
       () -> ObjectUtils.firstNonNull(instantia, instantia = new TenorInteriectionibus());
 
     private TenorInteriectionibus() {

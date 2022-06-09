@@ -1,12 +1,13 @@
-package officia.src.main.java.com.structorverba.officia.conditores;
+package com.structorverba.officia.conditores;
 
-import officia.src.main.java.com.structorverba.officia.miscella.Utilitas;
-import officia.src.main.java.com.structorverba.officia.nuntii.Nuntius;
-import officia.src.main.java.com.structorverba.officia.tenores.Tenor;
-import officia.src.main.java.com.structorverba.officia.verba.VerbumSimplex;
+import com.structorverba.officia.enumerationes.Categoria;
+import com.structorverba.officia.miscella.Utilitas;
+import com.structorverba.officia.nuntii.Nuntius;
+import com.structorverba.officia.tenores.Tenor;
+import com.structorverba.officia.verba.VerbumSimplex;
 
 import org.apache.commons.lang3.*;
-import org.jetbrains.annotations.*;
+import androidx.annotation.*;
 
 import java.util.Objects;
 import java.util.function.*;
@@ -24,15 +25,15 @@ public abstract class ConditorSimplicibus <Hoc extends VerbumSimplex <Hoc>> exte
    * Valor hic viam re\u012B classis {@link Hoc} facit.
    * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html">Function</a>
    */
-  @NotNull protected final Function <@NotNull String, @NotNull Hoc> constructor;
+  @NonNull protected final Function <String, Hoc> constructor;
 
   /**
    * Officium hoc c\u014Dnstr\u016Bct\u014Drem re\u012B classis huius perpetrat.
    * @param nts   val\u014Drem {@link Conditor#nuntius} supplet.
    * @param cnstr val\u014Drem {@link #constructor} supplet.
    */
-  protected ConditorSimplicibus(@NotNull final Supplier <@NotNull ? extends Nuntius> nts,
-                                @NotNull final Function <@NotNull String, @NotNull Hoc> cnstr) {
+  protected ConditorSimplicibus(@NonNull final Supplier <? extends Nuntius> nts,
+                                @NonNull final Function <String, Hoc> cnstr) {
     super(nts);
     constructor = cnstr;
   }
@@ -68,7 +69,7 @@ public abstract class ConditorSimplicibus <Hoc extends VerbumSimplex <Hoc>> exte
      * Valor hic viam re\u012B classis huiuc facit.
      * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
      */
-    @NotNull public static final Supplier <ConditorConiunctivis> fac =
+    @NonNull public static final Supplier <ConditorConiunctivis> fac =
       () -> ObjectUtils.firstNonNull(instantia, instantia = new ConditorConiunctivis());
 
     private ConditorConiunctivis() {
@@ -82,7 +83,7 @@ public abstract class ConditorSimplicibus <Hoc extends VerbumSimplex <Hoc>> exte
      * @param hoc rem tentanda
      */
     protected void refero(@Nullable final VerbumSimplex.Coniunctivum hoc) {
-      if (Objects.isNull(hoc)) {
+      if (hoc == null) {
         nuntius.certioro(Utilitas.primamCapitaneamScribo(Categoria.CONIUNCTIVUM.scriptio.replaceLast("a", "um")),
                          lemma, "f\u012Bn\u012Btur pr\u014Dd\u016Bcere.");
       } else {
@@ -106,7 +107,7 @@ public abstract class ConditorSimplicibus <Hoc extends VerbumSimplex <Hoc>> exte
      * Valor hic viam re\u012B classis huiuc facit.
      * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
      */
-    @NotNull public static final Supplier <ConditorInteriectionibus> fac =
+    @NonNull public static final Supplier <ConditorInteriectionibus> fac =
       () -> ObjectUtils.firstNonNull(instantia, instantia = new ConditorInteriectionibus());
 
     private ConditorInteriectionibus() {
@@ -119,7 +120,7 @@ public abstract class ConditorSimplicibus <Hoc extends VerbumSimplex <Hoc>> exte
      * @param hoc rem tentanda
      */
     protected void refero(@Nullable final VerbumSimplex.Interiectio hoc) {
-      if (Objects.isNull(hoc)) {
+      if (hoc == null) {
         nuntius.certioro(Utilitas.primamCapitaneamScribo(Categoria.INTERIECTIO.scriptio.replaceLast("n\u0113s", StringUtils.EMPTY)),
                          lemma, "f\u012Bn\u012Btur pr\u014Dd\u016Bcere.");
       } else {

@@ -1,8 +1,10 @@
-package officia.src.test.java.com.structorverba.officia;
+package com.structorverba.officia;
 
-import officia.src.main.java.com.structorverba.officia.enumerationes.*;
+import com.structorverba.officia.enumerationes.*;
 
-import org.jetbrains.annotations.NotNull;
+import androidx.annotation.NonNull;
+import com.structorverba.officia.miscella.Omne;
+import com.structorverba.officia.miscella.StructorVerba;
 import org.junit.jupiter.api.MethodOrderer;
 import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Test;
@@ -21,16 +23,16 @@ import lombok.Getter;
  */
 @SuppressWarnings({ "SpellCheckingInspection", "FieldCanBeLocal" })
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
-final class DoloremIpsum extends Omnum {
-  @NotNull @Getter(lazy = true)
+final class DoloremIpsum extends Omne {
+  @NonNull @Getter(lazy = true)
   private final StructorVerba structor = StructorVerba.fac.get();
 
-  @NotNull private final String productaPrima   = "Neque porr\u014D quisquam est";
-  @NotNull private final String productaSecunda = "Qui dol\u014Drem ipsum quia dolor sit amet";
-  @NotNull private final String productaTertia  = "C\u014Dnsectetur adipisci velit";
-  @NotNull private final String productaQuarta  = "Sed quia n\u014Dnnumquam eius modi tempora incidunt";
-  @NotNull private final String productaQuinta  = "Ut lab\u014Dre et dol\u014Dre magnam aliquam quaerat voluptatem";
-  @NotNull private final String productaCuncta  = String.join(' ', productaPrima, productaSecunda, productaTertia, productaQuarta, productaQuinta);
+  @NonNull private final String productaPrima   = "Neque porr\u014D quisquam est";
+  @NonNull private final String productaSecunda = "Qui dol\u014Drem ipsum quia dolor sit amet";
+  @NonNull private final String productaTertia  = "C\u014Dnsectetur adipisci velit";
+  @NonNull private final String productaQuarta  = "Sed quia n\u014Dnnumquam eius modi tempora incidunt";
+  @NonNull private final String productaQuinta  = "Ut lab\u014Dre et dol\u014Dre magnam aliquam quaerat voluptatem";
+  @NonNull private final String productaCuncta  = String.join(' ', productaPrima, productaSecunda, productaTertia, productaQuarta, productaQuinta);
 
   /**
    * Modus hic partem pr\u012Bmam tentat. <br>
