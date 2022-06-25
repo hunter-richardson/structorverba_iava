@@ -13,7 +13,7 @@ import lombok.Getter;
  * Classis {@link Exempla} exemplum singulum \u016Bs\u016Bfructu\u0101ri\u012Bs iam d\0113m\u014Dnstrat. <br>
  * Exempla addit\u012Bcia posth\u0101c scr\u012Bbantur.
  */
-@SuppressWarnings({ "SpellCheckingInspection", "FieldCanBeLocal" })
+@SuppressWarnings({"SpellCheckingInspection", "FieldCanBeLocal", "NewClassNamingConvention"})
 public final class Exempla extends Omne {
   @NonNull @Getter(lazy = true)
   private final StructorVerba structor = StructorVerba.fac.get();
@@ -26,6 +26,7 @@ public final class Exempla extends Omne {
    */
   @Test
   public void producta() {
+    //noinspection ConstantConditions
     System.out.println(new Tentamen.TentamenVerbale(producta, "pr\u014Dducta")
                          .exsequar(structor.strue(structor.adveniam("ecce", Categoria.INTERIECTIO),
                                                   structor.adveniam("lingua", Categoria.NOMEN,

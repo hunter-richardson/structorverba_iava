@@ -15,7 +15,7 @@ import lombok.Getter;
 /**
  * Classis {@link Numeri} oper\u0101ti\u014Dn\u0113s math\u0113matic\u0101s r\u0113rum classis {@link VerbumSimplex.Numerus} tentat.
  */
-@SuppressWarnings({ "SpellCheckingInspection", "FieldCanBeLocal" })
+@SuppressWarnings({"SpellCheckingInspection", "FieldCanBeLocal", "NewClassNamingConvention"})
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 final class Numeri extends Omne {
   @NonNull

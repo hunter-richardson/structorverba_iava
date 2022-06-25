@@ -13,7 +13,7 @@ import lombok.Getter;
  * Classis {@link Carthago} versi\u014Dnem secundam tent\u0101min\u0101rum programm\u0101t\u012B Str\u016BctorVerba d\u0113f\u012Bnit.
  * M\u0101rc\u014D Porci\u014D Cat\u014Dn\u012B Mai\u014Dr\u012B laudat cum vehement\u012B eius "c\u0113terum c\u0113nse\u014D Carth\u0101ginem esse d\u0113lendam".
  * */
-@SuppressWarnings({ "SpellCheckingInspection", "FieldCanBeLocal" })
+@SuppressWarnings({"SpellCheckingInspection", "FieldCanBeLocal", "NewClassNamingConvention"})
 public class Carthago extends Omne {
   @NonNull @Getter(lazy = true)
   private final StructorVerba structor = StructorVerba.fac.get();

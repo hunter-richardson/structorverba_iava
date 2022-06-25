@@ -21,7 +21,7 @@ import lombok.Getter;
  * @see <a href="http://www.thelatinlibrary.com/cicero/fin1.shtml#32">D\u0113 F\u012Bnibus Bon\u014Drum et Mal\u014Drum</a>
  * @see <a href="https://lipsum.com">"Lorem Ipsum"</a>
  */
-@SuppressWarnings({ "SpellCheckingInspection", "FieldCanBeLocal" })
+@SuppressWarnings({"SpellCheckingInspection", "FieldCanBeLocal", "NewClassNamingConvention"})
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 final class DoloremIpsum extends Omne {
   @NonNull @Getter(lazy = true)
