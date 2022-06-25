@@ -1,17 +1,15 @@
 package com.structorverba.officia.inventores;
 
+import androidx.annotation.*;
+import com.structorverba.officia.enumerationes.*;
 import com.structorverba.officia.lectores.LectorMultiplicibus;
 import com.structorverba.officia.miscella.Utilitas;
 import com.structorverba.officia.nuntii.Nuntius;
 import com.structorverba.officia.verba.multiplicia.Nomen;
-import com.structorverba.officia.enumerationes.*;
-
+import jakarta.ejb.*;
 import org.apache.commons.lang3.ObjectUtils;
-import androidx.annotation.*;
 
 import java.util.function.*;
-
-import javax.ejb.*;
 
 /**
  * Classis {@link InventorNominibus} est v\u0101s classis {@link Inventor} class\u012B {@link Nomen}.
@@ -104,7 +102,7 @@ public final class InventorNominibus extends Inventor <Nomen> {
       nuntius.garrio("Quaesti\u014Dn\u012B adi\u0113c\u012B conditi\u014Dnem novam:",
                      Tempus.pittacium, illud);
     } else {
-      nuntius.moneo(Utilitas.primamCapitaneamScribo(Categoria.NOMEN.scriptio.replaceLast('a', '\u012B')),
+      nuntius.moneo(Utilitas.primamCapitaneamScribo(Categoria.NOMEN.scriptio.replace('a', '\u012B')),
                     "inqu\u012Bs\u012Bti\u014D n\u014Dmin\u012B inop\u012Bn\u0101ta \u016Bsa'st:",
                     illud);
     }

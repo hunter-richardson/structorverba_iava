@@ -1,18 +1,16 @@
 buildscript {
     repositories {
         mavenLocal()
+        google()
         maven {
-            url "$gradleUrl"
+            url gradleUrl
         }
         maven {
-            url "$googleUrl"
-        }
-        maven {
-            url "$mavenUrl"
+            url mavenUrl
         }
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:4.0.2'
+        classpath gradle_build
     }
 }
 
@@ -27,6 +25,12 @@ allprojects {
     repositories {
         mavenLocal()
         google()
+        maven {
+            url gradleUrl
+        }
+        maven {
+            url mavenUrl
+        }
     }
 }
 

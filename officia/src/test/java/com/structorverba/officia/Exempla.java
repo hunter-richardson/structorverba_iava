@@ -4,7 +4,8 @@ import com.structorverba.officia.miscella.*;
 import com.structorverba.officia.enumerationes.*;
 
 import androidx.annotation.NonNull;
-import org.junit.Test;
+import com.structorverba.officia.verba.multiplicia.Actus;
+import org.junit.jupiter.api.Test;
 
 import lombok.Getter;
 
@@ -24,7 +25,7 @@ public final class Exempla extends Omne {
    * Verba "Ecce lingua Lat\u012Bna placet pr\u014Ddestque" pr\u014Dd\u016Bcat.
    */
   @Test
-  public void producta( ) {
+  public void producta() {
     System.out.println(new Tentamen.TentamenVerbale(producta, "pr\u014Dducta")
                          .exsequar(structor.strue(structor.adveniam("ecce", Categoria.INTERIECTIO),
                                                   structor.adveniam("lingua", Categoria.NOMEN,

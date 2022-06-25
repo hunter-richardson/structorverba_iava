@@ -1,5 +1,6 @@
 package com.structorverba.officia.verba.multiplicia;
 
+import androidx.annotation.*;
 import com.structorverba.officia.conditores.multiplicia.ConditorActis;
 import com.structorverba.officia.inventores.InventorActis;
 import com.structorverba.officia.lectores.LectorMultiplicibus;
@@ -7,8 +8,6 @@ import com.structorverba.officia.miscella.Utilitas;
 import com.structorverba.officia.nuntii.Nuntius;
 import com.structorverba.officia.tenores.TenorMultiplicibus;
 import com.structorverba.officia.enumerationes.*;
-
-import androidx.annotation.NonNull;
 
 import lombok.Getter;
 

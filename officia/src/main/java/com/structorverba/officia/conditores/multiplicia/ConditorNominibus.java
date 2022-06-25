@@ -1,19 +1,16 @@
 package com.structorverba.officia.conditores.multiplicia;
 
+import androidx.annotation.*;
 import com.structorverba.officia.conditores.Conditor;
+import com.structorverba.officia.enumerationes.*;
 import com.structorverba.officia.miscella.Utilitas;
 import com.structorverba.officia.nuntii.Nuntius;
 import com.structorverba.officia.verba.Verbum;
-import com.structorverba.officia.verba.multiplicia.*;
-import com.structorverba.officia.enumerationes.*;
-
+import com.structorverba.officia.verba.multiplicia.Nomen;
+import jakarta.ejb.*;
 import org.apache.commons.lang3.*;
-import androidx.annotation.*;
 
-import java.util.Objects;
 import java.util.function.Supplier;
-
-import javax.ejb.*;
 
 /**
  * Classis {@link ConditorNominibus} est v\u0101s classis {@link Conditor} class\u012B {@link Nomen}.
@@ -52,21 +49,21 @@ public final class ConditorNominibus extends ConditorMultiplicibus <Nomen> {
   @SuppressWarnings("ConstantConditions")
   @Override @Nullable
   public Nomen condam() {
-    if (ObjectUtils.allNonNull(specialitas, genus, casus, numeralis) &&
+    if (ObjectUtils.allNotNull(specialitas, genus, casus, numeralis) &&
         StringUtils.isNoneBlank(lemma, scriptio)) {
       final Nomen hoc = new Nomen(specialitas, genus, casus, numeralis, tempus, lemma, scriptio);
       if (hoc == null) {
-        nuntius.moneo(Utilitas.primamCapitaneamScribo(Categoria.NOMEN.scriptio.replaceLast("a", "is")),
+        nuntius.moneo(Utilitas.primamCapitaneamScribo(Categoria.NOMEN.scriptio.replace("a", "is")),
                       StringUtils.firstNonBlank(lemma, scriptio),
                       "pr\u014Dducti\u014D f\u014Drmae n\u016Bllae pr\u014Dcessit.");
         return null;
       } else {
-        nuntius.certioro(Utilitas.primamCapitaneamScribo(Categoria.NOMEN.scriptio.replaceLast("a", "en")),
+        nuntius.certioro(Utilitas.primamCapitaneamScribo(Categoria.NOMEN.scriptio.replace("ina", "en")),
                          scriptio, "f\u012Bn\u012Btur pr\u014Dd\u016Bcere.");
         return hoc;
       }
     } else {
-      nuntius.moneo(Utilitas.primamCapitaneamScribo(Categoria.NOMEN.scriptio.replaceLast("a", "is")),
+      nuntius.moneo(Utilitas.primamCapitaneamScribo(Categoria.NOMEN.scriptio.replace("a", "is")),
                     StringUtils.firstNonBlank(lemma, scriptio),
                     "pr\u014Dducti\u014D f\u014Drmae n\u016Bllae pr\u014Dcessit.");
       return null;
@@ -96,7 +93,7 @@ public final class ConditorNominibus extends ConditorMultiplicibus <Nomen> {
     } else if (pittaciumLemmae.equals(nomen)) {
       lemma = descriptor.trim();
     } else {
-      nuntius.moneo(Utilitas.primamCapitaneamScribo(Categoria.NOMEN.scriptio.replaceLast("a", "is")),
+      nuntius.moneo(Utilitas.primamCapitaneamScribo(Categoria.NOMEN.scriptio.replace("a", "is")),
                     "attrib\u016Bta inop\u012Bnata \u016Bsa'st:", nomen, descriptor);
       return;
     }

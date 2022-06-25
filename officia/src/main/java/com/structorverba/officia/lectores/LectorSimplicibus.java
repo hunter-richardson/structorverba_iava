@@ -1,14 +1,13 @@
 package com.structorverba.officia.lectores;
 
+import androidx.annotation.*;
+import com.structorverba.officia.enumerationes.Categoria;
 import com.structorverba.officia.nuntii.Nuntius;
 import com.structorverba.officia.tenores.*;
 import com.structorverba.officia.verba.VerbumSimplex;
-import com.structorverba.officia.enumerationes.Categoria;
-
+import jakarta.ejb.*;
 import org.apache.commons.lang3.ObjectUtils;
-import androidx.annotation.*;
 
-import javax.ejb.*;
 import java.util.function.Supplier;
 
 /**

@@ -1,21 +1,18 @@
 package com.structorverba.officia.miscella;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.*;
 import com.github.chaosfirebolt.converter.RomanInteger;
 import com.github.chaosfirebolt.converter.constants.*;
-
+import com.structorverba.officia.enumerationes.Categoria;
 import com.structorverba.officia.lectores.*;
 import com.structorverba.officia.verba.*;
 import com.structorverba.officia.verba.multiplicia.VerbumMultiplex;
-import com.structorverba.officia.enumerationes.Categoria;
-
+import jakarta.ejb.Singleton;
+import lombok.*;
 import org.apache.commons.lang3.*;
-import androidx.annotation.*;
 
 import java.util.function.Supplier;
-
-import javax.ejb.Singleton;
-
-import lombok.*;
 
 /**
  * Classis {@link StructorVerba} accessum mod\u012Bs omnibus programm\u0101tis Str\u016BctorVerba pr\u014Dvidet. <br>
@@ -100,7 +97,7 @@ public final class StructorVerba extends Omne {
   @SuppressWarnings("ConstantConditions")
   @Nullable public <Hoc extends Verbum <Hoc>> Hoc adveniam(@NonNull final String lemma,
                                                            @NonNull final Categoria categoria,
-                                                           @NonNull final Enum <@NonNull ?>... illa) {
+                                                           @NonNull final Enum <?>... illa) {
     try {
       return (Hoc) (switch (categoria) {
         case ADIECTIVUM -> adiectiva;
@@ -138,12 +135,8 @@ public final class StructorVerba extends Omne {
    */
   public @Nullable VerbumSimplex.Numerus numerus(final @NonNull String scriptio) {
     if (Patterns.ROMAN_PATTERN.matcher(scriptio).matches()) {
-      final short numerus = RomanInteger.parse(scriptio, IntegerType.ROMAN).getArabic().shortValue();
-      if (TRACTUS_NUMERORUM.contains(numerus)) {
-        return new VerbumSimplex.Numerus(numerus);
-      } else {
-        return null;
-      }
+      final short numerus = Integer.valueOf(RomanInteger.parse(scriptio, IntegerType.ROMAN).getArabic()).shortValue();
+      return TRACTUS_NUMERORUM.contains(numerus) ? new VerbumSimplex.Numerus(numerus) : null;
     } else {
       return null;
     }

@@ -135,7 +135,7 @@ public enum Mensis {
   /**
    * @return {@link #scriptio}
    */
-  @NonNull public String toString( ) {
+  @NonNull public String toString() {
     return scriptio;
   }
 }

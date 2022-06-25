@@ -1,15 +1,14 @@
 package com.structorverba.officia.inventores;
 
+import androidx.annotation.*;
+import com.structorverba.officia.enumerationes.*;
 import com.structorverba.officia.lectores.LectorMultiplicibus;
 import com.structorverba.officia.miscella.Utilitas;
 import com.structorverba.officia.nuntii.Nuntius;
 import com.structorverba.officia.verba.multiplicia.Adverbium;
-import com.structorverba.officia.enumerationes.Gradus;
-
+import jakarta.ejb.*;
 import org.apache.commons.lang3.ObjectUtils;
-import androidx.annotation.*;
 
-import javax.ejb.*;
 import java.util.function.*;
 
 /**
@@ -66,9 +65,8 @@ public class InventorAdverbiis extends Inventor <Adverbium> {
       nuntius.garrio("Quaesti\u014Dn\u012B adi\u0113c\u012B conditi\u014Dnem novam:",
                      Gradus.pittacium, illud);
     } else {
-      nuntius.moneo(Utilitas.primamCapitaneamScribo(Categoria.ADVERBIUM.scriptio.replaceLast('a', '\u014D')),
-                    "inqu\u012Bs\u012Bti\u014D adiect\u012Bv\u014D inop\u012Bn\u0101ta \u016Bsa'st:",
-                    illud);
+      nuntius.moneo(Utilitas.primamCapitaneamScribo(Categoria.ADVERBIUM.scriptio.replace('a', '\u014D')),
+                    "inqu\u012Bs\u012Bti\u014D adiect\u012Bv\u014D inop\u012Bn\u0101ta \u016Bsa'st:", illud);
     }
   }
 }

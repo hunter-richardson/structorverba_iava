@@ -1,16 +1,14 @@
 package com.structorverba.officia.tenores;
 
+import androidx.annotation.*;
 import com.structorverba.officia.conditores.multiplicia.*;
 import com.structorverba.officia.lectores.LectorMultiplicibus;
 import com.structorverba.officia.nuntii.Nuntius;
 import com.structorverba.officia.verba.multiplicia.*;
-
+import jakarta.ejb.*;
 import org.apache.commons.lang3.ObjectUtils;
-import androidx.annotation.NonNull;
-
 import org.xml.sax.Attributes;
 
-import javax.ejb.*;
 import java.util.function.Supplier;
 
 /**

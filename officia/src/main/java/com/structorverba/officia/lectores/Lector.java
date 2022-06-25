@@ -11,7 +11,7 @@ import org.xml.sax.*;
 
 import javax.xml.parsers.*;
 import java.io.*;
-import java.nio.file.Path;
+import java.nio.file.*;
 import java.util.function.Supplier;
 
 /**
@@ -46,7 +46,7 @@ public abstract class Lector <Hoc extends Verbum <Hoc>> extends Omne {
    * @param nts  val\u014Drem {@link #nuntius} supplet.
    * @param tnr  val\u014Drem {@link #tenor} supplet.
    */
-  protected Lector(@NonNull final Categoria ctgr, @NonNull final Supplier <@NonNull ? extends Nuntius> nts,
+  protected Lector(@NonNull final Categoria ctgr, @NonNull final Supplier <? extends Nuntius> nts,
                    @NonNull final Supplier<? extends Tenor <Hoc>> tnr) {
     nuntius = nts.get();
     tenor = tnr.get();
@@ -54,9 +54,9 @@ public abstract class Lector <Hoc extends Verbum <Hoc>> extends Omne {
   }
 
   private boolean quaero(@NonNull final String verbum) {
-    final Path nomen = Path.of(categoria.scriptio, String.format("%s.xml", Utilitas.minusculasScribo(verbum)));
+    final Path nomen = Paths.get(categoria.scriptio, String.format("%s.xml", Utilitas.minusculasScribo(verbum)));
     nuntius.noto("Iam exspect\u014D sc\u0101pum auxili\u0101rem", nomen);
-    final File scapus = Path.of(Utilitas.auxilior(nomen.toString())).toFile();
+    final File scapus = Paths.get(Utilitas.auxilior(nomen.toString())).toFile();
     return scapus.exists() && scapus.isFile() && scapus.canRead() && scapus.length() > 0;
   }
 
@@ -66,7 +66,7 @@ public abstract class Lector <Hoc extends Verbum <Hoc>> extends Omne {
    * @param verbum lemma verb\u014D quod r\u0113s haec c\u014Dn\u0101bitur legere.
    */
   protected final void legam(@NonNull final String verbum) {
-    final Path nomen = Path.of(categoria.scriptio, String.format("%s.xml", Utilitas.minusculasScribo(verbum)));
+    final Path nomen = Paths.get(categoria.scriptio, String.format("%s.xml", Utilitas.minusculasScribo(verbum)));
     if (quaero(verbum)) {
       try {
         final XMLReader lector = SAXParserFactory.newInstance().newSAXParser().getXMLReader();

@@ -1,17 +1,15 @@
 package com.structorverba.officia.lectores;
 
 import androidx.annotation.*;
+import com.structorverba.officia.enumerationes.*;
 import com.structorverba.officia.inventores.*;
 import com.structorverba.officia.nuntii.Nuntius;
 import com.structorverba.officia.tenores.TenorMultiplicibus;
 import com.structorverba.officia.verba.multiplicia.*;
-import com.structorverba.officia.enumerationes.*;
-
+import jakarta.ejb.*;
 import org.apache.commons.lang3.ObjectUtils;
 
 import java.util.function.Supplier;
-
-import javax.ejb.*;
 
 /**
  * Classis {@link LectorMultiplicibus} est v\u0101s classis {@link Lector} classibus omnibus quibus classem {@link
@@ -128,7 +126,7 @@ public abstract class LectorMultiplicibus <Hoc extends VerbumMultiplex <Hoc>> ex
      * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
      */
     @NonNull public static final Supplier <LectorAdiectivis> fac =
-      ( ) -> ObjectUtils.firstNonNull(instantia, instantia = new LectorAdiectivis());
+      () -> ObjectUtils.firstNonNull(instantia, instantia = new LectorAdiectivis());
 
     private LectorAdiectivis() {
       super(Categoria.ADIECTIVUM, Nuntius.NuntiusLectoriAdiectivis.fac,
@@ -172,9 +170,8 @@ public abstract class LectorMultiplicibus <Hoc extends VerbumMultiplex <Hoc>> ex
                                                                             Numeralis.pittacium, numeralis));
           };
           case TERTIA -> "suum";
-          case NULLA -> throw new IllegalArgumentException(String.format("\u016Asus pr\u0101vu'st %s %s",
-                                                                         Persona.pittacium.replace("a", "ae"),
-                                                                         persona));
+          case NULLA -> throw new IllegalArgumentException(String.format("\u016Asus pr\u0101vu'st %se %s",
+                                                                         Persona.pittacium, persona));
         }, illa);
       } catch (IllegalArgumentException e) {
         nuntius.terreo(e);
@@ -228,9 +225,8 @@ public abstract class LectorMultiplicibus <Hoc extends VerbumMultiplex <Hoc>> ex
           case PRIMA -> "ego";
           case SECUNDA -> "t\u016B";
           case TERTIA -> "id";
-          case NULLA -> throw new IllegalArgumentException(String.format("\u016Asus pr\u0101vu'st %s %s",
-                                                                         Persona.pittacium.replace("a", "ae"),
-                                                                         persona));
+          case NULLA -> throw new IllegalArgumentException(String.format("\u016Asus pr\u0101vu'st %se %s",
+                                                                         Persona.pittacium, persona));
         }, illa);
       } catch (IllegalArgumentException e) {
         nuntius.terreo(e);

@@ -6,10 +6,10 @@ import com.structorverba.officia.nuntii.Nuntius;
 import com.structorverba.officia.verba.multiplicia.Actus;
 import com.structorverba.officia.enumerationes.*;
 
+import jakarta.ejb.*;
 import org.apache.commons.lang3.ObjectUtils;
 import androidx.annotation.*;
 
-import javax.ejb.*;
 import java.util.function.*;
 
 /**
@@ -103,7 +103,7 @@ public final class InventorActis extends Inventor <Actus> {
       nuntius.garrio("Quaestion\u012B adi\u0113c\u012B conditi\u014Dnem novam:",
                      Modus.pittacium, illud);
     } else {
-      nuntius.moneo(Utilitas.primamCapitaneamScribo(Categoria.ACTUS.scriptio.replaceLast('\u012B', '\u014D')),
+      nuntius.moneo(Utilitas.primamCapitaneamScribo(Categoria.ACTUS.scriptio.replace('\u012B', '\u014D')),
                     "inqu\u012Bs\u012Bti\u014D inop\u012Bn\u0101ta \u016Bsa'st:", illud);
     }
   }

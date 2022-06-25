@@ -6,10 +6,10 @@ import com.structorverba.officia.nuntii.Nuntius;
 import com.structorverba.officia.verba.multiplicia.Adiectivum;
 import com.structorverba.officia.enumerationes.*;
 
+import jakarta.ejb.*;
 import org.apache.commons.lang3.ObjectUtils;
 import androidx.annotation.*;
 
-import javax.ejb.*;
 import java.util.function.*;
 
 /**
@@ -103,7 +103,7 @@ public final class InventorAdiectivis extends Inventor <Adiectivum> {
       nuntius.garrio("Quaesti\u014Dn\u012B adi\u0113c\u012B conditi\u014Dnem novam:",
                      Gradus.pittacium, illud);
     } else {
-      nuntius.moneo(Utilitas.primamCapitaneamScribo(Categoria.ADIECTIVUM.scriptio.replaceLast('a', '\u014D')),
+      nuntius.moneo(Utilitas.primamCapitaneamScribo(Categoria.ADIECTIVUM.scriptio.replace('a', '\u014D')),
                     "inqu\u012Bs\u012Bti\u014D adiect\u012Bv\u014D inop\u012Bn\u0101ta \u016Bsa'st:",
                     illud);
     }

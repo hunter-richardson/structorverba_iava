@@ -1,13 +1,14 @@
 package com.structorverba.officia.verba.multiplicia;
 
+import androidx.annotation.NonNull;
 import com.structorverba.officia.conditores.multiplicia.ConditorMultiplicibus;
+import com.structorverba.officia.enumerationes.*;
 import com.structorverba.officia.inventores.Inventor;
 import com.structorverba.officia.lectores.LectorMultiplicibus;
 import com.structorverba.officia.tenores.TenorMultiplicibus;
 import com.structorverba.officia.verba.*;
-import com.structorverba.officia.enumerationes.*;
 
-import androidx.annotation.NonNull;
+import java.util.stream.Stream;
 
 /**
  * Classis {@link VerbumMultiplex} repraesentat verbum aliquem quod f\u014Drm\u0101s mult\u0101s habet. <br>
@@ -35,7 +36,7 @@ public abstract class VerbumMultiplex <Hoc extends Verbum <Hoc>> extends Verbum 
 
   /**
    * Officium hoc c\u014Dnstr\u016Bct\u014Drem re\u012B classis huius perpetrat.
-   * @param ctgr  val\u014Drem {@link Verbum#categoria} indicat.
+   * @param ctgr  val\u014Drem {@link Verbum#catagoria} indicat.
    * @param lm  val\u014Drem {@link Verbum#lemma} indicat.
    * @param scrpt val\u014Drem {@link #scriptio} indicat.
    */

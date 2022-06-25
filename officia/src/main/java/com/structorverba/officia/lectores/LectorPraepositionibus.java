@@ -1,21 +1,18 @@
 package com.structorverba.officia.lectores;
 
+import androidx.annotation.*;
+import com.structorverba.officia.enumerationes.*;
 import com.structorverba.officia.miscella.*;
 import com.structorverba.officia.nuntii.Nuntius;
 import com.structorverba.officia.verba.VerbumSimplex;
-import com.structorverba.officia.enumerationes.*;
-
+import jakarta.ejb.*;
+import lombok.Getter;
 import org.apache.commons.lang3.*;
-import androidx.annotation.NonNull;
 
 import java.io.*;
-import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.function.*;
 import java.util.stream.Stream;
-
-import javax.ejb.*;
-
-import lombok.Getter;
 
 /**
  * Classis {@link LectorPraepositionibus} colliget data \u0101 sc\u0101p\u014D XML in
@@ -35,7 +32,7 @@ import lombok.Getter;
 @SuppressWarnings({ "SpellCheckingInspection", "unused" })
 @Singleton
 @DependsOn("NuntiusLectoriPraepositionibus")
-public final class LectorPraepositionibus extends Omnum {
+public final class LectorPraepositionibus extends Omne {
   @Nullable private static LectorPraepositionibus instantia = null;
 
   /**
@@ -50,7 +47,7 @@ public final class LectorPraepositionibus extends Omnum {
     Nuntius.NuntiusLectoriPraepositionibus.fac.get();
 
   @NonNull private final BiPredicate <String, Casus> quaero = (verbum, casus) -> {
-    final String nomen = Path.of(Categoria.PRAEPOSITIO.scriptio, String.format("%s.data", casus.scriptio)).toString();
+    final String nomen = Paths.get(Categoria.PRAEPOSITIO.scriptio, String.format("%s.data", casus.scriptio)).toString();
     try (final BufferedReader pervidetio = new BufferedReader(new FileReader(nomen))) {
       nuntius.noto("Iam leg\u014D sc\u0101pum auxili\u0101rem", nomen);
       return pervidetio.lines().anyMatch(linea -> linea.trim().equals(Utilitas.minusculasScribo(verbum)));
@@ -62,7 +59,7 @@ public final class LectorPraepositionibus extends Omnum {
 
   @NonNull private final BiFunction <String, Casus, VerbumSimplex.Praepositio> advenio =
     (verbum, casus) -> {
-      final String nomen = Path.of(Categoria.PRAEPOSITIO.scriptio, String.format("%s.data", casus.scriptio)).toString();
+      final String nomen = Paths.get(Categoria.PRAEPOSITIO.scriptio, String.format("%s.data", casus.scriptio)).toString();
       try (final BufferedReader pervidetio = new BufferedReader(new FileReader(Utilitas.auxilior(nomen)))) {
         nuntius.noto("Iam leg\u014D sc\u0101pum auxili\u0101rem", nomen);
         final String lemma = pervidetio.lines()
@@ -73,13 +70,13 @@ public final class LectorPraepositionibus extends Omnum {
           return new VerbumSimplex.Praepositio(lemma);
         } else {
           nuntius.moneo("N\u012Bl adven\u012B verb\u014D", verbum);
-          nuntius.garrio(Utilitas.Utilitas.primamCapitaneamScribo(Categoria.PRAEPOSITIO.scriptio.replaceLast('s', '\u012B')),
+          nuntius.garrio(Utilitas.primamCapitaneamScribo(Categoria.PRAEPOSITIO.scriptio.replace("\u0113s", "\u012B")),
                            "ass\u016Bm\u0113tur");
           return VerbumSimplex.Praepositio.assume.get();
         }
       } catch (IOException e) {
         nuntius.terreo(e);
-        nuntius.garrio(Utilitas.Utilitas.primamCapitaneamScribo(Categoria.PRAEPOSITIO.scriptio.replaceLast('s', '\u012B')),
+        nuntius.garrio(Utilitas.primamCapitaneamScribo(Categoria.PRAEPOSITIO.scriptio.replace("\u0113s", "\u012B")),
                          "ass\u016Bm\u0113tur");
         return VerbumSimplex.Praepositio.assume.get();
       }
@@ -102,7 +99,7 @@ public final class LectorPraepositionibus extends Omnum {
                         .findFirst().orElse(Casus.DERECTUS);
     if (Casus.DERECTUS.equals(casus)) {
       nuntius.moneo("N\u012Bl adven\u012B verb\u014D", verbum);
-      nuntius.garrio(Utilitas.primamCapitaneamScribo(Categoria.PRAEPOSITIO.scriptio.replaceLast("\u0113s", '\u012B')),
+      nuntius.garrio(Utilitas.primamCapitaneamScribo(Categoria.PRAEPOSITIO.scriptio.replace("\u0113s", "\u012B")),
                        "ass\u016Bm\u0113tur");
       return VerbumSimplex.Praepositio.assume.get();
     } else {

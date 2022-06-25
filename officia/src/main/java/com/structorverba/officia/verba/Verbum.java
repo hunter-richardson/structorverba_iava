@@ -45,7 +45,7 @@ public abstract class Verbum <Hoc extends Verbum <Hoc>> extends Omne {
    */
   protected Verbum(@NonNull final Categoria ctgr, @NonNull final String lm) {
     catagoria = ctgr;
-    lemma = Utilitas.minusculaScribo(lm);
+    lemma = Utilitas.minusculasScribo(lm);
   }
 
   /**

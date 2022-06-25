@@ -5,7 +5,7 @@ import com.structorverba.officia.verba.multiplicia.Actus;
 import com.structorverba.officia.enumerationes.*;
 
 import androidx.annotation.NonNull;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 import lombok.Getter;
 

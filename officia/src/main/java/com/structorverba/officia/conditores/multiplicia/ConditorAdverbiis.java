@@ -13,7 +13,6 @@ import androidx.annotation.*;
 
 import java.util.Objects;
 import java.util.function.Supplier;
-import java.util.logging.Level;
 
 /**
  * Classis {@link ConditorAdverbiis} est v\u0101s classis {@link Conditor} class\u012B {@link Adverbium}.
@@ -50,17 +49,17 @@ public class ConditorAdverbiis extends ConditorMultiplicibus <Adverbium> {
         StringUtils.isNoneBlank(lemma, scriptio)) {
       final Adverbium hoc = new Adverbium(gradus, lemma, scriptio);
       if (hoc == null) {
-        nuntius.moneo(Utilitas.primamCapitaneamScribo(Categoria.ADVERBIUM.scriptio.replaceLast('a', '\u012B')),
+        nuntius.moneo(Utilitas.primamCapitaneamScribo(Categoria.ADVERBIUM.scriptio.replaceAll("a$", "\u012B")),
                       StringUtils.firstNonBlank(lemma, scriptio),
                       "pr\u014Dducti\u014D f\u014Drmae n\u016Bllae pr\u014Dcessit.");
         return null;
       } else {
-        nuntius.certioro(Utilitas.primamCapitaneamScribo(Categoria.ADVERBIUM.scriptio.replaceLast("a", "um")),
+        nuntius.certioro(Utilitas.primamCapitaneamScribo(Categoria.ADVERBIUM.scriptio.replaceAll("a$", "um")),
                          scriptio, "f\u012Bn\u012Btur pr\u014Dd\u016Bcere.");
         return hoc;
       }
     } else {
-      nuntius.moneo(Utilitas.primamCapitaneamScribo(Categoria.ADVERBIUM.scriptio.replaceLast('a', '\u012B')),
+      nuntius.moneo(Utilitas.primamCapitaneamScribo(Categoria.ADVERBIUM.scriptio.replaceAll("a$", "\u012B")),
                     StringUtils.firstNonBlank(lemma, scriptio),
                     "pr\u014Dducti\u014D f\u014Drmae n\u016Bllae pr\u014Dcessit.");
       return null;
@@ -87,7 +86,7 @@ public class ConditorAdverbiis extends ConditorMultiplicibus <Adverbium> {
     } else if(pittaciumLemmae.equals(nomen)) {
       lemma = descriptor.trim();
     } else {
-        nuntius.moneo(Utilitas.primamCapitaneamScribo(Categoria.ADVERBIUM.scriptio.replaceLast('a', '\u012B')),
+        nuntius.moneo(Utilitas.primamCapitaneamScribo(Categoria.ADVERBIUM.scriptio.replace('a', '\u012B')),
                       "attrib\u016Bta inop\u012Bn\u0101ta est \u016Bsa:",
                       nomen, descriptor);
         return;

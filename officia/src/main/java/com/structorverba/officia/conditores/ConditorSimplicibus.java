@@ -1,21 +1,18 @@
 package com.structorverba.officia.conditores;
 
+import androidx.annotation.*;
 import com.structorverba.officia.enumerationes.Categoria;
 import com.structorverba.officia.miscella.Utilitas;
 import com.structorverba.officia.nuntii.Nuntius;
 import com.structorverba.officia.tenores.Tenor;
 import com.structorverba.officia.verba.VerbumSimplex;
-
+import jakarta.ejb.*;
 import org.apache.commons.lang3.*;
-import androidx.annotation.*;
 
-import java.util.Objects;
 import java.util.function.*;
 
-import javax.ejb.*;
-
 /**
- * Classis {@link Condit\u014DrSimplicibus} est v\u0101s classis {@link Conditor} classibus omnibus quibus classem {@link
+ * Classis {@link ConditorSimplicibus} est v\u0101s classis {@link Conditor} classibus omnibus quibus classem {@link
  * VerbumSimplex} extendit.
  * @param <Hoc> classis extenta classis {@link VerbumSimplex}
  */
@@ -84,10 +81,10 @@ public abstract class ConditorSimplicibus <Hoc extends VerbumSimplex <Hoc>> exte
      */
     protected void refero(@Nullable final VerbumSimplex.Coniunctivum hoc) {
       if (hoc == null) {
-        nuntius.certioro(Utilitas.primamCapitaneamScribo(Categoria.CONIUNCTIVUM.scriptio.replaceLast("a", "um")),
+        nuntius.certioro(Utilitas.primamCapitaneamScribo(Categoria.CONIUNCTIVUM.scriptio.replace("a", "um")),
                          lemma, "f\u012Bn\u012Btur pr\u014Dd\u016Bcere.");
       } else {
-        nuntius.moneo(Utilitas.primamCapitaneamScribo(Categoria.CONIUNCTIVUM.scriptio.replaceLast('a', '\u012B')),
+        nuntius.moneo(Utilitas.primamCapitaneamScribo(Categoria.CONIUNCTIVUM.scriptio.replace('a', '\u012B')),
                       "pr\u014Dducti\u014D formae n\u016Bllae pr\u014Dcessit.");
       }
     }
@@ -121,10 +118,10 @@ public abstract class ConditorSimplicibus <Hoc extends VerbumSimplex <Hoc>> exte
      */
     protected void refero(@Nullable final VerbumSimplex.Interiectio hoc) {
       if (hoc == null) {
-        nuntius.certioro(Utilitas.primamCapitaneamScribo(Categoria.INTERIECTIO.scriptio.replaceLast("n\u0113s", StringUtils.EMPTY)),
+        nuntius.certioro(Utilitas.primamCapitaneamScribo(Categoria.INTERIECTIO.scriptio.replace("n\u0113s", StringUtils.EMPTY)),
                          lemma, "f\u012Bn\u012Btur pr\u014Dd\u016Bcere.");
       } else {
-        nuntius.moneo(Utilitas.primamCapitaneamScribo(Categoria.INTERIECTIO.scriptio.replaceLast("\u0113s", "\u012B")),
+        nuntius.moneo(Utilitas.primamCapitaneamScribo(Categoria.INTERIECTIO.scriptio.replace("\u0113s", "\u012B")),
                       "pr\u014Dducti\u014D f\u014Drmae n\u016Bllae pr\u014Dcessit.");
       }
     }

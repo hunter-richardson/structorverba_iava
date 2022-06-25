@@ -1,19 +1,18 @@
 package com.structorverba.officia.verba;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.*;
 import com.structorverba.officia.miscella.*;
-
+import lombok.*;
 import org.apache.commons.lang3.StringUtils;
 
 import java.util.*;
 import java.util.stream.Collectors;
 
-import lombok.*;
-
 /**
  * Classis {@link Verba} seri\u0113s r\u0113rum classis {@link Verbum} c\u014Dnstat.
  */
-@SuppressWarnings({ "SpellCheckingInspection", "unused" })
+@SuppressWarnings({"SpellCheckingInspection", "unused", "SimplifyStreamApiCallChains"})
 @NoArgsConstructor(access = AccessLevel.PUBLIC)
 public final class Verba extends Omne {
   /**
@@ -39,8 +38,9 @@ public final class Verba extends Omne {
    * @param ordo seri\u0113s val\u014Drum addend\u014Drum
    * @return Rem haec
    */
-  @NonNull public Verba addo(@Nullable final Verbum <@Nullable ?>... ordo) {
+  @NonNull public Verba addo(@Nullable final Verbum <?>... ordo) {
     if (ordo == null) {
+      //noinspection ConstantConditions
       series.addAll(Arrays.stream(ordo)
                           .filter(Objects::nonNull)
                           .filter(verbum -> StringUtils.isNotBlank(verbum.toString()))

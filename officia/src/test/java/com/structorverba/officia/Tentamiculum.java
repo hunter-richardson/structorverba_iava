@@ -7,6 +7,8 @@ import org.apache.commons.collections4.comparators.NullComparator;
 import org.apache.commons.lang3.*;
 import org.junit.jupiter.api.Assertions;
 
+import java.util.Comparator;
+
 /**
  * Classis {@link Tentamiculum} tent\u0101men singul\u0101rem repraesentat exsequendum dat\u0101 simplic\u012B.
  * @param <Hoc> Classis dat\u012B tentand\u012B
@@ -42,7 +44,7 @@ abstract class Tentamiculum<Hoc> extends Omne {
     expectatio = expct;
   }
 
-  private boolean existitne( ) {
+  private boolean existitne() {
     return productum != null;
   }
 
@@ -84,31 +86,31 @@ abstract class Tentamiculum<Hoc> extends Omne {
       super(expct, prdctm);
     }
 
-    private int comparo( ) {
-      return new NullComparator <>((Comparator <Illud>) Comparable::compareTo, false).compare(expectatio, productum);
+    private int comparo() {
+      return new NullComparator <>((Comparator<Illud>) Comparable::compareTo, false).compare(expectatio, productum);
     }
 
-    private boolean aequanturne( ) {
+    private boolean aequanturne() {
       return comparo() == 0;
     }
 
-    private boolean differuntne( ) {
+    private boolean differuntne() {
       return comparo() != 0;
     }
 
-    private boolean subestne( ) {
+    private boolean subestne() {
       return comparo() > 0;
     }
 
-    private boolean superatne( ) {
+    private boolean superatne() {
       return comparo() < 0;
     }
 
-    private boolean autSubestneAutAequanturne( ) {
+    private boolean autSubestneAutAequanturne() {
       return comparo() >= 0;
     }
 
-    private boolean autSuperatneAutAequanturne( ) {
+    private boolean autSuperatneAutAequanturne() {
       return comparo() <= 0;
     }
 
@@ -226,23 +228,23 @@ abstract class Tentamiculum<Hoc> extends Omne {
       super(expct, prdctm.toString());
     }
 
-    private boolean aequanturne( ) {
-      return ObjectUtils.allNonNull(expectatio, productum) && expectatio.equals(productum);
+    private boolean aequanturne() {
+      return ObjectUtils.allNotNull(expectatio, productum) && expectatio.equals(productum);
     }
 
-    private boolean differuntne( ) {
-      return ObjectUtils.allNonNull(expectatio, productum) && !expectatio.equals(productum);
+    private boolean differuntne() {
+      return ObjectUtils.allNotNull(expectatio, productum) && !expectatio.equals(productum);
     }
 
-    private boolean continetne( ) {
-      return ObjectUtils.allNonNull(expectatio, productum) && productum.contains(expectatio);
+    private boolean continetne() {
+      return ObjectUtils.allNotNull(expectatio, productum) && productum.contains(expectatio);
     }
 
-    private boolean vacatne( ) {
+    private boolean vacatne() {
       return StringUtils.isEmpty(productum) || StringUtils.isWhitespace(productum);
     }
 
-    private boolean aliamContinetne( ) {
+    private boolean aliamContinetne() {
       return StringUtils.isNotEmpty(productum) && !StringUtils.isWhitespace(productum);
     }
 

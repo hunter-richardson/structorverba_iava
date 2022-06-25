@@ -1,19 +1,17 @@
 package com.structorverba.officia.conditores.multiplicia;
 
+import androidx.annotation.*;
 import com.structorverba.officia.conditores.Conditor;
+import com.structorverba.officia.enumerationes.*;
 import com.structorverba.officia.miscella.Utilitas;
 import com.structorverba.officia.nuntii.Nuntius;
 import com.structorverba.officia.verba.Verbum;
 import com.structorverba.officia.verba.multiplicia.Actus;
-import com.structorverba.officia.enumerationes.*;
-
+import jakarta.ejb.*;
 import org.apache.commons.lang3.*;
-import androidx.annotation.*;
 
-import java.util.Objects;
 import java.util.function.Supplier;
 
-import javax.ejb.*;
 
 /**
  * Classis {@link ConditorActis} est v\u0101s classis {@link Conditor} class\u012B {@link Actus}.
@@ -51,7 +49,7 @@ public final class ConditorActis extends ConditorMultiplicibus <Actus> {
    */
   @Override @Nullable @SuppressWarnings("ConstantConditions")
   public Actus condam() {
-    if (ObjectUtils.allNonNull(modus, vox, tempus, numeralis, persona, numeralis) &&
+    if (ObjectUtils.allNotNull(modus, vox, tempus, numeralis, persona, numeralis) &&
         StringUtils.isNoneBlank(lemma, scriptio)) {
       final Actus hoc = new Actus(modus, vox, tempus, numeralis, persona, lemma, scriptio);
       if (hoc == null) {
@@ -60,7 +58,7 @@ public final class ConditorActis extends ConditorMultiplicibus <Actus> {
                       "pr\u014Dducti\u014D f\u014Drmae n\u016Bllae pr\u014Dcessit.");
         return null;
       } else {
-        nuntius.certioro(Utilitas.primamCapitaneamScribo(Categoria.ACTUS.scriptio.replace("a", "us")),
+        nuntius.certioro(Utilitas.primamCapitaneamScribo(Categoria.ACTUS.scriptio.replace("\u012B", "us")),
                          scriptio, "f\u012Bn\u012Btur pr\u014Dd\u016Bcere.");
         return hoc;
       }

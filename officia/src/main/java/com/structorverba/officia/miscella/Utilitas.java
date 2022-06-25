@@ -4,7 +4,7 @@ import androidx.annotation.NonNull;
 
 import java.io.File;
 import java.nio.charset.*;
-import java.nio.file.Path;
+import java.nio.file.*;
 import java.util.*;
 
 /**
@@ -58,7 +58,7 @@ public final class Utilitas extends Omne {
    */
   @NonNull public static String auxilior(@NonNull final String... locus) {
     final String[] plus = Arrays.copyOfRange(locus, 1, locus.length);
-    return Path.of("src", "main", "resources", Path.of(locus[ 0 ], plus).toString())
+    return Paths.get("src", "main", "resources", Paths.get(locus[ 0 ], plus).toString())
                .toAbsolutePath().toString();
   }
 }

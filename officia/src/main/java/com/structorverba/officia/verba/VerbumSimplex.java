@@ -1,23 +1,20 @@
 package com.structorverba.officia.verba;
 
-import androidx.annotation.NonNull;
+import androidx.annotation.*;
+import com.github.chaosfirebolt.converter.RomanInteger;
+import com.github.chaosfirebolt.converter.constants.IntegerType;
+import com.github.chaosfirebolt.converter.util.Validator;
 import com.structorverba.officia.conditores.ConditorSimplicibus;
+import com.structorverba.officia.enumerationes.Categoria;
 import com.structorverba.officia.inventores.Inventor;
 import com.structorverba.officia.lectores.*;
 import com.structorverba.officia.miscella.Utilitas;
 import com.structorverba.officia.nuntii.Nuntius;
 import com.structorverba.officia.tenores.TenorSimplicibus;
-import com.structorverba.officia.enumerationes.Categoria;
-
-import com.github.chaosfirebolt.converter.RomanInteger;
-import com.github.chaosfirebolt.converter.constants.IntegerType;
-import com.github.chaosfirebolt.converter.util.Validator;
-
-import org.apache.commons.lang3.StringUtils;
+import lombok.Getter;
+import org.apache.commons.lang3.*;
 
 import java.util.function.Supplier;
-
-import lombok.Getter;
 
 /**
  * Classis {@link VerbumSimplex} repraesentat verbum aliquem quod f\u014Drmam \u016Bnam s\u014Dlum habet. <br>
@@ -28,7 +25,7 @@ import lombok.Getter;
 public abstract class VerbumSimplex <Hoc extends Verbum <Hoc>> extends Verbum <Hoc> {
   /**
    * Officium hoc c\u014Dnstr\u016Bct\u014Drem re\u012B classis huius perpetrat.
-   * @param ctgr val\u014Drem {@link #categoria} indicat.
+   * @param ctgr val\u014Drem {@link #catagoria} indicat.
    * @param lm val\u014Drem {@link #lemma} indicat.
    */
   protected VerbumSimplex(@NonNull final Categoria ctgr, @NonNull final String lm) {
@@ -119,18 +116,31 @@ public abstract class VerbumSimplex <Hoc extends Verbum <Hoc>> extends Verbum <H
    */
   public static final class Numerus extends VerbumSimplex <Numerus> {
     /**
-     * Valor hic repraesent\u0101ti\u014Dnem numeriam tenet re\u012B huic.
-     * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Short.html">Short</a>
+     * Valor hic numerum maximum possibilem repraesentat.
      */
-    @Range(from = 1, to = 3999)
-    public final short numerus;
+    public static final short MINUMUM = 1;
+
+    /**
+     * Valor hic numerum minumum possibilem repraesentat.
+     */
+    public static final short MAXIMUM = 3999;
+
+    /**
+     * Valor hic repraesent\u0101ti\u014Dnem numeriam tenet re\u012B huic.
+     */
+    @IntRange(from = MINUMUM, to = MAXIMUM)
+    private final int numerus;
     @Getter(lazy = true)
     @NonNull private final Nuntius.NuntiusNumerorum nuntius = Nuntius.NuntiusNumerorum.fac.get();
 
     public Numerus(final short numerus) throws IllegalArgumentException {
       super(Categoria.NUMERUS, String.valueOf(numerus));
-      this.numerus = Validator.range(Short.toUnsignedInt(numerus)).shortValue();
+      this.numerus = Validator.range(Short.toUnsignedInt(numerus));
       nuntius.plusGarrio("Scr\u012Bbor ut", toString());
+    }
+
+    public short numerus() {
+      return Integer.valueOf(Validator.range(numerus)).shortValue();
     }
 
     @NonNull private RomanInteger ostendam() throws IllegalArgumentException {
@@ -163,7 +173,7 @@ public abstract class VerbumSimplex <Hoc extends Verbum <Hoc>> extends Verbum <H
      */
     @Nullable public Numerus addo(final @NonNull Numerus alius) {
       try {
-        return new Numerus(ostendam().add(alius.ostendam()).getArabic().shortValue());
+        return new Numerus(Integer.valueOf(ostendam().add(alius.ostendam()).getArabic()).shortValue());
       } catch (IllegalArgumentException e) {
         nuntius.terreo(e);
         return null;
@@ -179,7 +189,7 @@ public abstract class VerbumSimplex <Hoc extends Verbum <Hoc>> extends Verbum <H
      */
     @Nullable public Numerus subtraho(final @NonNull Numerus alius) {
       try {
-        return new Numerus(ostendam().subtract(alius.ostendam()).getArabic().shortValue());
+        return new Numerus(Integer.valueOf(ostendam().subtract(alius.ostendam()).getArabic()).shortValue());
       } catch (IllegalArgumentException e) {
         nuntius.terreo(e);
         return null;
@@ -195,7 +205,7 @@ public abstract class VerbumSimplex <Hoc extends Verbum <Hoc>> extends Verbum <H
      */
     @Nullable public Numerus multiplico(final @NonNull Numerus alius) {
       try {
-        return new Numerus(ostendam().multiply(alius.ostendam()).getArabic().shortValue());
+        return new Numerus(Integer.valueOf(ostendam().multiply(alius.ostendam()).getArabic()).shortValue());
       } catch (IllegalArgumentException e) {
         nuntius.terreo(e);
         return null;
@@ -211,7 +221,7 @@ public abstract class VerbumSimplex <Hoc extends Verbum <Hoc>> extends Verbum <H
      */
     @Nullable public Numerus divido(final @NonNull Numerus alius) {
       try {
-        return new Numerus(ostendam().divide(alius.ostendam()).getArabic().shortValue());
+        return new Numerus(Integer.valueOf(ostendam().divide(alius.ostendam()).getArabic()).shortValue());
       } catch (IllegalArgumentException e) {
         nuntius.terreo(e);
         return null;
@@ -227,7 +237,7 @@ public abstract class VerbumSimplex <Hoc extends Verbum <Hoc>> extends Verbum <H
      */
     @Nullable public Numerus maneo(final @NonNull Numerus alius) {
       try {
-        return new Numerus(ostendam().remainder(alius.ostendam()).getArabic().shortValue());
+        return new Numerus(Integer.valueOf(ostendam().remainder(alius.ostendam()).getArabic()).shortValue());
       } catch (IllegalArgumentException e) {
         nuntius.terreo(e);
         return null;

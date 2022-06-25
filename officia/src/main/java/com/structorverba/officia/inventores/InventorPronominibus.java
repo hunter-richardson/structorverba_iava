@@ -1,15 +1,14 @@
 package com.structorverba.officia.inventores;
 
+import androidx.annotation.*;
+import com.structorverba.officia.enumerationes.*;
 import com.structorverba.officia.lectores.LectorMultiplicibus;
 import com.structorverba.officia.miscella.Utilitas;
 import com.structorverba.officia.nuntii.Nuntius;
 import com.structorverba.officia.verba.multiplicia.Pronomen;
-import com.structorverba.officia.enumerationes.*;
-
+import jakarta.ejb.*;
 import org.apache.commons.lang3.ObjectUtils;
-import androidx.annotation.*;
 
-import javax.ejb.*;
 import java.util.function.*;
 
 /**
@@ -28,14 +27,14 @@ public final class InventorPronominibus extends Inventor <Pronomen> {
    * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
    */
   @NonNull public static final Supplier <InventorPronominibus> fac =
-    ( ) -> ObjectUtils.firstNonNull(instantia, instantia = new InventorPronominibus());
+    () -> ObjectUtils.firstNonNull(instantia, instantia = new InventorPronominibus());
 
   @NonNull private Specialitas specialitas = Specialitas.NULLUM;
   @NonNull private Genus       genus       = Genus.NULLUM;
   @NonNull private Numeralis   numeralis   = Numeralis.NULLUS;
   @NonNull private Casus       casus       = Casus.DERECTUS;
 
-  private InventorPronominibus( ) {
+  private InventorPronominibus() {
     super(Nuntius.NuntiusInventoriPronominibus.fac);
     nuntius.plurimumGarrio("Factus sum");
   }
@@ -46,11 +45,11 @@ public final class InventorPronominibus extends Inventor <Pronomen> {
    * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Predicate.html">Prediate</a>
    */
   @Override @NonNull
-  public Predicate <@NonNull Pronomen> inquiram() {
-    return pronomen -> specialitas.equals(pronomen.specialitas)
-                       && genus.equals(pronomen.genus)
-                       && casus.equals(pronomen.casus)
-                       && numeralis.equals(pronomen.numeralis);
+  public Predicate <Pronomen> inquiram() {
+    return pronomen -> specialitas.equals(pronomen.specialitas) &&
+                                          genus.equals(pronomen.genus) &&
+                                          casus.equals(pronomen.casus) &&
+                                          numeralis.equals(pronomen.numeralis);
   }
 
   /**
@@ -95,7 +94,7 @@ public final class InventorPronominibus extends Inventor <Pronomen> {
                      Casus.pittacium, illud);
     } else {
       nuntius.moneo(
-        Utilitas.primamCapitaneamScribo(Categoria.PRONOMEN.scriptio.replaceLast('a', '\u012B')),
+        Utilitas.primamCapitaneamScribo(Categoria.PRONOMEN.scriptio.replace('a', '\u012B')),
                     "inqu\u012Bs\u012Bti\u014D inop\u012Bn\u016Bta \u016Bsa'st:", illud);
     }
   }

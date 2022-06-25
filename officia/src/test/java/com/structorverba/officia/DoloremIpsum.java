@@ -32,14 +32,14 @@ final class DoloremIpsum extends Omne {
   @NonNull private final String productaTertia  = "C\u014Dnsectetur adipisci velit";
   @NonNull private final String productaQuarta  = "Sed quia n\u014Dnnumquam eius modi tempora incidunt";
   @NonNull private final String productaQuinta  = "Ut lab\u014Dre et dol\u014Dre magnam aliquam quaerat voluptatem";
-  @NonNull private final String productaCuncta  = String.join(' ', productaPrima, productaSecunda, productaTertia, productaQuarta, productaQuinta);
+  @NonNull private final String productaCuncta  = String.join(" ", productaPrima, productaSecunda, productaTertia, productaQuarta, productaQuinta);
 
   /**
    * Modus hic partem pr\u012Bmam tentat. <br>
    * Verba "Neque porr\u014D quisquam est" pr\u014Dd\u016Bcat.
    */
   @Test @Order(1)
-  public void prima( ) {
+  public void prima() {
     System.out.println(new Tentamen.TentamenVerbale(productaPrima, "pr\u012Bma")
                          .exsequar(structor.strue(structor.adveniam("neque", Categoria.CONIUNCTIVUM),
                                                   structor.adveniam("porr\u014D", Categoria.ADVERBIUM),
@@ -56,7 +56,7 @@ final class DoloremIpsum extends Omne {
    * Verba "Qu\u012B dol\u014Drem ipsum quia dolor sit amet" pr\u014Dd\u016Bcat.
    */
   @Test @Order(2)
-  public void secunda( ) {
+  public void secunda() {
     System.out.println(new Tentamen.TentamenVerbale(productaSecunda, "secunda")
                          .exsequar(structor.strue(structor.adveniam("quid", Categoria.PRONOMEN,
                                                                     Specialitas.COMMUNE, Genus.MASCULINUM,
@@ -84,7 +84,7 @@ final class DoloremIpsum extends Omne {
    * Verba "C\u014Dnsect\u0113tur adip\u012Bsc\u012B velit" pr\u014Dd\u016Bcat.
    */
   @Test @Order(3)
-  public void tertia( ) {
+  public void tertia() {
     System.out.println(new Tentamen.TentamenVerbale(productaTertia, "tertia")
                          .exsequar(structor.strue(structor.adveniam("consect\u0101r\u012B", Categoria.ACTUS,
                                                                     Modus.SUBIUNCTIVUS, Vox.ACTIVA, Tempus.PRAESENS,
@@ -101,7 +101,7 @@ final class DoloremIpsum extends Omne {
    * Verba "Sed quia n\u014Dnnumquam eius mod\u012B tempora incidunt" pr\u014Dd\u016Bcat. <br>
    */
   @Test @Order(4)
-  public void quarta( ) {
+  public void quarta() {
     System.out.println(new Tentamen.TentamenVerbale(productaQuarta, "qu\u0101rta")
                          .exsequar(structor.strue(structor.adveniam("sed", Categoria.CONIUNCTIVUM),
                                                   structor.adveniam("quia", Categoria.ADVERBIUM),
@@ -125,7 +125,7 @@ final class DoloremIpsum extends Omne {
    * Verba "Ut lab\u014Dre et dol\u014Dre magnam aliquam quaerat volupt\u0101tem" pr\u014Dd\u016Bcat.
    */
   @Test @Order(5)
-  public void quinta( ) {
+  public void quinta() {
     System.out.println(new Tentamen.TentamenVerbale(productaQuinta, "qu\u012Bnta")
                          .exsequar(structor.strue(structor.adveniam("ut", Categoria.CONIUNCTIVUM),
                                                   structor.adveniam("labor", Categoria.NOMEN,
@@ -155,7 +155,7 @@ final class DoloremIpsum extends Omne {
    * Abori\u0113tur s\u012B tent\u0101minum aliquid praevium aboriuntur atque prosper\u0101bitur s\u012B omn\u0113s prosperantur.
    */
   @Test @Order(6)
-  public void cuncta( ) {
+  public void cuncta() {
     System.out.println(new Tentamen.TentamenVerbale(productaCuncta, "c\u016Bncta")
                          .exsequar(structor.strue(structor.adveniam("neque", Categoria.CONIUNCTIVUM),
                                                   structor.adveniam("porr\u014D", Categoria.ADVERBIUM),
