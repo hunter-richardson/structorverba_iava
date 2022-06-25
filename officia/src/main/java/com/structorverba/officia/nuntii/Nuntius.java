@@ -10,6 +10,7 @@ import com.structorverba.officia.tenores.*;
 import com.structorverba.officia.verba.VerbumSimplex;
 import com.structorverba.officia.verba.multiplicia.*;
 
+import jakarta.ejb.Singleton;
 import org.apache.commons.lang3.*;
 
 import java.util.Objects;
@@ -17,7 +18,6 @@ import java.util.function.Supplier;
 import java.util.logging.Logger;
 import java.util.stream.Stream;
 
-import javax.ejb.Singleton;
 
 /**
  * Classis {@link Nuntius} n\u016Bntia d\u0113 exsec\u016Bti\u014Dne programm\u0101tis Str\u016BctorVerba in sc\u0101p\u012Bs LOG scr\u012Bbit. <br>
@@ -59,13 +59,11 @@ public abstract class Nuntius {
    * @see #terreo(Object...)
    */
   public final void terreo(@NonNull final Throwable error) {
-    final StackTraceElement historia = Stream.of(error.getStackTrace())
-                                             .filter(historicus -> historicus.getModuleName().contains(getClass().getModule().getName()))
-                                             .findFirst().orElse(error.getStackTrace()[ 0 ]);
+    final StackTraceElement historia = error.getStackTrace()[ 0 ];
     praeco.throwing(historia.getClassName(), historia.getMethodName(), error);
     terreo("Modus", historia.getMethodName(), "classe",
            historia.getClassName(), "contin\u0101tu'st errorem:",
-           error.getClass().getSimpleName(), error.getMessage());
+           error.getClass().getSimpleName(), error.getLocalizedMessage());
   }
 
   /**
@@ -886,7 +884,7 @@ public abstract class Nuntius {
   /**
    * Classis {@link NuntiusErroribus} est v\u0101s classis {@link Nuntius} ips\u012Busmet. <br> Indicat quod exsec\u016Bti\u014Dnem
    * programm\u0101tis Str\u016BctorVerba err\u014Drem inop\u012Bn\u0101tum continu\u0101tur.
-   * @see Omnum
+   * @see Omne
    * @see <a href="https://docs.oracle.com/javase/9/docs/api/java/lang/Thread.UncaughtExceptionHandler.html">Thread.UncaughtExceptionHandler</a>
    */
   @Singleton

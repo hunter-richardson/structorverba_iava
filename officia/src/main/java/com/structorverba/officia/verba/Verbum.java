@@ -36,6 +36,7 @@ public abstract class Verbum <Hoc extends Verbum <Hoc>> extends Omne {
    * intr\u0101 qu\u014D sc\u0101pum eius c\u014Dnserv\u0101tum est.
    * @see Categoria
    */
+  @SuppressWarnings("unused")
   @NonNull public final Categoria catagoria;
 
   /**

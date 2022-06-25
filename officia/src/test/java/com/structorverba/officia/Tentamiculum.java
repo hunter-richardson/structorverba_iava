@@ -229,14 +229,17 @@ abstract class Tentamiculum<Hoc> extends Omne {
     }
 
     private boolean aequanturne() {
+      //noinspection ConstantConditions
       return ObjectUtils.allNotNull(expectatio, productum) && expectatio.equals(productum);
     }
 
     private boolean differuntne() {
+      //noinspection ConstantConditions
       return ObjectUtils.allNotNull(expectatio, productum) && !expectatio.equals(productum);
     }
 
     private boolean continetne() {
+      //noinspection ConstantConditions
       return ObjectUtils.allNotNull(expectatio, productum) && productum.contains(expectatio);
     }
 

@@ -1,12 +1,11 @@
 package com.structorverba.officia.nuntii;
 
-import com.structorverba.officia.miscella.Utilitas;
-
-import org.apache.commons.lang3.StringUtils;
 import androidx.annotation.NonNull;
+import com.structorverba.officia.miscella.Utilitas;
+import org.apache.commons.lang3.StringUtils;
 
 import java.io.IOException;
-import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.function.Supplier;
 import java.util.logging.*;
 
@@ -38,7 +37,7 @@ final class ParametriNuntii {
       StreamHandler tenor;
       try {
         if (StringUtils.isNotBlank(locus)) {
-          tenor = new FileHandler(Path.of(locus, String.format("%s.log", classis.getSimpleName()))
+          tenor = new FileHandler(Paths.get(locus, String.format("%s.log", classis.getSimpleName()))
                                       .toString(), true);
           tenor.setEncoding(Utilitas.LITTERAE.displayName());
         } else {

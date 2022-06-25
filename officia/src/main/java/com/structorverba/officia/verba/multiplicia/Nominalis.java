@@ -38,7 +38,7 @@ public abstract class Nominalis <Hoc extends VerbumMultiplex <Hoc>> extends Verb
 
   /**
    * Officium hoc c\u014Dnstr\u016Bct\u014Drem re\u012B classis huius perpetrat.
-   * @param categoria  val\u014Drem {@link Verbum#categoria} indicat.
+   * @param categoria  val\u014Drem {@link Verbum#catagoria} indicat.
    * @param spclt val\u014Drem {@link Nominalis#specialitas} indicat.
    * @param gns   val\u014Drem {@link Nominalis#genus} indicat.
    * @param css   val\u014Drem {@link Nominalis#casus} indicat.
