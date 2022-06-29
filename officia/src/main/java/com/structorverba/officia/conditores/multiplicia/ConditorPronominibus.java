@@ -3,7 +3,6 @@ package com.structorverba.officia.conditores.multiplicia;
 import androidx.annotation.*;
 import com.structorverba.officia.conditores.Conditor;
 import com.structorverba.officia.enumerationes.*;
-import com.structorverba.officia.miscella.Utilitas;
 import com.structorverba.officia.nuntii.Nuntius;
 import com.structorverba.officia.verba.Verbum;
 import com.structorverba.officia.verba.multiplicia.Pronomen;
@@ -45,26 +44,32 @@ public final class ConditorPronominibus extends ConditorMultiplicibus <Pronomen>
    * @return Rem novam classis {@link Pronomen}. <br>
    * Modus hid valorem {@code null} refert s\u012B non valet valor aliquis r\u0113s haec continet.
    */
-  @Override @Nullable @SuppressWarnings("ConstantConditions")
+  @Override @Nullable
   public Pronomen condam() {
     if (ObjectUtils.allNotNull(specialitas, genus, casus, numeralis) &&
         StringUtils.isNoneBlank(lemma, scriptio)) {
-      final Pronomen hoc = new Pronomen(specialitas, genus, casus, numeralis, lemma, scriptio);
-      if (hoc == null) {
-        nuntius.moneo(Utilitas.primamCapitaneamScribo(Categoria.PRONOMEN.scriptio.replace("a", "is")),
-                      StringUtils.firstNonBlank(lemma, scriptio),
-                      "pr\u014Dducti\u014D f\u014Drmae nullae pr\u014Dcessit.");
-        return null;
-      } else {
-        nuntius.certioro(Utilitas.primamCapitaneamScribo(Categoria.PRONOMEN.scriptio.replace("ina", "en")),
-                         scriptio, "f\u012Bn\u012Btur pr\u014Dd\u016Bcere.");
-        return hoc;
-      }
+      final Pronomen hoc = Pronomen.builder().specialitas(specialitas).genus(genus).casus(casus).numeralis(numeralis)
+                                             .lemma(lemma).scriptio(scriptio).build();
+      refero(hoc);
+      return hoc;
     } else {
-      nuntius.moneo(Utilitas.primamCapitaneamScribo(Categoria.PRONOMEN.scriptio.replace("a", "is")),
-                    StringUtils.firstNonBlank(lemma, scriptio),
+      nuntius.moneo("Pr\u014Dn\u014Dminis", StringUtils.firstNonBlank(lemma, scriptio),
                     "pr\u014Dducti\u014D f\u014Drmae n\u016Bllae pr\u014Dcessit.");
       return null;
+    }
+  }
+
+  /**
+   * {@inheritDoc}
+   * @param hoc rem tentanda
+   */
+  @Override
+  protected void refero(@Nullable Pronomen hoc) {
+    if (hoc == null) {
+      nuntius.moneo("Pr\u014Dn\u014Dminis", StringUtils.firstNonBlank(lemma, scriptio),
+                    "pr\u014Dducti\u014D f\u014Drmae nullae pr\u014Dcessit.");
+    } else {
+      nuntius.certioro("Pr\u014Dn\u014Dmen", scriptio, "f\u012Bn\u012Btur pr\u014Dd\u016Bcere.");
     }
   }
 
@@ -88,8 +93,7 @@ public final class ConditorPronominibus extends ConditorMultiplicibus <Pronomen>
     } else if (pittaciumLemmae.equals(nomen)) {
       lemma = descriptor.trim();
     } else {
-      nuntius.moneo(Utilitas.primamCapitaneamScribo(Categoria.PRONOMEN.scriptio.replace("a", "is")),
-                    "attrib\u016Bta inop\u012Bnata \u016Bsa'st:", nomen, descriptor);
+      nuntius.moneo("Pr\u014Dn\u014Dminis attrib\u016Bta inop\u012Bnata \u016Bsa'st:", nomen, descriptor);
       return;
     }
 

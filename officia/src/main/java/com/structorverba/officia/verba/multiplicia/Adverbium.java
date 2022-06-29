@@ -8,7 +8,7 @@ import com.structorverba.officia.enumerationes.*;
 
 import androidx.annotation.NonNull;
 
-import lombok.Getter;
+import lombok.*;
 
 /**
  * Classis {@link Adverbium} repraesentat adverbia ut coniect\u0113ris. <br>
@@ -29,8 +29,9 @@ public class Adverbium extends VerbumMultiplex <Adverbium> {
   @Getter(lazy = true)
   @NonNull private final Nuntius.NuntiusAdverbiorum nuntius = Nuntius.NuntiusAdverbiorum.fac.get();
 
-  public Adverbium(@NonNull final Gradus gradus, @NonNull final String lemma,
-                   @NonNull final String scriptio) {
+  @Builder(access = AccessLevel.PUBLIC)
+  private Adverbium(@NonNull final Gradus gradus, @NonNull final String lemma,
+                    @NonNull final String scriptio) {
     super(Categoria.ADIECTIVUM, lemma, scriptio);
     this.gradus = gradus;
     nuntius.plusGarrio("Scr\u012Bbor ut", scriptio);

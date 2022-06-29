@@ -3,7 +3,6 @@ package com.structorverba.officia.inventores;
 import androidx.annotation.*;
 import com.structorverba.officia.enumerationes.*;
 import com.structorverba.officia.lectores.LectorMultiplicibus;
-import com.structorverba.officia.miscella.Utilitas;
 import com.structorverba.officia.nuntii.Nuntius;
 import com.structorverba.officia.verba.multiplicia.Pronomen;
 import jakarta.ejb.*;
@@ -93,9 +92,7 @@ public final class InventorPronominibus extends Inventor <Pronomen> {
       nuntius.garrio("Quaesti\u014Dn\u012B adi\u0113c\u012B conditi\u014Dnem novam:",
                      Casus.pittacium, illud);
     } else {
-      nuntius.moneo(
-        Utilitas.primamCapitaneamScribo(Categoria.PRONOMEN.scriptio.replace('a', '\u012B')),
-                    "inqu\u012Bs\u012Bti\u014D inop\u012Bn\u016Bta \u016Bsa'st:", illud);
+      nuntius.moneo("Pr\u014Dn\u014Dmin\u012B inqu\u012Bs\u012Bti\u014D inop\u012Bn\u016Bta \u016Bsa'st:", illud);
     }
   }
 }

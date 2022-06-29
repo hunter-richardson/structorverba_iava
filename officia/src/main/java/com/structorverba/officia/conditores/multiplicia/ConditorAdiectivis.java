@@ -3,7 +3,6 @@ package com.structorverba.officia.conditores.multiplicia;
 import androidx.annotation.*;
 import com.structorverba.officia.conditores.Conditor;
 import com.structorverba.officia.enumerationes.*;
-import com.structorverba.officia.miscella.Utilitas;
 import com.structorverba.officia.nuntii.Nuntius;
 import com.structorverba.officia.verba.Verbum;
 import com.structorverba.officia.verba.multiplicia.Adiectivum;
@@ -46,26 +45,32 @@ public final class ConditorAdiectivis extends ConditorMultiplicibus <Adiectivum>
    * @return Rem novam classis {@link Adiectivum}. <br>
    * Modus hid val\u014Drem {@code null} refert s\u012B n\u014Dn valet valor aliquis r\u0113s haec continet.
    */
-  @Override @Nullable @SuppressWarnings("ConstantConditions")
+  @Override @Nullable
   public Adiectivum condam() {
     if (ObjectUtils.allNotNull(specialitas, genus, casus, numeralis, gradus) &&
         StringUtils.isNoneBlank(lemma, scriptio)) {
-      final Adiectivum hoc = new Adiectivum(specialitas, genus, casus, numeralis, gradus, lemma, scriptio);
-      if (hoc == null) {
-        nuntius.moneo(Utilitas.primamCapitaneamScribo(Categoria.ADIECTIVUM.scriptio.replaceAll("a$", "\u012B")),
-                      StringUtils.firstNonBlank(lemma, scriptio),
-                      "pr\u014Dducti\u014D f\u014Drmae n\u016Bllae pr\u014Dcessit.");
-        return null;
-      } else {
-        nuntius.certioro(Utilitas.primamCapitaneamScribo(Categoria.ADIECTIVUM.scriptio.replaceAll("a$", "um")),
-                         scriptio, "f\u012Bn\u012Btur pr\u014Dd\u016Bcere.");
-        return hoc;
-      }
+      final Adiectivum hoc = Adiectivum.builder().specialitas(specialitas).genus(genus).casus(casus)
+                                                 .numeralis(numeralis).lemma(lemma).scriptio(scriptio).build();
+      refero(hoc);
+      return hoc;
     } else {
-      nuntius.moneo(Utilitas.primamCapitaneamScribo(Categoria.ADIECTIVUM.scriptio.replaceAll("a$", "\u012B")),
-                    StringUtils.firstNonBlank(lemma, scriptio),
+      nuntius.moneo("Adiect\u012Bv\u012B", StringUtils.firstNonBlank(lemma, scriptio),
                     "pr\u014Dducti\u014D f\u014Drmae n\u016Bllae pr\u014Dcessit.");
       return null;
+    }
+  }
+
+  /**
+   * {@inheritDoc}
+   * @param hoc rem tentanda
+   */
+  @Override
+  protected void refero(@Nullable Adiectivum hoc) {
+    if (hoc == null) {
+      nuntius.moneo("Adiect\u012Bv\u012B", StringUtils.firstNonBlank(lemma, scriptio),
+                    "pr\u014Dducti\u014D f\u014Drmae n\u016Bllae pr\u014Dcessit.");
+    } else {
+      nuntius.certioro("Adiect\u012Bvum", scriptio, "f\u012Bn\u012Btur pr\u014Dd\u016Bcere.");
     }
   }
 
@@ -92,8 +97,7 @@ public final class ConditorAdiectivis extends ConditorMultiplicibus <Adiectivum>
     } else if (pittaciumLemmae.equals(nomen)) {
       lemma = descriptor.trim();
     } else {
-      nuntius.moneo(Utilitas.primamCapitaneamScribo(Categoria.ADIECTIVUM.scriptio.replace('a', '\u012B')),
-                    "attrib\u016Bta inop\u012Bnata \u016Bsa'st:", nomen, descriptor);
+      nuntius.moneo("Adiect\u012Bv\u012B attrib\u016Bta inop\u012Bnata \u016Bsa'st:", nomen, descriptor);
       return;
     }
 

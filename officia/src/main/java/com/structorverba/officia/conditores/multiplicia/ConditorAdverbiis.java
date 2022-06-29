@@ -1,15 +1,12 @@
 package com.structorverba.officia.conditores.multiplicia;
 
+import androidx.annotation.*;
 import com.structorverba.officia.conditores.Conditor;
-import com.structorverba.officia.enumerationes.Categoria;
-import com.structorverba.officia.miscella.Utilitas;
+import com.structorverba.officia.enumerationes.Gradus;
 import com.structorverba.officia.nuntii.Nuntius;
 import com.structorverba.officia.verba.Verbum;
 import com.structorverba.officia.verba.multiplicia.*;
-import com.structorverba.officia.enumerationes.Gradus;
-
 import org.apache.commons.lang3.*;
-import androidx.annotation.*;
 
 import java.util.Objects;
 import java.util.function.Supplier;
@@ -42,27 +39,31 @@ public class ConditorAdverbiis extends ConditorMultiplicibus <Adverbium> {
    * @return Rem novam classis {@link Adiectivum}. <br>
    * Modus hid val\u014Drem {@code null} refert s\u012B n\u014Dn valet valor aliquis r\u0113s haec continet.
    */
-  @SuppressWarnings("ConstantConditions")
   @Override @Nullable
   public Adverbium condam() {
     if (Objects.nonNull(gradus) &&
         StringUtils.isNoneBlank(lemma, scriptio)) {
-      final Adverbium hoc = new Adverbium(gradus, lemma, scriptio);
-      if (hoc == null) {
-        nuntius.moneo(Utilitas.primamCapitaneamScribo(Categoria.ADVERBIUM.scriptio.replaceAll("a$", "\u012B")),
-                      StringUtils.firstNonBlank(lemma, scriptio),
-                      "pr\u014Dducti\u014D f\u014Drmae n\u016Bllae pr\u014Dcessit.");
-        return null;
-      } else {
-        nuntius.certioro(Utilitas.primamCapitaneamScribo(Categoria.ADVERBIUM.scriptio.replaceAll("a$", "um")),
-                         scriptio, "f\u012Bn\u012Btur pr\u014Dd\u016Bcere.");
-        return hoc;
-      }
+      final Adverbium hoc = Adverbium.builder().gradus(gradus).lemma(lemma).scriptio(scriptio).build();
+      refero(hoc);
+      return hoc;
     } else {
-      nuntius.moneo(Utilitas.primamCapitaneamScribo(Categoria.ADVERBIUM.scriptio.replaceAll("a$", "\u012B")),
-                    StringUtils.firstNonBlank(lemma, scriptio),
+      nuntius.moneo("Adverbi\u012B", StringUtils.firstNonBlank(lemma, scriptio),
                     "pr\u014Dducti\u014D f\u014Drmae n\u016Bllae pr\u014Dcessit.");
       return null;
+    }
+  }
+
+  /**
+   * {@inheritDoc}
+   * @param hoc rem tentanda
+   */
+  @Override
+  protected void refero(@Nullable Adverbium hoc) {
+    if (hoc == null) {
+      nuntius.moneo("Adverbi\u012B", StringUtils.firstNonBlank(lemma, scriptio),
+                    "pr\u014Dducti\u014D f\u014Drmae n\u016Bllae pr\u014Dcessit.");
+    } else {
+      nuntius.certioro("Adverbium", scriptio, "f\u012Bn\u012Btur pr\u014Dd\u016Bcere.");
     }
   }
 
@@ -86,8 +87,7 @@ public class ConditorAdverbiis extends ConditorMultiplicibus <Adverbium> {
     } else if(pittaciumLemmae.equals(nomen)) {
       lemma = descriptor.trim();
     } else {
-        nuntius.moneo(Utilitas.primamCapitaneamScribo(Categoria.ADVERBIUM.scriptio.replace('a', '\u012B')),
-                      "attrib\u016Bta inop\u012Bn\u0101ta est \u016Bsa:",
+        nuntius.moneo("Adverbi\u012B attrib\u016Bta inop\u012Bn\u0101ta est \u016Bsa:",
                       nomen, descriptor);
         return;
       }

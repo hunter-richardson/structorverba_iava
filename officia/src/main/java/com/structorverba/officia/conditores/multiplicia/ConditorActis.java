@@ -6,7 +6,7 @@ import com.structorverba.officia.enumerationes.*;
 import com.structorverba.officia.miscella.Utilitas;
 import com.structorverba.officia.nuntii.Nuntius;
 import com.structorverba.officia.verba.Verbum;
-import com.structorverba.officia.verba.multiplicia.Actus;
+import com.structorverba.officia.verba.multiplicia.*;
 import jakarta.ejb.*;
 import org.apache.commons.lang3.*;
 
@@ -47,26 +47,33 @@ public final class ConditorActis extends ConditorMultiplicibus <Actus> {
    * @return Rem novam classis {@link Actus}. <br>
    * Modus hid valorem {@code null} refert s\u012B non valet valor aliquis r\u0113s haec continet.
    */
-  @Override @Nullable @SuppressWarnings("ConstantConditions")
+  @Override @Nullable
   public Actus condam() {
     if (ObjectUtils.allNotNull(modus, vox, tempus, numeralis, persona, numeralis) &&
         StringUtils.isNoneBlank(lemma, scriptio)) {
-      final Actus hoc = new Actus(modus, vox, tempus, numeralis, persona, lemma, scriptio);
-      if (hoc == null) {
-        nuntius.moneo(Utilitas.primamCapitaneamScribo(Categoria.ACTUS.scriptio),
-                      StringUtils.firstNonBlank(lemma, scriptio),
-                      "pr\u014Dducti\u014D f\u014Drmae n\u016Bllae pr\u014Dcessit.");
-        return null;
-      } else {
-        nuntius.certioro(Utilitas.primamCapitaneamScribo(Categoria.ACTUS.scriptio.replace("\u012B", "us")),
-                         scriptio, "f\u012Bn\u012Btur pr\u014Dd\u016Bcere.");
-        return hoc;
-      }
+      final Actus hoc = Actus.builder().modus(modus).vox(vox).tempus(tempus).numeralis(numeralis)
+                                       .persona(persona).lemma(lemma).scriptio(scriptio).build();
+      refero(hoc);
+      return hoc;
     } else {
       nuntius.moneo(Utilitas.primamCapitaneamScribo(Categoria.ACTUS.scriptio),
                     StringUtils.firstNonBlank(lemma, scriptio),
                     "pr\u014Dducti\u014D f\u014Drmae n\u016Bllae pr\u014Dcessit.");
       return null;
+    }
+  }
+
+  /**
+   * {@inheritDoc}
+   * @param hoc rem tentanda
+   */
+  @Override
+  protected void refero(@Nullable Actus hoc) {
+    if (hoc == null) {
+      nuntius.moneo("\u0102ct\u012B", StringUtils.firstNonBlank(lemma, scriptio),
+                    "pr\u014Dducti\u014D f\u014Drmae n\u016Bllae pr\u014Dcessit.");
+    } else {
+      nuntius.certioro("\u0102ctus", scriptio, "f\u012Bn\u012Btur pr\u014Dd\u016Bcere.");
     }
   }
 

@@ -34,32 +34,32 @@ public final class StructorVerba extends Omne {
   @NonNull private final Range <Short> TRACTUS_NUMERORUM = Range.between(Integer.valueOf(1).shortValue(),
                                                                          Integer.valueOf(4000).shortValue());
 
-  @Getter(value = AccessLevel.PUBLIC, lazy = true)
+  @Getter(value = AccessLevel.PRIVATE, lazy = true)
   @NonNull private final LectorMultiplicibus.LectorAdiectivis adiectiva =
     LectorMultiplicibus.LectorAdiectivis.fac.get();
 
-  @Getter(value = AccessLevel.PUBLIC, lazy = true)
+  @Getter(value = AccessLevel.PRIVATE, lazy = true)
   @NonNull private final LectorMultiplicibus.LectorAdverbiis adverbia = LectorMultiplicibus.LectorAdverbiis.fac.get();
 
-  @Getter(value = AccessLevel.PUBLIC, lazy = true)
+  @Getter(value = AccessLevel.PRIVATE, lazy = true)
   @NonNull private final LectorMultiplicibus.LectorPronominibus pronomina =
     LectorMultiplicibus.LectorPronominibus.fac.get();
 
-  @Getter(value = AccessLevel.PUBLIC, lazy = true)
+  @Getter(value = AccessLevel.PRIVATE, lazy = true)
   @NonNull private final LectorMultiplicibus.LectorActis acti = LectorMultiplicibus.LectorActis.fac.get();
 
-  @Getter(value = AccessLevel.PUBLIC, lazy = true)
+  @Getter(value = AccessLevel.PRIVATE, lazy = true)
   @NonNull private final LectorMultiplicibus.LectorNominibus nomina = LectorMultiplicibus.LectorNominibus.fac.get();
 
-  @Getter(value = AccessLevel.PUBLIC, lazy = true)
+  @Getter(value = AccessLevel.PRIVATE, lazy = true)
   @NonNull private final LectorSimplicibus.LectorConiunctivis coniunctiva =
     LectorSimplicibus.LectorConiunctivis.fac.get();
 
-  @Getter(value = AccessLevel.PUBLIC, lazy = true)
+  @Getter(value = AccessLevel.PRIVATE, lazy = true)
   @NonNull private final LectorSimplicibus.LectorInteriectionibus interiectiones =
     LectorSimplicibus.LectorInteriectionibus.fac.get();
 
-  @Getter(value = AccessLevel.PUBLIC, lazy = true)
+  @Getter(value = AccessLevel.PRIVATE, lazy = true)
   @NonNull private final LectorPraepositionibus praepositiones = LectorPraepositionibus.fac.get();
 
   /**
@@ -75,12 +75,12 @@ public final class StructorVerba extends Omne {
   @SuppressWarnings("unchecked")
   @Nullable public <Hoc extends Verbum <Hoc>> Hoc adveniam(@NonNull final String lemma,
                                                            @NonNull final Categoria categoria) {
-    return switch (categoria) {
-      case CONIUNCTIVUM -> (Hoc) coniunctiva.adveniam(lemma);
-      case INTERIECTIO -> (Hoc) interiectiones.adveniam(lemma);
-      case PRAEPOSITIO -> (Hoc) praepositiones.adveniam(lemma);
+    return (Hoc) (switch (categoria) {
+      case CONIUNCTIVUM -> coniunctiva.adveniam(lemma);
+      case INTERIECTIO -> interiectiones.adveniam(lemma);
+      case PRAEPOSITIO -> praepositiones.adveniam(lemma);
       default -> null;
-    };
+    });
   }
 
   /**
@@ -125,7 +125,7 @@ public final class StructorVerba extends Omne {
    * @return Rem classis {@link VerbumSimplex.Numerus}
    */
   public @Nullable VerbumSimplex.Numerus numerus(final short numerus) {
-    return TRACTUS_NUMERORUM.contains(numerus) ? new VerbumSimplex.Numerus(numerus)
+    return TRACTUS_NUMERORUM.contains(numerus) ? VerbumSimplex.Numerus.builder().numerus(numerus).build()
                                                : null;
   }
 
@@ -136,7 +136,8 @@ public final class StructorVerba extends Omne {
   public @Nullable VerbumSimplex.Numerus numerus(final @NonNull String scriptio) {
     if (Patterns.ROMAN_PATTERN.matcher(scriptio).matches()) {
       final short numerus = Integer.valueOf(RomanInteger.parse(scriptio, IntegerType.ROMAN).getArabic()).shortValue();
-      return TRACTUS_NUMERORUM.contains(numerus) ? new VerbumSimplex.Numerus(numerus) : null;
+      return TRACTUS_NUMERORUM.contains(numerus) ? VerbumSimplex.Numerus.builder().numerus(numerus).build()
+                                                 : null;
     } else {
       return null;
     }

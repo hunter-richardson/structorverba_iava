@@ -1,6 +1,7 @@
 package com.structorverba.officia.verba.multiplicia;
 
 import androidx.annotation.*;
+import androidx.annotation.NonNull;
 import com.structorverba.officia.conditores.multiplicia.ConditorActis;
 import com.structorverba.officia.inventores.InventorActis;
 import com.structorverba.officia.lectores.LectorMultiplicibus;
@@ -9,7 +10,7 @@ import com.structorverba.officia.nuntii.Nuntius;
 import com.structorverba.officia.tenores.TenorMultiplicibus;
 import com.structorverba.officia.enumerationes.*;
 
-import lombok.Getter;
+import lombok.*;
 
 /**
  * Classis {@link Actus} repraesentat n\u014Dmina ut coniect\u0113ris. <br>
@@ -57,9 +58,10 @@ public final class Actus extends VerbumMultiplex <Actus> {
   @Getter(lazy = true)
   @NonNull private final Nuntius.NuntiusActorum nuntius = Nuntius.NuntiusActorum.fac.get();
 
-  public Actus(@NonNull final Modus modus, @NonNull final Vox vox, @NonNull final Tempus tempus,
-               @NonNull final Numeralis numeralis, @NonNull final Persona persona,
-               @NonNull final String lemma, @NonNull final String scriptio) {
+  @Builder(access = AccessLevel.PUBLIC, toBuilder = true)
+  private Actus(@NonNull final Modus modus, @NonNull final Vox vox, @NonNull final Tempus tempus,
+                @NonNull final Numeralis numeralis, @NonNull final Persona persona,
+                @NonNull final String lemma, @NonNull final String scriptio) {
     super(Categoria.ACTUS, lemma, Utilitas.minusculasScribo(scriptio));
     this.modus = modus;
     this.vox = vox;

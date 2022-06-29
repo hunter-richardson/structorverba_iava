@@ -67,17 +67,15 @@ public final class LectorPraepositionibus extends Omne {
                                        .findFirst().orElse(StringUtils.EMPTY);
         if (StringUtils.isNotBlank(lemma)) {
           nuntius.garrio("Adven\u012B hoc:", lemma);
-          return new VerbumSimplex.Praepositio(lemma);
+          return VerbumSimplex.Praepositio.builder().lemma(lemma).build();
         } else {
           nuntius.moneo("N\u012Bl adven\u012B verb\u014D", verbum);
-          nuntius.garrio(Utilitas.primamCapitaneamScribo(Categoria.PRAEPOSITIO.scriptio.replace("\u0113s", "\u012B")),
-                           "ass\u016Bm\u0113tur");
+          nuntius.garrio("Praepositi\u014Dn\u012B ass\u016Bm\u0113tur");
           return VerbumSimplex.Praepositio.assume.get();
         }
       } catch (IOException e) {
         nuntius.terreo(e);
-        nuntius.garrio(Utilitas.primamCapitaneamScribo(Categoria.PRAEPOSITIO.scriptio.replace("\u0113s", "\u012B")),
-                         "ass\u016Bm\u0113tur");
+        nuntius.garrio("Praepositi\u014Dn\u012B ass\u016Bm\u0113tur");
         return VerbumSimplex.Praepositio.assume.get();
       }
     };

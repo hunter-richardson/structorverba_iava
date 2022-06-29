@@ -9,7 +9,7 @@ import com.structorverba.officia.enumerationes.*;
 
 import androidx.annotation.NonNull;
 
-import lombok.Getter;
+import lombok.*;
 
 /**
  * Classis {@link Pronomen} repraesentat pr\u014Dn\u014Dmina ut coniect\u0113ris. <br>
@@ -26,7 +26,8 @@ public final class Pronomen extends Nominalis <Pronomen> {
   @Getter(lazy = true)
   @NonNull private final Nuntius.NuntiusPronominum nuntius = Nuntius.NuntiusPronominum.fac.get();
 
-  public Pronomen(@NonNull final Specialitas specialitas, @NonNull final Genus genus,
+  @Builder(access = AccessLevel.PUBLIC, toBuilder = true)
+  private Pronomen(@NonNull final Specialitas specialitas, @NonNull final Genus genus,
                    @NonNull final Casus casus, @NonNull final Numeralis numeralis,
                    @NonNull final String lemma, @NonNull final String scriptio) {
     super(Categoria.PRONOMEN, specialitas, genus, casus, numeralis, lemma, scriptio);

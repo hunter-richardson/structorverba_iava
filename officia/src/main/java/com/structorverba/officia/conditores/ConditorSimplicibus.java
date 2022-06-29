@@ -1,8 +1,6 @@
 package com.structorverba.officia.conditores;
 
 import androidx.annotation.*;
-import com.structorverba.officia.enumerationes.Categoria;
-import com.structorverba.officia.miscella.Utilitas;
 import com.structorverba.officia.nuntii.Nuntius;
 import com.structorverba.officia.tenores.Tenor;
 import com.structorverba.officia.verba.VerbumSimplex;
@@ -47,12 +45,6 @@ public abstract class ConditorSimplicibus <Hoc extends VerbumSimplex <Hoc>> exte
   }
 
   /**
-   * Modus hic rem classis {@link Hoc} accipit val\u014Dr\u012Bque {@link Conditor#nuntius} ita refert.
-   * @param hoc rem tentanda
-   */
-  protected abstract void refero(@Nullable final Hoc hoc);
-
-  /**
    * Classis {@link ConditorConiunctivis} est v\u0101s classis {@link Tenor} class\u012B {@link VerbumSimplex.Coniunctivum}.
    * @see VerbumSimplex.Coniunctivum
    * @see Nuntius.NuntiusConditoriConiunctivis
@@ -70,7 +62,8 @@ public abstract class ConditorSimplicibus <Hoc extends VerbumSimplex <Hoc>> exte
       () -> ObjectUtils.firstNonNull(instantia, instantia = new ConditorConiunctivis());
 
     private ConditorConiunctivis() {
-      super(Nuntius.NuntiusConditoriConiunctivis.fac, VerbumSimplex.Coniunctivum::new);
+      super(Nuntius.NuntiusConditoriConiunctivis.fac,
+            lemma -> VerbumSimplex.Coniunctivum.builder().lemma(lemma).build());
       nuntius.plurimumGarrio("Factus sum");
     }
 
@@ -81,11 +74,9 @@ public abstract class ConditorSimplicibus <Hoc extends VerbumSimplex <Hoc>> exte
      */
     protected void refero(@Nullable final VerbumSimplex.Coniunctivum hoc) {
       if (hoc == null) {
-        nuntius.certioro(Utilitas.primamCapitaneamScribo(Categoria.CONIUNCTIVUM.scriptio.replace("a", "um")),
-                         lemma, "f\u012Bn\u012Btur pr\u014Dd\u016Bcere.");
+        nuntius.certioro("Coni\u016Bnct\u012Bvum", lemma, "f\u012Bn\u012Btur pr\u014Dd\u016Bcere.");
       } else {
-        nuntius.moneo(Utilitas.primamCapitaneamScribo(Categoria.CONIUNCTIVUM.scriptio.replace('a', '\u012B')),
-                      "pr\u014Dducti\u014D formae n\u016Bllae pr\u014Dcessit.");
+        nuntius.moneo("Coni\u016Bnct\u012Bv\u012B pr\u014Dducti\u014D formae n\u016Bllae pr\u014Dcessit.");
       }
     }
   }
@@ -108,7 +99,8 @@ public abstract class ConditorSimplicibus <Hoc extends VerbumSimplex <Hoc>> exte
       () -> ObjectUtils.firstNonNull(instantia, instantia = new ConditorInteriectionibus());
 
     private ConditorInteriectionibus() {
-      super(Nuntius.NuntiusConditoriInteriectionibus.fac, VerbumSimplex.Interiectio::new);
+      super(Nuntius.NuntiusConditoriInteriectionibus.fac,
+            lemma -> VerbumSimplex.Interiectio.builder().lemma(lemma).build());
       nuntius.plurimumGarrio("Factus sum");
     }
 
@@ -118,11 +110,9 @@ public abstract class ConditorSimplicibus <Hoc extends VerbumSimplex <Hoc>> exte
      */
     protected void refero(@Nullable final VerbumSimplex.Interiectio hoc) {
       if (hoc == null) {
-        nuntius.certioro(Utilitas.primamCapitaneamScribo(Categoria.INTERIECTIO.scriptio.replace("n\u0113s", StringUtils.EMPTY)),
-                         lemma, "f\u012Bn\u012Btur pr\u014Dd\u016Bcere.");
+        nuntius.certioro("Interiecti\u014D", lemma, "f\u012Bn\u012Btur pr\u014Dd\u016Bcere.");
       } else {
-        nuntius.moneo(Utilitas.primamCapitaneamScribo(Categoria.INTERIECTIO.scriptio.replace("\u0113s", "\u012B")),
-                      "pr\u014Dducti\u014D f\u014Drmae n\u016Bllae pr\u014Dcessit.");
+        nuntius.moneo("Interiecti\u014Dn\u012B pr\u014Dducti\u014D f\u014Drmae n\u016Bllae pr\u014Dcessit.");
       }
     }
   }

@@ -9,7 +9,7 @@ import com.structorverba.officia.enumerationes.*;
 
 import androidx.annotation.NonNull;
 
-import lombok.Getter;
+import lombok.*;
 
 /**
  * Classis {@link Nomen} repraesentat n\u014Dmina ut coniect\u0113ris. <br>
@@ -32,12 +32,13 @@ public final class Nomen extends Nominalis <Nomen> {
   @Getter(lazy = true)
   @NonNull private final Nuntius.NuntiusNominum nuntius = Nuntius.NuntiusNominum.fac.get();
 
-  public Nomen(@NonNull final Specialitas specialitas, @NonNull final Genus genus,
+  @Builder(access = AccessLevel.PUBLIC, toBuilder = true)
+  private Nomen(@NonNull final Specialitas specialitas, @NonNull final Genus genus,
                 @NonNull final Casus casus, @NonNull final Numeralis numeralis,
-                @NonNull final Tempus tmps, @NonNull final String lemma,
+                @NonNull final Tempus tempus, @NonNull final String lemma,
                 @NonNull final String scriptio) {
     super(Categoria.NOMEN, specialitas, genus, casus, numeralis, lemma, scriptio);
-    tempus = tmps;
+    this.tempus = tempus;
     nuntius.plusGarrio("Scr\u016Bbor ut", scriptio);
   }
 }

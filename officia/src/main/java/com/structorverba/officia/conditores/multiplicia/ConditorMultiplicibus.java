@@ -1,11 +1,10 @@
 package com.structorverba.officia.conditores.multiplicia;
 
+import androidx.annotation.*;
 import com.structorverba.officia.conditores.Conditor;
 import com.structorverba.officia.nuntii.Nuntius;
 import com.structorverba.officia.verba.multiplicia.VerbumMultiplex;
-
 import org.apache.commons.lang3.StringUtils;
-import androidx.annotation.NonNull;
 
 import java.util.function.Supplier;
 
@@ -25,6 +24,8 @@ public abstract class ConditorMultiplicibus <Hoc extends VerbumMultiplex <Hoc>> 
    * Valor hic val\u014Drem {@link VerbumMultiplex#scriptio} re\u012B pr\u014Dductae repraehentat.
    */
   @NonNull protected String scriptio = StringUtils.EMPTY;
+
+  @Nullable protected Hoc hoc = null;
 
   /**
    * Officium hoc c\u014Dnstr\u016Bct\u014Drem re\u012B classis huius perpetrat.

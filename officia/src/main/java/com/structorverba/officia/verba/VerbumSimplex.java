@@ -1,6 +1,7 @@
 package com.structorverba.officia.verba;
 
 import androidx.annotation.*;
+import androidx.annotation.NonNull;
 import com.github.chaosfirebolt.converter.RomanInteger;
 import com.github.chaosfirebolt.converter.constants.IntegerType;
 import com.github.chaosfirebolt.converter.util.Validator;
@@ -11,7 +12,7 @@ import com.structorverba.officia.lectores.*;
 import com.structorverba.officia.miscella.Utilitas;
 import com.structorverba.officia.nuntii.Nuntius;
 import com.structorverba.officia.tenores.TenorSimplicibus;
-import lombok.Getter;
+import lombok.*;
 import org.apache.commons.lang3.*;
 
 import java.util.function.Supplier;
@@ -55,9 +56,10 @@ public abstract class VerbumSimplex <Hoc extends Verbum <Hoc>> extends Verbum <H
     @Getter(lazy = true)
     @NonNull private final Nuntius.NuntiusConiunctivorum nuntius = Nuntius.NuntiusConiunctivorum.fac.get();
 
-    public Coniunctivum(@NonNull final String verbum) {
-      super(Categoria.CONIUNCTIVUM, verbum);
-      nuntius.plusGarrio("Scr\u012Bbor ut", verbum);
+    @Builder(access = AccessLevel.PUBLIC, toBuilder = true)
+    private Coniunctivum(@NonNull final String lemma) {
+      super(Categoria.CONIUNCTIVUM, lemma);
+      nuntius.plusGarrio("Scr\u012Bbor ut", lemma);
     }
   }
 
@@ -75,9 +77,10 @@ public abstract class VerbumSimplex <Hoc extends Verbum <Hoc>> extends Verbum <H
     @Getter(lazy = true)
     @NonNull private final Nuntius.NuntiusInteriectionum nuntius = Nuntius.NuntiusInteriectionum.fac.get();
 
-    public Interiectio(@NonNull final String verbum) {
-      super(Categoria.INTERIECTIO, verbum);
-      nuntius.plusGarrio("Scr\u012Bbor ut", verbum);
+    @Builder(access = AccessLevel.PUBLIC, toBuilder = true)
+    private Interiectio(@NonNull final String lemma) {
+      super(Categoria.INTERIECTIO, lemma);
+      nuntius.plusGarrio("Scr\u012Bbor ut", lemma);
     }
   }
 
@@ -93,13 +96,14 @@ public abstract class VerbumSimplex <Hoc extends Verbum <Hoc>> extends Verbum <H
      * Valor hic supplet rem classis {@link Praepositio} quam praepositi\u014Dnem n\u016Blla repraesentat.
      */
     @NonNull public static final Supplier <Praepositio> assume =
-      () -> new Praepositio(StringUtils.EMPTY);
+      () -> Praepositio.builder().build();
     @Getter(lazy = true)
     @NonNull private final Nuntius.NuntiusPraepositionum nuntius = Nuntius.NuntiusPraepositionum.fac.get();
 
-    public Praepositio(@NonNull final String verbum) {
-      super(Categoria.PRAEPOSITIO, verbum);
-      nuntius.plusGarrio("Scr\u012Bbor ut", verbum);
+    @Builder(access = AccessLevel.PUBLIC, toBuilder = true)
+    private Praepositio(@NonNull final String lemma) {
+      super(Categoria.PRAEPOSITIO, lemma);
+      nuntius.plusGarrio("Scr\u012Bbor ut", lemma);
     }
   }
 
@@ -133,7 +137,8 @@ public abstract class VerbumSimplex <Hoc extends Verbum <Hoc>> extends Verbum <H
     @Getter(lazy = true)
     @NonNull private final Nuntius.NuntiusNumerorum nuntius = Nuntius.NuntiusNumerorum.fac.get();
 
-    public Numerus(final short numerus) throws IllegalArgumentException {
+    @Builder(access = AccessLevel.PUBLIC, toBuilder = true)
+    private Numerus(final short numerus) throws IllegalArgumentException {
       super(Categoria.NUMERUS, String.valueOf(numerus));
       this.numerus = Validator.range(Short.toUnsignedInt(numerus));
       nuntius.plusGarrio("Scr\u012Bbor ut", toString());

@@ -49,4 +49,10 @@ public abstract class Conditor <Hoc extends Verbum <Hoc>> extends Omne {
    *   haec continet.
    */
   @Nullable public abstract Hoc condam();
+
+  /**
+   * Modus hic rem classis {@link Hoc} accipit val\u014Dr\u012Bque {@link Conditor#nuntius} ita refert.
+   * @param hoc rem tentanda
+   */
+  protected abstract void refero(@Nullable final Hoc hoc);
 }

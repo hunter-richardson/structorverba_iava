@@ -9,7 +9,7 @@ import com.structorverba.officia.enumerationes.*;
 
 import androidx.annotation.NonNull;
 
-import lombok.Getter;
+import lombok.*;
 
 /**
  * Classis {@link Adiectivum} repraesentat adiect\u012Bva ut coniect\u0113ris. <br>
@@ -32,7 +32,9 @@ public final class Adiectivum extends Nominalis <Adiectivum> {
   @Getter(lazy = true)
   @NonNull private final Nuntius.NuntiusAdiectivorum nuntius = Nuntius.NuntiusAdiectivorum.fac.get();
 
-  public Adiectivum(@NonNull final Specialitas specialitas, @NonNull final Genus genus,
+
+  @Builder(access = AccessLevel.PUBLIC, toBuilder = true)
+  private Adiectivum(@NonNull final Specialitas specialitas, @NonNull final Genus genus,
                      @NonNull final Casus casus, @NonNull final Numeralis numeralis,
                      @NonNull final Gradus gradus, @NonNull final String lemma,
                      @NonNull final String scriptio) {
