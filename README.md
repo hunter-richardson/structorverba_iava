@@ -38,7 +38,7 @@ III. [Exempla](officium/src/test/net/strūctorverba/tentāmina/Exempla.java)
 
 IV. [Numerī](officium/src/test/net/strūctorverba/tentāmina/Numerī.java)
 
-Valōrem [StructorVerba.faciendum](officia/src/main/java/com/structorverba/officia/miscella/StructorVerba.java#L32) invocāte ut fūnctiōnēs omnēs programmātis StrūctorVerba accēdātis:
+Invocāte valōrem [StructorVerba.faciendum](officia/src/main/java/com/structorverba/officia/miscella/StructorVerba.java#L32) ut fūnctiōnēs omnēs programmātis StrūctorVerba accēdātis:
 
 ```java
 import net.structorverba.enumerationes.*;
