@@ -3,7 +3,7 @@ package com.structorverba.officia.inventores;
 import androidx.annotation.*;
 import com.structorverba.officia.enumerationes.*;
 import com.structorverba.officia.lectores.LectorMultiplicibus;
-import com.structorverba.officia.nuntii.Nuntius;
+import com.structorverba.officia.nuntii.*;
 import com.structorverba.officia.verba.multiplicia.Adiectivum;
 import jakarta.ejb.*;
 import org.apache.commons.lang3.ObjectUtils;
@@ -13,7 +13,7 @@ import java.util.function.*;
 /**
  * Classis {@link InventorAdiectivis} est v\u0101s classis {@link Inventor} class\u012B {@link Adiectivum}.
  * @see Adiectivum
- * @see Nuntius.NuntiusInventoriAdiectivis
+ * @see NuntiusInventoriAdiectivis
  */
 @SuppressWarnings("SpellCheckingInspection")
 @Singleton
@@ -35,7 +35,7 @@ public final class InventorAdiectivis extends Inventor <Adiectivum> {
   @NonNull private Gradus      gradus      = Gradus.NULLUS;
 
   private InventorAdiectivis() {
-    super(Nuntius.NuntiusInventoriAdiectivis.fac);
+    super(NuntiusInventoriAdiectivis.fac);
     nuntius.plurimumGarrio("Factus sum");
   }
 
@@ -46,11 +46,11 @@ public final class InventorAdiectivis extends Inventor <Adiectivum> {
    */
   @Override @NonNull
   public Predicate <Adiectivum> inquiram() {
-    return adiectivum -> specialitas.equals(adiectivum.specialitas)
-                         && genus.equals(adiectivum.genus)
-                         && casus.equals(adiectivum.casus)
-                         && numeralis.equals(adiectivum.numeralis)
-                         && gradus.equals(adiectivum.gradus);
+    return adiectivum -> specialitas.equals(adiectivum.specialitas) &&
+                         genus.equals(adiectivum.genus) &&
+                         casus.equals(adiectivum.casus) &&
+                         numeralis.equals(adiectivum.numeralis) &&
+                         gradus.equals(adiectivum.gradus);
   }
 
   /**
@@ -103,6 +103,26 @@ public final class InventorAdiectivis extends Inventor <Adiectivum> {
     } else {
       nuntius.moneo("Adiect\u012Bv\u014D inqu\u012Bs\u012Bti\u014D adiect\u012Bv\u014D inop\u012Bn\u0101ta \u016Bsa'st:",
                     illud);
+    }
+  }
+
+  /**
+   * Classis {@link NuntiusInventoriAdiectivis} est v\u0101s classis {@link Nuntius} class\u012B {@link InventorAdiectivis}
+   * @see InventorAdiectivis
+   */
+  @Singleton
+  private static final class NuntiusInventoriAdiectivis extends Nuntius {
+    @Nullable private static NuntiusInventoriAdiectivis instantia = null;
+
+    /**
+     * Valor hic viam re\u012B classis huiuc facit.
+     * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
+     */
+    @NonNull private static final Supplier <NuntiusInventoriAdiectivis> fac =
+            () -> ObjectUtils.firstNonNull(instantia, instantia = new NuntiusInventoriAdiectivis());
+
+    private NuntiusInventoriAdiectivis() {
+      super(ParametriNuntii.para(InventorAdiectivis.class));
     }
   }
 }

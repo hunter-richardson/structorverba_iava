@@ -3,7 +3,7 @@ package com.structorverba.officia.conditores.multiplicia;
 import androidx.annotation.*;
 import com.structorverba.officia.conditores.Conditor;
 import com.structorverba.officia.enumerationes.*;
-import com.structorverba.officia.nuntii.Nuntius;
+import com.structorverba.officia.nuntii.*;
 import com.structorverba.officia.verba.Verbum;
 import com.structorverba.officia.verba.multiplicia.Adiectivum;
 import jakarta.ejb.*;
@@ -14,7 +14,7 @@ import java.util.function.Supplier;
 /**
  * Classis {@link ConditorAdiectivis} est v\u0101s classis {@link Conditor} class\u012B {@link Adiectivum}.
  * @see Adiectivum
- * @see Nuntius.NuntiusConditoriAdiectivis
+ * @see NuntiusConditoriAdiectivis
  */
 @SuppressWarnings("SpellCheckingInspection")
 @Singleton
@@ -36,7 +36,7 @@ public final class ConditorAdiectivis extends ConditorMultiplicibus <Adiectivum>
   @NonNull private Gradus      gradus      = Gradus.NULLUS;
 
   private ConditorAdiectivis() {
-    super(Nuntius.NuntiusConditoriAdiectivis.fac);
+    super(NuntiusConditoriAdiectivis.fac);
     nuntius.plurimumGarrio("Factus sum");
   }
 
@@ -121,5 +121,25 @@ public final class ConditorAdiectivis extends ConditorMultiplicibus <Adiectivum>
     gradus = Gradus.NULLUS;
     scriptio = StringUtils.EMPTY;
     nuntius.certioro("Restit\u016Btus sum");
+  }
+
+  /**
+   * Classis {@link NuntiusConditoriAdiectivis} est v\u0101s classis {@link Nuntius} class\u012B {@link ConditorAdiectivis}
+   * @see ConditorAdiectivis
+   */
+  @Singleton
+  private static final class NuntiusConditoriAdiectivis extends Nuntius {
+    @Nullable private static NuntiusConditoriAdiectivis instantia = null;
+
+    /**
+     * Valor hic viam rei classis huiuc facit.
+     * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
+     */
+    @NonNull private static final Supplier <NuntiusConditoriAdiectivis> fac =
+            () -> ObjectUtils.firstNonNull(instantia, instantia = new NuntiusConditoriAdiectivis());
+
+    private NuntiusConditoriAdiectivis() {
+      super(ParametriNuntii.para(ConditorAdiectivis.class));
+    }
   }
 }

@@ -1,12 +1,11 @@
 package com.structorverba.officia.lectores;
 
+import androidx.annotation.*;
+import com.structorverba.officia.enumerationes.Categoria;
 import com.structorverba.officia.miscella.*;
 import com.structorverba.officia.nuntii.Nuntius;
 import com.structorverba.officia.tenores.Tenor;
 import com.structorverba.officia.verba.Verbum;
-import com.structorverba.officia.enumerationes.Categoria;
-
-import androidx.annotation.NonNull;
 import org.xml.sax.*;
 
 import javax.xml.parsers.*;
@@ -39,6 +38,8 @@ public abstract class Lector <Hoc extends Verbum <Hoc>> extends Omne {
    * @see Categoria
    */
   @NonNull protected final Categoria categoria;
+
+  @Nullable public abstract Hoc fortuitumLegam();
 
   /**
    * Officium hoc c\u014Dnstr\u016Bct\u014Drem re\u012B classis huius perpetrat.

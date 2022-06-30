@@ -3,7 +3,7 @@ package com.structorverba.officia.conditores.multiplicia;
 import androidx.annotation.*;
 import com.structorverba.officia.conditores.Conditor;
 import com.structorverba.officia.enumerationes.*;
-import com.structorverba.officia.nuntii.Nuntius;
+import com.structorverba.officia.nuntii.*;
 import com.structorverba.officia.verba.Verbum;
 import com.structorverba.officia.verba.multiplicia.Nomen;
 import jakarta.ejb.*;
@@ -14,7 +14,7 @@ import java.util.function.Supplier;
 /**
  * Classis {@link ConditorNominibus} est v\u0101s classis {@link Conditor} class\u012B {@link Nomen}.
  * @see Nomen
- * @see Nuntius.NuntiusConditoriNominibus
+ * @see NuntiusConditoriNominibus
  */
 @SuppressWarnings("SpellCheckingInspection")
 @Singleton
@@ -36,7 +36,7 @@ public final class ConditorNominibus extends ConditorMultiplicibus <Nomen> {
   @NonNull private Tempus      tempus      = Tempus.INTEMPORALE;
 
   private ConditorNominibus() {
-    super(Nuntius.NuntiusConditoriNominibus.fac);
+    super(NuntiusConditoriNominibus.fac);
     nuntius.plurimumGarrio("Factus sum");
   }
 
@@ -121,5 +121,25 @@ public final class ConditorNominibus extends ConditorMultiplicibus <Nomen> {
     tempus = Tempus.INTEMPORALE;
     scriptio = StringUtils.EMPTY;
     nuntius.certioro("Restit\u016Btus sum");
+  }
+
+  /**
+   * Classis {@link NuntiusConditoriNominibus} est v\u0101s classis {@link Nuntius} class\u012B {@link ConditorNominibus}
+   * @see ConditorNominibus
+   */
+  @Singleton
+  private static final class NuntiusConditoriNominibus extends Nuntius {
+    @Nullable private static NuntiusConditoriNominibus instantia = null;
+
+    /**
+     * Valor hic viam re\u012B classis huiuc facit.
+     * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
+     */
+    @NonNull private static final Supplier <NuntiusConditoriNominibus> fac =
+            () -> ObjectUtils.firstNonNull(instantia, instantia = new NuntiusConditoriNominibus());
+
+    private NuntiusConditoriNominibus() {
+      super(ParametriNuntii.para(ConditorNominibus.class));
+    }
   }
 }

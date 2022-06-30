@@ -35,7 +35,7 @@ final class Numeri extends Omne {
   @Test @Order(1)
   public void conversionis() {
     System.out.println(new Tentamen.TentamenNumeraleConversionis(XLII_SCRIPTIO, XLII_NUMERUM)
-                         .exsequar(structor.numerus(XLII_NUMERUM)));
+                         .exsequar(structor.numeram(XLII_NUMERUM)));
   }
 
   /**
@@ -45,7 +45,7 @@ final class Numeri extends Omne {
   @Test @Order(2)
   public void reversionis() {
     System.out.println(new Tentamen.TentamenNumeraleReversionis(XLII_NUMERUM, XLII_SCRIPTIO)
-                         .exsequar(structor.numerus(XLII_SCRIPTIO)));
+                         .exsequar(structor.numeram(XLII_SCRIPTIO)));
   }
 
   /**
@@ -56,7 +56,7 @@ final class Numeri extends Omne {
   public void combinationis() {
     final short numerus = (short) Math.round((NUMERUM_MAXIMUM + 1) * Math.random() + 1);
     System.out.println(new Tentamen.TentamenNumeraleCombinationis(numerus)
-                         .exsequar(structor.numerus(numerus)));
+                         .exsequar(structor.numeram(numerus)));
   }
 
   /**
@@ -67,7 +67,7 @@ final class Numeri extends Omne {
   public void additionis() {
     @NonNull final Range <Short> range = Range.between((short) 3, (short) 17);
     System.out.println(new Tentamen.TentamenMathematicum(range, '+')
-                         .exsequar(structor.numerus(range.getMaximum())));
+                         .exsequar(structor.numeram(range.getMaximum())));
   }
 
   /**
@@ -78,7 +78,7 @@ final class Numeri extends Omne {
   public void subtractionis() {
     @NonNull final Range <Short> range = Range.between((short) 7, (short) 12);
     System.out.println(new Tentamen.TentamenMathematicum(range, '-')
-                         .exsequar(structor.numerus(range.getMaximum())));
+                         .exsequar(structor.numeram(range.getMaximum())));
   }
 
   /**
@@ -89,7 +89,7 @@ final class Numeri extends Omne {
   public void multiplicationis() {
     @NonNull final Range <Short> range = Range.between((short) 2, (short) 3);
     System.out.println(new Tentamen.TentamenMathematicum(range, '*')
-                         .exsequar(structor.numerus(range.getMaximum())));
+                         .exsequar(structor.numeram(range.getMaximum())));
   }
 
   /**
@@ -100,7 +100,7 @@ final class Numeri extends Omne {
   public void divisionis() {
     @NonNull final Range <Short> range = Range.between((short) 6, (short) 18);
     System.out.println(new Tentamen.TentamenMathematicum(range, '/')
-                         .exsequar(structor.numerus(range.getMaximum())));
+                         .exsequar(structor.numeram(range.getMaximum())));
   }
 
   /**
@@ -111,6 +111,6 @@ final class Numeri extends Omne {
   public void mansionis() {
     @NonNull final Range <Short> range = Range.between((short) 9, (short) 12);
     System.out.println(new Tentamen.TentamenMathematicum(range, '%')
-                         .exsequar(structor.numerus(range.getMaximum())));
+                         .exsequar(structor.numeram(range.getMaximum())));
   }
 }

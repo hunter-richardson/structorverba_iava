@@ -1,7 +1,7 @@
 package com.structorverba.officia.conditores;
 
 import androidx.annotation.*;
-import com.structorverba.officia.nuntii.Nuntius;
+import com.structorverba.officia.nuntii.*;
 import com.structorverba.officia.tenores.Tenor;
 import com.structorverba.officia.verba.VerbumSimplex;
 import jakarta.ejb.*;
@@ -47,7 +47,7 @@ public abstract class ConditorSimplicibus <Hoc extends VerbumSimplex <Hoc>> exte
   /**
    * Classis {@link ConditorConiunctivis} est v\u0101s classis {@link Tenor} class\u012B {@link VerbumSimplex.Coniunctivum}.
    * @see VerbumSimplex.Coniunctivum
-   * @see Nuntius.NuntiusConditoriConiunctivis
+   * @see NuntiusConditoriConiunctivis
    */
   @Singleton
   @DependsOn("NuntiusConditoriAdverbiis")
@@ -62,8 +62,7 @@ public abstract class ConditorSimplicibus <Hoc extends VerbumSimplex <Hoc>> exte
       () -> ObjectUtils.firstNonNull(instantia, instantia = new ConditorConiunctivis());
 
     private ConditorConiunctivis() {
-      super(Nuntius.NuntiusConditoriConiunctivis.fac,
-            lemma -> VerbumSimplex.Coniunctivum.builder().lemma(lemma).build());
+      super(NuntiusConditoriConiunctivis.fac, lemma -> VerbumSimplex.Coniunctivum.builder().lemma(lemma).build());
       nuntius.plurimumGarrio("Factus sum");
     }
 
@@ -79,12 +78,33 @@ public abstract class ConditorSimplicibus <Hoc extends VerbumSimplex <Hoc>> exte
         nuntius.moneo("Coni\u016Bnct\u012Bv\u012B pr\u014Dducti\u014D formae n\u016Bllae pr\u014Dcessit.");
       }
     }
+
+    /**
+     * Classis {@link NuntiusConditoriConiunctivis} est v\u0101s classis {@link Nuntius} class\u012B {@link
+     * ConditorSimplicibus.ConditorConiunctivis}
+     * @see ConditorSimplicibus.ConditorConiunctivis
+     */
+    @Singleton
+    private static final class NuntiusConditoriConiunctivis extends Nuntius {
+      @Nullable private static NuntiusConditoriConiunctivis instantia = null;
+
+      /**
+       * Valor hic viam re\u012B classis huiuc facit.
+       * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
+       */
+      @NonNull private static final Supplier <NuntiusConditoriConiunctivis> fac =
+              () -> ObjectUtils.firstNonNull(instantia, instantia = new NuntiusConditoriConiunctivis());
+
+      private NuntiusConditoriConiunctivis() {
+        super(ParametriNuntii.para(ConditorSimplicibus.ConditorConiunctivis.class));
+      }
+    }
   }
 
   /**
    * Classis {@link ConditorInteriectionibus} est v\u0101s classis {@link Tenor} class\u012B {@link VerbumSimplex.Interiectio}.
    * @see VerbumSimplex.Interiectio
-   * @see Nuntius.NuntiusConditoriInteriectionibus
+   * @see NuntiusConditoriInteriectionibus
    */
   @Singleton
   @DependsOn("NuntiusConditoriAdverbiis")
@@ -99,8 +119,7 @@ public abstract class ConditorSimplicibus <Hoc extends VerbumSimplex <Hoc>> exte
       () -> ObjectUtils.firstNonNull(instantia, instantia = new ConditorInteriectionibus());
 
     private ConditorInteriectionibus() {
-      super(Nuntius.NuntiusConditoriInteriectionibus.fac,
-            lemma -> VerbumSimplex.Interiectio.builder().lemma(lemma).build());
+      super(NuntiusConditoriInteriectionibus.fac, lemma -> VerbumSimplex.Interiectio.builder().lemma(lemma).build());
       nuntius.plurimumGarrio("Factus sum");
     }
 
@@ -114,6 +133,27 @@ public abstract class ConditorSimplicibus <Hoc extends VerbumSimplex <Hoc>> exte
       } else {
         nuntius.moneo("Interiecti\u014Dn\u012B pr\u014Dducti\u014D f\u014Drmae n\u016Bllae pr\u014Dcessit.");
       }
+    }
+  }
+
+  /**
+   * Classis {@link NuntiusConditoriInteriectionibus} est v\u0101s classis {@link Nuntius} class\u012B {@link
+   * ConditorSimplicibus.ConditorInteriectionibus}
+   * @see ConditorSimplicibus.ConditorInteriectionibus
+   */
+  @Singleton
+  private static final class NuntiusConditoriInteriectionibus extends Nuntius {
+    @Nullable private static NuntiusConditoriInteriectionibus instantia = null;
+
+    /**
+     * Valor hic viam re\u012B classis huiuc facit.
+     * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
+     */
+    @NonNull private static final Supplier <NuntiusConditoriInteriectionibus> fac =
+            () -> ObjectUtils.firstNonNull(instantia, instantia = new NuntiusConditoriInteriectionibus());
+
+    private NuntiusConditoriInteriectionibus() {
+      super(ParametriNuntii.para(ConditorSimplicibus.ConditorInteriectionibus.class));
     }
   }
 }

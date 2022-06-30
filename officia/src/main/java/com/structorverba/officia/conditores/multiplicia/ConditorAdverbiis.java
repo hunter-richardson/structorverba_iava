@@ -3,9 +3,10 @@ package com.structorverba.officia.conditores.multiplicia;
 import androidx.annotation.*;
 import com.structorverba.officia.conditores.Conditor;
 import com.structorverba.officia.enumerationes.Gradus;
-import com.structorverba.officia.nuntii.Nuntius;
+import com.structorverba.officia.nuntii.*;
 import com.structorverba.officia.verba.Verbum;
 import com.structorverba.officia.verba.multiplicia.*;
+import jakarta.ejb.Singleton;
 import org.apache.commons.lang3.*;
 
 import java.util.Objects;
@@ -14,7 +15,7 @@ import java.util.function.Supplier;
 /**
  * Classis {@link ConditorAdverbiis} est v\u0101s classis {@link Conditor} class\u012B {@link Adverbium}.
  * @see Adverbium
- * @see Nuntius.NuntiusConditoriAdverbiis
+ * @see NuntiusConditoriAdverbiis
  */
 @SuppressWarnings("SpellCheckingInspection")
 public class ConditorAdverbiis extends ConditorMultiplicibus <Adverbium> {
@@ -30,7 +31,7 @@ public class ConditorAdverbiis extends ConditorMultiplicibus <Adverbium> {
   @NonNull private Gradus gradus = Gradus.NULLUS;
 
   private ConditorAdverbiis() {
-    super(Nuntius.NuntiusConditoriAdverbiis.fac);
+    super(NuntiusConditoriAdverbiis.fac);
     nuntius.plurimumGarrio("Factus sum");
   }
 
@@ -94,5 +95,25 @@ public class ConditorAdverbiis extends ConditorMultiplicibus <Adverbium> {
 
     nuntius.garrio("C\u014Dntr\u016Bcti\u014Dn\u012B adi\u0113c\u012B conditi\u014Dnem novam:",
                    nomen, descriptor);
+  }
+
+  /**
+   * Classis {@link NuntiusConditoriAdverbiis} est v\u0101s classis {@link Nuntius} class\u012B {@link ConditorAdverbiis}
+   * @see ConditorAdverbiis
+   */
+  @Singleton
+  private static final class NuntiusConditoriAdverbiis extends Nuntius {
+    @Nullable private static NuntiusConditoriAdverbiis instantia = null;
+
+    /**
+     * Valor hic viam re\u012B classis huiuc facit.
+     * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
+     */
+    @NonNull private static final Supplier <NuntiusConditoriAdverbiis> fac =
+            () -> ObjectUtils.firstNonNull(instantia, instantia = new NuntiusConditoriAdverbiis());
+
+    private NuntiusConditoriAdverbiis() {
+      super(ParametriNuntii.para(ConditorAdverbiis.class));
+    }
   }
 }

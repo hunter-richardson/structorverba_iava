@@ -42,25 +42,8 @@ public abstract class Tenor <Hoc extends Verbum <Hoc>> extends DefaultHandler {
    * @param nts val\u014Drem {@link #nuntius} supplet.
    */
   protected Tenor(@NonNull final Supplier <? extends Nuntius> nts) {
-    Thread.currentThread().setUncaughtExceptionHandler(Nuntius.NuntiusErroribus.fac.get());
+    Thread.currentThread().setUncaughtExceptionHandler(Omne.NuntiusErroribus.fac.get());
     nuntius = nts.get();
-  }
-
-  /**
-   * @return Val\u014Drem {@link #hoc}
-   */
-  @Nullable public Hoc refero() {
-    return hoc;
-  }
-
-  /**
-   * Modus hic val\u014Drem {@link #series} per val\u014Drem {@code quaestio} c\u014Dlat ut rem singulam pr\u014Dd\u016Bcat.
-   * @param quaestio quaesti\u014D tentanda
-   * @return val\u014Drem {@link #series} val\u014Drem {@code quaestio} perc\u014Dl\u0101ta
-   */
-  public final @Nullable Hoc refero(Predicate <Hoc> quaestio) {
-    return series.stream().filter(quaestio)
-                 .findFirst().orElse(null);
   }
 
   /**

@@ -69,6 +69,42 @@ public abstract class Tentamen<Illud, Hoc> {
   }
 
   /**
+   * Classis est classem {@link Tentamen} \u016Btitur r\u0113s classum {@link Verba}
+   * et <a href="https://docs.oracle.com/javase/10/docs/api/java/lang/String.html">String</a> compar\u0101re.
+   */
+  public static final class TentamenVerbi extends Tentamen<Verbum<? extends Verbum>, String> {
+    /**
+     * Officium hoc c\u014Dnstr\u016Bct\u014Drem re\u012B classis huius perpetrat.
+     * @param data  valor datum exspectandum continet.
+     * @param nomen valor hoc inter multa identificat.
+     */
+    public TentamenVerbi(@NonNull final String data, @NonNull final String nomen) {
+      super(illud -> {
+        new Tentamiculum.TentamiculumRei(illud)
+                .existat(String.format("Verba pr\u014Dducta %s vacant.", nomen));
+        new Tentamiculum.TentamiculumRei(illud)
+                .existat(String.format("Pr\u014Dduct\u0101 %s relicta'st pr\u014Dducti\u014D verb\u012B %s.",
+                         nomen, Utilitas.minusculasScribo(data)));
+        new Tentamiculum.TentamiculumVersiculi(illud)
+                .aliamContineat(String.format("Pr\u014Dduct\u0101 %s relicta'st pr\u014Dducti\u014D verb\u012B %s.",
+                                nomen, Utilitas.minusculasScribo(data)));
+        return String.format("Pr\u014Dducta %s: %s", nomen, illud);
+      });
+    }
+
+    /**
+     * Officium hoc c\u014Dnstr\u016Bct\u014Drem re\u012B classis huius perpetrat.
+     * @param nomen valor hoc inter multa identificat.
+     */
+    public TentamenVerbi(@NonNull final String nomen) {
+      super(illud -> {
+        new Tentamiculum.TentamiculumRei(illud).existat(String.format("Verba pr\u014Dducta %s vacant.", nomen));
+        return String.format("Pr\u014Dducta %s: %s", nomen, illud);
+      });
+    }
+  }
+
+  /**
    * Classis est classem {@link Tentamen} \u016Btitur r\u0113s classum {@link VerbumSimplex.Numerus} et
    * <a href="https://docs.oracle.com/javase/10/docs/api/java/lang/String.html">String</a> compar\u0101re.
    */
@@ -130,7 +166,7 @@ public abstract class Tentamen<Illud, Hoc> {
           .aliamContineat("Numerum pr\u014Dductum conversi\u014Dnis vacat.");
 
         @NonNull final StructorVerba structor = StructorVerba.fac.get();
-        @NonNull final VerbumSimplex.Numerus secundus = structor.numerus(primus.toString());
+        @NonNull final VerbumSimplex.Numerus secundus = structor.numeram(primus.toString());
         new Tentamiculum.TentamiculumRei(secundus)
           .existat(String.format("Pr\u014Dduct\u0101 conversi\u014Dnis relicta'st pr\u014Dducti\u014D numer\u012B %d.", numerus));
         new Tentamiculum.TentamiculumNumeralis <>(numerus, secundus.numerus())
@@ -177,7 +213,7 @@ public abstract class Tentamen<Illud, Hoc> {
         };
 
         @NonNull final StructorVerba structor = StructorVerba.fac.get();
-        @NonNull final VerbumSimplex.Numerus secundus = structor.numerus(range.getMinimum());
+        @NonNull final VerbumSimplex.Numerus secundus = structor.numeram(range.getMinimum());
         new Tentamiculum.TentamiculumRei(secundus)
           .existat(String.format("Pr\u014Dduct\u0101 %s relicta'st pr\u014Dducti\u014D numer\u012B %d.", operatio, range.getMinimum()));
         new Tentamiculum.TentamiculumVersiculi(secundus)

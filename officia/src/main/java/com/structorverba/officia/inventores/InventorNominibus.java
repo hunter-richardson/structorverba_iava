@@ -3,7 +3,7 @@ package com.structorverba.officia.inventores;
 import androidx.annotation.*;
 import com.structorverba.officia.enumerationes.*;
 import com.structorverba.officia.lectores.LectorMultiplicibus;
-import com.structorverba.officia.nuntii.Nuntius;
+import com.structorverba.officia.nuntii.*;
 import com.structorverba.officia.verba.multiplicia.Nomen;
 import jakarta.ejb.*;
 import org.apache.commons.lang3.ObjectUtils;
@@ -13,7 +13,7 @@ import java.util.function.*;
 /**
  * Classis {@link InventorNominibus} est v\u0101s classis {@link Inventor} class\u012B {@link Nomen}.
  * @see Nomen
- * @see Nuntius.NuntiusInventoriNominibus
+ * @see NuntiusInventoriNominibus
  */
 @SuppressWarnings("SpellCheckingInspection")
 @Singleton
@@ -35,7 +35,7 @@ public final class InventorNominibus extends Inventor <Nomen> {
   @NonNull private Tempus      tempus      = Tempus.INTEMPORALE;
 
   private InventorNominibus() {
-    super(Nuntius.NuntiusInventoriNominibus.fac);
+    super(NuntiusInventoriNominibus.fac);
     nuntius.plurimumGarrio("Factus sum");
   }
 
@@ -46,11 +46,11 @@ public final class InventorNominibus extends Inventor <Nomen> {
    */
   @Override @NonNull
   public Predicate <Nomen> inquiram() {
-    return nomen -> specialitas.equals(nomen.specialitas)
-                    && genus.equals(nomen.genus)
-                    && casus.equals(nomen.casus)
-                    && numeralis.equals(nomen.numeralis)
-                    && tempus.equals(nomen.tempus);
+    return nomen -> specialitas.equals(nomen.specialitas) &&
+                    genus.equals(nomen.genus) &&
+                    casus.equals(nomen.casus) &&
+                    numeralis.equals(nomen.numeralis) &&
+                    tempus.equals(nomen.tempus);
   }
 
   /**
@@ -103,6 +103,26 @@ public final class InventorNominibus extends Inventor <Nomen> {
     } else {
       nuntius.moneo("N\u014Dmin\u012B inqu\u012Bs\u012Bti\u014D n\u014Dmin\u012B inop\u012Bn\u0101ta \u016Bsa'st:",
                     illud);
+    }
+  }
+
+  /**
+   * Classis {@link NuntiusInventoriNominibus} est v\u0101s classis {@link Nuntius} class\u012B {@link InventorNominibus}
+   * @see InventorNominibus
+   */
+  @Singleton
+  private static final class NuntiusInventoriNominibus extends Nuntius {
+    @Nullable private static NuntiusInventoriNominibus instantia = null;
+
+    /**
+     * Valor hic viam re\u012B classis huiuc facit.
+     * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
+     */
+    @NonNull private static final Supplier <NuntiusInventoriNominibus> fac =
+            () -> ObjectUtils.firstNonNull(instantia, instantia = new NuntiusInventoriNominibus());
+
+    private NuntiusInventoriNominibus() {
+      super(ParametriNuntii.para(InventorNominibus.class));
     }
   }
 }

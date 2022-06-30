@@ -4,7 +4,7 @@ import androidx.annotation.*;
 import com.structorverba.officia.conditores.Conditor;
 import com.structorverba.officia.enumerationes.*;
 import com.structorverba.officia.miscella.Utilitas;
-import com.structorverba.officia.nuntii.Nuntius;
+import com.structorverba.officia.nuntii.*;
 import com.structorverba.officia.verba.Verbum;
 import com.structorverba.officia.verba.multiplicia.*;
 import jakarta.ejb.*;
@@ -16,7 +16,7 @@ import java.util.function.Supplier;
 /**
  * Classis {@link ConditorActis} est v\u0101s classis {@link Conditor} class\u012B {@link Actus}.
  * @see Actus
- * @see Nuntius.NuntiusConditoriActis
+ * @see NuntiusConditoriActis
  */
 @SuppressWarnings("SpellCheckingInspection")
 @Singleton
@@ -38,7 +38,7 @@ public final class ConditorActis extends ConditorMultiplicibus <Actus> {
   @NonNull private Persona   persona   = Persona.NULLA;
 
   private ConditorActis() {
-    super(Nuntius.NuntiusConditoriActis.fac);
+    super(NuntiusConditoriActis.fac);
     nuntius.plurimumGarrio("Factus sum");
   }
 
@@ -126,5 +126,25 @@ public final class ConditorActis extends ConditorMultiplicibus <Actus> {
     vox = Vox.NULLA;
     scriptio = StringUtils.EMPTY;
     nuntius.certioro("Restit\u016Btus sum");
+  }
+
+  /**
+   * Classis {@link NuntiusConditoriActis} est v\u0101s classis {@link Nuntius} class\u012B {@link ConditorActis}
+   * @see ConditorActis
+   */
+  @Singleton
+  private static final class NuntiusConditoriActis extends Nuntius {
+    @Nullable private static NuntiusConditoriActis instantia = null;
+
+    /**
+     * Valor hic viam re\u012B classis huiuc facit.
+     * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
+     */
+    @NonNull private static final Supplier <NuntiusConditoriActis> fac =
+            () -> ObjectUtils.firstNonNull(instantia, instantia = new NuntiusConditoriActis());
+
+    private NuntiusConditoriActis() {
+      super(ParametriNuntii.para(ConditorActis.class));
+    }
   }
 }

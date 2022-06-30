@@ -1,15 +1,13 @@
 package com.structorverba.officia.tenores;
 
+import androidx.annotation.*;
 import com.structorverba.officia.conditores.ConditorSimplicibus;
-import com.structorverba.officia.nuntii.Nuntius;
+import com.structorverba.officia.nuntii.*;
 import com.structorverba.officia.verba.*;
-
+import jakarta.ejb.*;
 import org.apache.commons.lang3.ObjectUtils;
-import androidx.annotation.NonNull;
 
 import java.util.function.Supplier;
-
-import javax.ejb.*;
 
 /**
  * Classis {@link TenorSimplicibus} est v\u0101s classis {@link Tenor} classibus omnibus quibus classem {@link VerbumSimplex}
@@ -46,6 +44,13 @@ public abstract class TenorSimplicibus <Hoc extends VerbumSimplex <Hoc>> extends
   }
 
   /**
+   * @return Val\u014Drem {@link #hoc}
+   */
+  @Nullable public Hoc refero() {
+    return hoc;
+  }
+
+  /**
    * {@inheritDoc}
    * @param scriptio f\u014drmam scr\u012Bptam indendus
    * @see Verbum#lemma
@@ -57,7 +62,7 @@ public abstract class TenorSimplicibus <Hoc extends VerbumSimplex <Hoc>> extends
   /**
    * Classis {@link TenorConiunctivis} est v\u0101s classis {@link Tenor} class\u012B {@link VerbumSimplex.Coniunctivum}
    * @see VerbumSimplex.Coniunctivum
-   * @see Nuntius.NuntiusTenoriConiunctivis
+   * @see NuntiusTenoriConiunctivis
    * @see ConditorSimplicibus.ConditorConiunctivis
    */
   @Singleton
@@ -73,15 +78,36 @@ public abstract class TenorSimplicibus <Hoc extends VerbumSimplex <Hoc>> extends
       () -> ObjectUtils.firstNonNull(instantia, instantia = new TenorConiunctivis());
 
     private TenorConiunctivis() {
-      super(Nuntius.NuntiusTenoriConiunctivis.fac, ConditorSimplicibus.ConditorConiunctivis.fac);
+      super(NuntiusTenoriConiunctivis.fac, ConditorSimplicibus.ConditorConiunctivis.fac);
       nuntius.plurimumGarrio("Factus sum");
+    }
+
+    /**
+     * Classis {@link NuntiusTenoriConiunctivis} est v\u0101s classis {@link Nuntius} class\u012B {@link
+     * TenorSimplicibus.TenorConiunctivis}
+     * @see TenorSimplicibus.TenorConiunctivis
+     */
+    @Singleton
+    private static final class NuntiusTenoriConiunctivis extends Nuntius {
+      @Nullable private static NuntiusTenoriConiunctivis instantia = null;
+
+      /**
+       * Valor hic viam re\u012B classis huiuc facit.
+       * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
+       */
+      @NonNull private static final Supplier <NuntiusTenoriConiunctivis> fac =
+              () -> ObjectUtils.firstNonNull(instantia, instantia = new NuntiusTenoriConiunctivis());
+
+      private NuntiusTenoriConiunctivis() {
+        super(ParametriNuntii.para(TenorSimplicibus.TenorConiunctivis.class));
+      }
     }
   }
 
   /**
    * Classis {@link TenorInteriectionibus} est v\u0101s classis {@link Tenor} class\u012B {@link VerbumSimplex.Interiectio}
    * @see VerbumSimplex.Interiectio
-   * @see Nuntius.NuntiusTenoriInteriectionibus
+   * @see NuntiusTenoriInteriectionibus
    * @see ConditorSimplicibus.ConditorInteriectionibus
    */
   @Singleton
@@ -97,8 +123,29 @@ public abstract class TenorSimplicibus <Hoc extends VerbumSimplex <Hoc>> extends
       () -> ObjectUtils.firstNonNull(instantia, instantia = new TenorInteriectionibus());
 
     private TenorInteriectionibus() {
-      super(Nuntius.NuntiusTenoriInteriectionibus.fac, ConditorSimplicibus.ConditorInteriectionibus.fac);
+      super(NuntiusTenoriInteriectionibus.fac, ConditorSimplicibus.ConditorInteriectionibus.fac);
       nuntius.plurimumGarrio("Factus sum");
+    }
+  }
+
+  /**
+   * Classis {@link NuntiusTenoriInteriectionibus} est v\u0101s classis {@link Nuntius} class\u012B {@link
+   * TenorSimplicibus.TenorInteriectionibus}
+   * @see TenorSimplicibus.TenorInteriectionibus
+   */
+  @Singleton
+  private static final class NuntiusTenoriInteriectionibus extends Nuntius {
+    @Nullable private static NuntiusTenoriInteriectionibus instantia = null;
+
+    /**
+     * Valor hic viam re\u012B classis huiuc facit.
+     * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
+     */
+    @NonNull private static final Supplier <NuntiusTenoriInteriectionibus> fac =
+            () -> ObjectUtils.firstNonNull(instantia, instantia = new NuntiusTenoriInteriectionibus());
+
+    private NuntiusTenoriInteriectionibus() {
+      super(ParametriNuntii.para(TenorSimplicibus.TenorInteriectionibus.class));
     }
   }
 }

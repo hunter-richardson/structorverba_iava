@@ -10,8 +10,9 @@ import com.structorverba.officia.enumerationes.Categoria;
 import com.structorverba.officia.inventores.Inventor;
 import com.structorverba.officia.lectores.*;
 import com.structorverba.officia.miscella.Utilitas;
-import com.structorverba.officia.nuntii.Nuntius;
+import com.structorverba.officia.nuntii.*;
 import com.structorverba.officia.tenores.TenorSimplicibus;
+import jakarta.ejb.Singleton;
 import lombok.*;
 import org.apache.commons.lang3.*;
 
@@ -50,16 +51,36 @@ public abstract class VerbumSimplex <Hoc extends Verbum <Hoc>> extends Verbum <H
    * @see LectorSimplicibus.LectorConiunctivis
    * @see TenorSimplicibus.TenorConiunctivis
    * @see ConditorSimplicibus.ConditorConiunctivis
-   * @see Nuntius.NuntiusConiunctivorum
+   * @see NuntiusConiunctivorum
    */
   public static final class Coniunctivum extends VerbumSimplex <Coniunctivum> {
     @Getter(lazy = true)
-    @NonNull private final Nuntius.NuntiusConiunctivorum nuntius = Nuntius.NuntiusConiunctivorum.fac.get();
+    @NonNull private final NuntiusConiunctivorum nuntius = NuntiusConiunctivorum.fac.get();
 
     @Builder(access = AccessLevel.PUBLIC, toBuilder = true)
     private Coniunctivum(@NonNull final String lemma) {
       super(Categoria.CONIUNCTIVUM, lemma);
       nuntius.plusGarrio("Scr\u012Bbor ut", lemma);
+    }
+
+    /**
+     * Classis {@link NuntiusConiunctivorum} est v\u0101s classis {@link Nuntius} class\u012B {@link VerbumSimplex.Coniunctivum}}
+     * @see VerbumSimplex.Coniunctivum
+     */
+    @Singleton
+    private static final class NuntiusConiunctivorum extends Nuntius {
+      @Nullable private static NuntiusConiunctivorum instantia = null;
+
+      /**
+       * Valor hic viam re\u012B classis huiuc facit.
+       * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
+       */
+      @NonNull private static Supplier <NuntiusConiunctivorum> fac =
+              () -> ObjectUtils.firstNonNull(instantia, instantia = new NuntiusConiunctivorum());
+
+      private NuntiusConiunctivorum() {
+        super(ParametriNuntii.para(VerbumSimplex.Coniunctivum.class));
+      }
     }
   }
 
@@ -71,16 +92,36 @@ public abstract class VerbumSimplex <Hoc extends Verbum <Hoc>> extends Verbum <H
    * @see LectorSimplicibus.LectorInteriectionibus
    * @see TenorSimplicibus.TenorInteriectionibus
    * @see ConditorSimplicibus.ConditorInteriectionibus
-   * @see Nuntius.NuntiusInteriectionum
+   * @see NuntiusInteriectionum
    */
   public static final class Interiectio extends VerbumSimplex <Interiectio> {
     @Getter(lazy = true)
-    @NonNull private final Nuntius.NuntiusInteriectionum nuntius = Nuntius.NuntiusInteriectionum.fac.get();
+    @NonNull private final NuntiusInteriectionum nuntius = NuntiusInteriectionum.fac.get();
 
     @Builder(access = AccessLevel.PUBLIC, toBuilder = true)
     private Interiectio(@NonNull final String lemma) {
       super(Categoria.INTERIECTIO, lemma);
       nuntius.plusGarrio("Scr\u012Bbor ut", lemma);
+    }
+
+    /**
+     * Classis {@link NuntiusInteriectionum} est v\u0101s classis {@link Nuntius} class\u012B {@link VerbumSimplex.Interiectio}}
+     * @see VerbumSimplex.Interiectio
+     */
+    @Singleton
+    static final class NuntiusInteriectionum extends Nuntius {
+      @Nullable static NuntiusInteriectionum instantia = null;
+
+      /**
+       * Valor hic viam re\u012B classis huiuc facit.
+       * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
+       */
+      static @NonNull Supplier <NuntiusInteriectionum> fac =
+              () -> ObjectUtils.firstNonNull(instantia, instantia = new NuntiusInteriectionum());
+
+      NuntiusInteriectionum() {
+        super(ParametriNuntii.para(VerbumSimplex.Interiectio.class));
+      }
     }
   }
 
@@ -89,7 +130,7 @@ public abstract class VerbumSimplex <Hoc extends Verbum <Hoc>> extends Verbum <H
    * R\u0113s classis huius cat\u0113goriam {@link Categoria#PRAEPOSITIO} \u016Btuntur c\u014Dnserv\u0101taque sunt in
    * scr\u012Bni\u014D <a href="{@docRoot}/../src/main/resources">auxili\u0101r\u0113s</a>/praepositi\u014Dn\u0113s.
    * @see LectorPraepositionibus
-   * @see Nuntius.NuntiusPraepositionum
+   * @see NuntiusPraepositionum
    */
   public static final class Praepositio extends VerbumSimplex <Praepositio> {
     /**
@@ -98,12 +139,32 @@ public abstract class VerbumSimplex <Hoc extends Verbum <Hoc>> extends Verbum <H
     @NonNull public static final Supplier <Praepositio> assume =
       () -> Praepositio.builder().build();
     @Getter(lazy = true)
-    @NonNull private final Nuntius.NuntiusPraepositionum nuntius = Nuntius.NuntiusPraepositionum.fac.get();
+    @NonNull private final NuntiusPraepositionum nuntius = NuntiusPraepositionum.fac.get();
 
     @Builder(access = AccessLevel.PUBLIC, toBuilder = true)
     private Praepositio(@NonNull final String lemma) {
       super(Categoria.PRAEPOSITIO, lemma);
       nuntius.plusGarrio("Scr\u012Bbor ut", lemma);
+    }
+
+    /**
+     * Classis {@link NuntiusPraepositionum} est v\u0101s classis {@link Nuntius} class\u012B {@link VerbumSimplex.Praepositio}}
+     * @see VerbumSimplex.Praepositio
+     */
+    @Singleton
+    static final class NuntiusPraepositionum extends Nuntius {
+      @Nullable static NuntiusPraepositionum instantia = null;
+
+      /**
+       * Valor hic viam re\u012B classis huiuc facit.
+       * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
+       */
+      static @NonNull Supplier <NuntiusPraepositionum> fac =
+              () -> ObjectUtils.firstNonNull(instantia, instantia = new NuntiusPraepositionum());
+
+      NuntiusPraepositionum() {
+        super(ParametriNuntii.para(VerbumSimplex.Praepositio.class));
+      }
     }
   }
 
@@ -114,7 +175,7 @@ public abstract class VerbumSimplex <Hoc extends Verbum <Hoc>> extends Verbum <H
    * <br> Magis r\u0113s classis huius \u0101 numer\u012Bs classis <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Short.html">Short</a>
    * per \u016Bsum classis <a href="https://github.com/Chaosfirebolt/RomanNumeralConverter/blob/master/src/main/java/com/github/chaosfirebolt/converter/RomanInteger.java">RomanInteger</a>
    * f\u012Bant.
-   * @see Nuntius.NuntiusNumerorum
+   * @see NuntiusNumerorum
    * @see <a href="https://github.com/Chaosfirebolt/RomanNumeralConverter/blob/master/src/main/java/com/github/chaosfirebolt/converter/RomanInteger.java">RomanInteger</a>
    * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Short.html">Short</a>
    */
@@ -135,7 +196,7 @@ public abstract class VerbumSimplex <Hoc extends Verbum <Hoc>> extends Verbum <H
     @IntRange(from = MINUMUM, to = MAXIMUM)
     private final int numerus;
     @Getter(lazy = true)
-    @NonNull private final Nuntius.NuntiusNumerorum nuntius = Nuntius.NuntiusNumerorum.fac.get();
+    @NonNull private final NuntiusNumerorum nuntius = NuntiusNumerorum.fac.get();
 
     @Builder(access = AccessLevel.PUBLIC, toBuilder = true)
     private Numerus(final short numerus) throws IllegalArgumentException {
@@ -247,6 +308,26 @@ public abstract class VerbumSimplex <Hoc extends Verbum <Hoc>> extends Verbum <H
         nuntius.terreo(e);
         return null;
       }
+    }
+  }
+
+  /**
+   * Classis {@link NuntiusNumerorum} est v\u0101s classis {@link Nuntius} class\u012B {@link VerbumSimplex.Numerus}}
+   * @see VerbumSimplex.Numerus
+   */
+  @Singleton
+  static final class NuntiusNumerorum extends Nuntius {
+    @Nullable static NuntiusNumerorum instantia = null;
+
+    /**
+     * Valor hic viam re\u012B classis huiuc facit.
+     * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
+     */
+    @NonNull static final Supplier <NuntiusNumerorum> fac =
+            () -> ObjectUtils.firstNonNull(instantia, instantia = new NuntiusNumerorum());
+
+    NuntiusNumerorum() {
+      super(ParametriNuntii.para(VerbumSimplex.Numerus.class));
     }
   }
 }

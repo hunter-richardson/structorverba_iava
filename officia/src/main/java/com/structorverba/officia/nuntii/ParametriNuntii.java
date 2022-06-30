@@ -13,7 +13,7 @@ import java.util.logging.*;
  * Classis {@link ParametriNuntii} val\u014Dr\u0113s continet qu\u014Ds rem classis {@link Nuntius} iuvat gener\u0101re.
  */
 @SuppressWarnings("SpellCheckingInspection")
-final class ParametriNuntii {
+public final class ParametriNuntii {
   /**
    * Valor hic incidat quam verb\u014Dsa r\u0113s haec scr\u012Bb\u0113tur.
    */

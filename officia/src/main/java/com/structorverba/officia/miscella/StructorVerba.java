@@ -12,6 +12,7 @@ import jakarta.ejb.Singleton;
 import lombok.*;
 import org.apache.commons.lang3.*;
 
+import java.util.*;
 import java.util.function.Supplier;
 
 /**
@@ -75,12 +76,19 @@ public final class StructorVerba extends Omne {
   @SuppressWarnings("unchecked")
   @Nullable public <Hoc extends Verbum <Hoc>> Hoc adveniam(@NonNull final String lemma,
                                                            @NonNull final Categoria categoria) {
-    return (Hoc) (switch (categoria) {
-      case CONIUNCTIVUM -> coniunctiva.adveniam(lemma);
-      case INTERIECTIO -> interiectiones.adveniam(lemma);
-      case PRAEPOSITIO -> praepositiones.adveniam(lemma);
-      default -> null;
-    });
+    try {
+      return (Hoc) switch (categoria) {
+        case NUMERUS -> numeram(lemma);
+        case PRAEPOSITIO -> praepositiones.adveniam(lemma);
+        default -> Objects.requireNonNull(switch (categoria) {
+          case CONIUNCTIVUM -> coniunctiva;
+          case INTERIECTIO -> interiectiones;
+          default -> null;
+        }).adveniam(lemma);
+      };
+    } catch (NullPointerException e) {
+      return null;
+    }
   }
 
   /**
@@ -94,21 +102,60 @@ public final class StructorVerba extends Omne {
    * @return rem classis {@link Hoc}
    * @see Categoria
    */
-  @SuppressWarnings("ConstantConditions")
+  @SuppressWarnings("unchecked")
   @Nullable public <Hoc extends Verbum <Hoc>> Hoc adveniam(@NonNull final String lemma,
                                                            @NonNull final Categoria categoria,
                                                            @NonNull final Enum <?>... illa) {
-    try {
-      return (Hoc) (switch (categoria) {
+    return (Hoc) switch (categoria) {
+      case PRAEPOSITIO -> praepositiones.adveniam(lemma);
+      case NUMERUS ->  numeram(lemma);
+      case CONIUNCTIVUM, INTERIECTIO -> (switch (categoria) {
+        case CONIUNCTIVUM -> coniunctiva;
+        case INTERIECTIO -> interiectiones;
+        default -> null;
+      }).adveniam(lemma);
+      case ACTUS, ADIECTIVUM, ADVERBIUM, NOMEN, PRONOMEN -> (switch (categoria) {
+        case ACTUS -> acti;
         case ADIECTIVUM -> adiectiva;
         case ADVERBIUM -> adverbia;
-        case ACTUS -> acti;
         case NOMEN -> nomina;
         case PRONOMEN -> pronomina;
         default -> null;
       }).adveniam(lemma, illa);
+    };
+  }
+
+  @SuppressWarnings("unchecked")
+  @Nullable public <Hoc extends Verbum<Hoc>> Hoc fortuitumLegam(@NonNull final Categoria categoria) {
+    return (Hoc) switch (categoria) {
+      case NUMERUS -> fortuitumNumeram();
+      case PRAEPOSITIO -> praepositiones.fortuitumLegam();
+      case ACTUS, ADIECTIVUM, ADVERBIUM, CONIUNCTIVUM, INTERIECTIO, NOMEN, PRONOMEN -> (switch (categoria) {
+        case ACTUS -> acti;
+        case ADIECTIVUM -> adiectiva;
+        case ADVERBIUM -> adverbia;
+        case CONIUNCTIVUM -> coniunctiva;
+        case INTERIECTIO -> interiectiones;
+        case NOMEN -> nomina;
+        case PRONOMEN -> pronomina;
+        default -> null;
+      }).fortuitumLegam();
+    };
+  }
+
+  @Nullable public <Hoc extends Verbum<Hoc>> Hoc fortuitumLegam(@NonNull final String lemma,
+                                                                @NonNull final Categoria categoria) {
+    try {
+      return (Hoc) Objects.requireNonNull(switch (categoria) {
+        case ACTUS -> acti;
+        case ADIECTIVUM -> adiectiva;
+        case ADVERBIUM -> adverbia;
+        case NOMEN -> nomina;
+        case PRONOMEN -> pronomina;
+        default -> null;
+      }).fortuitumLegam(lemma);
     } catch (NullPointerException e) {
-      return adveniam(lemma, categoria);
+      return null;
     }
   }
 
@@ -120,11 +167,18 @@ public final class StructorVerba extends Omne {
     return new Verba().addo(series);
   }
 
+  @NonNull public VerbumSimplex.Numerus fortuitumNumeram() {
+    return VerbumSimplex.Numerus.builder().numerus(Integer.valueOf(new Random().ints(TRACTUS_NUMERORUM.getMinimum(),
+                                                                                     TRACTUS_NUMERORUM.getMaximum())
+                                                                               .distinct().findFirst().orElse(10)).shortValue())
+                                .build();
+  }
+
   /**
    * @param numerus numerus mathematicus
    * @return Rem classis {@link VerbumSimplex.Numerus}
    */
-  public @Nullable VerbumSimplex.Numerus numerus(final short numerus) {
+  public @Nullable VerbumSimplex.Numerus numeram(final short numerus) {
     return TRACTUS_NUMERORUM.contains(numerus) ? VerbumSimplex.Numerus.builder().numerus(numerus).build()
                                                : null;
   }
@@ -133,7 +187,7 @@ public final class StructorVerba extends Omne {
    * @param scriptio repraesent\u0101ti\u014Dnem scr\u012Bpta numer\u012B math\u0113matic\u012B
    * @return Rem classis {@link VerbumSimplex.Numerus}
    */
-  public @Nullable VerbumSimplex.Numerus numerus(final @NonNull String scriptio) {
+  public @Nullable VerbumSimplex.Numerus numeram(final @NonNull String scriptio) {
     if (Patterns.ROMAN_PATTERN.matcher(scriptio).matches()) {
       final short numerus = Integer.valueOf(RomanInteger.parse(scriptio, IntegerType.ROMAN).getArabic()).shortValue();
       return TRACTUS_NUMERORUM.contains(numerus) ? VerbumSimplex.Numerus.builder().numerus(numerus).build()

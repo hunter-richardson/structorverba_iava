@@ -3,7 +3,7 @@ package com.structorverba.officia.inventores;
 import androidx.annotation.*;
 import com.structorverba.officia.enumerationes.Gradus;
 import com.structorverba.officia.lectores.LectorMultiplicibus;
-import com.structorverba.officia.nuntii.Nuntius;
+import com.structorverba.officia.nuntii.*;
 import com.structorverba.officia.verba.multiplicia.Adverbium;
 import jakarta.ejb.*;
 import org.apache.commons.lang3.ObjectUtils;
@@ -13,7 +13,7 @@ import java.util.function.*;
 /**
  * Classis {@link InventorAdverbiis} est v\u0101s classis {@link Inventor} class\u012B {@link Adverbium}.
  * @see Adverbium
- * @see Nuntius.NuntiusInventoriAdverbiis
+ * @see NuntiusInventoriAdverbiis
  */
 @SuppressWarnings("SpellCheckingInspection")
 @Singleton
@@ -31,7 +31,7 @@ public class InventorAdverbiis extends Inventor <Adverbium> {
   @NonNull private Gradus gradus = Gradus.NULLUS;
 
   private InventorAdverbiis() {
-    super(Nuntius.NuntiusInventoriAdverbiis.fac);
+    super(NuntiusInventoriAdverbiis.fac);
     nuntius.plurimumGarrio("Factus sum");
   }
 
@@ -66,6 +66,26 @@ public class InventorAdverbiis extends Inventor <Adverbium> {
     } else {
       nuntius.moneo("Adverbi\u014D inqu\u012Bs\u012Bti\u014D adiect\u012Bv\u014D inop\u012Bn\u0101ta \u016Bsa'st:",
                     illud);
+    }
+  }
+
+  /**
+   * Classis {@link NuntiusInventoriAdverbiis} est v\u0101s classis {@link Nuntius} class\u012B {@link InventorNominibus}
+   * @see InventorNominibus
+   */
+  @Singleton
+  private static final class NuntiusInventoriAdverbiis extends Nuntius {
+    @Nullable private static NuntiusInventoriAdverbiis instantia = null;
+
+    /**
+     * Valor hic viam re\u012B classis huiuc facit.
+     * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
+     */
+    @NonNull private static final Supplier <NuntiusInventoriAdverbiis> fac =
+            () -> ObjectUtils.firstNonNull(instantia, instantia = new NuntiusInventoriAdverbiis());
+
+    private NuntiusInventoriAdverbiis() {
+      super(ParametriNuntii.para(InventorAdverbiis.class));
     }
   }
 }
