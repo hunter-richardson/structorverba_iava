@@ -6,13 +6,13 @@ Nōn iam! Vōbīs intrōdūcō programma StrūctorVerba scrīptum in linguā [Ia
 
 Programma hoc dēfīnit classēs novem quās catēgoriās novem verbōrum repraesentent:
 
-I. [Coniunctivum](officia/src/main/java/com/structorverba/officia/verba/VerbumSimplex.java#L46)
+I. [Coniunctivum](officia/src/main/java/com/structorverba/officia/verba/VerbumSimplex.java#L56)
 
-II. [Interiectio](officia/src/main/java/com/structorverba/officia/verba/VerbumSimplex.java#L67)
+II. [Interiectio](officia/src/main/java/com/structorverba/officia/verba/VerbumSimplex.java#L97)
 
-III. [Praepositio](officia/src/main/java/com/structorverba/officia/verba/VerbumSimplex.java#L88)
+III. [Praepositio](officia/src/main/java/com/structorverba/officia/verba/VerbumSimplex.java#L135)
 
-IV. [Numerus](officia/src/main/java/com/structorverba/officia/verba/VerbumSimplex.java#L112)
+IV. [Numerus](officia/src/main/java/com/structorverba/officia/verba/VerbumSimplex.java#L182)
 
 V. [Adverbium](officia/src/main/java/com/structorverba/officia/verba/multiplicia/Adverbium.java)
 
@@ -38,7 +38,7 @@ III. [Exempla](officium/src/test/net/strūctorverba/tentāmina/Exempla.java)
 
 IV. [Numerī](officium/src/test/net/strūctorverba/tentāmina/Numerī.java)
 
-Valōrem [StructorVerba.fac](officia/src/main/java/com/structorverba/officia/miscella/StructorVerba.java#L28) invocāte ut fūnctiōnēs omnēs programmātis StrūctorVerba accēdātis:
+Valōrem [StructorVerba.faciendum](officia/src/main/java/com/structorverba/officia/miscella/StructorVerba.java#L32) invocāte ut fūnctiōnēs omnēs programmātis StrūctorVerba accēdātis:
 
 ```java
 import net.structorverba.enumerationes.*;
@@ -70,7 +70,7 @@ class Tentamen {
 }
 ```
 
-Versiō simplificātus cōdicis superī est scrīptus in tentāmine [Exempla.prōducta](officium/src/test/net/strūctorverba/tentāmina/Exempla.java#L26)
+Versiō simplificātus cōdicis superī est scrīptus in tentāmine [Exempla.prōducta](officia/src/test/java/com/structorverba/officia/Exempla.java#L28)
 
 ___
 
