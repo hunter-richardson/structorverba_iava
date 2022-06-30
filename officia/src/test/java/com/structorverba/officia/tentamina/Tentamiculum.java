@@ -1,4 +1,4 @@
-package com.structorverba.officia;
+package com.structorverba.officia.tentamina;
 
 import androidx.annotation.*;
 import com.structorverba.officia.miscella.Omne;

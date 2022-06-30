@@ -1,4 +1,4 @@
-package com.structorverba.officia;
+package com.structorverba.officia.tentamina;
 
 import androidx.annotation.*;
 import com.structorverba.officia.miscella.*;
@@ -14,7 +14,7 @@ import java.util.function.Function;
  * @param <Hoc>   Classis dat\u012B exspectand\u012B
  */
 @SuppressWarnings({ "SpellCheckingInspection", "unused" })
-abstract class Tentamen<Illud, Hoc> {
+public abstract class Tentamen<Illud, Hoc> {
   @NonNull private final Function <Illud, String> exsecutio;
 
   /**
@@ -40,7 +40,7 @@ abstract class Tentamen<Illud, Hoc> {
    * Classis est classem {@link Tentamen} \u016Btitur r\u0113s classum {@link Verba}
    * et <a href="https://docs.oracle.com/javase/10/docs/api/java/lang/String.html">String</a> compar\u0101re.
    */
-  static final class TentamenVerbale extends Tentamen<Verba, String> {
+  public static final class TentamenVerbale extends Tentamen<Verba, String> {
     /**
      * Officium hoc c\u014Dnstr\u016Bct\u014Drem re\u012B classis huius perpetrat.
      * @param data  valor datum exspectandum continet.
@@ -72,7 +72,7 @@ abstract class Tentamen<Illud, Hoc> {
    * Classis est classem {@link Tentamen} \u016Btitur r\u0113s classum {@link VerbumSimplex.Numerus} et
    * <a href="https://docs.oracle.com/javase/10/docs/api/java/lang/String.html">String</a> compar\u0101re.
    */
-  static final class TentamenNumeraleConversionis extends Tentamen<VerbumSimplex.Numerus, String> {
+  public static final class TentamenNumeraleConversionis extends Tentamen<VerbumSimplex.Numerus, String> {
     /**
      * Officium hoc c\u014Dnstr\u016Bct\u014Drem re\u012B classis huius perpetrat.
      * @param data    valor datum exspectandum continet.
@@ -95,7 +95,7 @@ abstract class Tentamen<Illud, Hoc> {
    * Classis est classem {@link Tentamen} \u016Btitur r\u0113s classum {@link VerbumSimplex.Numerus} et
    * <a href="https://docs.oracle.com/javase/10/docs/api/java/lang/Short.html">Short</a> compar\u0101re.
    */
-  static final class TentamenNumeraleReversionis extends Tentamen<VerbumSimplex.Numerus, Short> {
+  public static final class TentamenNumeraleReversionis extends Tentamen<VerbumSimplex.Numerus, Short> {
     /**
      * Officium hoc c\u014Dnstr\u016Bct\u014Drem re\u012B classis huius perpetrat.
      * @param numerus  valor datum exspectandum continet.
@@ -117,7 +117,7 @@ abstract class Tentamen<Illud, Hoc> {
    * {@link TentamenNumeraleReversionis}que comb\u012Bnat.
    */
   @SuppressWarnings("ConstantConditions")
-  static final class TentamenNumeraleCombinationis extends Tentamen<VerbumSimplex.Numerus, Short> {
+  public static final class TentamenNumeraleCombinationis extends Tentamen<VerbumSimplex.Numerus, Short> {
     /**
      * Officium hoc c\u014Dnstr\u016Bct\u014Drem re\u012B classis huius perpetrat.
      * @param numerus valor datum exspectandum continet.
@@ -145,7 +145,7 @@ abstract class Tentamen<Illud, Hoc> {
    * Classis {@link TentamenMathematicum} tent\u0101men oper\u0101ti\u014Dn\u012B math\u0113maticae d\u0113f\u012Bnit.
    */
   @SuppressWarnings("ConstantConditions")
-  static final class TentamenMathematicum extends Tentamen<VerbumSimplex.Numerus, Range <Short>> {
+  public static final class TentamenMathematicum extends Tentamen<VerbumSimplex.Numerus, Range <Short>> {
     /**
      * Officium hoc c\u014Dnstr\u016Bct\u014Drem re\u012B classis huius perpetrat.
      * @param range    valor datum exspectandum continet.

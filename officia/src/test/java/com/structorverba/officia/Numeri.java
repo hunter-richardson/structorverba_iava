@@ -2,6 +2,7 @@ package com.structorverba.officia;
 
 import androidx.annotation.NonNull;
 import com.structorverba.officia.miscella.*;
+import com.structorverba.officia.tentamina.Tentamen;
 import com.structorverba.officia.verba.VerbumSimplex;
 
 import org.apache.commons.lang3.Range;

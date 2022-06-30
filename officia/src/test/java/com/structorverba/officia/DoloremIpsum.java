@@ -5,6 +5,7 @@ import com.structorverba.officia.enumerationes.*;
 import androidx.annotation.NonNull;
 import com.structorverba.officia.miscella.Omne;
 import com.structorverba.officia.miscella.StructorVerba;
+import com.structorverba.officia.tentamina.Tentamen;
 import org.junit.jupiter.api.MethodOrderer;
 import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Test;

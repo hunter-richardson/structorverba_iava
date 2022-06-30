@@ -1,6 +1,7 @@
 package com.structorverba.officia;
 
 import com.structorverba.officia.miscella.*;
+import com.structorverba.officia.tentamina.Tentamen;
 import com.structorverba.officia.verba.multiplicia.Actus;
 import com.structorverba.officia.enumerationes.*;
 
