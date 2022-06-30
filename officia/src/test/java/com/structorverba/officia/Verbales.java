@@ -1,4 +1,4 @@
-package com.structorverba.officia.sanitatis;
+package com.structorverba.officia;
 
 import androidx.annotation.*;
 import com.structorverba.officia.enumerationes.Categoria;
@@ -16,11 +16,11 @@ import java.util.stream.Stream;
 @SuppressWarnings({"NewClassNamingConvention", "SpellCheckingInspection"})
 @TestMethodOrder(MethodOrderer.Random.class)
 public class Verbales {
-    @Getter(lazy = true)
-    @NonNull private final NuntiusTentaminibusVerbalibus nuntius = NuntiusTentaminibusVerbalibus.fac.get();
-    @NonNull
-    @Getter(lazy = true)
-    private final StructorVerba structor = StructorVerba.fac.get();
+    @NonNull @Getter(lazy = true)
+    private final NuntiusTentaminibusVerbalibus nuntius = NuntiusTentaminibusVerbalibus.faciendum.get();
+
+    @NonNull @Getter(lazy = true)
+    private final StructorVerba structor = StructorVerba.faciendum.get();
 
     @Test
     public void actusDeleatur() {
@@ -75,7 +75,7 @@ public class Verbales {
          * Valor hic viam re\u012B classis huiuc facit.
          * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
          */
-        @NonNull static final Supplier<NuntiusTentaminibusVerbalibus> fac =
+        @NonNull static final Supplier<NuntiusTentaminibusVerbalibus> faciendum =
                 () -> ObjectUtils.firstNonNull(instantia, instantia = new NuntiusTentaminibusVerbalibus());
 
         NuntiusTentaminibusVerbalibus() {

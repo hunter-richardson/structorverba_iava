@@ -73,8 +73,8 @@ public final class Utilitas extends Omne {
     switch (categoria) {
       case PRAEPOSITIO: case NUMERUS:
         return (switch (categoria) {
-          case PRAEPOSITIO -> LectorPraepositionibus.fac.get().fortuitumLegam();
-          case NUMERUS -> StructorVerba.fac.get().fortuitumNumeram();
+          case PRAEPOSITIO -> LectorPraepositionibus.faciendum.get().fortuitumLegam();
+          case NUMERUS -> StructorVerba.faciendum.get().fortuitumNumeram();
           default -> null;
         }).lemma;
       default:
@@ -83,7 +83,7 @@ public final class Utilitas extends Omne {
            via.toFile().exists() && via.toFile().isDirectory()) {
           try (final Stream<Path> loci = Files.walk(via, 0).distinct().filter(Objects::nonNull)
                                               .filter(Files::isRegularFile).filter(Files::isReadable)) {
-            final Path hoc = loci.reduce((BinaryOperator<Path>) fortemInvoca).orElseGet(null);
+            final Path hoc = loci.reduce((BinaryOperator<Path>) invocaFortem).orElseGet(null);
             return ObjectUtils.allNotNull(hoc, hoc.toFile()) ? FilenameUtils.getBaseName(hoc.toFile().getName())
                                                              : StringUtils.EMPTY;
           }
@@ -93,5 +93,5 @@ public final class Utilitas extends Omne {
     }
   }
 
-  @NonNull public static BinaryOperator<?> fortemInvoca = (primum, secundum) -> new Random().nextBoolean() ? primum : secundum;
+  @NonNull public static BinaryOperator<?> invocaFortem = (primum, secundum) -> new Random().nextBoolean() ? primum : secundum;
 }

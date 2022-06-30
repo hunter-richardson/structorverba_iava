@@ -17,7 +17,7 @@ import lombok.Getter;
 @SuppressWarnings({"SpellCheckingInspection", "FieldCanBeLocal", "NewClassNamingConvention"})
 public final class Exempla extends Omne {
   @NonNull @Getter(lazy = true)
-  private final StructorVerba structor = StructorVerba.fac.get();
+  private final StructorVerba structor = StructorVerba.faciendum.get();
 
   @NonNull private final String producta = "Ecce lingua Lat\u012Bna placet pr\u014Ddestque";
 

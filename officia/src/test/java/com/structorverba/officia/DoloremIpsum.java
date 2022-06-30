@@ -26,7 +26,7 @@ import lombok.Getter;
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 final class DoloremIpsum extends Omne {
   @NonNull @Getter(lazy = true)
-  private final StructorVerba structor = StructorVerba.fac.get();
+  private final StructorVerba structor = StructorVerba.faciendum.get();
 
   @NonNull private final String productaPrima   = "Neque porr\u014D quisquam est";
   @NonNull private final String productaSecunda = "Qui dol\u014Drem ipsum quia dolor sit amet";

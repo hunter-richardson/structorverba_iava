@@ -49,7 +49,7 @@ public abstract class ConditorMultiplicibus <Hoc extends VerbumMultiplex <Hoc>> 
    * @param nomen      val\u014Drem cognendum
    * @param descriptor val\u014Drem indendum
    */
-  public abstract void allego(@NonNull final String nomen, @NonNull final String descriptor);
+  public abstract void allegam(@NonNull final String nomen, @NonNull final String descriptor);
 
   /**
    * Modus hic rem hanc restituit.

@@ -26,7 +26,7 @@ public final class ConditorAdiectivis extends ConditorMultiplicibus <Adiectivum>
    * Valor hic viam rei classis huiuc facit.
    * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
    */
-  @NonNull public static final Supplier <ConditorAdiectivis> fac =
+  @NonNull public static final Supplier <ConditorAdiectivis> faciendum =
     () -> ObjectUtils.firstNonNull(instantia, instantia = new ConditorAdiectivis());
 
   @NonNull private Specialitas specialitas = Specialitas.NULLUM;
@@ -36,7 +36,7 @@ public final class ConditorAdiectivis extends ConditorMultiplicibus <Adiectivum>
   @NonNull private Gradus      gradus      = Gradus.NULLUS;
 
   private ConditorAdiectivis() {
-    super(NuntiusConditoriAdiectivis.fac);
+    super(NuntiusConditoriAdiectivis.faciendum);
     nuntius.plurimumGarrio("Factus sum");
   }
 
@@ -83,7 +83,7 @@ public final class ConditorAdiectivis extends ConditorMultiplicibus <Adiectivum>
    * @see Gradus#definiam(String)
    * @see Verbum#lemma
    */
-  @Override public void allego(@NonNull final String nomen, @NonNull final String descriptor) {
+  @Override public void allegam(@NonNull final String nomen, @NonNull final String descriptor) {
     if (Specialitas.pittacium.equals(nomen)) {
       specialitas = Specialitas.definiam(descriptor);
     } else if (Genus.pittacium.equals(nomen)) {
@@ -135,7 +135,7 @@ public final class ConditorAdiectivis extends ConditorMultiplicibus <Adiectivum>
      * Valor hic viam rei classis huiuc facit.
      * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
      */
-    @NonNull private static final Supplier <NuntiusConditoriAdiectivis> fac =
+    @NonNull private static final Supplier <NuntiusConditoriAdiectivis> faciendum =
             () -> ObjectUtils.firstNonNull(instantia, instantia = new NuntiusConditoriAdiectivis());
 
     private NuntiusConditoriAdiectivis() {

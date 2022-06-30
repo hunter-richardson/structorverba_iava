@@ -25,7 +25,7 @@ public final class InventorNominibus extends Inventor <Nomen> {
    * Valor hic viam re\u012B classis huiuc facit.
    * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
    */
-  @NonNull public static final Supplier <InventorNominibus> fac =
+  @NonNull public static final Supplier <InventorNominibus> faciendum =
     () -> ObjectUtils.firstNonNull(instantia, instantia = new InventorNominibus());
 
   @NonNull private Specialitas specialitas = Specialitas.NULLUM;
@@ -35,7 +35,7 @@ public final class InventorNominibus extends Inventor <Nomen> {
   @NonNull private Tempus      tempus      = Tempus.INTEMPORALE;
 
   private InventorNominibus() {
-    super(NuntiusInventoriNominibus.fac);
+    super(NuntiusInventoriNominibus.faciendum);
     nuntius.plurimumGarrio("Factus sum");
   }
 
@@ -118,7 +118,7 @@ public final class InventorNominibus extends Inventor <Nomen> {
      * Valor hic viam re\u012B classis huiuc facit.
      * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
      */
-    @NonNull private static final Supplier <NuntiusInventoriNominibus> fac =
+    @NonNull private static final Supplier <NuntiusInventoriNominibus> faciendum =
             () -> ObjectUtils.firstNonNull(instantia, instantia = new NuntiusInventoriNominibus());
 
     private NuntiusInventoriNominibus() {

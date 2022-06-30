@@ -25,13 +25,13 @@ public class InventorAdverbiis extends Inventor <Adverbium> {
    * Valor hic viam re\u012B classis huiuc facit.
    * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
    */
-  @NonNull public static final Supplier <InventorAdverbiis> fac =
+  @NonNull public static final Supplier <InventorAdverbiis> faciendum =
     () -> ObjectUtils.firstNonNull(instantia, instantia = new InventorAdverbiis());
 
   @NonNull private Gradus gradus = Gradus.NULLUS;
 
   private InventorAdverbiis() {
-    super(NuntiusInventoriAdverbiis.fac);
+    super(NuntiusInventoriAdverbiis.faciendum);
     nuntius.plurimumGarrio("Factus sum");
   }
 
@@ -81,7 +81,7 @@ public class InventorAdverbiis extends Inventor <Adverbium> {
      * Valor hic viam re\u012B classis huiuc facit.
      * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
      */
-    @NonNull private static final Supplier <NuntiusInventoriAdverbiis> fac =
+    @NonNull private static final Supplier <NuntiusInventoriAdverbiis> faciendum =
             () -> ObjectUtils.firstNonNull(instantia, instantia = new NuntiusInventoriAdverbiis());
 
     private NuntiusInventoriAdverbiis() {

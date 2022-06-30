@@ -54,13 +54,13 @@ public final class Actus extends VerbumMultiplex <Actus> {
    */
   @NonNull public final Persona persona;
   @Getter(lazy = true)
-  @NonNull private final LectorMultiplicibus.LectorAdiectivis adiectiva = LectorMultiplicibus.LectorAdiectivis.fac.get();
+  @NonNull private final LectorMultiplicibus.LectorAdiectivis adiectiva = LectorMultiplicibus.LectorAdiectivis.faciendum.get();
   @Getter(lazy = true)
-  @NonNull private final LectorMultiplicibus.LectorNominibus nomina = LectorMultiplicibus.LectorNominibus.fac.get();
+  @NonNull private final LectorMultiplicibus.LectorNominibus nomina = LectorMultiplicibus.LectorNominibus.faciendum.get();
   @Getter(lazy = true)
-  @NonNull private final LectorMultiplicibus.LectorActis acta = LectorMultiplicibus.LectorActis.fac.get();
+  @NonNull private final LectorMultiplicibus.LectorActis acta = LectorMultiplicibus.LectorActis.faciendum.get();
   @Getter(lazy = true)
-  @NonNull private final NuntiusActorum nuntius = NuntiusActorum.fac.get();
+  @NonNull private final NuntiusActorum nuntius = NuntiusActorum.faciendum.get();
 
   @Builder(access = AccessLevel.PUBLIC, toBuilder = true)
   private Actus(@NonNull final Modus modus, @NonNull final Vox vox, @NonNull final Tempus tempus,
@@ -158,7 +158,7 @@ public final class Actus extends VerbumMultiplex <Actus> {
    * @see Genus#NEUTRUM
    * @see Specialitas#COMMUNE
    */
-  @Nullable public Nomen nomen(@NonNull final Tempus tmps, @NonNull final Casus css) {
+  @Nullable public Nomen nominem(@NonNull final Tempus tmps, @NonNull final Casus css) {
     return nomina.adveniam(lemma, tmps, css, Genus.NEUTRUM, Specialitas.COMMUNE);
   }
 
@@ -168,10 +168,10 @@ public final class Actus extends VerbumMultiplex <Actus> {
    * @param css   val\u014Drem {@link Nominalis#casus} indicat.
    * @return Rem classis {@link Nomen} quod parametra d\u0113sign\u0101ta quadrat.
    * @see Tempus#GERUNDIVUS
-   * @see #nomen(Tempus, Casus)
+   * @see #nominem(Tempus, Casus)
    */
-  @Nullable public Nomen gerundivus(@NonNull final Casus css) {
-    return nomen(Tempus.GERUNDIVUS, css);
+  @Nullable public Nomen geram(@NonNull final Casus css) {
+    return nominem(Tempus.GERUNDIVUS, css);
   }
 
   /**
@@ -180,10 +180,10 @@ public final class Actus extends VerbumMultiplex <Actus> {
    * @param css   val\u014Drem {@link Nominalis#casus} indicat.
    * @return Rem classis {@link Nomen} quod parametra d\u0113sign\u0101ta quadrat.
    * @see Tempus#SUPINUS
-   * @see #nomen(Tempus, Casus)
+   * @see #nominem(Tempus, Casus)
    */
-  @Nullable public Nomen supinus(@NonNull final Casus css) {
-    return nomen(Tempus.SUPINUS, css);
+  @Nullable public Nomen cubem(@NonNull final Casus css) {
+    return nominem(Tempus.SUPINUS, css);
   }
 
   /**
@@ -198,7 +198,7 @@ public final class Actus extends VerbumMultiplex <Actus> {
      * Valor hic viam re\u012B classis huiuc facit.
      * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
      */
-    @NonNull private static final Supplier<NuntiusActorum> fac =
+    @NonNull private static final Supplier<NuntiusActorum> faciendum =
             () -> ObjectUtils.firstNonNull(instantia, instantia = new NuntiusActorum());
 
     private NuntiusActorum() {

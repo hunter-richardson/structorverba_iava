@@ -165,7 +165,7 @@ public abstract class Tentamen<Illud, Hoc> {
         new Tentamiculum.TentamiculumVersiculi(primus)
           .aliamContineat("Numerum pr\u014Dductum conversi\u014Dnis vacat.");
 
-        @NonNull final StructorVerba structor = StructorVerba.fac.get();
+        @NonNull final StructorVerba structor = StructorVerba.faciendum.get();
         @NonNull final VerbumSimplex.Numerus secundus = structor.numeram(primus.toString());
         new Tentamiculum.TentamiculumRei(secundus)
           .existat(String.format("Pr\u014Dduct\u0101 conversi\u014Dnis relicta'st pr\u014Dducti\u014D numer\u012B %d.", numerus));
@@ -212,7 +212,7 @@ public abstract class Tentamen<Illud, Hoc> {
           default -> (short) 0;
         };
 
-        @NonNull final StructorVerba structor = StructorVerba.fac.get();
+        @NonNull final StructorVerba structor = StructorVerba.faciendum.get();
         @NonNull final VerbumSimplex.Numerus secundus = structor.numeram(range.getMinimum());
         new Tentamiculum.TentamiculumRei(secundus)
           .existat(String.format("Pr\u014Dduct\u0101 %s relicta'st pr\u014Dducti\u014D numer\u012B %d.", operatio, range.getMinimum()));

@@ -82,11 +82,11 @@ public abstract class LectorSimplicibus <Hoc extends VerbumSimplex <Hoc>> extend
      * Valor hic viam re\u012B classis huiuc facit.
      * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
      */
-    @NonNull public static final Supplier <LectorConiunctivis> fac =
+    @NonNull public static final Supplier <LectorConiunctivis> faciendum =
       () -> ObjectUtils.firstNonNull(instantia, instantia = new LectorConiunctivis());
 
     private LectorConiunctivis() {
-      super(Categoria.CONIUNCTIVUM, NuntiusLectoriConiunctivis.fac, TenorSimplicibus.TenorConiunctivis.fac);
+      super(Categoria.CONIUNCTIVUM, NuntiusLectoriConiunctivis.faciendum, TenorSimplicibus.TenorConiunctivis.faciendum);
       nuntius.plurimumGarrio("Factus sum");
     }
 
@@ -103,7 +103,7 @@ public abstract class LectorSimplicibus <Hoc extends VerbumSimplex <Hoc>> extend
        * Valor hic viam re\u012B classis huiuc facit.
        * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
        */
-      @NonNull private static final Supplier <NuntiusLectoriConiunctivis> fac =
+      @NonNull private static final Supplier <NuntiusLectoriConiunctivis> faciendum =
               () -> ObjectUtils.firstNonNull(instantia, instantia = new NuntiusLectoriConiunctivis());
 
       private NuntiusLectoriConiunctivis() {
@@ -127,12 +127,12 @@ public abstract class LectorSimplicibus <Hoc extends VerbumSimplex <Hoc>> extend
      * Valor hic viam re\u012B classis huiuc facit.
      * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
      */
-    @NonNull public static final Supplier <LectorInteriectionibus> fac =
+    @NonNull public static final Supplier <LectorInteriectionibus> faciendum =
       () -> ObjectUtils.firstNonNull(instantia, instantia = new LectorInteriectionibus());
 
     private LectorInteriectionibus() {
-      super(Categoria.INTERIECTIO, NuntiusLectoriInteriectionibus.fac,
-            TenorSimplicibus.TenorInteriectionibus.fac);
+      super(Categoria.INTERIECTIO, NuntiusLectoriInteriectionibus.faciendum,
+            TenorSimplicibus.TenorInteriectionibus.faciendum);
       nuntius.plurimumGarrio("Factus sum");
     }
   }
@@ -150,7 +150,7 @@ public abstract class LectorSimplicibus <Hoc extends VerbumSimplex <Hoc>> extend
      * Valor hic viam re\u012B classis huiuc facit.
      * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
      */
-    @NonNull private static final Supplier <NuntiusLectoriInteriectionibus> fac =
+    @NonNull private static final Supplier <NuntiusLectoriInteriectionibus> faciendum =
             () -> ObjectUtils.firstNonNull(instantia, instantia = new NuntiusLectoriInteriectionibus());
 
     private NuntiusLectoriInteriectionibus() {

@@ -31,7 +31,7 @@ public class Adverbium extends VerbumMultiplex <Adverbium> {
    */
   @NonNull public final Gradus gradus;
   @Getter(lazy = true)
-  @NonNull private final NuntiusAdverbiorum nuntius = NuntiusAdverbiorum.fac.get();
+  @NonNull private final NuntiusAdverbiorum nuntius = NuntiusAdverbiorum.faciendum.get();
 
   @Builder(access = AccessLevel.PUBLIC)
   private Adverbium(@NonNull final Gradus gradus, @NonNull final String lemma,
@@ -53,7 +53,7 @@ public class Adverbium extends VerbumMultiplex <Adverbium> {
      * Valor hic viam re\u012B classis huiuc facit.
      * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
      */
-    @NonNull private static Supplier<NuntiusAdverbiorum> fac =
+    @NonNull private static Supplier<NuntiusAdverbiorum> faciendum =
             () -> ObjectUtils.firstNonNull(instantia, instantia = new NuntiusAdverbiorum());
 
     private NuntiusAdverbiorum() {

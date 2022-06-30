@@ -49,7 +49,7 @@ public abstract class LectorMultiplicibus <Hoc extends VerbumMultiplex <Hoc>> ex
    */
   @Nullable public final Hoc adveniam(@NonNull final String lemma, @NonNull final Enum <?>... illa) {
     legam(lemma);
-    final Hoc hoc = ((TenorMultiplicibus<Hoc>) tenor).refero(inventor.allego(illa).inquiram());
+    final Hoc hoc = ((TenorMultiplicibus<Hoc>) tenor).referam(inventor.allego(illa).inquiram());
     inventor.restituo();
     if (hoc == null) {
       nuntius.moneo("N\u012Bl adven\u012B");
@@ -70,7 +70,7 @@ public abstract class LectorMultiplicibus <Hoc extends VerbumMultiplex <Hoc>> ex
 
   @Nullable public Hoc fortuitumLegam(@NonNull final String lemma) {
     legam(lemma);
-    final Hoc hoc = ((TenorMultiplicibus<Hoc>) tenor).fortuitumRefero();
+    final Hoc hoc = ((TenorMultiplicibus<Hoc>) tenor).fortuitumReferam();
     if (hoc == null) {
       nuntius.moneo("N\u012Bl adven\u012B");
     } else {
@@ -94,12 +94,12 @@ public abstract class LectorMultiplicibus <Hoc extends VerbumMultiplex <Hoc>> ex
      * Valor hic viam re\u012B classis huiuc facit.
      * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
      */
-    @NonNull public static final Supplier <LectorAdverbiis> fac =
+    @NonNull public static final Supplier <LectorAdverbiis> faciendum =
       () -> ObjectUtils.firstNonNull(instantia, instantia = new LectorAdverbiis());
 
     private LectorAdverbiis() {
-      super(Categoria.ADVERBIUM, NuntiusLectoriAdverbiis.fac,
-            TenorMultiplicibus.TenorAdverbiis.fac, InventorAdverbiis.fac);
+      super(Categoria.ADVERBIUM, NuntiusLectoriAdverbiis.faciendum,
+            TenorMultiplicibus.TenorAdverbiis.faciendum, InventorAdverbiis.faciendum);
       nuntius.plurimumGarrio("Factus sum");
     }
 
@@ -115,7 +115,7 @@ public abstract class LectorMultiplicibus <Hoc extends VerbumMultiplex <Hoc>> ex
        * Valor hic viam re\u012Bclassis huiuc facit.
        * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
        */
-      @NonNull private static final Supplier <NuntiusLectoriAdverbiis> fac =
+      @NonNull private static final Supplier <NuntiusLectoriAdverbiis> faciendum =
               () -> ObjectUtils.firstNonNull(instantia, instantia = new NuntiusLectoriAdverbiis());
 
       private NuntiusLectoriAdverbiis() {
@@ -140,11 +140,12 @@ public abstract class LectorMultiplicibus <Hoc extends VerbumMultiplex <Hoc>> ex
      * Valor hic viam rei classis huiuc facit.
      * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
      */
-    @NonNull public static final Supplier <LectorNominibus> fac =
+    @NonNull public static final Supplier <LectorNominibus> faciendum =
       () -> ObjectUtils.firstNonNull(instantia, instantia = new LectorNominibus());
 
     private LectorNominibus() {
-      super(Categoria.NOMEN, NuntiusLectoriNominibus.fac, TenorMultiplicibus.TenorNominibus.fac, InventorNominibus.fac);
+      super(Categoria.NOMEN, NuntiusLectoriNominibus.faciendum,
+            TenorMultiplicibus.TenorNominibus.faciendum, InventorNominibus.faciendum);
       nuntius.plurimumGarrio("Factus sum");
     }
 
@@ -161,7 +162,7 @@ public abstract class LectorMultiplicibus <Hoc extends VerbumMultiplex <Hoc>> ex
        * Valor hic viam re\u012B classis huiuc facit.
        * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
        */
-      @NonNull private static final Supplier <NuntiusLectoriNominibus> fac =
+      @NonNull private static final Supplier <NuntiusLectoriNominibus> faciendum =
               () -> ObjectUtils.firstNonNull(instantia, instantia = new NuntiusLectoriNominibus());
 
       private NuntiusLectoriNominibus() {
@@ -186,12 +187,12 @@ public abstract class LectorMultiplicibus <Hoc extends VerbumMultiplex <Hoc>> ex
      * Valor hic viam re\u012B classis huiuc facit.
      * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
      */
-    @NonNull public static final Supplier <LectorAdiectivis> fac =
+    @NonNull public static final Supplier <LectorAdiectivis> faciendum =
       () -> ObjectUtils.firstNonNull(instantia, instantia = new LectorAdiectivis());
 
     private LectorAdiectivis() {
-      super(Categoria.ADIECTIVUM, NuntiusLectoriAdiectivis.fac,
-            TenorMultiplicibus.TenorAdiectivis.fac, InventorAdiectivis.fac);
+      super(Categoria.ADIECTIVUM, NuntiusLectoriAdiectivis.faciendum,
+            TenorMultiplicibus.TenorAdiectivis.faciendum, InventorAdiectivis.faciendum);
       nuntius.plurimumGarrio("Factus sum");
     }
 
@@ -254,7 +255,7 @@ public abstract class LectorMultiplicibus <Hoc extends VerbumMultiplex <Hoc>> ex
        * Valor hic viam re\u012B classis huiuc facit.
        * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
        */
-      @NonNull private static final Supplier <NuntiusLectoriAdiectivis> fac =
+      @NonNull private static final Supplier <NuntiusLectoriAdiectivis> faciendum =
               () -> ObjectUtils.firstNonNull(instantia, instantia = new NuntiusLectoriAdiectivis());
 
       private NuntiusLectoriAdiectivis() {
@@ -279,12 +280,12 @@ public abstract class LectorMultiplicibus <Hoc extends VerbumMultiplex <Hoc>> ex
      * Valor hic viam rei classis huiuc facit.
      * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
      */
-    public static final @NonNull Supplier <LectorPronominibus> fac =
+    public static final @NonNull Supplier <LectorPronominibus> faciendum =
       () -> ObjectUtils.firstNonNull(instantia, instantia = new LectorPronominibus());
 
     private LectorPronominibus() {
-      super(Categoria.PRONOMEN, NuntiusLectoriPronominibus.fac,
-            TenorMultiplicibus.TenorPronominibus.fac, InventorPronominibus.fac);
+      super(Categoria.PRONOMEN, NuntiusLectoriPronominibus.faciendum,
+            TenorMultiplicibus.TenorPronominibus.faciendum, InventorPronominibus.faciendum);
       nuntius.plurimumGarrio("Factus sum");
     }
 
@@ -330,7 +331,7 @@ public abstract class LectorMultiplicibus <Hoc extends VerbumMultiplex <Hoc>> ex
        * Valor hic viam re\u012B classis huiuc facit.
        * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
        */
-      @NonNull private static final Supplier <NuntiusLectoriPronominibus> fac =
+      @NonNull private static final Supplier <NuntiusLectoriPronominibus> faciendum =
               () -> ObjectUtils.firstNonNull(instantia, instantia = new NuntiusLectoriPronominibus());
 
       private NuntiusLectoriPronominibus() {
@@ -355,11 +356,12 @@ public abstract class LectorMultiplicibus <Hoc extends VerbumMultiplex <Hoc>> ex
      * Valor hic viam rei classis huiuc facit.
      * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
      */
-    public static final @NonNull Supplier <LectorActis> fac =
+    public static final @NonNull Supplier <LectorActis> faciendum =
       () -> ObjectUtils.firstNonNull(instantia, instantia = new LectorActis());
 
     private LectorActis() {
-      super(Categoria.ACTUS, NuntiusLectoriActis.fac, TenorMultiplicibus.TenorActis.fac, InventorActis.fac);
+      super(Categoria.ACTUS, NuntiusLectoriActis.faciendum,
+            TenorMultiplicibus.TenorActis.faciendum, InventorActis.faciendum);
       nuntius.plurimumGarrio("Factus sum");
     }
 
@@ -389,7 +391,7 @@ public abstract class LectorMultiplicibus <Hoc extends VerbumMultiplex <Hoc>> ex
      * Valor hic viam re\u012B classis huiuc facit.
      * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
      */
-    @NonNull private static final Supplier <NuntiusLectoriActis> fac =
+    @NonNull private static final Supplier <NuntiusLectoriActis> faciendum =
             () -> ObjectUtils.firstNonNull(instantia, instantia = new NuntiusLectoriActis());
 
     private NuntiusLectoriActis() {

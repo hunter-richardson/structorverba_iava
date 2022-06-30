@@ -29,39 +29,40 @@ public final class StructorVerba extends Omne {
    * Valor hic viam re\u012B classis huiuc facit.
    * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
    */
-  @NonNull public static final Supplier <StructorVerba> fac =
+  @NonNull public static final Supplier <StructorVerba> faciendum =
     () -> ObjectUtils.firstNonNull(instantia, instantia = new StructorVerba());
 
+  @Getter(value = AccessLevel.PRIVATE, lazy = true)
   @NonNull private final Range <Short> TRACTUS_NUMERORUM = Range.between(Integer.valueOf(1).shortValue(),
                                                                          Integer.valueOf(4000).shortValue());
 
   @Getter(value = AccessLevel.PRIVATE, lazy = true)
   @NonNull private final LectorMultiplicibus.LectorAdiectivis adiectiva =
-    LectorMultiplicibus.LectorAdiectivis.fac.get();
+    LectorMultiplicibus.LectorAdiectivis.faciendum.get();
 
   @Getter(value = AccessLevel.PRIVATE, lazy = true)
-  @NonNull private final LectorMultiplicibus.LectorAdverbiis adverbia = LectorMultiplicibus.LectorAdverbiis.fac.get();
+  @NonNull private final LectorMultiplicibus.LectorAdverbiis adverbia = LectorMultiplicibus.LectorAdverbiis.faciendum.get();
 
   @Getter(value = AccessLevel.PRIVATE, lazy = true)
   @NonNull private final LectorMultiplicibus.LectorPronominibus pronomina =
-    LectorMultiplicibus.LectorPronominibus.fac.get();
+    LectorMultiplicibus.LectorPronominibus.faciendum.get();
 
   @Getter(value = AccessLevel.PRIVATE, lazy = true)
-  @NonNull private final LectorMultiplicibus.LectorActis acti = LectorMultiplicibus.LectorActis.fac.get();
+  @NonNull private final LectorMultiplicibus.LectorActis acti = LectorMultiplicibus.LectorActis.faciendum.get();
 
   @Getter(value = AccessLevel.PRIVATE, lazy = true)
-  @NonNull private final LectorMultiplicibus.LectorNominibus nomina = LectorMultiplicibus.LectorNominibus.fac.get();
+  @NonNull private final LectorMultiplicibus.LectorNominibus nomina = LectorMultiplicibus.LectorNominibus.faciendum.get();
 
   @Getter(value = AccessLevel.PRIVATE, lazy = true)
   @NonNull private final LectorSimplicibus.LectorConiunctivis coniunctiva =
-    LectorSimplicibus.LectorConiunctivis.fac.get();
+    LectorSimplicibus.LectorConiunctivis.faciendum.get();
 
   @Getter(value = AccessLevel.PRIVATE, lazy = true)
   @NonNull private final LectorSimplicibus.LectorInteriectionibus interiectiones =
-    LectorSimplicibus.LectorInteriectionibus.fac.get();
+    LectorSimplicibus.LectorInteriectionibus.faciendum.get();
 
   @Getter(value = AccessLevel.PRIVATE, lazy = true)
-  @NonNull private final LectorPraepositionibus praepositiones = LectorPraepositionibus.fac.get();
+  @NonNull private final LectorPraepositionibus praepositiones = LectorPraepositionibus.faciendum.get();
 
   /**
    * Modus hic rem apta classis {@link Lector} val\u014Dr\u012B {@code categoria} s\u0113ligit val\u014Drem {@code lemma} immittit.

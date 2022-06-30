@@ -40,13 +40,13 @@ public final class LectorPraepositionibus extends Omne {
    * Valor hic viam re\u012B classis huiuc facit.
    * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
    */
-  @NonNull public static final Supplier <LectorPraepositionibus> fac =
+  @NonNull public static final Supplier <LectorPraepositionibus> faciendum =
     () -> ObjectUtils.firstNonNull(instantia, instantia = new LectorPraepositionibus());
 
   @Getter(lazy = true)
-  @NonNull private final NuntiusLectoriPraepositionibus nuntius = NuntiusLectoriPraepositionibus.fac.get();
+  @NonNull private final NuntiusLectoriPraepositionibus nuntius = NuntiusLectoriPraepositionibus.faciendum.get();
 
-  @NonNull private final BiPredicate <String, Casus> quaero = (verbum, casus) -> {
+  @NonNull private final BiPredicate <String, Casus> quaesitus = (verbum, casus) -> {
     final String nomen = Paths.get(Categoria.PRAEPOSITIO.scriptio, String.format("%s.data", casus.scriptio)).toString();
     try (final BufferedReader pervidetio = new BufferedReader(new FileReader(nomen))) {
       nuntius.noto("Iam leg\u014D sc\u0101pum auxili\u0101rem", nomen);
@@ -57,7 +57,7 @@ public final class LectorPraepositionibus extends Omne {
     }
   };
 
-  @NonNull private final BiFunction <String, Casus, VerbumSimplex.Praepositio> advenio =
+  @NonNull private final BiFunction <String, Casus, VerbumSimplex.Praepositio> adventus =
     (verbum, casus) -> {
       final String nomen = Paths.get(Categoria.PRAEPOSITIO.scriptio, String.format("%s.data", casus.scriptio)).toString();
       try (final BufferedReader pervidetio = new BufferedReader(new FileReader(Utilitas.auxilior(nomen)))) {
@@ -94,21 +94,21 @@ public final class LectorPraepositionibus extends Omne {
    */
   @NonNull public VerbumSimplex.Praepositio adveniam(@NonNull final String verbum) {
     Casus casus = Stream.of(Casus.ABLATIVUS, Casus.ACCUSATIVUS, Casus.GENITIVUS, Casus.VOCATIVUS)
-                        .filter(css -> quaero.test(verbum, css))
+                        .filter(css -> quaesitus.test(verbum, css))
                         .findFirst().orElse(Casus.DERECTUS);
     if (Casus.DERECTUS.equals(casus)) {
       nuntius.moneo("N\u012Bl adven\u012B verb\u014D", verbum);
       nuntius.garrio("Praepositi\u014Dn\u012B ass\u016Bm\u0113tur");
       return VerbumSimplex.Praepositio.assume.get();
     } else {
-      return advenio.apply(verbum, casus);
+      return adventus.apply(verbum, casus);
     }
   }
 
   @SuppressWarnings("unchecked")
   @NonNull public VerbumSimplex.Praepositio fortuitumLegam() {
     return fortuitumLegam(Stream.of(Casus.ABLATIVUS, Casus.ACCUSATIVUS, Casus.GENITIVUS, Casus.VOCATIVUS)
-                                .reduce((BinaryOperator<Casus>) Utilitas.fortemInvoca).orElse(Casus.DERECTUS));
+                                .reduce((BinaryOperator<Casus>) Utilitas.invocaFortem).orElse(Casus.DERECTUS));
   }
 
   @SuppressWarnings("unchecked")
@@ -122,7 +122,7 @@ public final class LectorPraepositionibus extends Omne {
       try (final BufferedReader pervidetio = new BufferedReader(new FileReader(Utilitas.auxilior(nomen)))) {
         nuntius.noto("Iam leg\u014D sc\u0101pum auxili\u0101rem", nomen);
         final String lemma = pervidetio.lines().distinct().filter(Objects::nonNull)
-                                       .reduce((BinaryOperator<String>) Utilitas.fortemInvoca)
+                                       .reduce((BinaryOperator<String>) Utilitas.invocaFortem)
                                        .orElse(StringUtils.EMPTY);
         if (StringUtils.isNotBlank(lemma)) {
           nuntius.garrio("Adven\u012B hoc:", lemma);
@@ -153,7 +153,7 @@ public final class LectorPraepositionibus extends Omne {
      * Valor hic viam re\u012B classis huiuc facit.
      * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
      */
-    @NonNull private static final Supplier <NuntiusLectoriPraepositionibus> fac =
+    @NonNull private static final Supplier <NuntiusLectoriPraepositionibus> faciendum =
             () -> ObjectUtils.firstNonNull(instantia, instantia = new NuntiusLectoriPraepositionibus());
 
     private NuntiusLectoriPraepositionibus() {

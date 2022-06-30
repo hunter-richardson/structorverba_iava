@@ -55,7 +55,7 @@ public abstract class VerbumSimplex <Hoc extends Verbum <Hoc>> extends Verbum <H
    */
   public static final class Coniunctivum extends VerbumSimplex <Coniunctivum> {
     @Getter(lazy = true)
-    @NonNull private final NuntiusConiunctivorum nuntius = NuntiusConiunctivorum.fac.get();
+    @NonNull private final NuntiusConiunctivorum nuntius = NuntiusConiunctivorum.faciendum.get();
 
     @Builder(access = AccessLevel.PUBLIC, toBuilder = true)
     private Coniunctivum(@NonNull final String lemma) {
@@ -75,7 +75,7 @@ public abstract class VerbumSimplex <Hoc extends Verbum <Hoc>> extends Verbum <H
        * Valor hic viam re\u012B classis huiuc facit.
        * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
        */
-      @NonNull private static Supplier <NuntiusConiunctivorum> fac =
+      @NonNull private static Supplier <NuntiusConiunctivorum> faciendum =
               () -> ObjectUtils.firstNonNull(instantia, instantia = new NuntiusConiunctivorum());
 
       private NuntiusConiunctivorum() {
@@ -96,7 +96,7 @@ public abstract class VerbumSimplex <Hoc extends Verbum <Hoc>> extends Verbum <H
    */
   public static final class Interiectio extends VerbumSimplex <Interiectio> {
     @Getter(lazy = true)
-    @NonNull private final NuntiusInteriectionum nuntius = NuntiusInteriectionum.fac.get();
+    @NonNull private final NuntiusInteriectionum nuntius = NuntiusInteriectionum.faciendum.get();
 
     @Builder(access = AccessLevel.PUBLIC, toBuilder = true)
     private Interiectio(@NonNull final String lemma) {
@@ -116,7 +116,7 @@ public abstract class VerbumSimplex <Hoc extends Verbum <Hoc>> extends Verbum <H
        * Valor hic viam re\u012B classis huiuc facit.
        * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
        */
-      static @NonNull Supplier <NuntiusInteriectionum> fac =
+      static @NonNull Supplier <NuntiusInteriectionum> faciendum =
               () -> ObjectUtils.firstNonNull(instantia, instantia = new NuntiusInteriectionum());
 
       NuntiusInteriectionum() {
@@ -139,7 +139,7 @@ public abstract class VerbumSimplex <Hoc extends Verbum <Hoc>> extends Verbum <H
     @NonNull public static final Supplier <Praepositio> assume =
       () -> Praepositio.builder().build();
     @Getter(lazy = true)
-    @NonNull private final NuntiusPraepositionum nuntius = NuntiusPraepositionum.fac.get();
+    @NonNull private final NuntiusPraepositionum nuntius = NuntiusPraepositionum.faciendum.get();
 
     @Builder(access = AccessLevel.PUBLIC, toBuilder = true)
     private Praepositio(@NonNull final String lemma) {
@@ -159,7 +159,7 @@ public abstract class VerbumSimplex <Hoc extends Verbum <Hoc>> extends Verbum <H
        * Valor hic viam re\u012B classis huiuc facit.
        * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
        */
-      static @NonNull Supplier <NuntiusPraepositionum> fac =
+      static @NonNull Supplier <NuntiusPraepositionum> faciendum =
               () -> ObjectUtils.firstNonNull(instantia, instantia = new NuntiusPraepositionum());
 
       NuntiusPraepositionum() {
@@ -196,7 +196,7 @@ public abstract class VerbumSimplex <Hoc extends Verbum <Hoc>> extends Verbum <H
     @IntRange(from = MINUMUM, to = MAXIMUM)
     private final int numerus;
     @Getter(lazy = true)
-    @NonNull private final NuntiusNumerorum nuntius = NuntiusNumerorum.fac.get();
+    @NonNull private final NuntiusNumerorum nuntius = NuntiusNumerorum.faciendum.get();
 
     @Builder(access = AccessLevel.PUBLIC, toBuilder = true)
     private Numerus(final short numerus) throws IllegalArgumentException {
@@ -206,7 +206,7 @@ public abstract class VerbumSimplex <Hoc extends Verbum <Hoc>> extends Verbum <H
     }
 
     public short numerus() {
-      return Integer.valueOf(Validator.range(numerus)).shortValue();
+      return Integer.valueOf(numerus).shortValue();
     }
 
     @NonNull private RomanInteger ostendam() throws IllegalArgumentException {
@@ -323,7 +323,7 @@ public abstract class VerbumSimplex <Hoc extends Verbum <Hoc>> extends Verbum <H
      * Valor hic viam re\u012B classis huiuc facit.
      * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
      */
-    @NonNull static final Supplier <NuntiusNumerorum> fac =
+    @NonNull static final Supplier <NuntiusNumerorum> faciendum =
             () -> ObjectUtils.firstNonNull(instantia, instantia = new NuntiusNumerorum());
 
     NuntiusNumerorum() {

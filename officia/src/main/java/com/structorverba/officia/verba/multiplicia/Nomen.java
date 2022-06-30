@@ -34,7 +34,7 @@ public final class Nomen extends Nominalis <Nomen> {
   @NonNull public final Tempus tempus;
 
   @Getter(lazy = true)
-  @NonNull private final NuntiusNominum nuntius = NuntiusNominum.fac.get();
+  @NonNull private final NuntiusNominum nuntius = NuntiusNominum.faciendum.get();
 
   @Builder(access = AccessLevel.PUBLIC, toBuilder = true)
   private Nomen(@NonNull final Specialitas specialitas, @NonNull final Genus genus,
@@ -57,7 +57,7 @@ public final class Nomen extends Nominalis <Nomen> {
      * Valor hic viam re\u012B classis huiuc facit.
      * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
      */
-    @NonNull private static final Supplier<NuntiusNominum> fac =
+    @NonNull private static final Supplier<NuntiusNominum> faciendum =
             () -> ObjectUtils.firstNonNull(instantia, instantia = new NuntiusNominum());
 
     private NuntiusNominum() {

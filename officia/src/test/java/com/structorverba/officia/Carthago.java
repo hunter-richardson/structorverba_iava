@@ -17,7 +17,7 @@ import lombok.Getter;
 @SuppressWarnings({"SpellCheckingInspection", "FieldCanBeLocal", "NewClassNamingConvention"})
 public class Carthago extends Omne {
   @NonNull @Getter(lazy = true)
-  private final StructorVerba structor = StructorVerba.fac.get();
+  private final StructorVerba structor = StructorVerba.faciendum.get();
 
   @NonNull private final String producta = "C\u0113terum c\u0113nse\u014D Carth\u0101ginem esse d\u0113lendam";
 

@@ -21,7 +21,7 @@ import lombok.Getter;
 final class Numeri extends Omne {
   @NonNull
   @Getter(lazy = true)
-  private final StructorVerba structor = StructorVerba.fac.get();
+  private final StructorVerba structor = StructorVerba.faciendum.get();
 
   private final short NUMERUM_MAXIMUM = 3998;
   private final short XLII_NUMERUM    = 42;
