@@ -49,7 +49,7 @@ import net.structorverba.verba.multiplicia.*;
 @SuppressWarnings({ "ConstantConditions", "SpellCheckingInspection" })
 class Tentamen {
   public void main(String[] args) {
-    final StructorVerba structor = StructorVerba.fac.get();
+    final StructorVerba structor = StructorVerba.faciendum.get();
     final Verba verba = structor.strue(
           structor.adveniam("ecce", Categoria.INTERIECTIO),
           structor.adveniam("lingua", Categoria.NOMEN,
