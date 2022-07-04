@@ -19,12 +19,12 @@ import java.util.function.Supplier;
 public abstract class Conditor <Hoc extends Verbum <Hoc>> extends Omne {
   @NonNull protected final Categoria categoria;
   /**
-   * Valor hic est vās classis {@link Nuntius} classī hui.
+   * Hic valor est vās classis {@link Nuntius} classī hui.
    */
   @NonNull protected final Nuntius nuntius;
 
   /**
-   * Officium hoc cōnstrūctōrem reī classis huius perpetrat.
+   * Hoc officium cōnstrūctōrem reī huius classis perpetrat.
    * @param nts valōrem {@link #nuntius} supplet.
    */
   protected Conditor(@NonNull final Categoria ctgr, @NonNull final Supplier <? extends Nuntius> nts) {
@@ -33,14 +33,13 @@ public abstract class Conditor <Hoc extends Verbum <Hoc>> extends Omne {
   }
 
   /**
-   * Modus hic rem classis {@link Hoc} cōnābitur cōnstruere.
-   * @return Rem novam classis {@link Hoc}. <br> Modus hid valōrem {@code null} refert sī nōn valet valor aliquis rēs
-   *   haec continet.
+   * Hic modus rem classis {@link Hoc} cōnābitur cōnstruere.
+   * @return Rem novam classis {@link Hoc}. <br> Modus hid valōrem {@code null} refert sī nōn valet valor aliquis haec rēs continet.
    */
   @Nullable public abstract Hoc condam();
 
   /**
-   * Modus hic rem classis {@link VerbumSimplex.Coniunctio} accipit valōrīque {@link ConditorSimplicibus.ConditorConiunctionibus#nuntius}
+   * Hic modus rem classis {@link VerbumSimplex.Coniunctio} accipit valōrīque {@link ConditorSimplicibus.ConditorConiunctionibus#nuntius}
    * ita refert.
    * @param hoc rem tentanda
    */

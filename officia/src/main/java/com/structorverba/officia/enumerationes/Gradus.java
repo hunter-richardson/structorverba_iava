@@ -7,44 +7,44 @@ import org.apache.commons.lang3.StringUtils;
 import java.util.stream.Stream;
 
 /**
- * Ēnumerātiō haec potentiam adiectīvī omnis dēsignat.
+ * Haec ēnumerātiō potentiam adiectīvī omnis dēsignat.
  * @see Adiectivum
  */
 @SuppressWarnings({ "SpellCheckingInspection", "unused" })
 public enum Gradus {
   /**
-   * Valor hic ūtātur sī ūsūfructuāriī valōrem validum nōn dēnotat. <br> Sōlum scrīnium <a
-   * href="{@docRoot}/../src/main/resources">auxiliārēs</a> ūtitur indicāre quod verbum hoc nōn graditur.
+   * Hic valor ūtātur sī ūsūfructuāriī valōrem validum nōn dēnotat. <br> Sōlum scrīnium <a
+   * href="{@docRoot}/../src/main/resources">auxiliārēs</a> ūtitur indicāre quod hoc verbum nōn graditur.
    */
   NULLUS(StringUtils.EMPTY),
 
   /**
-   * Valor hic potentiam nōrmāle dēsignat.
+   * Hic valor potentiam nōrmāle dēsignat.
    */
   POSITIVUS("positīvus"),
 
   /**
-   * Valor hic potentiam comparātīvum dēsignat.
+   * Hic valor potentiam comparātīvum dēsignat.
    */
   COMPARATIVUS("comparātīvus"),
 
   /**
-   * Valor hic potentiam superlātīvum dēsignat.
+   * Hic valor potentiam superlātīvum dēsignat.
    */
   SUPERLATIVUS("superlātīvus");
 
   /**
-   * Valor hic reparesentātiōnem scrīpta ēnumerātiōnis dēsignat.
+   * Hic valor reparesentātiōnem scrīpta ēnumerātiōnis dēsignat.
    */
   public static final @NonNull String pittacium = "gradus";
 
   /**
-   * Valor hic repraesentātiōnem scrīpta reī huius dēsignat.
+   * Hic valor repraesentātiōnem scrīpta reī huius dēsignat.
    */
   public final @NonNull String scriptio;
 
   /**
-   * Officium hoc cōnstrūctōrem reī classis huius perpetrat.
+   * Hoc officium cōnstrūctōrem reī huius classis perpetrat.
    * @param scrpt valōrem {@link #scriptio} indicat.
    */
   Gradus(@NonNull final String scrpt) {
@@ -52,7 +52,7 @@ public enum Gradus {
   }
 
   /**
-   * Modus hic rem ēnumerātiō {@link Gradus} ā parametrō dēsignātō advenit. <br>
+   * Hic modus rem ēnumerātiō {@link Gradus} ā parametrō dēsignātō advenit. <br>
    * Valōrem {@link #NULLUS} refert sī nihil valōrem {@code scriptio} quadrat.
    * @param scriptio valōrem {@link #scriptio} indicat.
    * @return Rem ēnumerātio {@link Gradus} quod parametrum dēsignātum quadrat.

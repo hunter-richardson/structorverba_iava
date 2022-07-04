@@ -16,17 +16,17 @@ import java.util.Comparator;
 @SuppressWarnings({ "SpellCheckingInspection", "UnusedReturnValue", "unused" })
 abstract class Tentamiculum<Hoc> extends Omne {
   /**
-   * Valor hic repraesentat datum exspectandum
+   * Hic valor datum exspectandum repraesentat
    */
   @Nullable protected final Hoc expectatio;
 
   /**
-   * Valor hic repraesentat datum tentandum
+   * Hic valor datum tentandum repraesentat
    */
   @Nullable protected final Hoc productum;
 
   /**
-   * Officium hoc cōnstrūctōrem reī classis huius perpetrat.
+   * Hoc officium cōnstrūctōrem reī huius classis perpetrat.
    * @param prdctm valor {@link #productum} indicat.
    */
   protected Tentamiculum(@Nullable final Hoc prdctm) {
@@ -35,7 +35,7 @@ abstract class Tentamiculum<Hoc> extends Omne {
   }
 
   /**
-   * Officium hoc cōnstrūctōrem reī classis huius perpetrat.
+   * Hoc officium cōnstrūctōrem reī huius classis perpetrat.
    * @param expct  valor {@link #expectatio} indicat.
    * @param prdctm valor {@link #productum} indicat.
    */
@@ -49,9 +49,9 @@ abstract class Tentamiculum<Hoc> extends Omne {
   }
 
   /**
-   * Modus hic tentat utrum {@link #productum} existat necne
+   * Hic modus tentat utrum {@link #productum} existat necne
    * @param error Error scrībendus sī hoc aborītur
-   * @return Valor hic
+   * @return Hic valor
    */
   public Tentamiculum<Hoc> existat(@NonNull final String error) {
     Assertions.assertTrue(existitne(), error);
@@ -115,11 +115,11 @@ abstract class Tentamiculum<Hoc> extends Omne {
     }
 
     /**
-     * Modus hic tentat utrum valōrēs {@link #productum} {@link #expectatio}que aequentur necne. <br>
+     * Hic modus tentat utrum valōrēs {@link #productum} {@link #expectatio}que aequentur necne. <br>
      * Errōrem <a href="http://junit.sourceforge.net/junit3.8.1/javadoc/junit/framework/AssertionFailedError.html">AssertionFailedError</a>
      * cum valōre {@code error} iacit sī hoc aborītur
      * @param error Error scrībendus sī hoc aborītur
-     * @return Valor hic
+     * @return Hic valor
      */
     public TentamiculumNumeralis <Illud> aequentur(@NonNull final String error) {
       Assertions.assertTrue(aequanturne(), error);
@@ -127,11 +127,11 @@ abstract class Tentamiculum<Hoc> extends Omne {
     }
 
     /**
-     * Modus hic tentat utrum valōrēs {@link #productum} {@link #expectatio}que differant necne. <br>
+     * Hic modus tentat utrum valōrēs {@link #productum} {@link #expectatio}que differant necne. <br>
      * Errōrem <a href="http://junit.sourceforge.net/junit3.8.1/javadoc/junit/framework/AssertionFailedError.html">AssertionFailedError</a>
      * cum valōre {@code error} iacit sī hoc aborītur
      * @param error Error scrībendus sī hoc aborītur
-     * @return Valor hic
+     * @return Hic valor
      */
     public TentamiculumNumeralis <Illud> differant(@NonNull final String error) {
       Assertions.assertTrue(differuntne(), error);
@@ -139,11 +139,11 @@ abstract class Tentamiculum<Hoc> extends Omne {
     }
 
     /**
-     * Modus hic tentat utrum valor {@link #productum} subsit quam valōrem {@link #expectatio} necne. <br>
+     * Hic modus tentat utrum valor {@link #productum} subsit quam valōrem {@link #expectatio} necne. <br>
      * Errōrem <a href="http://junit.sourceforge.net/junit3.8.1/javadoc/junit/framework/AssertionFailedError.html">AssertionFailedError</a>
      * cum valōre {@code error} iacit sī hoc aborītur
      * @param error Error scrībendus sī hoc aborītur
-     * @return Valor hic
+     * @return Hic valor
      */
     public TentamiculumNumeralis <Illud> subsit(@NonNull final String error) {
       Assertions.assertTrue(subestne(), error);
@@ -151,11 +151,11 @@ abstract class Tentamiculum<Hoc> extends Omne {
     }
 
     /**
-     * Modus hic tentat utrum valor {@link #productum} superet quam valōrem {@link #expectatio} necne. <br>
+     * Hic modus tentat utrum valor {@link #productum} superet quam valōrem {@link #expectatio} necne. <br>
      * Errōrem <a href="http://junit.sourceforge.net/junit3.8.1/javadoc/junit/framework/AssertionFailedError.html">AssertionFailedError</a>
      * cum valōre {@code error} iacit sī hoc aborītur
      * @param error Error scrībendus sī hoc aborītur
-     * @return Valor hic
+     * @return Hic valor
      */
     public TentamiculumNumeralis <Illud> superet(@NonNull final String error) {
       Assertions.assertTrue(superatne(), error);
@@ -163,11 +163,11 @@ abstract class Tentamiculum<Hoc> extends Omne {
     }
 
     /**
-     * Modus hic tentat utrum aut valor {@link #productum} subsit quam valūrem {@link #expectatio} aut aequentur necne. <br>
+     * Hic modus tentat utrum aut valor {@link #productum} subsit quam valūrem {@link #expectatio} aut aequentur necne. <br>
      * Errōrem <a href="http://junit.sourceforge.net/junit3.8.1/javadoc/junit/framework/AssertionFailedError.html">AssertionFailedError</a>
      * cum valōre {@code error} iacit sī hoc aborītur
      * @param error Error scrībendus sī hoc aborītur
-     * @return Valor hic
+     * @return Hic valor
      */
     public TentamiculumNumeralis <Illud> autSubsitAutAequentur(@NonNull final String error) {
       Assertions.assertTrue(autSubestneAutAequanturne(), error);
@@ -175,11 +175,11 @@ abstract class Tentamiculum<Hoc> extends Omne {
     }
 
     /**
-     * Modus hic tentat utrum aut valor {@link #productum} superet quam valōrem {@link #expectatio} aut aequentur necne. <br>
+     * Hic modus tentat utrum aut valor {@link #productum} superet quam valōrem {@link #expectatio} aut aequentur necne. <br>
      * Errōrem <a href="http://junit.sourceforge.net/junit3.8.1/javadoc/junit/framework/AssertionFailedError.html">AssertionFailedError</a>
      * cum valōre {@code error} iacit sī hoc aborītur
      * @param error Error scrībendus sī hoc aborītur
-     * @return Valor hic
+     * @return Hic valor
      */
     public TentamiculumNumeralis <Illud> autSuperetAutAequentur(@NonNull final String error) {
       Assertions.assertTrue(autSuperatneAutAequanturne(), error);
@@ -252,11 +252,11 @@ abstract class Tentamiculum<Hoc> extends Omne {
     }
 
     /**
-     * Modus hic tentat utrum valōrīs {@link #productum} et {@link #expectatio} aequentur necne. <br>
+     * Hic modus tentat utrum valōrīs {@link #productum} et {@link #expectatio} aequentur necne. <br>
      * Errōrem <a href="http://junit.sourceforge.net/junit3.8.1/javadoc/junit/framework/AssertionFailedError.html">AssertionFailedError</a>
      * cum valōre {@code error} iacit sī hoc aborītur
      * @param error Error scrībendus sī hoc aborītur
-     * @return Valor hic
+     * @return Hic valor
      */
     public TentamiculumVersiculi aequentur(@NonNull final String error) {
       Assertions.assertTrue(aequanturne(), error);
@@ -264,11 +264,11 @@ abstract class Tentamiculum<Hoc> extends Omne {
     }
 
     /**
-     * Modus hic tentat utrum valōrīs {@link #productum} et {@link #expectatio} differant necne. <br>
+     * Hic modus tentat utrum valōrīs {@link #productum} et {@link #expectatio} differant necne. <br>
      * Errōrem <a href="http://junit.sourceforge.net/junit3.8.1/javadoc/junit/framework/AssertionFailedError.html">AssertionFailedError</a>
      * cum valōre {@code error} iacit sī hoc aborītur
      * @param error Error scrībendus sī hoc aborītur
-     * @return Valor hic
+     * @return Hic valor
      */
     public TentamiculumVersiculi differant(@NonNull final String error) {
       Assertions.assertTrue(differuntne(), error);
@@ -276,11 +276,11 @@ abstract class Tentamiculum<Hoc> extends Omne {
     }
 
     /**
-     * Modus hic tentat utrum valor {@link #productum} valōrem {@link #expectatio} contineat necne. <br>
+     * Hic modus tentat utrum valor {@link #productum} valōrem {@link #expectatio} contineat necne. <br>
      * Errōrem <a href="http://junit.sourceforge.net/junit3.8.1/javadoc/junit/framework/AssertionFailedError.html">AssertionFailedError</a>
      * cum valōre {@code error} iacit sī hoc aborītur
      * @param error Error scrībendus sī hoc aborītur
-     * @return Valor hic
+     * @return Hic valor
      */
     public TentamiculumVersiculi contineat(@NonNull final String error) {
       Assertions.assertTrue(continetne(), error);
@@ -288,11 +288,11 @@ abstract class Tentamiculum<Hoc> extends Omne {
     }
 
     /**
-     * Modus hic tentat utrum valor {@link #productum} vacet necne. <br>
+     * Hic modus tentat utrum valor {@link #productum} vacet necne. <br>
      * Errōrem <a href="http://junit.sourceforge.net/junit3.8.1/javadoc/junit/framework/AssertionFailedError.html">AssertionFailedError</a>
      * cum valōre {@code error} iacit sī hoc aborītur
      * @param error Error scrībendus sī hoc aborītur
-     * @return Valor hic
+     * @return Hic valor
      */
     public TentamiculumVersiculi vacet(@NonNull final String error) {
       Assertions.assertTrue(vacatne(), error);
@@ -300,11 +300,11 @@ abstract class Tentamiculum<Hoc> extends Omne {
     }
 
     /**
-     * Modus hic tentat utrum valor {@link #productum} aliam contineat necne. <br>
+     * Hic modus tentat utrum valor {@link #productum} aliam contineat necne. <br>
      * Errōrem <a href="http://junit.sourceforge.net/junit3.8.1/javadoc/junit/framework/AssertionFailedError.html">AssertionFailedError</a>
      * cum valōre {@code error} iacit sī hoc aborītur
      * @param error Error scrībendus sī hoc aborītur
-     * @return Valor hic
+     * @return Hic valor
      */
     public TentamiculumVersiculi aliamContineat(@NonNull final String error) {
       Assertions.assertTrue(aliamContinetne(), error);

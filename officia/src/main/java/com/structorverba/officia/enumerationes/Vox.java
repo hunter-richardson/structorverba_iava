@@ -7,39 +7,39 @@ import org.apache.commons.lang3.StringUtils;
 import java.util.stream.Stream;
 
 /**
- * Ēnumerātiō haec vōcem verbī omnis dēsignat.
+ * Haec ēnumerātiō vōcem verbī omnis dēsignat.
  * @see Actus
  */
 @SuppressWarnings({ "SpellCheckingInspection", "unused" })
 public enum Vox {
   /**
-   * Valor hic ūtātur sī ūfructuāriī valōrem validum nōn dēnotat. <br> Sōlum scrīnium <a
-   * href="{@docRoot}/../src/main/resources">auxiliārēs</a> ūtitur indicāre quod verbum hoc est invocābile.
+   * Hic valor ūtātur sī ūfructuāriī valōrem validum nōn dēnotat. <br> Sōlum scrīnium <a
+   * href="{@docRoot}/../src/main/resources">auxiliārēs</a> ūtitur indicāre quod hoc verbum est invocābile.
    */
   NULLA(StringUtils.EMPTY),
 
   /**
-   * Valor hic vōcem āctīvam dēsignat.
+   * Hic valor vōcem āctīvam dēsignat.
    */
   ACTIVA("āctīva"),
 
   /**
-   * Valor hic vōcem passīvam dēsignat.
+   * Hic valor vōcem passīvam dēsignat.
    */
   PASSIVA("passīva");
 
   /**
-   * Valor hic reparesentātiōnem scrīpta ēnumerātiōnis dēsignat.
+   * Hic valor reparesentātiōnem scrīpta ēnumerātiōnis dēsignat.
    */
   public static final @NonNull String pittacium = "vōx";
 
   /**
-   * Valor hic repraesentātiōnem scrīpta reī huius dēsignat.
+   * Hic valor repraesentātiōnem scrīpta reī huius dēsignat.
    */
   final @NonNull String scriptio;
 
   /**
-   * Officium hoc cōnstrūctōrem reī classis huius perpetrat.
+   * Hoc officum cōnstrūctōrem reī huius classis perpetrat.
    * @param scrpt valōrem {@link #scriptio} indicat.
    */
   Vox(@NonNull final String scrpt) {
@@ -47,7 +47,7 @@ public enum Vox {
   }
 
   /**
-   * Modus hic rem ēnumerātiō {@link Vox} ā parametrō dēsignātō advenit. <br>
+   * Hic modus rem ēnumerātiō {@link Vox} ā parametrō dēsignātō advenit. <br>
    * Valōrem {@link #NULLA} refert sī nihil valōrem {@code scriptio} quadrat.
    * @param scriptio valōrem {@link #scriptio} indicat.
    * @return Rem ēnumerātiō {@link Vox} quod parametrum dēsignātum quadrat.

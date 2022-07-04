@@ -15,11 +15,11 @@ import java.util.logging.*;
 @SuppressWarnings("SpellCheckingInspection")
 public final class ParametriNuntii {
   /**
-   * Valor hic incidat quam verbōsa rēs haec scrībētur.
+   * Hic valor incidat quam verbōsa haec rēs scrībētur.
    */
   @NonNull public final GradusNuntii gradusMinimus = GradusNuntii.OMNIS;
   /**
-   * Valor hic viam reī classis <a href="https://docs.oracle.com/javase/7/docs/api/java/util/logging/Logger.html">Logger</a>
+   * Hic valor viam reī classis <a href="https://docs.oracle.com/javase/7/docs/api/java/util/logging/Logger.html">Logger</a>
    * facit.
    * @see <a href="https://docs.oracle.com/javase/7/docs/api/java/util/logging/Logger.html">Logger</a>
    * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
@@ -64,7 +64,7 @@ public final class ParametriNuntii {
 
   /**
    * @param classis classis apta
-   * @return Rem novam classis huius
+   * @return Rem novam huius classis
    */
   @NonNull public static ParametriNuntii para(@NonNull final Class <?> classis) {
     return new ParametriNuntii(classis);

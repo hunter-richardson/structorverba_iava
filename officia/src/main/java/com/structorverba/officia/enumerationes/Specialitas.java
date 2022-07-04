@@ -7,39 +7,39 @@ import org.apache.commons.lang3.StringUtils;
 import java.util.stream.Stream;
 
 /**
- * Ēnumerātiō haec dēsignat utrum verbum est certum necne.
+ * Haec ēnumerātiō dēsignat utrum verbum est certum necne.
  * @see Actus
  */
 @SuppressWarnings("SpellCheckingInspection")
 public enum Specialitas {
   /**
-   * Valor hic ūtātur sī ūsūfructuāriī valōrem validum nōn dēnotat. <br>
+   * Hic valor ūtātur sī ūsūfructuāriī valōrem validum nōn dēnotat. <br>
    * Numquam scrīnium <a href="{@docRoot}/../src/main/resources">auxiliārēs</a> ūtitur.
    */
   NULLUM(StringUtils.EMPTY),
 
   /**
-   * Valor hic verbum certum dēsignat.
+   * Hic valor verbum certum dēsignat.
    */
   COMMUNE("commūne"),
 
   /**
-   * Valor hic verbum incertum dēsignat.
+   * Hic valor verbum incertum dēsignat.
    */
   PROPRIUM("proprium");
 
   /**
-   * Valor hic reparesentātiōnem scrīpta ēnumerātiōnis dēsignat.
+   * Hic valor reparesentātiōnem scrīpta ēnumerātiōnis dēsignat.
    */
   public static final @NonNull String pittacium ="speciālitās";
 
   /**
-   * Valor hic repraesentātiōnem scrīpta reī huius dēsignat.
+   * Hic valor repraesentātiōnem scrīpta reī huius dēsignat.
    */
   public final @NonNull String scriptio;
 
   /**
-   * Officium hoc cōnstrūctōrem reī classis huius perpetrat.
+   * Hoc officium cōnstrūctōrem reī huius classis perpetrat.
    * @param scrpt valōrem {@link #scriptio} indicat.
    */
   Specialitas(@NonNull final String scrpt) {
@@ -47,7 +47,7 @@ public enum Specialitas {
   }
 
   /**
-   * Modus hic rem ēnumerātiō {@link Specialitas} ā parametrō dēsignātō advenit. <br>
+   * Hic modus rem ēnumerātiō {@link Specialitas} ā parametrō dēsignātō advenit. <br>
    * Valōrem {@link #NULLUM} refert sī nihil valōrem {@code scriptio} quadrat.
    * @param scriptio valōrem {@link #scriptio} indicat.
    * @return Rem ēnumerātiō {@link Specialitas} quod parametrum dēsignātum quadrat.

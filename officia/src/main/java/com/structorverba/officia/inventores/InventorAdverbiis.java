@@ -22,7 +22,7 @@ public class InventorAdverbiis extends Inventor <Adverbium> {
   @Nullable private static InventorAdverbiis instantia = null;
 
   /**
-   * Valor hic viam reī classis huiuc facit.
+   * Hic valor viam reī huius classis facit.
    * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
    */
   @NonNull public static final Supplier <InventorAdverbiis> faciendum =
@@ -46,7 +46,7 @@ public class InventorAdverbiis extends Inventor <Adverbium> {
   }
 
   /**
-   * Modus hic rem hanc restituit.
+   * Hic modus hanc rem restituit.
    * @see Gradus#NULLUS
    */
   @Override public void restituo() {
@@ -54,7 +54,7 @@ public class InventorAdverbiis extends Inventor <Adverbium> {
   }
 
   /**
-   * Modus hic ēnumerātiīnem singulum {@code illud} reī huic indit.
+   * Hic modus ēnumerātiīnem singulum {@code illud} huic reī indit.
    * @param illud ēnumerātiīnem indendam
    * @see Gradus#ut(Enum)
    */
@@ -77,7 +77,7 @@ public class InventorAdverbiis extends Inventor <Adverbium> {
     @Nullable private static NuntiusInventoriAdverbiis instantia = null;
 
     /**
-     * Valor hic viam reī classis huiuc facit.
+     * Hic valor viam reī huius classis facit.
      * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
      */
     @NonNull private static final Supplier <NuntiusInventoriAdverbiis> faciendum =

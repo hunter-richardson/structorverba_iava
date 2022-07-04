@@ -21,7 +21,7 @@ public class ConditorAdverbiis extends ConditorMultiplicibus <Adverbium> {
   @Nullable private static ConditorAdverbiis instantia = null;
 
   /**
-   * Valor hic viam reī classis huiuc facit.
+   * Hic valor viam reī huius classis facit.
    * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
    */
   @NonNull public static final Supplier <ConditorAdverbiis> faciendum =
@@ -59,7 +59,7 @@ public class ConditorAdverbiis extends ConditorMultiplicibus <Adverbium> {
     @Nullable private static NuntiusConditoriAdverbiis instantia = null;
 
     /**
-     * Valor hic viam reī classis huiuc facit.
+     * Hic valor viam reī huius classis facit.
      * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
      */
     @NonNull private static final Supplier <NuntiusConditoriAdverbiis> faciendum =

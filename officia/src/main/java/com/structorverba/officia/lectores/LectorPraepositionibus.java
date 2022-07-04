@@ -21,7 +21,7 @@ import java.util.stream.Stream;
  * rēbus classis {@link VerbumSimplex.Praepositio} scrībere. <br>
  * Dissimilis ā extēnsiōnibus classis {@link Lector} est quod scāpum omne seriem
  * longa ēventōrum possibilium continet. Ergō classem {@link Lector} nōn extendit. <br>
- * Scāpa quattuor sunt quae reī huic intersunt ut scāpa singulus cāsuī omnī repraesentātō:
+ * Scāpa quattuor sunt quae huic reī intersunt ut scāpa singulus cāsuī omnī repraesentātō:
  * {@link Casus#ABLATIVUS}QUE {@link Casus#ACCUSATIVUS}QUE {@link
  * Casus#GENITIVUS}QUE {@link Casus#VOCATIVUS}QUE.
  * @see <a href="{@docRoot}/../src/main/resources">auxiliārēs</a>/praepositiōnēs/ablātīvus.data
@@ -37,7 +37,7 @@ public final class LectorPraepositionibus extends Omne {
   @Nullable private static LectorPraepositionibus instantia = null;
 
   /**
-   * Valor hic viam reī classis huiuc facit.
+   * Hic valor viam reī huius classis facit.
    * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
    */
   @NonNull public static final Supplier <LectorPraepositionibus> faciendum =
@@ -88,10 +88,10 @@ public final class LectorPraepositionibus extends Omne {
   }
 
   /**
-   * Modus hic rem classis {@link VerbumSimplex.Praepositio} ā scāpo XML in scrīnium
+   * Hic modus rem classis {@link VerbumSimplex.Praepositio} ā scāpo XML in scrīnium
    * <a href="{@docRoot}/../src/main/resources">auxiliārēs</a>/praepositionēs conābitur advenīre.
-   * @param verbum lemma praepositionī quod rēs haec conābitur advenīre
-   * @return Rem classis {@link VerbumSimplex.Praepositio} quam valorem {@code verbum} quadrat. <br> Modus hic valorem
+   * @param verbum lemma praepositionī quod haec rēs conābitur advenīre
+   * @return Rem classis {@link VerbumSimplex.Praepositio} quam valorem {@code verbum} quadrat. <br> Hic modus valorem
    *   {@link VerbumSimplex.Praepositio#assume} supplet sī nihil valorem {@code verbum} quadrat.
    */
   @NonNull public VerbumSimplex.Praepositio adveniam(@NonNull final String verbum) {
@@ -156,7 +156,7 @@ public final class LectorPraepositionibus extends Omne {
     @Nullable private static NuntiusLectoriPraepositionibus instantia = null;
 
     /**
-     * Valor hic viam reī classis huiuc facit.
+     * Hic valor viam reī huius classis facit.
      * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
      */
     @NonNull private static final Supplier <NuntiusLectoriPraepositionibus> faciendum =

@@ -22,7 +22,7 @@ public class Carthago extends Omne {
   @NonNull private final String producta = "Cēterum cēnseō Carthāginem esse dēlendam";
 
   /**
-   * Modus hic tentāmen agit. <br> Verba "cēterum cēnseō Carthāginem esse dēlendam" prōdūcat
+   * Hic modus tentāmen agit. <br> Verba "cēterum cēnseō Carthāginem esse dēlendam" prōdūcat
    * ut rēs classis {@link Actus#participem(Vox, Tempus, Genus, Casus, Numeralis)} tententur.
    */
   @Test @SuppressWarnings("ConstantConditions")

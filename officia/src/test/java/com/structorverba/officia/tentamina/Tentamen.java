@@ -9,7 +9,7 @@ import java.util.function.Function;
 
 /**
  * Classis {@link Tentamen} tentāmen magnum iterābile repraesentat. <br>
- * Rēs omnis classis huius invocātiōnēs plūrēs continet.
+ * Rēs omnis huius classis invocātiōnēs plūrēs continet.
  * @param <Illud> Classis reī tentandī
  * @param <Hoc>   Classis datī exspectandī
  */
@@ -18,7 +18,7 @@ public abstract class Tentamen<Illud, Hoc> {
   @NonNull private final Function <Illud, String> exsecutio;
 
   /**
-   * Officium hoc cōnstrūctōrem reī classis huius perpetrat.
+   * Hoc officium cōnstrūctōrem reī huius classis perpetrat.
    * @param exsct modus operātiōnēs dēfīnit reī classis {@link Illud} perfungī.
    */
   protected Tentamen(@NonNull final Function <Illud, String> exsct) {
@@ -42,9 +42,9 @@ public abstract class Tentamen<Illud, Hoc> {
    */
   public static final class TentamenVerbale extends Tentamen<Verba, String> {
     /**
-     * Officium hoc cōnstrūctōrem reī classis huius perpetrat.
-     * @param data  valor datum exspectandum continet.
-     * @param nomen valor hoc inter multa identificat.
+     * Hoc officium cōnstrūctōrem reī huius classis perpetrat.
+     * @param data  Hic valor datum exspectandum continet.
+     * @param nomen Hic valor inter multa identificat.
      */
     public TentamenVerbale(@NonNull final String data, @NonNull final String nomen) {
       super(illud -> {
@@ -74,9 +74,9 @@ public abstract class Tentamen<Illud, Hoc> {
    */
   public static final class TentamenVerbi extends Tentamen<Verbum<? extends Verbum<?>>, String> {
     /**
-     * Officium hoc cōnstrūctōrem reī classis huius perpetrat.
-     * @param data  valor datum exspectandum continet.
-     * @param nomen valor hoc inter multa identificat.
+     * Hoc officium cōnstrūctōrem reī huius classis perpetrat.
+     * @param data  Hic valor datum exspectandum continet.
+     * @param nomen Hic valor inter multa identificat.
      */
     public TentamenVerbi(@NonNull final String data, @NonNull final String nomen) {
       super(illud -> {
@@ -93,8 +93,8 @@ public abstract class Tentamen<Illud, Hoc> {
     }
 
     /**
-     * Officium hoc cōnstrūctōrem reī classis huius perpetrat.
-     * @param nomen valor hoc inter multa identificat.
+     * Hoc officium cōnstrūctōrem reī huius classis perpetrat.
+     * @param nomen Hic valor inter multa identificat.
      */
     public TentamenVerbi(@NonNull final String nomen) {
       super(illud -> {
@@ -110,9 +110,9 @@ public abstract class Tentamen<Illud, Hoc> {
    */
   public static final class TentamenNumeraleConversionis extends Tentamen<VerbumSimplex.Numerus, String> {
     /**
-     * Officium hoc cōnstrūctōrem reī classis huius perpetrat.
-     * @param data    valor datum exspectandum continet.
-     * @param numerus valor hoc inter multa identificat.
+     * Hoc officium cōnstrūctōrem reī huius classis perpetrat.
+     * @param data    Hic valor datum exspectandum continet.
+     * @param numerus Hic valor inter multa identificat.
      */
     public TentamenNumeraleConversionis(@NonNull final String data, final short numerus) {
       super(illud -> {
@@ -133,9 +133,9 @@ public abstract class Tentamen<Illud, Hoc> {
    */
   public static final class TentamenNumeraleReversionis extends Tentamen<VerbumSimplex.Numerus, Short> {
     /**
-     * Officium hoc cōnstrūctōrem reī classis huius perpetrat.
-     * @param numerus  valor datum exspectandum continet.
-     * @param scriptio valor hoc inter multa identificat.
+     * Hoc officium cōnstrūctōrem reī huius classis perpetrat.
+     * @param numerus  Hic valor datum exspectandum continet.
+     * @param scriptio Hic valor inter multa identificat.
      */
     public TentamenNumeraleReversionis(@NonNull final Short numerus, @NonNull final String scriptio) {
       super(illud -> {
@@ -155,7 +155,7 @@ public abstract class Tentamen<Illud, Hoc> {
   @SuppressWarnings("ConstantConditions")
   public static final class TentamenNumeraleCombinationis extends Tentamen<VerbumSimplex.Numerus, Short> {
     /**
-     * Officium hoc cōnstrūctōrem reī classis huius perpetrat.
+     * Hoc officium cōnstrūctōrem reī huius classis perpetrat.
      * @param numerus valor datum exspectandum continet.
      */
     public TentamenNumeraleCombinationis(@NonNull final Short numerus) {
@@ -183,7 +183,7 @@ public abstract class Tentamen<Illud, Hoc> {
   @SuppressWarnings("ConstantConditions")
   public static final class TentamenMathematicum extends Tentamen<VerbumSimplex.Numerus, Range <Short>> {
     /**
-     * Officium hoc cōnstrūctōrem reī classis huius perpetrat.
+     * Hoc officium cōnstrūctōrem reī huius classis perpetrat.
      * @param range    valor datum exspectandum continet.
      * @param operatio valor operātiōnem mathēmaticam identificat.
      */

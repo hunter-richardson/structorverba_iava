@@ -19,12 +19,12 @@ import java.util.function.*;
 @SuppressWarnings("SpellCheckingInspection")
 public abstract class Inventor <Hoc extends VerbumMultiplex <Hoc>> extends Omne {
   /**
-   * Valor hic est vās classis {@link Nuntius} classī hui.
+   * Hic valor est vās classis {@link Nuntius} classī hui.
    */
   @NonNull protected final Nuntius nuntius;
 
   /**
-   * Officium hoc cōnstructōrem reī classis huius perpetrat.
+   * Hoc officium cōnstructōrem reī huius classis perpetrat.
    * @param nts valōrem {@link #nuntius} supplet.
    */
   protected Inventor(@NonNull final Supplier <? extends Nuntius> nts) {
@@ -32,9 +32,9 @@ public abstract class Inventor <Hoc extends VerbumMultiplex <Hoc>> extends Omne 
   }
 
   /**
-   * Modus hic seriem {@code illa} reī huic indit.
+   * Hic modus seriem {@code illa} huic reī indit.
    * @param illa seriem ēnumerātiōnum indendam
-   * @return Rem huius
+   * @return Huius rem
    * @see #allegam(Enum)
    */
   @NonNull public final Inventor <Hoc> allego(@NonNull final Enum <?>... illa) {
@@ -49,12 +49,12 @@ public abstract class Inventor <Hoc extends VerbumMultiplex <Hoc>> extends Omne 
   @NonNull public abstract Predicate <Hoc> inquiram();
 
   /**
-   * Modus hic rem hanc restituit.
+   * Hic modus hanc rem restituit.
    */
   public abstract void restituo();
 
   /**
-   * Modus hic ēnumerātiōnem singulum {@code illud} reī huic indit.
+   * Hic modus ēnumerātiōnem singulum {@code illud} huic reī indit.
    * @param illud ēnumerātiōnem indendam
    */
   protected abstract void allegam(final Enum <?> illud);

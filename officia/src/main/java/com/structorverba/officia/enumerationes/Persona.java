@@ -7,44 +7,44 @@ import org.apache.commons.lang3.StringUtils;
 import java.util.stream.Stream;
 
 /**
- * Ēnumerātiō haec persōnam verbī omnis dēsignat.
+ * Haec ēnumerātiō persōnam verbī omnis dēsignat.
  * @see Actus
  */
 @SuppressWarnings({ "SpellCheckingInspection", "unused" })
 public enum Persona {
   /**
-   * Valor hic ūtātur sī ūsūfructuāriī valōrem validum nōn dēnotat. <br> Sōlum scrīnium <a
-   * href="{@docRoot}/../src/main/resources">auxiliārēs</a> ūtitur indicāre quod verbum hoc persōnam nōn pertinet.
+   * Hic valor ūtātur sī ūsūfructuāriī valōrem validum nōn dēnotat. <br> Sōlum scrīnium <a
+   * href="{@docRoot}/../src/main/resources">auxiliārēs</a> ūtitur indicāre quod hoc verbum persōnam nōn pertinet.
    */
   NULLA(StringUtils.EMPTY),
 
   /**
-   * Valor hic persōnam prīmam dēsignat.
+   * Hic valor persōnam prīmam dēsignat.
    */
   PRIMA("prīma"),
 
   /**
-   * Valor hic persōnam secundam dēsignat.
+   * Hic valor persōnam secundam dēsignat.
    */
   SECUNDA("secunda"),
 
   /**
-   * Valor hic persōnam tertiam dēsignat.
+   * Hic valor persōnam tertiam dēsignat.
    */
   TERTIA("tertia");
 
   /**
-   * Valor hic reparesentātiōnem scrīpta ēnumerātiōnis dēsignat.
+   * Hic valor reparesentātiōnem scrīpta ēnumerātiōnis dēsignat.
    */
   public static final @NonNull String pittacium = "persōna";
 
   /**
-   * Valor hic repraesentātiōnem scrīpta reī huius dēsignat.
+   * Hic valor repraesentātiōnem scrīpta reī huius dēsignat.
    */
   public final @NonNull String scriptio;
 
   /**
-   * Officium hoc cōnstrūctōrem reī classis huius perpetrat.
+   * Hoc officium cōnstrūctōrem reī huius classis perpetrat.
    * @param scrpt valōrem {@link #scriptio} indicat.
    */
   Persona(@NonNull final String scrpt) {
@@ -52,7 +52,7 @@ public enum Persona {
   }
 
   /**
-   * Modus hic rem ēnumerātiō {@link Persona} ā parametrō dēsignātō advenit. <br>
+   * Hic modus rem ēnumerātiō {@link Persona} ā parametrō dēsignātō advenit. <br>
    * Valōrem {@link #NULLA} refert sī nihil valōrem {@code scriptio} quadrat.
    * @param scriptio valōrem {@link #scriptio} indicat.
    * @return Rem ēnumerātiō {@link Persona} quod parametrum dēsignātum quadrat.

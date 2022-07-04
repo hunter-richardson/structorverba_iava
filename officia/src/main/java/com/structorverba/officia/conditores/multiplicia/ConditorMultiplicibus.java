@@ -16,7 +16,7 @@ import java.util.function.Supplier;
 @SuppressWarnings("SpellCheckingInspection")
 public abstract class ConditorMultiplicibus <Hoc extends VerbumMultiplex <Hoc>> extends Conditor <Hoc> {
   /**
-   * Valor hic reparesentātiōnem scrīpta lemmae dēsignat.
+   * Hic valor reparesentātiōnem scrīpta lemmae dēsignat.
    */
   public static final @NonNull String pittaciumLemmae = "lemma";
 
@@ -25,7 +25,7 @@ public abstract class ConditorMultiplicibus <Hoc extends VerbumMultiplex <Hoc>> 
   @Nullable protected Hoc hoc = null;
 
   /**
-   * Officium hoc cōnstrūctōrem reī classis huius perpetrat.
+   * Hoc officium cōnstrūctōrem reī huius classis perpetrat.
    * @param nuntius valōrem {@link Conditor#nuntius} supplet.
    */
   public ConditorMultiplicibus(@NonNull final Categoria ctgr, @NonNull final Supplier <? extends Nuntius> nuntius,
@@ -35,10 +35,10 @@ public abstract class ConditorMultiplicibus <Hoc extends VerbumMultiplex <Hoc>> 
   }
 
   /**
-   * Modus hic {@link VerbumMultiplex.Constructor#scriptio(String)} invocat.
+   * Hic modus {@link VerbumMultiplex.Constructor#scriptio(String)} invocat.
    * @param scrpt valōrem indendum
    */
-  protected final void ut(@NonNull final String scrpt) {
+  public final void ut(@NonNull final String scrpt) {
     constructor.scriptio(scrpt);
     nuntius.garrio("Cōntrūctiōnī adiecī conditiōnem novam: scrīptu'st", scrpt);
   }
@@ -66,9 +66,17 @@ public abstract class ConditorMultiplicibus <Hoc extends VerbumMultiplex <Hoc>> 
   }
 
   /**
-   * Modus hic valōrem cognitum per valōre {@code nomen} cum valōre {@code descriptor} indit.
+  / * Hic modus hanc valōrem {@link VerbumMultiplex.Constructor} restituit.
+    * @see  VerbumMultiplex.Constructor#restituo()
+  / */
+  public final void restituo() {
+    constructor.restituo();
+  }
+
+  /**
+   * Hic modus valōrem cognitum per valōre {@code nomen} cum valōre {@code descriptor} indit.
    * @param nomen      valōrem cognendum
    * @param descriptor valōrem indendum
    */
-  protected abstract void allegam(@NonNull final String nomen, @NonNull final String descriptor);
+  public abstract void allegam(@NonNull final String nomen, @NonNull final String descriptor);
 }

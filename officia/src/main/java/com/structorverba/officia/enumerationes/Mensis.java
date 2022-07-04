@@ -5,78 +5,78 @@ import androidx.annotation.NonNull;
 import java.time.Month;
 
 /**
- * Ēnumerātiō haec mēnsās annī dēsignat.
+ * Haec ēnumerātiō mēnsās annī dēsignat.
  * @see Month
  */
 @SuppressWarnings("SpellCheckingInspection")
 public enum Mensis {
   /**
-   * Valor hic mēnsem Iānuāriī dēsignat.
+   * Hic valor mēnsem Iānuāriī dēsignat.
    */
   IANUARII("Iānuāriī"),
 
   /**
-   * Valor hic mēnsem Februāriī dēsignat.
+   * Hic valor mēnsem Februāriī dēsignat.
    */
   FEBRUARII("Februāriī"),
 
   /**
-   * Valor hic mēnsem Mārtis dēsignat.
+   * Hic valor mēnsem Mārtis dēsignat.
    */
   MARTIS("Mārtis"),
 
   /**
-   * Valor hic mēnsem Aprīlis dēsignat.
+   * Hic valor mēnsem Aprīlis dēsignat.
    */
   APRILIS("Aprīlis"),
 
   /**
-   * Valor hic mēnsem Maiī dēsignat.
+   * Hic valor mēnsem Maiī dēsignat.
    */
   MAII("Maiī"),
 
   /**
-   * Valor hic mēnsem Iūniī dēsignat.
+   * Hic valor mēnsem Iūniī dēsignat.
    */
   IUNII("Iūniī"),
 
   /**
-   * Valor hic mēnsem Iūliī dēsignat.
+   * Hic valor mēnsem Iūliī dēsignat.
    */
   IULIUS("Iūliī"),
 
   /**
-   * Valor hic mēnsem Augustī dēsignat.
+   * Hic valor mēnsem Augustī dēsignat.
    */
   AUGUSTI("Augustī"),
 
   /**
-   * Valor hic mēnsem Septembris dēsignat.
+   * Hic valor mēnsem Septembris dēsignat.
    */
   SEPTEMBRIS("Septembris"),
 
   /**
-   * Valor hic mēnsem Octobris dēsignat.
+   * Hic valor mēnsem Octobris dēsignat.
    */
   OCTOBRIS("Octōbris"),
 
   /**
-   * Valor hic mēnsem Novembris dēsignat.
+   * Hic valor mēnsem Novembris dēsignat.
    */
   NOVEMBRIS("Novembris"),
 
   /**
-   * Valor hic mēnsem Decembris dēsignat.
+   * Hic valor mēnsem Decembris dēsignat.
    */
   DECEMBRIS("Decembris");
 
   /**
-   * Valor hic repraesentātiōnem scrīpta reī huius dēsignat.
+   * Hic valor repraesentātiōnem scrīpta huius reī dēsignat.
    */
   public final @NonNull String scriptio;
 
   /**
-   * Officium hoc cōnstrūctōrem reī classis huius perpetrat.
+   * Hoc officium cōnstrūctōrem reī huius classis perpetrat.
    * @param scrpt valōrem {@link #scriptio} indicat.
    */
   Mensis(@NonNull final String scrpt) {
@@ -84,7 +84,7 @@ public enum Mensis {
   }
 
   /**
-   * Modus hic societās intrā rās ēnumerātiōnēs huius rēsque
+   * Hic modus societās intrā rās huius ēnumerātiōnēs rēsque
    * <a href="https://docs.oracle.com/javase/8/docs/api/java/time/Month.html">Month</a> dēmōnstrat.
    * <ul>
    *   <li>Valor <a href="https://docs.oracle.com/javase/8/docs/api/java/time/Month.html#JANUARY">JANUARY</a>

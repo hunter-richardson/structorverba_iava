@@ -23,7 +23,7 @@ public abstract class Omne {
   private final NuntiusErroribus nuntius = NuntiusErroribus.faciendum.get();
 
   /**
-   * Officium hoc cōnstrūctōrem reī classis huius perpetrat. <br>
+   * Hoc officium cōnstrūctōrem reī huius classis perpetrat. <br>
    * Cōnstat cōdicem sequentem: <br>
    * {@code Thread.currentThread().setUncaughtExceptionHandler(Nuntius.NuntiusErroribus.faciendum.get());}
    */
@@ -43,7 +43,7 @@ public abstract class Omne {
     @Nullable private static NuntiusErroribus instantia = null;
 
     /**
-     * Valor hic viam reī classis huiuc facit.
+     * Hic valor viam reī huius classis facit.
      * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
      */
     @NonNull public static final Supplier<NuntiusErroribus> faciendum =
@@ -54,7 +54,7 @@ public abstract class Omne {
     }
 
     /**
-     * Modus hic invocātur quandōque exsecūtiōnem programmātis StrūctorVerba errōrem inopīnātum continuātur.
+     * Hic modus invocātur quandōque exsecūtiōnem programmātis StrūctorVerba errōrem inopīnātum continuātur.
      * @see <a href="https://docs.oracle.com/javase/7/docs/api/java/lang/Thread.UncaughtExceptionHandler.html#uncaughtException(java.lang.Thread,%20java.lang.Throwable)">UncaughtExceptionHandler.uncaughtException</a>
      */
     public @Override void uncaughtException(@NonNull final Thread linea, @NonNull final Throwable error) {

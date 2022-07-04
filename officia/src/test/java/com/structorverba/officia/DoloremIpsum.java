@@ -36,7 +36,7 @@ final class DoloremIpsum extends Omne {
   @NonNull private final String productaCuncta  = String.join(" ", productaPrima, productaSecunda, productaTertia, productaQuarta, productaQuinta);
 
   /**
-   * Modus hic partem prīmam tentat. <br>
+   * Hic modus partem prīmam tentat. <br>
    * Verba "Neque porrō quisquam est" prōdūcat.
    */
   @Test @Order(1)
@@ -53,7 +53,7 @@ final class DoloremIpsum extends Omne {
   }
 
   /**
-   * Modus hic partem secundam tentat. <br>
+   * Hic modus partem secundam tentat. <br>
    * Verba "Quī dolōrem ipsum quia dolor sit amet" prōdūcat.
    */
   @Test @Order(2)
@@ -81,7 +81,7 @@ final class DoloremIpsum extends Omne {
   }
 
   /**
-   * Modus hic partem tertiam tentat. <br>
+   * Hic modus partem tertiam tentat. <br>
    * Verba "Cōnsectētur adipīscī velit" prōdūcat.
    */
   @Test @Order(3)
@@ -98,7 +98,7 @@ final class DoloremIpsum extends Omne {
   }
 
   /**
-   * Modus hic partem quārtam tentat. <br>
+   * Hic modus partem quārtam tentat. <br>
    * Verba "Sed quia nōnnumquam eius modī tempora incidunt" prōdūcat. <br>
    */
   @Test @Order(4)
@@ -122,7 +122,7 @@ final class DoloremIpsum extends Omne {
   }
 
   /**
-   * Modus hic partem quintam tentat. <br>
+   * Hic modus partem quintam tentat. <br>
    * Verba "Ut labōre et dolōre magnam aliquam quaerat voluptātem" prōdūcat.
    */
   @Test @Order(5)
@@ -151,7 +151,7 @@ final class DoloremIpsum extends Omne {
   }
 
   /**
-   * Modus hic tentāmina omnēs praevia coniugat. <br>
+   * Hic modus tentāmina omnēs praevia coniugat. <br>
    * Verba "Neque porrō quisquam est quī dolōrem ipsum quia dolor sit amet cōnsectētur adipīscī velit sed quia nōnnumquam eius modī tempora incidunt ut labōre et dolōre magnam aliquam quaerat voluptatem" prōdūcat. <br>
    * Aboriētur sī tentāminum aliquid praevium aboriuntur atque prosperābitur sī omnēs prosperantur.
    */

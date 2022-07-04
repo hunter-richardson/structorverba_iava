@@ -25,11 +25,11 @@ public abstract class LectorMultiplicibus <Hoc extends VerbumMultiplex <Hoc>> ex
   @NonNull private final Inventor <Hoc> inventor;
 
   /**
-   * Officium hoc cōnstrūctōrem reī classis huius perpetrat.
-   * @param categoria valōrem {@link Lector#categoria} indicat.
-   * @param nuntius   valōrem {@link Lector#nuntius} supplet.
-   * @param tenor     valōrem {@link Lector#tenor} supplet.
-   * @param inventor  valor hic colit ēventīs multīs possibilibus quibus {@link Lector#tenor} referat.
+   * Hoc officium cōnstrūctōrem reī huius classis perpetrat.
+   * @param categoria Valōrem {@link Lector#categoria} indicat.
+   * @param nuntius   Valōrem {@link Lector#nuntius} supplet.
+   * @param tenor     Valōrem {@link Lector#tenor} supplet.
+   * @param inventor  Hic valor colit ēventīs multīs possibilibus quibus {@link Lector#tenor} referat.
    */
   protected LectorMultiplicibus(@NonNull final Categoria categoria,
                                 @NonNull final Supplier <? extends Nuntius> nuntius,
@@ -40,12 +40,12 @@ public abstract class LectorMultiplicibus <Hoc extends VerbumMultiplex <Hoc>> ex
   }
 
   /**
-   * Modus hic ūtitur modus {@link Lector#legam(String)} ut rem classis {@link Hoc} ā valōre {@link Lector#tenor}
+   * Hic modus ūtitur modus {@link Lector#legam(String)} ut rem classis {@link Hoc} ā valōre {@link Lector#tenor}
    * adveniat.
-   * @param lemma lemma verbō quod rēs haec cōnābitur advenīre
+   * @param lemma lemma verbō quod haec rēs cōnābitur advenīre
    * @param illa     seriēs ēnumerātiōnum quam licet {@link #inventor} cōlere ēventīs lēctīs
    * @return Rem classis {@link Hoc} quam valōrem {@code verbum} quadrat. <br>
-   * Modus hic valōrem {@code null} refert sī nīl quadrat valōrem {@code verbum}.
+   * Hic modus valōrem {@code null} refert sī nīl quadrat valōrem {@code verbum}.
    */
   @Nullable public final Hoc adveniam(@NonNull final String lemma, @NonNull final Enum <?>... illa) {
     legam(lemma);
@@ -91,7 +91,7 @@ public abstract class LectorMultiplicibus <Hoc extends VerbumMultiplex <Hoc>> ex
     @Nullable private static LectorAdverbiis instantia = null;
 
     /**
-     * Valor hic viam reī classis huiuc facit.
+     * Hic valor viam reī huius classis facit.
      * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
      */
     @NonNull public static final Supplier <LectorAdverbiis> faciendum =
@@ -112,7 +112,7 @@ public abstract class LectorMultiplicibus <Hoc extends VerbumMultiplex <Hoc>> ex
       @Nullable private static NuntiusLectoriAdverbiis instantia = null;
 
       /**
-       * Valor hic viam reīclassis huiuc facit.
+       * Hic valor viam reīhuius classis facit.
        * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
        */
       @NonNull private static final Supplier <NuntiusLectoriAdverbiis> faciendum =
@@ -137,7 +137,7 @@ public abstract class LectorMultiplicibus <Hoc extends VerbumMultiplex <Hoc>> ex
     @Nullable private static LectorNominibus instantia = null;
 
     /**
-     * Valor hic viam rei classis huiuc facit.
+     * Hic valor viam rei huius classis facit.
      * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
      */
     @NonNull public static final Supplier <LectorNominibus> faciendum =
@@ -159,7 +159,7 @@ public abstract class LectorMultiplicibus <Hoc extends VerbumMultiplex <Hoc>> ex
       @Nullable private static NuntiusLectoriNominibus instantia = null;
 
       /**
-       * Valor hic viam reī classis huiuc facit.
+       * Hic valor viam reī huius classis facit.
        * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
        */
       @NonNull private static final Supplier <NuntiusLectoriNominibus> faciendum =
@@ -184,7 +184,7 @@ public abstract class LectorMultiplicibus <Hoc extends VerbumMultiplex <Hoc>> ex
     @Nullable private static LectorAdiectivis instantia = null;
 
     /**
-     * Valor hic viam reī classis huiuc facit.
+     * Hic valor viam reī huius classis facit.
      * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
      */
     @NonNull public static final Supplier <LectorAdiectivis> faciendum =
@@ -197,14 +197,14 @@ public abstract class LectorMultiplicibus <Hoc extends VerbumMultiplex <Hoc>> ex
     }
 
     /**
-     * Modus hic cōnābitur advenīre rem classis {@link Adiectivum} quam adiectīvum possessīvum repraesentat valōrēsque
+     * Hic modus cōnābitur advenīre rem classis {@link Adiectivum} quam adiectīvum possessīvum repraesentat valōrēsque
      * {@code illa} quadrat.
      * @param numeralis dēsignat adiectīvum possessīvum sīve singulāre (id est aut {@code meum} aut {@code tuum}) sīve
      *                  plūrāle (id est aut {@code nostrum} aut {@code vestrum}) petitur
      * @param persona   persōnam adiectīvī petītī dēsignat
      * @param illa      seriēs ēnumerātiōnum licent {@link #inventor} colere ēventīs lēctīs
      * @return rem classis {@link Adiectivum} quam valōrēs {@code numeralis}que {@code persona}que {@code illa}que
-     *   quadrat. <br> Modus hic valorem {@code null} refert sī nihil valorēs {@code numeralis}que {@code persona}que
+     *   quadrat. <br> Hic modus valorem {@code null} refert sī nihil valorēs {@code numeralis}que {@code persona}que
      *   {@code illa}que quadrat.
      * @see <a href="{@docRoot}/../src/main/resources">auxiliārēs</a>/adiectīva/meum.xml
      * @see <a href="{@docRoot}/../src/main/resources">auxiliārēs</a>/adiectīva/tuum.xml
@@ -252,7 +252,7 @@ public abstract class LectorMultiplicibus <Hoc extends VerbumMultiplex <Hoc>> ex
       @Nullable private static NuntiusLectoriAdiectivis instantia = null;
 
       /**
-       * Valor hic viam reī classis huiuc facit.
+       * Hic valor viam reī huius classis facit.
        * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
        */
       @NonNull private static final Supplier <NuntiusLectoriAdiectivis> faciendum =
@@ -277,7 +277,7 @@ public abstract class LectorMultiplicibus <Hoc extends VerbumMultiplex <Hoc>> ex
     private static @Nullable LectorPronominibus instantia = null;
 
     /**
-     * Valor hic viam rei classis huiuc facit.
+     * Hic valor viam rei huius classis facit.
      * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
      */
     public static final @NonNull Supplier <LectorPronominibus> faciendum =
@@ -290,11 +290,11 @@ public abstract class LectorMultiplicibus <Hoc extends VerbumMultiplex <Hoc>> ex
     }
 
     /**
-     * Modus hic cōnābitur advenīre rem classis {@link Pronomen} quam prōnōmen possessīvum repraesentat valōrēsque
+     * Hic modus cōnābitur advenīre rem classis {@link Pronomen} quam prōnōmen possessīvum repraesentat valōrēsque
      * {@code illa} quadrat.
      * @param persona persōnam prōnimis petītī dēsignat
      * @param illa    seriēs ēnumerātiōnum licent {@link #inventor} colere ēventīs lēctīs
-     * @return rem classis {@link Pronomen} quam valōrēs {@code persona}que {@code illa}que quadrat. <br> Modus hic
+     * @return rem classis {@link Pronomen} quam valōrēs {@code persona}que {@code illa}que quadrat. <br> Hic modus
      *   valorem {@code null} refert sī nihil valōrēs {@code persona}que {@code illa}que quadrat.
      * @see <a href="{@docRoot}/../src/main/resources">auxiliārēs</a>/prōnōmina/ego.xml
      * @see <a href="{@docRoot}/../src/main/resources">auxiliārēs</a>/prōnōmina/tū.xml
@@ -328,7 +328,7 @@ public abstract class LectorMultiplicibus <Hoc extends VerbumMultiplex <Hoc>> ex
       @Nullable private static NuntiusLectoriPronominibus instantia = null;
 
       /**
-       * Valor hic viam reī classis huiuc facit.
+       * Hic valor viam reī huius classis facit.
        * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
        */
       @NonNull private static final Supplier <NuntiusLectoriPronominibus> faciendum =
@@ -353,7 +353,7 @@ public abstract class LectorMultiplicibus <Hoc extends VerbumMultiplex <Hoc>> ex
     private static @Nullable LectorActis instantia = null;
 
     /**
-     * Valor hic viam rei classis huiuc facit.
+     * Hic valor viam rei huius classis facit.
      * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
      */
     public static final @NonNull Supplier <LectorActis> faciendum =
@@ -366,10 +366,10 @@ public abstract class LectorMultiplicibus <Hoc extends VerbumMultiplex <Hoc>> ex
     }
 
     /**
-     * Modus hic cōnābitur advenīre rem classis {@link Actus} quam fōrma āctī "esse" repraesentat valōrēs {@code
+     * Hic modus cōnābitur advenīre rem classis {@link Actus} quam fōrma āctī "esse" repraesentat valōrēs {@code
      * illa} quadrat.
      * @param illa seriēs ēnumerātiōnum licent {@link #inventor} colere ēventīs lēctīs. <br>
-     *            Modus hic valōrem {@code null} refert sī nihil valōrēs {@code illa} quadrat.
+     *            Hic modus valōrem {@code null} refert sī nihil valōrēs {@code illa} quadrat.
      * @return rem classis {@link Actus} quam valōrem {@code illa} quadrat
      * @see <a href="{@docRoot}/../src/main/resources">auxiliārēs</a>/ācta/esse.xml
      */
@@ -388,7 +388,7 @@ public abstract class LectorMultiplicibus <Hoc extends VerbumMultiplex <Hoc>> ex
     @Nullable private static NuntiusLectoriActis instantia = null;
 
     /**
-     * Valor hic viam reī classis huiuc facit.
+     * Hic valor viam reī huius classis facit.
      * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
      */
     @NonNull private static final Supplier <NuntiusLectoriActis> faciendum =

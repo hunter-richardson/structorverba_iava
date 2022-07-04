@@ -16,7 +16,7 @@ import java.util.function.Supplier;
 
 /**
  * Classis {@link Nomen} repraesentat nōmina ut coniectēris. <br>
- * Rēs classis huius catēgoriam {@link Categoria#NOMEN} ūtuntur cōnservātaque sunt in
+ * Rēs huius classis catēgoriam {@link Categoria#NOMEN} ūtuntur cōnservātaque sunt in
  * scrīniō <a href="{@docRoot}/../src/main/resources">auxiliārēs</a>/nōmina.
  * @see LectorMultiplicibus.LectorNominibus
  * @see TenorMultiplicibus.TenorNominibus
@@ -27,7 +27,7 @@ import java.util.function.Supplier;
 @SuppressWarnings("SpellCheckingInspection")
 public final class Nomen extends Nominalis <Nomen> {
   /**
-   * Valor hic tempus reī huius dēsignat.
+   * Hic valor tempus reī huius dēsignat.
    * @see Modus
    */
   @NonNull public final Tempus tempus;
@@ -53,7 +53,7 @@ public final class Nomen extends Nominalis <Nomen> {
     @Nullable private static NuntiusNominum instantia = null;
 
     /**
-     * Valor hic viam reī classis huiuc facit.
+     * Hic valor viam reī huius classis facit.
      * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
      */
     @NonNull private static final Supplier<NuntiusNominum> faciendum =

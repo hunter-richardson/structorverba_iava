@@ -17,7 +17,7 @@ import java.util.function.Supplier;
 
 /**
  * Classis {@link StructorVerba} accessum modīs omnibus programmātis StrūctorVerba prōvidet. <br>
- * Sōlum reī classis huiuc accēdendus licēre ūsum plēnum programmātis ūsūfructuāriīs.
+ * Sōlum reī huius classis accēdendus licēre ūsum plēnum programmātis ūsūfructuāriīs.
  */
 @SuppressWarnings({ "SpellCheckingInspection", "unused" })
 @Singleton
@@ -26,7 +26,7 @@ public final class StructorVerba extends Omne {
   @Nullable private static StructorVerba instantia = null;
 
   /**
-   * Valor hic viam reī classis huiuc facit.
+   * Hic valor viam reī huius classis facit.
    * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
    */
   @NonNull public static final Supplier <StructorVerba> faciendum =
@@ -65,7 +65,7 @@ public final class StructorVerba extends Omne {
   @NonNull private final LectorPraepositionibus praepositiones = LectorPraepositionibus.faciendum.get();
 
   /**
-   * Modus hic rem apta classis {@link Lector} valōrī {@code categoria} sēligit valōrem {@code lemma} immittit.
+   * Hic modus rem apta classis {@link Lector} valōrī {@code categoria} sēligit valōrem {@code lemma} immittit.
    * Valōrem {@code null} refert sī rem nūlla classis {@link Lector} valorem {@code categoria} quadrat.
    * @param lemma  valor {@link Verbum#lemma} immittendus
    * @param categoria valor tentendus
@@ -93,7 +93,7 @@ public final class StructorVerba extends Omne {
   }
 
   /**
-   * Modus hic rem apta classis {@link LectorMultiplicibus} valōrī {@code categoria} sēligit valōrēs {@code
+   * Hic modus rem apta classis {@link LectorMultiplicibus} valōrī {@code categoria} sēligit valōrēs {@code
    * lemma}que {@code illa}que immittit. <br> Valōrēs {@code lemma}que {@code illa}que modō {@link #adveniam(String,
    * Categoria)} immittit sī rem nūlla classis {@link LectorMultiplicibus} valōrem {@code categoria} quadrat.
    * @param lemma  valor {@link Verbum#lemma} immittendus

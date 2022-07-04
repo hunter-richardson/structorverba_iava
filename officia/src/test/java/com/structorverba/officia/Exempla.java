@@ -22,7 +22,7 @@ public final class Exempla extends Omne {
   @NonNull private final String producta = "Ecce lingua Latīna placet prōdestque";
 
   /**
-   * Modus hic exemplum tentat. <br>
+   * Hic modus exemplum tentat. <br>
    * Verba "Ecce lingua Latīna placet prōdestque" prōdūcat.
    */
   @Test

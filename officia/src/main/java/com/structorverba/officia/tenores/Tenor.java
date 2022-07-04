@@ -24,21 +24,21 @@ import java.util.function.*;
 @SuppressWarnings("SpellCheckingInspection")
 public abstract class Tenor <Hoc extends Verbum <Hoc>> extends DefaultHandler {
   /**
-   * Valor hic est vās classis {@link Nuntius} classī extentī huius.
+   * Hic valor est vās classis {@link Nuntius} classī extentī huius.
    */
   @NonNull protected final Nuntius nuntius;
   /**
-   * Valor hic seriem rērum classis {@link Hoc} praebendārum ad rē classis {@link LectorMultiplicibus} tenet.
+   * Hic valor seriem rērum classis {@link Hoc} praebendārum ad rē classis {@link LectorMultiplicibus} tenet.
    */
   protected final @NonNull List <Hoc> series = new ArrayList <>();
   /**
-   * Valor hic rem classis {@link Hoc} tenet cōnstruenumque ā reī aptae classis {@link Conditor} praebendumque ad rē
+   * Hic valor rem classis {@link Hoc} tenet cōnstruenumque ā reī aptae classis {@link Conditor} praebendumque ad rē
    * classis {@link Lector}.
    */
   @Nullable protected Hoc hoc;
 
   /**
-   * Officium hoc cōnstrūctōrem reī classis huius perpetrat.
+   * Hoc officium cōnstrūctōrem reī classis huius perpetrat.
    * @param nts valōrem {@link #nuntius} supplet.
    */
   protected Tenor(@NonNull final Supplier <? extends Nuntius> nts) {
@@ -47,7 +47,7 @@ public abstract class Tenor <Hoc extends Verbum <Hoc>> extends DefaultHandler {
   }
 
   /**
-   * Modus hic fōrmam scrīptam prōvīsam ā rē classis <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.xml/org/xml/sax/XMLReader.html">XMLReader</a>
+   * Hic modus fōrmam scrīptam prōvīsam ā rē classis <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.xml/org/xml/sax/XMLReader.html">XMLReader</a>
    * prōcēdit.
    * @param litterae litterae prōvīsae
    * @param incepta  positiō incepta in valōrem {@code litterae}
@@ -66,14 +66,14 @@ public abstract class Tenor <Hoc extends Verbum <Hoc>> extends DefaultHandler {
   }
 
   /**
-   * Modus hic rem aptam classis {@link Conditor} imperat ut fōrmam scrīptam reī prōductae classis {@link Hoc} indat.
+   * Hic modus rem aptam classis {@link Conditor} imperat ut fōrmam scrīptam reī prōductae classis {@link Hoc} indat.
    * @param scriptio fōrmam scrīptam indendus
    * @see #characters(char[], int, int)
    */
   protected abstract void scribo(@NonNull final String scriptio);
 
   /**
-   * Modus hic rem aptam classis {@link Conditor} imperat cōnstrūctiōnem reīprōductae classis {@link Hoc} fīnīre.
+   * Hic modus rem aptam classis {@link Conditor} imperat cōnstrūctiōnem reīprōductae classis {@link Hoc} fīnīre.
    */
   protected abstract void finiam();
 }

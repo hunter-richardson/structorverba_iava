@@ -22,7 +22,7 @@ public final class InventorNominibus extends Inventor <Nomen> {
   @Nullable private static InventorNominibus instantia = null;
 
   /**
-   * Valor hic viam reī classis huiuc facit.
+   * Hic valor viam reī huius classis facit.
    * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
    */
   @NonNull public static final Supplier <InventorNominibus> faciendum =
@@ -110,7 +110,7 @@ public final class InventorNominibus extends Inventor <Nomen> {
     @Nullable private static NuntiusInventoriNominibus instantia = null;
 
     /**
-     * Valor hic viam reī classis huiuc facit.
+     * Hic valor viam reī huius classis facit.
      * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
      */
     @NonNull private static final Supplier <NuntiusInventoriNominibus> faciendum =

@@ -22,17 +22,17 @@ import java.util.function.Supplier;
 @SuppressWarnings("SpellCheckingInspection")
 public abstract class Lector <Hoc extends Verbum <Hoc>> extends Omne {
   /**
-   * Valor hic est vās classis {@link Nuntius} classī hui.
+   * Hic valor est vās classis {@link Nuntius} classī hui.
    */
   @NonNull protected final Nuntius nuntius;
 
   /**
-   * Valor hic est vās classis {@link Tenor} classī hui.
+   * Hic valor est vās classis {@link Tenor} classī hui.
    */
   @NonNull protected final Tenor <Hoc> tenor;
 
   /**
-   * Valor hic extēnsiōnem classī {@link Verbum} dēsignat scrībere.
+   * Hic valor extēnsiōnem classī {@link Verbum} dēsignat scrībere.
    * {@link Categoria#scriptio} quoque nōminātur scrīnium
    * intrā quō scāpum eius cōnservātum est.
    * @see Categoria
@@ -42,7 +42,7 @@ public abstract class Lector <Hoc extends Verbum <Hoc>> extends Omne {
   @Nullable public abstract Hoc fortuitumLegam();
 
   /**
-   * Officium hoc cōnstrūctōrem reī classis huius perpetrat.
+   * Hoc officum cōnstrūctōrem reī huius classis perpetrat.
    * @param ctgr valōrem {@link #categoria} indicat.
    * @param nts  valōrem {@link #nuntius} supplet.
    * @param tnr  valōrem {@link #tenor} supplet.
@@ -62,9 +62,9 @@ public abstract class Lector <Hoc extends Verbum <Hoc>> extends Omne {
   }
 
   /**
-   * Modus hic verbum cōnābitur legere ā scāpō XML intrā
+   * Hic modus verbum cōnābitur legere ā scāpō XML intrā
    * scrīnium <a href="{@docRoot}/../src/main/resources">auxiliārēs</a>.
-   * @param verbum lemma verbō quod rēs haec cōnābitur legere.
+   * @param verbum lemma verbō quod haec rēs cōnābitur legere.
    */
   protected final void legam(@NonNull final String verbum) {
     final Path nomen = Paths.get(categoria.scriptio, String.format("%s.xml", Utilitas.minusculasScribo(verbum)));

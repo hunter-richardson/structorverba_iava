@@ -16,7 +16,7 @@ import java.util.function.Supplier;
 
 /**
  * Classis {@link Pronomen} repraesentat prōnōmina ut coniectēris. <br>
- * Rēs classis huius catēgoriam {@link Categoria#PRONOMEN} ūtuntur cōnservātaque sunt in
+ * Rēs huius classis catēgoriam {@link Categoria#PRONOMEN} ūtuntur cōnservātaque sunt in
  * scrīniō <a href="{@docRoot}/../src/main/resources">auxiliārēs</a>/prōnōmina.
  * @see LectorMultiplicibus.LectorPronominibus
  * @see TenorMultiplicibus.TenorPronominibus
@@ -46,7 +46,7 @@ public final class Pronomen extends Nominalis <Pronomen> {
     @Nullable private static NuntiusPronominum instantia = null;
 
     /**
-     * Valor hic viam reī classis huiuc facit.
+     * Hic valor viam reī huius classis facit.
      * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
      */
     @NonNull private static final Supplier<NuntiusPronominum> faciendum =

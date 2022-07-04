@@ -23,7 +23,7 @@ public final class ConditorPronominibus extends ConditorMultiplicibus <Pronomen>
   @Nullable private static ConditorPronominibus instantia = null;
 
   /**
-   * Valor hic viam reī classis huiuc facit.
+   * Hic valor viam reī huius classis facit.
    * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
    */
   @NonNull public static final Supplier <ConditorPronominibus> faciendum =
@@ -67,7 +67,7 @@ public final class ConditorPronominibus extends ConditorMultiplicibus <Pronomen>
     @Nullable private static NuntiusConditoriPronominibus instantia = null;
 
     /**
-     * Valor hic viam reī classis huiuc facit.
+     * Hic valor viam reī huius classis facit.
      * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
      */
     @NonNull private static final Supplier <NuntiusConditoriPronominibus> faciendum =

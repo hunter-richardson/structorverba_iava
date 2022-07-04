@@ -8,58 +8,58 @@ import org.jetbrains.annotations.NotNull;
 import java.util.Arrays;
 
 /**
- * Ēnumerātiō haec extēnsiōnem classī {@link Verbum} dēsignat cui verbum omne respondet.
+ * Haec ēnumerātiō extēnsiōnem classī {@link Verbum} dēsignat cui verbum omne respondet.
  * @see Verbum
  */
 @SuppressWarnings("SpellCheckingInspection")
 public enum Categoria {
   /**
-   * Valor hic classem {@link Nomen} respondet.
+   * Hic valor classem {@link Nomen} respondet.
    */
   NOMEN,
 
   /**
-   * Valor hic classem {@link Adiectivum} respondet.
+   * Hic valor classem {@link Adiectivum} respondet.
    */
   ADIECTIVUM,
 
   /**
-   * Valor hic classem {@link Pronomen} respondet.
+   * Hic valor classem {@link Pronomen} respondet.
    */
   PRONOMEN,
 
   /**
-   * Valor hic classem {@link Actus} respondet.
+   * Hic valor classem {@link Actus} respondet.
    */
   ACTUS,
 
   /**
-   * Valor hic classem {@link Adverbium} respondet.
+   * Hic valor classem {@link Adverbium} respondet.
    */
   ADVERBIUM,
 
   /**
-   * Valor hic classem {@link VerbumSimplex.Coniunctio} respondet.
+   * Hic valor classem {@link VerbumSimplex.Coniunctio} respondet.
    */
   CONIUNCTIO,
 
   /**
-   * Valor hic classem {@link VerbumSimplex.Interiectio} respondet.
+   * Hic valor classem {@link VerbumSimplex.Interiectio} respondet.
    */
   INTERIECTIO,
 
   /**
-   * Valor hic classem {@link VerbumSimplex.Praepositio} respondet.
+   * Hic valor classem {@link VerbumSimplex.Praepositio} respondet.
    */
   PRAEPOSITIO,
 
   /**
-   * Valor hic classem {@link VerbumSimplex.Numerus} respondet.
+   * Hic valor classem {@link VerbumSimplex.Numerus} respondet.
    */
   NUMERUS;
 
   /**
-   * Valor hic nōminātur scrīnium intrā quō scāpum verbī omnī cōnservātum est.
+   * Hic valor nōminātur scrīnium intrā quō scāpum verbī omnī cōnservātum est.
    */
   public final @NotNull String scriptio = declina(Casus.NOMINATIVUS, Numeralis.PLURALIS, false);
 

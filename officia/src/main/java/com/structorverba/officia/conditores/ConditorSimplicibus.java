@@ -18,7 +18,7 @@ import java.util.function.*;
 @SuppressWarnings("SpellCheckingInspection")
 public abstract class ConditorSimplicibus <Hoc extends VerbumSimplex <Hoc>> extends Conditor <Hoc> {
   /**
-   * Valor hic viam reī classis {@link Hoc} facit.
+   * Hic valor viam reī classis {@link Hoc} facit.
    *
    * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html">Function</a>
    */
@@ -26,12 +26,12 @@ public abstract class ConditorSimplicibus <Hoc extends VerbumSimplex <Hoc>> exte
   protected final Function<String, Hoc> constructor;
 
   /**
-   * Valor hic valōrem {@link Verbum#lemma} reī prōductae repraehentat.
+   * Hic valor valōrem {@link Verbum#lemma} reī prōductae repraehentat.
    */
   @NonNull protected String lemma = StringUtils.EMPTY;
 
   /**
-   * Officium hoc cōnstrūctōrem reī classis huius perpetrat.
+   * Hoc officum cōnstrūctōrem reī huius classis perpetrat.
    *
    * @param nts   valōrem {@link Conditor#nuntius} supplet.
    * @param cnstr valōrem {@link #constructor} supplet.
@@ -43,7 +43,7 @@ public abstract class ConditorSimplicibus <Hoc extends VerbumSimplex <Hoc>> exte
   }
 
   /**
-   * Modus hic valōrem {@link #lemma} indit.
+   * Hic modus valōrem {@link #lemma} indit.
    * @param lm valōrem indendum
    */
   public final void funde(@NonNull final String lm) {
@@ -75,7 +75,7 @@ public abstract class ConditorSimplicibus <Hoc extends VerbumSimplex <Hoc>> exte
     private static ConditorConiunctionibus instantia = null;
 
     /**
-     * Valor hic viam reī classis huiuc facit.
+     * Hic valor viam reī huius classis facit.
      *
      * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
      */
@@ -101,7 +101,7 @@ public abstract class ConditorSimplicibus <Hoc extends VerbumSimplex <Hoc>> exte
       private static NuntiusConditoriConiunctionibus instantia = null;
 
       /**
-       * Valor hic viam reī classis huiuc facit.
+       * Hic valor viam reī huius classis facit.
        *
        * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
        */
@@ -128,7 +128,7 @@ public abstract class ConditorSimplicibus <Hoc extends VerbumSimplex <Hoc>> exte
     private static ConditorInteriectionibus instantia = null;
 
     /**
-     * Valor hic viam reī classis huiuc facit.
+     * Hic valor viam reī huius classis facit.
      *
      * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
      */
@@ -154,7 +154,7 @@ public abstract class ConditorSimplicibus <Hoc extends VerbumSimplex <Hoc>> exte
       private static NuntiusConditoriInteriectionibus instantia = null;
 
       /**
-       * Valor hic viam reī classis huiuc facit.
+       * Hic valor viam reī huius classis facit.
        *
        * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
        */

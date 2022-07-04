@@ -16,14 +16,14 @@ import java.util.stream.Collectors;
 @NoArgsConstructor(access = AccessLevel.PUBLIC)
 public final class Verba extends Omne {
   /**
-   * Valor hic seriem cōnstātam rērum classis {@link Verbum} continet.
+   * Hic valor seriem cōnstātam rērum classis {@link Verbum} continet.
    */
   public final @NonNull LinkedList <Verbum <?>> series = new LinkedList <>();
 
   /**
-   * Modus hic valōrem {@code verbum} addit to {@link #series}.
+   * Hic modus valōrem {@code verbum} addit to {@link #series}.
    * @param verbum valōrem addendum
-   * @return Rem haec
+   * @return haec
    */
   @NonNull public Verba addo(@NonNull final Verbum <?> verbum) {
     if (StringUtils.isNotBlank(verbum.toString())) {
@@ -34,9 +34,9 @@ public final class Verba extends Omne {
   }
 
   /**
-   * Modus hic seriēs {@code ordo} addit to {@link #series}.
+   * Hic modus seriēs {@code ordo} addit to {@link #series}.
    * @param ordo seriēs valōrum addendōrum
-   * @return Rem haec
+   * @return haec
    */
   @NonNull public Verba addo(@Nullable final Verbum <?>... ordo) {
     if (ordo == null) {
@@ -50,9 +50,9 @@ public final class Verba extends Omne {
   }
 
   /**
-   * Modus hic seriēs {@code verba} addit to {@link #series}.
+   * Hic modus seriēs {@code verba} addit to {@link #series}.
    * @param verba seriēs valōrum addendōrum
-   * @return Rem haec
+   * @return haec
    */
   @SuppressWarnings("UnusedReturnValue")
   @NonNull public Verba superaddo(@NonNull final Verba verba) {
@@ -64,9 +64,9 @@ public final class Verba extends Omne {
   }
 
   /**
-   * Modus hic seriēs {@code ordo} addit to {@link #series}.
+   * Hic modus seriēs {@code ordo} addit to {@link #series}.
    * @param ordo seriēs seriērum addendārum
-   * @return Rem haec
+   * @return haec
    */
   @NonNull public Verba superaddo(@Nullable final Verba... ordo) {
     if (ordo != null) {
@@ -80,7 +80,7 @@ public final class Verba extends Omne {
   }
 
   /**
-   * @return Repraesentātiōnem scrīpta reī huius. <br>
+   * @return Repraesentātiōnem scrīpta huius reī. <br>
    * Rēs omnēs contentās cōnsit cumque spatiīs distinet.
    */
   @NonNull @Override

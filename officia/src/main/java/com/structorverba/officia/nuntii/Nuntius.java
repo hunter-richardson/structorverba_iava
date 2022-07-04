@@ -11,7 +11,7 @@ import java.util.stream.Stream;
 
 /**
  * Classis {@link Nuntius} nūntia dē exsecūtiōne programmātis StrūctorVerba in scāpīs LOG scrībit. <br>
- * Classēs plūrimae aliae in programmātem StrūctorVerba rem classis huius habet.
+ * Classēs plūrimae aliae in programmātem StrūctorVerba rem huius classis habet.
  * @see Omne
  */
 @SuppressWarnings("SpellCheckingInspection")
@@ -20,8 +20,8 @@ public abstract class Nuntius {
   @NonNull private final Logger       praeco;
 
   /**
-   * Officium hoc cōnstrūctōrem reī classis huius perpetrat.
-   * @param parametri Valor hic parametrōs ūsōs prō generātiōne organum internum reī huius continet.
+   * Hoc officium cōnstrūctōrem reī huius classis perpetrat.
+   * @param parametri Hic valor parametrōs ūsōs prō generātiōne organum internum huius reī continet.
    */
   protected Nuntius(@NonNull final ParametriNuntii parametri) {
     gradusMinimus = parametri.gradusMinimus;
@@ -44,7 +44,7 @@ public abstract class Nuntius {
   }
 
   /**
-   * Modus hic persignat quod exsecūtiōnem programmātis StrūuctorVerba errōrem continuātur.
+   * Hic modus persignat quod exsecūtiōnem programmātis StrūuctorVerba errōrem continuātur.
    * @param error error continuātus
    * @see #terreo(Object...)
    */
@@ -57,7 +57,7 @@ public abstract class Nuntius {
   }
 
   /**
-   * Modus hic persignat quod exsecūtiōnem programmātis StrūctorVerba continuātur condiciōnem quam errōrem indicat.
+   * Hic modus persignat quod exsecūtiōnem programmātis StrūctorVerba continuātur condiciōnem quam errōrem indicat.
    * @param nuntia seriēs reī persignāre
    * @see GradusNuntii#GRAVIS
    */
@@ -78,7 +78,7 @@ public abstract class Nuntius {
   }
 
   /**
-   * Modus hic persignat quod exsecūtiōnem programmātis StrūctorVerba continuātur condiciōnem quam auctōribus
+   * Hic modus persignat quod exsecūtiōnem programmātis StrūctorVerba continuātur condiciōnem quam auctōribus
    * programmātis intersit.
    * @param nuntia seriēs reī persignāre
    * @see GradusNuntii#PRAEGRESSURUS
@@ -88,7 +88,7 @@ public abstract class Nuntius {
   }
 
   /**
-   * Modus hic persignat quod exsecūtiōnem programmātis StrūctorVerba continuātur condiciōnem quam errōrem addūcat.
+   * Hic modus persignat quod exsecūtiōnem programmātis StrūctorVerba continuātur condiciōnem quam errōrem addūcat.
    * @param nuntia seriēs reī persignāre
    * @see GradusNuntii#PRAEMONITORIUS
    */
@@ -97,7 +97,7 @@ public abstract class Nuntius {
   }
 
   /**
-   * Modus hic persignat quod exsecūtiōnem programmātis StrūctorVerba continuātur condiciōnem quam ūsūfructuāriīs
+   * Hic modus persignat quod exsecūtiōnem programmātis StrūctorVerba continuātur condiciōnem quam ūsūfructuāriīs
    * programmātis intersit.
    * @param nuntia seriēs reī persignāre
    * @see GradusNuntii#INFORMATIVUS
@@ -107,7 +107,7 @@ public abstract class Nuntius {
   }
 
   /**
-   * Modus hic persignat quod exsecūtiōnem programmātis StrūctorVerba continuātur condiciōnem quam nēminī fortasse
+   * Hic modus persignat quod exsecūtiōnem programmātis StrūctorVerba continuātur condiciōnem quam nēminī fortasse
    * intersit.
    * @param nuntia seriēs reī persignāre
    * @see GradusNuntii#SCRUTANS
@@ -117,7 +117,7 @@ public abstract class Nuntius {
   }
 
   /**
-   * Modus hic persignat quod exsecūtiōnem programmātis StrūctorVerba continuātur condiciōnem quam nēminī probābiliter
+   * Hic modus persignat quod exsecūtiōnem programmātis StrūctorVerba continuātur condiciōnem quam nēminī probābiliter
    * intersit.
    * @param nuntia seriēs reī persignāre
    * @see GradusNuntii#SCRUTANTIOR
@@ -127,7 +127,7 @@ public abstract class Nuntius {
   }
 
   /**
-   * Modus hic persignat quod exsecūtiōnem programmātis StrūctorVerba continuātur condiciōnem quam nēminī certissime
+   * Hic modus persignat quod exsecūtiōnem programmātis StrūctorVerba continuātur condiciōnem quam nēminī certissime
    * intersit.
    * @param nuntia seriēs reī persignāre
    * @see GradusNuntii#SCRUTANTISSIMUS

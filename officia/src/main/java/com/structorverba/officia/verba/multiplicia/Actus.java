@@ -17,7 +17,7 @@ import java.util.function.Supplier;
 
 /**
  * Classis {@link Actus} repraesentat nōmina ut coniectēris. <br>
- * Rēs classis huius catēgoriam {@link Categoria#ACTUS} ūtuntur cōnservātaque sunt in
+ * Rēs huius classis catēgoriam {@link Categoria#ACTUS} ūtuntur cōnservātaque sunt in
  * scrīniō <a href="{@docRoot}/../src/main/resources">auxiliārēs</a>/āctī.
  * @see LectorMultiplicibus.LectorActis
  * @see TenorMultiplicibus.TenorActis
@@ -28,27 +28,27 @@ import java.util.function.Supplier;
 @SuppressWarnings({"SpellCheckingInspection", "unused" })
 public final class Actus extends VerbumMultiplex <Actus> {
   /**
-   * Valor hic modum reī huius dēsignat.
+   * Hic valor modum reī huius dēsignat.
    * @see Modus
    */
   @NonNull public final Modus modus;
   /**
-   * Valor hic vōcem reī huius dēsignat.
+   * Hic valor vōcem reī huius dēsignat.
    * @see Vox
    */
   @NonNull public final Vox vox;
   /**
-   * Valor hic temporem reī huius dēsignat.
+   * Hic valor temporem reī huius dēsignat.
    * @see Tempus
    */
   @NonNull public final Tempus tempus;
   /**
-   * Valor hic numerum reī huius dēsignat.
+   * Hic valor numerum reī huius dēsignat.
    * @see Numeralis
    */
   @NonNull public final Numeralis numeralis;
   /**
-   * Valor hic persōnam reī huius dēsignat.
+   * Hic valor persōnam reī huius dēsignat.
    * @see Persona
    */
   @NonNull public final Persona persona;
@@ -75,7 +75,7 @@ public final class Actus extends VerbumMultiplex <Actus> {
   }
 
   /**
-   * Modus hic rem classis {@link Adiectivum} ā parametrīs dēsignātīs advenit.
+   * Hic modus rem classis {@link Adiectivum} ā parametrīs dēsignātīs advenit.
    * @param vx    valōrem {@link #vox} indicat.
    * @param tmps  valōrem {@link #tempus} indicat.
    * @param gns   valōrem {@link Nominalis#genus} indicat.
@@ -100,7 +100,7 @@ public final class Actus extends VerbumMultiplex <Actus> {
   }
 
   /**
-   * Modus hic rem classis {@link Adiectivum} ā parametrīs dēsignātīs advenit.
+   * Hic modus rem classis {@link Adiectivum} ā parametrīs dēsignātīs advenit.
    * @param vx    valōrem {@link #vox} indicat.
    * @param gns   valōrem {@link Nominalis#genus} indicat.
    * @param css   valōrem {@link Nominalis#casus} indicat.
@@ -116,7 +116,7 @@ public final class Actus extends VerbumMultiplex <Actus> {
   }
 
   /**
-   * Modus hic rem classis {@link Adiectivum} ā parametrīs dēsignātīs advenit.
+   * Hic modus rem classis {@link Adiectivum} ā parametrīs dēsignātīs advenit.
    * @param tmps  valōrem {@link #tempus} indicat.
    * @param gns   valōrem {@link Nominalis#genus} indicat.
    * @param css   valōrem {@link Nominalis#casus} indicat.
@@ -132,7 +132,7 @@ public final class Actus extends VerbumMultiplex <Actus> {
   }
 
   /**
-   * Modus hic rem classis {@link Adiectivum} ā parametrīs dēsignātīs advenit.
+   * Hic modus rem classis {@link Adiectivum} ā parametrīs dēsignātīs advenit.
    * @param gns   valōrem {@link Nominalis#genus} indicat.
    * @param css   valōrem {@link Nominalis#casus} indicat.
    * @param nmrl  valōrem {@link Nominalis#numeralis} indicat.
@@ -147,7 +147,7 @@ public final class Actus extends VerbumMultiplex <Actus> {
   }
 
   /**
-   * Modus hic rem classis {@link Nomen} ā parametrīs dēsignātīs advenit.
+   * Hic modus rem classis {@link Nomen} ā parametrīs dēsignātīs advenit.
    * @param tmps  valōrem {@link Nomen#tempus} indicat.
    * @param css   valōrem {@link Nominalis#casus} indicat.
    * @return Rem classis {@link Nomen} quod parametra dēsignāta quadrat.
@@ -162,7 +162,7 @@ public final class Actus extends VerbumMultiplex <Actus> {
   }
 
   /**
-   * Modus hic rem classis {@link Nomen} ā rē {@link Casus}
+   * Hic modus rem classis {@link Nomen} ā rē {@link Casus}
    * rēque {@link Tempus#GERUNDIVUS} dēsignātīs advenit.
    * @param css   valōrem {@link Nominalis#casus} indicat.
    * @return Rem classis {@link Nomen} quod parametra dēsignāta quadrat.
@@ -174,7 +174,7 @@ public final class Actus extends VerbumMultiplex <Actus> {
   }
 
   /**
-   * Modus hic rem classis {@link Nomen} ā rē {@link Casus}
+   * Hic modus rem classis {@link Nomen} ā rē {@link Casus}
    * rēque {@link Tempus#SUPINUS} dēsignātīs advenit.
    * @param css   valōrem {@link Nominalis#casus} indicat.
    * @return Rem classis {@link Nomen} quod parametra dēsignāta quadrat.
@@ -194,7 +194,7 @@ public final class Actus extends VerbumMultiplex <Actus> {
     @Nullable private static NuntiusActorum instantia = null;
 
     /**
-     * Valor hic viam reī classis huiuc facit.
+     * Hic valor viam reī huius classis facit.
      * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
      */
     @NonNull private static final Supplier<NuntiusActorum> faciendum =

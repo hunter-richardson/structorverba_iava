@@ -15,7 +15,7 @@ import java.util.function.Supplier;
 
 /**
  * Classis {@link Adverbium} repraesentat adverbia ut coniectēris. <br>
- * Rēs classis huius catēgoriam {@link Categoria#ADVERBIUM} ūtuntur cōnservātaque sunt in
+ * Rēs huius classis catēgoriam {@link Categoria#ADVERBIUM} ūtuntur cōnservātaque sunt in
  * scrīnio <a href="{@docRoot}/../src/main/resources">auxiliārēs</a>/adverbia.
  * @see LectorMultiplicibus.LectorAdverbiis
  * @see TenorMultiplicibus.TenorAdverbiis
@@ -25,7 +25,7 @@ import java.util.function.Supplier;
 @SuppressWarnings("SpellCheckingInspection")
 public class Adverbium extends VerbumMultiplex <Adverbium> {
   /**
-   * Valor hic potentiam reī huius dēsignat.
+   * Hic valor potentiam reī huius dēsignat.
    * @see Gradus
    */
   @NonNull public final Gradus gradus;
@@ -49,7 +49,7 @@ public class Adverbium extends VerbumMultiplex <Adverbium> {
     @Nullable private static NuntiusAdverbiorum instantia = null;
 
     /**
-     * Valor hic viam reī classis huiuc facit.
+     * Hic valor viam reī huius classis facit.
      * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
      */
     @NonNull private static final Supplier<NuntiusAdverbiorum> faciendum =

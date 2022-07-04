@@ -19,14 +19,14 @@ import java.util.stream.Stream;
 @SuppressWarnings("SpellCheckingInspection")
 public final class Utilitas extends Omne {
   /**
-   * Valor hic litterās omnēs ūsās per programmāte StrūctorVerba tenet.
+   * Hic valor litterās omnēs ūsās per programmāte StrūctorVerba tenet.
    */
   @NonNull public static final Charset LITTERAE = StandardCharsets.UTF_8;
   @NonNull public static final Locale LOCULUS = Locale.forLanguageTag("Latn");
 
   /**
    * @param haec valor scrībendus
-   * @return {@code haec} cum litterīs capitāneīs
+   * @return Valor {@code haec} cum litterīs capitāneīs
    */
   @NonNull public static String capitaneasScribo(@NonNull final String haec) {
     return haec.trim().toUpperCase(LOCULUS);
@@ -34,7 +34,7 @@ public final class Utilitas extends Omne {
 
   /**
    * @param haec valor scrībendus
-   * @return {@code haec} cum litterīs minusculīs
+   * @return Valor {@code haec} cum litterīs minusculīs
    */
   @NonNull public static String minusculasScribo(@NonNull final String haec) {
     return haec.trim().toLowerCase(LOCULUS);
@@ -42,7 +42,7 @@ public final class Utilitas extends Omne {
 
   /**
    * @param haec valor scrībendus
-   * @return {@code haec} cum litterīs minusculīs praeter prīmam capitāneam
+   * @return Valor {@code haec} cum litterīs minusculīs praeter prīmam capitāneam
    */
   @NonNull public static String primamCapitaneamScribo(@NonNull final String haec) {
     return String.format("%s%s", String.valueOf(haec.charAt(0)).toUpperCase(LOCULUS),

@@ -21,7 +21,7 @@ import java.util.function.Supplier;
 @SuppressWarnings({ "SpellCheckingInspection" })
 public abstract class LectorSimplicibus <Hoc extends VerbumSimplex <Hoc>> extends Lector <Hoc> {
   /**
-   * Officium hoc cōnstrūctōrem reī classis huius perpetrat.
+   * Hoc officum cōnstrūctōrem reī huius classis perpetrat.
    * @param ctgr valōrem {@link Lector#categoria} indicat.
    * @param nts  valōrem {@link Lector#nuntius} supplet.
    * @param tnr  valōrem {@link Lector#tenor} supplet.
@@ -33,11 +33,11 @@ public abstract class LectorSimplicibus <Hoc extends VerbumSimplex <Hoc>> extend
   }
 
   /**
-   * Modus hic ūtitur modus {@link Lector#legam(String)} ut rem classis {@link Hoc} ā valōre {@link Lector#tenor}
+   * Hic modus ūtitur modus {@link Lector#legam(String)} ut rem classis {@link Hoc} ā valōre {@link Lector#tenor}
    * adveniat.
-   * @param verbum lemma verbō quod rēs haec cōnābitur advenīre
+   * @param verbum lemma verbō quod haec rēs cōnābitur advenīre
    * @return Rem classis {@link Hoc} quam valōrem {@code verbum} quadrat. <br>
-   * Modus hic valōrem {@code null} refert sī nihil quadrat valōrem {@code verbum}.
+   * Hic modus valōrem {@code null} refert sī nihil quadrat valōrem {@code verbum}.
    */
   @Nullable public final Hoc adveniam(@NonNull final String verbum) {
     legam(verbum);
@@ -79,7 +79,7 @@ public abstract class LectorSimplicibus <Hoc extends VerbumSimplex <Hoc>> extend
     @Nullable private static LectorConiunctionibus instantia = null;
 
     /**
-     * Valor hic viam reī classis huiuc facit.
+     * Hic valor viam reī huius classis facit.
      * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
      */
     @NonNull public static final Supplier <LectorConiunctionibus> faciendum =
@@ -100,7 +100,7 @@ public abstract class LectorSimplicibus <Hoc extends VerbumSimplex <Hoc>> extend
       @Nullable private static NuntiusLectoriConiunctionibus instantia = null;
 
       /**
-       * Valor hic viam reī classis huiuc facit.
+       * Hic valor viam reī huius classis facit.
        * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
        */
       @NonNull private static final Supplier <NuntiusLectoriConiunctionibus> faciendum =
@@ -124,7 +124,7 @@ public abstract class LectorSimplicibus <Hoc extends VerbumSimplex <Hoc>> extend
     @Nullable private static LectorInteriectionibus instantia = null;
 
     /**
-     * Valor hic viam reī classis huiuc facit.
+     * Hic valor viam reī huius classis facit.
      * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
      */
     @NonNull public static final Supplier <LectorInteriectionibus> faciendum =
@@ -147,7 +147,7 @@ public abstract class LectorSimplicibus <Hoc extends VerbumSimplex <Hoc>> extend
     @Nullable private static NuntiusLectoriInteriectionibus instantia = null;
 
     /**
-     * Valor hic viam reī classis huiuc facit.
+     * Hic valor viam reī huius classis facit.
      * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
      */
     @NonNull private static final Supplier <NuntiusLectoriInteriectionibus> faciendum =

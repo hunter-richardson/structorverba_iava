@@ -24,7 +24,7 @@ public final class ConditorActis extends ConditorMultiplicibus <Actus> {
   @Nullable private static ConditorActis instantia = null;
 
   /**
-   * Valor hic viam reī classis huiuc facit.
+   * Hic valor viam reī huius classis facit.
    * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
    */
   @NonNull public static final Supplier <ConditorActis> faciendum =
@@ -70,7 +70,7 @@ public final class ConditorActis extends ConditorMultiplicibus <Actus> {
     @Nullable private static NuntiusConditoriActis instantia = null;
 
     /**
-     * Valor hic viam reī classis huiuc facit.
+     * Hic valor viam reī huius classis facit.
      * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
      */
     @NonNull private static final Supplier <NuntiusConditoriActis> faciendum =

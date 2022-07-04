@@ -23,7 +23,7 @@ public final class ConditorAdiectivis extends ConditorMultiplicibus <Adiectivum>
   @Nullable private static ConditorAdiectivis instantia = null;
 
   /**
-   * Valor hic viam rei classis huiuc facit.
+   * Hic valor viam rei huius classis facit.
    * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
    */
   @NonNull public static final Supplier <ConditorAdiectivis> faciendum =
@@ -69,7 +69,7 @@ public final class ConditorAdiectivis extends ConditorMultiplicibus <Adiectivum>
     @Nullable private static NuntiusConditoriAdiectivis instantia = null;
 
     /**
-     * Valor hic viam rei classis huiuc facit.
+     * Hic valor viam rei huius classis facit.
      * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
      */
     @NonNull private static final Supplier <NuntiusConditoriAdiectivis> faciendum =

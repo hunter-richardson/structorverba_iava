@@ -22,14 +22,14 @@ import java.util.function.*;
 @SuppressWarnings("SpellCheckingInspection")
 public abstract class TenorMultiplicibus <Hoc extends VerbumMultiplex <Hoc>> extends Tenor <Hoc> {
   /**
-   * Valor hic est vās classis {@link ConditorMultiplicibus} classī extentī huius.
+   * Hic valor est vās classis {@link ConditorMultiplicibus} huic classī extentae.
    */
   @NonNull protected final ConditorMultiplicibus <Hoc> conditor;
 
   /**
-   * Officium hoc cōnstrūctōrem rei classis huius perpetrat.
-   * @param nuntius valōrem {@link Tenor#nuntius} supplet.
-   * @param cndtr   valōrem {@link #conditor} supplet.
+   * Hoc officium cōnstrūctōrem rei huius classis perpetrat.
+   * @param nuntius Valōrem {@link Tenor#nuntius} supplet.
+   * @param cndtr   Valōrem {@link #conditor} supplet.
    */
   protected TenorMultiplicibus(@NonNull final Supplier <? extends Nuntius> nuntius,
                                @NonNull final Supplier <? extends ConditorMultiplicibus <Hoc>> cndtr) {
@@ -38,14 +38,14 @@ public abstract class TenorMultiplicibus <Hoc extends VerbumMultiplex <Hoc>> ext
   }
 
   /**
-   * Modus hic ēnumerātiōnēs prōcēdit lēctās ā rēbus classis {@link LectorMultiplicibus}
-   * @param locus     valVrem hunc modus hic nōn ūtitur sed necessārium est ut rē classis <a
+   * Hic modus ēnumerātiōnēs prōcēdit lēctās ā rēbus classis {@link LectorMultiplicibus}
+   * @param locus     Hunc valōrem hic modus nōn ūtitur sed necessārium est ut rē classis <a
    *                  href="https://docs.oracle.com/javase/7/docs/api/org/xml/sax/helpers/DefaultHandler.html">DefaultHandler</a>
    *                  cōnsociet
-   * @param loculus   valōrem hunc modus hic nōn ūtitur sed necessārium est ut rē classis <a
+   * @param loculus   Hunc valōrem hic modus nōn ūtitur sed necessārium est ut rē classis <a
    *                  href="https://docs.oracle.com/javase/7/docs/api/org/xml/sax/helpers/DefaultHandler.html">DefaultHandler</a>
    *                  cōnsociet
-   * @param qualis    valōrem hunc modus hic nōn ūtitur sed necessārium est ut rē classis <a
+   * @param qualis    Hunc valōrem hic modus nōn ūtitur sed necessārium est ut rē classis <a
    *                  href="https://docs.oracle.com/javase/7/docs/api/org/xml/sax/helpers/DefaultHandler.html">DefaultHandler</a>
    *                  cōnsociet
    * @param attributa seriēs valōrum nōminumque sociVtōrum
@@ -62,14 +62,14 @@ public abstract class TenorMultiplicibus <Hoc extends VerbumMultiplex <Hoc>> ext
   }
 
   /**
-   * Modus hic rem aptam classis {@link ConditorMultiplicibus} imperat restitui.
-   * @param locus   valōrem hunc modus hic nōn ūtitur sed necessārium est ut rē classis <a
+   * Hic modus rem aptam classis {@link ConditorMultiplicibus} imperat restitui.
+   * @param locus   Hunc valōrem hic modus nōn ūtitur sed necessārium est ut rē classis <a
    *                href="https://docs.oracle.com/javase/7/docs/api/org/xml/sax/helpers/DefaultHandler.html">DefaultHandler</a>
    *                cōnsociet
-   * @param loculus valōrem hunc modus hic nōn ūtitur sed necessārium est ut rē classis <a
+   * @param loculus Hunc valōrem hic modus nōn ūtitur sed necessārium est ut rē classis <a
    *                href="https://docs.oracle.com/javase/7/docs/api/org/xml/sax/helpers/DefaultHandler.html">DefaultHandler</a>
    *                cōnsociet
-   * @param qualis  valōrem hunc modus hic nōn ūtitur sed necessārium est ut rē classis <a
+   * @param qualis  Hunc valōrem hic modus nōn ūtitur sed necessārium est ut rē classis <a
    *                href="https://docs.oracle.com/javase/7/docs/api/org/xml/sax/helpers/DefaultHandler.html">DefaultHandler</a>
    *                cōnsociet
    * @see <a href="https://docs.oracle.com/javase/7/docs/api/org/xml/sax/helpers/DefaultHandler.html#endElement(java.lang.String,%20java.lang.String,%20java.lang.String)">DefaultHandler.endElement</a>
@@ -110,7 +110,7 @@ public abstract class TenorMultiplicibus <Hoc extends VerbumMultiplex <Hoc>> ext
 
 
   /**
-   * Modus hic valōrem {@link #series} per valōrem {@code quaestio} cōlat ut rem singulam prōdūcat.
+   * Hic modus valōrem {@link #series} per valōrem {@code quaestio} cōlat ut rem singulam prōdūcat.
    * @param quaestio quaestiō tentanda
    * @return valōrem {@link #series} valōrem {@code quaestio} percōlāta
    */
@@ -131,7 +131,7 @@ public abstract class TenorMultiplicibus <Hoc extends VerbumMultiplex <Hoc>> ext
     @Nullable private static TenorAdverbiis instantia = null;
 
     /**
-     * Valor hic viam rei classis huiuc facit.
+     * Hic valor viam rei huius classis facit.
      * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
      */
     @NonNull public static final Supplier <TenorAdverbiis> faciendum =
@@ -152,7 +152,7 @@ public abstract class TenorMultiplicibus <Hoc extends VerbumMultiplex <Hoc>> ext
       @Nullable private static NuntiusTenoriAdverbiis instantia = null;
 
       /**
-       * Valor hic viam reī classis huiuc facit.
+       * Hic valor viam reī huius classis facit.
        * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
        */
       @NonNull private static final Supplier <NuntiusTenoriAdverbiis> faciendum =
@@ -176,7 +176,7 @@ public abstract class TenorMultiplicibus <Hoc extends VerbumMultiplex <Hoc>> ext
     @Nullable private static TenorNominibus instantia = null;
 
     /**
-     * Valor hic viam rei classis huiuc facit.
+     * Hic valor viam rei huius classis facit.
      * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
      */
     @NonNull public static final Supplier <TenorNominibus> faciendum =
@@ -197,7 +197,7 @@ public abstract class TenorMultiplicibus <Hoc extends VerbumMultiplex <Hoc>> ext
       @Nullable private static NuntiusTenoriNominibus instantia = null;
 
       /**
-       * Valor hic viam reī classis huiuc facit.
+       * Hic valor viam reī huius classis facit.
        * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
        * @see TenorMultiplicibus.TenorNominibus
        */
@@ -222,7 +222,7 @@ public abstract class TenorMultiplicibus <Hoc extends VerbumMultiplex <Hoc>> ext
     @Nullable private static TenorAdiectivis instantia = null;
 
     /**
-     * Valor hic viam rei classis huiuc facit.
+     * Hic valor viam rei huius classis facit.
      * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
      */
     @NonNull public static final Supplier <TenorAdiectivis> faciendum =
@@ -243,7 +243,7 @@ public abstract class TenorMultiplicibus <Hoc extends VerbumMultiplex <Hoc>> ext
       @Nullable private static NuntiusTenoriAdiectivis instantia = null;
 
       /**
-       * Valor hic viam reī classis huiuc facit.
+       * Hic valor viam reī huius classis facit.
        * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
        */
       @NonNull private static final Supplier <NuntiusTenoriAdiectivis> faciendum =
@@ -267,7 +267,7 @@ public abstract class TenorMultiplicibus <Hoc extends VerbumMultiplex <Hoc>> ext
     @Nullable private static TenorPronominibus instantia = null;
 
     /**
-     * Valor hic viam rei classis huiuc facit.
+     * Hic valor viam rei huius classis facit.
      * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
      */
     @NonNull public static final Supplier <TenorPronominibus> faciendum =
@@ -288,7 +288,7 @@ public abstract class TenorMultiplicibus <Hoc extends VerbumMultiplex <Hoc>> ext
       @Nullable private static NuntiusTenoriPronominibus instantia = null;
 
       /**
-       * Valor hic viam reī classis huiuc facit.
+       * Hic valor viam reī huius classis facit.
        * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
        */
       @NonNull private static final Supplier <NuntiusTenoriPronominibus> faciendum =
@@ -312,7 +312,7 @@ public abstract class TenorMultiplicibus <Hoc extends VerbumMultiplex <Hoc>> ext
     @Nullable private static TenorActis instantia = null;
 
     /**
-     * Valor hic viam rei classis huiuc facit.
+     * Hic valor viam rei huius classis facit.
      * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
      */
     @NonNull public static final Supplier <TenorActis> faciendum =
@@ -333,7 +333,7 @@ public abstract class TenorMultiplicibus <Hoc extends VerbumMultiplex <Hoc>> ext
     @Nullable private static NuntiusTenoriActis instantia = null;
 
     /**
-     * Valor hic viam reī classis huiuc facit.
+     * Hic valor viam reī huius classis facit.
      * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
      */
     @NonNull private static final Supplier <NuntiusTenoriActis> faciendum =

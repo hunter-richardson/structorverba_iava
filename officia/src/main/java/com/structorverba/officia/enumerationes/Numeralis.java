@@ -7,40 +7,40 @@ import org.apache.commons.lang3.StringUtils;
 import java.util.stream.Stream;
 
 /**
- * Ēnumerātiō haec numerum verbī omnis dēsignat.
+ * Haec ēnumerātiō numerum verbī omnis dēsignat.
  * @see Nominalis
  * @see Actus
  */
 @SuppressWarnings({ "SpellCheckingInspection", "unused" })
 public enum Numeralis {
   /**
-   * Valor hic ūtātur sī ūsūfructuāriī valōrem validum nōn dēnotat. <br> Sōlum scrīnium <a
-   * href="{@docRoot}/../src/main/resources">auxiliārēs</a> ūtitur indicāre quod verbum hoc est innumerābile.
+   * Hic valor ūtātur sī ūsūfructuāriī valōrem validum nōn dēnotat. <br> Sōlum scrīnium <a
+   * href="{@docRoot}/../src/main/resources">auxiliārēs</a> ūtitur indicāre quod hoc verbum est innumerābile.
    */
   NULLUS(StringUtils.EMPTY),
 
   /**
-   * Valor hic numerum singulārem dēsignat.
+   * Hic valor numerum singulārem dēsignat.
    */
   SINGULARIS("singulāris"),
 
   /**
-   * Valor hic numerum plūrālem dēsignat.
+   * Hic valor numerum plūrālem dēsignat.
    */
   PLURALIS("plūrālis");
 
   /**
-   * Valor hic reparesentātiōnem scrīpta ēnumerātiōnis dēsignat.
+   * Hic valor reparesentātiōnem scrīpta ēnumerātiōnis dēsignat.
    */
   public static final @NonNull String pittacium = "numerālis";
 
   /**
-   * Valor hic repraesentātiōnem scrīpta reī huius dēsignat.
+   * Hic valor repraesentātiōnem scrīpta reī huius dēsignat.
    */
   public final @NonNull String scriptio;
 
   /**
-   * Officium hoc cōnstrūctōrem reī classis huius perpetrat.
+   * Hoc officium cōnstrūctōrem reī huius classis perpetrat.
    * @param scrpt valōrem {@link #scriptio} indicat.
    */
   Numeralis(@NonNull final String scrpt) {
@@ -48,7 +48,7 @@ public enum Numeralis {
   }
 
   /**
-   * Modus hic rem ēnumerātiō {@link Numeralis} ā parametrō dēsign\u010tō advenit. <br>
+   * Hic modus rem ēnumerātiō {@link Numeralis} ā parametrō dēsign\u010tō advenit. <br>
    * Valōrem {@link #NULLUS} refert sī nihil valōrem {@code scriptio} quadrat.
    * @param scriptio valōrem {@link #scriptio} indicat.
    * @return Rem ēnumerātiō {@link Numeralis} quod parametrum dēsignātum quadrat.

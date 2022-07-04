@@ -18,12 +18,12 @@ import java.util.function.Supplier;
 @SuppressWarnings("SpellCheckingInspection")
 public abstract class TenorSimplicibus <Hoc extends VerbumSimplex <Hoc>> extends Tenor <Hoc> {
   /**
-   * Valor hic est vās classis {@link ConditorSimplicibus} classī extentī huius.
+   * Hic valor est vās classis {@link ConditorSimplicibus} classī extentī huius.
    */
   @NonNull protected final ConditorSimplicibus <Hoc> conditor;
 
   /**
-   * Officium hoc cōnstrūctōrem reī classis huius perpetrat.
+   * Hoc officium cōnstrūctōrem reī huius classis perpetrat.
    * @param nts   valōrem {@link Tenor#nuntius} supplet.
    * @param cndtr valōrem {@link #conditor} supplet.
    */
@@ -71,7 +71,7 @@ public abstract class TenorSimplicibus <Hoc extends VerbumSimplex <Hoc>> extends
     @Nullable private static TenorConiunctionibus instantia = null;
 
     /**
-     * Valor hic viam reī classis huiuc facit.
+     * Hic valor viam reī huius classis facit.
      * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
      */
     @NonNull public static final Supplier <TenorConiunctionibus> faciendum =
@@ -92,7 +92,7 @@ public abstract class TenorSimplicibus <Hoc extends VerbumSimplex <Hoc>> extends
       @Nullable private static NuntiusTenoriConiunctionibus instantia = null;
 
       /**
-       * Valor hic viam reī classis huiuc facit.
+       * Hic valor viam reī huius classis facit.
        * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
        */
       @NonNull private static final Supplier <NuntiusTenoriConiunctionibus> faciendum =
@@ -116,7 +116,7 @@ public abstract class TenorSimplicibus <Hoc extends VerbumSimplex <Hoc>> extends
     @Nullable private static TenorInteriectionibus instantia = null;
 
     /**
-     * Valor hic viam reī classis huiuc facit.
+     * Hic valor viam reī huius classis facit.
      * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
      */
     @NonNull public static final Supplier <TenorInteriectionibus> faciendum =
@@ -138,7 +138,7 @@ public abstract class TenorSimplicibus <Hoc extends VerbumSimplex <Hoc>> extends
     @Nullable private static NuntiusTenoriInteriectionibus instantia = null;
 
     /**
-     * Valor hic viam reī classis huiuc facit.
+     * Hic valor viam reī huius classis facit.
      * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
      */
     @NonNull private static final Supplier <NuntiusTenoriInteriectionibus> faciendum =

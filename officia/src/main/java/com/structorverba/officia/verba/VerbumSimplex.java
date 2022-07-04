@@ -20,13 +20,13 @@ import java.util.function.Supplier;
 
 /**
  * Classis {@link VerbumSimplex} repraesentat verbum aliquem quod fōrmam ūnam sōlum habet. <br>
- * Rēs classis {@link Inventor} rēbus classis huius absunt atque inūtilēs fuerint. <br>
- * @param <Hoc> Tabellā hāc classis {@link Hoc} extēnsiōnem aptam datīs petītīs repraesentat.
+ * Rēs classis {@link Inventor} rēbus huius classis absunt atque inūtilēs fuerint. <br>
+ * @param <Hoc> Hāc tabellā classis {@link Hoc} extēnsiōnem aptam datīs petītīs repraesentat.
  */
 @SuppressWarnings("SpellCheckingInspection")
 public abstract class VerbumSimplex <Hoc extends Verbum <Hoc>> extends Verbum <Hoc> {
   /**
-   * Officium hoc cōnstrūctōrem reī classis huius perpetrat.
+   * Hoc officium cōnstrūctōrem reī huius classis perpetrat.
    * @param ctgr valōrem {@link #catagoria} indicat.
    * @param lm valōrem {@link #lemma} indicat.
    */
@@ -45,9 +45,9 @@ public abstract class VerbumSimplex <Hoc extends Verbum <Hoc>> extends Verbum <H
 
   /**
    * Classis {@link Coniunctio} repraesentat coniūnctīva ut coniectēris. <br>
-   * Rēs classis huius catēgoriam {@link Categoria#CONIUNCTIO} ūtuntur cōnservātaque sunt
+   * Rēs huius classis catēgoriam {@link Categoria#CONIUNCTIO} ūtuntur cōnservātaque sunt
    * in scrīniō <a href="{@docRoot}/../src/main/resources">auxiliāres</a>/coniūnctīva.
-   * Classis haec classisque {@link Interiectio} ā cōnspectiōne programmātis StrūctorVerba est eaedem.
+   * Haec classis classisque {@link Interiectio} ā cōnspectiōne programmātis StrūctorVerba est eaedem.
    * @see LectorSimplicibus.LectorConiunctionibus
    * @see TenorSimplicibus.TenorConiunctionibus
    * @see ConditorSimplicibus.ConditorConiunctionibus
@@ -72,7 +72,7 @@ public abstract class VerbumSimplex <Hoc extends Verbum <Hoc>> extends Verbum <H
       @Nullable private static NuntiusConiunctivorum instantia = null;
 
       /**
-       * Valor hic viam reī classis huiuc facit.
+       * Hic valor viam reī huius classis facit.
        * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
        */
       @NonNull private static final Supplier <NuntiusConiunctivorum> faciendum =
@@ -86,9 +86,9 @@ public abstract class VerbumSimplex <Hoc extends Verbum <Hoc>> extends Verbum <H
 
   /**
    * Classis {@link Interiectio} repraesentat interiectiōnem ut coniectēris. <br>
-   * Rēs classis huius catēgoriam {@link Categoria#CONIUNCTIO} ūtuntur cōnservātaque sunt in
+   * Rēs huius classis catēgoriam {@link Categoria#CONIUNCTIO} ūtuntur cōnservātaque sunt in
    * scrīniō <a href="{@docRoot}/../src/main/resources">auxiliārēs</a>/interiectiōnēs.
-   * Classis haec classisque {@link Coniunctio} ā cōnspectiōne programmātis StrūctorVerba est eaedem.
+   * Haec classis classisque {@link Coniunctio} ā cōnspectiōne programmātis StrūctorVerba est eaedem.
    * @see LectorSimplicibus.LectorInteriectionibus
    * @see TenorSimplicibus.TenorInteriectionibus
    * @see ConditorSimplicibus.ConditorInteriectionibus
@@ -113,7 +113,7 @@ public abstract class VerbumSimplex <Hoc extends Verbum <Hoc>> extends Verbum <H
       @Nullable static NuntiusInteriectionum instantia = null;
 
       /**
-       * Valor hic viam reī classis huiuc facit.
+       * Hic valor viam reī huius classis facit.
        * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
        */
       static @NonNull Supplier <NuntiusInteriectionum> faciendum =
@@ -127,14 +127,14 @@ public abstract class VerbumSimplex <Hoc extends Verbum <Hoc>> extends Verbum <H
 
   /**
    * Classis {@link Praepositio} repraesentat praepositiōnēs ut coniecteris. <br>
-   * Rēs classis huius catēgoriam {@link Categoria#PRAEPOSITIO} ūtuntur cōnservātaque sunt in
+   * Rēs huius classis catēgoriam {@link Categoria#PRAEPOSITIO} ūtuntur cōnservātaque sunt in
    * scrīniō <a href="{@docRoot}/../src/main/resources">auxiliārēs</a>/praepositiōnēs.
    * @see LectorPraepositionibus
    * @see NuntiusPraepositionum
    */
   public static final class Praepositio extends VerbumSimplex <Praepositio> {
     /**
-     * Valor hic supplet rem classis {@link Praepositio} quam praepositiōnem nūlla repraesentat.
+     * Hic valor supplet rem classis {@link Praepositio} quam praepositiōnem nūlla repraesentat.
      */
     @NonNull public static final Supplier <Praepositio> assume =
       () -> Praepositio.builder().build();
@@ -156,7 +156,7 @@ public abstract class VerbumSimplex <Hoc extends Verbum <Hoc>> extends Verbum <H
       @Nullable static NuntiusPraepositionum instantia = null;
 
       /**
-       * Valor hic viam reī classis huiuc facit.
+       * Hic valor viam reī huius classis facit.
        * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
        */
       static @NonNull Supplier <NuntiusPraepositionum> faciendum =
@@ -170,9 +170,9 @@ public abstract class VerbumSimplex <Hoc extends Verbum <Hoc>> extends Verbum <H
 
   /**
    * Classis {@link Numerus} repraesentat numerōs ut coniectēris. <br>
-   * Rēs classis huius catēgoriam {@link Categoria#NUMERUS} ūtuntur dataque eīs nōn
+   * Rēs huius classis catēgoriam {@link Categoria#NUMERUS} ūtuntur dataque eīs nōn
    * inveniet scrīnium <a href="{@docRoot}/../src/main/resources">auxiliārēs</a>.
-   * <br> Magis rēs classis huius ā numerīs classis <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Short.html">Short</a>
+   * <br> Magis rēs huius classis ā numerīs classis <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Short.html">Short</a>
    * per ūsum classis <a href="https://github.com/Chaosfirebolt/RomanNumeralConverter/blob/master/src/main/java/com/github/chaosfirebolt/converter/RomanInteger.java">RomanInteger</a>
    * fīant.
    * @see NuntiusNumerorum
@@ -181,17 +181,17 @@ public abstract class VerbumSimplex <Hoc extends Verbum <Hoc>> extends Verbum <H
    */
   public static final class Numerus extends VerbumSimplex <Numerus> {
     /**
-     * Valor hic numerum maximum possibilem repraesentat.
+     * Hic valor numerum maximum possibilem repraesentat.
      */
     public static final short MINUMUM = 1;
 
     /**
-     * Valor hic numerum minumum possibilem repraesentat.
+     * Hic valor numerum minumum possibilem repraesentat.
      */
     public static final short MAXIMUM = 3999;
 
     /**
-     * Valor hic repraesentātiōnem numeriam tenet reī huic.
+     * Hic valor repraesentātiōnem numeriam huic reī tenet.
      */
     @IntRange(from = MINUMUM, to = MAXIMUM)
     private final int numerus;
@@ -214,8 +214,8 @@ public abstract class VerbumSimplex <Hoc extends Verbum <Hoc>> extends Verbum <H
     }
 
     /**
-     * @return Repraesentātiōnem scrīpta reī classis huic. <br>
-     * Modus hic valōrem <a href="https://commons.apache.org/proper/commons-lang/apidocs/org/apache/commons/lang3/StringUtils.html#EMPTY">StringUtils.EMPTY</a>
+     * @return Repraesentātiōnem scrīpta reī huius classis. <br>
+     * Hic modus valōrem <a href="https://commons.apache.org/proper/commons-lang/apidocs/org/apache/commons/lang3/StringUtils.html#EMPTY">StringUtils.EMPTY</a>
      * refert sī <a href="https://github.com/Chaosfirebolt/RomanNumeralConverter/blob/master/src/main/java/com/github/chaosfirebolt/converter/RomanInteger.java">RomanInteger</a>
      * errōrem continuātur.
      * @see <a href="https://github.com/Chaosfirebolt/RomanNumeralConverter/blob/master/src/main/java/com/github/chaosfirebolt/converter/RomanInteger.java">RomanInteger</a>
@@ -233,7 +233,7 @@ public abstract class VerbumSimplex <Hoc extends Verbum <Hoc>> extends Verbum <H
     /**
      * @param alius rēs classis {@link Numerus} ūsa additiōnī.
      * @return Rem classis {@link Numerus} quae ēventum additiōnis cum valōre {@code alius} repraesentat. <br>
-     * Modus hic valōrem {@code null} refert sī <a href="https://github.com/Chaosfirebolt/RomanNumeralConverter/blob/master/src/main/java/com/github/chaosfirebolt/converter/RomanInteger.java">RomanInteger</a>
+     * Hic modus valōrem {@code null} refert sī <a href="https://github.com/Chaosfirebolt/RomanNumeralConverter/blob/master/src/main/java/com/github/chaosfirebolt/converter/RomanInteger.java">RomanInteger</a>
      * errōrem continuātur.
      * @see <a href="https://github.com/Chaosfirebolt/RomanNumeralConverter/blob/master/src/main/java/com/github/chaosfirebolt/converter/RomanInteger.java">RomanInteger</a>
      */
@@ -249,7 +249,7 @@ public abstract class VerbumSimplex <Hoc extends Verbum <Hoc>> extends Verbum <H
     /**
      * @param alius rēs classis {@link Numerus} ūsa subtractiōnī.
      * @return Rem classis {@link Numerus} quae ēventum subtractiōnis cum valōre {@code alius} repraesentat. <br>
-     * Modus hic valōrem {@code null} refert sī <a href="https://github.com/Chaosfirebolt/RomanNumeralConverter/blob/master/src/main/java/com/github/chaosfirebolt/converter/RomanInteger.java">RomanInteger</a>
+     * Hic modus valōrem {@code null} refert sī <a href="https://github.com/Chaosfirebolt/RomanNumeralConverter/blob/master/src/main/java/com/github/chaosfirebolt/converter/RomanInteger.java">RomanInteger</a>
      * errōrem continuātur.
      * @see <a href="https://github.com/Chaosfirebolt/RomanNumeralConverter/blob/master/src/main/java/com/github/chaosfirebolt/converter/RomanInteger.java">RomanInteger</a>
      */
@@ -265,7 +265,7 @@ public abstract class VerbumSimplex <Hoc extends Verbum <Hoc>> extends Verbum <H
     /**
      * @param alius rēs classis {@link Numerus} ūsa multiplicātiōnī.
      * @return Rem classis {@link Numerus} quae ēventum multiplicātiōnis cum valōre {@code alius} repraesentat. <br>
-     * Modus hic valōrem {@code null} refert sī <a href="https://github.com/Chaosfirebolt/RomanNumeralConverter/blob/master/src/main/java/com/github/chaosfirebolt/converter/RomanInteger.java">RomanInteger</a>
+     * Hic modus valōrem {@code null} refert sī <a href="https://github.com/Chaosfirebolt/RomanNumeralConverter/blob/master/src/main/java/com/github/chaosfirebolt/converter/RomanInteger.java">RomanInteger</a>
      * errōrem continuātur.
      * @see <a href="https://github.com/Chaosfirebolt/RomanNumeralConverter/blob/master/src/main/java/com/github/chaosfirebolt/converter/RomanInteger.java">RomanInteger</a>
      */
@@ -281,7 +281,7 @@ public abstract class VerbumSimplex <Hoc extends Verbum <Hoc>> extends Verbum <H
     /**
      * @param alius rēs classis {@link Numerus} ūsa dīvīsiōnī.
      * @return Rem classis {@link Numerus} quae ēventum dīvīsiōnis cum valōre {@code alius} repraesentat. <br>
-     * Modus hic valōrem {@code null} refert sī <a href="https://github.com/Chaosfirebolt/RomanNumeralConverter/blob/master/src/main/java/com/github/chaosfirebolt/converter/RomanInteger.java">RomanInteger</a>
+     * Hic modus valōrem {@code null} refert sī <a href="https://github.com/Chaosfirebolt/RomanNumeralConverter/blob/master/src/main/java/com/github/chaosfirebolt/converter/RomanInteger.java">RomanInteger</a>
      * errōrem continuātur.
      * @see <a href="https://github.com/Chaosfirebolt/RomanNumeralConverter/blob/master/src/main/java/com/github/chaosfirebolt/converter/RomanInteger.java">RomanInteger</a>
      */
@@ -297,7 +297,7 @@ public abstract class VerbumSimplex <Hoc extends Verbum <Hoc>> extends Verbum <H
     /**
      * @param alius rēs classis {@link Numerus} ūsa mānsiōnī.
      * @return Rem classis {@link Numerus} quae ēventum mānsiōnis cum valōre {@code alius} repraesentat. <br>
-     * Modus hic valōrem {@code null} refert sī <a href="https://github.com/Chaosfirebolt/RomanNumeralConverter/blob/master/src/main/java/com/github/chaosfirebolt/converter/RomanInteger.java">RomanInteger</a>
+     * Hic modus valōrem {@code null} refert sī <a href="https://github.com/Chaosfirebolt/RomanNumeralConverter/blob/master/src/main/java/com/github/chaosfirebolt/converter/RomanInteger.java">RomanInteger</a>
      * errōrem continuātur.
      * @see <a href="https://github.com/Chaosfirebolt/RomanNumeralConverter/blob/master/src/main/java/com/github/chaosfirebolt/converter/RomanInteger.java">RomanInteger</a>
      */
@@ -320,7 +320,7 @@ public abstract class VerbumSimplex <Hoc extends Verbum <Hoc>> extends Verbum <H
     @Nullable static NuntiusNumerorum instantia = null;
 
     /**
-     * Valor hic viam reī classis huiuc facit.
+     * Hic valor viam reī huius classis facit.
      * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
      */
     @NonNull static final Supplier <NuntiusNumerorum> faciendum =

@@ -13,10 +13,10 @@ import java.util.stream.Stream;
 
 /**
  * Classis {@link VerbumMultiplex} repraesentat verbum aliquem quod fōrmās multās habet. <br>
- * Rēs classis {@link Inventor} rēbus classis huius adsunt ūtilissimaeque sunt rēs classis huius percōlere. <br>
- * Discrīmina prīmōria inter classibus hāc classeque {@link VerbumSimplex}
+ * Rēs classis {@link Inventor} rēbus huius classis adsunt ūtilissimaeque sunt rēs huius classis percōlere. <br>
+ * Discrīmina prīmōria inter hīs classibus classeque {@link VerbumSimplex}
  * sunt huius valōrēs {@link #scriptio}que {@link #encliticum}que.
- * @param <Hoc> Tabellā hāc classis {@link Hoc} extēnsiōnem aptam datīs petītīs repraesentat.
+ * @param <Hoc> Hāc tabellā classis {@link Hoc} extēnsiōnem aptam datīs petītīs repraesentat.
  * @see LectorMultiplicibus
  * @see TenorMultiplicibus
  * @see ConditorMultiplicibus
@@ -24,19 +24,19 @@ import java.util.stream.Stream;
 @SuppressWarnings("SpellCheckingInspection")
 public abstract class VerbumMultiplex <Hoc extends Verbum <Hoc>> extends Verbum <Hoc> {
   /**
-   * Valor hic fōrmam fīnem verbī repraesentat. <br>
+   * Hic valor fōrmam fīnem verbī repraesentat. <br>
    * Condiciōnibus plūrimīs est ut ūsūfructuāriī petīvit.
    */
   public final @NonNull String scriptio;
 
   /**
-   * Valor hic <a href="https://en.wiktionary.org/wiki/Category:Latin_clitics">encliticum</a> subiūnctum dēsignat.
+   * Hic valor <a href="https://en.wiktionary.org/wiki/Category:Latin_clitics">encliticum</a> subiūnctum dēsignat.
    * @see Encliticum
    */
   protected @NonNull Encliticum encliticum;
 
   /**
-   * Officium hoc cōnstrūctōrem reī classis huius perpetrat.
+   * Hoc officium cōnstrūctōrem reī huius classis perpetrat.
    * @param ctgr  valōrem {@link Verbum#catagoria} indicat.
    * @param lm  valōrem {@link Verbum#lemma} indicat.
    * @param scrpt valōrem {@link #scriptio} indicat.
@@ -49,9 +49,9 @@ public abstract class VerbumMultiplex <Hoc extends Verbum <Hoc>> extends Verbum 
   }
 
   /**
-   * Modus hic ūsūfructuāriōs licet valōrem {@link #encliticum} allegere.
+   * Hic modus ūsūfructuāriōs licet valōrem {@link #encliticum} allegere.
    * @param cltm valōrem {@link #encliticum} indicat
-   * @return Rem hanc
+   * @return Hanc rem
    * @see Encliticum
    */
   @SuppressWarnings("UnusedReturnValue")
@@ -71,7 +71,7 @@ public abstract class VerbumMultiplex <Hoc extends Verbum <Hoc>> extends Verbum 
   }
 
   /**
-   * @return Repraesentātiōnem scrīpta reī huius. <br>
+   * @return Repraesentātiōnem scrīpta huius. <br>
    * Valōrem {@link #encliticum} valōrī {@link #scriptio} addit.
    */
   @Override @NonNull

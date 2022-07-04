@@ -7,70 +7,70 @@ import org.apache.commons.lang3.StringUtils;
 import java.util.stream.Stream;
 
 /**
- * Ēnumerātiō haec temporem verbī omnis dēsignat.
+ * Haec ēnumerātiō temporem verbī omnis dēsignat.
  * @see Actus
  */
 @SuppressWarnings({ "SpellCheckingInspection", "unused" })
 public enum Tempus {
   /**
-   * Valor hic ūtātur sī ūsūfructuāriī valōrem validum nōn dēnotat. <br>Sōlum scrīnium <a
-   * href="{@docRoot}/../src/main/resources">auxiliārēs</a> ūtitur indicāre quod verbum hoc temporem nōn pertinet.
+   * Hic valor ūtātur sī ūsūfructuāriī valōrem validum nōn dēnotat. <br>Sōlum scrīnium <a
+   * href="{@docRoot}/../src/main/resources">auxiliārēs</a> ūtitur indicāre quod hoc verbum temporem nōn pertinet.
    */
   INTEMPORALE(StringUtils.EMPTY),
 
   /**
-   * Valor hic temporem praesēntem dēsignat.
+   * Hic valor temporem praesēntem dēsignat.
    */
   PRAESENS("praesēns"),
 
   /**
-   * Valor hic temporem infectum dēsignat.
+   * Hic valor temporem infectum dēsignat.
    */
   INFECTUM("infectum"),
 
   /**
-   * Valor hic temporem futūrum dēsignat.
+   * Hic valor temporem futūrum dēsignat.
    */
   FUTURUM("futūrum"),
 
   /**
-   * Valor hic temporem perfectum dēsignat.
+   * Hic valor temporem perfectum dēsignat.
    */
   PERFECTUM("perfectum"),
 
   /**
-   * Valor hic temporem plūsquamperfectum dēsignat.
+   * Hic valor temporem plūsquamperfectum dēsignat.
    */
   PLUSQUAMPERFECTUM("plūsquamperfectum"),
 
   /**
-   * Valor hic temporem futūrum exāctum dēsignat. <br>
+   * Hic valor temporem futūrum exāctum dēsignat. <br>
    * Curtātum ā verbīs duōbus est scrīptiōnem facilem in scāpīs XML licēre.
    */
   FUTURUM_EXACTUM("futrexāctum"),
 
   /**
-   * Valor hic modum participiālem dēsignat.
+   * Hic valor modum participiālem dēsignat.
    */
   GERUNDIVUS("gerundīvus"),
 
   /**
-   * Valor hic modum participiālem dēsignat.
+   * Hic valor modum participiālem dēsignat.
    */
   SUPINUS("supīnus");
 
   /**
-   * Valor hic reparesentātiōnem scrīpta ēnumerātiōnis dēsignat.
+   * Hic valor reparesentātiōnem scrīpta ēnumerātiōnis dēsignat.
    */
   public static final @NonNull String pittacium = "tempus";
 
   /**
-   * Valor hic repraesentātiōnem scrīpta reī huius dēsignat.
+   * Hic valor repraesentātiōnem scrīpta reī huius dēsignat.
    */
   public final @NonNull String scriptio;
 
   /**
-   * Officium hoc cōnstrūctōrem reī classis huius perpetrat.
+   * Hoc officium cōnstrūctōrem reī huius classis perpetrat.
    * @param scrpt valōrem {@link #scriptio} indicat.
    */
   Tempus(@NonNull final String scrpt) {
@@ -78,7 +78,7 @@ public enum Tempus {
   }
 
   /**
-   * Modus hic rem ēnumerātiō {@link Tempus} ā parametrō dēsignātō advenit. <br>
+   * Hic modus rem ēnumerātiō {@link Tempus} ā parametrō dēsignātō advenit. <br>
    * Valōrem {@link #INTEMPORALE} refert sī nihil valōrem {@code scriptio} quadrat.
    * @param scriptio valōrem {@link #scriptio} indicat.
    * @return Rem ēnumerātiō {@link Tempus} quod parametrum dēsignātum quadrat.

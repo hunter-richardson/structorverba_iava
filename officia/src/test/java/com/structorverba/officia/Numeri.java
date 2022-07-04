@@ -26,7 +26,7 @@ final class Numeri extends Omne {
   private final @NonNull String XLII_SCRIPTIO = "XLII";
 
   /**
-   * Modus hic conversiōnem ā numerō reī classis {@link VerbumSimplex.Numerus} tentat. <br>
+   * Hic modus conversiōnem ā numerō reī classis {@link VerbumSimplex.Numerus} tentat. <br>
    * Scrīptiunculam {@code 42 = XLII} prōdūcat.
    */
   @Test @Order(1)
@@ -36,7 +36,7 @@ final class Numeri extends Omne {
   }
 
   /**
-   * Modus hic reversiōnem ā rē classis {@link VerbumSimplex.Numerus} numerō tentat. <br>
+   * Hic modus reversiōnem ā rē classis {@link VerbumSimplex.Numerus} numerō tentat. <br>
    * Scrīptiunculam {@code XLII = 42} prōdūcat.
    */
   @Test @Order(2)
@@ -46,7 +46,7 @@ final class Numeri extends Omne {
   }
 
   /**
-   * Modus hic conversiōnem ā numerō reī classis {@link VerbumSimplex.Numerus} atque reversiōnem versam tentat. <br>
+   * Hic modus conversiōnem ā numerō reī classis {@link VerbumSimplex.Numerus} atque reversiōnem versam tentat. <br>
    * Scrīptiunculās et {@code 42 = XLII} et {@code XLII = 42} dē numerō nescītō inter I et MMMCMXCIX prōdūcat.
    */
   @Test @Order(3)
@@ -58,7 +58,7 @@ final class Numeri extends Omne {
   }
 
   /**
-   * Modus hic additiōnem rērum duārum classis {@link VerbumSimplex.Numerus}. <br>
+   * Hic modus additiōnem rērum duārum classis {@link VerbumSimplex.Numerus}. <br>
    * Scrīptiunculās et {@code 17 = XVIII} et {@code 3 = III} et {@code 17 + 3 = 20 = XX} prōdūcat.
    */
   @Test @Order(4)
@@ -69,7 +69,7 @@ final class Numeri extends Omne {
   }
 
   /**
-   * Modus hic subtractiōnem rērum duārum classis {@link VerbumSimplex.Numerus}. <br>
+   * Hic modus subtractiōnem rērum duārum classis {@link VerbumSimplex.Numerus}. <br>
    * Scrīptiunculās et {@code 12 = XII} et {@code 7 = VII} et {@code 12 - 7 = 5 = V} prōdūcat.
    */
   @Test @Order(5)
@@ -80,7 +80,7 @@ final class Numeri extends Omne {
   }
 
   /**
-   * Modus hic multiplicātiōnem rērum duārum classis {@link VerbumSimplex.Numerus}. <br>
+   * Hic modus multiplicātiōnem rērum duārum classis {@link VerbumSimplex.Numerus}. <br>
    * Scrīptiunculās et {@code 3 = III} et {@code 2 = II} et {@code 3 * 2 = 6 = VI} prōdūcat.
    */
   @Test @Order(6)
@@ -91,7 +91,7 @@ final class Numeri extends Omne {
   }
 
   /**
-   * Modus hic dīvīsiōnem rērum duārum classis {@link VerbumSimplex.Numerus}. <br>
+   * Hic modus dīvīsiōnem rērum duārum classis {@link VerbumSimplex.Numerus}. <br>
    * Scrīptiunculās et {@code 18 = XVII} et {@code 6 = VI} et {@code 18 / 6 = 3 = III} prōdūcat.
    */
   @Test @Order(7)
@@ -102,7 +102,7 @@ final class Numeri extends Omne {
   }
 
   /**
-   * Modus hic mānsiōnem rērum duārum classis {@link VerbumSimplex.Numerus}. <br>
+   * Hic modus mānsiōnem rērum duārum classis {@link VerbumSimplex.Numerus}. <br>
    * Scrīptiunculās et {@code 12 = XII} et {@code 9 = IX} et {@code 12 % 9 = 3 = III} prōdūcat.
    */
   @Test @Order(8)

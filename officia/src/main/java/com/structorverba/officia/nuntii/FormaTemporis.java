@@ -100,7 +100,7 @@ final class FormaTemporis {
 
   /**
    * @param tempus               tempus fōrmandus
-   * @param punctillaPraecidemne valōrem {@code true} sī rēs haec valōrem {@code tempus} pūnctilla praecidemne;
+   * @param punctillaPraecidemne valōrem {@code true} sī haec rēs valōrem {@code tempus} pūnctilla praecidemne;
    *                             valōrem {@code false} aliter
    * @return scrīptiōnem temporis prōvīsī
    */
@@ -110,7 +110,7 @@ final class FormaTemporis {
 
   /**
    * @param tempus               tempus fōrmandus
-   * @param punctillaPraecidemne valōrem {@code true} sī rēs haec valōrem {@code tempus} pūnctilla praecidemne;
+   * @param punctillaPraecidemne valōrem {@code true} sī haec rēs valōrem {@code tempus} pūnctilla praecidemne;
    *                             valōrem {@code false} aliter
    * @return scrīptiōnem temporis prōvīsī
    */
@@ -119,7 +119,7 @@ final class FormaTemporis {
   }
 
   /**
-   * @param punctillaPraecidemne valōrem {@code true} sī rēs haec temporem praesentem pūnctilla praecidemne;
+   * @param punctillaPraecidemne valōrem {@code true} sī haec rēs temporem praesentem pūnctilla praecidemne;
    *                             valōrem {@code false} aliter
    * @return scrīptiōnem temporis praesentis
    */
@@ -128,7 +128,7 @@ final class FormaTemporis {
   }
 
   /**
-   * @return scrīptiōnem temporis quem rēs haec continet.
+   * @return scrīptiōnem temporis quem haec rēs continet.
    */
   @NonNull public String formo() {
     return formatio.apply(tempus, punctillaPraecidemne);

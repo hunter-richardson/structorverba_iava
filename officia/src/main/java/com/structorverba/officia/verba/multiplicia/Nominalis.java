@@ -8,36 +8,36 @@ import androidx.annotation.NonNull;
 
 /**
  * Classis {@link Nominalis} verbum aliquem dēclīnātum repraesentat.
- * @param <Hoc> Tabellā hāc classis {@link Hoc} extēnsiōnem aptam datīs petītīs repraesentat.
+ * @param <Hoc> Hāc tabellā classis {@link Hoc} extēnsiōnem aptam datīs petītīs repraesentat.
  */
 @SuppressWarnings("SpellCheckingInspection")
 public abstract class Nominalis <Hoc extends VerbumMultiplex <Hoc>> extends VerbumMultiplex <Hoc> {
   /**
-   * Valor hic dēsignat utrum rēs hae repraesentat certum necne.
+   * Hic valor dēsignat utrum haec rēs repraesentat certum necne.
    * @see Specialitas
    */
   @NonNull public final Specialitas specialitas;
 
   /**
-   * Valor hic generem reī huius dēsignat.
+   * Hic valor generem reī huius dēsignat.
    * @see Genus
    */
   @NonNull public final Genus genus;
 
   /**
-   * Valor hic cāsum reī huius dēsignat.
+   * Hic valor cāsum reī huius dēsignat.
    * @see Casus
    */
   @NonNull public final Casus casus;
 
   /**
-   * Valor hic numerum reī huius dēsignat.
+   * Hic valor numerum reī huius dēsignat.
    * @see Numeralis
    */
   @NonNull public final Numeralis numeralis;
 
   /**
-   * Officium hoc cōnstrūctōrem reī classis huius perpetrat.
+   * Hoc officium cōnstrūctōrem reī huius classis perpetrat.
    * @param categoria  valōrem {@link Verbum#catagoria} indicat.
    * @param spclt valōrem {@link Nominalis#specialitas} indicat.
    * @param gns   valōrem {@link Nominalis#genus} indicat.

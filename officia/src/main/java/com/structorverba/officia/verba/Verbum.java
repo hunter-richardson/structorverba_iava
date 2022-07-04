@@ -12,26 +12,26 @@ import com.structorverba.officia.enumerationes.Categoria;
 /**
  * Classis {@link Verbum} repraesentat verba Latīna, fōrmās omnēs
  * datōrum quās ūsūfructuāriī petunt. <br>
- * Rem omnem classis huius rēs classis {@link Lector} colliget
+ * Rem omnem huius classis rēs classis {@link Lector} colliget
  * rēs classis {@link Tenor} sēliget rēsque classis {@link Conditor} tandem cōnstruet. <br>
  * Rēs classis {@link Lector} colliget data ā scāpō XML intrā
  * scrīnium <a href="{@docRoot}/../src/main/resources">auxiliārēs</a>. <br>
  * Rēs classis {@link Inventor} ūtitur cōlāre rēs
- * multiplicēs classis huius quae classem {@link VerbumMultiplex} extendit.
- * @param <Hoc> Tabellā hāc classis {@link Hoc} extēnsiōnem
+ * multiplicēs huius classis quae classem {@link VerbumMultiplex} extendit.
+ * @param <Hoc> Hāc tabellā classis {@link Hoc} extēnsiōnem
  *             aptam datīs petītīs repraesentat.
  */
 @SuppressWarnings("SpellCheckingInspection")
 public abstract class Verbum <Hoc extends Verbum <Hoc>> extends Omne {
   /**
-   * Valor hic repraesentat fōrmam verbī cui rādīcēscit. <br>
+   * Hic valor repraesentat fōrmam verbī cui rādīcēscit. <br>
    * Quoque nōminātur scāpum XML quō cōnservātum est.
    */
   @NonNull
   public final String lemma;
 
   /**
-   * Valor hic extēnsiōnem classī huic reī huic dēsignat.
+   * Hic valor extentum classem reī huic dēsignat.
    * {@link Categoria#scriptio} quoque nōminātur scrīnium
    * intrā quō scāpum eius cōnservātum est.
    * @see Categoria
@@ -40,7 +40,7 @@ public abstract class Verbum <Hoc extends Verbum <Hoc>> extends Omne {
   @NonNull public final Categoria catagoria;
 
   /**
-   * Officium hoc cōnstrūctōrem reī classis huius perpetrat.
+   * Hoc officium cōnstrūctōrem reī huius classis perpetrat.
    * @param ctgr valōrem {@link #catagoria} indicat.
    * @param lm valōrem {@link #lemma} indicat.
    */

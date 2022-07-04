@@ -16,9 +16,9 @@ import java.util.function.Supplier;
 
 /**
  * Classis {@link Adiectivum} repraesentat adiectīva ut coniectēris. <br>
- * Rēs classis huius catēgoriam {@link Categoria#NOMEN} ūtuntur cōnservātaque sunt in scrīniō
+ * Rēs huius classis catēgoriam {@link Categoria#NOMEN} ūtuntur cōnservātaque sunt in scrīniō
  * <a href="{@docRoot}/../src/main/resources">auxiliārēs</a>/adiectīva. <br>
- * Discrīmina prīmōria inter classibus hāc classeque {@link Pronomen} est huius valor {@link #gradus}.
+ * Discrīmina prīmōria inter hīs classibus classeque {@link Pronomen} est huius valor {@link #gradus}.
  * @see LectorMultiplicibus.LectorAdiectivis
  * @see TenorMultiplicibus.TenorAdiectivis
  * @see InventorAdiectivis
@@ -28,7 +28,7 @@ import java.util.function.Supplier;
 @SuppressWarnings("SpellCheckingInspection")
 public final class Adiectivum extends Nominalis <Adiectivum> {
   /**
-   * Valor hic potentiam reī huius dēsignat.
+   * Hic valor potentiam reī huius dēsignat.
    * @see Gradus
    */
   @NonNull public final Gradus gradus;
@@ -54,7 +54,7 @@ public final class Adiectivum extends Nominalis <Adiectivum> {
     @Nullable private static NuntiusAdiectivorum instantia = null;
 
     /**
-     * Valor hic viam reī classis huiuc facit.
+     * Hic valor viam reī huius classis facit.
      * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
      */
     @NonNull private static final Supplier<NuntiusAdiectivorum> faciendum =
