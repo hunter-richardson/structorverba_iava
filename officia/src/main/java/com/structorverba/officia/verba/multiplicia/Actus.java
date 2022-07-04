@@ -1,25 +1,24 @@
 package com.structorverba.officia.verba.multiplicia;
 
-import androidx.annotation.*;
 import androidx.annotation.NonNull;
+import androidx.annotation.*;
 import com.structorverba.officia.conditores.multiplicia.ConditorActis;
+import com.structorverba.officia.enumerationes.*;
 import com.structorverba.officia.inventores.InventorActis;
 import com.structorverba.officia.lectores.LectorMultiplicibus;
 import com.structorverba.officia.miscella.Utilitas;
 import com.structorverba.officia.nuntii.*;
 import com.structorverba.officia.tenores.TenorMultiplicibus;
-import com.structorverba.officia.enumerationes.*;
-
 import jakarta.ejb.Singleton;
 import lombok.*;
-import org.apache.commons.lang3.ObjectUtils;
+import org.apache.commons.lang3.*;
 
 import java.util.function.Supplier;
 
 /**
- * Classis {@link Actus} repraesentat n\u014Dmina ut coniect\u0113ris. <br>
- * R\u0113s classis huius cat\u0113goriam {@link Categoria#ACTUS} \u016Btuntur c\u014Dnserv\u0101taque sunt in
- * scr\u012Bni\u014D <a href="{@docRoot}/../src/main/resources">auxili\u0101r\u0113s</a>/\u0101ct\u012B.
+ * Classis {@link Actus} repraesentat nōmina ut coniectēris. <br>
+ * Rēs classis huius catēgoriam {@link Categoria#ACTUS} ūtuntur cōnservātaque sunt in
+ * scrīniō <a href="{@docRoot}/../src/main/resources">auxiliārēs</a>/āctī.
  * @see LectorMultiplicibus.LectorActis
  * @see TenorMultiplicibus.TenorActis
  * @see InventorActis
@@ -29,27 +28,27 @@ import java.util.function.Supplier;
 @SuppressWarnings({"SpellCheckingInspection", "unused" })
 public final class Actus extends VerbumMultiplex <Actus> {
   /**
-   * Valor hic modum re\u012B huius d\u0113signat.
+   * Valor hic modum reī huius dēsignat.
    * @see Modus
    */
   @NonNull public final Modus modus;
   /**
-   * Valor hic v\u014Dcem re\u012B huius d\u0113signat.
+   * Valor hic vōcem reī huius dēsignat.
    * @see Vox
    */
   @NonNull public final Vox vox;
   /**
-   * Valor hic temporem re\u012B huius d\u0113signat.
+   * Valor hic temporem reī huius dēsignat.
    * @see Tempus
    */
   @NonNull public final Tempus tempus;
   /**
-   * Valor hic numerum re\u012B huius d\u0113signat.
+   * Valor hic numerum reī huius dēsignat.
    * @see Numeralis
    */
   @NonNull public final Numeralis numeralis;
   /**
-   * Valor hic pers\u014Dnam re\u012B huius d\u0113signat.
+   * Valor hic persōnam reī huius dēsignat.
    * @see Persona
    */
   @NonNull public final Persona persona;
@@ -62,7 +61,7 @@ public final class Actus extends VerbumMultiplex <Actus> {
   @Getter(lazy = true)
   @NonNull private final NuntiusActorum nuntius = NuntiusActorum.faciendum.get();
 
-  @Builder(access = AccessLevel.PUBLIC, toBuilder = true)
+  @Builder(access = AccessLevel.PRIVATE, toBuilder = true)
   private Actus(@NonNull final Modus modus, @NonNull final Vox vox, @NonNull final Tempus tempus,
                 @NonNull final Numeralis numeralis, @NonNull final Persona persona,
                 @NonNull final String lemma, @NonNull final String scriptio) {
@@ -72,17 +71,17 @@ public final class Actus extends VerbumMultiplex <Actus> {
     this.tempus = tempus;
     this.numeralis = numeralis;
     this.persona = persona;
-    nuntius.plusGarrio("Scr\u012Bbor ut", scriptio);
+    nuntius.plusGarrio("Scrībor ut", scriptio);
   }
 
   /**
-   * Modus hic rem classis {@link Adiectivum} \u0101 parametr\u012Bs d\u0113sign\u0101t\u012Bs advenit.
-   * @param vx    val\u014Drem {@link #vox} indicat.
-   * @param tmps  val\u014Drem {@link #tempus} indicat.
-   * @param gns   val\u014Drem {@link Nominalis#genus} indicat.
-   * @param css   val\u014Drem {@link Nominalis#casus} indicat.
-   * @param nmrl  val\u014Drem {@link Nominalis#numeralis} indicat.
-   * @return Rem classis {@link Adiectivum} quod parametra d\u0113sign\u0101ta quadrat.
+   * Modus hic rem classis {@link Adiectivum} ā parametrīs dēsignātīs advenit.
+   * @param vx    valōrem {@link #vox} indicat.
+   * @param tmps  valōrem {@link #tempus} indicat.
+   * @param gns   valōrem {@link Nominalis#genus} indicat.
+   * @param css   valōrem {@link Nominalis#casus} indicat.
+   * @param nmrl  valōrem {@link Nominalis#numeralis} indicat.
+   * @return Rem classis {@link Adiectivum} quod parametra dēsignāta quadrat.
    * @see LectorMultiplicibus.LectorAdiectivis#adveniam(String, Enum[])
    * @see Modus#PARTICIPALIS
    */
@@ -101,12 +100,12 @@ public final class Actus extends VerbumMultiplex <Actus> {
   }
 
   /**
-   * Modus hic rem classis {@link Adiectivum} \u0101 parametr\u012Bs d\u0113sign\u0101t\u012Bs advenit.
-   * @param vx    val\u014Drem {@link #vox} indicat.
-   * @param gns   val\u014Drem {@link Nominalis#genus} indicat.
-   * @param css   val\u014Drem {@link Nominalis#casus} indicat.
-   * @param nmrl  val\u014Drem {@link Nominalis#numeralis} indicat.
-   * @return Rem classis {@link Adiectivum} quod parametra d\u0113sign\u0101ta quadrat.
+   * Modus hic rem classis {@link Adiectivum} ā parametrīs dēsignātīs advenit.
+   * @param vx    valōrem {@link #vox} indicat.
+   * @param gns   valōrem {@link Nominalis#genus} indicat.
+   * @param css   valōrem {@link Nominalis#casus} indicat.
+   * @param nmrl  valōrem {@link Nominalis#numeralis} indicat.
+   * @return Rem classis {@link Adiectivum} quod parametra dēsignāta quadrat.
    * @see LectorMultiplicibus.LectorAdiectivis#adveniam(String, Enum[])
    * @see Modus#PARTICIPALIS
    * @see #participem(Vox, Tempus, Genus, Casus, Numeralis)
@@ -117,12 +116,12 @@ public final class Actus extends VerbumMultiplex <Actus> {
   }
 
   /**
-   * Modus hic rem classis {@link Adiectivum} \u0101 parametr\u012Bs d\u0113sign\u0101t\u012Bs advenit.
-   * @param tmps  val\u014Drem {@link #tempus} indicat.
-   * @param gns   val\u014Drem {@link Nominalis#genus} indicat.
-   * @param css   val\u014Drem {@link Nominalis#casus} indicat.
-   * @param nmrl  val\u014Drem {@link Nominalis#numeralis} indicat.
-   * @return Rem classis {@link Adiectivum} quod parametra d\u0113sign\u0101ta quadrat.
+   * Modus hic rem classis {@link Adiectivum} ā parametrīs dēsignātīs advenit.
+   * @param tmps  valōrem {@link #tempus} indicat.
+   * @param gns   valōrem {@link Nominalis#genus} indicat.
+   * @param css   valōrem {@link Nominalis#casus} indicat.
+   * @param nmrl  valōrem {@link Nominalis#numeralis} indicat.
+   * @return Rem classis {@link Adiectivum} quod parametra dēsignāta quadrat.
    * @see LectorMultiplicibus.LectorAdiectivis#adveniam(String, Enum[])
    * @see Modus#PARTICIPALIS
    * @see #participem(Vox, Tempus, Genus, Casus, Numeralis)
@@ -133,11 +132,11 @@ public final class Actus extends VerbumMultiplex <Actus> {
   }
 
   /**
-   * Modus hic rem classis {@link Adiectivum} \u0101 parametr\u012Bs d\u0113sign\u0101t\u012Bs advenit.
-   * @param gns   val\u014Drem {@link Nominalis#genus} indicat.
-   * @param css   val\u014Drem {@link Nominalis#casus} indicat.
-   * @param nmrl  val\u014Drem {@link Nominalis#numeralis} indicat.
-   * @return Rem classis {@link Adiectivum} quod parametra d\u0113sign\u0101ta quadrat.
+   * Modus hic rem classis {@link Adiectivum} ā parametrīs dēsignātīs advenit.
+   * @param gns   valōrem {@link Nominalis#genus} indicat.
+   * @param css   valōrem {@link Nominalis#casus} indicat.
+   * @param nmrl  valōrem {@link Nominalis#numeralis} indicat.
+   * @return Rem classis {@link Adiectivum} quod parametra dēsignāta quadrat.
    * @see LectorMultiplicibus.LectorAdiectivis#adveniam(String, Enum[])
    * @see Modus#PARTICIPALIS
    * @see #participem(Vox, Tempus, Genus, Casus, Numeralis)
@@ -148,10 +147,10 @@ public final class Actus extends VerbumMultiplex <Actus> {
   }
 
   /**
-   * Modus hic rem classis {@link Nomen} \u0101 parametr\u012Bs d\u0113sign\u0101t\u012Bs advenit.
-   * @param tmps  val\u014Drem {@link Nomen#tempus} indicat.
-   * @param css   val\u014Drem {@link Nominalis#casus} indicat.
-   * @return Rem classis {@link Nomen} quod parametra d\u0113sign\u0101ta quadrat.
+   * Modus hic rem classis {@link Nomen} ā parametrīs dēsignātīs advenit.
+   * @param tmps  valōrem {@link Nomen#tempus} indicat.
+   * @param css   valōrem {@link Nominalis#casus} indicat.
+   * @return Rem classis {@link Nomen} quod parametra dēsignāta quadrat.
    * @see LectorMultiplicibus.LectorNominibus#adveniam(String, Enum[])
    * @see Tempus#GERUNDIVUS
    * @see Tempus#SUPINUS
@@ -163,10 +162,10 @@ public final class Actus extends VerbumMultiplex <Actus> {
   }
 
   /**
-   * Modus hic rem classis {@link Nomen} \u0101 r\u0113 {@link Casus}
-   * r\u0113que {@link Tempus#GERUNDIVUS} d\u0113sign\u0101t\u012Bs advenit.
-   * @param css   val\u014Drem {@link Nominalis#casus} indicat.
-   * @return Rem classis {@link Nomen} quod parametra d\u0113sign\u0101ta quadrat.
+   * Modus hic rem classis {@link Nomen} ā rē {@link Casus}
+   * rēque {@link Tempus#GERUNDIVUS} dēsignātīs advenit.
+   * @param css   valōrem {@link Nominalis#casus} indicat.
+   * @return Rem classis {@link Nomen} quod parametra dēsignāta quadrat.
    * @see Tempus#GERUNDIVUS
    * @see #nominem(Tempus, Casus)
    */
@@ -175,10 +174,10 @@ public final class Actus extends VerbumMultiplex <Actus> {
   }
 
   /**
-   * Modus hic rem classis {@link Nomen} \u0101 r\u0113 {@link Casus}
-   * r\u0113que {@link Tempus#SUPINUS} d\u0113sign\u0101t\u012Bs advenit.
-   * @param css   val\u014Drem {@link Nominalis#casus} indicat.
-   * @return Rem classis {@link Nomen} quod parametra d\u0113sign\u0101ta quadrat.
+   * Modus hic rem classis {@link Nomen} ā rē {@link Casus}
+   * rēque {@link Tempus#SUPINUS} dēsignātīs advenit.
+   * @param css   valōrem {@link Nominalis#casus} indicat.
+   * @return Rem classis {@link Nomen} quod parametra dēsignāta quadrat.
    * @see Tempus#SUPINUS
    * @see #nominem(Tempus, Casus)
    */
@@ -187,7 +186,7 @@ public final class Actus extends VerbumMultiplex <Actus> {
   }
 
   /**
-   * Classis {@link NuntiusActorum} est v\u0101s classis {@link Nuntius} class\u012B {@link Actus}}
+   * Classis {@link NuntiusActorum} est vās classis {@link Nuntius} classī {@link Actus}}
    * @see Actus
    */
   @Singleton
@@ -195,7 +194,7 @@ public final class Actus extends VerbumMultiplex <Actus> {
     @Nullable private static NuntiusActorum instantia = null;
 
     /**
-     * Valor hic viam re\u012B classis huiuc facit.
+     * Valor hic viam reī classis huiuc facit.
      * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
      */
     @NonNull private static final Supplier<NuntiusActorum> faciendum =
@@ -203,6 +202,59 @@ public final class Actus extends VerbumMultiplex <Actus> {
 
     private NuntiusActorum() {
       super(ParametriNuntii.para(Actus.class));
+    }
+  }
+
+  public static final class ConstructorActi extends Constructor<Actus> {
+    @NonNull private Modus modus = Modus.NULLUS;
+    @NonNull private Vox vox = Vox.NULLA;
+    @NonNull private Tempus tempus = Tempus.INTEMPORALE;
+    @NonNull private Numeralis numeralis = Numeralis.NULLUS;
+    @NonNull private Persona persona = Persona.NULLA;
+
+    public void modus(@NonNull Modus modus) {
+      this.modus = modus;
+    }
+
+    public void vox(@NonNull Vox vox) {
+      this.vox = vox;
+    }
+
+    public void tempus(@NonNull Tempus tempus) {
+      this.tempus = tempus;
+    }
+
+    public void numeralis(@NonNull Numeralis numeralis) {
+      this.numeralis = numeralis;
+    }
+
+    public void persona(@NonNull Persona persona) {
+      this.persona = persona;
+    }
+
+    @Nullable @Override
+    public Actus build() {
+      return paratus() ? Actus.builder().lemma(lemma).modus(modus).vox(vox).tempus(tempus)
+                                        .numeralis(numeralis).persona(persona).scriptio(scriptio).build()
+                       : null;
+    }
+
+    /**
+     * {@inheritDoc}
+     * @see Modus#NULLUS
+     * @see Vox#NULLA
+     * @see Tempus#INTEMPORALE
+     * @see Numeralis#NULLUS
+     * @see Persona#NULLA
+     */
+    @Override public void restituo() {
+      numeralis = Numeralis.NULLUS;
+      persona = Persona.NULLA;
+      tempus = Tempus.INTEMPORALE;
+      modus = Modus.NULLUS;
+      vox = Vox.NULLA;
+      scriptio = StringUtils.EMPTY;
+      lemma = StringUtils.EMPTY;
     }
   }
 }

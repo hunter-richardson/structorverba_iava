@@ -12,7 +12,7 @@ import org.apache.commons.lang3.*;
 import java.util.function.Supplier;
 
 /**
- * Classis {@link ConditorAdiectivis} est v\u0101s classis {@link Conditor} class\u012B {@link Adiectivum}.
+ * Classis {@link ConditorAdiectivis} est vās classis {@link Conditor} classī {@link Adiectivum}.
  * @see Adiectivum
  * @see NuntiusConditoriAdiectivis
  */
@@ -29,49 +29,9 @@ public final class ConditorAdiectivis extends ConditorMultiplicibus <Adiectivum>
   @NonNull public static final Supplier <ConditorAdiectivis> faciendum =
     () -> ObjectUtils.firstNonNull(instantia, instantia = new ConditorAdiectivis());
 
-  @NonNull private Specialitas specialitas = Specialitas.NULLUM;
-  @NonNull private Genus       genus       = Genus.NULLUM;
-  @NonNull private Numeralis   numeralis   = Numeralis.NULLUS;
-  @NonNull private Casus       casus       = Casus.DERECTUS;
-  @NonNull private Gradus      gradus      = Gradus.NULLUS;
-
   private ConditorAdiectivis() {
-    super(NuntiusConditoriAdiectivis.faciendum);
+    super(Categoria.ADIECTIVUM, NuntiusConditoriAdiectivis.faciendum, Adiectivum.ConstructorAdiectivi::new);
     nuntius.plurimumGarrio("Factus sum");
-  }
-
-  /**
-   * {@inheritDoc}
-   * @return Rem novam classis {@link Adiectivum}. <br>
-   * Modus hid val\u014Drem {@code null} refert s\u012B n\u014Dn valet valor aliquis r\u0113s haec continet.
-   */
-  @Override @Nullable
-  public Adiectivum condam() {
-    if (ObjectUtils.allNotNull(specialitas, genus, casus, numeralis, gradus) &&
-        StringUtils.isNoneBlank(lemma, scriptio)) {
-      final Adiectivum hoc = Adiectivum.builder().specialitas(specialitas).genus(genus).casus(casus)
-                                                 .numeralis(numeralis).lemma(lemma).scriptio(scriptio).build();
-      refero(hoc);
-      return hoc;
-    } else {
-      nuntius.moneo("Adiect\u012Bv\u012B", StringUtils.firstNonBlank(lemma, scriptio),
-                    "pr\u014Dducti\u014D f\u014Drmae n\u016Bllae pr\u014Dcessit.");
-      return null;
-    }
-  }
-
-  /**
-   * {@inheritDoc}
-   * @param hoc rem tentanda
-   */
-  @Override
-  protected void refero(@Nullable Adiectivum hoc) {
-    if (hoc == null) {
-      nuntius.moneo("Adiect\u012Bv\u012B", StringUtils.firstNonBlank(lemma, scriptio),
-                    "pr\u014Dducti\u014D f\u014Drmae n\u016Bllae pr\u014Dcessit.");
-    } else {
-      nuntius.certioro("Adiect\u012Bvum", scriptio, "f\u012Bn\u012Btur pr\u014Dd\u016Bcere.");
-    }
   }
 
   /**
@@ -84,47 +44,24 @@ public final class ConditorAdiectivis extends ConditorMultiplicibus <Adiectivum>
    * @see Verbum#lemma
    */
   @Override public void allegam(@NonNull final String nomen, @NonNull final String descriptor) {
-    if (Specialitas.pittacium.equals(nomen)) {
-      specialitas = Specialitas.definiam(descriptor);
-    } else if (Genus.pittacium.equals(nomen)) {
-      genus = Genus.definiam(descriptor);
-    } else if (Numeralis.pittacium.equals(nomen)) {
-      numeralis = Numeralis.definiam(descriptor);
-    } else if (Persona.pittacium.equals(nomen)) {
-      casus = Casus.definiam(descriptor);
-    } else if (Gradus.pittacium.equals(nomen)) {
-      gradus = Gradus.definiam(descriptor);
-    } else if (pittaciumLemmae.equals(nomen)) {
-      lemma = descriptor.trim();
-    } else {
-      nuntius.moneo("Adiect\u012Bv\u012B attrib\u016Bta inop\u012Bnata \u016Bsa'st:", nomen, descriptor);
-      return;
+    switch (nomen) {
+      case Specialitas.pittacium -> ((Adiectivum.ConstructorAdiectivi) constructor).specialitas(Specialitas.definiam(descriptor));
+      case Genus.pittacium -> ((Adiectivum.ConstructorAdiectivi) constructor).genus(Genus.definiam(descriptor));
+      case Numeralis.pittacium -> ((Adiectivum.ConstructorAdiectivi) constructor).numeralis(Numeralis.definiam(descriptor));
+      case Persona.pittacium -> ((Adiectivum.ConstructorAdiectivi) constructor).casus(Casus.definiam(descriptor));
+      case Gradus.pittacium -> ((Adiectivum.ConstructorAdiectivi) constructor).gradus(Gradus.definiam(descriptor));
+      case pittaciumLemmae -> constructor.lemma(descriptor.trim());
+      default -> {
+        allectioDefecit(nomen, descriptor);
+        return;
+      }
     }
 
-    nuntius.garrio("C\u014Dntructi\u014Dn\u012B adi\u0113c\u012B conditi\u014Dnem novam:",
-                   nomen, "est", descriptor);
+    allectioFinita(nomen, descriptor);
   }
 
   /**
-   * {@inheritDoc}
-   * @see Specialitas#NULLUM
-   * @see Genus#NULLUM
-   * @see Casus#DERECTUS
-   * @see Numeralis#NULLUS
-   * @see Gradus#NULLUS
-   */
-  @Override public void restituo() {
-    specialitas = Specialitas.NULLUM;
-    genus = Genus.NULLUM;
-    casus = Casus.DERECTUS;
-    numeralis = Numeralis.NULLUS;
-    gradus = Gradus.NULLUS;
-    scriptio = StringUtils.EMPTY;
-    nuntius.certioro("Restit\u016Btus sum");
-  }
-
-  /**
-   * Classis {@link NuntiusConditoriAdiectivis} est v\u0101s classis {@link Nuntius} class\u012B {@link ConditorAdiectivis}
+   * Classis {@link NuntiusConditoriAdiectivis} est vās classis {@link Nuntius} classī {@link ConditorAdiectivis}
    * @see ConditorAdiectivis
    */
   @Singleton

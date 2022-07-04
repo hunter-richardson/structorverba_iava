@@ -1,21 +1,22 @@
 package com.structorverba.officia.verba.multiplicia;
 
-import androidx.annotation.NonNull;
+import androidx.annotation.*;
 import com.structorverba.officia.conditores.multiplicia.ConditorMultiplicibus;
 import com.structorverba.officia.enumerationes.*;
 import com.structorverba.officia.inventores.Inventor;
 import com.structorverba.officia.lectores.LectorMultiplicibus;
 import com.structorverba.officia.tenores.TenorMultiplicibus;
 import com.structorverba.officia.verba.*;
+import org.apache.commons.lang3.StringUtils;
 
 import java.util.stream.Stream;
 
 /**
- * Classis {@link VerbumMultiplex} repraesentat verbum aliquem quod f\u014Drm\u0101s mult\u0101s habet. <br>
- * R\u0113s classis {@link Inventor} r\u0113bus classis huius adsunt \u016Btilissimaeque sunt r\u0113s classis huius perc\u014Dlere. <br>
- * Discr\u012Bmina pr\u012Bm\u014Dria inter classibus h\u0101c classeque {@link VerbumSimplex}
- * sunt huius val\u014Dr\u0113s {@link #scriptio}que {@link #encliticum}que.
- * @param <Hoc> Tabell\u0101 h\u0101c classis {@link Hoc} ext\u0113nsi\u014Dnem aptam dat\u012Bs pet\u012Bt\u012Bs repraesentat.
+ * Classis {@link VerbumMultiplex} repraesentat verbum aliquem quod fōrmās multās habet. <br>
+ * Rēs classis {@link Inventor} rēbus classis huius adsunt ūtilissimaeque sunt rēs classis huius percōlere. <br>
+ * Discrīmina prīmōria inter classibus hāc classeque {@link VerbumSimplex}
+ * sunt huius valōrēs {@link #scriptio}que {@link #encliticum}que.
+ * @param <Hoc> Tabellā hāc classis {@link Hoc} extēnsiōnem aptam datīs petītīs repraesentat.
  * @see LectorMultiplicibus
  * @see TenorMultiplicibus
  * @see ConditorMultiplicibus
@@ -23,22 +24,22 @@ import java.util.stream.Stream;
 @SuppressWarnings("SpellCheckingInspection")
 public abstract class VerbumMultiplex <Hoc extends Verbum <Hoc>> extends Verbum <Hoc> {
   /**
-   * Valor hic f\u014Drmam f\u012Bnem verb\u012B repraesentat. <br>
-   * Condici\u014Dnibus pl\u016Brim\u012Bs est ut \u016Bs\u016Bfructu\u0101ri\u012B pet\u012Bvit.
+   * Valor hic fōrmam fīnem verbī repraesentat. <br>
+   * Condiciōnibus plūrimīs est ut ūsūfructuāriī petīvit.
    */
   public final @NonNull String scriptio;
 
   /**
-   * Valor hic <a href="https://en.wiktionary.org/wiki/Category:Latin_clitics">encliticum</a> subi\u016Bnctum d\u0113signat.
+   * Valor hic <a href="https://en.wiktionary.org/wiki/Category:Latin_clitics">encliticum</a> subiūnctum dēsignat.
    * @see Encliticum
    */
   protected @NonNull Encliticum encliticum;
 
   /**
-   * Officium hoc c\u014Dnstr\u016Bct\u014Drem re\u012B classis huius perpetrat.
-   * @param ctgr  val\u014Drem {@link Verbum#catagoria} indicat.
-   * @param lm  val\u014Drem {@link Verbum#lemma} indicat.
-   * @param scrpt val\u014Drem {@link #scriptio} indicat.
+   * Officium hoc cōnstrūctōrem reī classis huius perpetrat.
+   * @param ctgr  valōrem {@link Verbum#catagoria} indicat.
+   * @param lm  valōrem {@link Verbum#lemma} indicat.
+   * @param scrpt valōrem {@link #scriptio} indicat.
    */
   protected VerbumMultiplex(@NonNull final Categoria ctgr,
                             @NonNull final String lm, @NonNull final String scrpt) {
@@ -48,8 +49,8 @@ public abstract class VerbumMultiplex <Hoc extends Verbum <Hoc>> extends Verbum 
   }
 
   /**
-   * Modus hic \u016Bs\u016Bfructu\u0101ri\u014Ds licet val\u014Drem {@link #encliticum} allegere.
-   * @param cltm val\u014Drem {@link #encliticum} indicat
+   * Modus hic ūsūfructuāriōs licet valōrem {@link #encliticum} allegere.
+   * @param cltm valōrem {@link #encliticum} indicat
    * @return Rem hanc
    * @see Encliticum
    */
@@ -64,17 +65,40 @@ public abstract class VerbumMultiplex <Hoc extends Verbum <Hoc>> extends Verbum 
   /**
    * @return {@link #encliticum}
    */
+  @SuppressWarnings("unused")
   @NonNull public Encliticum encliticum() {
     return encliticum;
   }
 
   /**
-   * @return Repraesent\u0101ti\u014Dnem scr\u012Bpta re\u012B huius. <br>
-   * Val\u014Drem {@link #encliticum} val\u014Dr\u012B {@link #scriptio} addit.
+   * @return Repraesentātiōnem scrīpta reī huius. <br>
+   * Valōrem {@link #encliticum} valōrī {@link #scriptio} addit.
    */
   @Override @NonNull
   public String toString() {
     return Encliticum.NOLENS.equals(encliticum) ? scriptio
                                                 : String.format("%s%s", scriptio, encliticum.scriptio);
+  }
+
+  public static abstract class Constructor<Hoc extends VerbumMultiplex<Hoc>> {
+    @NonNull protected String lemma     = StringUtils.EMPTY;
+    @NonNull protected String scriptio  = StringUtils.EMPTY;
+
+    protected Constructor() {  }
+
+    public void lemma(@NonNull final String lemma) {
+      this.lemma = lemma;
+    }
+
+    public void scriptio(@NonNull final String scriptio) {
+      this.scriptio = scriptio;
+    }
+
+    public boolean paratus() {
+      return StringUtils.isNoneBlank(lemma, scriptio);
+    }
+
+    @Nullable public abstract Hoc build();
+    public abstract void restituo();
   }
 }

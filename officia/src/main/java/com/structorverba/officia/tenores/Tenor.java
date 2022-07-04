@@ -15,7 +15,7 @@ import java.util.*;
 import java.util.function.*;
 
 /**
- * Classis {@link Tenor} data l\u0113cta \u0101 r\u0113bus classis {@link Lector} s\u0113liget re\u012Bque aptae classis {@link Conditor}
+ * Classis {@link Tenor} data lēcta ā rēbus classis {@link Lector} sēliget reīque aptae classis {@link Conditor}
  * praebet.
  * @param <Hoc> classis extenta classis {@link Verbum}
  * @see Omne
@@ -24,22 +24,22 @@ import java.util.function.*;
 @SuppressWarnings("SpellCheckingInspection")
 public abstract class Tenor <Hoc extends Verbum <Hoc>> extends DefaultHandler {
   /**
-   * Valor hic est v\u0101s classis {@link Nuntius} class\u012B extent\u012B huius.
+   * Valor hic est vās classis {@link Nuntius} classī extentī huius.
    */
   @NonNull protected final Nuntius nuntius;
   /**
-   * Valor hic seriem r\u0113rum classis {@link Hoc} praebend\u0101rum ad r\u0113 classis {@link LectorMultiplicibus} tenet.
+   * Valor hic seriem rērum classis {@link Hoc} praebendārum ad rē classis {@link LectorMultiplicibus} tenet.
    */
   protected final @NonNull List <Hoc> series = new ArrayList <>();
   /**
-   * Valor hic rem classis {@link Hoc} tenet c\u014Dnstruenumque \u0101 re\u012B aptae classis {@link Conditor} praebendumque ad r\u0113
+   * Valor hic rem classis {@link Hoc} tenet cōnstruenumque ā reī aptae classis {@link Conditor} praebendumque ad rē
    * classis {@link Lector}.
    */
   @Nullable protected Hoc hoc;
 
   /**
-   * Officium hoc c\u014Dnstr\u016Bct\u014Drem re\u012B classis huius perpetrat.
-   * @param nts val\u014Drem {@link #nuntius} supplet.
+   * Officium hoc cōnstrūctōrem reī classis huius perpetrat.
+   * @param nts valōrem {@link #nuntius} supplet.
    */
   protected Tenor(@NonNull final Supplier <? extends Nuntius> nts) {
     Thread.currentThread().setUncaughtExceptionHandler(Omne.NuntiusErroribus.faciendum.get());
@@ -47,11 +47,11 @@ public abstract class Tenor <Hoc extends Verbum <Hoc>> extends DefaultHandler {
   }
 
   /**
-   * Modus hic f\u014Drmam scr\u012Bptam pr\u014Dv\u012Bsam \u0101 r\u0113 classis <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.xml/org/xml/sax/XMLReader.html">XMLReader</a>
-   * pr\u014Dc\u0113dit.
-   * @param litterae litterae pr\u014Dv\u012Bsae
-   * @param incepta  positi\u014D incepta in val\u014Drem {@code litterae}
-   * @param longitia longitia val\u014Dris {@code litterae} \u016Btend\u012B
+   * Modus hic fōrmam scrīptam prōvīsam ā rē classis <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.xml/org/xml/sax/XMLReader.html">XMLReader</a>
+   * prōcēdit.
+   * @param litterae litterae prōvīsae
+   * @param incepta  positiō incepta in valōrem {@code litterae}
+   * @param longitia longitia valōris {@code litterae} ūtendī
    * @see <a href="https://docs.oracle.com/javase/7/docs/api/org/xml/sax/helpers/DefaultHandler.html#characters(char[],%20int,%20int)">DefaultHandler.characters</a>
    */
   @Override public final void characters(final char[] litterae, final int incepta, final int longitia) {
@@ -61,19 +61,19 @@ public abstract class Tenor <Hoc extends Verbum <Hoc>> extends DefaultHandler {
       scribo(forma);
       finiam();
     } else {
-      nuntius.moneo("Pr\u014Dducti\u014D verb\u012B pr\u014Dcessimus n\u016Bllae f\u014Drmae.");
+      nuntius.moneo("Prōductiō verbī prōcessimus nūllae fōrmae.");
     }
   }
 
   /**
-   * Modus hic rem aptam classis {@link Conditor} imperat ut f\u014Drmam scr\u012Bptam re\u012B pr\u014Dductae classis {@link Hoc} indat.
-   * @param scriptio f\u014Drmam scr\u012Bptam indendus
+   * Modus hic rem aptam classis {@link Conditor} imperat ut fōrmam scrīptam reī prōductae classis {@link Hoc} indat.
+   * @param scriptio fōrmam scrīptam indendus
    * @see #characters(char[], int, int)
    */
   protected abstract void scribo(@NonNull final String scriptio);
 
   /**
-   * Modus hic rem aptam classis {@link Conditor} imperat c\u014Dnstr\u016Bcti\u014Dnem re\u012Bpr\u014Dductae classis {@link Hoc} f\u012Bn\u012Bre.
+   * Modus hic rem aptam classis {@link Conditor} imperat cōnstrūctiōnem reīprōductae classis {@link Hoc} fīnīre.
    */
   protected abstract void finiam();
 }

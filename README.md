@@ -6,7 +6,7 @@ Nōn iam! Vōbīs intrōdūcō programma StrūctorVerba scrīptum in linguā [Ia
 
 Programma hoc dēfīnit classēs novem quās catēgoriās novem verbōrum repraesentent:
 
-I. [Coniunctivum](officia/src/main/java/com/structorverba/officia/verba/VerbumSimplex.java#L56)
+I. [Coniunctio](officia/src/main/java/com/structorverba/officia/verba/VerbumSimplex.java#L56)
 
 II. [Interiectio](officia/src/main/java/com/structorverba/officia/verba/VerbumSimplex.java#L97)
 
@@ -30,13 +30,13 @@ ___
 
 Praetereā tentāmina quattuor sunt scrīpsī ut exsecūtiō modōsque programmātis recēnseantur.
 
-I. [DolōremIpsum](officium/src/test/net/strūctorverba/tentāmina/DolōremIpsum.java)
+I. [DolōremIpsum](officium/src/test/com/structorverba/officia/DoloremIpsum.java)
 
-II. [Carthāgō](officium/src/test/net/strūctorverba/tentāmina/Carthāgō.java)
+II. [Carthāgō](officium/src/test/com/structorverba/officia/Carthago.java)
 
-III. [Exempla](officium/src/test/net/strūctorverba/tentāmina/Exempla.java)
+III. [Exempla](officium/src/test/com/structorverba/officia/Exempla.java)
 
-IV. [Numerī](officium/src/test/net/strūctorverba/tentāmina/Numerī.java)
+IV. [Numerī](officium/src/test/com/structorverba/officia/Numeri.java)
 
 Invocāte valōrem [StructorVerba.faciendum](officia/src/main/java/com/structorverba/officia/miscella/StructorVerba.java#L32) ut fūnctiōnēs omnēs programmātis StrūctorVerba accēdātis:
 

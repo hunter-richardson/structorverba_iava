@@ -1,159 +1,170 @@
 package com.structorverba.officia.conditores;
 
 import androidx.annotation.*;
+import com.structorverba.officia.enumerationes.*;
 import com.structorverba.officia.nuntii.*;
 import com.structorverba.officia.tenores.Tenor;
-import com.structorverba.officia.verba.VerbumSimplex;
+import com.structorverba.officia.verba.*;
 import jakarta.ejb.*;
 import org.apache.commons.lang3.*;
 
 import java.util.function.*;
 
 /**
- * Classis {@link ConditorSimplicibus} est v\u0101s classis {@link Conditor} classibus omnibus quibus classem {@link
+ * Classis {@link ConditorSimplicibus} est vās classis {@link Conditor} classibus omnibus quibus classem {@link
  * VerbumSimplex} extendit.
  * @param <Hoc> classis extenta classis {@link VerbumSimplex}
  */
 @SuppressWarnings("SpellCheckingInspection")
 public abstract class ConditorSimplicibus <Hoc extends VerbumSimplex <Hoc>> extends Conditor <Hoc> {
   /**
-   * Valor hic viam re\u012B classis {@link Hoc} facit.
+   * Valor hic viam reī classis {@link Hoc} facit.
+   *
    * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html">Function</a>
    */
-  @NonNull protected final Function <String, Hoc> constructor;
+  @NonNull
+  protected final Function<String, Hoc> constructor;
 
   /**
-   * Officium hoc c\u014Dnstr\u016Bct\u014Drem re\u012B classis huius perpetrat.
-   * @param nts   val\u014Drem {@link Conditor#nuntius} supplet.
-   * @param cnstr val\u014Drem {@link #constructor} supplet.
+   * Valor hic valōrem {@link Verbum#lemma} reī prōductae repraehentat.
    */
-  protected ConditorSimplicibus(@NonNull final Supplier <? extends Nuntius> nts,
-                                @NonNull final Function <String, Hoc> cnstr) {
-    super(nts);
+  @NonNull protected String lemma = StringUtils.EMPTY;
+
+  /**
+   * Officium hoc cōnstrūctōrem reī classis huius perpetrat.
+   *
+   * @param nts   valōrem {@link Conditor#nuntius} supplet.
+   * @param cnstr valōrem {@link #constructor} supplet.
+   */
+  protected ConditorSimplicibus(@NonNull final Categoria ctgr, @NonNull final Supplier<? extends Nuntius> nts,
+                                @NonNull final Function<String, Hoc> cnstr) {
+    super(ctgr, nts);
     constructor = cnstr;
+  }
+
+  /**
+   * Modus hic valōrem {@link #lemma} indit.
+   * @param lm valōrem indendum
+   */
+  public final void funde(@NonNull final String lm) {
+    lemma = lm.trim();
   }
 
   /**
    * {@inheritDoc}
    */
-  @Override @Nullable
+  @Override
+  @Nullable
   public final Hoc condam() {
     final Hoc hoc = StringUtils.isNotBlank(lemma) ? constructor.apply(lemma)
-                                                  : null;
+            : null;
     refero(hoc);
     return hoc;
   }
 
   /**
-   * Classis {@link ConditorConiunctivis} est v\u0101s classis {@link Tenor} class\u012B {@link VerbumSimplex.Coniunctivum}.
-   * @see VerbumSimplex.Coniunctivum
-   * @see NuntiusConditoriConiunctivis
+   * Classis {@link ConditorConiunctionibus} est vās classis {@link Tenor} classī {@link VerbumSimplex.Coniunctio}.
+   *
+   * @see VerbumSimplex.Coniunctio
+   * @see NuntiusConditoriConiunctionibus
    */
   @Singleton
   @DependsOn("NuntiusConditoriAdverbiis")
-  public static final class ConditorConiunctivis extends ConditorSimplicibus <VerbumSimplex.Coniunctivum> {
-    @Nullable private static ConditorConiunctivis instantia = null;
+  public static final class ConditorConiunctionibus extends ConditorSimplicibus<VerbumSimplex.Coniunctio> {
+    @Nullable
+    private static ConditorConiunctionibus instantia = null;
 
     /**
-     * Valor hic viam re\u012B classis huiuc facit.
+     * Valor hic viam reī classis huiuc facit.
+     *
      * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
      */
-    @NonNull public static final Supplier <ConditorConiunctivis> faciendum =
-      () -> ObjectUtils.firstNonNull(instantia, instantia = new ConditorConiunctivis());
+    @NonNull
+    public static final Supplier<ConditorConiunctionibus> faciendum =
+            () -> ObjectUtils.firstNonNull(instantia, instantia = new ConditorConiunctionibus());
 
-    private ConditorConiunctivis() {
-      super(NuntiusConditoriConiunctivis.faciendum, lemma -> VerbumSimplex.Coniunctivum.builder().lemma(lemma).build());
+    private ConditorConiunctionibus() {
+      super(Categoria.CONIUNCTIO, NuntiusConditoriConiunctionibus.faciendum,
+            lemma -> VerbumSimplex.Coniunctio.builder().lemma(lemma).build());
       nuntius.plurimumGarrio("Factus sum");
     }
 
     /**
-     * Modus hic rem classis {@link VerbumSimplex.Coniunctivum} accipit val\u014Dr\u012Bque {@link ConditorConiunctivis#nuntius}
-     * ita refert.
-     * @param hoc rem tentanda
-     */
-    protected void refero(@Nullable final VerbumSimplex.Coniunctivum hoc) {
-      if (hoc == null) {
-        nuntius.certioro("Coni\u016Bnct\u012Bvum", lemma, "f\u012Bn\u012Btur pr\u014Dd\u016Bcere.");
-      } else {
-        nuntius.moneo("Coni\u016Bnct\u012Bv\u012B pr\u014Dducti\u014D formae n\u016Bllae pr\u014Dcessit.");
-      }
-    }
-
-    /**
-     * Classis {@link NuntiusConditoriConiunctivis} est v\u0101s classis {@link Nuntius} class\u012B {@link
-     * ConditorSimplicibus.ConditorConiunctivis}
-     * @see ConditorSimplicibus.ConditorConiunctivis
+     * Classis {@link NuntiusConditoriConiunctionibus} est vās classis {@link Nuntius} classī {@link
+     * ConditorConiunctionibus}
+     *
+     * @see ConditorConiunctionibus
      */
     @Singleton
-    private static final class NuntiusConditoriConiunctivis extends Nuntius {
-      @Nullable private static NuntiusConditoriConiunctivis instantia = null;
+    private static final class NuntiusConditoriConiunctionibus extends Nuntius {
+      @Nullable
+      private static NuntiusConditoriConiunctionibus instantia = null;
 
       /**
-       * Valor hic viam re\u012B classis huiuc facit.
+       * Valor hic viam reī classis huiuc facit.
+       *
        * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
        */
-      @NonNull private static final Supplier <NuntiusConditoriConiunctivis> faciendum =
-              () -> ObjectUtils.firstNonNull(instantia, instantia = new NuntiusConditoriConiunctivis());
+      @NonNull
+      private static final Supplier<NuntiusConditoriConiunctionibus> faciendum =
+              () -> ObjectUtils.firstNonNull(instantia, instantia = new NuntiusConditoriConiunctionibus());
 
-      private NuntiusConditoriConiunctivis() {
-        super(ParametriNuntii.para(ConditorSimplicibus.ConditorConiunctivis.class));
+      private NuntiusConditoriConiunctionibus() {
+        super(ParametriNuntii.para(ConditorConiunctionibus.class));
       }
     }
   }
 
   /**
-   * Classis {@link ConditorInteriectionibus} est v\u0101s classis {@link Tenor} class\u012B {@link VerbumSimplex.Interiectio}.
+   * Classis {@link ConditorInteriectionibus} est vās classis {@link Tenor} classī {@link VerbumSimplex.Interiectio}.
+   *
    * @see VerbumSimplex.Interiectio
    * @see NuntiusConditoriInteriectionibus
    */
   @Singleton
   @DependsOn("NuntiusConditoriAdverbiis")
-  public static final class ConditorInteriectionibus extends ConditorSimplicibus <VerbumSimplex.Interiectio> {
-    @Nullable private static ConditorInteriectionibus instantia = null;
+  public static final class ConditorInteriectionibus extends ConditorSimplicibus<VerbumSimplex.Interiectio> {
+    @Nullable
+    private static ConditorInteriectionibus instantia = null;
 
     /**
-     * Valor hic viam re\u012B classis huiuc facit.
+     * Valor hic viam reī classis huiuc facit.
+     *
      * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
      */
-    @NonNull public static final Supplier <ConditorInteriectionibus> faciendum =
-      () -> ObjectUtils.firstNonNull(instantia, instantia = new ConditorInteriectionibus());
+    @NonNull
+    public static final Supplier<ConditorInteriectionibus> faciendum =
+            () -> ObjectUtils.firstNonNull(instantia, instantia = new ConditorInteriectionibus());
 
     private ConditorInteriectionibus() {
-      super(NuntiusConditoriInteriectionibus.faciendum, lemma -> VerbumSimplex.Interiectio.builder().lemma(lemma).build());
+      super(Categoria.INTERIECTIO, NuntiusConditoriInteriectionibus.faciendum,
+            lemma -> VerbumSimplex.Interiectio.builder().lemma(lemma).build());
       nuntius.plurimumGarrio("Factus sum");
     }
 
     /**
-     * Modus hic rem classis {@link VerbumSimplex.Coniunctivum} accipit val\u014Dr\u012Bque {@link Conditor#nuntius} ita refert.
-     * @param hoc rem tentanda
+     * Classis {@link NuntiusConditoriInteriectionibus} est vās classis {@link Nuntius} classī {@link
+     * ConditorSimplicibus.ConditorInteriectionibus}
+     *
+     * @see ConditorSimplicibus.ConditorInteriectionibus
      */
-    protected void refero(@Nullable final VerbumSimplex.Interiectio hoc) {
-      if (hoc == null) {
-        nuntius.certioro("Interiecti\u014D", lemma, "f\u012Bn\u012Btur pr\u014Dd\u016Bcere.");
-      } else {
-        nuntius.moneo("Interiecti\u014Dn\u012B pr\u014Dducti\u014D f\u014Drmae n\u016Bllae pr\u014Dcessit.");
+    @Singleton
+    private static final class NuntiusConditoriInteriectionibus extends Nuntius {
+      @Nullable
+      private static NuntiusConditoriInteriectionibus instantia = null;
+
+      /**
+       * Valor hic viam reī classis huiuc facit.
+       *
+       * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
+       */
+      @NonNull
+      private static final Supplier<NuntiusConditoriInteriectionibus> faciendum =
+              () -> ObjectUtils.firstNonNull(instantia, instantia = new NuntiusConditoriInteriectionibus());
+
+      private NuntiusConditoriInteriectionibus() {
+        super(ParametriNuntii.para(ConditorSimplicibus.ConditorInteriectionibus.class));
       }
-    }
-  }
-
-  /**
-   * Classis {@link NuntiusConditoriInteriectionibus} est v\u0101s classis {@link Nuntius} class\u012B {@link
-   * ConditorSimplicibus.ConditorInteriectionibus}
-   * @see ConditorSimplicibus.ConditorInteriectionibus
-   */
-  @Singleton
-  private static final class NuntiusConditoriInteriectionibus extends Nuntius {
-    @Nullable private static NuntiusConditoriInteriectionibus instantia = null;
-
-    /**
-     * Valor hic viam re\u012B classis huiuc facit.
-     * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
-     */
-    @NonNull private static final Supplier <NuntiusConditoriInteriectionibus> faciendum =
-            () -> ObjectUtils.firstNonNull(instantia, instantia = new NuntiusConditoriInteriectionibus());
-
-    private NuntiusConditoriInteriectionibus() {
-      super(ParametriNuntii.para(ConditorSimplicibus.ConditorInteriectionibus.class));
     }
   }
 }

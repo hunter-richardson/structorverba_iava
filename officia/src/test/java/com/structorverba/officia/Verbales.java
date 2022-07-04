@@ -1,24 +1,17 @@
 package com.structorverba.officia;
 
-import androidx.annotation.*;
+import androidx.annotation.NonNull;
 import com.structorverba.officia.enumerationes.Categoria;
 import com.structorverba.officia.miscella.StructorVerba;
-import com.structorverba.officia.nuntii.*;
 import com.structorverba.officia.tentamina.Tentamen;
-import jakarta.ejb.Singleton;
 import lombok.Getter;
-import org.apache.commons.lang3.ObjectUtils;
 import org.junit.jupiter.api.*;
 
-import java.util.function.Supplier;
 import java.util.stream.Stream;
 
 @SuppressWarnings({"NewClassNamingConvention", "SpellCheckingInspection"})
 @TestMethodOrder(MethodOrderer.Random.class)
 public class Verbales {
-    @NonNull @Getter(lazy = true)
-    private final NuntiusTentaminibusVerbalibus nuntius = NuntiusTentaminibusVerbalibus.faciendum.get();
-
     @NonNull @Getter(lazy = true)
     private final StructorVerba structor = StructorVerba.faciendum.get();
 
@@ -62,25 +55,4 @@ public class Verbales {
         Stream.of(Categoria.values())
               .forEach(categoria -> System.out.println(new Tentamen.TentamenVerbi(structor.fortuitumLegam(categoria))));
     }
-
-    /**
-     * Classis {@link NuntiusTentaminibusVerbalibus} est v\u0101s classis {@link Nuntius} class\u012B {@link Verbales}}
-     */
-    @Singleton
-    static final class NuntiusTentaminibusVerbalibus extends Nuntius {
-        @Nullable
-        static NuntiusTentaminibusVerbalibus instantia = null;
-
-        /**
-         * Valor hic viam re\u012B classis huiuc facit.
-         * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
-         */
-        @NonNull static final Supplier<NuntiusTentaminibusVerbalibus> faciendum =
-                () -> ObjectUtils.firstNonNull(instantia, instantia = new NuntiusTentaminibusVerbalibus());
-
-        NuntiusTentaminibusVerbalibus() {
-            super(ParametriNuntii.para(Verbales.class));
-        }
-    }
-
 }

@@ -4,17 +4,14 @@ import androidx.annotation.NonNull;
 import com.structorverba.officia.miscella.*;
 import com.structorverba.officia.tentamina.Tentamen;
 import com.structorverba.officia.verba.VerbumSimplex;
-
-import org.apache.commons.lang3.Range;
-import org.junit.jupiter.api.MethodOrderer;
-import org.junit.jupiter.api.Order;
-import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestMethodOrder;
-
 import lombok.Getter;
+import org.apache.commons.lang3.Range;
+import org.junit.jupiter.api.*;
+
+import java.util.Random;
 
 /**
- * Classis {@link Numeri} oper\u0101ti\u014Dn\u0113s math\u0113matic\u0101s r\u0113rum classis {@link VerbumSimplex.Numerus} tentat.
+ * Classis {@link Numeri} operātiōnēs mathēmaticās rērum classis {@link VerbumSimplex.Numerus} tentat.
  */
 @SuppressWarnings({"SpellCheckingInspection", "FieldCanBeLocal", "NewClassNamingConvention"})
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
@@ -29,8 +26,8 @@ final class Numeri extends Omne {
   private final @NonNull String XLII_SCRIPTIO = "XLII";
 
   /**
-   * Modus hic conversi\u014Dnem \u0101 numer\u014D re\u012B classis {@link VerbumSimplex.Numerus} tentat. <br>
-   * Scr\u012Bptiunculam {@code 42 = XLII} pr\u014Dd\u016Bcat.
+   * Modus hic conversiōnem ā numerō reī classis {@link VerbumSimplex.Numerus} tentat. <br>
+   * Scrīptiunculam {@code 42 = XLII} prōdūcat.
    */
   @Test @Order(1)
   public void conversionis() {
@@ -39,8 +36,8 @@ final class Numeri extends Omne {
   }
 
   /**
-   * Modus hic reversi\u014Dnem \u0101 r\u0113 classis {@link VerbumSimplex.Numerus} numer\u014D tentat. <br>
-   * Scr\u012Bptiunculam {@code XLII = 42} pr\u014Dd\u016Bcat.
+   * Modus hic reversiōnem ā rē classis {@link VerbumSimplex.Numerus} numerō tentat. <br>
+   * Scrīptiunculam {@code XLII = 42} prōdūcat.
    */
   @Test @Order(2)
   public void reversionis() {
@@ -49,19 +46,20 @@ final class Numeri extends Omne {
   }
 
   /**
-   * Modus hic conversi\u014Dnem \u0101 numer\u014D re\u012B classis {@link VerbumSimplex.Numerus} atque reversi\u014Dnem versam tentat. <br>
-   * Scr\u012Bptiuncul\u0101s et {@code 42 = XLII} et {@code XLII = 42} d\u0113 numer\u014D nesc\u012Bt\u014D inter I et MMMCMXCIX pr\u014Dd\u016Bcat.
+   * Modus hic conversiōnem ā numerō reī classis {@link VerbumSimplex.Numerus} atque reversiōnem versam tentat. <br>
+   * Scrīptiunculās et {@code 42 = XLII} et {@code XLII = 42} dē numerō nescītō inter I et MMMCMXCIX prōdūcat.
    */
   @Test @Order(3)
   public void combinationis() {
-    final short numerus = (short) Math.round((NUMERUM_MAXIMUM + 1) * Math.random() + 1);
+    final short numerus = Integer.valueOf(new Random().ints(1, NUMERUM_MAXIMUM)
+                                                      .distinct().findFirst().orElse(10)).shortValue();
     System.out.println(new Tentamen.TentamenNumeraleCombinationis(numerus)
                          .exsequar(structor.numeram(numerus)));
   }
 
   /**
-   * Modus hic additi\u014Dnem r\u0113rum du\u0101rum classis {@link VerbumSimplex.Numerus}. <br>
-   * Scr\u012Bptiuncul\u0101s et {@code 17 = XVIII} et {@code 3 = III} et {@code 17 + 3 = 20 = XX} pr\u014Dd\u016Bcat.
+   * Modus hic additiōnem rērum duārum classis {@link VerbumSimplex.Numerus}. <br>
+   * Scrīptiunculās et {@code 17 = XVIII} et {@code 3 = III} et {@code 17 + 3 = 20 = XX} prōdūcat.
    */
   @Test @Order(4)
   public void additionis() {
@@ -71,8 +69,8 @@ final class Numeri extends Omne {
   }
 
   /**
-   * Modus hic subtracti\u014Dnem r\u0113rum du\u0101rum classis {@link VerbumSimplex.Numerus}. <br>
-   * Scr\u012Bptiuncul\u0101s et {@code 12 = XII} et {@code 7 = VII} et {@code 12 - 7 = 5 = V} pr\u014Dd\u016Bcat.
+   * Modus hic subtractiōnem rērum duārum classis {@link VerbumSimplex.Numerus}. <br>
+   * Scrīptiunculās et {@code 12 = XII} et {@code 7 = VII} et {@code 12 - 7 = 5 = V} prōdūcat.
    */
   @Test @Order(5)
   public void subtractionis() {
@@ -82,8 +80,8 @@ final class Numeri extends Omne {
   }
 
   /**
-   * Modus hic multiplic\u0101ti\u014Dnem r\u0113rum du\u0101rum classis {@link VerbumSimplex.Numerus}. <br>
-   * Scr\u012Bptiuncul\u0101s et {@code 3 = III} et {@code 2 = II} et {@code 3 * 2 = 6 = VI} pr\u014Dd\u016Bcat.
+   * Modus hic multiplicātiōnem rērum duārum classis {@link VerbumSimplex.Numerus}. <br>
+   * Scrīptiunculās et {@code 3 = III} et {@code 2 = II} et {@code 3 * 2 = 6 = VI} prōdūcat.
    */
   @Test @Order(6)
   public void multiplicationis() {
@@ -93,8 +91,8 @@ final class Numeri extends Omne {
   }
 
   /**
-   * Modus hic d\u012Bv\u012Bsi\u014Dnem r\u0113rum du\u0101rum classis {@link VerbumSimplex.Numerus}. <br>
-   * Scr\u012Bptiuncul\u0101s et {@code 18 = XVII} et {@code 6 = VI} et {@code 18 / 6 = 3 = III} pr\u014Dd\u016Bcat.
+   * Modus hic dīvīsiōnem rērum duārum classis {@link VerbumSimplex.Numerus}. <br>
+   * Scrīptiunculās et {@code 18 = XVII} et {@code 6 = VI} et {@code 18 / 6 = 3 = III} prōdūcat.
    */
   @Test @Order(7)
   public void divisionis() {
@@ -104,8 +102,8 @@ final class Numeri extends Omne {
   }
 
   /**
-   * Modus hic m\u0101nsi\u014Dnem r\u0113rum du\u0101rum classis {@link VerbumSimplex.Numerus}. <br>
-   * Scr\u012Bptiuncul\u0101s et {@code 12 = XII} et {@code 9 = IX} et {@code 12 % 9 = 3 = III} pr\u014Dd\u016Bcat.
+   * Modus hic mānsiōnem rērum duārum classis {@link VerbumSimplex.Numerus}. <br>
+   * Scrīptiunculās et {@code 12 = XII} et {@code 9 = IX} et {@code 12 % 9 = 3 = III} prōdūcat.
    */
   @Test @Order(8)
   public void mansionis() {

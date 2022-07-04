@@ -6,7 +6,7 @@ import java.util.logging.Level;
 import java.util.stream.Stream;
 
 /**
- * \u0112numer\u0101ti\u014D haec persignat gravit\u0101temque n\u016Bntiae singul\u0101rem et quam verb\u014Dsa r\u0113s classis {@link Nuntius} scr\u012Bb\u0113tur.
+ * \u0112numerātiō haec persignat gravitātemque nūntiae singulārem et quam verbōsa rēs classis {@link Nuntius} scrībētur.
  * @see ParametriNuntii#gradusMinimus
  * @see <a href="https://docs.oracle.com/javase/7/docs/api/java/util/logging/Level.html">Level</a>
  */
@@ -19,70 +19,70 @@ enum GradusNuntii {
   INERS(Level.OFF),
 
   /**
-   * Valor hic indicat rem classis {@link Nuntius} quae err\u014Dr\u0113s s\u014Dlum persignat.
+   * Valor hic indicat rem classis {@link Nuntius} quae errōrēs sōlum persignat.
    * @see <a href="https://docs.oracle.com/javase/7/docs/api/java/util/logging/Level.html#SEVERE">SEVERE</a>
    */
   GRAVIS(Level.SEVERE),
 
   /**
-   * Valor hic indicat rem classis {@link Nuntius} quae persignat err\u014Dr\u0113s n\u016Bnti\u0101sque qu\u0101s err\u014Drem add\u016Bcant.
+   * Valor hic indicat rem classis {@link Nuntius} quae persignat errōrēs nūntiāsque quās errōrem addūcant.
    * @see <a href="https://docs.oracle.com/javase/7/docs/api/java/util/logging/Level.html#WARNING">WARNING</a>
    */
   PRAEMONITORIUS(Level.WARNING),
 
   /**
-   * Valor hic indicat rem classis {@link Nuntius} quae persignat n\u016Bnti\u0101s qu\u0101s \u016Bs\u016Bfructu\u0101ri\u012Bs programm\u0101tis intersit.
+   * Valor hic indicat rem classis {@link Nuntius} quae persignat nūntiās quās ūsūfructuāriīs programmātis intersit.
    * @see <a href="https://docs.oracle.com/javase/7/docs/api/java/util/logging/Level.html#INFO">INFO</a>
    */
   INFORMATIVUS(Level.INFO),
 
   /**
-   * Valor hic indicat rem classis {@link Nuntius} quae persignat n\u016Bnti\u0101s qu\u0101s auct\u014Dribus programm\u0101tis intersit.
+   * Valor hic indicat rem classis {@link Nuntius} quae persignat nūntiās quās auctōribus programmātis intersit.
    * @see <a href="https://docs.oracle.com/javase/7/docs/api/java/util/logging/Level.html#CONFIG">CONFIG</a>
    */
   PRAEGRESSURUS(Level.CONFIG),
 
   /**
-   * Valor hic indicat rem classis {@link Nuntius} quae persignat n\u016Bnti\u0101s qu\u0101s n\u0113min\u012B fortasse intersit.
+   * Valor hic indicat rem classis {@link Nuntius} quae persignat nūntiās quās nēminī fortasse intersit.
    * @see <a href="https://docs.oracle.com/javase/7/docs/api/java/util/logging/Level.html#FINE">FINE</a>
    */
   SCRUTANS(Level.FINE),
 
   /**
-   * Valor hic indicat rem classis {@link Nuntius} quae persignat n\u016Bnti\u0101s qu\u0101s n\u0113min\u012B prob\u0101biliter intersit.
+   * Valor hic indicat rem classis {@link Nuntius} quae persignat nūntiās quās nēminī probābiliter intersit.
    * @see <a href="https://docs.oracle.com/javase/7/docs/api/java/util/logging/Level.html#FINER">FINER</a>
    */
   SCRUTANTIOR(Level.FINER),
 
   /**
-   * Valor hic indicat rem classis {@link Nuntius} quae persignat n\u016Bnti\u0101s qu\u0101s n\u0113min\u012B certissime intersit.
+   * Valor hic indicat rem classis {@link Nuntius} quae persignat nūntiās quās nēminī certissime intersit.
    * @see <a href="https://docs.oracle.com/javase/7/docs/api/java/util/logging/Level.html#FINEST">FINEST</a>
    */
   SCRUTANTISSIMUS(Level.FINEST),
 
   /**
-   * Valor hic indicat rem classis {@link Nuntius} quae n\u016Bnti\u0101s omn\u0113s persignat.
+   * Valor hic indicat rem classis {@link Nuntius} quae nūntiās omnēs persignat.
    * @see <a href="https://docs.oracle.com/javase/7/docs/api/java/util/logging/Level.html#ALL">ALL</a>
    */
   OMNIS(Level.ALL);
 
   /**
-   * Valor hic compar\u0101ti\u014Dn\u012B r\u0113rum \u0113numer\u0101ti\u014Dnis huius licet.
+   * Valor hic comparātiōnī rērum ēnumerātiōnis huius licet.
    */
   public final int praecellentia;
   /**
-   * Modus hic societ\u0101s intr\u0101 r\u0113s \u0113numer\u0101ti\u014Dn\u0113s huius r\u0113sque <a href="https://docs.oracle.com/javase/7/docs/api/java/util/logging/Level.html">Level</a>
-   * d\u0113m\u014Dnstrat.
+   * Modus hic societās intrā rēs ēnumerātiōnēs huius rēsque <a href="https://docs.oracle.com/javase/7/docs/api/java/util/logging/Level.html">Level</a>
+   * dēmōnstrat.
    * <ul>
-   *   <li>Valor <a href="https://docs.oracle.com/javase/7/docs/api/java/util/logging/Level.html#OFF">OFF</a> val\u014Drem {@link #INERS} c\u014Dnsociat.</li>
-   *   <li>Valor <a href="https://docs.oracle.com/javase/7/docs/api/java/util/logging/Level.html#SEVERE">SEVERE</a> val\u014Drem {@link #GRAVIS} c\u014Dnsociat.</li>
-   *   <li>Valor <a href="https://docs.oracle.com/javase/7/docs/api/java/util/logging/Level.html#WARNING">WARNING</a> val\u014Drem {@link #PRAEMONITORIUS} c\u014Dnsociat.</li>
-   *   <li>Valor <a href="https://docs.oracle.com/javase/7/docs/api/java/util/logging/Level.html#INFO">INFO</a> val\u014Drem {@link #INFORMATIVUS} c\u014Dnsociat.</li>
-   *   <li>Valor <a href="https://docs.oracle.com/javase/7/docs/api/java/util/logging/Level.html#CONFIG">CONFIG</a> val\u014Drem {@link #PRAEGRESSURUS} c\u014Dnsociat.</li>
-   *   <li>Valor <a href="https://docs.oracle.com/javase/7/docs/api/java/util/logging/Level.html#FINE">FINE</a> val\u014Drem {@link #SCRUTANS} c\u014Dnsociat.</li>
-   *   <li>Valor <a href="https://docs.oracle.com/javase/7/docs/api/java/util/logging/Level.html#FINER">FINER</a> val\u014Drem {@link #SCRUTANTIOR} c\u014Dnsociat.</li>
-   *   <li>Valor <a href="https://docs.oracle.com/javase/7/docs/api/java/util/logging/Level.html#FINEST">FINEST</a> val\u014Drem {@link #SCRUTANTISSIMUS} c\u014Dnsociat.</li>
-   *   <li>Valor <a href="https://docs.oracle.com/javase/7/docs/api/java/util/logging/Level.html#ALL">ALL</a> val\u014Drem {@link #OMNIS} c\u014Dnsociat.</li>
+   *   <li>Valor <a href="https://docs.oracle.com/javase/7/docs/api/java/util/logging/Level.html#OFF">OFF</a> valōrem {@link #INERS} cōnsociat.</li>
+   *   <li>Valor <a href="https://docs.oracle.com/javase/7/docs/api/java/util/logging/Level.html#SEVERE">SEVERE</a> valōrem {@link #GRAVIS} cōnsociat.</li>
+   *   <li>Valor <a href="https://docs.oracle.com/javase/7/docs/api/java/util/logging/Level.html#WARNING">WARNING</a> valōrem {@link #PRAEMONITORIUS} cōnsociat.</li>
+   *   <li>Valor <a href="https://docs.oracle.com/javase/7/docs/api/java/util/logging/Level.html#INFO">INFO</a> valōrem {@link #INFORMATIVUS} cōnsociat.</li>
+   *   <li>Valor <a href="https://docs.oracle.com/javase/7/docs/api/java/util/logging/Level.html#CONFIG">CONFIG</a> valōrem {@link #PRAEGRESSURUS} cōnsociat.</li>
+   *   <li>Valor <a href="https://docs.oracle.com/javase/7/docs/api/java/util/logging/Level.html#FINE">FINE</a> valōrem {@link #SCRUTANS} cōnsociat.</li>
+   *   <li>Valor <a href="https://docs.oracle.com/javase/7/docs/api/java/util/logging/Level.html#FINER">FINER</a> valōrem {@link #SCRUTANTIOR} cōnsociat.</li>
+   *   <li>Valor <a href="https://docs.oracle.com/javase/7/docs/api/java/util/logging/Level.html#FINEST">FINEST</a> valōrem {@link #SCRUTANTISSIMUS} cōnsociat.</li>
+   *   <li>Valor <a href="https://docs.oracle.com/javase/7/docs/api/java/util/logging/Level.html#ALL">ALL</a> valōrem {@link #OMNIS} cōnsociat.</li>
    * </ul>
    */
   @NonNull public final Supplier <Level> gressus = () ->
@@ -103,10 +103,10 @@ enum GradusNuntii {
   }
 
   /**
-   * Modus hic compar\u0101ti\u014Dn\u012B intr\u0101 r\u0113s \u0113numer\u0101ti\u014Dnis huius classisque <a href="https://docs.oracle.com/javase/7/docs/api/java/util/logging/Level.html">Level</a>
+   * Modus hic comparātiōnī intrā rēs ēnumerātiōnis huius classisque <a href="https://docs.oracle.com/javase/7/docs/api/java/util/logging/Level.html">Level</a>
    * licet.
    * @param gressus valor tentandus
-   * @return r\u0113s \u0113numer\u0101ti\u014Dnis huius quam valor {@code gressus} quadrat
+   * @return rēs ēnumerātiōnis huius quam valor {@code gressus} quadrat
    */
   @NonNull public static GradusNuntii gradior(@NonNull final Level gressus) {
     return Stream.of(values())
@@ -115,11 +115,11 @@ enum GradusNuntii {
   }
 
   /**
-   * Modus hic compar\u0101ti\u014Dn\u012B intr\u0101 r\u0113s \u0113numer\u0101ti\u014Dnis huius licet.
+   * Modus hic comparātiōnī intrā rēs ēnumerātiōnis huius licet.
    * @param primus   valor tentandus
    * @param secundus valor tentandus
-   * @return valor aut posit\u012Bvus s\u012B valor {@code primus} est maior quam valor {@code secundus} aut neg\u0101t\u012Bvus s\u012B valor
-   *   {@code primus} est minor quam valor {@code secundus} aut n\u016Bllus s\u012B valor {@code primus} est aequ\u0101lis val\u014Dr\u012B
+   * @return valor aut positīvus sī valor {@code primus} est maior quam valor {@code secundus} aut negātīvus sī valor
+   *   {@code primus} est minor quam valor {@code secundus} aut nūllus sī valor {@code primus} est aequālis valōrī
    *   {@code secundus}
    */
   public static int compareTo(@NonNull final GradusNuntii primus, @NonNull final GradusNuntii secundus) {

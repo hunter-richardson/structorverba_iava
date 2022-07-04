@@ -12,7 +12,7 @@ import org.apache.commons.lang3.*;
 import java.util.function.Supplier;
 
 /**
- * Classis {@link ConditorNominibus} est v\u0101s classis {@link Conditor} class\u012B {@link Nomen}.
+ * Classis {@link ConditorNominibus} est vās classis {@link Conditor} classī {@link Nomen}.
  * @see Nomen
  * @see NuntiusConditoriNominibus
  */
@@ -23,55 +23,15 @@ public final class ConditorNominibus extends ConditorMultiplicibus <Nomen> {
   @Nullable private static ConditorNominibus instantia = null;
 
   /**
-   * Valor hic viam re\u012B classis huiuc facit.
+   * Valor hic viam reī classis huiuc facit.
    * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
    */
   @NonNull public static final Supplier <ConditorNominibus> faciendum =
     () -> ObjectUtils.firstNonNull(instantia, instantia = new ConditorNominibus());
 
-  @NonNull private Specialitas specialitas = Specialitas.NULLUM;
-  @NonNull private Genus       genus       = Genus.NULLUM;
-  @NonNull private Numeralis   numeralis   = Numeralis.NULLUS;
-  @NonNull private Casus       casus       = Casus.DERECTUS;
-  @NonNull private Tempus      tempus      = Tempus.INTEMPORALE;
-
   private ConditorNominibus() {
-    super(NuntiusConditoriNominibus.faciendum);
+    super(Categoria.NOMEN, NuntiusConditoriNominibus.faciendum, Nomen.ConstructorNominis::new);
     nuntius.plurimumGarrio("Factus sum");
-  }
-
-  /**
-   * {@inheritDoc}
-   * @return Rem novam classis {@link Nomen}. <br>
-   * Modus hid val\u014Drem {@code null} refert s\u012B n\u014Dn valet valor aliquis r\u0113s haec continet.
-   */
-  @Override @Nullable
-  public Nomen condam() {
-    if (ObjectUtils.allNotNull(specialitas, genus, casus, numeralis) &&
-        StringUtils.isNoneBlank(lemma, scriptio)) {
-      final Nomen hoc = Nomen.builder().specialitas(specialitas).genus(genus).casus(casus).numeralis(numeralis)
-                                       .tempus(tempus).lemma(lemma).scriptio(scriptio).build();
-      refero(hoc);
-      return hoc;
-    } else {
-      nuntius.moneo("N\u014Dminis", StringUtils.firstNonBlank(lemma, scriptio),
-                    "pr\u014Dducti\u014D f\u014Drmae n\u016Bllae pr\u014Dcessit.");
-      return null;
-    }
-  }
-
-  /**
-   * {@inheritDoc}
-   * @param hoc rem tentanda
-   */
-  @Override
-  protected void refero(@Nullable Nomen hoc) {
-    if (hoc == null) {
-      nuntius.moneo("N\u014Dminis", StringUtils.firstNonBlank(lemma, scriptio),
-                    "pr\u014Dducti\u014D f\u014Drmae n\u016Bllae pr\u014Dcessit.");
-    } else {
-      nuntius.certioro("N\u014Dmen", scriptio, "f\u012Bn\u012Btur pr\u014Dd\u016Bcere.");
-    }
   }
 
   /**
@@ -84,47 +44,24 @@ public final class ConditorNominibus extends ConditorMultiplicibus <Nomen> {
    * @see Verbum#lemma
    */
   @Override public void allegam(@NonNull final String nomen, @NonNull final String descriptor) {
-    if (Specialitas.pittacium.equals(nomen)) {
-      specialitas = Specialitas.definiam(descriptor);
-    } else if (Genus.pittacium.equals(nomen)) {
-      genus = Genus.definiam(descriptor);
-    } else if (Numeralis.pittacium.equals(nomen)) {
-      numeralis = Numeralis.definiam(descriptor);
-    } else if (Persona.pittacium.equals(nomen)) {
-      casus = Casus.definiam(descriptor);
-    } else if (Tempus.pittacium.equals(nomen)) {
-      tempus = Tempus.definiam(descriptor);
-    } else if (pittaciumLemmae.equals(nomen)) {
-      lemma = descriptor.trim();
-    } else {
-      nuntius.moneo("N\u014Dminis attrib\u016Bta inop\u012Bnata \u016Bsa'st:", nomen, descriptor);
-      return;
+    switch (nomen) {
+      case Specialitas.pittacium -> ((Nomen.ConstructorNominis) constructor).specialitas(Specialitas.definiam(descriptor));
+      case Genus.pittacium -> ((Nomen.ConstructorNominis) constructor).genus(Genus.definiam(descriptor));
+      case Numeralis.pittacium -> ((Nomen.ConstructorNominis) constructor).numeralis(Numeralis.definiam(descriptor));
+      case Persona.pittacium -> ((Nomen.ConstructorNominis) constructor).casus(Casus.definiam(descriptor));
+      case Tempus.pittacium -> ((Nomen.ConstructorNominis) constructor).tempus(Tempus.definiam(descriptor));
+      case pittaciumLemmae -> constructor.lemma(descriptor.trim());
+      default -> {
+        allectioDefecit(nomen, descriptor);
+        return;
+      }
     }
 
-    nuntius.garrio("C\u014Dntr\u016Bcti\u014Dn\u012B adi\u0113c\u012B conditi\u014Dnem novam:",
-                   nomen, descriptor);
+    allectioFinita(nomen, descriptor);
   }
 
   /**
-   * {@inheritDoc}
-   * @see Specialitas#NULLUM
-   * @see Genus#NULLUM
-   * @see Casus#DERECTUS
-   * @see Numeralis#NULLUS
-   * @see Tempus#INTEMPORALE
-   */
-  @Override public void restituo() {
-    specialitas = Specialitas.NULLUM;
-    genus = Genus.NULLUM;
-    casus = Casus.DERECTUS;
-    numeralis = Numeralis.NULLUS;
-    tempus = Tempus.INTEMPORALE;
-    scriptio = StringUtils.EMPTY;
-    nuntius.certioro("Restit\u016Btus sum");
-  }
-
-  /**
-   * Classis {@link NuntiusConditoriNominibus} est v\u0101s classis {@link Nuntius} class\u012B {@link ConditorNominibus}
+   * Classis {@link NuntiusConditoriNominibus} est vās classis {@link Nuntius} classī {@link ConditorNominibus}
    * @see ConditorNominibus
    */
   @Singleton
@@ -132,7 +69,7 @@ public final class ConditorNominibus extends ConditorMultiplicibus <Nomen> {
     @Nullable private static NuntiusConditoriNominibus instantia = null;
 
     /**
-     * Valor hic viam re\u012B classis huiuc facit.
+     * Valor hic viam reī classis huiuc facit.
      * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
      */
     @NonNull private static final Supplier <NuntiusConditoriNominibus> faciendum =

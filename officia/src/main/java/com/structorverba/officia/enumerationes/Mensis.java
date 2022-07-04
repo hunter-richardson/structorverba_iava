@@ -5,115 +5,115 @@ import androidx.annotation.NonNull;
 import java.time.Month;
 
 /**
- * \u0112numer\u0101ti\u014D haec m\u0113ns\u0113s ann\u012B d\u0113signat.
+ * Ēnumerātiō haec mēnsās annī dēsignat.
  * @see Month
  */
 @SuppressWarnings("SpellCheckingInspection")
 public enum Mensis {
   /**
-   * Valor hic m\u0113nsem I\u0101nu\u0101ri\u012B d\u0113signat.
+   * Valor hic mēnsem Iānuāriī dēsignat.
    */
-  IANUARII("I\u0101nu\u0101ri\u012B"),
+  IANUARII("Iānuāriī"),
 
   /**
-   * Valor hic m\u0113nsem Febru\u0101ri\u012B d\u0113signat.
+   * Valor hic mēnsem Februāriī dēsignat.
    */
-  FEBRUARII("Febru\u0101ri\u012B"),
+  FEBRUARII("Februāriī"),
 
   /**
-   * Valor hic m\u0113nsem M\u0101rtis d\u0113signat.
+   * Valor hic mēnsem Mārtis dēsignat.
    */
-  MARTIS("M\u0101rtis"),
+  MARTIS("Mārtis"),
 
   /**
-   * Valor hic m\u0113nsem Apr\u012Blis d\u0113signat.
+   * Valor hic mēnsem Aprīlis dēsignat.
    */
-  APRILIS("Apr\u012Blis"),
+  APRILIS("Aprīlis"),
 
   /**
-   * Valor hic m\u0113nsem Mai\u012B d\u0113signat.
+   * Valor hic mēnsem Maiī dēsignat.
    */
-  MAII("Mai\u012B"),
+  MAII("Maiī"),
 
   /**
-   * Valor hic m\u0113nsem I\u016Bni\u012B d\u0113signat.
+   * Valor hic mēnsem Iūniī dēsignat.
    */
-  IUNII("I\u016Bni\u012B"),
+  IUNII("Iūniī"),
 
   /**
-   * Valor hic m\u0113nsem I\u016Bli\u012B d\u0113signat.
+   * Valor hic mēnsem Iūliī dēsignat.
    */
-  IULIUS("I\u016Bli\u012B"),
+  IULIUS("Iūliī"),
 
   /**
-   * Valor hic m\u0113nsem August\u012B d\u0113signat.
+   * Valor hic mēnsem Augustī dēsignat.
    */
-  AUGUSTI("August\u012B"),
+  AUGUSTI("Augustī"),
 
   /**
-   * Valor hic m\u0113nsem Septembris d\u0113signat.
+   * Valor hic mēnsem Septembris dēsignat.
    */
   SEPTEMBRIS("Septembris"),
 
   /**
-   * Valor hic m\u0113nsem Octobris d\u0113signat.
+   * Valor hic mēnsem Octobris dēsignat.
    */
-  OCTOBRIS("Oct\u014Dbris"),
+  OCTOBRIS("Octōbris"),
 
   /**
-   * Valor hic m\u0113nsem Novembris d\u0113signat.
+   * Valor hic mēnsem Novembris dēsignat.
    */
   NOVEMBRIS("Novembris"),
 
   /**
-   * Valor hic m\u0113nsem Decembris d\u0113signat.
+   * Valor hic mēnsem Decembris dēsignat.
    */
   DECEMBRIS("Decembris");
 
   /**
-   * Valor hic repraesent\u0101ti\u014Dnem scr\u012Bpta re\u012B huius d\u0113signat.
+   * Valor hic repraesentātiōnem scrīpta reī huius dēsignat.
    */
   public final @NonNull String scriptio;
 
   /**
-   * Officium hoc c\u014Dnstr\u016Bct\u014Drem re\u012B classis huius perpetrat.
-   * @param scrpt val\u014Drem {@link #scriptio} indicat.
+   * Officium hoc cōnstrūctōrem reī classis huius perpetrat.
+   * @param scrpt valōrem {@link #scriptio} indicat.
    */
   Mensis(@NonNull final String scrpt) {
     scriptio = scrpt;
   }
 
   /**
-   * Modus hic societ\u0101s intr\u0101 r\u0113s \u0113numer\u0101ti\u014Dn\u0113s huius r\u0113sque
-   * <a href="https://docs.oracle.com/javase/8/docs/api/java/time/Month.html">Month</a> d\u0113m\u014Dnstrat.
+   * Modus hic societās intrā rās ēnumerātiōnēs huius rēsque
+   * <a href="https://docs.oracle.com/javase/8/docs/api/java/time/Month.html">Month</a> dēmōnstrat.
    * <ul>
    *   <li>Valor <a href="https://docs.oracle.com/javase/8/docs/api/java/time/Month.html#JANUARY">JANUARY</a>
-   *   val\u014Drem {@link #IANUARII} c\u014Dnsociat.</li>
+   *   valōrem {@link #IANUARII} cōnsociat.</li>
    *   <li>Valor <a href="https://docs.oracle.com/javase/8/docs/api/java/time/Month.html#FEBRUARY">FEBRUARY</a>
-   *   val\u014Drem {@link #FEBRUARII} c\u014Dnsociat.</li>
+   *   valōrem {@link #FEBRUARII} cōnsociat.</li>
    *   <li>Valor <a href="https://docs.oracle.com/javase/8/docs/api/java/time/Month.html#MARCH">MARCH</a>
-   *   val\u014Drem {@link #MARTIS} c\u014Dnsociat.</li>
+   *   valōrem {@link #MARTIS} cōnsociat.</li>
    *   <li>Valor <a href="https://docs.oracle.com/javase/8/docs/api/java/time/Month.html#APRIL">APRIL</a>
-   *   val\u014Drem {@link #APRILIS} c\u014Dnsociat.</li>
+   *   valōrem {@link #APRILIS} cōnsociat.</li>
    *   <li>Valor <a href="https://docs.oracle.com/javase/8/docs/api/java/time/Month.html#MAY">MAY</a>
-   *   val\u014Drem {@link #MAII} c\u014Dnsociat.</li>
+   *   valōrem {@link #MAII} cōnsociat.</li>
    *   <li>Valor <a href="https://docs.oracle.com/javase/8/docs/api/java/time/Month.html#JUNE">JUNE</a>
-   *   val\u014Drem {@link #IUNII} c\u014Dnsociat.</li>
+   *   valōrem {@link #IUNII} cōnsociat.</li>
    *   <li>Valor <a href="https://docs.oracle.com/javase/8/docs/api/java/time/Month.html#JULY">JULY</a>
-   *   val\u014Drem {@link #IULIUS} c\u014Dnsociat.</li>
+   *   valōrem {@link #IULIUS} cōnsociat.</li>
    *   <li>Valor <a href="https://docs.oracle.com/javase/8/docs/api/java/time/Month.html#AUGUST">AUGUST</a>
-   *   val\u014Drem {@link #AUGUSTI} c\u014Dnsociat.</li>
+   *   valōrem {@link #AUGUSTI} cōnsociat.</li>
    *   <li>Valor <a href="https://docs.oracle.com/javase/8/docs/api/java/time/Month.html#SEPTEMBER">SEPTEMBER</a>
-   *   val\u014Drem {@link #SEPTEMBRIS} c\u014Dnsociat.</li>
+   *   valōrem {@link #SEPTEMBRIS} cōnsociat.</li>
    *   <li>Valor <a href="https://docs.oracle.com/javase/8/docs/api/java/time/Month.html#OCTOBER">OCTOBER</a>
-   *   val\u014Drem {@link #OCTOBRIS} c\u014Dnsociat.</li>
+   *   valōrem {@link #OCTOBRIS} cōnsociat.</li>
    *   <li>Valor <a href="https://docs.oracle.com/javase/8/docs/api/java/time/Month.html#NOVEMBER">NOVEMBER</a>
-   *   val\u014Drem {@link #NOVEMBRIS} c\u014Dnsociat.</li>
+   *   valōrem {@link #NOVEMBRIS} cōnsociat.</li>
    *   <li>Valor <a href="https://docs.oracle.com/javase/8/docs/api/java/time/Month.html#DECEMBER">DECEMBER</a>
-   *   val\u014Drem {@link #DECEMBRIS} c\u014Dnsociat.</li>
+   *   valōrem {@link #DECEMBRIS} cōnsociat.</li>
    * </ul>
    * @param enumeratio valor tentandus.
-   * @return Rem pet\u012Btam \u0113numer\u0101ti\u014Dnis {@link Mensis}
+   * @return Rem petītam ēnumerātiōnis {@link Mensis}
    */
   @NonNull public static Mensis indicam(@NonNull final Month enumeratio) {
     return switch (enumeratio) {

@@ -14,12 +14,12 @@ import org.junit.jupiter.api.TestMethodOrder;
 import lombok.Getter;
 
 /**
- * Classis {@link DoloremIpsum} versi\u014Dnem pr\u012Bmam tent\u0101min\u0101rum programm\u0101t\u012B Str\u016BctorVerba d\u0113f\u012Bnit. <br>
- * Laudem Marc\u014D Tulli\u014D Cicer\u014Dn\u012B cum parte dialog\u012B S\u014Dcraticus "D\u0113 F\u012Bnibus Bon\u014Drum et M\u0101l\u014Drum"
- * in libr\u014D pr\u012Bm\u014D secti\u014Dne decim\u0101 vers\u016B duotr\u012Bc\u0113sim\u014D c\u014Dnstruat. <br>
- * Vers\u016Bs ante tri\u0113ntem pr\u012Bmam incipit et post f\u012Bn\u0101lem f\u012Bnit. <br>
- * Pars illa est agnita po\u0113mam istam "Lorem Ipsum" \u012Bnsp\u012Br\u0101visse.
- * @see <a href="http://www.thelatinlibrary.com/cicero/fin1.shtml#32">D\u0113 F\u012Bnibus Bon\u014Drum et Mal\u014Drum</a>
+ * Classis {@link DoloremIpsum} versiōnem prīmam tentāminārum programmātī StrūctorVerba dēfīnit. <br>
+ * Laudem Marcō Tulliō Cicerōnī cum parte dialogī Sōcraticus "Dē Fīnibus Bonōrum et Mālōrum"
+ * in librō prīmō sectiōne decimā versū duotrīcēsimō cōnstruat. <br>
+ * Versūs ante triēntem prīmam incipit et post fīnālem fīnit. <br>
+ * Pars illa est agnita poēmam istam "Lorem Ipsum" īnspīrāvisse.
+ * @see <a href="http://www.thelatinlibrary.com/cicero/fin1.shtml#32">Dē Fīnibus Bonōrum et Malōrum</a>
  * @see <a href="https://lipsum.com">"Lorem Ipsum"</a>
  */
 @SuppressWarnings({"SpellCheckingInspection", "FieldCanBeLocal", "NewClassNamingConvention"})
@@ -28,22 +28,22 @@ final class DoloremIpsum extends Omne {
   @NonNull @Getter(lazy = true)
   private final StructorVerba structor = StructorVerba.faciendum.get();
 
-  @NonNull private final String productaPrima   = "Neque porr\u014D quisquam est";
-  @NonNull private final String productaSecunda = "Qui dol\u014Drem ipsum quia dolor sit amet";
-  @NonNull private final String productaTertia  = "C\u014Dnsectetur adipisci velit";
-  @NonNull private final String productaQuarta  = "Sed quia n\u014Dnnumquam eius modi tempora incidunt";
-  @NonNull private final String productaQuinta  = "Ut lab\u014Dre et dol\u014Dre magnam aliquam quaerat voluptatem";
+  @NonNull private final String productaPrima   = "Neque porrō quisquam est";
+  @NonNull private final String productaSecunda = "Qui dolōrem ipsum quia dolor sit amet";
+  @NonNull private final String productaTertia  = "Cōnsectetur adipisci velit";
+  @NonNull private final String productaQuarta  = "Sed quia nōnnumquam eius modi tempora incidunt";
+  @NonNull private final String productaQuinta  = "Ut labōre et dolōre magnam aliquam quaerat voluptatem";
   @NonNull private final String productaCuncta  = String.join(" ", productaPrima, productaSecunda, productaTertia, productaQuarta, productaQuinta);
 
   /**
-   * Modus hic partem pr\u012Bmam tentat. <br>
-   * Verba "Neque porr\u014D quisquam est" pr\u014Dd\u016Bcat.
+   * Modus hic partem prīmam tentat. <br>
+   * Verba "Neque porrō quisquam est" prōdūcat.
    */
   @Test @Order(1)
   public void prima() {
-    System.out.println(new Tentamen.TentamenVerbale(productaPrima, "pr\u012Bma")
-                         .exsequar(structor.strue(structor.adveniam("neque", Categoria.CONIUNCTIVUM),
-                                                  structor.adveniam("porr\u014D", Categoria.ADVERBIUM),
+    System.out.println(new Tentamen.TentamenVerbale(productaPrima, "prīma")
+                         .exsequar(structor.strue(structor.adveniam("neque", Categoria.CONIUNCTIO),
+                                                  structor.adveniam("porrō", Categoria.ADVERBIUM),
                                                   structor.adveniam("quidquam", Categoria.PRONOMEN,
                                                                     Specialitas.COMMUNE, Genus.MASCULINUM,
                                                                     Casus.NOMINATIVUS, Numeralis.SINGULARIS),
@@ -54,12 +54,12 @@ final class DoloremIpsum extends Omne {
 
   /**
    * Modus hic partem secundam tentat. <br>
-   * Verba "Qu\u012B dol\u014Drem ipsum quia dolor sit amet" pr\u014Dd\u016Bcat.
+   * Verba "Quī dolōrem ipsum quia dolor sit amet" prōdūcat.
    */
   @Test @Order(2)
   public void secunda() {
     System.out.println(new Tentamen.TentamenVerbale(productaSecunda, "secunda")
-                         .exsequar(structor.strue(structor.adveniam("quid", Categoria.PRONOMEN,
+                         .exsequar(structor.strue(structor.adveniam("quod", Categoria.PRONOMEN,
                                                                     Specialitas.COMMUNE, Genus.MASCULINUM,
                                                                     Casus.NOMINATIVUS, Numeralis.PLURALIS),
                                                   structor.adveniam("dolor", Categoria.NOMEN,
@@ -75,22 +75,22 @@ final class DoloremIpsum extends Omne {
                                                   structor.adveniam("esse", Categoria.ACTUS,
                                                                     Modus.SUBIUNCTIVUS, Vox.ACTIVA, Tempus.PRAESENS,
                                                                     Numeralis.SINGULARIS, Persona.TERTIA),
-                                                  structor.adveniam("am\u0101re", Categoria.ACTUS,
+                                                  structor.adveniam("amāre", Categoria.ACTUS,
                                                                     Modus.SUBIUNCTIVUS, Vox.ACTIVA, Tempus.PRAESENS,
                                                                     Numeralis.SINGULARIS, Persona.TERTIA))));
   }
 
   /**
    * Modus hic partem tertiam tentat. <br>
-   * Verba "C\u014Dnsect\u0113tur adip\u012Bsc\u012B velit" pr\u014Dd\u016Bcat.
+   * Verba "Cōnsectētur adipīscī velit" prōdūcat.
    */
   @Test @Order(3)
   public void tertia() {
     System.out.println(new Tentamen.TentamenVerbale(productaTertia, "tertia")
-                         .exsequar(structor.strue(structor.adveniam("consect\u0101r\u012B", Categoria.ACTUS,
+                         .exsequar(structor.strue(structor.adveniam("consectārī", Categoria.ACTUS,
                                                                     Modus.SUBIUNCTIVUS, Vox.ACTIVA, Tempus.PRAESENS,
                                                                     Numeralis.SINGULARIS, Persona.TERTIA),
-                                                  structor.adveniam("adip\u012Bsc\u012B", Categoria.ACTUS,
+                                                  structor.adveniam("adipīscī", Categoria.ACTUS,
                                                                     Modus.INFINITIVUS, Vox.ACTIVA, Tempus.PRAESENS),
                                                   structor.adveniam("velle", Categoria.ACTUS,
                                                                     Modus.SUBIUNCTIVUS, Vox.ACTIVA, Tempus.PRAESENS,
@@ -98,15 +98,15 @@ final class DoloremIpsum extends Omne {
   }
 
   /**
-   * Modus hic partem qu\u0101rtam tentat. <br>
-   * Verba "Sed quia n\u014Dnnumquam eius mod\u012B tempora incidunt" pr\u014Dd\u016Bcat. <br>
+   * Modus hic partem quārtam tentat. <br>
+   * Verba "Sed quia nōnnumquam eius modī tempora incidunt" prōdūcat. <br>
    */
   @Test @Order(4)
   public void quarta() {
-    System.out.println(new Tentamen.TentamenVerbale(productaQuarta, "qu\u0101rta")
-                         .exsequar(structor.strue(structor.adveniam("sed", Categoria.CONIUNCTIVUM),
+    System.out.println(new Tentamen.TentamenVerbale(productaQuarta, "quārta")
+                         .exsequar(structor.strue(structor.adveniam("sed", Categoria.CONIUNCTIO),
                                                   structor.adveniam("quia", Categoria.ADVERBIUM),
-                                                  structor.adveniam("n\u014Dnnumquam", Categoria.ADVERBIUM),
+                                                  structor.adveniam("nōnnumquam", Categoria.ADVERBIUM),
                                                   structor.adveniam("id", Categoria.PRONOMEN,
                                                                     Specialitas.COMMUNE, Genus.MASCULINUM,
                                                                     Casus.GENITIVUS, Numeralis.SINGULARIS),
@@ -122,17 +122,17 @@ final class DoloremIpsum extends Omne {
   }
 
   /**
-   * Modus hic partem qu\u0101rtam tentat. <br>
-   * Verba "Ut lab\u014Dre et dol\u014Dre magnam aliquam quaerat volupt\u0101tem" pr\u014Dd\u016Bcat.
+   * Modus hic partem quintam tentat. <br>
+   * Verba "Ut labōre et dolōre magnam aliquam quaerat voluptātem" prōdūcat.
    */
   @Test @Order(5)
   public void quinta() {
-    System.out.println(new Tentamen.TentamenVerbale(productaQuinta, "qu\u012Bnta")
-                         .exsequar(structor.strue(structor.adveniam("ut", Categoria.CONIUNCTIVUM),
+    System.out.println(new Tentamen.TentamenVerbale(productaQuinta, "quīnta")
+                         .exsequar(structor.strue(structor.adveniam("ut", Categoria.CONIUNCTIO),
                                                   structor.adveniam("labor", Categoria.NOMEN,
                                                                     Specialitas.COMMUNE, Genus.MASCULINUM,
                                                                     Casus.ABLATIVUS, Numeralis.SINGULARIS),
-                                                  structor.adveniam("et", Categoria.CONIUNCTIVUM),
+                                                  structor.adveniam("et", Categoria.CONIUNCTIO),
                                                   structor.adveniam("dolor", Categoria.NOMEN,
                                                                     Specialitas.COMMUNE, Genus.MASCULINUM,
                                                                     Casus.ABLATIVUS, Numeralis.SINGULARIS),
@@ -145,21 +145,21 @@ final class DoloremIpsum extends Omne {
                                                   structor.adveniam("quaerere", Categoria.ACTUS,
                                                                     Modus.SUBIUNCTIVUS, Vox.ACTIVA, Tempus.PRAESENS,
                                                                     Numeralis.SINGULARIS, Persona.TERTIA),
-                                                  structor.adveniam("volupt\u0101s", Categoria.NOMEN,
+                                                  structor.adveniam("voluptās", Categoria.NOMEN,
                                                                     Specialitas.COMMUNE, Genus.FEMININUM,
                                                                     Casus.ACCUSATIVUS, Numeralis.SINGULARIS))));
   }
 
   /**
-   * Modus hic tent\u0101mina omn\u0113s praevia coniugat. <br>
-   * Verba "Neque porr\u014D quisquam est qu\u012B dol\u014Drem ipsum quia dolor sit amet c\u014Dnsect\u0113tur adip\u012Bsc\u012B velit sed quia n\u014Dnnumquam eius mod\u012B tempora incidunt ut lab\u014Dre et dol\u014Dre magnam aliquam quaerat voluptatem" pr\u014Dd\u016Bcat. <br>
-   * Abori\u0113tur s\u012B tent\u0101minum aliquid praevium aboriuntur atque prosper\u0101bitur s\u012B omn\u0113s prosperantur.
+   * Modus hic tentāmina omnēs praevia coniugat. <br>
+   * Verba "Neque porrō quisquam est quī dolōrem ipsum quia dolor sit amet cōnsectētur adipīscī velit sed quia nōnnumquam eius modī tempora incidunt ut labōre et dolōre magnam aliquam quaerat voluptatem" prōdūcat. <br>
+   * Aboriētur sī tentāminum aliquid praevium aboriuntur atque prosperābitur sī omnēs prosperantur.
    */
   @Test @Order(6)
   public void cuncta() {
-    System.out.println(new Tentamen.TentamenVerbale(productaCuncta, "c\u016Bncta")
-                         .exsequar(structor.strue(structor.adveniam("neque", Categoria.CONIUNCTIVUM),
-                                                  structor.adveniam("porr\u014D", Categoria.ADVERBIUM),
+    System.out.println(new Tentamen.TentamenVerbale(productaCuncta, "cūncta")
+                         .exsequar(structor.strue(structor.adveniam("neque", Categoria.CONIUNCTIO),
+                                                  structor.adveniam("porrō", Categoria.ADVERBIUM),
                                                   structor.adveniam("quidquam", Categoria.PRONOMEN,
                                                                     Specialitas.COMMUNE, Genus.MASCULINUM,
                                                                     Casus.NOMINATIVUS, Numeralis.SINGULARIS),
@@ -182,21 +182,21 @@ final class DoloremIpsum extends Omne {
                                                   structor.adveniam("esse", Categoria.ACTUS,
                                                                     Modus.SUBIUNCTIVUS, Vox.ACTIVA, Tempus.PRAESENS,
                                                                     Numeralis.SINGULARIS, Persona.TERTIA),
-                                                  structor.adveniam("am\u0101re", Categoria.ACTUS,
+                                                  structor.adveniam("amāre", Categoria.ACTUS,
                                                                     Modus.SUBIUNCTIVUS, Vox.ACTIVA, Tempus.PRAESENS,
                                                                     Numeralis.SINGULARIS, Persona.TERTIA),
-                                                  structor.adveniam("consect\u0101r\u012B", Categoria.ACTUS,
+                                                  structor.adveniam("consectārī", Categoria.ACTUS,
                                                                     Modus.SUBIUNCTIVUS, Vox.ACTIVA, Tempus.PRAESENS,
                                                                     Numeralis.SINGULARIS, Persona.TERTIA),
-                                                  structor.adveniam("adip\u012Bsc\u012B", Categoria.ACTUS,
+                                                  structor.adveniam("adipīscī", Categoria.ACTUS,
                                                                     Modus.INFINITIVUS, Vox.ACTIVA, Tempus.PRAESENS,
                                                                     Numeralis.SINGULARIS, Persona.TERTIA),
                                                   structor.adveniam("velle", Categoria.ACTUS,
                                                                     Modus.SUBIUNCTIVUS, Vox.ACTIVA, Tempus.PRAESENS,
                                                                     Numeralis.SINGULARIS, Persona.TERTIA),
-                                                  structor.adveniam("sed", Categoria.CONIUNCTIVUM),
+                                                  structor.adveniam("sed", Categoria.CONIUNCTIO),
                                                   structor.adveniam("quia", Categoria.ADVERBIUM),
-                                                  structor.adveniam("n\u014Dnnumquam", Categoria.ADVERBIUM),
+                                                  structor.adveniam("nōnnumquam", Categoria.ADVERBIUM),
                                                   structor.adveniam("id", Categoria.PRONOMEN,
                                                                     Specialitas.COMMUNE, Genus.MASCULINUM,
                                                                     Casus.GENITIVUS, Numeralis.SINGULARIS),
@@ -209,11 +209,11 @@ final class DoloremIpsum extends Omne {
                                                   structor.adveniam("incidere", Categoria.ACTUS,
                                                                     Modus.INDICATIVUS, Vox.ACTIVA, Tempus.PRAESENS,
                                                                     Numeralis.PLURALIS, Persona.TERTIA),
-                                                  structor.adveniam("ut", Categoria.CONIUNCTIVUM),
+                                                  structor.adveniam("ut", Categoria.CONIUNCTIO),
                                                   structor.adveniam("labor", Categoria.NOMEN,
                                                                     Specialitas.COMMUNE, Genus.MASCULINUM,
                                                                     Casus.ABLATIVUS, Numeralis.SINGULARIS),
-                                                  structor.adveniam("et", Categoria.CONIUNCTIVUM),
+                                                  structor.adveniam("et", Categoria.CONIUNCTIO),
                                                   structor.adveniam("dolor", Categoria.NOMEN,
                                                                     Specialitas.COMMUNE, Genus.MASCULINUM,
                                                                     Casus.ABLATIVUS, Numeralis.SINGULARIS),
@@ -226,7 +226,7 @@ final class DoloremIpsum extends Omne {
                                                   structor.adveniam("quaerere", Categoria.ACTUS,
                                                                     Modus.SUBIUNCTIVUS, Vox.ACTIVA, Tempus.PRAESENS,
                                                                     Numeralis.SINGULARIS, Persona.TERTIA),
-                                                  structor.adveniam("volupt\u0101s", Categoria.NOMEN,
+                                                  structor.adveniam("voluptās", Categoria.NOMEN,
                                                                     Specialitas.COMMUNE, Genus.FEMININUM,
                                                                     Casus.ACCUSATIVUS, Numeralis.SINGULARIS))));
   }

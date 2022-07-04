@@ -12,28 +12,28 @@ import java.util.Arrays;
 import java.util.function.*;
 
 /**
- * Classis {@link Inventor} c\014Dlit r\u0113s classis {@link VerbumMultiplex} qu\u0101s r\u0113s classis {@link TenorMultiplicibus}
+ * Classis {@link Inventor} cōlit rēs classis {@link VerbumMultiplex} quās rēs classis {@link TenorMultiplicibus}
  * referat.
  * @param <Hoc> classis extenta classis {@link VerbumMultiplex}
  */
 @SuppressWarnings("SpellCheckingInspection")
 public abstract class Inventor <Hoc extends VerbumMultiplex <Hoc>> extends Omne {
   /**
-   * Valor hic est v\u0101s classis {@link Nuntius} class\u012B hui.
+   * Valor hic est vās classis {@link Nuntius} classī hui.
    */
   @NonNull protected final Nuntius nuntius;
 
   /**
-   * Officium hoc c\014Dnstruct\014Drem re\u012B classis huius perpetrat.
-   * @param nts val\014Drem {@link #nuntius} supplet.
+   * Officium hoc cōnstructōrem reī classis huius perpetrat.
+   * @param nts valōrem {@link #nuntius} supplet.
    */
   protected Inventor(@NonNull final Supplier <? extends Nuntius> nts) {
     nuntius = nts.get();
   }
 
   /**
-   * Modus hic seriem {@code illa} re\u012B huic indit.
-   * @param illa seriem \u0113numer\u0101ti\014Dnum indendam
+   * Modus hic seriem {@code illa} reī huic indit.
+   * @param illa seriem ēnumerātiōnum indendam
    * @return Rem huius
    * @see #allegam(Enum)
    */
@@ -43,7 +43,7 @@ public abstract class Inventor <Hoc extends VerbumMultiplex <Hoc>> extends Omne 
   }
 
   /**
-   * @return Quaesti\014Dnem quam r\u0113s classis {@link LectorMultiplicibus} \u016Bt\u0101tur r\u0113s classis {@link Hoc} percolere
+   * @return Quaestiōnem quam rēs classis {@link LectorMultiplicibus} ūtātur rēs classis {@link Hoc} percolere
    * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Predicate.html">Prediate</a>
    */
   @NonNull public abstract Predicate <Hoc> inquiram();
@@ -54,8 +54,8 @@ public abstract class Inventor <Hoc extends VerbumMultiplex <Hoc>> extends Omne 
   public abstract void restituo();
 
   /**
-   * Modus hic \u0113numer\u0101ti\014Dnem singulum {@code illud} re\u012B huic indit.
-   * @param illud \u0113numer\u0101ti\014Dnem indendam
+   * Modus hic ēnumerātiōnem singulum {@code illud} reī huic indit.
+   * @param illud ēnumerātiōnem indendam
    */
   protected abstract void allegam(final Enum <?> illud);
 }

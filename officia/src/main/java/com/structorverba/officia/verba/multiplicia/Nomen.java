@@ -1,24 +1,23 @@
 package com.structorverba.officia.verba.multiplicia;
 
-import androidx.annotation.*;
 import androidx.annotation.NonNull;
+import androidx.annotation.*;
 import com.structorverba.officia.conditores.multiplicia.ConditorNominibus;
+import com.structorverba.officia.enumerationes.*;
 import com.structorverba.officia.inventores.InventorNominibus;
 import com.structorverba.officia.lectores.LectorMultiplicibus;
 import com.structorverba.officia.nuntii.*;
 import com.structorverba.officia.tenores.TenorMultiplicibus;
-import com.structorverba.officia.enumerationes.*;
-
 import jakarta.ejb.Singleton;
 import lombok.*;
-import org.apache.commons.lang3.ObjectUtils;
+import org.apache.commons.lang3.*;
 
 import java.util.function.Supplier;
 
 /**
- * Classis {@link Nomen} repraesentat n\u014Dmina ut coniect\u0113ris. <br>
- * R\u0113s classis huius cat\u0113goriam {@link Categoria#NOMEN} \u016Btuntur c\u014Dnserv\u0101taque sunt in
- * scr\u012Bni\u014D <a href="{@docRoot}/../src/main/resources">auxili\u0101r\u0113s</a>/n\u014Dmina.
+ * Classis {@link Nomen} repraesentat nōmina ut coniectēris. <br>
+ * Rēs classis huius catēgoriam {@link Categoria#NOMEN} ūtuntur cōnservātaque sunt in
+ * scrīniō <a href="{@docRoot}/../src/main/resources">auxiliārēs</a>/nōmina.
  * @see LectorMultiplicibus.LectorNominibus
  * @see TenorMultiplicibus.TenorNominibus
  * @see InventorNominibus
@@ -28,7 +27,7 @@ import java.util.function.Supplier;
 @SuppressWarnings("SpellCheckingInspection")
 public final class Nomen extends Nominalis <Nomen> {
   /**
-   * Valor hic tempus re\u012B huius d\u0113signat.
+   * Valor hic tempus reī huius dēsignat.
    * @see Modus
    */
   @NonNull public final Tempus tempus;
@@ -36,25 +35,25 @@ public final class Nomen extends Nominalis <Nomen> {
   @Getter(lazy = true)
   @NonNull private final NuntiusNominum nuntius = NuntiusNominum.faciendum.get();
 
-  @Builder(access = AccessLevel.PUBLIC, toBuilder = true)
+  @Builder(access = AccessLevel.PRIVATE, toBuilder = true)
   private Nomen(@NonNull final Specialitas specialitas, @NonNull final Genus genus,
                 @NonNull final Casus casus, @NonNull final Numeralis numeralis,
                 @NonNull final Tempus tempus, @NonNull final String lemma,
                 @NonNull final String scriptio) {
     super(Categoria.NOMEN, specialitas, genus, casus, numeralis, lemma, scriptio);
     this.tempus = tempus;
-    nuntius.plusGarrio("Scr\u016Bbor ut", scriptio);
+    nuntius.plusGarrio("Scrībor ut", scriptio);
   }
 
   /**
-   * Classis {@link NuntiusNominum} est v\u0101s classis {@link Nuntius} class\u012B {@link Nomen}}
+   * Classis {@link NuntiusNominum} est vās classis {@link Nuntius} classī {@link Nomen}}
    * @see Nomen
    */
   @Singleton private static final class NuntiusNominum extends Nuntius {
     @Nullable private static NuntiusNominum instantia = null;
 
     /**
-     * Valor hic viam re\u012B classis huiuc facit.
+     * Valor hic viam reī classis huiuc facit.
      * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
      */
     @NonNull private static final Supplier<NuntiusNominum> faciendum =
@@ -62,6 +61,59 @@ public final class Nomen extends Nominalis <Nomen> {
 
     private NuntiusNominum() {
       super(ParametriNuntii.para(Nomen.class));
+    }
+  }
+
+  public static final class ConstructorNominis extends Constructor<Nomen> {
+    @NonNull private Specialitas specialitas = Specialitas.NULLUM;
+    @NonNull private Genus genus = Genus.NULLUM;
+    @NonNull private Casus casus = Casus.DERECTUS;
+    @NonNull private Numeralis numeralis = Numeralis.NULLUS;
+    @NonNull private Tempus tempus = Tempus.INTEMPORALE;
+
+    public void specialitas(@NonNull final Specialitas specialitas) {
+      this.specialitas = specialitas;
+    }
+
+    public void genus(@NonNull final Genus genus) {
+      this.genus = genus;
+    }
+
+    public void casus(@NonNull final Casus casus) {
+      this.casus = casus;
+    }
+
+    public void numeralis(@NonNull final Numeralis numeralis) {
+      this.numeralis = numeralis;
+    }
+
+    public void tempus(@NonNull final Tempus tempus) {
+      this.tempus = tempus;
+    }
+
+    @Nullable @Override
+    public Nomen build() {
+      return paratus() ? Nomen.builder().lemma(lemma).specialitas(specialitas).genus(genus).casus(casus)
+                                        .numeralis(numeralis).tempus(tempus).scriptio(scriptio).build()
+                       : null;
+    }
+
+    /**
+     * {@inheritDoc}
+     * @see Specialitas#NULLUM
+     * @see Genus#NULLUM
+     * @see Casus#DERECTUS
+     * @see Numeralis#NULLUS
+     * @see Tempus#INTEMPORALE
+     */
+    @Override public void restituo() {
+      specialitas = Specialitas.NULLUM;
+      genus = Genus.NULLUM;
+      casus = Casus.DERECTUS;
+      numeralis = Numeralis.NULLUS;
+      tempus = Tempus.INTEMPORALE;
+      scriptio = StringUtils.EMPTY;
+      lemma = StringUtils.EMPTY;
     }
   }
 }

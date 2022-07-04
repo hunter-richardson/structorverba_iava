@@ -16,8 +16,8 @@ import java.util.*;
 import java.util.function.Supplier;
 
 /**
- * Classis {@link StructorVerba} accessum mod\u012Bs omnibus programm\u0101tis Str\u016BctorVerba pr\u014Dvidet. <br>
- * S\u014Dlum re\u012B classis huiuc acc\u0113dendus lic\u0113re \u016Bsum pl\u0113num programm\u0101tis \u016Bs\u016Bfructu\u0101ri\u012Bs.
+ * Classis {@link StructorVerba} accessum modīs omnibus programmātis StrūctorVerba prōvidet. <br>
+ * Sōlum reī classis huiuc accēdendus licēre ūsum plēnum programmātis ūsūfructuāriīs.
  */
 @SuppressWarnings({ "SpellCheckingInspection", "unused" })
 @Singleton
@@ -26,7 +26,7 @@ public final class StructorVerba extends Omne {
   @Nullable private static StructorVerba instantia = null;
 
   /**
-   * Valor hic viam re\u012B classis huiuc facit.
+   * Valor hic viam reī classis huiuc facit.
    * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
    */
   @NonNull public static final Supplier <StructorVerba> faciendum =
@@ -54,8 +54,8 @@ public final class StructorVerba extends Omne {
   @NonNull private final LectorMultiplicibus.LectorNominibus nomina = LectorMultiplicibus.LectorNominibus.faciendum.get();
 
   @Getter(value = AccessLevel.PRIVATE, lazy = true)
-  @NonNull private final LectorSimplicibus.LectorConiunctivis coniunctiva =
-    LectorSimplicibus.LectorConiunctivis.faciendum.get();
+  @NonNull private final LectorSimplicibus.LectorConiunctionibus coniunctiones =
+    LectorSimplicibus.LectorConiunctionibus.faciendum.get();
 
   @Getter(value = AccessLevel.PRIVATE, lazy = true)
   @NonNull private final LectorSimplicibus.LectorInteriectionibus interiectiones =
@@ -65,8 +65,8 @@ public final class StructorVerba extends Omne {
   @NonNull private final LectorPraepositionibus praepositiones = LectorPraepositionibus.faciendum.get();
 
   /**
-   * Modus hic rem apta classis {@link Lector} val\u014Dr\u012B {@code categoria} s\u0113ligit val\u014Drem {@code lemma} immittit.
-   * Val\u014Drem {@code null} refert s\u012B rem n\u016Blla classis {@link Lector} valorem {@code categoria} quadrat.
+   * Modus hic rem apta classis {@link Lector} valōrī {@code categoria} sēligit valōrem {@code lemma} immittit.
+   * Valōrem {@code null} refert sī rem nūlla classis {@link Lector} valorem {@code categoria} quadrat.
    * @param lemma  valor {@link Verbum#lemma} immittendus
    * @param categoria valor tentendus
    * @param <Hoc>     classis extenta classis {@link VerbumSimplex}
@@ -77,28 +77,28 @@ public final class StructorVerba extends Omne {
   @SuppressWarnings("unchecked")
   @Nullable public <Hoc extends Verbum <Hoc>> Hoc adveniam(@NonNull final String lemma,
                                                            @NonNull final Categoria categoria) {
-    try {
+    if(Categoria.multiplex(categoria)) {
+      return null;
+    } else {
       return (Hoc) switch (categoria) {
         case NUMERUS -> numeram(lemma);
         case PRAEPOSITIO -> praepositiones.adveniam(lemma);
         default -> Objects.requireNonNull(switch (categoria) {
-          case CONIUNCTIVUM -> coniunctiva;
+          case CONIUNCTIO -> coniunctiones;
           case INTERIECTIO -> interiectiones;
           default -> null;
         }).adveniam(lemma);
       };
-    } catch (NullPointerException e) {
-      return null;
     }
   }
 
   /**
-   * Modus hic rem apta classis {@link LectorMultiplicibus} val\u014Dr\u012B {@code categoria} s\u0113ligit val\u014Dr\u0113s {@code
-   * lemma}que {@code illa}que immittit. <br> Val\u014Dr\u0113s {@code lemma}que {@code illa}que mod\u014D {@link #adveniam(String,
-   * Categoria)} immittit s\u012B rem n\u016Blla classis {@link LectorMultiplicibus} val\u014Drem {@code categoria} quadrat.
+   * Modus hic rem apta classis {@link LectorMultiplicibus} valōrī {@code categoria} sēligit valōrēs {@code
+   * lemma}que {@code illa}que immittit. <br> Valōrēs {@code lemma}que {@code illa}que modō {@link #adveniam(String,
+   * Categoria)} immittit sī rem nūlla classis {@link LectorMultiplicibus} valōrem {@code categoria} quadrat.
    * @param lemma  valor {@link Verbum#lemma} immittendus
    * @param categoria valor tentendus
-   * @param illa      val\u014Dr\u0113s immittend\u012B
+   * @param illa      valōrēs immittendī
    * @param <Hoc>     classis extenta classis {@link VerbumMultiplex}
    * @return rem classis {@link Hoc}
    * @see Categoria
@@ -107,62 +107,82 @@ public final class StructorVerba extends Omne {
   @Nullable public <Hoc extends Verbum <Hoc>> Hoc adveniam(@NonNull final String lemma,
                                                            @NonNull final Categoria categoria,
                                                            @NonNull final Enum <?>... illa) {
-    return (Hoc) switch (categoria) {
-      case PRAEPOSITIO -> praepositiones.adveniam(lemma);
-      case NUMERUS ->  numeram(lemma);
-      case CONIUNCTIVUM, INTERIECTIO -> (switch (categoria) {
-        case CONIUNCTIVUM -> coniunctiva;
-        case INTERIECTIO -> interiectiones;
-        default -> null;
-      }).adveniam(lemma);
-      case ACTUS, ADIECTIVUM, ADVERBIUM, NOMEN, PRONOMEN -> (switch (categoria) {
+    if(Categoria.multiplex(categoria)) {
+      return (Hoc) (Objects.requireNonNull(switch (categoria) {
         case ACTUS -> acti;
         case ADIECTIVUM -> adiectiva;
         case ADVERBIUM -> adverbia;
         case NOMEN -> nomina;
         case PRONOMEN -> pronomina;
         default -> null;
-      }).adveniam(lemma, illa);
-    };
+      })).adveniam(lemma, illa);
+    } else if (Categoria.singulaScapis(categoria)) {
+      return (Hoc) switch (categoria) {
+        case PRAEPOSITIO -> praepositiones.adveniam(lemma);
+        case NUMERUS ->  numeram(lemma);
+        default -> null;
+      };
+    } else {
+      return (Hoc) Objects.requireNonNull(switch (categoria) {
+          case CONIUNCTIO -> coniunctiones;
+          case INTERIECTIO -> interiectiones;
+          default -> null;
+        }).adveniam(lemma);
+    }
   }
 
   @SuppressWarnings("unchecked")
   @Nullable public <Hoc extends Verbum<Hoc>> Hoc fortuitumLegam(@NonNull final Categoria categoria) {
-    return (Hoc) switch (categoria) {
-      case NUMERUS -> fortuitumNumeram();
-      case PRAEPOSITIO -> praepositiones.fortuitumLegam();
-      case ACTUS, ADIECTIVUM, ADVERBIUM, CONIUNCTIVUM, INTERIECTIO, NOMEN, PRONOMEN -> (switch (categoria) {
+    if(Categoria.singulaScapis(categoria)) {
+      return (Hoc) (Objects.requireNonNull(switch (categoria) {
         case ACTUS -> acti;
         case ADIECTIVUM -> adiectiva;
         case ADVERBIUM -> adverbia;
-        case CONIUNCTIVUM -> coniunctiva;
+        case CONIUNCTIO -> coniunctiones;
         case INTERIECTIO -> interiectiones;
         case NOMEN -> nomina;
         case PRONOMEN -> pronomina;
         default -> null;
-      }).fortuitumLegam();
-    };
+      })).fortuitumLegam();
+    } else {
+      return (Hoc) switch (categoria) {
+        case NUMERUS -> fortuitumNumeram();
+        case PRAEPOSITIO -> praepositiones.fortuitumLegam();
+        default -> null;
+      };
+    }
   }
 
+  @SuppressWarnings("unchecked")
   @Nullable public <Hoc extends Verbum<Hoc>> Hoc fortuitumLegam(@NonNull final String lemma,
                                                                 @NonNull final Categoria categoria) {
-    try {
-      return (Hoc) Objects.requireNonNull(switch (categoria) {
-        case ACTUS -> acti;
-        case ADIECTIVUM -> adiectiva;
-        case ADVERBIUM -> adverbia;
-        case NOMEN -> nomina;
-        case PRONOMEN -> pronomina;
+    if(Categoria.multiplex(categoria)) {
+        return (Hoc) Objects.requireNonNull(switch (categoria) {
+          case ACTUS -> acti;
+          case ADIECTIVUM -> adiectiva;
+          case ADVERBIUM -> adverbia;
+          case NOMEN -> nomina;
+          case PRONOMEN -> pronomina;
+          default -> null;
+        }).fortuitumLegam(lemma);
+    } else if(Categoria.singulaScapis(categoria)) {
+      return (Hoc) (Objects.requireNonNull(switch (categoria) {
+        case CONIUNCTIO -> coniunctiones;
+        case INTERIECTIO -> interiectiones;
         default -> null;
-      }).fortuitumLegam(lemma);
-    } catch (NullPointerException e) {
-      return null;
+      })).fortuitumLegam();
+    } else {
+      return (Hoc) switch (categoria) {
+        case NUMERUS -> fortuitumNumeram();
+        case PRAEPOSITIO -> praepositiones.fortuitumLegam();
+        default -> null;
+      };
     }
   }
 
   /**
-   * @param series seri\u0113s r\u0113rum classis {@link Verbum}
-   * @return Rem classis {@link Verba} \u016Bsa val\u014Drem {@code series}
+   * @param series seriēs rērum classis {@link Verbum}
+   * @return Rem classis {@link Verba} ūsa valōrem {@code series}
    */
   @NonNull public Verba strue(@Nullable final Verbum <?>... series) {
     return new Verba().addo(series);
@@ -185,7 +205,7 @@ public final class StructorVerba extends Omne {
   }
 
   /**
-   * @param scriptio repraesent\u0101ti\u014Dnem scr\u012Bpta numer\u012B math\u0113matic\u012B
+   * @param scriptio repraesentātiōnem scrīpta numerī mathēmaticī
    * @return Rem classis {@link VerbumSimplex.Numerus}
    */
   public @Nullable VerbumSimplex.Numerus numeram(final @NonNull String scriptio) {

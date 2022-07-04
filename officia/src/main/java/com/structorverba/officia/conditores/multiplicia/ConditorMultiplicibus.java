@@ -2,57 +2,73 @@ package com.structorverba.officia.conditores.multiplicia;
 
 import androidx.annotation.*;
 import com.structorverba.officia.conditores.Conditor;
+import com.structorverba.officia.enumerationes.*;
 import com.structorverba.officia.nuntii.Nuntius;
 import com.structorverba.officia.verba.multiplicia.VerbumMultiplex;
-import org.apache.commons.lang3.StringUtils;
 
 import java.util.function.Supplier;
 
 /**
- * Classis {@link ConditorMultiplicibus} est v\u0101s classis {@link Conditor} classibus omnibus quibus classem {@link
+ * Classis {@link ConditorMultiplicibus} est vās classis {@link Conditor} classibus omnibus quibus classem {@link
  * VerbumMultiplex} extendit.
  * @param <Hoc> classis extenta classis {@link VerbumMultiplex}
  */
 @SuppressWarnings("SpellCheckingInspection")
 public abstract class ConditorMultiplicibus <Hoc extends VerbumMultiplex <Hoc>> extends Conditor <Hoc> {
   /**
-   * Valor hic reparesent\u0101ti\u014Dnem scr\u012Bpta lemmae d\u0113signat.
+   * Valor hic reparesentātiōnem scrīpta lemmae dēsignat.
    */
   public static final @NonNull String pittaciumLemmae = "lemma";
 
-  /**
-   * Valor hic val\u014Drem {@link VerbumMultiplex#scriptio} re\u012B pr\u014Dductae repraehentat.
-   */
-  @NonNull protected String scriptio = StringUtils.EMPTY;
+  @NonNull protected final VerbumMultiplex.Constructor<Hoc> constructor;
 
   @Nullable protected Hoc hoc = null;
 
   /**
-   * Officium hoc c\u014Dnstr\u016Bct\u014Drem re\u012B classis huius perpetrat.
-   * @param nuntius val\u014Drem {@link Conditor#nuntius} supplet.
+   * Officium hoc cōnstrūctōrem reī classis huius perpetrat.
+   * @param nuntius valōrem {@link Conditor#nuntius} supplet.
    */
-  public ConditorMultiplicibus(@NonNull final Supplier <? extends Nuntius> nuntius) {
-    super(nuntius);
+  public ConditorMultiplicibus(@NonNull final Categoria ctgr, @NonNull final Supplier <? extends Nuntius> nuntius,
+                               @NonNull final Supplier<VerbumMultiplex.Constructor<Hoc>> cnstr) {
+    super(ctgr, nuntius);
+    constructor = cnstr.get();
   }
 
   /**
-   * Modus hic val\u014Drem {@link #scriptio} indit.
-   * @param scrpt val\u014Drem indendum
+   * Modus hic {@link VerbumMultiplex.Constructor#scriptio(String)} invocat.
+   * @param scrpt valōrem indendum
    */
-  public final void ut(@NonNull final String scrpt) {
-    scriptio = scrpt;
-    nuntius.garrio("C\u014Dntr\u016Bcti\u014Dn\u012B adiec\u012B conditi\u014Dnem novam: scr\u012Bptu'st", scrpt);
+  protected final void ut(@NonNull final String scrpt) {
+    constructor.scriptio(scrpt);
+    nuntius.garrio("Cōntrūctiōnī adiecī conditiōnem novam: scrīptu'st", scrpt);
+  }
+
+  @Override
+  public final Hoc condam() {
+    if(constructor.paratus()) {
+      final Hoc hoc = constructor.build();
+      refero(hoc);
+      return hoc;
+    } else {
+      nuntius.moneo(categoria.declina(Casus.GENITIVUS, Numeralis.PLURALIS, true),
+                    "prōductiō fōrmae nūllae prōcessit.");
+      return null;
+    }
+  }
+
+  protected final void allectioDefecit(@NonNull final String nomen, @NonNull final String descriptor) {
+    nuntius.moneo(categoria.declina(Casus.GENITIVUS, Numeralis.PLURALIS, true),
+                  "attribūta inopīnata ūsa'st", nomen, descriptor);
+  }
+
+  protected final void allectioFinita(@NonNull final String nomen, @NonNull final String descriptor) {
+    nuntius.garrio("Cōntrūctiōnī adiēcī conditiōnem novam:", nomen, descriptor);
   }
 
   /**
-   * Modus hic val\u014Drem cognitum per val\u014Dre {@code nomen} cum val\u014Dre {@code descriptor} indit.
-   * @param nomen      val\u014Drem cognendum
-   * @param descriptor val\u014Drem indendum
+   * Modus hic valōrem cognitum per valōre {@code nomen} cum valōre {@code descriptor} indit.
+   * @param nomen      valōrem cognendum
+   * @param descriptor valōrem indendum
    */
-  public abstract void allegam(@NonNull final String nomen, @NonNull final String descriptor);
-
-  /**
-   * Modus hic rem hanc restituit.
-   */
-  public abstract void restituo();
+  protected abstract void allegam(@NonNull final String nomen, @NonNull final String descriptor);
 }

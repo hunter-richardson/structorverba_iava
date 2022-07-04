@@ -1,58 +1,56 @@
 package com.structorverba.officia.conditores;
 
+import com.structorverba.officia.enumerationes.*;
 import com.structorverba.officia.miscella.Omne;
 import com.structorverba.officia.nuntii.Nuntius;
 import com.structorverba.officia.tenores.Tenor;
-import com.structorverba.officia.verba.Verbum;
+import com.structorverba.officia.verba.*;
 
-import org.apache.commons.lang3.StringUtils;
 import androidx.annotation.*;
 
 import java.util.function.Supplier;
 
 /**
- * Classis {@link Conditor} data \u0101 r\u0113bus classis {@link Tenor} accipit eacumque r\u0113s classis extent\u0101rum {@link Verbum}
- * c\u014Dnstruet.
+ * Classis {@link Conditor} data ā rēbus classis {@link Tenor} accipit eacumque rēs classis extentārum {@link Verbum}
+ * cōnstruet.
  * @param <Hoc> classis extenta classis {@link Verbum}
  */
 @SuppressWarnings("SpellCheckingInspection")
 public abstract class Conditor <Hoc extends Verbum <Hoc>> extends Omne {
+  @NonNull protected final Categoria categoria;
   /**
-   * Valor hic est v\u0101s classis {@link Nuntius} class\u012B hui.
+   * Valor hic est vās classis {@link Nuntius} classī hui.
    */
   @NonNull protected final Nuntius nuntius;
 
   /**
-   * Valor hic val\u014Drem {@link Verbum#lemma} re\u012B pr\u014Dductae repraehentat.
+   * Officium hoc cōnstrūctōrem reī classis huius perpetrat.
+   * @param nts valōrem {@link #nuntius} supplet.
    */
-  @NonNull protected String lemma = StringUtils.EMPTY;
-
-  /**
-   * Officium hoc c\u014Dnstr\u016Bct\u014Drem re\u012B classis huius perpetrat.
-   * @param nts val\u014Drem {@link #nuntius} supplet.
-   */
-  protected Conditor(@NonNull final Supplier <? extends Nuntius> nts) {
+  protected Conditor(@NonNull final Categoria ctgr, @NonNull final Supplier <? extends Nuntius> nts) {
+    categoria = ctgr;
     nuntius = nts.get();
   }
 
   /**
-   * Modus hic val\u014Drem {@link #lemma} indit.
-   * @param lm val\u014Drem indendum
-   */
-  public final void funde(@NonNull final String lm) {
-    lemma = lm.trim();
-  }
-
-  /**
-   * Modus hic rem classis {@link Hoc} c\u014Dn\u0101bitur c\u014Dnstruere.
-   * @return Rem novam classis {@link Hoc}. <br> Modus hid val\u014Drem {@code null} refert s\u012B n\u014Dn valet valor aliquis r\u0113s
+   * Modus hic rem classis {@link Hoc} cōnābitur cōnstruere.
+   * @return Rem novam classis {@link Hoc}. <br> Modus hid valōrem {@code null} refert sī nōn valet valor aliquis rēs
    *   haec continet.
    */
   @Nullable public abstract Hoc condam();
 
   /**
-   * Modus hic rem classis {@link Hoc} accipit val\u014Dr\u012Bque {@link Conditor#nuntius} ita refert.
+   * Modus hic rem classis {@link VerbumSimplex.Coniunctio} accipit valōrīque {@link ConditorSimplicibus.ConditorConiunctionibus#nuntius}
+   * ita refert.
    * @param hoc rem tentanda
    */
-  protected abstract void refero(@Nullable final Hoc hoc);
+  protected void refero(@Nullable final Hoc hoc) {
+    if (hoc == null) {
+      nuntius.certioro(categoria.declina(Casus.NOMINATIVUS, Numeralis.SINGULARIS, true),
+                       "fīnītur prōdūcere.");
+    } else {
+      nuntius.moneo(categoria.declina(Casus.DATIVUS, Numeralis.SINGULARIS, true),
+                    "prōductiō formae nūllae prōcessit.");
+    }
+  }
 }

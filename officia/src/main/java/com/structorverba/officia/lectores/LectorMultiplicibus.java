@@ -14,7 +14,7 @@ import java.io.IOException;
 import java.util.function.Supplier;
 
 /**
- * Classis {@link LectorMultiplicibus} est v\u0101s classis {@link Lector} classibus omnibus quibus classem {@link
+ * Classis {@link LectorMultiplicibus} est vās classis {@link Lector} classibus omnibus quibus classem {@link
  * VerbumMultiplex} extendit.
  * @param <Hoc> classis extenta classis {@link VerbumMultiplex}
  * @see Inventor
@@ -25,11 +25,11 @@ public abstract class LectorMultiplicibus <Hoc extends VerbumMultiplex <Hoc>> ex
   @NonNull private final Inventor <Hoc> inventor;
 
   /**
-   * Officium hoc c\u014Dnstr\u016Bct\u014Drem re\u012B classis huius perpetrat.
-   * @param categoria val\u014Drem {@link Lector#categoria} indicat.
-   * @param nuntius   val\u014Drem {@link Lector#nuntius} supplet.
-   * @param tenor     val\u014Drem {@link Lector#tenor} supplet.
-   * @param inventor  valor hic colit \u0113vent\u012Bs mult\u012Bs possibilibus quibus {@link Lector#tenor} referat.
+   * Officium hoc cōnstrūctōrem reī classis huius perpetrat.
+   * @param categoria valōrem {@link Lector#categoria} indicat.
+   * @param nuntius   valōrem {@link Lector#nuntius} supplet.
+   * @param tenor     valōrem {@link Lector#tenor} supplet.
+   * @param inventor  valor hic colit ēventīs multīs possibilibus quibus {@link Lector#tenor} referat.
    */
   protected LectorMultiplicibus(@NonNull final Categoria categoria,
                                 @NonNull final Supplier <? extends Nuntius> nuntius,
@@ -40,21 +40,21 @@ public abstract class LectorMultiplicibus <Hoc extends VerbumMultiplex <Hoc>> ex
   }
 
   /**
-   * Modus hic \u016Btitur modus {@link Lector#legam(String)} ut rem classis {@link Hoc} \u0101 val\u014Dre {@link Lector#tenor}
+   * Modus hic ūtitur modus {@link Lector#legam(String)} ut rem classis {@link Hoc} ā valōre {@link Lector#tenor}
    * adveniat.
-   * @param lemma lemma verb\u014D quod r\u0113s haec c\u014Dn\u0101bitur adven\u012Bre
-   * @param illa     seri\u0113s \u0113numer\u0101ti\u014Dnum quam licet {@link #inventor} c\u014Dlere \u0113vent\u012Bs l\u0113ct\u012Bs
-   * @return Rem classis {@link Hoc} quam val\u014Drem {@code verbum} quadrat. <br>
-   * Modus hic val\u014Drem {@code null} refert s\u012B n\u012Bl quadrat val\u014Drem {@code verbum}.
+   * @param lemma lemma verbō quod rēs haec cōnābitur advenīre
+   * @param illa     seriēs ēnumerātiōnum quam licet {@link #inventor} cōlere ēventīs lēctīs
+   * @return Rem classis {@link Hoc} quam valōrem {@code verbum} quadrat. <br>
+   * Modus hic valōrem {@code null} refert sī nīl quadrat valōrem {@code verbum}.
    */
   @Nullable public final Hoc adveniam(@NonNull final String lemma, @NonNull final Enum <?>... illa) {
     legam(lemma);
     final Hoc hoc = ((TenorMultiplicibus<Hoc>) tenor).referam(inventor.allego(illa).inquiram());
     inventor.restituo();
     if (hoc == null) {
-      nuntius.moneo("N\u012Bl adven\u012B");
+      nuntius.moneo("Nīl advenī");
     } else {
-      nuntius.garrio("Adven\u012B hoc:", hoc);
+      nuntius.garrio("Advenī hoc:", hoc);
     }
     return hoc;
   }
@@ -72,15 +72,15 @@ public abstract class LectorMultiplicibus <Hoc extends VerbumMultiplex <Hoc>> ex
     legam(lemma);
     final Hoc hoc = ((TenorMultiplicibus<Hoc>) tenor).fortuitumReferam();
     if (hoc == null) {
-      nuntius.moneo("N\u012Bl adven\u012B");
+      nuntius.moneo("Nīl advenī");
     } else {
-      nuntius.garrio("Adven\u012B hoc:", hoc);
+      nuntius.garrio("Advenī hoc:", hoc);
     }
     return hoc;
   }
 
   /**
-   * Classis {@link LectorAdverbiis} est v\u0101s classis {@link Lector} class\u012B {@link Adverbium}.
+   * Classis {@link LectorAdverbiis} est vās classis {@link Lector} classī {@link Adverbium}.
    * @see Categoria#ADVERBIUM
    * @see TenorMultiplicibus.TenorAdverbiis
    * @see NuntiusLectoriAdverbiis
@@ -91,7 +91,7 @@ public abstract class LectorMultiplicibus <Hoc extends VerbumMultiplex <Hoc>> ex
     @Nullable private static LectorAdverbiis instantia = null;
 
     /**
-     * Valor hic viam re\u012B classis huiuc facit.
+     * Valor hic viam reī classis huiuc facit.
      * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
      */
     @NonNull public static final Supplier <LectorAdverbiis> faciendum =
@@ -104,7 +104,7 @@ public abstract class LectorMultiplicibus <Hoc extends VerbumMultiplex <Hoc>> ex
     }
 
     /**
-     * Classis {@link NuntiusLectoriAdverbiis} est v\u0101s classis {@link Nuntius} class\u012B {@link LectorMultiplicibus.LectorAdverbiis}
+     * Classis {@link NuntiusLectoriAdverbiis} est vās classis {@link Nuntius} classī {@link LectorMultiplicibus.LectorAdverbiis}
      * @see LectorMultiplicibus.LectorAdverbiis
      */
     @Singleton
@@ -112,7 +112,7 @@ public abstract class LectorMultiplicibus <Hoc extends VerbumMultiplex <Hoc>> ex
       @Nullable private static NuntiusLectoriAdverbiis instantia = null;
 
       /**
-       * Valor hic viam re\u012Bclassis huiuc facit.
+       * Valor hic viam reīclassis huiuc facit.
        * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
        */
       @NonNull private static final Supplier <NuntiusLectoriAdverbiis> faciendum =
@@ -125,7 +125,7 @@ public abstract class LectorMultiplicibus <Hoc extends VerbumMultiplex <Hoc>> ex
   }
 
   /**
-   * Classis {@link LectorNominibus} est v\u0101s classis {@link Lector} class\u012B {@link Nomen}.
+   * Classis {@link LectorNominibus} est vās classis {@link Lector} classī {@link Nomen}.
    * @see Categoria#NOMEN
    * @see TenorMultiplicibus.TenorNominibus
    * @see NuntiusLectoriNominibus
@@ -150,7 +150,7 @@ public abstract class LectorMultiplicibus <Hoc extends VerbumMultiplex <Hoc>> ex
     }
 
     /**
-     * Classis {@link NuntiusLectoriNominibus} est v\u0101s classis {@link Nuntius} class\u012B {@link
+     * Classis {@link NuntiusLectoriNominibus} est vās classis {@link Nuntius} classī {@link
      * LectorMultiplicibus.LectorNominibus}
      * @see LectorMultiplicibus.LectorNominibus
      */
@@ -159,7 +159,7 @@ public abstract class LectorMultiplicibus <Hoc extends VerbumMultiplex <Hoc>> ex
       @Nullable private static NuntiusLectoriNominibus instantia = null;
 
       /**
-       * Valor hic viam re\u012B classis huiuc facit.
+       * Valor hic viam reī classis huiuc facit.
        * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
        */
       @NonNull private static final Supplier <NuntiusLectoriNominibus> faciendum =
@@ -172,7 +172,7 @@ public abstract class LectorMultiplicibus <Hoc extends VerbumMultiplex <Hoc>> ex
   }
 
   /**
-   * Classis {@link LectorAdiectivis} est v\u0101s classis {@link Lector} class\u012B {@link Adiectivum}.
+   * Classis {@link LectorAdiectivis} est vās classis {@link Lector} classī {@link Adiectivum}.
    * @see Categoria#ADIECTIVUM
    * @see TenorMultiplicibus.TenorAdiectivis
    * @see NuntiusLectoriAdiectivis
@@ -184,7 +184,7 @@ public abstract class LectorMultiplicibus <Hoc extends VerbumMultiplex <Hoc>> ex
     @Nullable private static LectorAdiectivis instantia = null;
 
     /**
-     * Valor hic viam re\u012B classis huiuc facit.
+     * Valor hic viam reī classis huiuc facit.
      * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
      */
     @NonNull public static final Supplier <LectorAdiectivis> faciendum =
@@ -197,19 +197,19 @@ public abstract class LectorMultiplicibus <Hoc extends VerbumMultiplex <Hoc>> ex
     }
 
     /**
-     * Modus hic c\u014Dn\u0101bitur adven\u012Bre rem classis {@link Adiectivum} quam adiect\u012Bvum possess\u012Bvum repraesentat val\u014Dr\u0113sque
+     * Modus hic cōnābitur advenīre rem classis {@link Adiectivum} quam adiectīvum possessīvum repraesentat valōrēsque
      * {@code illa} quadrat.
-     * @param numeralis d\u0113signat adiect\u012Bvum possess\u012Bvum s\u012Bve singul\u0101re (id est aut {@code meum} aut {@code tuum}) s\u012Bve
-     *                  pl\u016Br\u0101le (id est aut {@code nostrum} aut {@code vestrum}) petitur
-     * @param persona   pers\u014Dnam adiect\u012Bv\u012B pet\u012Bt\u012B d\u0113signat
-     * @param illa      seri\u0113s \u0113numer\u0101ti\u014Dnum licent {@link #inventor} colere \u0113vent\u012Bs l\u0113ct\u012Bs
-     * @return rem classis {@link Adiectivum} quam val\u014Dr\u0113s {@code numeralis}que {@code persona}que {@code illa}que
-     *   quadrat. <br> Modus hic valorem {@code null} refert s\u012B nihil valor\u0113s {@code numeralis}que {@code persona}que
+     * @param numeralis dēsignat adiectīvum possessīvum sīve singulāre (id est aut {@code meum} aut {@code tuum}) sīve
+     *                  plūrāle (id est aut {@code nostrum} aut {@code vestrum}) petitur
+     * @param persona   persōnam adiectīvī petītī dēsignat
+     * @param illa      seriēs ēnumerātiōnum licent {@link #inventor} colere ēventīs lēctīs
+     * @return rem classis {@link Adiectivum} quam valōrēs {@code numeralis}que {@code persona}que {@code illa}que
+     *   quadrat. <br> Modus hic valorem {@code null} refert sī nihil valorēs {@code numeralis}que {@code persona}que
      *   {@code illa}que quadrat.
-     * @see <a href="{@docRoot}/../src/main/resources">auxili\u0101r\u0113s</a>/adiect\u012Bva/meum.xml
-     * @see <a href="{@docRoot}/../src/main/resources">auxili\u0101r\u0113s</a>/adiect\u012Bva/tuum.xml
-     * @see <a href="{@docRoot}/../src/main/resources">auxili\u0101r\u0113s</a>/adiect\u012Bva/nostrum.xml
-     * @see <a href="{@docRoot}/../src/main/resources">auxili\u0101r\u0113s</a>/adiect\u012Bva/vestrum.xml
+     * @see <a href="{@docRoot}/../src/main/resources">auxiliārēs</a>/adiectīva/meum.xml
+     * @see <a href="{@docRoot}/../src/main/resources">auxiliārēs</a>/adiectīva/tuum.xml
+     * @see <a href="{@docRoot}/../src/main/resources">auxiliārēs</a>/adiectīva/nostrum.xml
+     * @see <a href="{@docRoot}/../src/main/resources">auxiliārēs</a>/adiectīva/vestrum.xml
      * @see Numeralis
      * @see Persona
      * @see #adveniam(String, Enum[])
@@ -221,29 +221,29 @@ public abstract class LectorMultiplicibus <Hoc extends VerbumMultiplex <Hoc>> ex
           case PRIMA -> switch (numeralis) {
             case SINGULARIS -> "meum";
             case PLURALIS -> "nostrum";
-            case NULLUS -> throw new IllegalArgumentException(String.format("\u016Asus pr\u0101vu'st %s %s",
+            case NULLUS -> throw new IllegalArgumentException(String.format("\u016Asus prāvu'st %s %s",
                                                                             Numeralis.pittacium,
                                                                             numeralis));
           };
           case SECUNDA -> switch (numeralis) {
             case SINGULARIS -> "tuum";
             case PLURALIS -> "vestrum";
-            case NULLUS -> throw new IllegalArgumentException(String.format("\u016Asus pr\u0101vu'st %s %s",
+            case NULLUS -> throw new IllegalArgumentException(String.format("\u016Asus prāvu'st %s %s",
                                                                             Numeralis.pittacium, numeralis));
           };
           case TERTIA -> "suum";
-          case NULLA -> throw new IllegalArgumentException(String.format("\u016Asus pr\u0101vu'st %se %s",
+          case NULLA -> throw new IllegalArgumentException(String.format("\u016Asus prāvu'st %se %s",
                                                                          Persona.pittacium, persona));
         }, illa);
       } catch (IllegalArgumentException e) {
         nuntius.terreo(e);
-        nuntius.moneo("N\u012Bl adveni");
+        nuntius.moneo("Nīl adveni");
         return null;
       }
     }
 
     /**
-     * Classis {@link NuntiusLectoriAdiectivis} est v\u0101s classis {@link Nuntius} class\u012B {@link
+     * Classis {@link NuntiusLectoriAdiectivis} est vās classis {@link Nuntius} classī {@link
      * LectorMultiplicibus.LectorAdiectivis}
      * @see LectorMultiplicibus.LectorAdiectivis
      */
@@ -252,7 +252,7 @@ public abstract class LectorMultiplicibus <Hoc extends VerbumMultiplex <Hoc>> ex
       @Nullable private static NuntiusLectoriAdiectivis instantia = null;
 
       /**
-       * Valor hic viam re\u012B classis huiuc facit.
+       * Valor hic viam reī classis huiuc facit.
        * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
        */
       @NonNull private static final Supplier <NuntiusLectoriAdiectivis> faciendum =
@@ -265,7 +265,7 @@ public abstract class LectorMultiplicibus <Hoc extends VerbumMultiplex <Hoc>> ex
   }
 
   /**
-   * Classis {@link LectorPronominibus} est vas classis {@link Lector} class\u012B {@link Pronomen}.
+   * Classis {@link LectorPronominibus} est vas classis {@link Lector} classī {@link Pronomen}.
    * @see Categoria#PRONOMEN
    * @see TenorMultiplicibus.TenorPronominibus
    * @see NuntiusLectoriPronominibus
@@ -290,15 +290,15 @@ public abstract class LectorMultiplicibus <Hoc extends VerbumMultiplex <Hoc>> ex
     }
 
     /**
-     * Modus hic c\u014Dn\u0101bitur adven\u012Bre rem classis {@link Pronomen} quam pr\u014Dn\u014Dmen possess\u012Bvum repraesentat val\u014Dr\u0113sque
+     * Modus hic cōnābitur advenīre rem classis {@link Pronomen} quam prōnōmen possessīvum repraesentat valōrēsque
      * {@code illa} quadrat.
-     * @param persona pers\u014Dnam pr\u014Dnimis pet\u012Bt\u012B d\u0113signat
-     * @param illa    seri\u0113s \u0113numer\u0101ti\u014Dnum licent {@link #inventor} colere \u0113vent\u012Bs l\u0113ct\u012Bs
-     * @return rem classis {@link Pronomen} quam val\u014Dr\u0113s {@code persona}que {@code illa}que quadrat. <br> Modus hic
-     *   valorem {@code null} refert s\u012B nihil val\u014Dr\u0113s {@code persona}que {@code illa}que quadrat.
-     * @see <a href="{@docRoot}/../src/main/resources">auxili\u0101r\u0113s</a>/pr\u014Dn\u014Dmina/ego.xml
-     * @see <a href="{@docRoot}/../src/main/resources">auxili\u0101r\u0113s</a>/pr\u014Dn\u014Dmina/t\u016B.xml
-     * @see <a href="{@docRoot}/../src/main/resources">auxili\u0101r\u0113s</a>/pr\u014Dn\u014Dmina/id.xml
+     * @param persona persōnam prōnimis petītī dēsignat
+     * @param illa    seriēs ēnumerātiōnum licent {@link #inventor} colere ēventīs lēctīs
+     * @return rem classis {@link Pronomen} quam valōrēs {@code persona}que {@code illa}que quadrat. <br> Modus hic
+     *   valorem {@code null} refert sī nihil valōrēs {@code persona}que {@code illa}que quadrat.
+     * @see <a href="{@docRoot}/../src/main/resources">auxiliārēs</a>/prōnōmina/ego.xml
+     * @see <a href="{@docRoot}/../src/main/resources">auxiliārēs</a>/prōnōmina/tū.xml
+     * @see <a href="{@docRoot}/../src/main/resources">auxiliārēs</a>/prōnōmina/id.xml
      * @see Persona
      */
     @SuppressWarnings("unused")
@@ -306,20 +306,20 @@ public abstract class LectorMultiplicibus <Hoc extends VerbumMultiplex <Hoc>> ex
       try {
         return adveniam(switch (persona) {
           case PRIMA -> "ego";
-          case SECUNDA -> "t\u016B";
+          case SECUNDA -> "tū";
           case TERTIA -> "id";
-          case NULLA -> throw new IllegalArgumentException(String.format("\u016Asus pr\u0101vu'st %se %s",
+          case NULLA -> throw new IllegalArgumentException(String.format("\u016Asus prāvu'st %se %s",
                                                                          Persona.pittacium, persona));
         }, illa);
       } catch (IllegalArgumentException e) {
         nuntius.terreo(e);
-        nuntius.moneo("N\u012Bl adven\u012B");
+        nuntius.moneo("Nīl advenī");
         return null;
       }
     }
 
     /**
-     * Classis {@link NuntiusLectoriPronominibus} est v\u0101s classis {@link Nuntius} class\u012B {@link
+     * Classis {@link NuntiusLectoriPronominibus} est vās classis {@link Nuntius} classī {@link
      * LectorMultiplicibus.LectorPronominibus}
      * @see LectorMultiplicibus.LectorPronominibus
      */
@@ -328,7 +328,7 @@ public abstract class LectorMultiplicibus <Hoc extends VerbumMultiplex <Hoc>> ex
       @Nullable private static NuntiusLectoriPronominibus instantia = null;
 
       /**
-       * Valor hic viam re\u012B classis huiuc facit.
+       * Valor hic viam reī classis huiuc facit.
        * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
        */
       @NonNull private static final Supplier <NuntiusLectoriPronominibus> faciendum =
@@ -341,7 +341,7 @@ public abstract class LectorMultiplicibus <Hoc extends VerbumMultiplex <Hoc>> ex
   }
 
   /**
-   * Classis {@link LectorActis} est v\u0101s classis {@link Lector} class\u012B {@link Actus}.
+   * Classis {@link LectorActis} est vās classis {@link Lector} classī {@link Actus}.
    * @see Categoria#ACTUS
    * @see TenorMultiplicibus.TenorActis
    * @see NuntiusLectoriActis
@@ -366,12 +366,12 @@ public abstract class LectorMultiplicibus <Hoc extends VerbumMultiplex <Hoc>> ex
     }
 
     /**
-     * Modus hic c\u014Dn\u0101bitur adven\u012Bre rem classis {@link Actus} quam f\u014Drma \u0101ct\u012B "esse" repraesentat val\u014Dr\u0113s {@code
+     * Modus hic cōnābitur advenīre rem classis {@link Actus} quam fōrma āctī "esse" repraesentat valōrēs {@code
      * illa} quadrat.
-     * @param illa seri\u0113s \u0113numer\u0101ti\u014Dnum licent {@link #inventor} colere \u0113vent\u012Bs l\u0113ct\u012Bs. <br>
-     *            Modus hic val\u014Drem {@code null} refert s\u012B nihil val\u014Dr\u0113s {@code illa} quadrat.
-     * @return rem classis {@link Actus} quam val\u014Drem {@code illa} quadrat
-     * @see <a href="{@docRoot}/../src/main/resources">auxili\u0101r\u0113s</a>/\u0101cta/esse.xml
+     * @param illa seriēs ēnumerātiōnum licent {@link #inventor} colere ēventīs lēctīs. <br>
+     *            Modus hic valōrem {@code null} refert sī nihil valōrēs {@code illa} quadrat.
+     * @return rem classis {@link Actus} quam valōrem {@code illa} quadrat
+     * @see <a href="{@docRoot}/../src/main/resources">auxiliārēs</a>/ācta/esse.xml
      */
     @SuppressWarnings("unused")
     public @Nullable Actus adveniam(@NonNull final Enum <?>... illa) {
@@ -380,7 +380,7 @@ public abstract class LectorMultiplicibus <Hoc extends VerbumMultiplex <Hoc>> ex
   }
 
   /**
-   * Classis {@link NuntiusLectoriActis} est v\u0101s classis {@link Nuntius} class\u012B {@link LectorMultiplicibus.LectorActis}
+   * Classis {@link NuntiusLectoriActis} est vās classis {@link Nuntius} classī {@link LectorMultiplicibus.LectorActis}
    * @see LectorMultiplicibus.LectorActis
    */
   @Singleton
@@ -388,7 +388,7 @@ public abstract class LectorMultiplicibus <Hoc extends VerbumMultiplex <Hoc>> ex
     @Nullable private static NuntiusLectoriActis instantia = null;
 
     /**
-     * Valor hic viam re\u012B classis huiuc facit.
+     * Valor hic viam reī classis huiuc facit.
      * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
      */
     @NonNull private static final Supplier <NuntiusLectoriActis> faciendum =

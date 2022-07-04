@@ -6,41 +6,41 @@ import org.apache.commons.lang3.StringUtils;
 import androidx.annotation.NonNull;
 
 /**
- * \u0112numer\u0101ti\u014D haec <a href="https://en.wiktionary.org/wiki/Category:Latin_clitics">encliticum</a>
- * subi\u016Bnctum re\u012B omn\u012B classis {@link VerbumMultiplex} d\u0113signat.
+ * Ēnumerātiō haec <a href="https://en.wiktionary.org/wiki/Category:Latin_clitics">encliticum</a>
+ * subiūnctum reī omnī classis {@link VerbumMultiplex} dēsignat.
  * @see VerbumMultiplex
  */
 @SuppressWarnings({ "SpellCheckingInspection", "unused" })
 public enum Encliticum {
   /**
-   * Valor hic <a href="https://en.wiktionary.org/wiki/-ne#Latin">encliticum interrog\u0101ns</a> d\u0113signat.
+   * Valor hic <a href="https://en.wiktionary.org/wiki/-ne#Latin">encliticum interrogāns</a> dēsignat.
    */
   INTERROGANS("ne"),
 
   /**
-   * Valor hic <a href="https://en.wiktionary.org/wiki/-que#Latin">encliticum coniug\u0101ns</a> d\u0113signat.
+   * Valor hic <a href="https://en.wiktionary.org/wiki/-que#Latin">encliticum coniugāns</a> dēsignat.
    */
   CONIUGANS("que"),
 
   /**
-   * Valor hic <a href="https://en.wiktionary.org/wiki/-que#Latin">encliticum \u0113lig\u0113ns</a> d\u0113signat.
+   * Valor hic <a href="https://en.wiktionary.org/wiki/-que#Latin">encliticum ēligēns</a> dēsignat.
    */
   ELIGENS("ve"),
 
   /**
-   * Valor hic encliticum n\u016Bllum d\u0113signat.
+   * Valor hic encliticum nūllum dēsignat.
    */
   NOLENS(StringUtils.EMPTY);
 
 
   /**
-   * Valor hic repraesent\u0101ti\u014Dnem scr\u012Bpta re\u012B huius d\u0113signat.
+   * Valor hic repraesentātiōnem scrīpta reī huius dēsignat.
    */
   public final String scriptio;
 
   /**
-   * Officium hoc c\u014Dnstr\u016Bct\u014Drem re\u012B classis huius perpetrat.
-   * @param scrpt val\u014Drem {@link #scriptio} indicat.
+   * Officium hoc cōnstrūctōrem reī classis huius perpetrat.
+   * @param scrpt valōrem {@link #scriptio} indicat.
    */
   Encliticum(@NonNull final String scrpt) {
     scriptio = scrpt;

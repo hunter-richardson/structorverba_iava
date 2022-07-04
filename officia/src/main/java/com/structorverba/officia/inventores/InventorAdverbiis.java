@@ -1,7 +1,7 @@
 package com.structorverba.officia.inventores;
 
 import androidx.annotation.*;
-import com.structorverba.officia.enumerationes.Gradus;
+import com.structorverba.officia.enumerationes.*;
 import com.structorverba.officia.lectores.LectorMultiplicibus;
 import com.structorverba.officia.nuntii.*;
 import com.structorverba.officia.verba.multiplicia.Adverbium;
@@ -11,7 +11,7 @@ import org.apache.commons.lang3.ObjectUtils;
 import java.util.function.*;
 
 /**
- * Classis {@link InventorAdverbiis} est v\u0101s classis {@link Inventor} class\u012B {@link Adverbium}.
+ * Classis {@link InventorAdverbiis} est vās classis {@link Inventor} classī {@link Adverbium}.
  * @see Adverbium
  * @see NuntiusInventoriAdverbiis
  */
@@ -22,7 +22,7 @@ public class InventorAdverbiis extends Inventor <Adverbium> {
   @Nullable private static InventorAdverbiis instantia = null;
 
   /**
-   * Valor hic viam re\u012B classis huiuc facit.
+   * Valor hic viam reī classis huiuc facit.
    * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
    */
   @NonNull public static final Supplier <InventorAdverbiis> faciendum =
@@ -36,8 +36,8 @@ public class InventorAdverbiis extends Inventor <Adverbium> {
   }
 
   /**
-   * @return Quaesti\u012Bnem quam r\u0113s classis {@link LectorMultiplicibus.LectorAdverbiis} ut\u0101tur r\u0113s classis {@link
-   *   Adverbium} perc\u012Blere
+   * @return Quaestiīnem quam rēs classis {@link LectorMultiplicibus.LectorAdverbiis} ūtātur rēs classis {@link
+   *   Adverbium} percīlere
    * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Predicate.html">Prediate</a>
    */
   @Override @NonNull
@@ -54,23 +54,22 @@ public class InventorAdverbiis extends Inventor <Adverbium> {
   }
 
   /**
-   * Modus hic \u0113numer\u0101ti\u012Bnem singulum {@code illud} re\u012B huic indit.
-   * @param illud \u0113numer\u0101ti\u012Bnem indendam
+   * Modus hic ēnumerātiīnem singulum {@code illud} reī huic indit.
+   * @param illud ēnumerātiīnem indendam
    * @see Gradus#ut(Enum)
    */
   @Override protected void allegam(Enum <?> illud) {
     if (illud instanceof Gradus) {
       gradus = Gradus.ut(illud);
-      nuntius.garrio("Quaesti\u014Dn\u012B adi\u0113c\u012B conditi\u014Dnem novam:",
-                     Gradus.pittacium, illud);
+      nuntius.garrio("Quaestiōnī adiēcī conditiōnem novam:", Gradus.pittacium, illud);
     } else {
-      nuntius.moneo("Adverbi\u014D inqu\u012Bs\u012Bti\u014D adiect\u012Bv\u014D inop\u012Bn\u0101ta \u016Bsa'st:",
-                    illud);
+      nuntius.moneo(Categoria.ADVERBIUM.declina(Casus.DATIVUS, Numeralis.SINGULARIS, true),
+                    "inquīsītiō adiectīvō inopīnāta ūsa'st:", illud);
     }
   }
 
   /**
-   * Classis {@link NuntiusInventoriAdverbiis} est v\u0101s classis {@link Nuntius} class\u012B {@link InventorNominibus}
+   * Classis {@link NuntiusInventoriAdverbiis} est vās classis {@link Nuntius} classī {@link InventorNominibus}
    * @see InventorNominibus
    */
   @Singleton
@@ -78,7 +77,7 @@ public class InventorAdverbiis extends Inventor <Adverbium> {
     @Nullable private static NuntiusInventoriAdverbiis instantia = null;
 
     /**
-     * Valor hic viam re\u012B classis huiuc facit.
+     * Valor hic viam reī classis huiuc facit.
      * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
      */
     @NonNull private static final Supplier <NuntiusInventoriAdverbiis> faciendum =

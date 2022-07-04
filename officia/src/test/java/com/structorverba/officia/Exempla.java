@@ -11,35 +11,35 @@ import org.junit.jupiter.api.Test;
 import lombok.Getter;
 
 /**
- * Classis {@link Exempla} exemplum singulum \u016Bs\u016Bfructu\u0101ri\u012Bs iam d\0113m\u014Dnstrat. <br>
- * Exempla addit\u012Bcia posth\u0101c scr\u012Bbantur.
+ * Classis {@link Exempla} exemplum singulum ūsūfructuāriīs iam dēmōnstrat. <br>
+ * Exempla additīcia posthāc scrībantur.
  */
 @SuppressWarnings({"SpellCheckingInspection", "FieldCanBeLocal", "NewClassNamingConvention"})
 public final class Exempla extends Omne {
   @NonNull @Getter(lazy = true)
   private final StructorVerba structor = StructorVerba.faciendum.get();
 
-  @NonNull private final String producta = "Ecce lingua Lat\u012Bna placet pr\u014Ddestque";
+  @NonNull private final String producta = "Ecce lingua Latīna placet prōdestque";
 
   /**
    * Modus hic exemplum tentat. <br>
-   * Verba "Ecce lingua Lat\u012Bna placet pr\u014Ddestque" pr\u014Dd\u016Bcat.
+   * Verba "Ecce lingua Latīna placet prōdestque" prōdūcat.
    */
   @Test
   public void producta() {
     //noinspection ConstantConditions
-    System.out.println(new Tentamen.TentamenVerbale(producta, "pr\u014Dducta")
+    System.out.println(new Tentamen.TentamenVerbale(producta, "prōducta")
                          .exsequar(structor.strue(structor.adveniam("ecce", Categoria.INTERIECTIO),
                                                   structor.adveniam("lingua", Categoria.NOMEN,
                                                                     Specialitas.COMMUNE, Genus.FEMININUM,
                                                                     Casus.NOMINATIVUS, Numeralis.SINGULARIS),
-                                                  structor.adveniam("lat\u012Bnum", Categoria.ADIECTIVUM,
+                                                  structor.adveniam("latīnum", Categoria.ADIECTIVUM,
                                                                     Specialitas.PROPRIUM, Genus.FEMININUM,
                                                                     Casus.NOMINATIVUS, Numeralis.SINGULARIS),
-                                                  structor.adveniam("plac\u0113re", Categoria.ACTUS,
+                                                  structor.adveniam("placēre", Categoria.ACTUS,
                                                                     Modus.INDICATIVUS, Vox.ACTIVA, Tempus.PRAESENS,
                                                                     Numeralis.SINGULARIS, Persona.TERTIA),
-                                         ((Actus) structor.adveniam("pr\u014Ddesse", Categoria.ACTUS,
+                                         ((Actus) structor.adveniam("prōdesse", Categoria.ACTUS,
                                                                     Modus.INDICATIVUS, Vox.ACTIVA, Tempus.PRAESENS,
                                                                     Numeralis.SINGULARIS, Persona.TERTIA))
                                                     .allego(Encliticum.CONIUGANS))));

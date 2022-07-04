@@ -10,9 +10,9 @@ import org.apache.commons.lang3.ObjectUtils;
 import java.util.function.Supplier;
 
 /**
- * Classis {@link Omne} err\u014Dr\u0013s inop\u012Bn\u0101t\u014Ds servat intercipere. <br> Classem haec class\u0013s omn\u0013s intr\u0101 programm\u0101te
- * Str\u016BctorVerba extendit absque classibus {@link Tenor}que {@link Nuntius}que manifesteque h\u0101c propter nat\u016Bram e\u0101rum.
- * <br> Offici\u012Bs classum {@link Tenor} erg\u014D pr\u012Bm\u014D scr\u012Bbendus scr\u012Bptusque est c\u014Ddex sequens: <br> {@code
+ * Classis {@link Omne} errōrēs inopīnātōs servat intercipere. <br> Classem haec classēs omnēs intrā programmāte
+ * StrūctorVerba extendit absque classibus {@link Tenor}que {@link Nuntius}que manifesteque hāc propter natūram eārum.
+ * <br> Officiīs classum {@link Tenor} ergō prīmō scrībendus scrīptusque est cōdex sequens: <br> {@code
  * Thread.currentThread().setUncaughtExceptionHandler(Nuntius.NuntiusErroribus.faciendum.get());}
  * @see NuntiusErroribus
  * @see <a href="https://docs.oracle.com/javase/7/docs/api/java/lang/Thread.html#setUncaughtExceptionHandler(java.lang.Thread.UncaughtExceptionHandler)">Thread.setUncaughtExceptionHandler</a>
@@ -23,8 +23,8 @@ public abstract class Omne {
   private final NuntiusErroribus nuntius = NuntiusErroribus.faciendum.get();
 
   /**
-   * Officium hoc c\u014Dnstr\u016Bct\u014Drem re\u012B classis huius perpetrat. <br>
-   * C\u014Dnstat c\u014Ddicem sequentem: <br>
+   * Officium hoc cōnstrūctōrem reī classis huius perpetrat. <br>
+   * Cōnstat cōdicem sequentem: <br>
    * {@code Thread.currentThread().setUncaughtExceptionHandler(Nuntius.NuntiusErroribus.faciendum.get());}
    */
   public Omne() {
@@ -33,8 +33,8 @@ public abstract class Omne {
 
 
   /**
-   * Classis {@link NuntiusErroribus} est v\u0101s classis {@link Nuntius} ips\u012Busmet. <br> Indicat quod exsec\u016Bti\u014Dnem
-   * programm\u0101tis Str\u016BctorVerba err\u014Drem inop\u012Bn\u0101tum continu\u0101tur.
+   * Classis {@link NuntiusErroribus} est vās classis {@link Nuntius} ipsīusmet. <br> Indicat quod exsecūtiōnem
+   * programmātis StrūctorVerba errōrem inopīnātum continuātur.
    * @see Omne
    * @see <a href="https://docs.oracle.com/javase/9/docs/api/java/lang/Thread.UncaughtExceptionHandler.html">Thread.UncaughtExceptionHandler</a>
    */
@@ -43,7 +43,7 @@ public abstract class Omne {
     @Nullable private static NuntiusErroribus instantia = null;
 
     /**
-     * Valor hic viam re\u012B classis huiuc facit.
+     * Valor hic viam reī classis huiuc facit.
      * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
      */
     @NonNull public static final Supplier<NuntiusErroribus> faciendum =
@@ -54,7 +54,7 @@ public abstract class Omne {
     }
 
     /**
-     * Modus hic invoc\u0101tur quand\u014Dque exsec\u016Bti\u014Dnem programm\u0101tis Str\u016BctorVerba err\u014Drem inop\u012Bn\u0101tum continu\u0101tur.
+     * Modus hic invocātur quandōque exsecūtiōnem programmātis StrūctorVerba errōrem inopīnātum continuātur.
      * @see <a href="https://docs.oracle.com/javase/7/docs/api/java/lang/Thread.UncaughtExceptionHandler.html#uncaughtException(java.lang.Thread,%20java.lang.Throwable)">UncaughtExceptionHandler.uncaughtException</a>
      */
     public @Override void uncaughtException(@NonNull final Thread linea, @NonNull final Throwable error) {

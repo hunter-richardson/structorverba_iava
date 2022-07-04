@@ -11,7 +11,7 @@ import org.apache.commons.lang3.ObjectUtils;
 import java.util.function.*;
 
 /**
- * Classis {@link InventorNominibus} est v\u0101s classis {@link Inventor} class\u012B {@link Nomen}.
+ * Classis {@link InventorNominibus} est vās classis {@link Inventor} classī {@link Nomen}.
  * @see Nomen
  * @see NuntiusInventoriNominibus
  */
@@ -22,7 +22,7 @@ public final class InventorNominibus extends Inventor <Nomen> {
   @Nullable private static InventorNominibus instantia = null;
 
   /**
-   * Valor hic viam re\u012B classis huiuc facit.
+   * Valor hic viam reī classis huiuc facit.
    * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
    */
   @NonNull public static final Supplier <InventorNominibus> faciendum =
@@ -40,7 +40,7 @@ public final class InventorNominibus extends Inventor <Nomen> {
   }
 
   /**
-   * @return Quaestionem quam r\u0113s classis {@link LectorMultiplicibus.LectorNominibus} \u016Bt\u0101tur r\u0113s classis {@link Nomen}
+   * @return Quaestionem quam rēs classis {@link LectorMultiplicibus.LectorNominibus} ūtātur rēs classis {@link Nomen}
    *   percolere
    * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Predicate.html">Prediate</a>
    */
@@ -67,12 +67,12 @@ public final class InventorNominibus extends Inventor <Nomen> {
     numeralis = Numeralis.NULLUS;
     casus = Casus.DERECTUS;
     tempus = Tempus.INTEMPORALE;
-    nuntius.certioro("Restit\u016Btus sum");
+    nuntius.certioro("Restitūtus sum");
   }
 
   /**
    * {@inheritDoc}
-   * @param illud \u0113numer\u0101ti\u014Dnem indendam
+   * @param illud ēnumerātiōnem indendam
    * @see Specialitas#ut(Enum)
    * @see Genus#ut(Enum)
    * @see Numeralis#ut(Enum)
@@ -82,32 +82,27 @@ public final class InventorNominibus extends Inventor <Nomen> {
   @Override protected void allegam(@NonNull final Enum <?> illud) {
     if (illud instanceof Specialitas) {
       specialitas = Specialitas.ut(illud);
-      nuntius.garrio("Quaesti\u014Dn\u012B adi\u0113c\u012B conditi\u014Dnem novam:",
-                     Specialitas.pittacium, illud);
+      nuntius.garrio("Quaestiōnī adiēcī conditiōnem novam:", Specialitas.pittacium, illud);
     } else if (illud instanceof Genus) {
       genus = Genus.ut(illud);
-      nuntius.garrio("Quaesti\u014Dn\u012B adi\u0113c\u012B conditi\u014Dnem novam:",
-                     Genus.pittacium, illud);
+      nuntius.garrio("Quaestiōnī adiēcī conditiōnem novam:", Genus.pittacium, illud);
     } else if (illud instanceof Numeralis) {
       numeralis = Numeralis.ut(illud);
-      nuntius.garrio("Quaesti\u014Dn\u012B adi\u0113c\u012B conditi\u014Dnem novam:",
-                     Numeralis.pittacium, illud);
+      nuntius.garrio("Quaestiōnī adiēcī conditiōnem novam:", Numeralis.pittacium, illud);
     } else if (illud instanceof Casus) {
       casus = Casus.ut(illud);
-      nuntius.garrio("Quaesti\u014Dn\u012B adi\u0113c\u012B conditi\u014Dnem novam:",
-                     Casus.pittacium, illud);
+      nuntius.garrio("Quaestiōnī adiēcī conditiōnem novam:", Casus.pittacium, illud);
     } else if (illud instanceof Tempus) {
       tempus = Tempus.ut(illud);
-      nuntius.garrio("Quaesti\u014Dn\u012B adi\u0113c\u012B conditi\u014Dnem novam:",
-                     Tempus.pittacium, illud);
+      nuntius.garrio("Quaestiōnī adiēcī conditiōnem novam:", Tempus.pittacium, illud);
     } else {
-      nuntius.moneo("N\u014Dmin\u012B inqu\u012Bs\u012Bti\u014D n\u014Dmin\u012B inop\u012Bn\u0101ta \u016Bsa'st:",
-                    illud);
+      nuntius.moneo(Categoria.NOMEN.declina(Casus.DATIVUS, Numeralis.SINGULARIS, true),
+                    "inquīsītiō nōminī inopīnāta ūsa'st:", illud);
     }
   }
 
   /**
-   * Classis {@link NuntiusInventoriNominibus} est v\u0101s classis {@link Nuntius} class\u012B {@link InventorNominibus}
+   * Classis {@link NuntiusInventoriNominibus} est vās classis {@link Nuntius} classī {@link InventorNominibus}
    * @see InventorNominibus
    */
   @Singleton
@@ -115,7 +110,7 @@ public final class InventorNominibus extends Inventor <Nomen> {
     @Nullable private static NuntiusInventoriNominibus instantia = null;
 
     /**
-     * Valor hic viam re\u012B classis huiuc facit.
+     * Valor hic viam reī classis huiuc facit.
      * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
      */
     @NonNull private static final Supplier <NuntiusInventoriNominibus> faciendum =

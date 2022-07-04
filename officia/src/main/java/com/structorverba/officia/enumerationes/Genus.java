@@ -1,63 +1,61 @@
 package com.structorverba.officia.enumerationes;
 
-import com.structorverba.officia.miscella.Utilitas;
-import com.structorverba.officia.verba.multiplicia.Nominalis;
-
-import org.apache.commons.lang3.StringUtils;
 import androidx.annotation.NonNull;
+import com.structorverba.officia.verba.multiplicia.Nominalis;
+import org.apache.commons.lang3.StringUtils;
 
 import java.util.stream.Stream;
 
 /**
- * \u0112numer\u0101ti\u014D haec generem verb\u012B omnis d\u0113signat.
+ * Ēnumerātiō haec generem verbī omnis dēsignat.
  * @see Nominalis
  */
 @SuppressWarnings({ "SpellCheckingInspection", "unused" })
 public enum Genus {
   /**
-   * Valor hic \u016Bt\u0101tur s\u012B \u016Bs\u016Bfructu\u0101ri\u012B val\u014Drem validum n\u014Dn d\u0113notat. <br> S\u014Dlum scr\u012Bnium <a
-   * href="{@docRoot}/../src/main/resources">auxili\u0101r\u0113s</a> \u016Btitur indic\u0101re quod verbum hoc n\u014Dn ingenerat.
+   * Valor hic ūtātur sī ūsūfructuāriī valōrem validum nōn dēnotat. <br> Sōlum scrīnium <a
+   * href="{@docRoot}/../src/main/resources">auxiliārēs</a> ūtitur indicāre quod verbum hoc nōn ingenerat.
    */
   NULLUM(StringUtils.EMPTY),
 
   /**
-   * Valor hic generem neutrum d\u0113signat.
+   * Valor hic generem neutrum dēsignat.
    */
   NEUTRUM("neutrum"),
 
   /**
-   * Valor hic generem mascul\u012Bnum d\u0113signat.
+   * Valor hic generem masculīnum dēsignat.
    */
-  MASCULINUM("mascul\u012Bnum"),
+  MASCULINUM("masculīnum"),
 
   /**
-   * Valor hic generem f\u0113min\u012Bnum d\u0113signat.
+   * Valor hic generem fēminīnum dēsignat.
    */
-  FEMININUM("f\u0113min\u012Bnum");
+  FEMININUM("fēminīnum");
 
   /**
-   * Valor hic reparesent\u0101ti\u014Dnem scr\u012Bpta \u0113numer\u0101ti\u014Dnis d\u0113signat.
+   * Valor hic reparesentātiōnem scrīpta ēnumerātiōnis dēsignat.
    */
-  public static final @NonNull String pittacium = Utilitas.minusculasScribo(Genus.class.getSimpleName());
+  public static final @NonNull String pittacium = "genus";
 
   /**
-   * Valor hic repraesent\u0101ti\u014Dnem scr\u012Bpta re\u012B huius d\u0113signat.
+   * Valor hic repraesentātiōnem scrīpta reī huius dēsignat.
    */
   public final @NonNull String scriptio;
 
   /**
-   * Officium hoc c\u014Dnstr\u016Bct\u014Drem re\u012B classis huius perpetrat.
-   * @param scrpt val\u014Drem {@link #scriptio} indicat.
+   * Officium hoc cōnstrūctōrem reī classis huius perpetrat.
+   * @param scrpt valōrem {@link #scriptio} indicat.
    */
   Genus(@NonNull final String scrpt) {
     scriptio = scrpt;
   }
 
   /**
-   * Modus hic rem \u0113numer\u0101ti\u014D {@link Genus} \u0101 parametr\u014D d\u0113sign\u0101t\u014D advenit. <br>
-   * Val\u014Drem {@link #NULLUM} refert s\u012B nihil val\u014Drem {@code scriptio} quadrat.
-   * @param scriptio val\u014Drem {@link #scriptio} indicat.
-   * @return Rem \u0113numer\u0101ti\u014D {@link Genus} quod parametrum d\u0113sign\u0101tum quadrat.
+   * Modus hic rem ēnumerātiō {@link Genus} ā parametrō dēsignātō advenit. <br>
+   * Valōrem {@link #NULLUM} refert sī nihil valōrem {@code scriptio} quadrat.
+   * @param scriptio valōrem {@link #scriptio} indicat.
+   * @return Rem ēnumerātiō {@link Genus} quod parametrum dēsignātum quadrat.
    */
   @NonNull public static Genus definiam(@NonNull final String scriptio) {
     return Stream.of(values())
@@ -67,7 +65,7 @@ public enum Genus {
 
   /**
    * @param illud valor tentandus.
-   * @return {@code illud} s\u012B val\u014Drem \u0113numer\u0101ti\u014D {@link Genus} quadrat; {@link #NULLUM} aliter.
+   * @return {@code illud} sī valōrem ēnumerātiō {@link Genus} quadrat; {@link #NULLUM} aliter.
    */
   @SuppressWarnings("ConstantConditions")
   @NonNull public static Genus ut(@NonNull final Enum <?> illud) {

@@ -11,7 +11,7 @@ import org.apache.commons.lang3.ObjectUtils;
 import java.util.function.*;
 
 /**
- * Classis {@link InventorAdiectivis} est v\u0101s classis {@link Inventor} class\u012B {@link Adiectivum}.
+ * Classis {@link InventorAdiectivis} est vās classis {@link Inventor} classī {@link Adiectivum}.
  * @see Adiectivum
  * @see NuntiusInventoriAdiectivis
  */
@@ -22,7 +22,7 @@ public final class InventorAdiectivis extends Inventor <Adiectivum> {
   @Nullable private static InventorAdiectivis instantia = null;
 
   /**
-   * Valor hic viam re\u012B classis huiuc facit.
+   * Valor hic viam reī classis huiuc facit.
    * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
    */
   @NonNull public static final Supplier <InventorAdiectivis> faciendum =
@@ -40,8 +40,8 @@ public final class InventorAdiectivis extends Inventor <Adiectivum> {
   }
 
   /**
-   * @return Quaesti\u014Dnem quam r\u0113s classis {@link LectorMultiplicibus.LectorAdiectivis} ut\u0101tur r\u0113s classis {@link
-   *   Adiectivum} perc\u014Dlere
+   * @return Quaestiōnem quam rēs classis {@link LectorMultiplicibus.LectorAdiectivis} ūtātur rēs classis {@link
+   *   Adiectivum} percōlere
    * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Predicate.html">Prediate</a>
    */
   @Override @NonNull
@@ -67,12 +67,12 @@ public final class InventorAdiectivis extends Inventor <Adiectivum> {
     numeralis = Numeralis.NULLUS;
     casus = Casus.DERECTUS;
     gradus = Gradus.NULLUS;
-    nuntius.certioro("Restit\u016Btus sum");
+    nuntius.certioro("Restitūtus sum");
   }
 
   /**
    * {@inheritDoc}
-   * @param illud \u0113numer\u0101ti\u014Dnem indendam
+   * @param illud ēnumerātiōnem indendam
    * @see Specialitas#ut(Enum)
    * @see Genus#ut(Enum)
    * @see Numeralis#ut(Enum)
@@ -82,32 +82,27 @@ public final class InventorAdiectivis extends Inventor <Adiectivum> {
   @Override protected void allegam(@NonNull final Enum <?> illud) {
     if (illud instanceof Specialitas) {
       specialitas = Specialitas.ut(illud);
-      nuntius.garrio("Quaesti\u014Dn\u012B adi\u0113c\u012B conditi\u014Dnem novam:",
-                     Specialitas.pittacium, illud);
+      nuntius.garrio("Quaestiōnī adiēcī conditiōnem novam:", Specialitas.pittacium, illud);
     } else if (illud instanceof Genus) {
       genus = Genus.ut(illud);
-      nuntius.garrio("Quaesti\u014Dn\u012B adi\u0113c\u012B conditi\u014Dnem novam:",
-                     Genus.pittacium, illud);
+      nuntius.garrio("Quaestiōnī adiēcī conditiōnem novam:", Genus.pittacium, illud);
     } else if (illud instanceof Numeralis) {
       numeralis = Numeralis.ut(illud);
-      nuntius.garrio("Quaesti\u014Dn\u012B adi\u0113c\u012B conditi\u014Dnem novam:",
-                     Numeralis.pittacium, illud);
+      nuntius.garrio("Quaestiōnī adiēcī conditiōnem novam:", Numeralis.pittacium, illud);
     } else if (illud instanceof Casus) {
       casus = Casus.ut(illud);
-      nuntius.garrio("Quaesti\u014Dn\u012B adi\u0113c\u012B conditi\u014Dnem novam:",
-                     Casus.pittacium, illud);
+      nuntius.garrio("Quaestiōnī adiēcī conditiōnem novam:", Casus.pittacium, illud);
     } else if (illud instanceof Gradus) {
       gradus = Gradus.ut(illud);
-      nuntius.garrio("Quaesti\u014Dn\u012B adi\u0113c\u012B conditi\u014Dnem novam:",
-                     Gradus.pittacium, illud);
+      nuntius.garrio("Quaestiōnī adiēcī conditiōnem novam:", Gradus.pittacium, illud);
     } else {
-      nuntius.moneo("Adiect\u012Bv\u014D inqu\u012Bs\u012Bti\u014D adiect\u012Bv\u014D inop\u012Bn\u0101ta \u016Bsa'st:",
-                    illud);
+      nuntius.moneo(Categoria.ADIECTIVUM.declina(Casus.DATIVUS, Numeralis.SINGULARIS, true),
+                    "inquīsītiō adiectīvō inopīnāta ūsa'st:", illud);
     }
   }
 
   /**
-   * Classis {@link NuntiusInventoriAdiectivis} est v\u0101s classis {@link Nuntius} class\u012B {@link InventorAdiectivis}
+   * Classis {@link NuntiusInventoriAdiectivis} est vās classis {@link Nuntius} classī {@link InventorAdiectivis}
    * @see InventorAdiectivis
    */
   @Singleton
@@ -115,7 +110,7 @@ public final class InventorAdiectivis extends Inventor <Adiectivum> {
     @Nullable private static NuntiusInventoriAdiectivis instantia = null;
 
     /**
-     * Valor hic viam re\u012B classis huiuc facit.
+     * Valor hic viam reī classis huiuc facit.
      * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
      */
     @NonNull private static final Supplier <NuntiusInventoriAdiectivis> faciendum =

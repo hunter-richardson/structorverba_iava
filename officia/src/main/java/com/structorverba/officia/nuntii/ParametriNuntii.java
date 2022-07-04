@@ -10,16 +10,16 @@ import java.util.function.Supplier;
 import java.util.logging.*;
 
 /**
- * Classis {@link ParametriNuntii} val\u014Dr\u0113s continet qu\u014Ds rem classis {@link Nuntius} iuvat gener\u0101re.
+ * Classis {@link ParametriNuntii} valōrēs continet quōs rem classis {@link Nuntius} iuvat generāre.
  */
 @SuppressWarnings("SpellCheckingInspection")
 public final class ParametriNuntii {
   /**
-   * Valor hic incidat quam verb\u014Dsa r\u0113s haec scr\u012Bb\u0113tur.
+   * Valor hic incidat quam verbōsa rēs haec scrībētur.
    */
   @NonNull public final GradusNuntii gradusMinimus = GradusNuntii.OMNIS;
   /**
-   * Valor hic viam re\u012B classis <a href="https://docs.oracle.com/javase/7/docs/api/java/util/logging/Logger.html">Logger</a>
+   * Valor hic viam reī classis <a href="https://docs.oracle.com/javase/7/docs/api/java/util/logging/Logger.html">Logger</a>
    * facit.
    * @see <a href="https://docs.oracle.com/javase/7/docs/api/java/util/logging/Logger.html">Logger</a>
    * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>

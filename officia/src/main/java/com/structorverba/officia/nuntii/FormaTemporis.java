@@ -12,7 +12,7 @@ import java.time.temporal.*;
 import java.util.function.BiFunction;
 
 /**
- * Classis {@link FormaTemporis} temporem f\u014Drmat scr\u012Bb\u012B.
+ * Classis {@link FormaTemporis} temporem fōrmat scrībī.
  */
 @SuppressWarnings({ "SpellCheckingInspection", "unused" })
 final class FormaTemporis {
@@ -76,59 +76,59 @@ final class FormaTemporis {
   }
 
   /**
-   * @param tempus tempus f\u014Drmandus
-   * @return scr\u012Bpti\u014Dnem temporis pr\u014Dv\u012Bs\u012B
+   * @param tempus tempus fōrmandus
+   * @return scrīptiōnem temporis prōvīsī
    */
   @NonNull public static String formem(final long tempus) {
     return new FormaTemporis(tempus).formo();
   }
 
   /**
-   * @param tempus tempus f\u014Drmandus
-   * @return scr\u012Bpti\u014Dnem temporis pr\u014Dv\u012Bs\u012B
+   * @param tempus tempus fōrmandus
+   * @return scrīptiōnem temporis prōvīsī
    */
   @NonNull public static String formem(@NonNull final Instant tempus) {
     return new FormaTemporis(tempus).formo();
   }
 
   /**
-   * @return scr\u012Bpti\u014Dnem temporis praesentis
+   * @return scrīptiōnem temporis praesentis
    */
   @NonNull public static String formem() {
     return new FormaTemporis().formo();
   }
 
   /**
-   * @param tempus               tempus f\u014Drmandus
-   * @param punctillaPraecidemne val\u014Drem {@code true} s\u012B r\u0113s haec val\u014Drem {@code tempus} p\u016Bnctilla praecidemne;
-   *                             val\u014Drem {@code false} aliter
-   * @return scr\u012Bpti\u014Dnem temporis pr\u014Dv\u012Bs\u012B
+   * @param tempus               tempus fōrmandus
+   * @param punctillaPraecidemne valōrem {@code true} sī rēs haec valōrem {@code tempus} pūnctilla praecidemne;
+   *                             valōrem {@code false} aliter
+   * @return scrīptiōnem temporis prōvīsī
    */
   @NonNull public static String formem(final long tempus, final boolean punctillaPraecidemne) {
     return new FormaTemporis(tempus, punctillaPraecidemne).formo();
   }
 
   /**
-   * @param tempus               tempus f\u014Drmandus
-   * @param punctillaPraecidemne val\u014Drem {@code true} s\u012B r\u0113s haec val\u014Drem {@code tempus} p\u016Bnctilla praecidemne;
-   *                             val\u014Drem {@code false} aliter
-   * @return scr\u012Bpti\u014Dnem temporis pr\u014Dv\u012Bs\u012B
+   * @param tempus               tempus fōrmandus
+   * @param punctillaPraecidemne valōrem {@code true} sī rēs haec valōrem {@code tempus} pūnctilla praecidemne;
+   *                             valōrem {@code false} aliter
+   * @return scrīptiōnem temporis prōvīsī
    */
   @NonNull public static String formem(@NonNull final Instant tempus, final boolean punctillaPraecidemne) {
     return new FormaTemporis(tempus, punctillaPraecidemne).formo();
   }
 
   /**
-   * @param punctillaPraecidemne val\u014Drem {@code true} s\u012B r\u0113s haec temporem praesentem p\u016Bnctilla praecidemne;
-   *                             val\u014Drem {@code false} aliter
-   * @return scr\u012Bpti\u014Dnem temporis praesentis
+   * @param punctillaPraecidemne valōrem {@code true} sī rēs haec temporem praesentem pūnctilla praecidemne;
+   *                             valōrem {@code false} aliter
+   * @return scrīptiōnem temporis praesentis
    */
   @NonNull public static String formem(final boolean punctillaPraecidemne) {
     return new FormaTemporis(punctillaPraecidemne).formo();
   }
 
   /**
-   * @return scr\u012Bpti\u014Dnem temporis quem r\u0113s haec continet.
+   * @return scrīptiōnem temporis quem rēs haec continet.
    */
   @NonNull public String formo() {
     return formatio.apply(tempus, punctillaPraecidemne);

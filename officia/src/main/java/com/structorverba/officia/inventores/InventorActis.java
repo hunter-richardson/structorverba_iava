@@ -11,7 +11,7 @@ import org.apache.commons.lang3.ObjectUtils;
 import java.util.function.*;
 
 /**
- * Classis {@link InventorActis} est v\u0101s classis {@link Inventor} class\u012B {@link Actus}.
+ * Classis {@link InventorActis} est vās classis {@link Inventor} classī {@link Actus}.
  * @see Actus
  * @see NuntiusInventoriActis
  */
@@ -22,7 +22,7 @@ public final class InventorActis extends Inventor <Actus> {
   @Nullable private static InventorActis instantia = null;
 
   /**
-   * Valor hic viam re\u012B classis huiuc facit.
+   * Valor hic viam reī classis huiuc facit.
    * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
    */
   @NonNull public static final Supplier <InventorActis> faciendum =
@@ -40,8 +40,8 @@ public final class InventorActis extends Inventor <Actus> {
   }
 
   /**
-   * @return Quaesti\u014Dnem quam r\u0113s classis {@link LectorMultiplicibus.LectorActis} \u016Bt\u0101tur r\u0113s classis {@link Actus}
-   *   perc\u014Dlere
+   * @return Quaestiōnem quam rēs classis {@link LectorMultiplicibus.LectorActis} ūtātur rēs classis {@link Actus}
+   *   percōlere
    * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Predicate.html">Prediate</a>
    */
   @Override @NonNull
@@ -67,12 +67,12 @@ public final class InventorActis extends Inventor <Actus> {
     numeralis = Numeralis.NULLUS;
     persona = Persona.NULLA;
     modus = Modus.NULLUS;
-    nuntius.certioro("Restit\u016Btus sum");
+    nuntius.certioro("Restitūtus sum");
   }
 
   /**
    * {@inheritDoc}
-   * @param illud \u0113numer\u0101ti\u014Dnem indendam
+   * @param illud ēnumerātiōnem indendam
    * @see Vox#ut(Enum)
    * @see Tempus#ut(Enum)
    * @see Numeralis#ut(Enum)
@@ -82,31 +82,32 @@ public final class InventorActis extends Inventor <Actus> {
   @Override protected void allegam(@NonNull final Enum <?> illud) {
     if (illud instanceof Vox) {
       vox = Vox.ut(illud);
-      nuntius.garrio("Quaestion\u012B adi\u0113c\u012B conditi\u014Dnem novam:",
+      nuntius.garrio("Quaestionī adiēcī conditiōnem novam:",
                      Vox.pittacium, illud);
     } else if (illud instanceof Tempus) {
       tempus = Tempus.ut(illud);
-      nuntius.garrio("Quaestion\u012B adi\u0113c\u012B conditi\u014Dnem novam:",
+      nuntius.garrio("Quaestionī adiēcī conditiōnem novam:",
                      Tempus.pittacium, illud);
     } else if (illud instanceof Numeralis) {
       numeralis = Numeralis.ut(illud);
-      nuntius.garrio("Quaestion\u012B adi\u0113c\u012B conditi\u014Dnem novam:",
+      nuntius.garrio("Quaestionī adiēcī conditiōnem novam:",
                      Numeralis.pittacium, illud);
     } else if (illud instanceof Persona) {
       persona = Persona.ut(illud);
-      nuntius.garrio("Quaestion\u012B adi\u0113c\u012B conditi\u014Dnem novam:",
+      nuntius.garrio("Quaestionī adiēcī conditiōnem novam:",
                      Persona.pittacium, illud);
     } else if (illud instanceof Modus) {
       modus = Modus.ut(illud);
-      nuntius.garrio("Quaestion\u012B adi\u0113c\u012B conditi\u014Dnem novam:",
+      nuntius.garrio("Quaestionī adiēcī conditiōnem novam:",
                      Modus.pittacium, illud);
     } else {
-      nuntius.moneo("\u0102ct\u014D inqu\u012Bs\u012Bti\u014D inop\u012Bn\u0101ta \u016Bsa'st:", illud);
+      nuntius.moneo(Categoria.ACTUS.declina(Casus.DATIVUS, Numeralis.SINGULARIS, true),
+                    "inquīsītiō inopīnāta ūsa'st:", illud);
     }
   }
 
   /**
-   * Classis {@link NuntiusInventoriActis} est v\u0101s classis {@link Nuntius} class\u012B {@link InventorActis}
+   * Classis {@link NuntiusInventoriActis} est vās classis {@link Nuntius} classī {@link InventorActis}
    * @see InventorActis
    */
   @Singleton
@@ -114,7 +115,7 @@ public final class InventorActis extends Inventor <Actus> {
     @Nullable private static NuntiusInventoriActis instantia = null;
 
     /**
-     * Valor hic viam re\u012B classis huiuc facit.
+     * Valor hic viam reī classis huiuc facit.
      * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
      */
     @NonNull private static final Supplier <NuntiusInventoriActis> faciendum =

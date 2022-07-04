@@ -10,8 +10,8 @@ import java.util.stream.Stream;
 
 
 /**
- * Classis {@link Nuntius} n\u016Bntia d\u0113 exsec\u016Bti\u014Dne programm\u0101tis Str\u016BctorVerba in sc\u0101p\u012Bs LOG scr\u012Bbit. <br>
- * Class\u0113s pl\u016Brimae aliae in programm\u0101tem Str\u016BctorVerba rem classis huius habet.
+ * Classis {@link Nuntius} nūntia dē exsecūtiōne programmātis StrūctorVerba in scāpīs LOG scrībit. <br>
+ * Classēs plūrimae aliae in programmātem StrūctorVerba rem classis huius habet.
  * @see Omne
  */
 @SuppressWarnings("SpellCheckingInspection")
@@ -20,8 +20,8 @@ public abstract class Nuntius {
   @NonNull private final Logger       praeco;
 
   /**
-   * Officium hoc c\u014Dnstr\u016Bct\u014Drem re\u012B classis huius perpetrat.
-   * @param parametri Valor hic parametr\u014Ds \u016Bs\u014Ds pr\u014D gener\u0101ti\u014Dne organum internum re\u012B huius continet.
+   * Officium hoc cōnstrūctōrem reī classis huius perpetrat.
+   * @param parametri Valor hic parametrōs ūsōs prō generātiōne organum internum reī huius continet.
    */
   protected Nuntius(@NonNull final ParametriNuntii parametri) {
     gradusMinimus = parametri.gradusMinimus;
@@ -44,21 +44,21 @@ public abstract class Nuntius {
   }
 
   /**
-   * Modus hic persignat quod exsec\u016Bti\u014Dnem programm\u0101tis Str\u016BuctorVerba err\u014Drem continu\u0101tur.
-   * @param error error continu\u0101tus
+   * Modus hic persignat quod exsecūtiōnem programmātis StrūuctorVerba errōrem continuātur.
+   * @param error error continuātus
    * @see #terreo(Object...)
    */
   public final void terreo(@NonNull final Throwable error) {
     final StackTraceElement historia = error.getStackTrace()[ 0 ];
     praeco.throwing(historia.getClassName(), historia.getMethodName(), error);
     terreo("Modus", historia.getMethodName(), "classe",
-           historia.getClassName(), "contin\u0101tu'st errorem:",
+           historia.getClassName(), "continātu'st errorem:",
            error.getClass().getSimpleName(), error.getLocalizedMessage());
   }
 
   /**
-   * Modus hic persignat quod exsec\u016Bti\u014Dnem programm\u0101tis Str\u016BctorVerba continu\u0101tur condici\u014Dnem quam err\u014Drem indicat.
-   * @param nuntia seri\u0113s re\u012B persign\u0101re
+   * Modus hic persignat quod exsecūtiōnem programmātis StrūctorVerba continuātur condiciōnem quam errōrem indicat.
+   * @param nuntia seriēs reī persignāre
    * @see GradusNuntii#GRAVIS
    */
   public final void terreo(@Nullable final Object... nuntia) {
@@ -78,9 +78,9 @@ public abstract class Nuntius {
   }
 
   /**
-   * Modus hic persignat quod exsec\u016Bti\u014Dnem programm\u0101tis Str\u016BctorVerba continu\u0101tur condici\u014Dnem quam auct\u014Dribus
-   * programm\u0101tis intersit.
-   * @param nuntia seri\u0113s re\u012B persign\u0101re
+   * Modus hic persignat quod exsecūtiōnem programmātis StrūctorVerba continuātur condiciōnem quam auctōribus
+   * programmātis intersit.
+   * @param nuntia seriēs reī persignāre
    * @see GradusNuntii#PRAEGRESSURUS
    */
   public final void noto(@Nullable final Object... nuntia) {
@@ -88,8 +88,8 @@ public abstract class Nuntius {
   }
 
   /**
-   * Modus hic persignat quod exsec\u016Bti\u014Dnem programm\u0101tis Str\u016BctorVerba continu\u0101tur condici\u014Dnem quam err\u014Drem add\u016Bcat.
-   * @param nuntia seri\u0113s re\u012B persign\u0101re
+   * Modus hic persignat quod exsecūtiōnem programmātis StrūctorVerba continuātur condiciōnem quam errōrem addūcat.
+   * @param nuntia seriēs reī persignāre
    * @see GradusNuntii#PRAEMONITORIUS
    */
   public final void moneo(@Nullable final Object... nuntia) {
@@ -97,9 +97,9 @@ public abstract class Nuntius {
   }
 
   /**
-   * Modus hic persignat quod exsec\u016Bti\u014Dnem programm\u0101tis Str\u016BctorVerba continu\u0101tur condici\u014Dnem quam \u016Bs\u016Bfructu\u0101ri\u012Bs
-   * programm\u0101tis intersit.
-   * @param nuntia seri\u0113s re\u012B persign\u0101re
+   * Modus hic persignat quod exsecūtiōnem programmātis StrūctorVerba continuātur condiciōnem quam ūsūfructuāriīs
+   * programmātis intersit.
+   * @param nuntia seriēs reī persignāre
    * @see GradusNuntii#INFORMATIVUS
    */
   public final void certioro(@Nullable final Object... nuntia) {
@@ -107,9 +107,9 @@ public abstract class Nuntius {
   }
 
   /**
-   * Modus hic persignat quod exsec\u016Bti\u014Dnem programm\u0101tis Str\u016BctorVerba continu\u0101tur condici\u014Dnem quam n\u0113min\u012B fortasse
+   * Modus hic persignat quod exsecūtiōnem programmātis StrūctorVerba continuātur condiciōnem quam nēminī fortasse
    * intersit.
-   * @param nuntia seri\u0113s re\u012B persign\u0101re
+   * @param nuntia seriēs reī persignāre
    * @see GradusNuntii#SCRUTANS
    */
   public final void garrio(@Nullable final Object... nuntia) {
@@ -117,9 +117,9 @@ public abstract class Nuntius {
   }
 
   /**
-   * Modus hic persignat quod exsec\u016Bti\u014Dnem programm\u0101tis Str\u016BctorVerba continu\u0101tur condici\u014Dnem quam n\u0113min\u012B prob\u0101biliter
+   * Modus hic persignat quod exsecūtiōnem programmātis StrūctorVerba continuātur condiciōnem quam nēminī probābiliter
    * intersit.
-   * @param nuntia seri\u0113s re\u012B persign\u0101re
+   * @param nuntia seriēs reī persignāre
    * @see GradusNuntii#SCRUTANTIOR
    */
   public final void plusGarrio(@Nullable final Object... nuntia) {
@@ -127,9 +127,9 @@ public abstract class Nuntius {
   }
 
   /**
-   * Modus hic persignat quod exsec\u016Bti\u014Dnem programm\u0101tis Str\u016BctorVerba continu\u0101tur condici\u014Dnem quam n\u0113min\u012B certissime
+   * Modus hic persignat quod exsecūtiōnem programmātis StrūctorVerba continuātur condiciōnem quam nēminī certissime
    * intersit.
-   * @param nuntia seri\u0113s re\u012B persign\u0101re
+   * @param nuntia seriēs reī persignāre
    * @see GradusNuntii#SCRUTANTISSIMUS
    */
   public final void plurimumGarrio(@Nullable final Object... nuntia) {
