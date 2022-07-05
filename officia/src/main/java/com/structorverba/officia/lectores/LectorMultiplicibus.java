@@ -230,18 +230,18 @@ public abstract class LectorMultiplicibus <Hoc extends VerbumMultiplex <Hoc>> ex
           case PRIMA -> switch (numeralis) {
             case SINGULARIS -> "meum";
             case PLURALIS -> "nostrum";
-            case NULLUS -> throw new IllegalArgumentException(String.format("\u016Asus prāvu'st %s %s",
+            case NULLUS -> throw new IllegalArgumentException(String.format("Ūsus prāvu'st %s %s",
                                                                             Numeralis.pittacium,
                                                                             numeralis));
           };
           case SECUNDA -> switch (numeralis) {
             case SINGULARIS -> "tuum";
             case PLURALIS -> "vestrum";
-            case NULLUS -> throw new IllegalArgumentException(String.format("\u016Asus prāvu'st %s %s",
+            case NULLUS -> throw new IllegalArgumentException(String.format("Ūsus prāvu'st %s %s",
                                                                             Numeralis.pittacium, numeralis));
           };
           case TERTIA -> "suum";
-          case NULLA -> throw new IllegalArgumentException(String.format("\u016Asus prāvu'st %se %s",
+          case NULLA -> throw new IllegalArgumentException(String.format("Ūsus prāvu'st %se %s",
                                                                          Persona.pittacium, persona));
         }, illa);
       } catch (IllegalArgumentException e) {
@@ -317,7 +317,7 @@ public abstract class LectorMultiplicibus <Hoc extends VerbumMultiplex <Hoc>> ex
           case PRIMA -> "ego";
           case SECUNDA -> "tū";
           case TERTIA -> "id";
-          case NULLA -> throw new IllegalArgumentException(String.format("\u016Asus prāvu'st %se %s",
+          case NULLA -> throw new IllegalArgumentException(String.format("Ūsus prāvu'st %se %s",
                                                                          Persona.pittacium, persona));
         }, illa);
       } catch (IllegalArgumentException e) {
