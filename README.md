@@ -28,15 +28,17 @@ Omne quālitātēs ipsās prōpositaque ipsa habet et ligāmina illa vōs dūcen
 
 ___
 
-Praetereā tentāmina quattuor sunt scrīpsī ut exsecūtiō modōsque programmātis recēnseantur.
+Praetereā tentāmina quīnque sunt scrīpsī ut exsecūtiō modōsque programmātis recēnseantur.
 
-I. [DolōremIpsum](officium/src/test/com/structorverba/officia/DoloremIpsum.java)
+I. [DoloremIpsum](officia/src/test/java/com/structorverba/officia/DoloremIpsum.java)
 
-II. [Carthāgō](officium/src/test/com/structorverba/officia/Carthago.java)
+II. [Carthago](officia/src/test/java/com/structorverba/officia/Carthago.java)
 
-III. [Exempla](officium/src/test/com/structorverba/officia/Exempla.java)
+III. [Exempla](officia/src/test/java/com/structorverba/officia/Exempla.java)
 
-IV. [Numerī](officium/src/test/com/structorverba/officia/Numeri.java)
+IV. [Numeri](officia/src/test/java/com/structorverba/officia/Numeri.java)
+
+V. [Verbales](officia/src/test/java/com/structorverba/officia/Verbales.java)
 
 Invocāte valōrem [StructorVerba.faciendum](officia/src/main/java/com/structorverba/officia/miscella/StructorVerba.java#L32) ut fūnctiōnēs omnēs programmātis StrūctorVerba accēdātis:
 
