@@ -61,17 +61,6 @@ public abstract class Verbum <Hoc extends Verbum <Hoc>> extends Omne implements 
   }
 
   /**
-   * Hic modus modum {@link Object#equals(Object)} implit.
-   * @return {@code true} sī hoc valorque {@code aliud} sē aequant; @{code false} aliter.
-   * @param aliud  Valor comparandus
-   * @see  Object#equals(Object)
-   * */
-  public boolean equals(Object aliud) {
-    return aliud instanceof Verbum &&
-           toString().equals(aliud.toString());
-  }
-
-  /**
    * @return Repraesentātiōnem scrīpta reī classis {@link Verbum}.
    * @see Object#toString()
    */
