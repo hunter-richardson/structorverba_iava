@@ -4,7 +4,7 @@ import androidx.annotation.*;
 import com.structorverba.officia.enumerationes.*;
 import com.structorverba.officia.miscella.*;
 import com.structorverba.officia.nuntii.*;
-import com.structorverba.officia.verba.VerbumSimplex;
+import com.structorverba.officia.verba.*;
 import jakarta.ejb.*;
 import lombok.Getter;
 import org.apache.commons.lang3.*;
@@ -108,12 +108,21 @@ public final class LectorPraepositionibus extends Omne {
     }
   }
 
+  /**
+   * Hic modus fōrmam temere sēligit.
+   * @return Rem classis {@link Verbum} fortuītam
+   * */
   @SuppressWarnings("unchecked")
   @NonNull public VerbumSimplex.Praepositio fortuitumLegam() {
     return fortuitumLegam(Stream.of(Casus.ABLATIVUS, Casus.ACCUSATIVUS, Casus.GENITIVUS, Casus.VOCATIVUS)
                                 .reduce((BinaryOperator<Casus>) Utilitas.invocaFortem).orElse(Casus.DERECTUS));
   }
 
+  /**
+   * Hic modus fōrmam temere sēligit.
+   * @param casus  Rēs classis {@link Casus} reī referendae
+   * @return Rem classis {@link Verbum} fortuītam nōminandam
+   * */
   @SuppressWarnings("unchecked")
   public VerbumSimplex.Praepositio fortuitumLegam(@NonNull final Casus casus) {
     if(Casus.DERECTUS.equals(casus)) {

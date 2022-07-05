@@ -5,10 +5,10 @@ import com.structorverba.officia.miscella.*;
 import com.structorverba.officia.tentamina.Tentamen;
 import com.structorverba.officia.verba.VerbumSimplex;
 import lombok.Getter;
-import org.apache.commons.lang3.Range;
 import org.junit.jupiter.api.*;
 
-import java.util.Random;
+import java.util.*;
+import java.util.function.*;
 
 /**
  * Classis {@link Numeri} operātiōnēs mathēmaticās rērum classis {@link VerbumSimplex.Numerus} tentat.
@@ -19,6 +19,21 @@ final class Numeri extends Omne {
   @NonNull
   @Getter(lazy = true)
   private final StructorVerba structor = StructorVerba.faciendum.get();
+
+  @NonNull private static final BiFunction<Map.Entry<Short, Short>, Character, Short> expectatio =
+          (numeri, operatio) -> (short) switch (operatio) {
+            case '+' -> numeri.getKey() + numeri.getValue();
+            case '-' -> numeri.getKey() - numeri.getValue();
+            case '*' -> numeri.getKey() * numeri.getValue();
+            case '/' -> numeri.getKey() / numeri.getValue();
+            case '%' -> numeri.getKey() % numeri.getValue();
+            default ->  0;
+          };
+
+  @NonNull @Getter(lazy = true)
+  private final BiConsumer<Map.Entry<Short, Short>, Character> agendum =
+          (numeri, operatio) -> System.out.println(new Tentamen.TentamenMathematicum(numeri, operatio)
+                  .exsequar(structor.numeram(expectatio.apply(numeri, operatio))));
 
   private final short NUMERUM_MAXIMUM = 3998;
   private final short XLII_NUMERUM    = 42;
@@ -63,9 +78,7 @@ final class Numeri extends Omne {
    */
   @Test @Order(4)
   public void additionis() {
-    @NonNull final Range <Short> range = Range.between((short) 3, (short) 17);
-    System.out.println(new Tentamen.TentamenMathematicum(range, '+')
-                         .exsequar(structor.numeram(range.getMaximum())));
+    agendum.accept(Map.entry((short) 3, (short) 17), '+');
   }
 
   /**
@@ -74,9 +87,7 @@ final class Numeri extends Omne {
    */
   @Test @Order(5)
   public void subtractionis() {
-    @NonNull final Range <Short> range = Range.between((short) 7, (short) 12);
-    System.out.println(new Tentamen.TentamenMathematicum(range, '-')
-                         .exsequar(structor.numeram(range.getMaximum())));
+    agendum.accept(Map.entry((short) 12, (short) 7), '-');
   }
 
   /**
@@ -85,9 +96,7 @@ final class Numeri extends Omne {
    */
   @Test @Order(6)
   public void multiplicationis() {
-    @NonNull final Range <Short> range = Range.between((short) 2, (short) 3);
-    System.out.println(new Tentamen.TentamenMathematicum(range, '*')
-                         .exsequar(structor.numeram(range.getMaximum())));
+    agendum.accept(Map.entry((short) 2, (short) 3), '*');
   }
 
   /**
@@ -96,9 +105,7 @@ final class Numeri extends Omne {
    */
   @Test @Order(7)
   public void divisionis() {
-    @NonNull final Range <Short> range = Range.between((short) 6, (short) 18);
-    System.out.println(new Tentamen.TentamenMathematicum(range, '/')
-                         .exsequar(structor.numeram(range.getMaximum())));
+    agendum.accept(Map.entry((short) 18, (short) 6), '/');
   }
 
   /**
@@ -107,8 +114,6 @@ final class Numeri extends Omne {
    */
   @Test @Order(8)
   public void mansionis() {
-    @NonNull final Range <Short> range = Range.between((short) 9, (short) 12);
-    System.out.println(new Tentamen.TentamenMathematicum(range, '%')
-                         .exsequar(structor.numeram(range.getMaximum())));
+    agendum.accept(Map.entry((short) 12, (short) 9), '%');
   }
 }

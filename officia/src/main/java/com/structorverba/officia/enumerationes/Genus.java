@@ -43,10 +43,6 @@ public enum Genus {
    */
   public final @NonNull String scriptio;
 
-  /**
-   * Hoc officium cōnstrūctōrem reī huius classis perpetrat.
-   * @param scrpt valōrem {@link #scriptio} indicat.
-   */
   Genus(@NonNull final String scrpt) {
     scriptio = scrpt;
   }

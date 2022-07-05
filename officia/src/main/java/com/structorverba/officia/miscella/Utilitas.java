@@ -3,6 +3,7 @@ package com.structorverba.officia.miscella;
 import androidx.annotation.NonNull;
 import com.structorverba.officia.enumerationes.Categoria;
 import com.structorverba.officia.lectores.LectorPraepositionibus;
+import com.structorverba.officia.verba.Verbum;
 import org.apache.commons.io.FilenameUtils;
 import org.apache.commons.lang3.*;
 
@@ -68,6 +69,12 @@ public final class Utilitas extends Omne {
                 .toAbsolutePath().toString();
   }
 
+  /**
+   * Hic modus nōminem scāpī <a href="{@docRoot}/../src/main/resources">dictiōnāriō</a> temere sēligit.
+   * @param categoria  Rēs classis {@link Categoria} quae extēnsiōnem nōminandam classis {@link Verbum} repraesentat.
+   * @return Nōminem scāpī fortuītī
+   * @see #invocaFortem
+   * */
   @SuppressWarnings({"unchecked", "ConstantConditions"})
   @NonNull public static String fortuitumLegam(@NonNull final Categoria categoria) throws IOException {
     switch (categoria) {
@@ -93,5 +100,22 @@ public final class Utilitas extends Omne {
     }
   }
 
+  /**
+   * Hic modus nōminem scāpī <a href="{@docRoot}/../src/main/resources">dictiōnāriō</a> temere sēligit.
+   * @return Nōminem scāpī fortuītī
+   * @see #fortuitumLegam(Categoria)
+   * @see #invocaFortem
+   * */
+  @SuppressWarnings({"unchecked", "OptionalGetWithoutIsPresent", "unused"})
+  @NonNull public static String fortitumLegam() throws IOException {
+    return fortuitumLegam(Arrays.stream(Categoria.values())
+                                .reduce((BinaryOperator<Categoria>) invocaFortem)
+                                .get());
+  }
+
+  /**
+   * Hic valor classem {@link Random} invocat ut dēcrēta bīnāria agat.
+   * @see Random#nextBoolean()
+   * */
   @NonNull public static BinaryOperator<?> invocaFortem = (primum, secundum) -> new Random().nextBoolean() ? primum : secundum;
 }

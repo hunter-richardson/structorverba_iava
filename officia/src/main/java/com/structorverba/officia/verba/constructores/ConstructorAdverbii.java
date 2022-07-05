@@ -7,17 +7,29 @@ import org.apache.commons.lang3.StringUtils;
 
 @SuppressWarnings("SpellCheckingInspection")
 public class ConstructorAdverbii  extends Constructor<Adverbium> {
-    @NonNull
-    private Gradus gradus = Gradus.NULLUS;
+    /**
+     * Hic valor potentiam reī huius dēsignat.
+     * @see Gradus
+     */
+    @NonNull private Gradus gradus = Gradus.NULLUS;
 
+    /**
+     * Hic modus valōrem {@link #gradus} induit.
+     * @param gradus  Valor induendus
+     * */
     public void gradus(@NonNull Gradus gradus) {
         this.gradus = gradus;
     }
 
-    @Nullable
-    @Override
+    /**
+     * Hic modus cōnstrūctiōnem huius reī agit.
+     * @return  Rem classis {@link Adverbium} cum valōribus imputātīs.
+     * @implNote  Hic modus {@code null} refert sī {@link #paratus()} valōrem {@code false} refert.
+     * */
+    @Nullable @Override
     public Adverbium build() {
-        return paratus() ? Adverbium.builder().lemma(lemma).scriptio(scriptio).gradus(gradus).build() : null;
+        return paratus() ? Adverbium.builder().lemma(lemma).scriptio(scriptio).gradus(gradus).build()
+                         : null;
     }
 
     /**

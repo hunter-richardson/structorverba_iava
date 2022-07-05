@@ -39,6 +39,10 @@ public abstract class Lector <Hoc extends Verbum <Hoc>> extends Omne {
    */
   @NonNull protected final Categoria categoria;
 
+  /**
+   * Hic modus fōrmam temere sēligit.
+   * @return Rem classis {@link Verbum} fortuītam
+   * */
   @Nullable public abstract Hoc fortuitumLegam();
 
   /**

@@ -38,10 +38,6 @@ public enum Specialitas {
    */
   public final @NonNull String scriptio;
 
-  /**
-   * Hoc officium cōnstrūctōrem reī huius classis perpetrat.
-   * @param scrpt valōrem {@link #scriptio} indicat.
-   */
   Specialitas(@NonNull final String scrpt) {
     scriptio = scrpt;
   }

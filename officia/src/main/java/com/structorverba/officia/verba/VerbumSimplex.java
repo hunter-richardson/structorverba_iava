@@ -119,7 +119,7 @@ public abstract class VerbumSimplex <Hoc extends Verbum <Hoc>> extends Verbum <H
       static @NonNull Supplier <NuntiusInteriectionum> faciendum =
               () -> ObjectUtils.firstNonNull(instantia, instantia = new NuntiusInteriectionum());
 
-      NuntiusInteriectionum() {
+      private NuntiusInteriectionum() {
         super(ParametriNuntii.para(VerbumSimplex.Interiectio.class));
       }
     }

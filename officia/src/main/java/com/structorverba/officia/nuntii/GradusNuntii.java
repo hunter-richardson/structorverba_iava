@@ -52,13 +52,13 @@ enum GradusNuntii {
    * Hic valor indicat rem classis {@link Nuntius} quae persignat nūntiās quās nēminī probābiliter intersit.
    * @see <a href="https://docs.oracle.com/javase/7/docs/api/java/util/logging/Level.html#FINER">FINER</a>
    */
-  SCRUTANTIOR(Level.FINER),
+  SAEPE_SCRUTANS(Level.FINER),
 
   /**
    * Hic valor indicat rem classis {@link Nuntius} quae persignat nūntiās quās nēminī certissime intersit.
    * @see <a href="https://docs.oracle.com/javase/7/docs/api/java/util/logging/Level.html#FINEST">FINEST</a>
    */
-  SCRUTANTISSIMUS(Level.FINEST),
+  SEMPER_SCRUTANS(Level.FINEST),
 
   /**
    * Hic valor indicat rem classis {@link Nuntius} quae nūntiās omnēs persignat.
@@ -80,8 +80,8 @@ enum GradusNuntii {
    *   <li>Valor <a href="https://docs.oracle.com/javase/7/docs/api/java/util/logging/Level.html#INFO">INFO</a> valōrem {@link #INFORMATIVUS} cōnsociat.</li>
    *   <li>Valor <a href="https://docs.oracle.com/javase/7/docs/api/java/util/logging/Level.html#CONFIG">CONFIG</a> valōrem {@link #PRAEGRESSURUS} cōnsociat.</li>
    *   <li>Valor <a href="https://docs.oracle.com/javase/7/docs/api/java/util/logging/Level.html#FINE">FINE</a> valōrem {@link #SCRUTANS} cōnsociat.</li>
-   *   <li>Valor <a href="https://docs.oracle.com/javase/7/docs/api/java/util/logging/Level.html#FINER">FINER</a> valōrem {@link #SCRUTANTIOR} cōnsociat.</li>
-   *   <li>Valor <a href="https://docs.oracle.com/javase/7/docs/api/java/util/logging/Level.html#FINEST">FINEST</a> valōrem {@link #SCRUTANTISSIMUS} cōnsociat.</li>
+   *   <li>Valor <a href="https://docs.oracle.com/javase/7/docs/api/java/util/logging/Level.html#FINER">FINER</a> valōrem {@link #SAEPE_SCRUTANS} cōnsociat.</li>
+   *   <li>Valor <a href="https://docs.oracle.com/javase/7/docs/api/java/util/logging/Level.html#FINEST">FINEST</a> valōrem {@link #SEMPER_SCRUTANS} cōnsociat.</li>
    *   <li>Valor <a href="https://docs.oracle.com/javase/7/docs/api/java/util/logging/Level.html#ALL">ALL</a> valōrem {@link #OMNIS} cōnsociat.</li>
    * </ul>
    */
@@ -93,8 +93,8 @@ enum GradusNuntii {
       case INFORMATIVUS -> Level.INFO;
       case PRAEGRESSURUS -> Level.CONFIG;
       case SCRUTANS -> Level.FINE;
-      case SCRUTANTIOR -> Level.FINER;
-      case SCRUTANTISSIMUS -> Level.FINEST;
+      case SAEPE_SCRUTANS -> Level.FINER;
+      case SEMPER_SCRUTANS -> Level.FINEST;
       case OMNIS -> Level.ALL;
     };
 

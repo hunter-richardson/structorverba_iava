@@ -53,10 +53,6 @@ public enum Modus {
    */
   public final @NonNull String scriptio;
 
-  /**
-   * Hoc officum cōnstrūctōrem reī huius classis perpetrat.
-   * @param scrpt valōrem {@link #scriptio} indicat.
-   */
   Modus(@NonNull final String scrpt) {
     scriptio = scrpt;
   }

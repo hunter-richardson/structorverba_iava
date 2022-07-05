@@ -45,7 +45,7 @@ public abstract class CuratorMultiplicibus<Hoc extends VerbumMultiplex <Hoc>> ex
   }
 
   @Override
-  public final Hoc condam() {
+  public final Hoc curam() {
     if(constructor.paratus()) {
       final Hoc hoc = constructor.build();
       refero(hoc);

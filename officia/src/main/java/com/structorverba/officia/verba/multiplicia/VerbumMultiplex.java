@@ -78,5 +78,4 @@ public abstract class VerbumMultiplex <Hoc extends Verbum <Hoc>> extends Verbum 
     return Encliticum.NOLENS.equals(encliticum) ? scriptio
                                                 : String.format("%s%s", scriptio, encliticum.scriptio);
   }
-
 }

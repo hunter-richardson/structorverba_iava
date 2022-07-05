@@ -6,6 +6,7 @@ import com.structorverba.officia.inventores.*;
 import com.structorverba.officia.miscella.Utilitas;
 import com.structorverba.officia.nuntii.*;
 import com.structorverba.officia.tenores.TenorMultiplicibus;
+import com.structorverba.officia.verba.Verbum;
 import com.structorverba.officia.verba.multiplicia.*;
 import jakarta.ejb.*;
 import org.apache.commons.lang3.ObjectUtils;
@@ -59,6 +60,9 @@ public abstract class LectorMultiplicibus <Hoc extends VerbumMultiplex <Hoc>> ex
     return hoc;
   }
 
+  /**
+   * {@inheritDoc}
+   * */
   @Nullable public Hoc fortuitumLegam() {
     try {
       return fortuitumLegam(Utilitas.fortuitumLegam(categoria));
@@ -68,6 +72,11 @@ public abstract class LectorMultiplicibus <Hoc extends VerbumMultiplex <Hoc>> ex
     }
   }
 
+  /**
+   * Hic modus fōrmam temere sēligit.
+   * @param lemma  Lemma reī referendae
+   * @return Rem classis {@link Verbum} fortuītam nōminandam
+   * */
   @Nullable public Hoc fortuitumLegam(@NonNull final String lemma) {
     legam(lemma);
     final Hoc hoc = ((TenorMultiplicibus<Hoc>) tenor).fortuitumReferam();

@@ -43,10 +43,6 @@ public enum Gradus {
    */
   public final @NonNull String scriptio;
 
-  /**
-   * Hoc officium cōnstrūctōrem reī huius classis perpetrat.
-   * @param scrpt valōrem {@link #scriptio} indicat.
-   */
   Gradus(@NonNull final String scrpt) {
     scriptio = scrpt;
   }

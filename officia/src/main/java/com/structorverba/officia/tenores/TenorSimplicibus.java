@@ -37,7 +37,7 @@ public abstract class TenorSimplicibus <Hoc extends VerbumSimplex <Hoc>> extends
    * {@inheritDoc}
    */
   @Override protected final void finiam() {
-    hoc = curator.condam();
+    hoc = curator.curam();
     if (hoc == null) {
       nuntius.moneo("Prōductiō verbī prōcessimus nūllae fōrmae.");
     }

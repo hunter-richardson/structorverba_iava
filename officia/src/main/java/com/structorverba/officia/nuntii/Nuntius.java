@@ -120,19 +120,19 @@ public abstract class Nuntius {
    * Hic modus persignat quod exsecūtiōnem programmātis StrūctorVerba continuātur condiciōnem quam nēminī probābiliter
    * intersit.
    * @param nuntia seriēs reī persignāre
-   * @see GradusNuntii#SCRUTANTIOR
+   * @see GradusNuntii#SAEPE_SCRUTANS
    */
   public final void plusGarrio(@Nullable final Object... nuntia) {
-    nuntio(GradusNuntii.SCRUTANTIOR, nuntia);
+    nuntio(GradusNuntii.SAEPE_SCRUTANS, nuntia);
   }
 
   /**
    * Hic modus persignat quod exsecūtiōnem programmātis StrūctorVerba continuātur condiciōnem quam nēminī certissime
    * intersit.
    * @param nuntia seriēs reī persignāre
-   * @see GradusNuntii#SCRUTANTISSIMUS
+   * @see GradusNuntii#SEMPER_SCRUTANS
    */
   public final void plurimumGarrio(@Nullable final Object... nuntia) {
-    nuntio(GradusNuntii.SCRUTANTISSIMUS, nuntia);
+    nuntio(GradusNuntii.SEMPER_SCRUTANS, nuntia);
   }
 }

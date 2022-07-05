@@ -36,7 +36,7 @@ public abstract class Curator<Hoc extends Verbum <Hoc>> extends Omne {
    * Hic modus rem classis {@link Hoc} cōnābitur cōnstruere.
    * @return Rem novam classis {@link Hoc}. <br> Modus hid valōrem {@code null} refert sī nōn valet valor aliquis haec rēs continet.
    */
-  @Nullable public abstract Hoc condam();
+  @Nullable public abstract Hoc curam();
 
   /**
    * Hic modus rem classis {@link VerbumSimplex.Coniunctio} accipit valōrīque {@link CuratorSimplicibus.CuratorConiunctionibus#nuntius}

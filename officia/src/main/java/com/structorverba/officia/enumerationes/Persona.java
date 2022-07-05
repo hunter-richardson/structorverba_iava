@@ -43,10 +43,6 @@ public enum Persona {
    */
   public final @NonNull String scriptio;
 
-  /**
-   * Hoc officium cōnstrūctōrem reī huius classis perpetrat.
-   * @param scrpt valōrem {@link #scriptio} indicat.
-   */
   Persona(@NonNull final String scrpt) {
     scriptio = scrpt;
   }

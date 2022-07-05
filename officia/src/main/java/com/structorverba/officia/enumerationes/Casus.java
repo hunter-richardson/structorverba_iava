@@ -68,10 +68,6 @@ public enum Casus {
    */
   public final @NonNull String scriptio;
 
-  /**
-   * Hoc officium cōnstrūctōrem reī huius classis perpetrat.
-   * @param scrpt valōrem {@link #scriptio} indicat.
-   */
   Casus(@NonNull final String scrpt) {
     scriptio = scrpt;
   }

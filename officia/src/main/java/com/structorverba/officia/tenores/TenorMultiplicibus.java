@@ -84,7 +84,7 @@ public abstract class TenorMultiplicibus <Hoc extends VerbumMultiplex <Hoc>> ext
    * @see Tenor#series
    */
   @Override protected final void finiam() {
-    hoc = curator.condam();
+    hoc = curator.curam();
     if (hoc == null) {
       nuntius.moneo("Prōductiō verbī prōcessimus nūllae fōrmae.");
     } else {
@@ -102,6 +102,10 @@ public abstract class TenorMultiplicibus <Hoc extends VerbumMultiplex <Hoc>> ext
     curator.ut(scriptio);
   }
 
+  /**
+   * Hic modus rem temere in valōre {@link #series} sēligit.
+   * @return Rem fortuītam
+   * */
   @SuppressWarnings({"unchecked", "ConstantConditions"})
   @Nullable public final Hoc fortuitumReferam() {
     return series.stream().distinct().filter(Objects::nonNull)

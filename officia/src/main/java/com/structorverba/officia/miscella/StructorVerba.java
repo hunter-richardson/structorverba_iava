@@ -131,6 +131,14 @@ public final class StructorVerba extends Omne {
     }
   }
 
+  /**
+   * Hic modus fōrmam temere sēligit.
+   * @param categoria  Rēs classis {@link Categoria} quae extēnsiōnem referendam classis {@link Verbum} repraesentat.
+   * @return Rem classis {@link Verbum} fortuītam cum valōribus imputātīs
+   * @see Lector#fortuitumLegam()
+   * @see LectorPraepositionibus#fortuitumLegam()
+   * @see #fortuitumNumeram()
+   * */
   @SuppressWarnings("unchecked")
   @Nullable public <Hoc extends Verbum<Hoc>> Hoc fortuitumLegam(@NonNull final Categoria categoria) {
     if(Categoria.singulaScapis(categoria)) {
@@ -153,6 +161,16 @@ public final class StructorVerba extends Omne {
     }
   }
 
+  /**
+   * Hic modus fōrmam temere sēligit.
+   * @param categoria  Rēs classis {@link Categoria} quae extēnsiōnem referendam classis {@link Verbum} repraesentat.
+   * @param lemma  Lemma reī referenda
+   * @return Rem classis {@link Verbum} fortuītam cum valōribus imputātīs
+   * @see Lector#fortuitumLegam()
+   * @see LectorMultiplicibus#fortuitumLegam(String)
+   * @see LectorPraepositionibus#fortuitumLegam()
+   * @see #fortuitumNumeram()
+   * */
   @SuppressWarnings("unchecked")
   @Nullable public <Hoc extends Verbum<Hoc>> Hoc fortuitumLegam(@NonNull final String lemma,
                                                                 @NonNull final Categoria categoria) {
@@ -188,6 +206,12 @@ public final class StructorVerba extends Omne {
     return new Verba().addo(series);
   }
 
+  /**
+   * Hic modus fōrmam temere sēligit.
+   * @return Rem classis {@link VerbumSimplex.Numerus} fortuītam
+   * @see Random#ints()
+   * @implNote  Valōrem {@code X} refert sī fūnctiō fortis dēficit.
+   * */
   @NonNull public VerbumSimplex.Numerus fortuitumNumeram() {
     return VerbumSimplex.Numerus.builder().numerus(Integer.valueOf(new Random().ints(TRACTUS_NUMERORUM.getMinimum(),
                                                                                      TRACTUS_NUMERORUM.getMaximum())

@@ -34,8 +34,12 @@ public final class ConstructorActi extends Constructor<Actus> {
         this.persona = persona;
     }
 
-    @Nullable
-    @Override
+    /**
+     * Hic modus cōnstrūctiōnem huius reī agit.
+     * @return  Rem classis {@link Actus} cum valōribus imputātīs.
+     * @implNote  Hic modus {@code null} refert sī {@link #paratus()} valōrem {@code false} refert.
+     * */
+    @Nullable @Override
     public Actus build() {
         return paratus() ? Actus.builder().lemma(lemma).modus(modus).vox(vox).tempus(tempus)
                                           .numeralis(numeralis).persona(persona).scriptio(scriptio).build()

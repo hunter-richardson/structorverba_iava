@@ -5,7 +5,7 @@ import com.structorverba.officia.enumerationes.Categoria;
 import com.structorverba.officia.miscella.Utilitas;
 import com.structorverba.officia.nuntii.*;
 import com.structorverba.officia.tenores.*;
-import com.structorverba.officia.verba.VerbumSimplex;
+import com.structorverba.officia.verba.*;
 import jakarta.ejb.*;
 import org.apache.commons.lang3.ObjectUtils;
 
@@ -50,6 +50,9 @@ public abstract class LectorSimplicibus <Hoc extends VerbumSimplex <Hoc>> extend
     return hoc;
   }
 
+  /**
+   * {@inheritDoc}
+   * */
   @Nullable public final Hoc fortuitumLegam() {
     try {
       legam(Utilitas.fortuitumLegam(categoria));

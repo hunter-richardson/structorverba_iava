@@ -38,10 +38,6 @@ public enum Vox {
    */
   final @NonNull String scriptio;
 
-  /**
-   * Hoc officum cōnstrūctōrem reī huius classis perpetrat.
-   * @param scrpt valōrem {@link #scriptio} indicat.
-   */
   Vox(@NonNull final String scrpt) {
     scriptio = scrpt;
   }

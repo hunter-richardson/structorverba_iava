@@ -55,7 +55,7 @@ public abstract class CuratorSimplicibus<Hoc extends VerbumSimplex <Hoc>> extend
    */
   @Override
   @Nullable
-  public final Hoc condam() {
+  public final Hoc curam() {
     final Hoc hoc = StringUtils.isNotBlank(lemma) ? constructor.apply(lemma)
             : null;
     refero(hoc);

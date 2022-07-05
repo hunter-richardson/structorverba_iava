@@ -22,7 +22,7 @@ import com.structorverba.officia.enumerationes.Categoria;
  *             aptam datīs petītīs repraesentat.
  */
 @SuppressWarnings("SpellCheckingInspection")
-public abstract class Verbum <Hoc extends Verbum <Hoc>> extends Omne {
+public abstract class Verbum <Hoc extends Verbum <Hoc>> extends Omne implements Comparable<Verbum<?>> {
   /**
    * Hic valor repraesentat fōrmam verbī cui rādīcēscit. <br>
    * Quoque nōminātur scāpum XML quō cōnservātum est.
@@ -50,7 +50,30 @@ public abstract class Verbum <Hoc extends Verbum <Hoc>> extends Omne {
   }
 
   /**
+  * Hic modus modum {@link Comparable#compareTo(Object)} implit.
+  * @return {@code 0} sī hoc valorque {@code aliud} sē aequant; valor negātīvus sī hoc minor'st quam valor {@code aliud};
+  *         valor positīvus sī hoc maior'st quam valor {@code aliud}.
+  * @see  Comparable#compareTo(Object)
+  * */
+  @Override
+  public int compareTo(Verbum<?> aliud) {
+    return toString().compareTo(aliud.toString());
+  }
+
+  /**
+   * Hic modus modum {@link Object#equals(Object)} implit.
+   * @return {@code true} sī hoc valorque {@code aliud} sē aequant; @{code false} aliter.
+   * @param aliud  Valor comparandus
+   * @see  Object#equals(Object)
+   * */
+  public boolean equals(Object aliud) {
+    return aliud instanceof Verbum &&
+           toString().equals(aliud.toString());
+  }
+
+  /**
    * @return Repraesentātiōnem scrīpta reī classis {@link Verbum}.
+   * @see Object#toString()
    */
   @Override @NonNull
   public abstract String toString();
