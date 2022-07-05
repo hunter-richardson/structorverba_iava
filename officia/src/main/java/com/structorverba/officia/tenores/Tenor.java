@@ -1,7 +1,7 @@
 package com.structorverba.officia.tenores;
 
 import androidx.annotation.*;
-import com.structorverba.officia.conditores.Conditor;
+import com.structorverba.officia.curatores.Curator;
 import com.structorverba.officia.lectores.*;
 import com.structorverba.officia.miscella.Omne;
 import com.structorverba.officia.nuntii.Nuntius;
@@ -15,7 +15,7 @@ import java.util.*;
 import java.util.function.*;
 
 /**
- * Classis {@link Tenor} data lēcta ā rēbus classis {@link Lector} sēliget reīque aptae classis {@link Conditor}
+ * Classis {@link Tenor} data lēcta ā rēbus classis {@link Lector} sēliget reīque aptae classis {@link Curator}
  * praebet.
  * @param <Hoc> classis extenta classis {@link Verbum}
  * @see Omne
@@ -32,7 +32,7 @@ public abstract class Tenor <Hoc extends Verbum <Hoc>> extends DefaultHandler {
    */
   protected final @NonNull List <Hoc> series = new ArrayList <>();
   /**
-   * Hic valor rem classis {@link Hoc} tenet cōnstruenumque ā reī aptae classis {@link Conditor} praebendumque ad rē
+   * Hic valor rem classis {@link Hoc} tenet cōnstruenumque ā reī aptae classis {@link Curator} praebendumque ad rē
    * classis {@link Lector}.
    */
   @Nullable protected Hoc hoc;
@@ -66,14 +66,14 @@ public abstract class Tenor <Hoc extends Verbum <Hoc>> extends DefaultHandler {
   }
 
   /**
-   * Hic modus rem aptam classis {@link Conditor} imperat ut fōrmam scrīptam reī prōductae classis {@link Hoc} indat.
+   * Hic modus rem aptam classis {@link Curator} imperat ut fōrmam scrīptam reī prōductae classis {@link Hoc} indat.
    * @param scriptio fōrmam scrīptam indendus
    * @see #characters(char[], int, int)
    */
   protected abstract void scribo(@NonNull final String scriptio);
 
   /**
-   * Hic modus rem aptam classis {@link Conditor} imperat cōnstrūctiōnem reīprōductae classis {@link Hoc} fīnīre.
+   * Hic modus rem aptam classis {@link Curator} imperat cōnstrūctiōnem reīprōductae classis {@link Hoc} fīnīre.
    */
   protected abstract void finiam();
 }

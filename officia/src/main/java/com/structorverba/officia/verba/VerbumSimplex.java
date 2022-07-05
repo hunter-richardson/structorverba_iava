@@ -5,7 +5,7 @@ import androidx.annotation.NonNull;
 import com.github.chaosfirebolt.converter.RomanInteger;
 import com.github.chaosfirebolt.converter.constants.IntegerType;
 import com.github.chaosfirebolt.converter.util.Validator;
-import com.structorverba.officia.conditores.ConditorSimplicibus;
+import com.structorverba.officia.curatores.CuratorSimplicibus;
 import com.structorverba.officia.enumerationes.Categoria;
 import com.structorverba.officia.inventores.Inventor;
 import com.structorverba.officia.lectores.*;
@@ -50,7 +50,7 @@ public abstract class VerbumSimplex <Hoc extends Verbum <Hoc>> extends Verbum <H
    * Haec classis classisque {@link Interiectio} ā cōnspectiōne programmātis StrūctorVerba est eaedem.
    * @see LectorSimplicibus.LectorConiunctionibus
    * @see TenorSimplicibus.TenorConiunctionibus
-   * @see ConditorSimplicibus.ConditorConiunctionibus
+   * @see CuratorSimplicibus.CuratorConiunctionibus
    * @see NuntiusConiunctivorum
    */
   public static final class Coniunctio extends VerbumSimplex <Coniunctio> {
@@ -91,7 +91,7 @@ public abstract class VerbumSimplex <Hoc extends Verbum <Hoc>> extends Verbum <H
    * Haec classis classisque {@link Coniunctio} ā cōnspectiōne programmātis StrūctorVerba est eaedem.
    * @see LectorSimplicibus.LectorInteriectionibus
    * @see TenorSimplicibus.TenorInteriectionibus
-   * @see ConditorSimplicibus.ConditorInteriectionibus
+   * @see CuratorSimplicibus.CuratorInteriectionibus
    * @see NuntiusInteriectionum
    */
   public static final class Interiectio extends VerbumSimplex <Interiectio> {

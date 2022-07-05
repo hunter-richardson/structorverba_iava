@@ -1,41 +1,42 @@
-package com.structorverba.officia.conditores.multiplicia;
+package com.structorverba.officia.curatores.multiplicia;
 
 import androidx.annotation.*;
-import com.structorverba.officia.conditores.Conditor;
+import com.structorverba.officia.curatores.Curator;
 import com.structorverba.officia.enumerationes.*;
 import com.structorverba.officia.nuntii.Nuntius;
+import com.structorverba.officia.verba.constructores.Constructor;
 import com.structorverba.officia.verba.multiplicia.VerbumMultiplex;
 
 import java.util.function.Supplier;
 
 /**
- * Classis {@link ConditorMultiplicibus} est vās classis {@link Conditor} classibus omnibus quibus classem {@link
+ * Classis {@link CuratorMultiplicibus} est vās classis {@link Curator} classibus omnibus quibus classem {@link
  * VerbumMultiplex} extendit.
  * @param <Hoc> classis extenta classis {@link VerbumMultiplex}
  */
 @SuppressWarnings("SpellCheckingInspection")
-public abstract class ConditorMultiplicibus <Hoc extends VerbumMultiplex <Hoc>> extends Conditor <Hoc> {
+public abstract class CuratorMultiplicibus<Hoc extends VerbumMultiplex <Hoc>> extends Curator<Hoc> {
   /**
    * Hic valor reparesentātiōnem scrīpta lemmae dēsignat.
    */
   public static final @NonNull String pittaciumLemmae = "lemma";
 
-  @NonNull protected final VerbumMultiplex.Constructor<Hoc> constructor;
+  @NonNull protected final Constructor<Hoc> constructor;
 
   @Nullable protected Hoc hoc = null;
 
   /**
    * Hoc officium cōnstrūctōrem reī huius classis perpetrat.
-   * @param nuntius valōrem {@link Conditor#nuntius} supplet.
+   * @param nuntius valōrem {@link Curator#nuntius} supplet.
    */
-  public ConditorMultiplicibus(@NonNull final Categoria ctgr, @NonNull final Supplier <? extends Nuntius> nuntius,
-                               @NonNull final Supplier<VerbumMultiplex.Constructor<Hoc>> cnstr) {
+  public CuratorMultiplicibus(@NonNull final Categoria ctgr, @NonNull final Supplier <? extends Nuntius> nuntius,
+                              @NonNull final Supplier<Constructor<Hoc>> cnstr) {
     super(ctgr, nuntius);
     constructor = cnstr.get();
   }
 
   /**
-   * Hic modus {@link VerbumMultiplex.Constructor#scriptio(String)} invocat.
+   * Hic modus {@link Constructor#scriptio(String)} invocat.
    * @param scrpt valōrem indendum
    */
   public final void ut(@NonNull final String scrpt) {
@@ -66,8 +67,8 @@ public abstract class ConditorMultiplicibus <Hoc extends VerbumMultiplex <Hoc>> 
   }
 
   /**
-  / * Hic modus hanc valōrem {@link VerbumMultiplex.Constructor} restituit.
-    * @see  VerbumMultiplex.Constructor#restituo()
+  / * Hic modus hanc valōrem {@link Constructor} restituit.
+    * @see  Constructor#restituo()
   / */
   public final void restituo() {
     constructor.restituo();

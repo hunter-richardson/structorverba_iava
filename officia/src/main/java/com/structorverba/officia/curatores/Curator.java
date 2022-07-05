@@ -1,4 +1,4 @@
-package com.structorverba.officia.conditores;
+package com.structorverba.officia.curatores;
 
 import com.structorverba.officia.enumerationes.*;
 import com.structorverba.officia.miscella.Omne;
@@ -11,12 +11,12 @@ import androidx.annotation.*;
 import java.util.function.Supplier;
 
 /**
- * Classis {@link Conditor} data ā rēbus classis {@link Tenor} accipit eacumque rēs classis extentārum {@link Verbum}
+ * Classis {@link Curator} data ā rēbus classis {@link Tenor} accipit eacumque rēs classis extentārum {@link Verbum}
  * cōnstruet.
  * @param <Hoc> classis extenta classis {@link Verbum}
  */
 @SuppressWarnings("SpellCheckingInspection")
-public abstract class Conditor <Hoc extends Verbum <Hoc>> extends Omne {
+public abstract class Curator<Hoc extends Verbum <Hoc>> extends Omne {
   @NonNull protected final Categoria categoria;
   /**
    * Hic valor est vās classis {@link Nuntius} classī hui.
@@ -27,7 +27,7 @@ public abstract class Conditor <Hoc extends Verbum <Hoc>> extends Omne {
    * Hoc officium cōnstrūctōrem reī huius classis perpetrat.
    * @param nts valōrem {@link #nuntius} supplet.
    */
-  protected Conditor(@NonNull final Categoria ctgr, @NonNull final Supplier <? extends Nuntius> nts) {
+  protected Curator(@NonNull final Categoria ctgr, @NonNull final Supplier <? extends Nuntius> nts) {
     categoria = ctgr;
     nuntius = nts.get();
   }
@@ -39,7 +39,7 @@ public abstract class Conditor <Hoc extends Verbum <Hoc>> extends Omne {
   @Nullable public abstract Hoc condam();
 
   /**
-   * Hic modus rem classis {@link VerbumSimplex.Coniunctio} accipit valōrīque {@link ConditorSimplicibus.ConditorConiunctionibus#nuntius}
+   * Hic modus rem classis {@link VerbumSimplex.Coniunctio} accipit valōrīque {@link CuratorSimplicibus.CuratorConiunctionibus#nuntius}
    * ita refert.
    * @param hoc rem tentanda
    */

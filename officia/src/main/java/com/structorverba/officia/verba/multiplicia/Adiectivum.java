@@ -2,7 +2,7 @@ package com.structorverba.officia.verba.multiplicia;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.*;
-import com.structorverba.officia.conditores.multiplicia.ConditorAdiectivis;
+import com.structorverba.officia.curatores.multiplicia.CuratorAdiectivis;
 import com.structorverba.officia.enumerationes.*;
 import com.structorverba.officia.inventores.InventorAdiectivis;
 import com.structorverba.officia.lectores.LectorMultiplicibus;
@@ -22,7 +22,7 @@ import java.util.function.Supplier;
  * @see LectorMultiplicibus.LectorAdiectivis
  * @see TenorMultiplicibus.TenorAdiectivis
  * @see InventorAdiectivis
- * @see ConditorAdiectivis
+ * @see CuratorAdiectivis
  * @see NuntiusAdiectivorum
  */
 @SuppressWarnings("SpellCheckingInspection")
@@ -35,7 +35,7 @@ public final class Adiectivum extends Nominalis <Adiectivum> {
   @Getter(lazy = true)
   @NonNull private final NuntiusAdiectivorum nuntius = NuntiusAdiectivorum.faciendum.get();
 
-  @Builder(access = AccessLevel.PRIVATE, toBuilder = true)
+  @Builder(access = AccessLevel.PUBLIC, toBuilder = true)
   private Adiectivum(@NonNull final Specialitas specialitas, @NonNull final Genus genus,
                      @NonNull final Casus casus, @NonNull final Numeralis numeralis,
                      @NonNull final Gradus gradus, @NonNull final String lemma,
@@ -62,59 +62,6 @@ public final class Adiectivum extends Nominalis <Adiectivum> {
 
     private NuntiusAdiectivorum() {
       super(ParametriNuntii.para(Actus.class));
-    }
-  }
-
-  public static final class ConstructorAdiectivi extends Constructor<Adiectivum> {
-    @NonNull private Specialitas specialitas = Specialitas.NULLUM;
-    @NonNull private Genus genus = Genus.NULLUM;
-    @NonNull private Casus casus = Casus.DERECTUS;
-    @NonNull private Numeralis numeralis = Numeralis.NULLUS;
-    @NonNull private Gradus gradus = Gradus.NULLUS;
-
-    public void specialitas(@NonNull final Specialitas specialitas) {
-      this.specialitas = specialitas;
-    }
-
-    public void genus(@NonNull final Genus genus) {
-      this.genus = genus;
-    }
-
-    public void casus(@NonNull final Casus casus) {
-      this.casus = casus;
-    }
-
-    public void numeralis(@NonNull final Numeralis numeralis) {
-      this.numeralis = numeralis;
-    }
-
-    public void gradus(@NonNull final Gradus gradus) {
-      this.gradus = gradus;
-    }
-
-    @Nullable @Override
-    public Adiectivum build() {
-      return paratus() ? Adiectivum.builder().lemma(lemma).specialitas(specialitas).genus(genus).casus(casus)
-                                             .numeralis(numeralis).gradus(gradus).scriptio(scriptio).build()
-                       : null;
-    }
-
-    /**
-     * {@inheritDoc}
-     * @see Specialitas#NULLUM
-     * @see Genus#NULLUM
-     * @see Casus#DERECTUS
-     * @see Numeralis#NULLUS
-     * @see Gradus#NULLUS
-     */
-    @Override public void restituo() {
-      specialitas = Specialitas.NULLUM;
-      genus = Genus.NULLUM;
-      casus = Casus.DERECTUS;
-      numeralis = Numeralis.NULLUS;
-      gradus = Gradus.NULLUS;
-      scriptio = StringUtils.EMPTY;
-      lemma = StringUtils.EMPTY;
     }
   }
 }

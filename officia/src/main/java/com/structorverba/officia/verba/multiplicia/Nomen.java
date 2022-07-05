@@ -2,7 +2,7 @@ package com.structorverba.officia.verba.multiplicia;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.*;
-import com.structorverba.officia.conditores.multiplicia.ConditorNominibus;
+import com.structorverba.officia.curatores.multiplicia.CuratorNominibus;
 import com.structorverba.officia.enumerationes.*;
 import com.structorverba.officia.inventores.InventorNominibus;
 import com.structorverba.officia.lectores.LectorMultiplicibus;
@@ -21,7 +21,7 @@ import java.util.function.Supplier;
  * @see LectorMultiplicibus.LectorNominibus
  * @see TenorMultiplicibus.TenorNominibus
  * @see InventorNominibus
- * @see ConditorNominibus
+ * @see CuratorNominibus
  * @see NuntiusNominum
  */
 @SuppressWarnings("SpellCheckingInspection")
@@ -35,7 +35,7 @@ public final class Nomen extends Nominalis <Nomen> {
   @Getter(lazy = true)
   @NonNull private final NuntiusNominum nuntius = NuntiusNominum.faciendum.get();
 
-  @Builder(access = AccessLevel.PRIVATE, toBuilder = true)
+  @Builder(access = AccessLevel.PUBLIC, toBuilder = true)
   private Nomen(@NonNull final Specialitas specialitas, @NonNull final Genus genus,
                 @NonNull final Casus casus, @NonNull final Numeralis numeralis,
                 @NonNull final Tempus tempus, @NonNull final String lemma,
@@ -61,59 +61,6 @@ public final class Nomen extends Nominalis <Nomen> {
 
     private NuntiusNominum() {
       super(ParametriNuntii.para(Nomen.class));
-    }
-  }
-
-  public static final class ConstructorNominis extends Constructor<Nomen> {
-    @NonNull private Specialitas specialitas = Specialitas.NULLUM;
-    @NonNull private Genus genus = Genus.NULLUM;
-    @NonNull private Casus casus = Casus.DERECTUS;
-    @NonNull private Numeralis numeralis = Numeralis.NULLUS;
-    @NonNull private Tempus tempus = Tempus.INTEMPORALE;
-
-    public void specialitas(@NonNull final Specialitas specialitas) {
-      this.specialitas = specialitas;
-    }
-
-    public void genus(@NonNull final Genus genus) {
-      this.genus = genus;
-    }
-
-    public void casus(@NonNull final Casus casus) {
-      this.casus = casus;
-    }
-
-    public void numeralis(@NonNull final Numeralis numeralis) {
-      this.numeralis = numeralis;
-    }
-
-    public void tempus(@NonNull final Tempus tempus) {
-      this.tempus = tempus;
-    }
-
-    @Nullable @Override
-    public Nomen build() {
-      return paratus() ? Nomen.builder().lemma(lemma).specialitas(specialitas).genus(genus).casus(casus)
-                                        .numeralis(numeralis).tempus(tempus).scriptio(scriptio).build()
-                       : null;
-    }
-
-    /**
-     * {@inheritDoc}
-     * @see Specialitas#NULLUM
-     * @see Genus#NULLUM
-     * @see Casus#DERECTUS
-     * @see Numeralis#NULLUS
-     * @see Tempus#INTEMPORALE
-     */
-    @Override public void restituo() {
-      specialitas = Specialitas.NULLUM;
-      genus = Genus.NULLUM;
-      casus = Casus.DERECTUS;
-      numeralis = Numeralis.NULLUS;
-      tempus = Tempus.INTEMPORALE;
-      scriptio = StringUtils.EMPTY;
-      lemma = StringUtils.EMPTY;
     }
   }
 }

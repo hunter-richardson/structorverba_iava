@@ -2,7 +2,7 @@ package com.structorverba.officia.verba.multiplicia;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.*;
-import com.structorverba.officia.conditores.multiplicia.ConditorAdverbiis;
+import com.structorverba.officia.curatores.multiplicia.CuratorAdverbiis;
 import com.structorverba.officia.enumerationes.*;
 import com.structorverba.officia.lectores.LectorMultiplicibus;
 import com.structorverba.officia.nuntii.*;
@@ -19,7 +19,7 @@ import java.util.function.Supplier;
  * scrīnio <a href="{@docRoot}/../src/main/resources">auxiliārēs</a>/adverbia.
  * @see LectorMultiplicibus.LectorAdverbiis
  * @see TenorMultiplicibus.TenorAdverbiis
- * @see ConditorAdverbiis
+ * @see CuratorAdverbiis
  * @see NuntiusAdverbiorum
  */
 @SuppressWarnings("SpellCheckingInspection")
@@ -32,7 +32,7 @@ public class Adverbium extends VerbumMultiplex <Adverbium> {
   @Getter(lazy = true)
   @NonNull private final NuntiusAdverbiorum nuntius = NuntiusAdverbiorum.faciendum.get();
 
-  @Builder(access = AccessLevel.PRIVATE)
+  @Builder(access = AccessLevel.PUBLIC, toBuilder = true)
   private Adverbium(@NonNull final Gradus gradus, @NonNull final String lemma,
                     @NonNull final String scriptio) {
     super(Categoria.ADIECTIVUM, lemma, scriptio);
@@ -57,29 +57,6 @@ public class Adverbium extends VerbumMultiplex <Adverbium> {
 
     private NuntiusAdverbiorum() {
       super(ParametriNuntii.para(Adverbium.class));
-    }
-  }
-
-  public static final class ConstructorAdverbii extends Constructor<Adverbium> {
-    @NonNull private Gradus gradus = Gradus.NULLUS;
-
-    public void gradus(@NonNull Gradus gradus) {
-      this.gradus = gradus;
-    }
-
-    @Nullable @Override
-    public Adverbium build() {
-      return paratus() ? Adverbium.builder().lemma(lemma).scriptio(scriptio).gradus(gradus).build() : null;
-    }
-
-    /**
-     * {@inheritDoc}
-     * @see @Gradus#NULLUS
-     */
-    @Override public void restituo() {
-      gradus = Gradus.NULLUS;
-      scriptio = StringUtils.EMPTY;
-      lemma = StringUtils.EMPTY;
     }
   }
 }

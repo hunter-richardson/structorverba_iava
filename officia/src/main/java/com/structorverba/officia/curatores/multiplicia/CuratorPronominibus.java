@@ -1,36 +1,37 @@
-package com.structorverba.officia.conditores.multiplicia;
+package com.structorverba.officia.curatores.multiplicia;
 
 import androidx.annotation.*;
-import com.structorverba.officia.conditores.Conditor;
+import com.structorverba.officia.curatores.Curator;
 import com.structorverba.officia.enumerationes.*;
 import com.structorverba.officia.nuntii.*;
 import com.structorverba.officia.verba.Verbum;
+import com.structorverba.officia.verba.constructores.ConstructorPronominis;
 import com.structorverba.officia.verba.multiplicia.Pronomen;
 import jakarta.ejb.*;
-import org.apache.commons.lang3.*;
+import org.apache.commons.lang3.ObjectUtils;
 
 import java.util.function.Supplier;
 
 /**
- * Classis {@link ConditorPronominibus} est vās classis {@link Conditor} classī {@link Pronomen}.
+ * Classis {@link CuratorPronominibus} est vās classis {@link Curator} classī {@link Pronomen}.
  * @see Pronomen
  * @see NuntiusConditoriPronominibus
  */
 @SuppressWarnings("SpellCheckingInspection")
 @Singleton
 @DependsOn("NuntiusConditoriPronominibus")
-public final class ConditorPronominibus extends ConditorMultiplicibus <Pronomen> {
-  @Nullable private static ConditorPronominibus instantia = null;
+public final class CuratorPronominibus extends CuratorMultiplicibus<Pronomen> {
+  @Nullable private static CuratorPronominibus instantia = null;
 
   /**
    * Hic valor viam reī huius classis facit.
    * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
    */
-  @NonNull public static final Supplier <ConditorPronominibus> faciendum =
-    () -> ObjectUtils.firstNonNull(instantia, instantia = new ConditorPronominibus());
+  @NonNull public static final Supplier <CuratorPronominibus> faciendum =
+    () -> ObjectUtils.firstNonNull(instantia, instantia = new CuratorPronominibus());
 
-  private ConditorPronominibus() {
-    super(Categoria.PRONOMEN, NuntiusConditoriPronominibus.faciendum, Pronomen.ConstructorPronominis::new);
+  private CuratorPronominibus() {
+    super(Categoria.PRONOMEN, NuntiusConditoriPronominibus.faciendum, ConstructorPronominis::new);
     nuntius.plurimumGarrio("Factus sum");
   }
 
@@ -44,10 +45,10 @@ public final class ConditorPronominibus extends ConditorMultiplicibus <Pronomen>
    */
   @Override public void allegam(@NonNull final String nomen, @NonNull final String descriptor) {
     switch (nomen) {
-      case Specialitas.pittacium -> ((Pronomen.ConstructorPronominis) constructor).specialitas(Specialitas.definiam(descriptor));
-      case Genus.pittacium -> ((Pronomen.ConstructorPronominis) constructor).genus(Genus.definiam(descriptor));
-      case Numeralis.pittacium -> ((Pronomen.ConstructorPronominis) constructor).numeralis(Numeralis.definiam(descriptor));
-      case Persona.pittacium -> ((Pronomen.ConstructorPronominis) constructor).casus(Casus.definiam(descriptor));
+      case Specialitas.pittacium -> ((ConstructorPronominis) constructor).specialitas(Specialitas.definiam(descriptor));
+      case Genus.pittacium -> ((ConstructorPronominis) constructor).genus(Genus.definiam(descriptor));
+      case Numeralis.pittacium -> ((ConstructorPronominis) constructor).numeralis(Numeralis.definiam(descriptor));
+      case Persona.pittacium -> ((ConstructorPronominis) constructor).casus(Casus.definiam(descriptor));
       case pittaciumLemmae -> constructor.lemma(descriptor.trim());
       default -> {
         allectioDefecit(nomen, descriptor);
@@ -59,8 +60,8 @@ public final class ConditorPronominibus extends ConditorMultiplicibus <Pronomen>
   }
 
   /**
-   * Classis {@link NuntiusConditoriPronominibus} est vās classis {@link Nuntius} classī {@link ConditorPronominibus}
-   * @see ConditorPronominibus
+   * Classis {@link NuntiusConditoriPronominibus} est vās classis {@link Nuntius} classī {@link CuratorPronominibus}
+   * @see CuratorPronominibus
    */
   @Singleton
   private static final class NuntiusConditoriPronominibus extends Nuntius {
@@ -74,7 +75,7 @@ public final class ConditorPronominibus extends ConditorMultiplicibus <Pronomen>
             () -> ObjectUtils.firstNonNull(instantia, instantia = new NuntiusConditoriPronominibus());
 
     private NuntiusConditoriPronominibus() {
-      super(ParametriNuntii.para(ConditorPronominibus.class));
+      super(ParametriNuntii.para(CuratorPronominibus.class));
     }
   }
 }

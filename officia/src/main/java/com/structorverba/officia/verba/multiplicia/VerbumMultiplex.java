@@ -1,13 +1,12 @@
 package com.structorverba.officia.verba.multiplicia;
 
-import androidx.annotation.*;
-import com.structorverba.officia.conditores.multiplicia.ConditorMultiplicibus;
+import androidx.annotation.NonNull;
+import com.structorverba.officia.curatores.multiplicia.CuratorMultiplicibus;
 import com.structorverba.officia.enumerationes.*;
 import com.structorverba.officia.inventores.Inventor;
 import com.structorverba.officia.lectores.LectorMultiplicibus;
 import com.structorverba.officia.tenores.TenorMultiplicibus;
 import com.structorverba.officia.verba.*;
-import org.apache.commons.lang3.StringUtils;
 
 import java.util.stream.Stream;
 
@@ -19,7 +18,7 @@ import java.util.stream.Stream;
  * @param <Hoc> Hāc tabellā classis {@link Hoc} extēnsiōnem aptam datīs petītīs repraesentat.
  * @see LectorMultiplicibus
  * @see TenorMultiplicibus
- * @see ConditorMultiplicibus
+ * @see CuratorMultiplicibus
  */
 @SuppressWarnings("SpellCheckingInspection")
 public abstract class VerbumMultiplex <Hoc extends Verbum <Hoc>> extends Verbum <Hoc> {
@@ -80,25 +79,4 @@ public abstract class VerbumMultiplex <Hoc extends Verbum <Hoc>> extends Verbum 
                                                 : String.format("%s%s", scriptio, encliticum.scriptio);
   }
 
-  public static abstract class Constructor<Hoc extends VerbumMultiplex<Hoc>> {
-    @NonNull protected String lemma     = StringUtils.EMPTY;
-    @NonNull protected String scriptio  = StringUtils.EMPTY;
-
-    protected Constructor() {  }
-
-    public void lemma(@NonNull final String lemma) {
-      this.lemma = lemma;
-    }
-
-    public void scriptio(@NonNull final String scriptio) {
-      this.scriptio = scriptio;
-    }
-
-    public boolean paratus() {
-      return StringUtils.isNoneBlank(lemma, scriptio);
-    }
-
-    @Nullable public abstract Hoc build();
-    public abstract void restituo();
-  }
 }

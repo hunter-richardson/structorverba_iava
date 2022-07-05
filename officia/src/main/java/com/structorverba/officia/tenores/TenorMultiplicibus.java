@@ -1,7 +1,7 @@
 package com.structorverba.officia.tenores;
 
 import androidx.annotation.*;
-import com.structorverba.officia.conditores.multiplicia.*;
+import com.structorverba.officia.curatores.multiplicia.*;
 import com.structorverba.officia.lectores.LectorMultiplicibus;
 import com.structorverba.officia.miscella.Utilitas;
 import com.structorverba.officia.nuntii.*;
@@ -17,24 +17,24 @@ import java.util.function.*;
  * Classis {@link TenorMultiplicibus} est vās classis {@link Tenor} classibus omnibus quibus classem {@link
  * VerbumMultiplex} extendit.
  * @param <Hoc> classis extenta classis {@link VerbumMultiplex}
- * @see ConditorMultiplicibus
+ * @see CuratorMultiplicibus
  */
 @SuppressWarnings("SpellCheckingInspection")
 public abstract class TenorMultiplicibus <Hoc extends VerbumMultiplex <Hoc>> extends Tenor <Hoc> {
   /**
-   * Hic valor est vās classis {@link ConditorMultiplicibus} huic classī extentae.
+   * Hic valor est vās classis {@link CuratorMultiplicibus} huic classī extentae.
    */
-  @NonNull protected final ConditorMultiplicibus <Hoc> conditor;
+  @NonNull protected final CuratorMultiplicibus<Hoc> curator;
 
   /**
    * Hoc officium cōnstrūctōrem rei huius classis perpetrat.
    * @param nuntius Valōrem {@link Tenor#nuntius} supplet.
-   * @param cndtr   Valōrem {@link #conditor} supplet.
+   * @param ctr   Valōrem {@link #curator} supplet.
    */
   protected TenorMultiplicibus(@NonNull final Supplier <? extends Nuntius> nuntius,
-                               @NonNull final Supplier <? extends ConditorMultiplicibus <Hoc>> cndtr) {
+                               @NonNull final Supplier <? extends CuratorMultiplicibus<Hoc>> ctr) {
     super(nuntius);
-    conditor = cndtr.get();
+    curator = ctr.get();
   }
 
   /**
@@ -57,12 +57,12 @@ public abstract class TenorMultiplicibus <Hoc extends VerbumMultiplex <Hoc>> ext
     for (int i = 0; i < attributa.getLength(); i++) {
       nuntius.garrio("Teneō adicere attribūtum novum:",
                      attributa.getLocalName(i), "est", attributa.getValue(i));
-      conditor.allegam(attributa.getLocalName(i), attributa.getValue(i));
+      curator.allegam(attributa.getLocalName(i), attributa.getValue(i));
     }
   }
 
   /**
-   * Hic modus rem aptam classis {@link ConditorMultiplicibus} imperat restitui.
+   * Hic modus rem aptam classis {@link CuratorMultiplicibus} imperat restitui.
    * @param locus   Hunc valōrem hic modus nōn ūtitur sed necessārium est ut rē classis <a
    *                href="https://docs.oracle.com/javase/7/docs/api/org/xml/sax/helpers/DefaultHandler.html">DefaultHandler</a>
    *                cōnsociet
@@ -76,7 +76,7 @@ public abstract class TenorMultiplicibus <Hoc extends VerbumMultiplex <Hoc>> ext
    */
   @Override public final void endElement(@NonNull final String locus,
                                          @NonNull final String loculus, @NonNull final String qualis) {
-    conditor.restituo();
+    curator.restituo();
   }
 
   /**
@@ -84,7 +84,7 @@ public abstract class TenorMultiplicibus <Hoc extends VerbumMultiplex <Hoc>> ext
    * @see Tenor#series
    */
   @Override protected final void finiam() {
-    hoc = conditor.condam();
+    hoc = curator.condam();
     if (hoc == null) {
       nuntius.moneo("Prōductiō verbī prōcessimus nūllae fōrmae.");
     } else {
@@ -99,7 +99,7 @@ public abstract class TenorMultiplicibus <Hoc extends VerbumMultiplex <Hoc>> ext
    * @see VerbumMultiplex#scriptio
    */
   @Override protected void scribo(@NonNull String scriptio) {
-    conditor.ut(scriptio);
+    curator.ut(scriptio);
   }
 
   @SuppressWarnings({"unchecked", "ConstantConditions"})
@@ -123,7 +123,7 @@ public abstract class TenorMultiplicibus <Hoc extends VerbumMultiplex <Hoc>> ext
    * Classis {@link TenorAdverbiis} est vās classis {@link Tenor} classi {@link Adverbium}
    * @see Adverbium
    * @see NuntiusTenoriAdverbiis
-   * @see ConditorAdverbiis
+   * @see CuratorAdverbiis
    */
   @Singleton
   @DependsOn({ "ConditorAdverbiis", "NuntiusTenoriAdverbiis" })
@@ -138,7 +138,7 @@ public abstract class TenorMultiplicibus <Hoc extends VerbumMultiplex <Hoc>> ext
       () -> ObjectUtils.firstNonNull(instantia, instantia = new TenorAdverbiis());
 
     private TenorAdverbiis() {
-      super(NuntiusTenoriAdverbiis.faciendum, ConditorAdverbiis.faciendum);
+      super(NuntiusTenoriAdverbiis.faciendum, CuratorAdverbiis.faciendum);
       nuntius.plurimumGarrio("Factus sum");
     }
 
@@ -168,7 +168,7 @@ public abstract class TenorMultiplicibus <Hoc extends VerbumMultiplex <Hoc>> ext
    * Classis {@link TenorNominibus} est vās classis {@link Tenor} classi {@link Nomen}
    * @see Nomen
    * @see NuntiusTenoriNominibus
-   * @see ConditorNominibus
+   * @see CuratorNominibus
    */
   @Singleton
   @DependsOn({ "ConditorNominibus", "NuntiusTenoriNominibus" })
@@ -183,7 +183,7 @@ public abstract class TenorMultiplicibus <Hoc extends VerbumMultiplex <Hoc>> ext
       () -> ObjectUtils.firstNonNull(instantia, instantia = new TenorNominibus());
 
     private TenorNominibus() {
-      super(NuntiusTenoriNominibus.faciendum, ConditorNominibus.faciendum);
+      super(NuntiusTenoriNominibus.faciendum, CuratorNominibus.faciendum);
       nuntius.plurimumGarrio("Factus sum");
     }
 
@@ -214,7 +214,7 @@ public abstract class TenorMultiplicibus <Hoc extends VerbumMultiplex <Hoc>> ext
    * Classis {@link TenorAdiectivis} est vās classis {@link Tenor} classi {@link Adiectivum}
    * @see Adiectivum
    * @see NuntiusTenoriAdiectivis
-   * @see ConditorAdiectivis
+   * @see CuratorAdiectivis
    */
   @Singleton
   @DependsOn({ "ConditorAdiectivis", "NuntiusTenoriAdiectivis" })
@@ -229,7 +229,7 @@ public abstract class TenorMultiplicibus <Hoc extends VerbumMultiplex <Hoc>> ext
       () -> ObjectUtils.firstNonNull(instantia, instantia = new TenorAdiectivis());
 
     private TenorAdiectivis() {
-      super(NuntiusTenoriAdiectivis.faciendum, ConditorAdiectivis.faciendum);
+      super(NuntiusTenoriAdiectivis.faciendum, CuratorAdiectivis.faciendum);
       nuntius.plurimumGarrio("Factus sum");
     }
 
@@ -259,7 +259,7 @@ public abstract class TenorMultiplicibus <Hoc extends VerbumMultiplex <Hoc>> ext
    * Classis {@link TenorPronominibus} est vās classis {@link Tenor} classi {@link Pronomen}
    * @see Pronomen
    * @see NuntiusTenoriPronominibus
-   * @see ConditorPronominibus
+   * @see CuratorPronominibus
    */
   @Singleton
   @DependsOn({ "ConditorPronominibus", "NuntiusTenoriPronominibus" })
@@ -274,7 +274,7 @@ public abstract class TenorMultiplicibus <Hoc extends VerbumMultiplex <Hoc>> ext
       () -> ObjectUtils.firstNonNull(instantia, instantia = new TenorPronominibus());
 
     private TenorPronominibus() {
-      super(NuntiusTenoriPronominibus.faciendum, ConditorPronominibus.faciendum);
+      super(NuntiusTenoriPronominibus.faciendum, CuratorPronominibus.faciendum);
       nuntius.plurimumGarrio("Factus sum");
     }
 
@@ -304,7 +304,7 @@ public abstract class TenorMultiplicibus <Hoc extends VerbumMultiplex <Hoc>> ext
    * Classis {@link TenorActis} est vās classis {@link Tenor} classi {@link Actus}
    * @see Actus
    * @see NuntiusTenoriActis
-   * @see ConditorActis
+   * @see CuratorActis
    */
   @Singleton
   @DependsOn({ "ConditorActis", "NuntiusTenoriActis" })
@@ -319,7 +319,7 @@ public abstract class TenorMultiplicibus <Hoc extends VerbumMultiplex <Hoc>> ext
       () -> ObjectUtils.firstNonNull(instantia, instantia = new TenorActis());
 
     private TenorActis() {
-      super(NuntiusTenoriActis.faciendum, ConditorActis.faciendum);
+      super(NuntiusTenoriActis.faciendum, CuratorActis.faciendum);
       nuntius.plurimumGarrio("Factus sum");
     }
   }

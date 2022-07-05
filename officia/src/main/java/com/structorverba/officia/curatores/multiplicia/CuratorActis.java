@@ -1,37 +1,38 @@
-package com.structorverba.officia.conditores.multiplicia;
+package com.structorverba.officia.curatores.multiplicia;
 
 import androidx.annotation.*;
-import com.structorverba.officia.conditores.Conditor;
+import com.structorverba.officia.curatores.Curator;
 import com.structorverba.officia.enumerationes.*;
 import com.structorverba.officia.nuntii.*;
 import com.structorverba.officia.verba.Verbum;
+import com.structorverba.officia.verba.constructores.ConstructorActi;
 import com.structorverba.officia.verba.multiplicia.Actus;
 import jakarta.ejb.*;
-import org.apache.commons.lang3.*;
+import org.apache.commons.lang3.ObjectUtils;
 
 import java.util.function.Supplier;
 
 
 /**
- * Classis {@link ConditorActis} est vās classis {@link Conditor} classī {@link Actus}.
+ * Classis {@link CuratorActis} est vās classis {@link Curator} classī {@link Actus}.
  * @see Actus
  * @see NuntiusConditoriActis
  */
 @SuppressWarnings("SpellCheckingInspection")
 @Singleton
 @DependsOn("NuntiusConditoriActis")
-public final class ConditorActis extends ConditorMultiplicibus <Actus> {
-  @Nullable private static ConditorActis instantia = null;
+public final class CuratorActis extends CuratorMultiplicibus<Actus> {
+  @Nullable private static CuratorActis instantia = null;
 
   /**
    * Hic valor viam reī huius classis facit.
    * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
    */
-  @NonNull public static final Supplier <ConditorActis> faciendum =
-    () -> ObjectUtils.firstNonNull(instantia, instantia = new ConditorActis());
+  @NonNull public static final Supplier <CuratorActis> faciendum =
+    () -> ObjectUtils.firstNonNull(instantia, instantia = new CuratorActis());
 
-  private ConditorActis() {
-    super(Categoria.ACTUS, NuntiusConditoriActis.faciendum, Actus.ConstructorActi::new);
+  private CuratorActis() {
+    super(Categoria.ACTUS, NuntiusConditoriActis.faciendum, ConstructorActi::new);
     nuntius.plurimumGarrio("Factus sum");
   }
 
@@ -46,11 +47,11 @@ public final class ConditorActis extends ConditorMultiplicibus <Actus> {
    */
   @Override public void allegam(@NonNull final String nomen, @NonNull final String descriptor) {
     switch (nomen) {
-      case Modus.pittacium -> ((Actus.ConstructorActi) constructor).modus(Modus.definiam(descriptor));
-      case Vox.pittacium -> ((Actus.ConstructorActi) constructor).vox(Vox.definiam(descriptor));
-      case Tempus.pittacium -> ((Actus.ConstructorActi) constructor).tempus(Tempus.definiam(descriptor));
-      case Numeralis.pittacium -> ((Actus.ConstructorActi) constructor).numeralis(Numeralis.definiam(descriptor));
-      case Persona.pittacium -> ((Actus.ConstructorActi) constructor).persona(Persona.definiam(descriptor));
+      case Modus.pittacium -> ((ConstructorActi) constructor).modus(Modus.definiam(descriptor));
+      case Vox.pittacium -> ((ConstructorActi) constructor).vox(Vox.definiam(descriptor));
+      case Tempus.pittacium -> ((ConstructorActi) constructor).tempus(Tempus.definiam(descriptor));
+      case Numeralis.pittacium -> ((ConstructorActi) constructor).numeralis(Numeralis.definiam(descriptor));
+      case Persona.pittacium -> ((ConstructorActi) constructor).persona(Persona.definiam(descriptor));
       case pittaciumLemmae -> constructor.lemma(descriptor.trim());
       default -> {
         allectioDefecit(nomen, descriptor);
@@ -62,8 +63,8 @@ public final class ConditorActis extends ConditorMultiplicibus <Actus> {
   }
 
   /**
-   * Classis {@link NuntiusConditoriActis} est vās classis {@link Nuntius} classī {@link ConditorActis}
-   * @see ConditorActis
+   * Classis {@link NuntiusConditoriActis} est vās classis {@link Nuntius} classī {@link CuratorActis}
+   * @see CuratorActis
    */
   @Singleton
   private static final class NuntiusConditoriActis extends Nuntius {
@@ -77,7 +78,7 @@ public final class ConditorActis extends ConditorMultiplicibus <Actus> {
             () -> ObjectUtils.firstNonNull(instantia, instantia = new NuntiusConditoriActis());
 
     private NuntiusConditoriActis() {
-      super(ParametriNuntii.para(ConditorActis.class));
+      super(ParametriNuntii.para(CuratorActis.class));
     }
   }
 }

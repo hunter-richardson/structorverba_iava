@@ -2,7 +2,7 @@ package com.structorverba.officia.verba.multiplicia;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.*;
-import com.structorverba.officia.conditores.multiplicia.ConditorActis;
+import com.structorverba.officia.curatores.multiplicia.CuratorActis;
 import com.structorverba.officia.enumerationes.*;
 import com.structorverba.officia.inventores.InventorActis;
 import com.structorverba.officia.lectores.LectorMultiplicibus;
@@ -22,7 +22,7 @@ import java.util.function.Supplier;
  * @see LectorMultiplicibus.LectorActis
  * @see TenorMultiplicibus.TenorActis
  * @see InventorActis
- * @see ConditorActis
+ * @see CuratorActis
  * @see NuntiusActorum
  */
 @SuppressWarnings({"SpellCheckingInspection", "unused" })
@@ -61,7 +61,7 @@ public final class Actus extends VerbumMultiplex <Actus> {
   @Getter(lazy = true)
   @NonNull private final NuntiusActorum nuntius = NuntiusActorum.faciendum.get();
 
-  @Builder(access = AccessLevel.PRIVATE, toBuilder = true)
+  @Builder(access = AccessLevel.PUBLIC, toBuilder = true)
   private Actus(@NonNull final Modus modus, @NonNull final Vox vox, @NonNull final Tempus tempus,
                 @NonNull final Numeralis numeralis, @NonNull final Persona persona,
                 @NonNull final String lemma, @NonNull final String scriptio) {
@@ -204,57 +204,5 @@ public final class Actus extends VerbumMultiplex <Actus> {
       super(ParametriNuntii.para(Actus.class));
     }
   }
-
-  public static final class ConstructorActi extends Constructor<Actus> {
-    @NonNull private Modus modus = Modus.NULLUS;
-    @NonNull private Vox vox = Vox.NULLA;
-    @NonNull private Tempus tempus = Tempus.INTEMPORALE;
-    @NonNull private Numeralis numeralis = Numeralis.NULLUS;
-    @NonNull private Persona persona = Persona.NULLA;
-
-    public void modus(@NonNull Modus modus) {
-      this.modus = modus;
-    }
-
-    public void vox(@NonNull Vox vox) {
-      this.vox = vox;
-    }
-
-    public void tempus(@NonNull Tempus tempus) {
-      this.tempus = tempus;
-    }
-
-    public void numeralis(@NonNull Numeralis numeralis) {
-      this.numeralis = numeralis;
-    }
-
-    public void persona(@NonNull Persona persona) {
-      this.persona = persona;
-    }
-
-    @Nullable @Override
-    public Actus build() {
-      return paratus() ? Actus.builder().lemma(lemma).modus(modus).vox(vox).tempus(tempus)
-                                        .numeralis(numeralis).persona(persona).scriptio(scriptio).build()
-                       : null;
-    }
-
-    /**
-     * {@inheritDoc}
-     * @see Modus#NULLUS
-     * @see Vox#NULLA
-     * @see Tempus#INTEMPORALE
-     * @see Numeralis#NULLUS
-     * @see Persona#NULLA
-     */
-    @Override public void restituo() {
-      numeralis = Numeralis.NULLUS;
-      persona = Persona.NULLA;
-      tempus = Tempus.INTEMPORALE;
-      modus = Modus.NULLUS;
-      vox = Vox.NULLA;
-      scriptio = StringUtils.EMPTY;
-      lemma = StringUtils.EMPTY;
-    }
-  }
 }
+

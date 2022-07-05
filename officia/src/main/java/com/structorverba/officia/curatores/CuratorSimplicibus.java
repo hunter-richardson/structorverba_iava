@@ -1,4 +1,4 @@
-package com.structorverba.officia.conditores;
+package com.structorverba.officia.curatores;
 
 import androidx.annotation.*;
 import com.structorverba.officia.enumerationes.*;
@@ -11,12 +11,12 @@ import org.apache.commons.lang3.*;
 import java.util.function.*;
 
 /**
- * Classis {@link ConditorSimplicibus} est vās classis {@link Conditor} classibus omnibus quibus classem {@link
+ * Classis {@link CuratorSimplicibus} est vās classis {@link Curator} classibus omnibus quibus classem {@link
  * VerbumSimplex} extendit.
  * @param <Hoc> classis extenta classis {@link VerbumSimplex}
  */
 @SuppressWarnings("SpellCheckingInspection")
-public abstract class ConditorSimplicibus <Hoc extends VerbumSimplex <Hoc>> extends Conditor <Hoc> {
+public abstract class CuratorSimplicibus<Hoc extends VerbumSimplex <Hoc>> extends Curator<Hoc> {
   /**
    * Hic valor viam reī classis {@link Hoc} facit.
    *
@@ -33,11 +33,11 @@ public abstract class ConditorSimplicibus <Hoc extends VerbumSimplex <Hoc>> exte
   /**
    * Hoc officum cōnstrūctōrem reī huius classis perpetrat.
    *
-   * @param nts   valōrem {@link Conditor#nuntius} supplet.
+   * @param nts   valōrem {@link Curator#nuntius} supplet.
    * @param cnstr valōrem {@link #constructor} supplet.
    */
-  protected ConditorSimplicibus(@NonNull final Categoria ctgr, @NonNull final Supplier<? extends Nuntius> nts,
-                                @NonNull final Function<String, Hoc> cnstr) {
+  protected CuratorSimplicibus(@NonNull final Categoria ctgr, @NonNull final Supplier<? extends Nuntius> nts,
+                               @NonNull final Function<String, Hoc> cnstr) {
     super(ctgr, nts);
     constructor = cnstr;
   }
@@ -63,16 +63,16 @@ public abstract class ConditorSimplicibus <Hoc extends VerbumSimplex <Hoc>> exte
   }
 
   /**
-   * Classis {@link ConditorConiunctionibus} est vās classis {@link Tenor} classī {@link VerbumSimplex.Coniunctio}.
+   * Classis {@link CuratorConiunctionibus} est vās classis {@link Tenor} classī {@link VerbumSimplex.Coniunctio}.
    *
    * @see VerbumSimplex.Coniunctio
    * @see NuntiusConditoriConiunctionibus
    */
   @Singleton
   @DependsOn("NuntiusConditoriAdverbiis")
-  public static final class ConditorConiunctionibus extends ConditorSimplicibus<VerbumSimplex.Coniunctio> {
+  public static final class CuratorConiunctionibus extends CuratorSimplicibus<VerbumSimplex.Coniunctio> {
     @Nullable
-    private static ConditorConiunctionibus instantia = null;
+    private static CuratorConiunctionibus instantia = null;
 
     /**
      * Hic valor viam reī huius classis facit.
@@ -80,10 +80,10 @@ public abstract class ConditorSimplicibus <Hoc extends VerbumSimplex <Hoc>> exte
      * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
      */
     @NonNull
-    public static final Supplier<ConditorConiunctionibus> faciendum =
-            () -> ObjectUtils.firstNonNull(instantia, instantia = new ConditorConiunctionibus());
+    public static final Supplier<CuratorConiunctionibus> faciendum =
+            () -> ObjectUtils.firstNonNull(instantia, instantia = new CuratorConiunctionibus());
 
-    private ConditorConiunctionibus() {
+    private CuratorConiunctionibus() {
       super(Categoria.CONIUNCTIO, NuntiusConditoriConiunctionibus.faciendum,
             lemma -> VerbumSimplex.Coniunctio.builder().lemma(lemma).build());
       nuntius.plurimumGarrio("Factus sum");
@@ -91,9 +91,9 @@ public abstract class ConditorSimplicibus <Hoc extends VerbumSimplex <Hoc>> exte
 
     /**
      * Classis {@link NuntiusConditoriConiunctionibus} est vās classis {@link Nuntius} classī {@link
-     * ConditorConiunctionibus}
+     * CuratorConiunctionibus}
      *
-     * @see ConditorConiunctionibus
+     * @see CuratorConiunctionibus
      */
     @Singleton
     private static final class NuntiusConditoriConiunctionibus extends Nuntius {
@@ -110,22 +110,22 @@ public abstract class ConditorSimplicibus <Hoc extends VerbumSimplex <Hoc>> exte
               () -> ObjectUtils.firstNonNull(instantia, instantia = new NuntiusConditoriConiunctionibus());
 
       private NuntiusConditoriConiunctionibus() {
-        super(ParametriNuntii.para(ConditorConiunctionibus.class));
+        super(ParametriNuntii.para(CuratorConiunctionibus.class));
       }
     }
   }
 
   /**
-   * Classis {@link ConditorInteriectionibus} est vās classis {@link Tenor} classī {@link VerbumSimplex.Interiectio}.
+   * Classis {@link CuratorInteriectionibus} est vās classis {@link Tenor} classī {@link VerbumSimplex.Interiectio}.
    *
    * @see VerbumSimplex.Interiectio
    * @see NuntiusConditoriInteriectionibus
    */
   @Singleton
   @DependsOn("NuntiusConditoriAdverbiis")
-  public static final class ConditorInteriectionibus extends ConditorSimplicibus<VerbumSimplex.Interiectio> {
+  public static final class CuratorInteriectionibus extends CuratorSimplicibus<VerbumSimplex.Interiectio> {
     @Nullable
-    private static ConditorInteriectionibus instantia = null;
+    private static CuratorInteriectionibus instantia = null;
 
     /**
      * Hic valor viam reī huius classis facit.
@@ -133,10 +133,10 @@ public abstract class ConditorSimplicibus <Hoc extends VerbumSimplex <Hoc>> exte
      * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
      */
     @NonNull
-    public static final Supplier<ConditorInteriectionibus> faciendum =
-            () -> ObjectUtils.firstNonNull(instantia, instantia = new ConditorInteriectionibus());
+    public static final Supplier<CuratorInteriectionibus> faciendum =
+            () -> ObjectUtils.firstNonNull(instantia, instantia = new CuratorInteriectionibus());
 
-    private ConditorInteriectionibus() {
+    private CuratorInteriectionibus() {
       super(Categoria.INTERIECTIO, NuntiusConditoriInteriectionibus.faciendum,
             lemma -> VerbumSimplex.Interiectio.builder().lemma(lemma).build());
       nuntius.plurimumGarrio("Factus sum");
@@ -144,9 +144,9 @@ public abstract class ConditorSimplicibus <Hoc extends VerbumSimplex <Hoc>> exte
 
     /**
      * Classis {@link NuntiusConditoriInteriectionibus} est vās classis {@link Nuntius} classī {@link
-     * ConditorSimplicibus.ConditorInteriectionibus}
+     * CuratorInteriectionibus}
      *
-     * @see ConditorSimplicibus.ConditorInteriectionibus
+     * @see CuratorInteriectionibus
      */
     @Singleton
     private static final class NuntiusConditoriInteriectionibus extends Nuntius {
@@ -163,7 +163,7 @@ public abstract class ConditorSimplicibus <Hoc extends VerbumSimplex <Hoc>> exte
               () -> ObjectUtils.firstNonNull(instantia, instantia = new NuntiusConditoriInteriectionibus());
 
       private NuntiusConditoriInteriectionibus() {
-        super(ParametriNuntii.para(ConditorSimplicibus.ConditorInteriectionibus.class));
+        super(ParametriNuntii.para(CuratorInteriectionibus.class));
       }
     }
   }

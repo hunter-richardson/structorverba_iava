@@ -1,7 +1,7 @@
 package com.structorverba.officia.tenores;
 
 import androidx.annotation.*;
-import com.structorverba.officia.conditores.ConditorSimplicibus;
+import com.structorverba.officia.curatores.CuratorSimplicibus;
 import com.structorverba.officia.nuntii.*;
 import com.structorverba.officia.verba.*;
 import jakarta.ejb.*;
@@ -13,31 +13,31 @@ import java.util.function.Supplier;
  * Classis {@link TenorSimplicibus} est vās classis {@link Tenor} classibus omnibus quibus classem {@link VerbumSimplex}
  * extendit.
  * @param <Hoc> classis extenta classis {@link VerbumSimplex}
- * @see ConditorSimplicibus
+ * @see CuratorSimplicibus
  */
 @SuppressWarnings("SpellCheckingInspection")
 public abstract class TenorSimplicibus <Hoc extends VerbumSimplex <Hoc>> extends Tenor <Hoc> {
   /**
-   * Hic valor est vās classis {@link ConditorSimplicibus} classī extentī huius.
+   * Hic valor est vās classis {@link CuratorSimplicibus} classī extentī huius.
    */
-  @NonNull protected final ConditorSimplicibus <Hoc> conditor;
+  @NonNull protected final CuratorSimplicibus<Hoc> curator;
 
   /**
    * Hoc officium cōnstrūctōrem reī huius classis perpetrat.
    * @param nts   valōrem {@link Tenor#nuntius} supplet.
-   * @param cndtr valōrem {@link #conditor} supplet.
+   * @param ctr valōrem {@link #curator} supplet.
    */
   protected TenorSimplicibus(@NonNull final Supplier <? extends Nuntius> nts,
-                             @NonNull final Supplier <? extends ConditorSimplicibus <Hoc>> cndtr) {
+                             @NonNull final Supplier <? extends CuratorSimplicibus<Hoc>> ctr) {
     super(nts);
-    conditor = cndtr.get();
+    curator = ctr.get();
   }
 
   /**
    * {@inheritDoc}
    */
   @Override protected final void finiam() {
-    hoc = conditor.condam();
+    hoc = curator.condam();
     if (hoc == null) {
       nuntius.moneo("Prōductiō verbī prōcessimus nūllae fōrmae.");
     }
@@ -56,14 +56,14 @@ public abstract class TenorSimplicibus <Hoc extends VerbumSimplex <Hoc>> extends
    * @see Verbum#lemma
    */
   @Override protected void scribo(@NonNull String scriptio) {
-    conditor.funde(scriptio);
+    curator.funde(scriptio);
   }
 
   /**
    * Classis {@link TenorConiunctionibus} est vās classis {@link Tenor} classī {@link VerbumSimplex.Coniunctio}
    * @see VerbumSimplex.Coniunctio
    * @see NuntiusTenoriConiunctionibus
-   * @see ConditorSimplicibus.ConditorConiunctionibus
+   * @see CuratorSimplicibus.CuratorConiunctionibus
    */
   @Singleton
   @DependsOn({ "ConditorConiunctivis", "NuntiusTenoriConiunctivis" })
@@ -78,7 +78,7 @@ public abstract class TenorSimplicibus <Hoc extends VerbumSimplex <Hoc>> extends
       () -> ObjectUtils.firstNonNull(instantia, instantia = new TenorConiunctionibus());
 
     private TenorConiunctionibus() {
-      super(NuntiusTenoriConiunctionibus.faciendum, ConditorSimplicibus.ConditorConiunctionibus.faciendum);
+      super(NuntiusTenoriConiunctionibus.faciendum, CuratorSimplicibus.CuratorConiunctionibus.faciendum);
       nuntius.plurimumGarrio("Factus sum");
     }
 
@@ -108,7 +108,7 @@ public abstract class TenorSimplicibus <Hoc extends VerbumSimplex <Hoc>> extends
    * Classis {@link TenorInteriectionibus} est vās classis {@link Tenor} classī {@link VerbumSimplex.Interiectio}
    * @see VerbumSimplex.Interiectio
    * @see NuntiusTenoriInteriectionibus
-   * @see ConditorSimplicibus.ConditorInteriectionibus
+   * @see CuratorSimplicibus.CuratorInteriectionibus
    */
   @Singleton
   @DependsOn({ "ConditorConiunctivis", "NuntiusTenoriConiunctivis" })
@@ -123,7 +123,7 @@ public abstract class TenorSimplicibus <Hoc extends VerbumSimplex <Hoc>> extends
       () -> ObjectUtils.firstNonNull(instantia, instantia = new TenorInteriectionibus());
 
     private TenorInteriectionibus() {
-      super(NuntiusTenoriInteriectionibus.faciendum, ConditorSimplicibus.ConditorInteriectionibus.faciendum);
+      super(NuntiusTenoriInteriectionibus.faciendum, CuratorSimplicibus.CuratorInteriectionibus.faciendum);
       nuntius.plurimumGarrio("Factus sum");
     }
   }

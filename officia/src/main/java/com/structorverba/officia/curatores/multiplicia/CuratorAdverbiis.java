@@ -1,10 +1,11 @@
-package com.structorverba.officia.conditores.multiplicia;
+package com.structorverba.officia.curatores.multiplicia;
 
 import androidx.annotation.*;
-import com.structorverba.officia.conditores.Conditor;
+import com.structorverba.officia.curatores.Curator;
 import com.structorverba.officia.enumerationes.*;
 import com.structorverba.officia.nuntii.*;
 import com.structorverba.officia.verba.Verbum;
+import com.structorverba.officia.verba.constructores.ConstructorAdverbii;
 import com.structorverba.officia.verba.multiplicia.Adverbium;
 import jakarta.ejb.Singleton;
 import org.apache.commons.lang3.ObjectUtils;
@@ -12,23 +13,23 @@ import org.apache.commons.lang3.ObjectUtils;
 import java.util.function.Supplier;
 
 /**
- * Classis {@link ConditorAdverbiis} est vās classis {@link Conditor} classī {@link Adverbium}.
+ * Classis {@link CuratorAdverbiis} est vās classis {@link Curator} classī {@link Adverbium}.
  * @see Adverbium
  * @see NuntiusConditoriAdverbiis
  */
 @SuppressWarnings("SpellCheckingInspection")
-public class ConditorAdverbiis extends ConditorMultiplicibus <Adverbium> {
-  @Nullable private static ConditorAdverbiis instantia = null;
+public class CuratorAdverbiis extends CuratorMultiplicibus<Adverbium> {
+  @Nullable private static CuratorAdverbiis instantia = null;
 
   /**
    * Hic valor viam reī huius classis facit.
    * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
    */
-  @NonNull public static final Supplier <ConditorAdverbiis> faciendum =
-    () -> ObjectUtils.firstNonNull(instantia, instantia = new ConditorAdverbiis());
+  @NonNull public static final Supplier <CuratorAdverbiis> faciendum =
+    () -> ObjectUtils.firstNonNull(instantia, instantia = new CuratorAdverbiis());
 
-  private ConditorAdverbiis() {
-    super(Categoria.ADVERBIUM, NuntiusConditoriAdverbiis.faciendum, Adverbium.ConstructorAdverbii::new);
+  private CuratorAdverbiis() {
+    super(Categoria.ADVERBIUM, NuntiusConditoriAdverbiis.faciendum, ConstructorAdverbii::new);
     nuntius.plurimumGarrio("Factus sum");
   }
 
@@ -39,7 +40,7 @@ public class ConditorAdverbiis extends ConditorMultiplicibus <Adverbium> {
    */
   @Override public void allegam(@NonNull final String nomen, @NonNull final String descriptor) {
     switch (nomen) {
-      case Gradus.pittacium -> ((Adverbium.ConstructorAdverbii) constructor).gradus(Gradus.definiam(descriptor));
+      case Gradus.pittacium -> ((ConstructorAdverbii) constructor).gradus(Gradus.definiam(descriptor));
       case pittaciumLemmae -> constructor.lemma(descriptor.trim());
       default -> {
         allectioDefecit(nomen, descriptor);
@@ -51,8 +52,8 @@ public class ConditorAdverbiis extends ConditorMultiplicibus <Adverbium> {
   }
 
   /**
-   * Classis {@link NuntiusConditoriAdverbiis} est vās classis {@link Nuntius} classī {@link ConditorAdverbiis}
-   * @see ConditorAdverbiis
+   * Classis {@link NuntiusConditoriAdverbiis} est vās classis {@link Nuntius} classī {@link CuratorAdverbiis}
+   * @see CuratorAdverbiis
    */
   @Singleton
   private static final class NuntiusConditoriAdverbiis extends Nuntius {
@@ -66,7 +67,7 @@ public class ConditorAdverbiis extends ConditorMultiplicibus <Adverbium> {
             () -> ObjectUtils.firstNonNull(instantia, instantia = new NuntiusConditoriAdverbiis());
 
     private NuntiusConditoriAdverbiis() {
-      super(ParametriNuntii.para(ConditorAdverbiis.class));
+      super(ParametriNuntii.para(CuratorAdverbiis.class));
     }
   }
 }
