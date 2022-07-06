@@ -33,8 +33,8 @@ public final class StructorVerba extends Omne {
     () -> ObjectUtils.firstNonNull(instantia, instantia = new StructorVerba());
 
   @Getter(value = AccessLevel.PRIVATE, lazy = true)
-  @NonNull private final Range <Short> TRACTUS_NUMERORUM = Range.between(Integer.valueOf(1).shortValue(),
-                                                                         Integer.valueOf(4000).shortValue());
+  @NonNull private final Range <Short> TRACTUS_NUMERORUM = Range.between(Integer.valueOf(Numerus.MINUMUM).shortValue(),
+                                                                         Integer.valueOf(Numerus.MAXIMUM).shortValue());
 
   @Getter(value = AccessLevel.PRIVATE, lazy = true)
   @NonNull private final LectorMultiplicibus.LectorAdiectivis adiectiva =
@@ -222,8 +222,10 @@ public final class StructorVerba extends Omne {
   /**
    * @param numerus numerus mathematicus
    * @return Rem classis {@link Numerus}
+   * @throws IllegalArgumentException sī <a href="https://github.com/Chaosfirebolt/RomanNumeralConverter/blob/master/src/main/java/com/github/chaosfirebolt/converter/RomanInteger.java">RomanInteger</a>
+   *                                  errōrem continuātur.
    */
-  public @Nullable Numerus numeram(final short numerus) {
+  public @Nullable Numerus numeram(final short numerus) throws IllegalArgumentException {
     return TRACTUS_NUMERORUM.contains(numerus) ? Numerus.builder().numerus(numerus).build()
                                                : null;
   }
@@ -231,8 +233,10 @@ public final class StructorVerba extends Omne {
   /**
    * @param scriptio repraesentātiōnem scrīpta numerī mathēmaticī
    * @return Rem classis {@link Numerus}
+   * @throws IllegalArgumentException sī <a href="https://github.com/Chaosfirebolt/RomanNumeralConverter/blob/master/src/main/java/com/github/chaosfirebolt/converter/RomanInteger.java">RomanInteger</a>
+   *                                  errōrem continuātur.
    */
-  public @Nullable Numerus numeram(final @NonNull String scriptio) {
+  public @Nullable Numerus numeram(final @NonNull String scriptio) throws IllegalArgumentException {
     if (Patterns.ROMAN_PATTERN.matcher(scriptio).matches()) {
       final short numerus = Integer.valueOf(RomanInteger.parse(scriptio, IntegerType.ROMAN).getArabic()).shortValue();
       return TRACTUS_NUMERORUM.contains(numerus) ? Numerus.builder().numerus(numerus).build()

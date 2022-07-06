@@ -8,10 +8,10 @@ import com.github.chaosfirebolt.converter.util.Validator;
 import com.structorverba.officia.enumerationes.*;
 import com.structorverba.officia.miscella.Utilitas;
 import lombok.*;
-import org.apache.commons.lang3.StringUtils;
+import org.apache.commons.lang3.*;
 
 /**
- * Classis {@link com.structorverba.officia.verba.Numerus} repraesentat numerōs ut coniectēris. <br>
+ * Classis {@link Numerus} repraesentat numerōs ut coniectēris. <br>
  * Rēs huius classis catēgoriam {@link Categoria#NUMERUS} ūtuntur dataque eīs nōn
  * inveniet scrīnium <a href="{@docRoot}/../src/main/resources">auxiliārēs</a>.
  * <br> Magis rēs huius classis ā numerīs classis <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Short.html">Short</a>
@@ -39,9 +39,9 @@ public final class Numerus extends VerbumSimplex<Numerus> {
      */
     @IntRange(from = MINUMUM, to = MAXIMUM)
     private final int numerus;
-    @Getter(lazy = true)
-    @NonNull
-    private final NuntiusNumerorum nuntius = NuntiusNumerorum.faciendum.get();
+
+    @NonNull @Getter(lazy = true)
+    private static final NuntiusNumerorum nuntius = NuntiusNumerorum.faciendum.get();
 
     @Builder(access = AccessLevel.PUBLIC, toBuilder = true)
     private Numerus(final short numerus) throws IllegalArgumentException {
@@ -54,9 +54,13 @@ public final class Numerus extends VerbumSimplex<Numerus> {
         return Integer.valueOf(numerus).shortValue();
     }
 
-    @NonNull
-    private RomanInteger ostendam() throws IllegalArgumentException {
-        return RomanInteger.parse(String.valueOf(numerus), IntegerType.ARABIC);
+    @Nullable private RomanInteger ostendam() {
+        try {
+            return RomanInteger.parse(String.valueOf(numerus), IntegerType.ARABIC);
+        } catch (IllegalArgumentException e) {
+            nuntius.terreo(e);
+            return null;
+        }
     }
 
     /**
@@ -66,11 +70,12 @@ public final class Numerus extends VerbumSimplex<Numerus> {
      * errōrem continuātur.
      * @see <a href="https://github.com/Chaosfirebolt/RomanNumeralConverter/blob/master/src/main/java/com/github/chaosfirebolt/converter/RomanInteger.java">RomanInteger</a>
      */
-    @Override
-    @NonNull
+    @Override @NonNull
     public String toString() {
         try {
-            return Utilitas.capitaneasScribo(ostendam().toString());
+            final RomanInteger numerus = ostendam();
+            return numerus == null ? StringUtils.EMPTY
+                                   : Utilitas.capitaneasScribo(numerus.toString());
         } catch (IllegalArgumentException e) {
             nuntius.terreo(e);
             return StringUtils.EMPTY;
@@ -78,81 +83,125 @@ public final class Numerus extends VerbumSimplex<Numerus> {
     }
 
     /**
-     * @param secundus rēs classis {@link com.structorverba.officia.verba.Numerus} ūsa additiōnī.
-     * @return Rem classis {@link com.structorverba.officia.verba.Numerus} quae ēventum additiōnis cum valōre {@code secundus} repraesentat. <br>
-     * @throws IllegalArgumentException sī <a href="https://github.com/Chaosfirebolt/RomanNumeralConverter/blob/master/src/main/java/com/github/chaosfirebolt/converter/RomanInteger.java">RomanInteger</a>
+     * @param primus rēs classis {@link Numerus} ūsa additiōnī.
+     * @param secundus rēs classis {@link Numerus} ūsa additiōnī.
+     * @return Rem classis {@link Numerus} quae ēventum additiōnis cum valōre {@code secundus} repraesentat. <br>
+     * Hic modus valōrem {@code null} refert sī <a href="https://github.com/Chaosfirebolt/RomanNumeralConverter/blob/master/src/main/java/com/github/chaosfirebolt/converter/RomanInteger.java">RomanInteger</a>
      *                                  errōrem continuātur.
      * @see <a href="https://github.com/Chaosfirebolt/RomanNumeralConverter/blob/master/src/main/java/com/github/chaosfirebolt/converter/RomanInteger.java">RomanInteger</a>
      */
-    @NonNull
-    static public com.structorverba.officia.verba.Numerus addo(@NonNull final com.structorverba.officia.verba.Numerus primus,
-                                                               @NonNull final com.structorverba.officia.verba.Numerus secundus) throws IllegalArgumentException {
-        return new com.structorverba.officia.verba.Numerus(Integer.valueOf(primus.ostendam().add(secundus.ostendam()).getArabic()).shortValue());
+    @SuppressWarnings("ConstantConditions")
+    @Nullable static public Numerus addo(@NonNull final Numerus primus,
+                                         @NonNull final Numerus secundus) throws IllegalArgumentException {
+        final RomanInteger tertius = primus.ostendam(),
+                           quartus = secundus.ostendam();
+        try {
+            return ObjectUtils.allNotNull(tertius, quartus) ? new Numerus(Integer.valueOf(tertius.add(quartus).getArabic()).shortValue())
+                                                            : null;
+        } catch(IllegalArgumentException e) {
+            nuntius.terreo(e);
+            return null;
+        }
     }
 
     /**
-     * @param secundus rēs classis {@link com.structorverba.officia.verba.Numerus} ūsa subtractiōnī.
-     * @return Rem classis {@link com.structorverba.officia.verba.Numerus} quae ēventum subtractiōnis cum valōre {@code secundus} repraesentat. <br>
-     * @throws IllegalArgumentException sī <a href="https://github.com/Chaosfirebolt/RomanNumeralConverter/blob/master/src/main/java/com/github/chaosfirebolt/converter/RomanInteger.java">RomanInteger</a>
+     * @param primus rēs classis {@link Numerus} ūsa subtractiōnī.
+     * @param secundus rēs classis {@link Numerus} ūsa subtractiōnī.
+     * @return Rem classis {@link Numerus} quae ēventum subtractiōnis cum valōre {@code secundus} repraesentat. <br>
+     * Hic modus valōrem {@code null} refert sī <a href="https://github.com/Chaosfirebolt/RomanNumeralConverter/blob/master/src/main/java/com/github/chaosfirebolt/converter/RomanInteger.java">RomanInteger</a>
      *                                  errōrem continuātur.
      * @see <a href="https://github.com/Chaosfirebolt/RomanNumeralConverter/blob/master/src/main/java/com/github/chaosfirebolt/converter/RomanInteger.java">RomanInteger</a>
      */
-    @NonNull
-    static public com.structorverba.officia.verba.Numerus subtraho(@NonNull final com.structorverba.officia.verba.Numerus primus,
-                                                                   @NonNull final com.structorverba.officia.verba.Numerus secundus) throws IllegalArgumentException {
-        return new com.structorverba.officia.verba.Numerus(Integer.valueOf(primus.ostendam().subtract(secundus.ostendam()).getArabic()).shortValue());
+    @SuppressWarnings("ConstantConditions")
+    @Nullable static public Numerus subtraho(@NonNull final Numerus primus,
+                                             @NonNull final Numerus secundus) throws IllegalArgumentException {
+        final RomanInteger tertius = primus.ostendam(),
+                           quartus = secundus.ostendam();
+        try {
+            return ObjectUtils.allNotNull(tertius, quartus) ? new Numerus(Integer.valueOf(tertius.subtract(quartus).getArabic()).shortValue())
+                                                            : null;
+        } catch (IllegalArgumentException e) {
+            nuntius.terreo(e);
+            return null;
+        }
     }
 
     /**
-     * @param secundus rēs classis {@link com.structorverba.officia.verba.Numerus} ūsa multiplicātiōnī.
-     * @return Rem classis {@link com.structorverba.officia.verba.Numerus} quae ēventum multiplicātiōnis cum valōre {@code secundus} repraesentat. <br>
-     * @throws IllegalArgumentException sī <a href="https://github.com/Chaosfirebolt/RomanNumeralConverter/blob/master/src/main/java/com/github/chaosfirebolt/converter/RomanInteger.java">RomanInteger</a>
+     * @param primus rēs classis {@link Numerus} ūsa multiplicātiōnī.
+     * @param secundus rēs classis {@link Numerus} ūsa multiplicātiōnī.
+     * @return Rem classis {@link Numerus} quae ēventum multiplicātiōnis cum valōre {@code secundus} repraesentat. <br>
+     * Hic modus valōrem {@code null} refert sī <a href="https://github.com/Chaosfirebolt/RomanNumeralConverter/blob/master/src/main/java/com/github/chaosfirebolt/converter/RomanInteger.java">RomanInteger</a>
      *                                  errōrem continuātur.
      * @see <a href="https://github.com/Chaosfirebolt/RomanNumeralConverter/blob/master/src/main/java/com/github/chaosfirebolt/converter/RomanInteger.java">RomanInteger</a>
      */
-    @NonNull
-    static public com.structorverba.officia.verba.Numerus multiplico(@NonNull final com.structorverba.officia.verba.Numerus primus,
-                                                                     @NonNull final com.structorverba.officia.verba.Numerus secundus) throws IllegalArgumentException {
-        return new com.structorverba.officia.verba.Numerus(Integer.valueOf(primus.ostendam().multiply(secundus.ostendam()).getArabic()).shortValue());
+    @SuppressWarnings("ConstantConditions")
+    @Nullable static public Numerus multiplico(@NonNull final Numerus primus,
+                                               @NonNull final Numerus secundus) throws IllegalArgumentException {
+        final RomanInteger tertius = primus.ostendam(),
+                           quartus = secundus.ostendam();
+        try {
+            return ObjectUtils.allNotNull(tertius, quartus) ? new Numerus(Integer.valueOf(tertius.multiply(quartus).getArabic()).shortValue())
+                                                            : null;
+        } catch (IllegalArgumentException e) {
+            nuntius.terreo(e);
+            return null;
+        }
     }
 
     /**
-     * @param secundus rēs classis {@link com.structorverba.officia.verba.Numerus} ūsa dīvīsiōnī.
-     * @return Rem classis {@link com.structorverba.officia.verba.Numerus} quae ēventum dīvīsiōnis cum valōre {@code secundus} repraesentat. <br>
-     * @throws IllegalArgumentException sī <a href="https://github.com/Chaosfirebolt/RomanNumeralConverter/blob/master/src/main/java/com/github/chaosfirebolt/converter/RomanInteger.java">RomanInteger</a>
+     * @param primus rēs classis {@link Numerus} ūsa dīvīsiōnī.
+     * @param secundus rēs classis {@link Numerus} ūsa dīvīsiōnī.
+     * @return Rem classis {@link Numerus} quae ēventum dīvīsiōnis cum valōre {@code secundus} repraesentat. <br>
+     * Hic modus valōrem {@code null} refert sī <a href="https://github.com/Chaosfirebolt/RomanNumeralConverter/blob/master/src/main/java/com/github/chaosfirebolt/converter/RomanInteger.java">RomanInteger</a>
      *                                  errōrem continuātur.
      * @see <a href="https://github.com/Chaosfirebolt/RomanNumeralConverter/blob/master/src/main/java/com/github/chaosfirebolt/converter/RomanInteger.java">RomanInteger</a>
      */
-    @NonNull
-    static public com.structorverba.officia.verba.Numerus divido(@NonNull final com.structorverba.officia.verba.Numerus primus,
-                                                                 @NonNull final com.structorverba.officia.verba.Numerus secundus) throws IllegalArgumentException {
-        return new com.structorverba.officia.verba.Numerus(Integer.valueOf(primus.ostendam().divide(secundus.ostendam()).getArabic()).shortValue());
+    @SuppressWarnings("ConstantConditions")
+    @Nullable static public Numerus divido(@NonNull final Numerus primus,
+                                           @NonNull final Numerus secundus) throws IllegalArgumentException {
+        final RomanInteger tertius = primus.ostendam(),
+                           quartus = secundus.ostendam();
+        try {
+            return ObjectUtils.allNotNull(tertius, quartus) ? new Numerus(Integer.valueOf(tertius.divide(quartus).getArabic()).shortValue())
+                                                            : null;
+        } catch (IllegalArgumentException e) {
+            nuntius.terreo(e);
+            return null;
+        }
     }
 
     /**
-     * @param secundus rēs classis {@link com.structorverba.officia.verba.Numerus} ūsa mānsiōnī.
-     * @return Rem classis {@link com.structorverba.officia.verba.Numerus} quae ēventum mānsiōnis cum valōre {@code secundus} repraesentat. <br>
-     * @throws IllegalArgumentException sī <a href="https://github.com/Chaosfirebolt/RomanNumeralConverter/blob/master/src/main/java/com/github/chaosfirebolt/converter/RomanInteger.java">RomanInteger</a>
+     * @param primus rēs classis {@link Numerus} ūsa mānsiōnī.
+     * @param secundus rēs classis {@link Numerus} ūsa mānsiōnī.
+     * @return Rem classis {@link Numerus} quae ēventum mānsiōnis cum valōre {@code secundus} repraesentat. <br>
+     * Hic modus valōrem {@code null} refert sī <a href="https://github.com/Chaosfirebolt/RomanNumeralConverter/blob/master/src/main/java/com/github/chaosfirebolt/converter/RomanInteger.java">RomanInteger</a>
      *                                  errōrem continuātur.
      * @see <a href="https://github.com/Chaosfirebolt/RomanNumeralConverter/blob/master/src/main/java/com/github/chaosfirebolt/converter/RomanInteger.java">RomanInteger</a>
      */
-    @NonNull
-    static public com.structorverba.officia.verba.Numerus maneo(@NonNull final com.structorverba.officia.verba.Numerus primus,
-                                                                @NonNull final com.structorverba.officia.verba.Numerus secundus) throws IllegalArgumentException {
-        return new com.structorverba.officia.verba.Numerus(Integer.valueOf(primus.ostendam().remainder(secundus.ostendam()).getArabic()).shortValue());
+    @SuppressWarnings("ConstantConditions")
+    @Nullable static public Numerus maneo(@NonNull final Numerus primus,
+                                          @NonNull final Numerus secundus) throws IllegalArgumentException {
+        final RomanInteger tertius = primus.ostendam(),
+                           quartus = secundus.ostendam();
+        try {
+            return ObjectUtils.allNotNull(tertius, quartus) ? new Numerus(Integer.valueOf(tertius.remainder(quartus).getArabic()).shortValue())
+                                                            : null;
+        } catch(IllegalArgumentException e) {
+            nuntius.terreo(e);
+            return null;
+        }
     }
 
     /**
      * Hic modus operātiōnem mathēmaticam aptam agat.
      *
-     * @param primus   rēs classis {@link com.structorverba.officia.verba.Numerus} ūsa operātiōnī.
-     * @param secundus rēs classis {@link com.structorverba.officia.verba.Numerus} ūsa operātiōnī.
+     * @param primus   rēs classis {@link Numerus} ūsa operātiōnī.
+     * @param secundus rēs classis {@link Numerus} ūsa operātiōnī.
      * @param operatio indicat operātiōnem agendam
      * @see Operatio
      */
-    @NonNull
-    static public com.structorverba.officia.verba.Numerus agam(@NonNull final com.structorverba.officia.verba.Numerus primus, @NonNull final com.structorverba.officia.verba.Numerus secundus,
-                                                               @NonNull final Operatio operatio) throws IllegalArgumentException {
+    @Nullable static public Numerus agam(@NonNull final Numerus primus, @NonNull final Numerus secundus,
+                                         @NonNull final Operatio operatio) throws IllegalArgumentException {
         return operatio.romanus.apply(primus, secundus);
     }
 }

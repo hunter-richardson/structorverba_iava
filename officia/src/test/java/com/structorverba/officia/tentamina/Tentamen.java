@@ -167,13 +167,17 @@ public abstract class Tentamen<Illud, Hoc> {
           .aliamContineat("Numerum prōductum conversiōnis vacat.");
 
         @NonNull final StructorVerba structor = StructorVerba.faciendum.get();
-        @NonNull final Numerus secundus = structor.numeram(primus.toString());
-        new Tentamiculum.TentamiculumRei(secundus)
-          .existat(String.format("Prōductā conversiōnis relicta'st prōductiō numerī %d.", numerus));
-        new Tentamiculum.TentamiculumNumeralis <>(numerus, secundus.numerus())
-          .aequentur("Numerum prōductum combīnātiōnis expectātiōne eius differt.");
+        try {
+          @NonNull final Numerus secundus = structor.numeram(primus.toString());
+          new Tentamiculum.TentamiculumRei(secundus)
+                  .existat(String.format("Prōductā conversiōnis relicta'st prōductiō numerī %d.", numerus));
+          new Tentamiculum.TentamiculumNumeralis <>(numerus, secundus.numerus())
+                  .aequentur("Numerum prōductum combīnātiōnis expectātiōne eius differt.");
 
-        return String.format("%s = %d%n%d = %s%n", primus, numerus, numerus, secundus);
+          return String.format("%s = %d%n%d = %s%n", primus, numerus, numerus, secundus);
+        } catch (IllegalArgumentException e) {
+          return String.format("Prōductā conversiōnis relicta'st prōductiō numerī %d.", numerus);
+        }
       });
     }
   }
@@ -192,35 +196,37 @@ public abstract class Tentamen<Illud, Hoc> {
                                 @NonNull final Operatio operatio) {
       super(primus -> {
         new Tentamiculum.TentamiculumRei(primus)
-          .existat(String.format("Prōductā %s relicta'st prōductiō numerī %d.", operatio.name(), numeri.getKey()));
+                .existat(String.format("Prōductā %s relicta'st prōductiō numerī %d.", operatio.name(), numeri.getKey()));
         new Tentamiculum.TentamiculumVersiculi(primus)
-          .aliamContineat(String.format("Numerum prōductum %s vacat.", operatio.name()));
+                .aliamContineat(String.format("Numerum prōductum %s vacat.", operatio.name()));
 
         @NonNull final StructorVerba structor = StructorVerba.faciendum.get();
-        @NonNull final Numerus secundus = structor.numeram(numeri.getValue());
-        new Tentamiculum.TentamiculumRei(secundus)
-          .existat(String.format("Prōductā %s relicta'st prōductiō numerī %d.", operatio.name(), numeri.getValue()));
-        new Tentamiculum.TentamiculumVersiculi(secundus)
-          .aliamContineat(String.format("Numerum prōductum %s vacat.", operatio.name()));
-
-        short expectatus = operatio.arabicus.apply(numeri.getKey().intValue(), numeri.getValue().intValue())
-                                            .shortValue();
-
+        short expectatus = 0;
         try {
+          @NonNull final Numerus secundus = structor.numeram(numeri.getValue());
+
+          new Tentamiculum.TentamiculumRei(secundus)
+                  .existat(String.format("Prōductā %s relicta'st prōductiō numerī %d.", operatio.name(), numeri.getValue()));
+          new Tentamiculum.TentamiculumVersiculi(secundus)
+                  .aliamContineat(String.format("Numerum prōductum %s vacat.", operatio.name()));
+
+          expectatus = operatio.arabicus.apply(numeri.getKey().intValue(), numeri.getValue().intValue())
+                  .shortValue();
+
           final Numerus eventus = Numerus.agam(primus, secundus, operatio);
 
           new Tentamiculum.TentamiculumRei(eventus)
                   .existat(String.format("Prōductā %s relicta'st prōductiō numerī %d.", operatio.name(), expectatus));
           new Tentamiculum.TentamiculumVersiculi(eventus)
                   .aliamContineat(String.format("Numerum prōductum %s vacat.", operatio.name()));
-          new Tentamiculum.TentamiculumNumeralis <>(expectatus, eventus.numerus())
+          new Tentamiculum.TentamiculumNumeralis<>(expectatus, eventus.numerus())
                   .aequentur(String.format("Numerum prōductum %s expectātiōne eius differt.", operatio.name()));
 
           return String.format("%d = %s%n%d = %s%n%d %c %d = %d = %s",
                   numeri.getKey(), primus, numeri.getValue(), secundus,
                   numeri.getKey(), operatio.symbolum, numeri.getValue(), expectatus, eventus);
         } catch (IllegalArgumentException e) {
-          return String.format("Prōductā %s relicta'st  prōductiō numerī %d.", operatio.name(), expectatus);
+          return String.format("Prōductā %s relicta'st prōductiō numerī %d.", operatio.name(), expectatus);
         }
       });
     }
