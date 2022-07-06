@@ -2,14 +2,10 @@ package com.structorverba.officia.verba;
 
 import androidx.annotation.*;
 import androidx.annotation.NonNull;
-import com.github.chaosfirebolt.converter.RomanInteger;
-import com.github.chaosfirebolt.converter.constants.IntegerType;
-import com.github.chaosfirebolt.converter.util.Validator;
 import com.structorverba.officia.curatores.CuratorSimplicibus;
-import com.structorverba.officia.enumerationes.Categoria;
+import com.structorverba.officia.enumerationes.*;
 import com.structorverba.officia.inventores.Inventor;
 import com.structorverba.officia.lectores.*;
-import com.structorverba.officia.miscella.Utilitas;
 import com.structorverba.officia.nuntii.*;
 import com.structorverba.officia.tenores.TenorSimplicibus;
 import jakarta.ejb.Singleton;
@@ -169,151 +165,8 @@ public abstract class VerbumSimplex <Hoc extends Verbum <Hoc>> extends Verbum <H
   }
 
   /**
-   * Classis {@link Numerus} repraesentat numerōs ut coniectēris. <br>
-   * Rēs huius classis catēgoriam {@link Categoria#NUMERUS} ūtuntur dataque eīs nōn
-   * inveniet scrīnium <a href="{@docRoot}/../src/main/resources">auxiliārēs</a>.
-   * <br> Magis rēs huius classis ā numerīs classis <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Short.html">Short</a>
-   * per ūsum classis <a href="https://github.com/Chaosfirebolt/RomanNumeralConverter/blob/master/src/main/java/com/github/chaosfirebolt/converter/RomanInteger.java">RomanInteger</a>
-   * fīant.
-   * @see NuntiusNumerorum
-   * @see <a href="https://github.com/Chaosfirebolt/RomanNumeralConverter/blob/master/src/main/java/com/github/chaosfirebolt/converter/RomanInteger.java">RomanInteger</a>
-   * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Short.html">Short</a>
-   */
-  public static final class Numerus extends VerbumSimplex <Numerus> {
-    /**
-     * Hic valor numerum maximum possibilem repraesentat.
-     */
-    public static final short MINUMUM = 1;
-
-    /**
-     * Hic valor numerum minumum possibilem repraesentat.
-     */
-    public static final short MAXIMUM = 3999;
-
-    /**
-     * Hic valor repraesentātiōnem numeriam huic reī tenet.
-     */
-    @IntRange(from = MINUMUM, to = MAXIMUM)
-    private final int numerus;
-    @Getter(lazy = true)
-    @NonNull private final NuntiusNumerorum nuntius = NuntiusNumerorum.faciendum.get();
-
-    @Builder(access = AccessLevel.PUBLIC, toBuilder = true)
-    private Numerus(final short numerus) throws IllegalArgumentException {
-      super(Categoria.NUMERUS, String.valueOf(numerus));
-      this.numerus = Validator.range(Short.toUnsignedInt(numerus));
-      nuntius.plusGarrio("Scrībor ut", toString());
-    }
-
-    public short numerus() {
-      return Integer.valueOf(numerus).shortValue();
-    }
-
-    @NonNull private RomanInteger ostendam() throws IllegalArgumentException {
-      return RomanInteger.parse(String.valueOf(numerus), IntegerType.ARABIC);
-    }
-
-    /**
-     * @return Repraesentātiōnem scrīpta reī huius classis. <br>
-     * Hic modus valōrem <a href="https://commons.apache.org/proper/commons-lang/apidocs/org/apache/commons/lang3/StringUtils.html#EMPTY">StringUtils.EMPTY</a>
-     * refert sī <a href="https://github.com/Chaosfirebolt/RomanNumeralConverter/blob/master/src/main/java/com/github/chaosfirebolt/converter/RomanInteger.java">RomanInteger</a>
-     * errōrem continuātur.
-     * @see <a href="https://github.com/Chaosfirebolt/RomanNumeralConverter/blob/master/src/main/java/com/github/chaosfirebolt/converter/RomanInteger.java">RomanInteger</a>
-     */
-    @Override @NonNull
-    public String toString() throws IllegalArgumentException {
-      try {
-        return Utilitas.capitaneasScribo(ostendam().toString());
-      } catch (IllegalArgumentException e) {
-        nuntius.terreo(e);
-        return StringUtils.EMPTY;
-      }
-    }
-
-    /**
-     * @param alius rēs classis {@link Numerus} ūsa additiōnī.
-     * @return Rem classis {@link Numerus} quae ēventum additiōnis cum valōre {@code alius} repraesentat. <br>
-     * Hic modus valōrem {@code null} refert sī <a href="https://github.com/Chaosfirebolt/RomanNumeralConverter/blob/master/src/main/java/com/github/chaosfirebolt/converter/RomanInteger.java">RomanInteger</a>
-     * errōrem continuātur.
-     * @see <a href="https://github.com/Chaosfirebolt/RomanNumeralConverter/blob/master/src/main/java/com/github/chaosfirebolt/converter/RomanInteger.java">RomanInteger</a>
-     */
-    @Nullable public Numerus addo(final @NonNull Numerus alius) {
-      try {
-        return new Numerus(Integer.valueOf(ostendam().add(alius.ostendam()).getArabic()).shortValue());
-      } catch (IllegalArgumentException e) {
-        nuntius.terreo(e);
-        return null;
-      }
-    }
-
-    /**
-     * @param alius rēs classis {@link Numerus} ūsa subtractiōnī.
-     * @return Rem classis {@link Numerus} quae ēventum subtractiōnis cum valōre {@code alius} repraesentat. <br>
-     * Hic modus valōrem {@code null} refert sī <a href="https://github.com/Chaosfirebolt/RomanNumeralConverter/blob/master/src/main/java/com/github/chaosfirebolt/converter/RomanInteger.java">RomanInteger</a>
-     * errōrem continuātur.
-     * @see <a href="https://github.com/Chaosfirebolt/RomanNumeralConverter/blob/master/src/main/java/com/github/chaosfirebolt/converter/RomanInteger.java">RomanInteger</a>
-     */
-    @Nullable public Numerus subtraho(final @NonNull Numerus alius) {
-      try {
-        return new Numerus(Integer.valueOf(ostendam().subtract(alius.ostendam()).getArabic()).shortValue());
-      } catch (IllegalArgumentException e) {
-        nuntius.terreo(e);
-        return null;
-      }
-    }
-
-    /**
-     * @param alius rēs classis {@link Numerus} ūsa multiplicātiōnī.
-     * @return Rem classis {@link Numerus} quae ēventum multiplicātiōnis cum valōre {@code alius} repraesentat. <br>
-     * Hic modus valōrem {@code null} refert sī <a href="https://github.com/Chaosfirebolt/RomanNumeralConverter/blob/master/src/main/java/com/github/chaosfirebolt/converter/RomanInteger.java">RomanInteger</a>
-     * errōrem continuātur.
-     * @see <a href="https://github.com/Chaosfirebolt/RomanNumeralConverter/blob/master/src/main/java/com/github/chaosfirebolt/converter/RomanInteger.java">RomanInteger</a>
-     */
-    @Nullable public Numerus multiplico(final @NonNull Numerus alius) {
-      try {
-        return new Numerus(Integer.valueOf(ostendam().multiply(alius.ostendam()).getArabic()).shortValue());
-      } catch (IllegalArgumentException e) {
-        nuntius.terreo(e);
-        return null;
-      }
-    }
-
-    /**
-     * @param alius rēs classis {@link Numerus} ūsa dīvīsiōnī.
-     * @return Rem classis {@link Numerus} quae ēventum dīvīsiōnis cum valōre {@code alius} repraesentat. <br>
-     * Hic modus valōrem {@code null} refert sī <a href="https://github.com/Chaosfirebolt/RomanNumeralConverter/blob/master/src/main/java/com/github/chaosfirebolt/converter/RomanInteger.java">RomanInteger</a>
-     * errōrem continuātur.
-     * @see <a href="https://github.com/Chaosfirebolt/RomanNumeralConverter/blob/master/src/main/java/com/github/chaosfirebolt/converter/RomanInteger.java">RomanInteger</a>
-     */
-    @Nullable public Numerus divido(final @NonNull Numerus alius) {
-      try {
-        return new Numerus(Integer.valueOf(ostendam().divide(alius.ostendam()).getArabic()).shortValue());
-      } catch (IllegalArgumentException e) {
-        nuntius.terreo(e);
-        return null;
-      }
-    }
-
-    /**
-     * @param alius rēs classis {@link Numerus} ūsa mānsiōnī.
-     * @return Rem classis {@link Numerus} quae ēventum mānsiōnis cum valōre {@code alius} repraesentat. <br>
-     * Hic modus valōrem {@code null} refert sī <a href="https://github.com/Chaosfirebolt/RomanNumeralConverter/blob/master/src/main/java/com/github/chaosfirebolt/converter/RomanInteger.java">RomanInteger</a>
-     * errōrem continuātur.
-     * @see <a href="https://github.com/Chaosfirebolt/RomanNumeralConverter/blob/master/src/main/java/com/github/chaosfirebolt/converter/RomanInteger.java">RomanInteger</a>
-     */
-    @Nullable public Numerus maneo(final @NonNull Numerus alius) {
-      try {
-        return new Numerus(Integer.valueOf(ostendam().remainder(alius.ostendam()).getArabic()).shortValue());
-      } catch (IllegalArgumentException e) {
-        nuntius.terreo(e);
-        return null;
-      }
-    }
-  }
-
-  /**
-   * Classis {@link NuntiusNumerorum} est vās classis {@link Nuntius} classī {@link VerbumSimplex.Numerus}}
-   * @see VerbumSimplex.Numerus
+   * Classis {@link NuntiusNumerorum} est vās classis {@link Nuntius} classī {@link Numerus}}
+   * @see Numerus
    */
   @Singleton
   static final class NuntiusNumerorum extends Nuntius {
@@ -327,7 +180,7 @@ public abstract class VerbumSimplex <Hoc extends Verbum <Hoc>> extends Verbum <H
             () -> ObjectUtils.firstNonNull(instantia, instantia = new NuntiusNumerorum());
 
     NuntiusNumerorum() {
-      super(ParametriNuntii.para(VerbumSimplex.Numerus.class));
+      super(ParametriNuntii.para(Numerus.class));
     }
   }
 }

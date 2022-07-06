@@ -208,12 +208,12 @@ public final class StructorVerba extends Omne {
 
   /**
    * Hic modus fōrmam temere sēligit.
-   * @return Rem classis {@link VerbumSimplex.Numerus} fortuītam
+   * @return Rem classis {@link Numerus} fortuītam
    * @see Random#ints()
    * @implNote  Valōrem {@code X} refert sī fūnctiō fortis dēficit.
    * */
-  @NonNull public VerbumSimplex.Numerus fortuitumNumeram() {
-    return VerbumSimplex.Numerus.builder().numerus(Integer.valueOf(new Random().ints(TRACTUS_NUMERORUM.getMinimum(),
+  @NonNull public Numerus fortuitumNumeram() {
+    return Numerus.builder().numerus(Integer.valueOf(new Random().ints(TRACTUS_NUMERORUM.getMinimum(),
                                                                                      TRACTUS_NUMERORUM.getMaximum())
                                                                                .distinct().findFirst().orElse(10)).shortValue())
                                 .build();
@@ -221,21 +221,21 @@ public final class StructorVerba extends Omne {
 
   /**
    * @param numerus numerus mathematicus
-   * @return Rem classis {@link VerbumSimplex.Numerus}
+   * @return Rem classis {@link Numerus}
    */
-  public @Nullable VerbumSimplex.Numerus numeram(final short numerus) {
-    return TRACTUS_NUMERORUM.contains(numerus) ? VerbumSimplex.Numerus.builder().numerus(numerus).build()
+  public @Nullable Numerus numeram(final short numerus) {
+    return TRACTUS_NUMERORUM.contains(numerus) ? Numerus.builder().numerus(numerus).build()
                                                : null;
   }
 
   /**
    * @param scriptio repraesentātiōnem scrīpta numerī mathēmaticī
-   * @return Rem classis {@link VerbumSimplex.Numerus}
+   * @return Rem classis {@link Numerus}
    */
-  public @Nullable VerbumSimplex.Numerus numeram(final @NonNull String scriptio) {
+  public @Nullable Numerus numeram(final @NonNull String scriptio) {
     if (Patterns.ROMAN_PATTERN.matcher(scriptio).matches()) {
       final short numerus = Integer.valueOf(RomanInteger.parse(scriptio, IntegerType.ROMAN).getArabic()).shortValue();
-      return TRACTUS_NUMERORUM.contains(numerus) ? VerbumSimplex.Numerus.builder().numerus(numerus).build()
+      return TRACTUS_NUMERORUM.contains(numerus) ? Numerus.builder().numerus(numerus).build()
                                                  : null;
     } else {
       return null;

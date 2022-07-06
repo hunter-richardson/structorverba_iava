@@ -1,39 +1,45 @@
 package com.structorverba.officia;
 
 import androidx.annotation.NonNull;
+import com.structorverba.officia.enumerationes.Operatio;
 import com.structorverba.officia.miscella.*;
 import com.structorverba.officia.tentamina.Tentamen;
-import com.structorverba.officia.verba.VerbumSimplex;
+import com.structorverba.officia.verba.*;
 import lombok.Getter;
 import org.junit.jupiter.api.*;
 
 import java.util.*;
-import java.util.function.*;
+import java.util.function.Consumer;
+import java.util.stream.Stream;
 
 /**
- * Classis {@link Numeri} operātiōnēs mathēmaticās rērum classis {@link VerbumSimplex.Numerus} tentat.
+ * Classis {@link Numeri} operātiōnēs mathēmaticās rērum classis {@link Numerus} tentat.
  */
 @SuppressWarnings({"SpellCheckingInspection", "FieldCanBeLocal", "NewClassNamingConvention"})
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 final class Numeri extends Omne {
+  @NonNull private static final Map<Operatio, Map.Entry<Short, Short>> data = new HashMap<>();
+  static {
+    data.put(Operatio.ADDITIO,      Map.entry((short) 3,  (short) 17));
+    data.put(Operatio.SUBTRACTIO,   Map.entry((short) 12, (short) 7));
+    data.put(Operatio.MULTIPLICIO,  Map.entry((short) 2,  (short) 3));
+    data.put(Operatio.DIVISIO,      Map.entry((short) 18, (short) 6));
+    data.put(Operatio.MANSIO,       Map.entry((short) 12, (short) 9));
+  }
+
   @NonNull
   @Getter(lazy = true)
   private final StructorVerba structor = StructorVerba.faciendum.get();
 
-  @NonNull private static final BiFunction<Map.Entry<Short, Short>, Character, Short> expectatio =
-          (numeri, operatio) -> (short) switch (operatio) {
-            case '+' -> numeri.getKey() + numeri.getValue();
-            case '-' -> numeri.getKey() - numeri.getValue();
-            case '*' -> numeri.getKey() * numeri.getValue();
-            case '/' -> numeri.getKey() / numeri.getValue();
-            case '%' -> numeri.getKey() % numeri.getValue();
-            default ->  0;
-          };
-
   @NonNull @Getter(lazy = true)
-  private final BiConsumer<Map.Entry<Short, Short>, Character> agendum =
-          (numeri, operatio) -> System.out.println(new Tentamen.TentamenMathematicum(numeri, operatio)
-                  .exsequar(structor.numeram(expectatio.apply(numeri, operatio))));
+  private final Consumer<Operatio> agendum = operatio -> {
+            final Map.Entry<Short, Short> numeri = data.get(operatio);
+            //noinspection ConstantConditions
+            System.out.println(new Tentamen.TentamenMathematicum(numeri, operatio)
+                    .exsequar(structor.numeram(operatio.arabicus.apply(numeri.getKey().intValue(),
+                                                                       numeri.getValue().intValue())
+                                                       .shortValue())));
+          };
 
   private final short NUMERUM_MAXIMUM = 3998;
   private final short XLII_NUMERUM    = 42;
@@ -41,7 +47,7 @@ final class Numeri extends Omne {
   private final @NonNull String XLII_SCRIPTIO = "XLII";
 
   /**
-   * Hic modus conversiōnem ā numerō reī classis {@link VerbumSimplex.Numerus} tentat. <br>
+   * Hic modus conversiōnem ā numerō reī classis {@link Numerus} tentat. <br>
    * Scrīptiunculam {@code 42 = XLII} prōdūcat.
    */
   @Test @Order(1)
@@ -51,7 +57,7 @@ final class Numeri extends Omne {
   }
 
   /**
-   * Hic modus reversiōnem ā rē classis {@link VerbumSimplex.Numerus} numerō tentat. <br>
+   * Hic modus reversiōnem ā rē classis {@link Numerus} numerō tentat. <br>
    * Scrīptiunculam {@code XLII = 42} prōdūcat.
    */
   @Test @Order(2)
@@ -61,7 +67,7 @@ final class Numeri extends Omne {
   }
 
   /**
-   * Hic modus conversiōnem ā numerō reī classis {@link VerbumSimplex.Numerus} atque reversiōnem versam tentat. <br>
+   * Hic modus conversiōnem ā numerō reī classis {@link Numerus} atque reversiōnem versam tentat. <br>
    * Scrīptiunculās et {@code 42 = XLII} et {@code XLII = 42} dē numerō nescītō inter I et MMMCMXCIX prōdūcat.
    */
   @Test @Order(3)
@@ -73,47 +79,60 @@ final class Numeri extends Omne {
   }
 
   /**
-   * Hic modus additiōnem rērum duārum classis {@link VerbumSimplex.Numerus}. <br>
+   * Hic modus rēs duās classis {@link Numerus} addit. <br>
    * Scrīptiunculās et {@code 17 = XVIII} et {@code 3 = III} et {@code 17 + 3 = 20 = XX} prōdūcat.
+   * @see Operatio#ADDITIO
    */
   @Test @Order(4)
   public void additionis() {
-    agendum.accept(Map.entry((short) 3, (short) 17), '+');
+    agendum.accept(Operatio.ADDITIO);
   }
 
   /**
-   * Hic modus subtractiōnem rērum duārum classis {@link VerbumSimplex.Numerus}. <br>
+   * Hic modus rēs duās classis {@link Numerus} subtrahit. <br>
    * Scrīptiunculās et {@code 12 = XII} et {@code 7 = VII} et {@code 12 - 7 = 5 = V} prōdūcat.
+   * @see Operatio#SUBTRACTIO
    */
   @Test @Order(5)
   public void subtractionis() {
-    agendum.accept(Map.entry((short) 12, (short) 7), '-');
+    agendum.accept(Operatio.SUBTRACTIO);
   }
 
   /**
-   * Hic modus multiplicātiōnem rērum duārum classis {@link VerbumSimplex.Numerus}. <br>
+   * Hic modus rēs duās classis {@link Numerus} multiplicat. <br>
    * Scrīptiunculās et {@code 3 = III} et {@code 2 = II} et {@code 3 * 2 = 6 = VI} prōdūcat.
+   * @see Operatio#MULTIPLICIO
    */
   @Test @Order(6)
   public void multiplicationis() {
-    agendum.accept(Map.entry((short) 2, (short) 3), '*');
+    agendum.accept(Operatio.MULTIPLICIO);
   }
 
   /**
-   * Hic modus dīvīsiōnem rērum duārum classis {@link VerbumSimplex.Numerus}. <br>
+   * Hic modus rēs duās classis {@link Numerus} dīvidit. <br>
    * Scrīptiunculās et {@code 18 = XVII} et {@code 6 = VI} et {@code 18 / 6 = 3 = III} prōdūcat.
+   * @see Operatio#DIVISIO
    */
   @Test @Order(7)
   public void divisionis() {
-    agendum.accept(Map.entry((short) 18, (short) 6), '/');
+    agendum.accept(Operatio.DIVISIO);
   }
 
   /**
-   * Hic modus mānsiōnem rērum duārum classis {@link VerbumSimplex.Numerus}. <br>
+   * Hic modus rēs duās classis {@link Numerus} manet. <br>
    * Scrīptiunculās et {@code 12 = XII} et {@code 9 = IX} et {@code 12 % 9 = 3 = III} prōdūcat.
+   * @see Operatio#MANSIO
    */
   @Test @Order(8)
   public void mansionis() {
-    agendum.accept(Map.entry((short) 12, (short) 9), '%');
+    agendum.accept(Operatio.MANSIO);
+  }
+
+  /**
+   * Hic modus operātiōnēs omnnēs classis {@link Operatio} agit.
+   * */
+  @Test @Order(9)
+  public void omnesMathematicae() {
+    Stream.of(Operatio.values()).forEach(agendum);
   }
 }

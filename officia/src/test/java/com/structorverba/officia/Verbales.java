@@ -2,7 +2,7 @@ package com.structorverba.officia;
 
 import androidx.annotation.NonNull;
 import com.structorverba.officia.enumerationes.*;
-import com.structorverba.officia.miscella.StructorVerba;
+import com.structorverba.officia.miscella.*;
 import com.structorverba.officia.tentamina.Tentamen;
 import com.structorverba.officia.verba.*;
 import com.structorverba.officia.verba.multiplicia.*;
@@ -18,7 +18,7 @@ import java.util.stream.Stream;
  * */
 @SuppressWarnings({"NewClassNamingConvention", "SpellCheckingInspection"})
 @TestMethodOrder(MethodOrderer.Random.class)
-public class Verbales {
+public class Verbales extends Omne {
     @NonNull @Getter(lazy = true)
     private final StructorVerba structor = StructorVerba.faciendum.get();
 
@@ -100,7 +100,7 @@ public class Verbales {
     }
 
     /**
-     * Hic modus cōnstrūctiōnem rēbus classis {@link VerbumSimplex.Numerus} tentat.
+     * Hic modus cōnstrūctiōnem rēbus classis {@link Numerus} tentat.
      * @see Categoria#NUMERUS
      * */
     @Test

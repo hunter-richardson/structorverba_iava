@@ -1,6 +1,7 @@
 package com.structorverba.officia.tentamina;
 
 import androidx.annotation.*;
+import com.structorverba.officia.enumerationes.Operatio;
 import com.structorverba.officia.miscella.*;
 import com.structorverba.officia.verba.*;
 
@@ -105,10 +106,10 @@ public abstract class Tentamen<Illud, Hoc> {
   }
 
   /**
-   * Classis est classem {@link Tentamen} ūtitur rēs classum {@link VerbumSimplex.Numerus} et
+   * Classis est classem {@link Tentamen} ūtitur rēs classum {@link Numerus} et
    * <a href="https://docs.oracle.com/javase/10/docs/api/java/lang/String.html">String</a> comparāre.
    */
-  public static final class TentamenNumeraleConversionis extends Tentamen<VerbumSimplex.Numerus, String> {
+  public static final class TentamenNumeraleConversionis extends Tentamen<Numerus, String> {
     /**
      * Hoc officium cōnstrūctōrem reī huius classis perpetrat.
      * @param data    Hic valor datum exspectandum continet.
@@ -128,10 +129,10 @@ public abstract class Tentamen<Illud, Hoc> {
   }
 
   /**
-   * Classis est classem {@link Tentamen} ūtitur rēs classum {@link VerbumSimplex.Numerus} et
+   * Classis est classem {@link Tentamen} ūtitur rēs classum {@link Numerus} et
    * <a href="https://docs.oracle.com/javase/10/docs/api/java/lang/Short.html">Short</a> comparāre.
    */
-  public static final class TentamenNumeraleReversionis extends Tentamen<VerbumSimplex.Numerus, Short> {
+  public static final class TentamenNumeraleReversionis extends Tentamen<Numerus, Short> {
     /**
      * Hoc officium cōnstrūctōrem reī huius classis perpetrat.
      * @param numerus  Hic valor datum exspectandum continet.
@@ -153,7 +154,7 @@ public abstract class Tentamen<Illud, Hoc> {
    * {@link TentamenNumeraleReversionis}que combīnat.
    */
   @SuppressWarnings("ConstantConditions")
-  public static final class TentamenNumeraleCombinationis extends Tentamen<VerbumSimplex.Numerus, Short> {
+  public static final class TentamenNumeraleCombinationis extends Tentamen<Numerus, Short> {
     /**
      * Hoc officium cōnstrūctōrem reī huius classis perpetrat.
      * @param numerus valor datum exspectandum continet.
@@ -166,7 +167,7 @@ public abstract class Tentamen<Illud, Hoc> {
           .aliamContineat("Numerum prōductum conversiōnis vacat.");
 
         @NonNull final StructorVerba structor = StructorVerba.faciendum.get();
-        @NonNull final VerbumSimplex.Numerus secundus = structor.numeram(primus.toString());
+        @NonNull final Numerus secundus = structor.numeram(primus.toString());
         new Tentamiculum.TentamiculumRei(secundus)
           .existat(String.format("Prōductā conversiōnis relicta'st prōductiō numerī %d.", numerus));
         new Tentamiculum.TentamiculumNumeralis <>(numerus, secundus.numerus())
@@ -181,61 +182,46 @@ public abstract class Tentamen<Illud, Hoc> {
    * Classis {@link TentamenMathematicum} tentāmen operātiōnī mathēmaticae dēfīnit.
    */
   @SuppressWarnings("ConstantConditions")
-  public static final class TentamenMathematicum extends Tentamen<VerbumSimplex.Numerus, Map.Entry<Short, Short>> {
-    @NonNull private static final BiFunction<Map.Entry<Short, Short>, Character, Short> expectatio =
-            (numeri, operatio) -> (short) switch (operatio) {
-              case '+' -> numeri.getKey() + numeri.getValue();
-              case '-' -> numeri.getKey() - numeri.getValue();
-              case '*' -> numeri.getKey() * numeri.getValue();
-              case '/' -> numeri.getKey() / numeri.getValue();
-              case '%' -> numeri.getKey() % numeri.getValue();
-              default ->  0;
-            };
-
-    @NonNull private static final BiFunction<Map.Entry<VerbumSimplex.Numerus, VerbumSimplex.Numerus>,
-                                       Character, VerbumSimplex.Numerus> eventio =
-            (numeri, operatio) -> switch (operatio) {
-              case '+' -> numeri.getKey().addo(numeri.getValue());
-              case '-' -> numeri.getKey().subtraho(numeri.getValue());
-              case '*' -> numeri.getKey().multiplico(numeri.getValue());
-              case '/' -> numeri.getKey().divido(numeri.getValue());
-              case '%' -> numeri.getKey().maneo(numeri.getValue());
-              default -> null;
-            };
-
+  public static final class TentamenMathematicum extends Tentamen<Numerus, Map.Entry<Short, Short>> {
     /**
      * Hoc officium cōnstrūctōrem reī huius classis perpetrat.
      * @param numeri    valor datum exspectandum continet.
      * @param operatio valor operātiōnem mathēmaticam identificat.
      */
-    public TentamenMathematicum(@NonNull final Map.Entry<Short, Short> numeri, final char operatio) {
+    public TentamenMathematicum(@NonNull final Map.Entry<Short, Short> numeri,
+                                @NonNull final Operatio operatio) {
       super(primus -> {
         new Tentamiculum.TentamiculumRei(primus)
-          .existat(String.format("Prōductā %s relicta'st prōductiō numerī %d.", operatio, numeri.getKey()));
+          .existat(String.format("Prōductā %s relicta'st prōductiō numerī %d.", operatio.name(), numeri.getKey()));
         new Tentamiculum.TentamiculumVersiculi(primus)
-          .aliamContineat(String.format("Numerum prōductum %s vacat.", operatio));
-
-        short expectatus = expectatio.apply(numeri, operatio);
+          .aliamContineat(String.format("Numerum prōductum %s vacat.", operatio.name()));
 
         @NonNull final StructorVerba structor = StructorVerba.faciendum.get();
-        @NonNull final VerbumSimplex.Numerus secundus = structor.numeram(numeri.getValue());
+        @NonNull final Numerus secundus = structor.numeram(numeri.getValue());
         new Tentamiculum.TentamiculumRei(secundus)
-          .existat(String.format("Prōductā %s relicta'st prōductiō numerī %d.", operatio, numeri.getValue()));
+          .existat(String.format("Prōductā %s relicta'st prōductiō numerī %d.", operatio.name(), numeri.getValue()));
         new Tentamiculum.TentamiculumVersiculi(secundus)
-          .aliamContineat(String.format("Numerum prōductum %s vacat.", operatio));
+          .aliamContineat(String.format("Numerum prōductum %s vacat.", operatio.name()));
 
-        final VerbumSimplex.Numerus eventus = eventio.apply(Map.entry(primus, secundus), operatio);
+        short expectatus = operatio.arabicus.apply(numeri.getKey().intValue(), numeri.getValue().intValue())
+                                            .shortValue();
 
-        new Tentamiculum.TentamiculumRei(eventus)
-          .existat(String.format("Prōductā %s relicta'st prōductiō numerī %d.", operatio, expectatus));
-        new Tentamiculum.TentamiculumVersiculi(eventus)
-          .aliamContineat(String.format("Numerum prōductum %s vacat.", operatio));
-        new Tentamiculum.TentamiculumNumeralis <>(expectatus, eventus.numerus())
-          .aequentur(String.format("Numerum prōductum %s expectātiōne eius differt.", operatio));
+        try {
+          final Numerus eventus = Numerus.agam(primus, secundus, operatio);
 
-        return String.format("%d = %s%n%d = %s%n%d %c %d = %d = %s",
-                             numeri.getKey(), primus, numeri.getValue(), secundus,
-                             numeri.getKey(), operatio, numeri.getValue(), expectatus, eventus);
+          new Tentamiculum.TentamiculumRei(eventus)
+                  .existat(String.format("Prōductā %s relicta'st prōductiō numerī %d.", operatio.name(), expectatus));
+          new Tentamiculum.TentamiculumVersiculi(eventus)
+                  .aliamContineat(String.format("Numerum prōductum %s vacat.", operatio.name()));
+          new Tentamiculum.TentamiculumNumeralis <>(expectatus, eventus.numerus())
+                  .aequentur(String.format("Numerum prōductum %s expectātiōne eius differt.", operatio.name()));
+
+          return String.format("%d = %s%n%d = %s%n%d %c %d = %d = %s",
+                  numeri.getKey(), primus, numeri.getValue(), secundus,
+                  numeri.getKey(), operatio.symbolum, numeri.getValue(), expectatus, eventus);
+        } catch (IllegalArgumentException e) {
+          return String.format("Prōductā %s relicta'st  prōductiō numerī %d.", operatio.name(), expectatus);
+        }
       });
     }
   }

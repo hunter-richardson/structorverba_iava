@@ -54,7 +54,7 @@ public enum Categoria {
   PRAEPOSITIO,
 
   /**
-   * Hic valor classem {@link VerbumSimplex.Numerus} respondet.
+   * Hic valor classem {@link Numerus} respondet.
    */
   NUMERUS;
 
