@@ -72,14 +72,9 @@ public final class Numerus extends VerbumSimplex<Numerus> {
      */
     @Override @NonNull
     public String toString() {
-        try {
-            final RomanInteger numerus = ostendam();
-            return numerus == null ? StringUtils.EMPTY
-                                   : Utilitas.capitaneasScribo(numerus.toString());
-        } catch (IllegalArgumentException e) {
-            nuntius.terreo(e);
-            return StringUtils.EMPTY;
-        }
+        final RomanInteger numerus = ostendam();
+        return numerus == null ? StringUtils.EMPTY
+                               : Utilitas.capitaneasScribo(numerus.toString());
     }
 
     /**
