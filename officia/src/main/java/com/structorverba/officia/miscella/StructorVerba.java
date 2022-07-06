@@ -2,8 +2,6 @@ package com.structorverba.officia.miscella;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.*;
-import com.github.chaosfirebolt.converter.RomanInteger;
-import com.github.chaosfirebolt.converter.constants.*;
 import com.structorverba.officia.enumerationes.Categoria;
 import com.structorverba.officia.lectores.*;
 import com.structorverba.officia.verba.*;
@@ -12,7 +10,7 @@ import jakarta.ejb.Singleton;
 import lombok.*;
 import org.apache.commons.lang3.*;
 
-import java.util.*;
+import java.util.Objects;
 import java.util.function.Supplier;
 
 /**
@@ -31,10 +29,6 @@ public final class StructorVerba extends Omne {
    */
   @NonNull public static final Supplier <StructorVerba> faciendum =
     () -> ObjectUtils.firstNonNull(instantia, instantia = new StructorVerba());
-
-  @Getter(value = AccessLevel.PRIVATE, lazy = true)
-  @NonNull private final Range <Short> TRACTUS_NUMERORUM = Range.between(Integer.valueOf(Numerus.MINUMUM).shortValue(),
-                                                                         Integer.valueOf(Numerus.MAXIMUM).shortValue());
 
   @Getter(value = AccessLevel.PRIVATE, lazy = true)
   @NonNull private final LectorMultiplicibus.LectorAdiectivis adiectiva =
@@ -64,6 +58,9 @@ public final class StructorVerba extends Omne {
   @Getter(value = AccessLevel.PRIVATE, lazy = true)
   @NonNull private final LectorPraepositionibus praepositiones = LectorPraepositionibus.faciendum.get();
 
+  @Getter(value = AccessLevel.PRIVATE, lazy = true)
+  @NonNull private final Numerator numerator = Numerator.faciendum.get();
+
   /**
    * Hic modus rem apta classis {@link Lector} valōrī {@code categoria} sēligit valōrem {@code lemma} immittit.
    * Valōrem {@code null} refert sī rem nūlla classis {@link Lector} valorem {@code categoria} quadrat.
@@ -73,6 +70,8 @@ public final class StructorVerba extends Omne {
    * @return rem classis {@link Hoc}
    * @see Categoria
    * @see #adveniam(String, Categoria, Enum[])
+   * @see LectorSimplicibus#adveniam(String)
+   * @see Numerator#numeram(String)
    */
   @SuppressWarnings("unchecked")
   @Nullable public <Hoc extends Verbum <Hoc>> Hoc adveniam(@NonNull final String lemma,
@@ -81,7 +80,7 @@ public final class StructorVerba extends Omne {
       return null;
     } else {
       return (Hoc) switch (categoria) {
-        case NUMERUS -> numeram(lemma);
+        case NUMERUS -> numerator.numeram(lemma);
         case PRAEPOSITIO -> praepositiones.adveniam(lemma);
         default -> Objects.requireNonNull(switch (categoria) {
           case CONIUNCTIO -> coniunctiones;
@@ -102,6 +101,9 @@ public final class StructorVerba extends Omne {
    * @param <Hoc>     classis extenta classis {@link VerbumMultiplex}
    * @return rem classis {@link Hoc}
    * @see Categoria
+   * @see LectorSimplicibus#adveniam(String)
+   * @see LectorMultiplicibus#adveniam(String, Enum[])
+   * @see Numerator#numeram(String)
    */
   @SuppressWarnings("unchecked")
   @Nullable public <Hoc extends Verbum <Hoc>> Hoc adveniam(@NonNull final String lemma,
@@ -119,7 +121,7 @@ public final class StructorVerba extends Omne {
     } else if (Categoria.singulaScapis(categoria)) {
       return (Hoc) switch (categoria) {
         case PRAEPOSITIO -> praepositiones.adveniam(lemma);
-        case NUMERUS ->  numeram(lemma);
+        case NUMERUS ->  numerator.numeram(lemma);
         default -> null;
       };
     } else {
@@ -137,7 +139,7 @@ public final class StructorVerba extends Omne {
    * @return Rem classis {@link Verbum} fortuītam cum valōribus imputātīs
    * @see Lector#fortuitumLegam()
    * @see LectorPraepositionibus#fortuitumLegam()
-   * @see #fortuitumNumeram()
+   * @see Numerator#fortuitumNumeram()
    * */
   @SuppressWarnings("unchecked")
   @Nullable public <Hoc extends Verbum<Hoc>> Hoc fortuitumLegam(@NonNull final Categoria categoria) {
@@ -154,7 +156,7 @@ public final class StructorVerba extends Omne {
       })).fortuitumLegam();
     } else {
       return (Hoc) switch (categoria) {
-        case NUMERUS -> fortuitumNumeram();
+        case NUMERUS -> numerator.fortuitumNumeram();
         case PRAEPOSITIO -> praepositiones.fortuitumLegam();
         default -> null;
       };
@@ -169,7 +171,7 @@ public final class StructorVerba extends Omne {
    * @see Lector#fortuitumLegam()
    * @see LectorMultiplicibus#fortuitumLegam(String)
    * @see LectorPraepositionibus#fortuitumLegam()
-   * @see #fortuitumNumeram()
+   * @see Numerator#fortuitumNumeram()
    * */
   @SuppressWarnings("unchecked")
   @Nullable public <Hoc extends Verbum<Hoc>> Hoc fortuitumLegam(@NonNull final String lemma,
@@ -191,7 +193,7 @@ public final class StructorVerba extends Omne {
       })).fortuitumLegam();
     } else {
       return (Hoc) switch (categoria) {
-        case NUMERUS -> fortuitumNumeram();
+        case NUMERUS -> numerator.fortuitumNumeram();
         case PRAEPOSITIO -> praepositiones.fortuitumLegam();
         default -> null;
       };
@@ -209,40 +211,31 @@ public final class StructorVerba extends Omne {
   /**
    * Hic modus fōrmam temere sēligit.
    * @return Rem classis {@link Numerus} fortuītam
-   * @see Random#ints()
+   * @see Numerator#fortuitumNumeram()
    * @implNote  Valōrem {@code X} refert sī fūnctiō fortis dēficit.
    * */
-  @NonNull public Numerus fortuitumNumeram() {
-    return Numerus.builder().numerus(Integer.valueOf(new Random().ints(TRACTUS_NUMERORUM.getMinimum(),
-                                                                                     TRACTUS_NUMERORUM.getMaximum())
-                                                                               .distinct().findFirst().orElse(10)).shortValue())
-                                .build();
+  @Nullable public Numerus fortuitumNumeram() {
+    return numerator.fortuitumNumeram();
+  }
+
+  /**
+   * Hic modus fōrmam temere sēligit.
+   * @return Rem classis {@link Numerus} fortuītam
+   * @see Numerator#fortuitumNumeram(Range)
+   * @implNote  Valōrem {@code X} refert sī fūnctiō fortis dēficit.
+   * */
+  @Nullable public Numerus fortuitumNumeram(@NonNull final Range<Short> tractus) {
+    return numerator.fortuitumNumeram(tractus);
   }
 
   /**
    * @param numerus numerus mathematicus
    * @return Rem classis {@link Numerus}
-   * @throws IllegalArgumentException sī <a href="https://github.com/Chaosfirebolt/RomanNumeralConverter/blob/master/src/main/java/com/github/chaosfirebolt/converter/RomanInteger.java">RomanInteger</a>
-   *                                  errōrem continuātur.
+   * Hic modus valōrem {@code null} refert sī <a href="https://github.com/Chaosfirebolt/RomanNumeralConverter/blob/master/src/main/java/com/github/chaosfirebolt/converter/RomanInteger.java">RomanInteger</a>
+   * errōrem continuātur.
+   * @see Numerator#numeram(short)
    */
-  public @Nullable Numerus numeram(final short numerus) throws IllegalArgumentException {
-    return TRACTUS_NUMERORUM.contains(numerus) ? Numerus.builder().numerus(numerus).build()
-                                               : null;
-  }
-
-  /**
-   * @param scriptio repraesentātiōnem scrīpta numerī mathēmaticī
-   * @return Rem classis {@link Numerus}
-   * @throws IllegalArgumentException sī <a href="https://github.com/Chaosfirebolt/RomanNumeralConverter/blob/master/src/main/java/com/github/chaosfirebolt/converter/RomanInteger.java">RomanInteger</a>
-   *                                  errōrem continuātur.
-   */
-  public @Nullable Numerus numeram(final @NonNull String scriptio) throws IllegalArgumentException {
-    if (Patterns.ROMAN_PATTERN.matcher(scriptio).matches()) {
-      final short numerus = Integer.valueOf(RomanInteger.parse(scriptio, IntegerType.ROMAN).getArabic()).shortValue();
-      return TRACTUS_NUMERORUM.contains(numerus) ? Numerus.builder().numerus(numerus).build()
-                                                 : null;
-    } else {
-      return null;
+  @Nullable public Numerus numeram(final short numerus) {
+    return numerator.numeram(numerus);
     }
-  }
 }

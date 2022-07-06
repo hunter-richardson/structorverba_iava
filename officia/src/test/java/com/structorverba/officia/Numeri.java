@@ -1,7 +1,7 @@
 package com.structorverba.officia;
 
 import androidx.annotation.NonNull;
-import com.structorverba.officia.enumerationes.Operatio;
+import com.structorverba.officia.enumerationes.*;
 import com.structorverba.officia.miscella.*;
 import com.structorverba.officia.tentamina.Tentamen;
 import com.structorverba.officia.verba.*;
@@ -71,7 +71,7 @@ final class Numeri extends Omne {
   public void reversionis() {
     try {
       System.out.println(new Tentamen.TentamenNumeraleReversionis(XLII_NUMERUM, XLII_SCRIPTIO)
-              .exsequar(structor.numeram(XLII_SCRIPTIO)));
+              .exsequar(structor.adveniam(XLII_SCRIPTIO, Categoria.NUMERUS)));
     } catch (IllegalArgumentException e) {
       System.out.printf("Prōductā conversiōnis relicta'st prōductiō numerī %d.%n", XLII_NUMERUM);
     }
