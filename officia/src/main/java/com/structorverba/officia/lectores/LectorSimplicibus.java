@@ -2,6 +2,7 @@ package com.structorverba.officia.lectores;
 
 import androidx.annotation.*;
 import com.structorverba.officia.enumerationes.Categoria;
+import com.structorverba.officia.interfacta.*;
 import com.structorverba.officia.miscella.Utilitas;
 import com.structorverba.officia.nuntii.*;
 import com.structorverba.officia.tenores.*;
@@ -14,12 +15,13 @@ import java.util.function.Supplier;
 
 /**
  * Classis {@link LectorSimplicibus} est vās classis {@link Lector} classibus omnibus quibus classem {@link
- * VerbumSimplex} extendit.
- * @param <Hoc> classis extenta classis {@link VerbumSimplex}
+ * Simplex} extendit.
+ * @param <Hoc> classis extenta classis {@link Simplex}
  * @see TenorSimplicibus
  */
 @SuppressWarnings({ "SpellCheckingInspection" })
-public abstract class LectorSimplicibus <Hoc extends VerbumSimplex <Hoc>> extends Lector <Hoc> {
+public abstract class LectorSimplicibus <Hoc extends Immutans<Hoc> & Legibile<Hoc> & Tenebile<Hoc> & Curabile<Hoc>>
+        extends Lector <Hoc> {
   /**
    * Hoc officum cōnstrūctōrem reī huius classis perpetrat.
    * @param ctgr valōrem {@link Lector#categoria} indicat.
@@ -71,14 +73,14 @@ public abstract class LectorSimplicibus <Hoc extends VerbumSimplex <Hoc>> extend
   }
 
   /**
-   * Classis {@link LectorConiunctionibus} est vās classis {@link Lector} classī {@link VerbumSimplex.Coniunctio}.
+   * Classis {@link LectorConiunctionibus} est vās classis {@link Lector} classī {@link Simplex.Coniunctio}.
    * @see Categoria#CONIUNCTIO
    * @see TenorSimplicibus.TenorConiunctionibus
    * @see NuntiusLectoriConiunctionibus
    */
   @Singleton
   @DependsOn({ "TenorConiunctivis", "NuntiusLectoriConiunctivis" })
-  public static final class LectorConiunctionibus extends LectorSimplicibus <VerbumSimplex.Coniunctio> {
+  public static final class LectorConiunctionibus extends LectorSimplicibus <Simplex.Coniunctio> {
     @Nullable private static LectorConiunctionibus instantia = null;
 
     /**
@@ -116,14 +118,14 @@ public abstract class LectorSimplicibus <Hoc extends VerbumSimplex <Hoc>> extend
   }
 
   /**
-   * Classis {@link LectorInteriectionibus} est vās classis {@link Lector} classi {@link VerbumSimplex.Interiectio}.
+   * Classis {@link LectorInteriectionibus} est vās classis {@link Lector} classi {@link Simplex.Interiectio}.
    * @see Categoria#INTERIECTIO
    * @see TenorSimplicibus.TenorInteriectionibus
    * @see NuntiusLectoriInteriectionibus
    */
   @Singleton
   @DependsOn({ "TenorConiunctivis", "NuntiusLectoriConiunctivis" })
-  public static final class LectorInteriectionibus extends LectorSimplicibus <VerbumSimplex.Interiectio> {
+  public static final class LectorInteriectionibus extends LectorSimplicibus <Simplex.Interiectio> {
     @Nullable private static LectorInteriectionibus instantia = null;
 
     /**

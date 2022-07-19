@@ -27,8 +27,7 @@ final class Numeri extends Omne {
     data.put(Operatio.MANSIO,       Map.entry((short) 12, (short) 9));
   }
 
-  @NonNull
-  @Getter(lazy = true)
+  @NonNull @Getter(lazy = true)
   private final StructorVerba structor = StructorVerba.faciendum.get();
 
   @NonNull @Getter(lazy = true)

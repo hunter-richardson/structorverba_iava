@@ -2,6 +2,7 @@ package com.structorverba.officia.lectores;
 
 import androidx.annotation.*;
 import com.structorverba.officia.enumerationes.*;
+import com.structorverba.officia.interfacta.*;
 import com.structorverba.officia.inventores.*;
 import com.structorverba.officia.miscella.Utilitas;
 import com.structorverba.officia.nuntii.*;
@@ -16,13 +17,14 @@ import java.util.function.Supplier;
 
 /**
  * Classis {@link LectorMultiplicibus} est vās classis {@link Lector} classibus omnibus quibus classem {@link
- * VerbumMultiplex} extendit.
- * @param <Hoc> classis extenta classis {@link VerbumMultiplex}
+ * Multiplex} extendit.
+ * @param <Hoc> classis extenta classis {@link Multiplex}
  * @see Inventor
  * @see TenorMultiplicibus
  */
 @SuppressWarnings("SpellCheckingInspection")
-public abstract class LectorMultiplicibus <Hoc extends VerbumMultiplex <Hoc>> extends Lector <Hoc> {
+public abstract class LectorMultiplicibus <Hoc extends Legibile<Hoc> & Inflectabile<Hoc> & Tenebile<Hoc> & Curabile<Hoc>>
+        extends Lector <Hoc> {
   @NonNull private final Inventor <Hoc> inventor;
 
   /**

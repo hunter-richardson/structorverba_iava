@@ -1,15 +1,16 @@
 package com.structorverba.officia.verba.constructores;
 
 import androidx.annotation.*;
-import com.structorverba.officia.verba.multiplicia.VerbumMultiplex;
+import com.structorverba.officia.interfacta.Inflectabile;
+import com.structorverba.officia.verba.multiplicia.Multiplex;
 import org.apache.commons.lang3.StringUtils;
 
 /**
- * Extēnsiōnēs huius classis rērum classis {@link VerbumMultiplex} extendae cōnstruunt.
+ * Extēnsiōnēs huius classis rērum classis {@link Multiplex} extendae cōnstruunt.
  * @param <Hoc> Hāc tabellā classis {@link Hoc} extēnsiōnem aptam datīs petītīs repraesentat.
  * */
 @SuppressWarnings("SpellCheckingInspection")
-public abstract class Constructor<Hoc> {
+public abstract class Constructor<Hoc extends Inflectabile<Hoc>> {
     /**
      * Hic valor repraesentat fōrmam verbī cui rādīcēscit. <br>
      * Quoque nōminātur scāpum XML quō cōnservātum est.

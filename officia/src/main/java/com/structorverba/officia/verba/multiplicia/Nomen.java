@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.*;
 import com.structorverba.officia.curatores.multiplicia.CuratorNominibus;
 import com.structorverba.officia.enumerationes.*;
+import com.structorverba.officia.interfacta.*;
 import com.structorverba.officia.inventores.InventorNominibus;
 import com.structorverba.officia.lectores.LectorMultiplicibus;
 import com.structorverba.officia.nuntii.*;
@@ -25,15 +26,15 @@ import java.util.function.Supplier;
  * @see NuntiusNominum
  */
 @SuppressWarnings("SpellCheckingInspection")
-public final class Nomen extends Nominalis <Nomen> {
+public final class Nomen extends Declinabile<Nomen> implements Curabile<Nomen>, Legibile<Nomen>, Tenebile<Nomen> {
   /**
    * Hic valor tempus reī huius dēsignat.
    * @see Modus
    */
   @NonNull public final Tempus tempus;
 
-  @Getter(lazy = true)
-  @NonNull private final NuntiusNominum nuntius = NuntiusNominum.faciendum.get();
+  @NonNull @Getter(lazy = true)
+  private final NuntiusNominum nuntius = NuntiusNominum.faciendum.get();
 
   @Builder(access = AccessLevel.PUBLIC, toBuilder = true)
   private Nomen(@NonNull final Specialitas specialitas, @NonNull final Genus genus,

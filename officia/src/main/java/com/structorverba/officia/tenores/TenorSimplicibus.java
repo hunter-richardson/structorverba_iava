@@ -2,6 +2,7 @@ package com.structorverba.officia.tenores;
 
 import androidx.annotation.*;
 import com.structorverba.officia.curatores.CuratorSimplicibus;
+import com.structorverba.officia.interfacta.*;
 import com.structorverba.officia.nuntii.*;
 import com.structorverba.officia.verba.*;
 import jakarta.ejb.*;
@@ -10,13 +11,13 @@ import org.apache.commons.lang3.ObjectUtils;
 import java.util.function.Supplier;
 
 /**
- * Classis {@link TenorSimplicibus} est vās classis {@link Tenor} classibus omnibus quibus classem {@link VerbumSimplex}
+ * Classis {@link TenorSimplicibus} est vās classis {@link Tenor} classibus omnibus quibus classem {@link Simplex}
  * extendit.
- * @param <Hoc> classis extenta classis {@link VerbumSimplex}
+ * @param <Hoc> classis extenta classis {@link Simplex}
  * @see CuratorSimplicibus
  */
 @SuppressWarnings("SpellCheckingInspection")
-public abstract class TenorSimplicibus <Hoc extends VerbumSimplex <Hoc>> extends Tenor <Hoc> {
+public abstract class TenorSimplicibus <Hoc extends Immutans<Hoc> & Tenebile<Hoc> & Curabile<Hoc>> extends Tenor <Hoc> {
   /**
    * Hic valor est vās classis {@link CuratorSimplicibus} classī extentī huius.
    */
@@ -60,14 +61,14 @@ public abstract class TenorSimplicibus <Hoc extends VerbumSimplex <Hoc>> extends
   }
 
   /**
-   * Classis {@link TenorConiunctionibus} est vās classis {@link Tenor} classī {@link VerbumSimplex.Coniunctio}
-   * @see VerbumSimplex.Coniunctio
+   * Classis {@link TenorConiunctionibus} est vās classis {@link Tenor} classī {@link Simplex.Coniunctio}
+   * @see Simplex.Coniunctio
    * @see NuntiusTenoriConiunctionibus
    * @see CuratorSimplicibus.CuratorConiunctionibus
    */
   @Singleton
   @DependsOn({ "ConditorConiunctivis", "NuntiusTenoriConiunctivis" })
-  public static final class TenorConiunctionibus extends TenorSimplicibus <VerbumSimplex.Coniunctio> {
+  public static final class TenorConiunctionibus extends TenorSimplicibus <Simplex.Coniunctio> {
     @Nullable private static TenorConiunctionibus instantia = null;
 
     /**
@@ -105,14 +106,14 @@ public abstract class TenorSimplicibus <Hoc extends VerbumSimplex <Hoc>> extends
   }
 
   /**
-   * Classis {@link TenorInteriectionibus} est vās classis {@link Tenor} classī {@link VerbumSimplex.Interiectio}
-   * @see VerbumSimplex.Interiectio
+   * Classis {@link TenorInteriectionibus} est vās classis {@link Tenor} classī {@link Simplex.Interiectio}
+   * @see Simplex.Interiectio
    * @see NuntiusTenoriInteriectionibus
    * @see CuratorSimplicibus.CuratorInteriectionibus
    */
   @Singleton
   @DependsOn({ "ConditorConiunctivis", "NuntiusTenoriConiunctivis" })
-  public static final class TenorInteriectionibus extends TenorSimplicibus <VerbumSimplex.Interiectio> {
+  public static final class TenorInteriectionibus extends TenorSimplicibus <Simplex.Interiectio> {
     @Nullable private static TenorInteriectionibus instantia = null;
 
     /**

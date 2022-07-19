@@ -6,6 +6,7 @@ import com.github.chaosfirebolt.converter.RomanInteger;
 import com.github.chaosfirebolt.converter.constants.*;
 import com.structorverba.officia.nuntii.*;
 import com.structorverba.officia.verba.Numerus;
+import com.structorverba.officia.verba.constructores.ConstructorSimplicium;
 import jakarta.ejb.*;
 import lombok.*;
 import org.apache.commons.lang3.*;
@@ -39,6 +40,7 @@ public class Numerator extends Omne {
 
     /**
      * Hic modus fōrmam temere sēligit.
+     * @param tractus numerōs possibilēs fīnit.
      * @return Rem classis {@link Numerus} fortuītam
      * @see Random#ints()
      * @implNote  Valōrem {@code X} refert sī fūnctiō fortis dēficit.
@@ -58,7 +60,7 @@ public class Numerator extends Omne {
     @Nullable public Numerus numeram(final short numerus) {
         if(TRACTUS_NUMERORUM.contains(numerus)) {
             try {
-                return Numerus.builder().numerus(numerus).build();
+                return ConstructorSimplicium.numeri().apply(numerus);
             } catch (IllegalArgumentException e) {
                 nuntius.terreo(e);
                 return null;

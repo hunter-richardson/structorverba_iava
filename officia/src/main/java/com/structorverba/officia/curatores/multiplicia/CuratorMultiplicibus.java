@@ -3,19 +3,20 @@ package com.structorverba.officia.curatores.multiplicia;
 import androidx.annotation.*;
 import com.structorverba.officia.curatores.Curator;
 import com.structorverba.officia.enumerationes.*;
+import com.structorverba.officia.interfacta.*;
 import com.structorverba.officia.nuntii.Nuntius;
 import com.structorverba.officia.verba.constructores.Constructor;
-import com.structorverba.officia.verba.multiplicia.VerbumMultiplex;
+import com.structorverba.officia.verba.multiplicia.Multiplex;
 
 import java.util.function.Supplier;
 
 /**
  * Classis {@link CuratorMultiplicibus} est vās classis {@link Curator} classibus omnibus quibus classem {@link
- * VerbumMultiplex} extendit.
- * @param <Hoc> classis extenta classis {@link VerbumMultiplex}
+ * Multiplex} extendit.
+ * @param <Hoc> classis extenta classis {@link Multiplex}
  */
 @SuppressWarnings("SpellCheckingInspection")
-public abstract class CuratorMultiplicibus<Hoc extends VerbumMultiplex <Hoc>> extends Curator<Hoc> {
+public abstract class CuratorMultiplicibus<Hoc extends Inflectabile<Hoc> & Curabile<Hoc>> extends Curator<Hoc> {
   /**
    * Hic valor reparesentātiōnem scrīpta lemmae dēsignat.
    */

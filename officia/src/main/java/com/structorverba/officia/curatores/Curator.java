@@ -1,6 +1,7 @@
 package com.structorverba.officia.curatores;
 
 import com.structorverba.officia.enumerationes.*;
+import com.structorverba.officia.interfacta.Curabile;
 import com.structorverba.officia.miscella.Omne;
 import com.structorverba.officia.nuntii.Nuntius;
 import com.structorverba.officia.tenores.Tenor;
@@ -16,7 +17,7 @@ import java.util.function.Supplier;
  * @param <Hoc> classis extenta classis {@link Verbum}
  */
 @SuppressWarnings("SpellCheckingInspection")
-public abstract class Curator<Hoc extends Verbum <Hoc>> extends Omne {
+public abstract class Curator<Hoc extends Curabile<Hoc>> extends Omne {
   @NonNull protected final Categoria categoria;
   /**
    * Hic valor est vās classis {@link Nuntius} classī hui.
@@ -39,7 +40,7 @@ public abstract class Curator<Hoc extends Verbum <Hoc>> extends Omne {
   @Nullable public abstract Hoc curam();
 
   /**
-   * Hic modus rem classis {@link VerbumSimplex.Coniunctio} accipit valōrīque {@link CuratorSimplicibus.CuratorConiunctionibus#nuntius}
+   * Hic modus rem classis {@link Simplex.Coniunctio} accipit valōrīque {@link CuratorSimplicibus.CuratorConiunctionibus#nuntius}
    * ita refert.
    * @param hoc rem tentanda
    */

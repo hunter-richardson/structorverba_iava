@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.*;
 import com.structorverba.officia.curatores.multiplicia.CuratorAdiectivis;
 import com.structorverba.officia.enumerationes.*;
+import com.structorverba.officia.interfacta.*;
 import com.structorverba.officia.inventores.InventorAdiectivis;
 import com.structorverba.officia.lectores.LectorMultiplicibus;
 import com.structorverba.officia.nuntii.*;
@@ -26,14 +27,15 @@ import java.util.function.Supplier;
  * @see NuntiusAdiectivorum
  */
 @SuppressWarnings("SpellCheckingInspection")
-public final class Adiectivum extends Nominalis <Adiectivum> {
+public final class Adiectivum extends Declinabile<Adiectivum>
+        implements Curabile<Adiectivum>, Legibile<Adiectivum>, Tenebile<Adiectivum> {
   /**
    * Hic valor potentiam reī huius dēsignat.
    * @see Gradus
    */
   @NonNull public final Gradus gradus;
-  @Getter(lazy = true)
-  @NonNull private final NuntiusAdiectivorum nuntius = NuntiusAdiectivorum.faciendum.get();
+  @NonNull @Getter(lazy = true)
+  private final NuntiusAdiectivorum nuntius = NuntiusAdiectivorum.faciendum.get();
 
   @Builder(access = AccessLevel.PUBLIC, toBuilder = true)
   private Adiectivum(@NonNull final Specialitas specialitas, @NonNull final Genus genus,

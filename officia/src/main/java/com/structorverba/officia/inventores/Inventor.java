@@ -1,10 +1,11 @@
 package com.structorverba.officia.inventores;
 
+import com.structorverba.officia.interfacta.*;
 import com.structorverba.officia.lectores.LectorMultiplicibus;
 import com.structorverba.officia.miscella.Omne;
 import com.structorverba.officia.nuntii.Nuntius;
 import com.structorverba.officia.tenores.TenorMultiplicibus;
-import com.structorverba.officia.verba.multiplicia.VerbumMultiplex;
+import com.structorverba.officia.verba.multiplicia.Multiplex;
 
 import androidx.annotation.*;
 
@@ -12,12 +13,12 @@ import java.util.Arrays;
 import java.util.function.*;
 
 /**
- * Classis {@link Inventor} cōlit rēs classis {@link VerbumMultiplex} quās rēs classis {@link TenorMultiplicibus}
+ * Classis {@link Inventor} cōlit rēs classis {@link Multiplex} quās rēs classis {@link TenorMultiplicibus}
  * referat.
- * @param <Hoc> classis extenta classis {@link VerbumMultiplex}
+ * @param <Hoc> classis extenta classis {@link Multiplex}
  */
 @SuppressWarnings("SpellCheckingInspection")
-public abstract class Inventor <Hoc extends VerbumMultiplex <Hoc>> extends Omne {
+public abstract class Inventor <Hoc extends Inventabile<Hoc> & Inflectabile<Hoc>> extends Omne {
   /**
    * Hic valor est vās classis {@link Nuntius} classī hui.
    */

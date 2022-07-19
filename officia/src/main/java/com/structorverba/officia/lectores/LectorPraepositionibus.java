@@ -5,6 +5,7 @@ import com.structorverba.officia.enumerationes.*;
 import com.structorverba.officia.miscella.*;
 import com.structorverba.officia.nuntii.*;
 import com.structorverba.officia.verba.*;
+import com.structorverba.officia.verba.constructores.ConstructorSimplicium;
 import jakarta.ejb.*;
 import lombok.Getter;
 import org.apache.commons.lang3.*;
@@ -18,7 +19,7 @@ import java.util.stream.Stream;
 /**
  * Classis {@link LectorPraepositionibus} colliget data ā scāpō XML in
  * scrinium <a href="{@docRoot}/../src/main/resources">auxiliārēs</a>/praepositiōnēs
- * rēbus classis {@link VerbumSimplex.Praepositio} scrībere. <br>
+ * rēbus classis {@link Simplex.Praepositio} scrībere. <br>
  * Dissimilis ā extēnsiōnibus classis {@link Lector} est quod scāpum omne seriem
  * longa ēventōrum possibilium continet. Ergō classem {@link Lector} nōn extendit. <br>
  * Scāpa quattuor sunt quae huic reī intersunt ut scāpa singulus cāsuī omnī repraesentātō:
@@ -43,8 +44,8 @@ public final class LectorPraepositionibus extends Omne {
   @NonNull public static final Supplier <LectorPraepositionibus> faciendum =
     () -> ObjectUtils.firstNonNull(instantia, instantia = new LectorPraepositionibus());
 
-  @Getter(lazy = true)
-  @NonNull private final NuntiusLectoriPraepositionibus nuntius = NuntiusLectoriPraepositionibus.faciendum.get();
+  @NonNull @Getter(lazy = true)
+  private final NuntiusLectoriPraepositionibus nuntius = NuntiusLectoriPraepositionibus.faciendum.get();
 
   @NonNull private final BiPredicate <String, Casus> quaesitus = (verbum, casus) -> {
     final String nomen = Paths.get(Categoria.PRAEPOSITIO.scriptio, String.format("%s.data", casus.scriptio)).toString();
@@ -57,7 +58,7 @@ public final class LectorPraepositionibus extends Omne {
     }
   };
 
-  @NonNull private final BiFunction <String, Casus, VerbumSimplex.Praepositio> adventus =
+  @NonNull private final BiFunction <String, Casus, Simplex.Praepositio> adventus =
     (verbum, casus) -> {
       final String nomen = Paths.get(Categoria.PRAEPOSITIO.scriptio, String.format("%s.data", casus.scriptio)).toString();
       try (final BufferedReader pervidetio = new BufferedReader(new FileReader(Utilitas.auxilior(nomen)))) {
@@ -68,18 +69,18 @@ public final class LectorPraepositionibus extends Omne {
                                        .findFirst().orElse(StringUtils.EMPTY);
         if (StringUtils.isNotBlank(lemma)) {
           nuntius.garrio("Advenī hoc:", lemma);
-          return VerbumSimplex.Praepositio.builder().lemma(lemma).build();
+          return ConstructorSimplicium.praepositionis().apply(lemma);
         } else {
           nuntius.moneo("Nīl advenī verbō", verbum);
           nuntius.garrio(Categoria.PRAEPOSITIO.declina(Casus.DATIVUS, Numeralis.SINGULARIS, true),
                          "assūmētur");
-          return VerbumSimplex.Praepositio.assume.get();
+          return Simplex.Praepositio.assume.get();
         }
       } catch (IOException e) {
         nuntius.terreo(e);
         nuntius.garrio(Categoria.PRAEPOSITIO.declina(Casus.DATIVUS, Numeralis.SINGULARIS, true),
                        "assūmētur");
-        return VerbumSimplex.Praepositio.assume.get();
+        return Simplex.Praepositio.assume.get();
       }
     };
 
@@ -88,13 +89,13 @@ public final class LectorPraepositionibus extends Omne {
   }
 
   /**
-   * Hic modus rem classis {@link VerbumSimplex.Praepositio} ā scāpo XML in scrīnium
+   * Hic modus rem classis {@link Simplex.Praepositio} ā scāpo XML in scrīnium
    * <a href="{@docRoot}/../src/main/resources">auxiliārēs</a>/praepositionēs conābitur advenīre.
    * @param verbum lemma praepositionī quod haec rēs conābitur advenīre
-   * @return Rem classis {@link VerbumSimplex.Praepositio} quam valorem {@code verbum} quadrat. <br> Hic modus valorem
-   *   {@link VerbumSimplex.Praepositio#assume} supplet sī nihil valorem {@code verbum} quadrat.
+   * @return Rem classis {@link Simplex.Praepositio} quam valorem {@code verbum} quadrat. <br> Hic modus valorem
+   *   {@link Simplex.Praepositio#assume} supplet sī nihil valorem {@code verbum} quadrat.
    */
-  @NonNull public VerbumSimplex.Praepositio adveniam(@NonNull final String verbum) {
+  @NonNull public Simplex.Praepositio adveniam(@NonNull final String verbum) {
     Casus casus = Stream.of(Casus.ABLATIVUS, Casus.ACCUSATIVUS, Casus.GENITIVUS, Casus.VOCATIVUS)
                         .filter(css -> quaesitus.test(verbum, css))
                         .findFirst().orElse(Casus.DERECTUS);
@@ -102,7 +103,7 @@ public final class LectorPraepositionibus extends Omne {
       nuntius.moneo("Nīl advenī verbō", verbum);
       nuntius.garrio(Categoria.PRAEPOSITIO.declina(Casus.DATIVUS, Numeralis.SINGULARIS, true),
                      "assūmētur");
-      return VerbumSimplex.Praepositio.assume.get();
+      return Simplex.Praepositio.assume.get();
     } else {
       return adventus.apply(verbum, casus);
     }
@@ -113,7 +114,7 @@ public final class LectorPraepositionibus extends Omne {
    * @return Rem classis {@link Verbum} fortuītam
    * */
   @SuppressWarnings("unchecked")
-  @NonNull public VerbumSimplex.Praepositio fortuitumLegam() {
+  @NonNull public Simplex.Praepositio fortuitumLegam() {
     return fortuitumLegam(Stream.of(Casus.ABLATIVUS, Casus.ACCUSATIVUS, Casus.GENITIVUS, Casus.VOCATIVUS)
                                 .reduce((BinaryOperator<Casus>) Utilitas.invocaFortem).orElse(Casus.DERECTUS));
   }
@@ -124,12 +125,12 @@ public final class LectorPraepositionibus extends Omne {
    * @return Rem classis {@link Verbum} fortuītam nōminandam
    * */
   @SuppressWarnings("unchecked")
-  public VerbumSimplex.Praepositio fortuitumLegam(@NonNull final Casus casus) {
+  public Simplex.Praepositio fortuitumLegam(@NonNull final Casus casus) {
     if(Casus.DERECTUS.equals(casus)) {
       nuntius.moneo("Nīl advenī verbō");
       nuntius.garrio(Categoria.PRAEPOSITIO.declina(Casus.DATIVUS, Numeralis.SINGULARIS, true),
                      "assūmētur");
-      return VerbumSimplex.Praepositio.assume.get();
+      return Simplex.Praepositio.assume.get();
     } else {
       final String nomen = Paths.get(Categoria.PRAEPOSITIO.scriptio, String.format("%s.data", casus.scriptio)).toString();
       try (final BufferedReader pervidetio = new BufferedReader(new FileReader(Utilitas.auxilior(nomen)))) {
@@ -139,18 +140,18 @@ public final class LectorPraepositionibus extends Omne {
                                        .orElse(StringUtils.EMPTY);
         if (StringUtils.isNotBlank(lemma)) {
           nuntius.garrio("Advenī hoc:", lemma);
-          return VerbumSimplex.Praepositio.builder().lemma(lemma).build();
+          return ConstructorSimplicium.praepositionis().apply(lemma);
         } else {
           nuntius.moneo("Nīl advenī verbō");
           nuntius.garrio(Categoria.PRAEPOSITIO.declina(Casus.DATIVUS, Numeralis.SINGULARIS, true),
                          "assūmētur");
-          return VerbumSimplex.Praepositio.assume.get();
+          return Simplex.Praepositio.assume.get();
         }
       } catch (IOException e) {
         nuntius.terreo(e);
         nuntius.garrio(Categoria.PRAEPOSITIO.declina(Casus.DATIVUS, Numeralis.SINGULARIS, true),
                        "assūmētur");
-        return VerbumSimplex.Praepositio.assume.get();
+        return Simplex.Praepositio.assume.get();
       }
     }
   }

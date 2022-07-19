@@ -2,9 +2,11 @@ package com.structorverba.officia.curatores;
 
 import androidx.annotation.*;
 import com.structorverba.officia.enumerationes.*;
+import com.structorverba.officia.interfacta.*;
 import com.structorverba.officia.nuntii.*;
 import com.structorverba.officia.tenores.Tenor;
 import com.structorverba.officia.verba.*;
+import com.structorverba.officia.verba.constructores.ConstructorSimplicium;
 import jakarta.ejb.*;
 import org.apache.commons.lang3.*;
 
@@ -12,11 +14,11 @@ import java.util.function.*;
 
 /**
  * Classis {@link CuratorSimplicibus} est vās classis {@link Curator} classibus omnibus quibus classem {@link
- * VerbumSimplex} extendit.
- * @param <Hoc> classis extenta classis {@link VerbumSimplex}
+ * Simplex} extendit.
+ * @param <Hoc> classis extenta classis {@link Simplex}
  */
 @SuppressWarnings("SpellCheckingInspection")
-public abstract class CuratorSimplicibus<Hoc extends VerbumSimplex <Hoc>> extends Curator<Hoc> {
+public abstract class CuratorSimplicibus<Hoc extends Immutans<Hoc> & Curabile<Hoc>> extends Curator<Hoc> {
   /**
    * Hic valor viam reī classis {@link Hoc} facit.
    *
@@ -57,20 +59,20 @@ public abstract class CuratorSimplicibus<Hoc extends VerbumSimplex <Hoc>> extend
   @Nullable
   public final Hoc curam() {
     final Hoc hoc = StringUtils.isNotBlank(lemma) ? constructor.apply(lemma)
-            : null;
+                                                  : null;
     refero(hoc);
     return hoc;
   }
 
   /**
-   * Classis {@link CuratorConiunctionibus} est vās classis {@link Tenor} classī {@link VerbumSimplex.Coniunctio}.
+   * Classis {@link CuratorConiunctionibus} est vās classis {@link Tenor} classī {@link Simplex.Coniunctio}.
    *
-   * @see VerbumSimplex.Coniunctio
+   * @see Simplex.Coniunctio
    * @see NuntiusConditoriConiunctionibus
    */
   @Singleton
   @DependsOn("NuntiusConditoriAdverbiis")
-  public static final class CuratorConiunctionibus extends CuratorSimplicibus<VerbumSimplex.Coniunctio> {
+  public static final class CuratorConiunctionibus extends CuratorSimplicibus<Simplex.Coniunctio> {
     @Nullable
     private static CuratorConiunctionibus instantia = null;
 
@@ -85,7 +87,7 @@ public abstract class CuratorSimplicibus<Hoc extends VerbumSimplex <Hoc>> extend
 
     private CuratorConiunctionibus() {
       super(Categoria.CONIUNCTIO, NuntiusConditoriConiunctionibus.faciendum,
-            lemma -> VerbumSimplex.Coniunctio.builder().lemma(lemma).build());
+            ConstructorSimplicium.coniunctionis());
       nuntius.plurimumGarrio("Factus sum");
     }
 
@@ -116,14 +118,14 @@ public abstract class CuratorSimplicibus<Hoc extends VerbumSimplex <Hoc>> extend
   }
 
   /**
-   * Classis {@link CuratorInteriectionibus} est vās classis {@link Tenor} classī {@link VerbumSimplex.Interiectio}.
+   * Classis {@link CuratorInteriectionibus} est vās classis {@link Tenor} classī {@link Simplex.Interiectio}.
    *
-   * @see VerbumSimplex.Interiectio
+   * @see Simplex.Interiectio
    * @see NuntiusConditoriInteriectionibus
    */
   @Singleton
   @DependsOn("NuntiusConditoriAdverbiis")
-  public static final class CuratorInteriectionibus extends CuratorSimplicibus<VerbumSimplex.Interiectio> {
+  public static final class CuratorInteriectionibus extends CuratorSimplicibus<Simplex.Interiectio> {
     @Nullable
     private static CuratorInteriectionibus instantia = null;
 
@@ -138,7 +140,7 @@ public abstract class CuratorSimplicibus<Hoc extends VerbumSimplex <Hoc>> extend
 
     private CuratorInteriectionibus() {
       super(Categoria.INTERIECTIO, NuntiusConditoriInteriectionibus.faciendum,
-            lemma -> VerbumSimplex.Interiectio.builder().lemma(lemma).build());
+            ConstructorSimplicium.interiectionis());
       nuntius.plurimumGarrio("Factus sum");
     }
 

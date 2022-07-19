@@ -1,14 +1,14 @@
 package com.structorverba.officia.enumerationes;
 
 import androidx.annotation.NonNull;
-import com.structorverba.officia.verba.multiplicia.Actus;
+import com.structorverba.officia.interfacta.Declinabile;
 import org.apache.commons.lang3.StringUtils;
 
 import java.util.stream.Stream;
 
 /**
  * Haec ēnumerātiō dēsignat utrum verbum est certum necne.
- * @see Actus
+ * @see Declinabile
  */
 @SuppressWarnings("SpellCheckingInspection")
 public enum Specialitas {

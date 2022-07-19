@@ -1,17 +1,21 @@
-package com.structorverba.officia.verba.multiplicia;
+package com.structorverba.officia.interfacta;
 
 import com.structorverba.officia.miscella.Utilitas;
 import com.structorverba.officia.verba.Verbum;
 import com.structorverba.officia.enumerationes.*;
 
 import androidx.annotation.NonNull;
+import com.structorverba.officia.verba.multiplicia.*;
 
 /**
- * Classis {@link Nominalis} verbum aliquem dēclīnātum repraesentat.
+ * Classis {@link Declinabile} verbum aliquem dēclīnātum repraesentat.
  * @param <Hoc> Hāc tabellā classis {@link Hoc} extēnsiōnem aptam datīs petītīs repraesentat.
+ * @see Adiectivum
+ * @see Nomen
+ * @see Pronomen
  */
 @SuppressWarnings("SpellCheckingInspection")
-public abstract class Nominalis <Hoc extends VerbumMultiplex <Hoc>> extends VerbumMultiplex <Hoc> {
+public abstract class Declinabile<Hoc extends Multiplex<Hoc>> extends Multiplex<Hoc> {
   /**
    * Hic valor dēsignat utrum haec rēs repraesentat certum necne.
    * @see Specialitas
@@ -39,16 +43,16 @@ public abstract class Nominalis <Hoc extends VerbumMultiplex <Hoc>> extends Verb
   /**
    * Hoc officium cōnstrūctōrem reī huius classis perpetrat.
    * @param categoria  valōrem {@link Verbum#catagoria} indicat.
-   * @param spclt valōrem {@link Nominalis#specialitas} indicat.
-   * @param gns   valōrem {@link Nominalis#genus} indicat.
-   * @param css   valōrem {@link Nominalis#casus} indicat.
-   * @param nmrl  valōrem {@link Nominalis#numeralis} indicat.
+   * @param spclt valōrem {@link Declinabile#specialitas} indicat.
+   * @param gns   valōrem {@link Declinabile#genus} indicat.
+   * @param css   valōrem {@link Declinabile#casus} indicat.
+   * @param nmrl  valōrem {@link Declinabile#numeralis} indicat.
    * @param lemma  valōrem {@link Verbum#lemma} indicat.
    * @param scriptio valōrem {@link #scriptio} indicat.
    */
-  protected Nominalis(@NonNull final Categoria categoria, @NonNull final Specialitas spclt,
-                      @NonNull final Genus gns, @NonNull final Casus css, @NonNull final Numeralis nmrl,
-                      @NonNull final String lemma, @NonNull final String scriptio) {
+  protected Declinabile(@NonNull final Categoria categoria, @NonNull final Specialitas spclt,
+                        @NonNull final Genus gns, @NonNull final Casus css, @NonNull final Numeralis nmrl,
+                        @NonNull final String lemma, @NonNull final String scriptio) {
     super(categoria, lemma, Specialitas.PROPRIUM.equals(spclt) ? Utilitas.primamCapitaneamScribo(scriptio)
                                                                : scriptio);
     specialitas = spclt;

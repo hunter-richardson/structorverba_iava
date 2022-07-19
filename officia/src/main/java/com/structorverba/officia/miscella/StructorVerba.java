@@ -5,7 +5,7 @@ import androidx.annotation.*;
 import com.structorverba.officia.enumerationes.Categoria;
 import com.structorverba.officia.lectores.*;
 import com.structorverba.officia.verba.*;
-import com.structorverba.officia.verba.multiplicia.VerbumMultiplex;
+import com.structorverba.officia.verba.multiplicia.Multiplex;
 import jakarta.ejb.Singleton;
 import lombok.*;
 import org.apache.commons.lang3.*;
@@ -30,43 +30,43 @@ public final class StructorVerba extends Omne {
   @NonNull public static final Supplier <StructorVerba> faciendum =
     () -> ObjectUtils.firstNonNull(instantia, instantia = new StructorVerba());
 
-  @Getter(value = AccessLevel.PRIVATE, lazy = true)
-  @NonNull private final LectorMultiplicibus.LectorAdiectivis adiectiva =
+  @NonNull @Getter(value = AccessLevel.PRIVATE, lazy = true)
+  private final LectorMultiplicibus.LectorAdiectivis adiectiva =
     LectorMultiplicibus.LectorAdiectivis.faciendum.get();
 
-  @Getter(value = AccessLevel.PRIVATE, lazy = true)
-  @NonNull private final LectorMultiplicibus.LectorAdverbiis adverbia = LectorMultiplicibus.LectorAdverbiis.faciendum.get();
+  @NonNull @Getter(value = AccessLevel.PRIVATE, lazy = true)
+  private final LectorMultiplicibus.LectorAdverbiis adverbia = LectorMultiplicibus.LectorAdverbiis.faciendum.get();
 
-  @Getter(value = AccessLevel.PRIVATE, lazy = true)
-  @NonNull private final LectorMultiplicibus.LectorPronominibus pronomina =
+  @NonNull @Getter(value = AccessLevel.PRIVATE, lazy = true)
+  private final LectorMultiplicibus.LectorPronominibus pronomina =
     LectorMultiplicibus.LectorPronominibus.faciendum.get();
 
-  @Getter(value = AccessLevel.PRIVATE, lazy = true)
-  @NonNull private final LectorMultiplicibus.LectorActis acti = LectorMultiplicibus.LectorActis.faciendum.get();
+  @NonNull @Getter(value = AccessLevel.PRIVATE, lazy = true)
+  private final LectorMultiplicibus.LectorActis acti = LectorMultiplicibus.LectorActis.faciendum.get();
 
-  @Getter(value = AccessLevel.PRIVATE, lazy = true)
-  @NonNull private final LectorMultiplicibus.LectorNominibus nomina = LectorMultiplicibus.LectorNominibus.faciendum.get();
+  @NonNull @Getter(value = AccessLevel.PRIVATE, lazy = true)
+  private final LectorMultiplicibus.LectorNominibus nomina = LectorMultiplicibus.LectorNominibus.faciendum.get();
 
-  @Getter(value = AccessLevel.PRIVATE, lazy = true)
-  @NonNull private final LectorSimplicibus.LectorConiunctionibus coniunctiones =
+  @NonNull @Getter(value = AccessLevel.PRIVATE, lazy = true)
+  private final LectorSimplicibus.LectorConiunctionibus coniunctiones =
     LectorSimplicibus.LectorConiunctionibus.faciendum.get();
 
-  @Getter(value = AccessLevel.PRIVATE, lazy = true)
-  @NonNull private final LectorSimplicibus.LectorInteriectionibus interiectiones =
+  @NonNull @Getter(value = AccessLevel.PRIVATE, lazy = true)
+  private final LectorSimplicibus.LectorInteriectionibus interiectiones =
     LectorSimplicibus.LectorInteriectionibus.faciendum.get();
 
-  @Getter(value = AccessLevel.PRIVATE, lazy = true)
-  @NonNull private final LectorPraepositionibus praepositiones = LectorPraepositionibus.faciendum.get();
+  @NonNull @Getter(value = AccessLevel.PRIVATE, lazy = true)
+  private final LectorPraepositionibus praepositiones = LectorPraepositionibus.faciendum.get();
 
-  @Getter(value = AccessLevel.PRIVATE, lazy = true)
-  @NonNull private final Numerator numerator = Numerator.faciendum.get();
+  @NonNull @Getter(value = AccessLevel.PRIVATE, lazy = true)
+  private final Numerator numerator = Numerator.faciendum.get();
 
   /**
    * Hic modus rem apta classis {@link Lector} valōrī {@code categoria} sēligit valōrem {@code lemma} immittit.
    * Valōrem {@code null} refert sī rem nūlla classis {@link Lector} valorem {@code categoria} quadrat.
    * @param lemma  valor {@link Verbum#lemma} immittendus
    * @param categoria valor tentendus
-   * @param <Hoc>     classis extenta classis {@link VerbumSimplex}
+   * @param <Hoc>     classis extenta classis {@link Simplex}
    * @return rem classis {@link Hoc}
    * @see Categoria
    * @see #adveniam(String, Categoria, Enum[])
@@ -98,7 +98,7 @@ public final class StructorVerba extends Omne {
    * @param lemma  valor {@link Verbum#lemma} immittendus
    * @param categoria valor tentendus
    * @param illa      valōrēs immittendī
-   * @param <Hoc>     classis extenta classis {@link VerbumMultiplex}
+   * @param <Hoc>     classis extenta classis {@link Multiplex}
    * @return rem classis {@link Hoc}
    * @see Categoria
    * @see LectorSimplicibus#adveniam(String)

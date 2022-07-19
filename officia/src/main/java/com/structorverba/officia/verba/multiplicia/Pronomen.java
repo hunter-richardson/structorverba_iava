@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.*;
 import com.structorverba.officia.curatores.multiplicia.CuratorPronominibus;
 import com.structorverba.officia.enumerationes.*;
+import com.structorverba.officia.interfacta.*;
 import com.structorverba.officia.inventores.InventorPronominibus;
 import com.structorverba.officia.lectores.LectorMultiplicibus;
 import com.structorverba.officia.nuntii.*;
@@ -25,7 +26,8 @@ import java.util.function.Supplier;
  * @see NuntiusPronominum
  */
 @SuppressWarnings("SpellCheckingInspection")
-public final class Pronomen extends Nominalis <Pronomen> {
+public final class Pronomen extends Declinabile<Pronomen>
+        implements Curabile<Pronomen>, Legibile<Pronomen>, Tenebile<Pronomen> {
   @NonNull @Getter(lazy = true)
   private final NuntiusPronominum nuntius = NuntiusPronominum.faciendum.get();
 

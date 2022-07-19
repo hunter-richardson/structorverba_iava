@@ -1,7 +1,7 @@
 package com.structorverba.officia.enumerationes;
 
 import androidx.annotation.NonNull;
-import com.structorverba.officia.verba.multiplicia.Adiectivum;
+import com.structorverba.officia.verba.multiplicia.*;
 import org.apache.commons.lang3.StringUtils;
 
 import java.util.stream.Stream;
@@ -9,6 +9,7 @@ import java.util.stream.Stream;
 /**
  * Haec ēnumerātiō potentiam adiectīvī omnis dēsignat.
  * @see Adiectivum
+ * @see Adverbium
  */
 @SuppressWarnings({ "SpellCheckingInspection", "unused" })
 public enum Gradus {

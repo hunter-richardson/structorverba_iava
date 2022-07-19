@@ -2,6 +2,7 @@ package com.structorverba.officia.tenores;
 
 import androidx.annotation.*;
 import com.structorverba.officia.curatores.Curator;
+import com.structorverba.officia.interfacta.*;
 import com.structorverba.officia.lectores.*;
 import com.structorverba.officia.miscella.Omne;
 import com.structorverba.officia.nuntii.Nuntius;
@@ -22,7 +23,7 @@ import java.util.function.*;
  * @see <a href="https://docs.oracle.com/javase/7/docs/api/org/xml/sax/helpers/DefaultHandler.html">DefaultHandler</a>
  */
 @SuppressWarnings("SpellCheckingInspection")
-public abstract class Tenor <Hoc extends Verbum <Hoc>> extends DefaultHandler {
+public abstract class Tenor <Hoc extends Tenebile<Hoc> & Curabile<Hoc>> extends DefaultHandler {
   /**
    * Hic valor est vās classis {@link Nuntius} classī extentī huius.
    */

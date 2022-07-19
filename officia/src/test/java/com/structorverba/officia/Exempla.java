@@ -42,6 +42,6 @@ public final class Exempla extends Omne {
                                          ((Actus) structor.adveniam("prōdesse", Categoria.ACTUS,
                                                                     Modus.INDICATIVUS, Vox.ACTIVA, Tempus.PRAESENS,
                                                                     Numeralis.SINGULARIS, Persona.TERTIA))
-                                                    .allego(Encliticum.CONIUGANS))));
+                                                    .allegam(Encliticum.CONIUGANS))));
   }
 }

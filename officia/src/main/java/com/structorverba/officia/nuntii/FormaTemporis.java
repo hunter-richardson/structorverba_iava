@@ -43,7 +43,7 @@ final class FormaTemporis {
       }
     };
   @NonNull private final ZonedDateTime tempus;
-  private final          boolean       punctillaPraecidemne;
+           private final boolean       punctillaPraecidemne;
 
   private FormaTemporis() {
     tempus = ZonedDateTime.now();

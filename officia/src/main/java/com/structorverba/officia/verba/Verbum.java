@@ -6,7 +6,7 @@ import com.structorverba.officia.inventores.Inventor;
 import com.structorverba.officia.lectores.Lector;
 import com.structorverba.officia.miscella.*;
 import com.structorverba.officia.tenores.Tenor;
-import com.structorverba.officia.verba.multiplicia.VerbumMultiplex;
+import com.structorverba.officia.verba.multiplicia.Multiplex;
 import com.structorverba.officia.enumerationes.Categoria;
 
 /**
@@ -17,9 +17,11 @@ import com.structorverba.officia.enumerationes.Categoria;
  * Rēs classis {@link Lector} colliget data ā scāpō XML intrā
  * scrīnium <a href="{@docRoot}/../src/main/resources">auxiliārēs</a>. <br>
  * Rēs classis {@link Inventor} ūtitur cōlāre rēs
- * multiplicēs huius classis quae classem {@link VerbumMultiplex} extendit.
+ * multiplicēs huius classis quae classem {@link Multiplex} extendit.
  * @param <Hoc> Hāc tabellā classis {@link Hoc} extēnsiōnem
  *             aptam datīs petītīs repraesentat.
+ * @see Multiplex
+ * @see Simplex
  */
 @SuppressWarnings("SpellCheckingInspection")
 public abstract class Verbum <Hoc extends Verbum <Hoc>> extends Omne implements Comparable<Verbum<?>> {

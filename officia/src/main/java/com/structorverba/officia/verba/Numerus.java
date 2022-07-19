@@ -1,11 +1,12 @@
 package com.structorverba.officia.verba;
 
-import androidx.annotation.*;
 import androidx.annotation.NonNull;
+import androidx.annotation.*;
 import com.github.chaosfirebolt.converter.RomanInteger;
 import com.github.chaosfirebolt.converter.constants.IntegerType;
 import com.github.chaosfirebolt.converter.util.Validator;
 import com.structorverba.officia.enumerationes.*;
+import com.structorverba.officia.interfacta.*;
 import com.structorverba.officia.miscella.Utilitas;
 import lombok.*;
 import org.apache.commons.lang3.*;
@@ -13,17 +14,17 @@ import org.apache.commons.lang3.*;
 /**
  * Classis {@link Numerus} repraesentat numerōs ut coniectēris. <br>
  * Rēs huius classis catēgoriam {@link Categoria#NUMERUS} ūtuntur dataque eīs nōn
- * inveniet scrīnium <a href="{@docRoot}/../src/main/resources">auxiliārēs</a>.
- * <br> Magis rēs huius classis ā numerīs classis <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Short.html">Short</a>
+ * inveniet scrīnium <a href="{@docRoot}/../src/main/resources">auxiliārēs</a>. <br>
+ * Magis rēs huius classis ā numerīs classis <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Short.html">Short</a>
  * per ūsum classis <a href="https://github.com/Chaosfirebolt/RomanNumeralConverter/blob/master/src/main/java/com/github/chaosfirebolt/converter/RomanInteger.java">RomanInteger</a>
- * fīant.
- *
+ * fīant. <br>
+ * Haec classisque {@link Praepositio} est extenta sōla classis {@link Verbum} quod classēs {@link Curabile} et {@link Legibile} et {@link Tenebile} nōn implet.
  * @see NuntiusNumerorum
  * @see <a href="https://github.com/Chaosfirebolt/RomanNumeralConverter/blob/master/src/main/java/com/github/chaosfirebolt/converter/RomanInteger.java">RomanInteger</a>
  * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Short.html">Short</a>
  */
 @SuppressWarnings("SpellCheckingInspection")
-public final class Numerus extends VerbumSimplex<Numerus> {
+public final class Numerus extends Simplex<Numerus> {
     /**
      * Hic valor numerum maximum possibilem repraesentat.
      */

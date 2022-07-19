@@ -1,6 +1,7 @@
 package com.structorverba.officia.enumerationes;
 
 import androidx.annotation.NonNull;
+import com.structorverba.officia.interfacta.Declinabile;
 import com.structorverba.officia.verba.multiplicia.*;
 import org.apache.commons.lang3.StringUtils;
 
@@ -8,7 +9,7 @@ import java.util.stream.Stream;
 
 /**
  * Haec ēnumerātiō numerum verbī omnis dēsignat.
- * @see Nominalis
+ * @see Declinabile
  * @see Actus
  */
 @SuppressWarnings({ "SpellCheckingInspection", "unused" })

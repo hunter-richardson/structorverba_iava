@@ -2,6 +2,7 @@ package com.structorverba.officia.lectores;
 
 import androidx.annotation.*;
 import com.structorverba.officia.enumerationes.Categoria;
+import com.structorverba.officia.interfacta.*;
 import com.structorverba.officia.miscella.*;
 import com.structorverba.officia.nuntii.Nuntius;
 import com.structorverba.officia.tenores.Tenor;
@@ -20,7 +21,7 @@ import java.util.function.Supplier;
  * @param <Hoc> classis extenta classis {@link Verbum}
  */
 @SuppressWarnings("SpellCheckingInspection")
-public abstract class Lector <Hoc extends Verbum <Hoc>> extends Omne {
+public abstract class Lector <Hoc extends Legibile<Hoc> & Tenebile<Hoc> & Curabile<Hoc>> extends Omne {
   /**
    * Hic valor est vās classis {@link Nuntius} classī hui.
    */

@@ -2,6 +2,7 @@ package com.structorverba.officia.tenores;
 
 import androidx.annotation.*;
 import com.structorverba.officia.curatores.multiplicia.*;
+import com.structorverba.officia.interfacta.*;
 import com.structorverba.officia.lectores.LectorMultiplicibus;
 import com.structorverba.officia.miscella.Utilitas;
 import com.structorverba.officia.nuntii.*;
@@ -15,12 +16,12 @@ import java.util.function.*;
 
 /**
  * Classis {@link TenorMultiplicibus} est vās classis {@link Tenor} classibus omnibus quibus classem {@link
- * VerbumMultiplex} extendit.
- * @param <Hoc> classis extenta classis {@link VerbumMultiplex}
+ * Multiplex} extendit.
+ * @param <Hoc> classis extenta classis {@link Multiplex}
  * @see CuratorMultiplicibus
  */
 @SuppressWarnings("SpellCheckingInspection")
-public abstract class TenorMultiplicibus <Hoc extends VerbumMultiplex <Hoc>> extends Tenor <Hoc> {
+public abstract class TenorMultiplicibus <Hoc extends Tenebile<Hoc> & Inflectabile<Hoc> & Curabile<Hoc>> extends Tenor <Hoc> {
   /**
    * Hic valor est vās classis {@link CuratorMultiplicibus} huic classī extentae.
    */
@@ -96,7 +97,7 @@ public abstract class TenorMultiplicibus <Hoc extends VerbumMultiplex <Hoc>> ext
   /**
    * {@inheritDoc}
    * @param scriptio fōrmam scriptam indendus
-   * @see VerbumMultiplex#scriptio
+   * @see Multiplex#scriptio
    */
   @Override protected void scribo(@NonNull String scriptio) {
     curator.ut(scriptio);

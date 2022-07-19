@@ -1,13 +1,14 @@
 package com.structorverba.officia.enumerationes;
 
 import androidx.annotation.NonNull;
-import com.structorverba.officia.verba.multiplicia.Actus;
+import com.structorverba.officia.verba.multiplicia.*;
 import org.apache.commons.lang3.StringUtils;
 
 import java.util.stream.Stream;
 
 /**
  * Haec ēnumerātiō temporem verbī omnis dēsignat.
+ * @see Nomen
  * @see Actus
  */
 @SuppressWarnings({ "SpellCheckingInspection", "unused" })

@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.*;
 import com.structorverba.officia.curatores.multiplicia.CuratorAdverbiis;
 import com.structorverba.officia.enumerationes.*;
+import com.structorverba.officia.interfacta.*;
 import com.structorverba.officia.lectores.LectorMultiplicibus;
 import com.structorverba.officia.nuntii.*;
 import com.structorverba.officia.tenores.TenorMultiplicibus;
@@ -23,14 +24,15 @@ import java.util.function.Supplier;
  * @see NuntiusAdverbiorum
  */
 @SuppressWarnings("SpellCheckingInspection")
-public class Adverbium extends VerbumMultiplex <Adverbium> {
+public class Adverbium extends Multiplex<Adverbium>
+        implements Curabile<Adverbium>, Legibile<Adverbium>, Tenebile<Adverbium> {
   /**
    * Hic valor potentiam reī huius dēsignat.
    * @see Gradus
    */
   @NonNull public final Gradus gradus;
-  @Getter(lazy = true)
-  @NonNull private final NuntiusAdverbiorum nuntius = NuntiusAdverbiorum.faciendum.get();
+  @NonNull @Getter(lazy = true)
+  private final NuntiusAdverbiorum nuntius = NuntiusAdverbiorum.faciendum.get();
 
   @Builder(access = AccessLevel.PUBLIC, toBuilder = true)
   private Adverbium(@NonNull final Gradus gradus, @NonNull final String lemma,

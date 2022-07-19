@@ -1,14 +1,14 @@
 package com.structorverba.officia.enumerationes;
 
 import androidx.annotation.NonNull;
-import com.structorverba.officia.verba.multiplicia.Nominalis;
+import com.structorverba.officia.interfacta.Declinabile;
 import org.apache.commons.lang3.StringUtils;
 
 import java.util.stream.Stream;
 
 /**
  * Haec ēnumerātiō cāsum verbī omnis dēsignat.
- * @see Nominalis
+ * @see Declinabile
  */
 @SuppressWarnings({"SpellCheckingInspection", "unused" })
 public enum Casus {

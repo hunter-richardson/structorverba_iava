@@ -3,6 +3,7 @@ package com.structorverba.officia.verba.multiplicia;
 import androidx.annotation.NonNull;
 import com.structorverba.officia.curatores.multiplicia.CuratorMultiplicibus;
 import com.structorverba.officia.enumerationes.*;
+import com.structorverba.officia.interfacta.*;
 import com.structorverba.officia.inventores.Inventor;
 import com.structorverba.officia.lectores.LectorMultiplicibus;
 import com.structorverba.officia.tenores.TenorMultiplicibus;
@@ -11,17 +12,21 @@ import com.structorverba.officia.verba.*;
 import java.util.stream.Stream;
 
 /**
- * Classis {@link VerbumMultiplex} repraesentat verbum aliquem quod fōrmās multās habet. <br>
+ * Classis {@link Multiplex} repraesentat verbum aliquem quod fōrmās multās habet. <br>
  * Rēs classis {@link Inventor} rēbus huius classis adsunt ūtilissimaeque sunt rēs huius classis percōlere. <br>
- * Discrīmina prīmōria inter hīs classibus classeque {@link VerbumSimplex}
+ * Discrīmina prīmōria inter hīs classibus classeque {@link Simplex}
  * sunt huius valōrēs {@link #scriptio}que {@link #encliticum}que.
  * @param <Hoc> Hāc tabellā classis {@link Hoc} extēnsiōnem aptam datīs petītīs repraesentat.
  * @see LectorMultiplicibus
  * @see TenorMultiplicibus
  * @see CuratorMultiplicibus
+ * @see Declinabile
+ * @see Actus
+ * @see Adverbium
  */
 @SuppressWarnings("SpellCheckingInspection")
-public abstract class VerbumMultiplex <Hoc extends Verbum <Hoc>> extends Verbum <Hoc> {
+public abstract class Multiplex<Hoc extends Verbum<Hoc> & Inflectabile<Hoc>>
+        extends Verbum <Hoc> implements Inflectabile<Hoc> {
   /**
    * Hic valor fōrmam fīnem verbī repraesentat. <br>
    * Condiciōnibus plūrimīs est ut ūsūfructuāriī petīvit.
@@ -40,29 +45,28 @@ public abstract class VerbumMultiplex <Hoc extends Verbum <Hoc>> extends Verbum 
    * @param lm  valōrem {@link Verbum#lemma} indicat.
    * @param scrpt valōrem {@link #scriptio} indicat.
    */
-  protected VerbumMultiplex(@NonNull final Categoria ctgr,
-                            @NonNull final String lm, @NonNull final String scrpt) {
+  protected Multiplex(@NonNull final Categoria ctgr,
+                      @NonNull final String lm, @NonNull final String scrpt) {
     super(ctgr, lm);
     scriptio = scrpt;
     encliticum = Encliticum.NOLENS;
   }
 
   /**
-   * Hic modus ūsūfructuāriōs licet valōrem {@link #encliticum} allegere.
-   * @param cltm valōrem {@link #encliticum} indicat
-   * @return Hanc rem
+   * {@inheritDoc}
    * @see Encliticum
    */
   @SuppressWarnings("UnusedReturnValue")
-  @NonNull public VerbumMultiplex <Hoc> allego(@NonNull final Encliticum cltm) {
+  @NonNull public Hoc allegam(@NonNull final Encliticum cltm) {
     encliticum = Stream.of(Encliticum.values())
                        .anyMatch(e -> lemma.endsWith(e.scriptio)) ? Encliticum.NOLENS
                                                                   : cltm;
-    return this;
+    //noinspection unchecked
+    return (Hoc) this;
   }
 
   /**
-   * @return {@link #encliticum}
+   * {@inheritDoc}
    */
   @SuppressWarnings("unused")
   @NonNull public Encliticum encliticum() {

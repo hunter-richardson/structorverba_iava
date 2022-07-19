@@ -73,7 +73,7 @@ public class Verbales extends Omne {
     }
 
     /**
-     * Hic modus cōnstrūctiōnem rēbus classis {@link VerbumSimplex.Praepositio} tentat.
+     * Hic modus cōnstrūctiōnem rēbus classis {@link Simplex.Praepositio} tentat.
      * @see Categoria#PRAEPOSITIO
      * */
     @Test
@@ -82,7 +82,7 @@ public class Verbales extends Omne {
     }
 
     /**
-     * Hic modus cōnstrūctiōnem rēbus classis {@link VerbumSimplex.Coniunctio} tentat.
+     * Hic modus cōnstrūctiōnem rēbus classis {@link Simplex.Coniunctio} tentat.
      * @see Categoria#CONIUNCTIO
      * */
     @Test
@@ -91,7 +91,7 @@ public class Verbales extends Omne {
     }
 
     /**
-     * Hic modus cōnstrūctiōnem rēbus classis {@link VerbumSimplex.Interiectio} tentat.
+     * Hic modus cōnstrūctiōnem rēbus classis {@link Simplex.Interiectio} tentat.
      * @see Categoria#INTERIECTIO
      * */
     @Test

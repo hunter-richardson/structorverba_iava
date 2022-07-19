@@ -39,17 +39,17 @@ public enum Categoria {
   ADVERBIUM,
 
   /**
-   * Hic valor classem {@link VerbumSimplex.Coniunctio} respondet.
+   * Hic valor classem {@link Simplex.Coniunctio} respondet.
    */
   CONIUNCTIO,
 
   /**
-   * Hic valor classem {@link VerbumSimplex.Interiectio} respondet.
+   * Hic valor classem {@link Simplex.Interiectio} respondet.
    */
   INTERIECTIO,
 
   /**
-   * Hic valor classem {@link VerbumSimplex.Praepositio} respondet.
+   * Hic valor classem {@link Simplex.Praepositio} respondet.
    */
   PRAEPOSITIO,
 
@@ -64,9 +64,9 @@ public enum Categoria {
   public final @NotNull String scriptio = declina(Casus.NOMINATIVUS, Numeralis.PLURALIS, false);
 
   /**
-   * Hic modus dēterminat utrum rēs classis {@link Verbum} catēgoriae {@code categoria} classem {@link VerbumMultiplex} extendant necne.
+   * Hic modus dēterminat utrum rēs classis {@link Verbum} catēgoriae {@code categoria} classem {@link Multiplex} extendant necne.
    * @param categoria  Rēs dēterminanda
-   * @return {@code true} sī  rēs catēgoriae {@code categoria} classem {@link VerbumMultiplex} extendunt; {@code false} aliter
+   * @return {@code true} sī  rēs catēgoriae {@code categoria} classem {@link Multiplex} extendunt; {@code false} aliter
    * */
   public static boolean multiplex(@NonNull final Categoria categoria) {
     return !Arrays.asList(CONIUNCTIO, INTERIECTIO, PRAEPOSITIO, NUMERUS).contains(categoria);

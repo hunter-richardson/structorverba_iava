@@ -4,6 +4,7 @@ import androidx.annotation.*;
 import androidx.annotation.NonNull;
 import com.structorverba.officia.curatores.CuratorSimplicibus;
 import com.structorverba.officia.enumerationes.*;
+import com.structorverba.officia.interfacta.*;
 import com.structorverba.officia.inventores.Inventor;
 import com.structorverba.officia.lectores.*;
 import com.structorverba.officia.nuntii.*;
@@ -15,23 +16,28 @@ import org.apache.commons.lang3.*;
 import java.util.function.Supplier;
 
 /**
- * Classis {@link VerbumSimplex} repraesentat verbum aliquem quod fōrmam ūnam sōlum habet. <br>
+ * Classis {@link Simplex} repraesentat verbum aliquem quod fōrmam ūnam sōlum habet. <br>
  * Rēs classis {@link Inventor} rēbus huius classis absunt atque inūtilēs fuerint. <br>
  * @param <Hoc> Hāc tabellā classis {@link Hoc} extēnsiōnem aptam datīs petītīs repraesentat.
+ * @see Coniunctio
+ * @see Interiectio
+ * @see Numerus
+ * @see Praepositio
  */
 @SuppressWarnings("SpellCheckingInspection")
-public abstract class VerbumSimplex <Hoc extends Verbum <Hoc>> extends Verbum <Hoc> {
+public abstract class Simplex<Hoc extends Verbum <Hoc> & Immutans<Hoc>>
+        extends Verbum <Hoc> implements Immutans<Hoc> {
   /**
    * Hoc officium cōnstrūctōrem reī huius classis perpetrat.
    * @param ctgr valōrem {@link #catagoria} indicat.
    * @param lm valōrem {@link #lemma} indicat.
    */
-  protected VerbumSimplex(@NonNull final Categoria ctgr, @NonNull final String lm) {
+  protected Simplex(@NonNull final Categoria ctgr, @NonNull final String lm) {
     super(ctgr, lm);
   }
 
   /**
-   * @return Repraesentātiōnem scrīpta reī classis {@link VerbumSimplex}. <br>
+   * @return Repraesentātiōnem scrīpta reī classis {@link Simplex}. <br>
    * Sōlum valōrem {@link Verbum#lemma} potest referre cum fōrmā ūnā.
    */
   @Override @NonNull
@@ -49,9 +55,10 @@ public abstract class VerbumSimplex <Hoc extends Verbum <Hoc>> extends Verbum <H
    * @see CuratorSimplicibus.CuratorConiunctionibus
    * @see NuntiusConiunctivorum
    */
-  public static final class Coniunctio extends VerbumSimplex <Coniunctio> {
-    @Getter(lazy = true)
-    @NonNull private final NuntiusConiunctivorum nuntius = NuntiusConiunctivorum.faciendum.get();
+  public static final class Coniunctio extends Simplex<Coniunctio>
+          implements Curabile<Coniunctio>, Legibile<Coniunctio>, Tenebile<Coniunctio> {
+    @NonNull @Getter(lazy = true)
+    private final NuntiusConiunctivorum nuntius = NuntiusConiunctivorum.faciendum.get();
 
     @Builder(access = AccessLevel.PUBLIC, toBuilder = true)
     private Coniunctio(@NonNull final String lemma) {
@@ -90,9 +97,10 @@ public abstract class VerbumSimplex <Hoc extends Verbum <Hoc>> extends Verbum <H
    * @see CuratorSimplicibus.CuratorInteriectionibus
    * @see NuntiusInteriectionum
    */
-  public static final class Interiectio extends VerbumSimplex <Interiectio> {
-    @Getter(lazy = true)
-    @NonNull private final NuntiusInteriectionum nuntius = NuntiusInteriectionum.faciendum.get();
+  public static final class Interiectio extends Simplex<Interiectio>
+          implements Curabile<Interiectio>, Legibile<Interiectio>, Tenebile<Interiectio> {
+    @NonNull @Getter(lazy = true)
+    private final NuntiusInteriectionum nuntius = NuntiusInteriectionum.faciendum.get();
 
     @Builder(access = AccessLevel.PUBLIC, toBuilder = true)
     private Interiectio(@NonNull final String lemma) {
@@ -101,8 +109,8 @@ public abstract class VerbumSimplex <Hoc extends Verbum <Hoc>> extends Verbum <H
     }
 
     /**
-     * Classis {@link NuntiusInteriectionum} est vās classis {@link Nuntius} classī {@link VerbumSimplex.Interiectio}}
-     * @see VerbumSimplex.Interiectio
+     * Classis {@link NuntiusInteriectionum} est vās classis {@link Nuntius} classī {@link Simplex.Interiectio}}
+     * @see Simplex.Interiectio
      */
     @Singleton
     static final class NuntiusInteriectionum extends Nuntius {
@@ -116,7 +124,7 @@ public abstract class VerbumSimplex <Hoc extends Verbum <Hoc>> extends Verbum <H
               () -> ObjectUtils.firstNonNull(instantia, instantia = new NuntiusInteriectionum());
 
       private NuntiusInteriectionum() {
-        super(ParametriNuntii.para(VerbumSimplex.Interiectio.class));
+        super(ParametriNuntii.para(Simplex.Interiectio.class));
       }
     }
   }
@@ -125,17 +133,18 @@ public abstract class VerbumSimplex <Hoc extends Verbum <Hoc>> extends Verbum <H
    * Classis {@link Praepositio} repraesentat praepositiōnēs ut coniecteris. <br>
    * Rēs huius classis catēgoriam {@link Categoria#PRAEPOSITIO} ūtuntur cōnservātaque sunt in
    * scrīniō <a href="{@docRoot}/../src/main/resources">auxiliārēs</a>/praepositiōnēs.
+   * Haec classisque {@link Numerus} est extenta sōla classis {@link Verbum} quod classēs {@link Curabile} et {@link Legibile} et {@link Tenebile} nōn implet.
    * @see LectorPraepositionibus
    * @see NuntiusPraepositionum
    */
-  public static final class Praepositio extends VerbumSimplex <Praepositio> {
+  public static final class Praepositio extends Simplex<Praepositio> {
     /**
      * Hic valor supplet rem classis {@link Praepositio} quam praepositiōnem nūlla repraesentat.
      */
     @NonNull public static final Supplier <Praepositio> assume =
       () -> Praepositio.builder().build();
-    @Getter(lazy = true)
-    @NonNull private final NuntiusPraepositionum nuntius = NuntiusPraepositionum.faciendum.get();
+    @NonNull @Getter(lazy = true)
+    private final NuntiusPraepositionum nuntius = NuntiusPraepositionum.faciendum.get();
 
     @Builder(access = AccessLevel.PUBLIC, toBuilder = true)
     private Praepositio(@NonNull final String lemma) {
@@ -144,8 +153,8 @@ public abstract class VerbumSimplex <Hoc extends Verbum <Hoc>> extends Verbum <H
     }
 
     /**
-     * Classis {@link NuntiusPraepositionum} est vās classis {@link Nuntius} classī {@link VerbumSimplex.Praepositio}}
-     * @see VerbumSimplex.Praepositio
+     * Classis {@link NuntiusPraepositionum} est vās classis {@link Nuntius} classī {@link Simplex.Praepositio}}
+     * @see Simplex.Praepositio
      */
     @Singleton
     static final class NuntiusPraepositionum extends Nuntius {
@@ -159,7 +168,7 @@ public abstract class VerbumSimplex <Hoc extends Verbum <Hoc>> extends Verbum <H
               () -> ObjectUtils.firstNonNull(instantia, instantia = new NuntiusPraepositionum());
 
       NuntiusPraepositionum() {
-        super(ParametriNuntii.para(VerbumSimplex.Praepositio.class));
+        super(ParametriNuntii.para(Simplex.Praepositio.class));
       }
     }
   }
