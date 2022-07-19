@@ -6,13 +6,13 @@ Nōn iam! Vōbīs intrōdūcō programma StrūctorVerba scrīptum in linguā [Ia
 
 Programma hoc dēfīnit classēs novem quās catēgoriās novem verbōrum repraesentent:
 
-I. [Coniunctio](officia/src/main/java/com/structorverba/officia/verba/VerbumSimplex.java#L56)
+I. [Coniunctio](officia/src/main/java/com/structorverba/officia/verba/Simplex.java#L58)
 
-II. [Interiectio](officia/src/main/java/com/structorverba/officia/verba/VerbumSimplex.java#L97)
+II. [Interiectio](officia/src/main/java/com/structorverba/officia/verba/Simplex.java#L100)
 
-III. [Praepositio](officia/src/main/java/com/structorverba/officia/verba/VerbumSimplex.java#L135)
+III. [Praepositio](officia/src/main/java/com/structorverba/officia/verba/Simplex.java#L140)
 
-IV. [Numerus](officia/src/main/java/com/structorverba/officia/verba/VerbumSimplex.java#L182)
+IV. [Numerus](officia/src/main/java/com/structorverba/officia/verba/Numerus.java)
 
 V. [Adverbium](officia/src/main/java/com/structorverba/officia/verba/multiplicia/Adverbium.java)
 
@@ -40,7 +40,7 @@ IV. [Numeri](officia/src/test/java/com/structorverba/officia/Numeri.java)
 
 V. [Verbales](officia/src/test/java/com/structorverba/officia/Verbales.java)
 
-Invocāte valōrem [StructorVerba.faciendum](officia/src/main/java/com/structorverba/officia/miscella/StructorVerba.java#L32) ut fūnctiōnēs omnēs programmātis StrūctorVerba accēdātis:
+Invocāte valōrem [StructorVerba.faciendum](officia/src/main/java/com/structorverba/officia/miscella/StructorVerba.java#L30) ut fūnctiōnēs omnēs programmātis StrūctorVerba accēdātis:
 
 ```java
 import net.structorverba.enumerationes.*;
@@ -66,13 +66,13 @@ class Tentamen {
  ((Actus) structor.adveniam("prōdesse", Categoria.ACTUM,
                             Modus.INDICATIVUS, Vōx.ACTIVA, Tempus.PRAESENS,
                             Numeralis.SINGULARIS, Persona.TERTIA))
-                  .allego(Encliticum.CONIUGANS));
+                  .allegam(Encliticum.CONIUGANS));
     System.out.println(verba); // Ecce lingua Latīna placet prōdestque
   }
 }
 ```
 
-Versiō simplificātus cōdicis superī est scrīptus in tentāmine [Exempla.prōducta](officia/src/test/java/com/structorverba/officia/Exempla.java#L28)
+Versiō simplificātus cōdicis superī est scrīptus in tentāmine [Exempla](officia/src/test/java/com/structorverba/officia/Exempla.java).
 
 ___
 
