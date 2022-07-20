@@ -41,4 +41,16 @@ public final class ConstructorSimplicium {
     @NonNull @Accessors(fluent = true) @Getter(value = AccessLevel.PUBLIC, lazy = true)
     private static final Function<Short, Numerus> numeri =
             numerus -> Numerus.builder().numerus(numerus).build();
+
+    /**
+     * Hic modus rem classis {@link Simplex} construit
+     * */
+    @Nullable @Accessors(fluent = true) @Getter(value = AccessLevel.PUBLIC, lazy = true)
+    private static final Function<Categoria, Function<String, Simplex>> verbi =
+            (categoria, lemma) -> switch(categoria) {
+                    case CONIUNCTIO  -> coniunctionis;
+                    case INTERIECTIO -> interiectionis;
+                    case PRAEPOSITIO -> praepositionis;
+                    default          -> null;
+                };
 }
