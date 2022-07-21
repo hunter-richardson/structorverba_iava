@@ -67,7 +67,6 @@ public enum Gradus {
   @SuppressWarnings("ConstantConditions")
   @NonNull public static Gradus ut(@NonNull final Enum <?> illud) {
     final Gradus hoc = (Gradus) illud;
-    return hoc.equals(illud) ? hoc
-                             : NULLUS;
+    return hoc.equals(illud) ? hoc : NULLUS;
   }
 }

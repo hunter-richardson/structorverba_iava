@@ -76,7 +76,6 @@ public enum Modus {
   @SuppressWarnings("ConstantConditions")
   @NonNull public static Modus ut(@NonNull final Enum <?> illud) {
     final Modus hoc = (Modus) illud;
-    return hoc.equals(illud) ? hoc
-                             : NULLUS;
+    return hoc.equals(illud) ? hoc : NULLUS;
   }
 }

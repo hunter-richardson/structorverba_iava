@@ -1,32 +1,30 @@
 package com.structorverba.officia.verba.multiplicia;
 
 import androidx.annotation.NonNull;
-import androidx.annotation.*;
-import com.structorverba.officia.curatores.multiplicia.CuratorNominibus;
 import com.structorverba.officia.enumerationes.*;
-import com.structorverba.officia.interfacta.*;
-import com.structorverba.officia.inventores.InventorNominibus;
-import com.structorverba.officia.lectores.LectorMultiplicibus;
-import com.structorverba.officia.nuntii.*;
-import com.structorverba.officia.tenores.TenorMultiplicibus;
-import jakarta.ejb.Singleton;
+import com.structorverba.officia.nuntii.Nuntius;
+import com.structorverba.officia.quadriiugia.*;
+import com.structorverba.officia.verba.Verbum;
+import com.structorverba.officia.verba.interfacta.*;
+import jakarta.ejb.DependsOn;
 import lombok.*;
-import org.apache.commons.lang3.*;
 
-import java.util.function.Supplier;
+import java.util.function.BiFunction;
 
 /**
  * Classis {@link Nomen} repraesentat nōmina ut coniectēris. <br>
  * Rēs huius classis catēgoriam {@link Categoria#NOMEN} ūtuntur cōnservātaque sunt in
  * scrīniō <a href="{@docRoot}/../src/main/resources">auxiliārēs</a>/nōmina.
- * @see LectorMultiplicibus.LectorNominibus
- * @see TenorMultiplicibus.TenorNominibus
- * @see InventorNominibus
- * @see CuratorNominibus
- * @see NuntiusNominum
+ * @see Lector.Nominibus
+ * @see Tenor.Nominibus
+ * @see Inventor.Nominibus
+ * @see Curator.Nominibus
+ * @see Nuntius.Verbis.Nominibus
  */
 @SuppressWarnings("SpellCheckingInspection")
-public final class Nomen extends Declinabile<Nomen> implements Curabile<Nomen>, Legibile<Nomen>, Tenebile<Nomen> {
+@DependsOn("Nuntius.Verbis.Nominibus")
+public final class Nomen extends Verbum.Multiplex.Declinabile<Nomen>
+        implements Curabile<Nomen>, Legibile<Nomen>, Tenebile<Nomen> {
   /**
    * Hic valor tempus reī huius dēsignat.
    * @see Modus
@@ -34,7 +32,7 @@ public final class Nomen extends Declinabile<Nomen> implements Curabile<Nomen>, 
   @NonNull public final Tempus tempus;
 
   @NonNull @Getter(lazy = true)
-  private final NuntiusNominum nuntius = NuntiusNominum.faciendum.get();
+  private final Nuntius.Verbis.Nominibus nuntius = Nuntius.Verbis.Nominibus.faciendum.get();
 
   @Builder(access = AccessLevel.PUBLIC, toBuilder = true)
   private Nomen(@NonNull final Specialitas specialitas, @NonNull final Genus genus,
@@ -46,22 +44,26 @@ public final class Nomen extends Declinabile<Nomen> implements Curabile<Nomen>, 
     nuntius.plusGarrio("Scrībor ut", scriptio);
   }
 
-  /**
-   * Classis {@link NuntiusNominum} est vās classis {@link Nuntius} classī {@link Nomen}}
-   * @see Nomen
-   */
-  @Singleton private static final class NuntiusNominum extends Nuntius {
-    @Nullable private static NuntiusNominum instantia = null;
-
     /**
-     * Hic valor viam reī huius classis facit.
-     * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
-     */
-    @NonNull private static final Supplier<NuntiusNominum> faciendum =
-            () -> ObjectUtils.firstNonNull(instantia, instantia = new NuntiusNominum());
-
-    private NuntiusNominum() {
-      super(ParametriNuntii.para(Nomen.class));
-    }
-  }
+     * Hic modus verbum dē valōribus imputātīs dēclīnat.
+     * */
+  @NonNull public static BiFunction<Casus, Numeralis, String> declinatio =
+          (casus, numeralis) -> "nōm".concat(switch (casus) {
+            case NOMINATIVUS, ACCUSATIVUS, VOCATIVUS, DERECTUS -> switch (numeralis) {
+              case SINGULARIS, NULLUS -> "en";
+              case PLURALIS -> "ina";
+            };
+            case GENITIVUS -> switch (numeralis) {
+              case SINGULARIS, NULLUS -> "inis";
+              case PLURALIS -> "inum";
+            };
+            case DATIVUS -> switch (numeralis) {
+              case SINGULARIS, NULLUS -> "inī";
+              case PLURALIS -> "inibus";
+            };
+            case ABLATIVUS, INSTRUMENTALIS, LOCATIVUS -> switch (numeralis) {
+              case SINGULARIS, NULLUS -> "ine";
+              case PLURALIS -> "inibus";
+            };
+          });
 }

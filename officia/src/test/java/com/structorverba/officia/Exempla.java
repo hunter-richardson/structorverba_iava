@@ -17,7 +17,7 @@ import lombok.Getter;
 @SuppressWarnings({"SpellCheckingInspection", "FieldCanBeLocal", "NewClassNamingConvention"})
 public final class Exempla extends Omne {
   @NonNull @Getter(lazy = true)
-  private final StructorVerba structor = StructorVerba.faciendum.get();
+  private final Structor structor = Structor.faciendum.get();
 
   @NonNull private final String producta = "Ecce lingua Latīna placet prōdestque";
 
@@ -28,7 +28,7 @@ public final class Exempla extends Omne {
   @Test
   public void producta() {
     //noinspection ConstantConditions
-    System.out.println(new Tentamen.TentamenVerbale(producta, "prōducta")
+    System.out.println(new Tentamen.Verbale(producta, "prōducta")
                          .exsequar(structor.strue(structor.adveniam("ecce", Categoria.INTERIECTIO),
                                                   structor.adveniam("lingua", Categoria.NOMEN,
                                                                     Specialitas.COMMUNE, Genus.FEMININUM,

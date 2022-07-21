@@ -1,14 +1,14 @@
 package com.structorverba.officia.enumerationes;
 
 import androidx.annotation.NonNull;
-import com.structorverba.officia.interfacta.Declinabile;
+import com.structorverba.officia.verba.Verbum;
 import org.apache.commons.lang3.StringUtils;
 
 import java.util.stream.Stream;
 
 /**
  * Haec ēnumerātiō generem verbī omnis dēsignat.
- * @see Declinabile
+ * @see Verbum.Multiplex.Declinabile
  */
 @SuppressWarnings({ "SpellCheckingInspection", "unused" })
 public enum Genus {
@@ -66,7 +66,6 @@ public enum Genus {
   @SuppressWarnings("ConstantConditions")
   @NonNull public static Genus ut(@NonNull final Enum <?> illud) {
     final Genus hoc = (Genus) illud;
-    return hoc.equals(illud) ? hoc
-                             : NULLUM;
+    return hoc.equals(illud) ? hoc : NULLUM;
   }
 }

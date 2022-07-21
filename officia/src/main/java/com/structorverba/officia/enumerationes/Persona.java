@@ -66,7 +66,6 @@ public enum Persona {
   @SuppressWarnings("ConstantConditions")
   @NonNull public static Persona ut(@NonNull final Enum <?> illud) {
     final Persona hoc = (Persona) illud;
-    return hoc.equals(illud) ? hoc
-                             : NULLA;
+    return hoc.equals(illud) ? hoc : NULLA;
   }
 }

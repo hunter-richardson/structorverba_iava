@@ -93,7 +93,6 @@ public enum Tempus {
   @SuppressWarnings("ConstantConditions")
   @NonNull public static Tempus ut(@NonNull final Enum <?> illud) {
     final Tempus hoc = (Tempus) illud;
-    return hoc.equals(illud) ? hoc
-                             : INTEMPORALE;
+    return hoc.equals(illud) ? hoc : INTEMPORALE;
   }
 }

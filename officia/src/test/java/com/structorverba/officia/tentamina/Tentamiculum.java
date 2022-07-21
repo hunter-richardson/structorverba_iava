@@ -2,12 +2,13 @@ package com.structorverba.officia.tentamina;
 
 import androidx.annotation.*;
 import com.structorverba.officia.miscella.Omne;
-
+import lombok.Getter;
 import org.apache.commons.collections4.comparators.NullComparator;
 import org.apache.commons.lang3.*;
 import org.junit.jupiter.api.Assertions;
 
-import java.util.Comparator;
+import java.util.*;
+import java.util.function.*;
 
 /**
  * Classis {@link Tentamiculum} tentāmen singulārem repraesentat exsequendum datā simplicī.
@@ -15,6 +16,8 @@ import java.util.Comparator;
  */
 @SuppressWarnings({ "SpellCheckingInspection", "UnusedReturnValue", "unused" })
 abstract class Tentamiculum<Hoc> extends Omne {
+  @NonNull private final BooleanSupplier ens;
+
   /**
    * Hic valor datum exspectandum repraesentat
    */
@@ -30,8 +33,10 @@ abstract class Tentamiculum<Hoc> extends Omne {
    * @param prdctm valor {@link #productum} indicat.
    */
   protected Tentamiculum(@Nullable final Hoc prdctm) {
-    productum = prdctm;
     expectatio = null;
+    productum = prdctm;
+
+    ens = () -> Objects.nonNull(productum);
   }
 
   /**
@@ -42,10 +47,8 @@ abstract class Tentamiculum<Hoc> extends Omne {
   protected Tentamiculum(@NonNull final Hoc expct, @Nullable final Hoc prdctm) {
     productum = prdctm;
     expectatio = expct;
-  }
 
-  private boolean existitne() {
-    return productum != null;
+    ens = () -> Objects.nonNull(productum);
   }
 
   /**
@@ -54,7 +57,7 @@ abstract class Tentamiculum<Hoc> extends Omne {
    * @return Hic valor
    */
   public Tentamiculum<Hoc> existat(@NonNull final String error) {
-    Assertions.assertTrue(existitne(), error);
+    Assertions.assertTrue(ens, error);
     return this;
   }
 
@@ -62,12 +65,12 @@ abstract class Tentamiculum<Hoc> extends Omne {
    * Classis est vās classibus {@link Tentamiculum}
    * <a href="https://docs.oracle.com/javase/10/docs/api/java/lang/Object.html">Object</a>que aliae
    */
-  static final class TentamiculumRei extends Tentamiculum<Object> {
+  static final class Rei extends Tentamiculum<Object> {
     /**
      * {@inheritDoc}
      * @param prdctm valor {@link #productum} indicat.
      */
-    public TentamiculumRei(@Nullable Object prdctm) {
+    public Rei(@Nullable Object prdctm) {
       super(prdctm);
     }
   }
@@ -76,42 +79,30 @@ abstract class Tentamiculum<Hoc> extends Omne {
    * Classis est vās classibus {@link Tentamiculum}
    * <a href="https://docs.oracle.com/javase/10/docs/api/java/lang/Comparable.html">Comparable</a> aliae
    */
-  static final class TentamiculumNumeralis <Illud extends Comparable <Illud>> extends Tentamiculum<Illud> {
+  static final class Comparabilium<Illud extends Comparable <Illud>> extends Tentamiculum<Illud> {
+    @NonNull @Getter(lazy = true)
+    private final Comparator<Illud> comparatio = new NullComparator<>(Comparable::compareTo, false);
+    @NonNull private final BooleanSupplier aequatio;
+    @NonNull private final BooleanSupplier differentia;
+    @NonNull private final BooleanSupplier parvitas;
+    @NonNull private final BooleanSupplier magnitas;
+    @NonNull private final BooleanSupplier parvitasNulla;
+    @NonNull private final BooleanSupplier magnitasNulla;
+
     /**
      * {@inheritDoc}
-     * @param expct  valor {@link #expectatio} indicat.
-     * @param prdctm valor {@link #productum} indicat.
+     * @param expectatio  valor {@link #expectatio} indicat.
+     * @param productum valor {@link #productum} indicat.
      */
-    public TentamiculumNumeralis(@NonNull Illud expct, @Nullable Illud prdctm) {
-      super(expct, prdctm);
-    }
+    public Comparabilium(@NonNull Illud expectatio, @Nullable Illud productum) {
+      super(expectatio, productum);
 
-    private int comparo() {
-      return new NullComparator <>((Comparator<Illud>) Comparable::compareTo, false).compare(expectatio, productum);
-    }
-
-    private boolean aequanturne() {
-      return comparo() == 0;
-    }
-
-    private boolean differuntne() {
-      return comparo() != 0;
-    }
-
-    private boolean subestne() {
-      return comparo() > 0;
-    }
-
-    private boolean superatne() {
-      return comparo() < 0;
-    }
-
-    private boolean autSubestneAutAequanturne() {
-      return comparo() >= 0;
-    }
-
-    private boolean autSuperatneAutAequanturne() {
-      return comparo() <= 0;
+      aequatio      = () -> comparatio.compare(this.expectatio, this.productum) == 0;
+      differentia   = () -> comparatio.compare(this.expectatio, this.productum) != 0;
+      parvitas      = () -> comparatio.compare(this.expectatio, this.productum) > 0;
+      magnitas      = () -> comparatio.compare(this.expectatio, this.productum) < 0;
+      parvitasNulla = () -> comparatio.compare(this.expectatio, this.productum) <= 0;
+      magnitasNulla = () -> comparatio.compare(this.expectatio, this.productum) >= 0;
     }
 
     /**
@@ -121,8 +112,8 @@ abstract class Tentamiculum<Hoc> extends Omne {
      * @param error Error scrībendus sī hoc aborītur
      * @return Hic valor
      */
-    public TentamiculumNumeralis <Illud> aequentur(@NonNull final String error) {
-      Assertions.assertTrue(aequanturne(), error);
+    public Comparabilium<Illud> aequentur(@NonNull final String error) {
+      Assertions.assertTrue(aequatio, error);
       return this;
     }
 
@@ -133,8 +124,8 @@ abstract class Tentamiculum<Hoc> extends Omne {
      * @param error Error scrībendus sī hoc aborītur
      * @return Hic valor
      */
-    public TentamiculumNumeralis <Illud> differant(@NonNull final String error) {
-      Assertions.assertTrue(differuntne(), error);
+    public Comparabilium<Illud> differant(@NonNull final String error) {
+      Assertions.assertTrue(differentia, error);
       return this;
     }
 
@@ -145,8 +136,8 @@ abstract class Tentamiculum<Hoc> extends Omne {
      * @param error Error scrībendus sī hoc aborītur
      * @return Hic valor
      */
-    public TentamiculumNumeralis <Illud> subsit(@NonNull final String error) {
-      Assertions.assertTrue(subestne(), error);
+    public Comparabilium<Illud> subsit(@NonNull final String error) {
+      Assertions.assertTrue(parvitas, error);
       return this;
     }
 
@@ -157,8 +148,8 @@ abstract class Tentamiculum<Hoc> extends Omne {
      * @param error Error scrībendus sī hoc aborītur
      * @return Hic valor
      */
-    public TentamiculumNumeralis <Illud> superet(@NonNull final String error) {
-      Assertions.assertTrue(superatne(), error);
+    public Comparabilium<Illud> superet(@NonNull final String error) {
+      Assertions.assertTrue(magnitas, error);
       return this;
     }
 
@@ -169,8 +160,8 @@ abstract class Tentamiculum<Hoc> extends Omne {
      * @param error Error scrībendus sī hoc aborītur
      * @return Hic valor
      */
-    public TentamiculumNumeralis <Illud> autSubsitAutAequentur(@NonNull final String error) {
-      Assertions.assertTrue(autSubestneAutAequanturne(), error);
+    public Comparabilium<Illud> autSubsitAutAequentur(@NonNull final String error) {
+      Assertions.assertTrue(magnitasNulla, error);
       return this;
     }
 
@@ -181,8 +172,8 @@ abstract class Tentamiculum<Hoc> extends Omne {
      * @param error Error scrībendus sī hoc aborītur
      * @return Hic valor
      */
-    public TentamiculumNumeralis <Illud> autSuperetAutAequentur(@NonNull final String error) {
-      Assertions.assertTrue(autSuperatneAutAequanturne(), error);
+    public Comparabilium<Illud> autSuperetAutAequentur(@NonNull final String error) {
+      Assertions.assertTrue(parvitasNulla, error);
       return this;
     }
   }
@@ -191,64 +182,73 @@ abstract class Tentamiculum<Hoc> extends Omne {
    * Classis est vās classibus {@link Tentamiculum}
    * <a href="https://docs.oracle.com/javase/10/docs/api/java/lang/String.html">String</a>que aliae
    */
-  static final class TentamiculumVersiculi extends Tentamiculum<String> {
+  static final class Versiculi extends Tentamiculum<String> {
+    @NonNull @Getter(lazy = true)
+    private final Comparator<String> comparatio = new NullComparator<>(String::compareTo, false);
+    @Nullable private BooleanSupplier aequatio    = null;
+    @Nullable private BooleanSupplier differentia = null;
+    @NonNull private final BooleanSupplier vacatio;
+    @NonNull private final BooleanSupplier continentia;
+
     /**
      * {@inheritDoc}
-     * @param prdctm valor {@link #productum} indicat.
+     * @param productum valor {@link #productum} indicat.
      */
-    public TentamiculumVersiculi(@Nullable String prdctm) {
-      super(prdctm);
+    public Versiculi(@Nullable String productum) {
+      super(productum);
+      vacatio     = () -> Objects.nonNull(this.productum) &&
+                           StringUtils.isWhitespace(this.productum);
+      continentia = () -> Objects.nonNull(this.productum) &&
+                          !StringUtils.isWhitespace(this.productum);
     }
 
     /**
      * {@inheritDoc}
-     * @param expct  valor {@link #expectatio} indicat.
-     * @param prdctm valor {@link #productum} indicat.
+     * @param expectatio  valor {@link #expectatio} indicat.
+     * @param productum valor {@link #productum} indicat.
      */
-    public TentamiculumVersiculi(@NonNull String expct, @Nullable String prdctm) {
-      super(expct, prdctm);
+    @SuppressWarnings("ConstantConditions")
+    public Versiculi(@NonNull String expectatio, @NonNull String productum) {
+      super(expectatio, productum);
+
+      aequatio    = () -> comparatio.compare(this.expectatio, this.productum) == 0;
+      differentia = () -> comparatio.compare(this.expectatio, this.productum) != 0;
+
+      vacatio     = () -> Objects.nonNull(this.productum) &&
+                          StringUtils.isWhitespace(this.productum);
+      continentia = () -> ObjectUtils.allNotNull(this.expectatio, this.productum) &&
+                          this.productum.contains(this.expectatio);
     }
 
     /**
      * {@inheritDoc}
      *
-     * @param prdctm valor {@link #productum} indicat.
+     * @param productum valor {@link #productum} indicat.
      */
-    public TentamiculumVersiculi(@NonNull Object prdctm) {
-      super(prdctm.toString());
+    public Versiculi(@NonNull Object productum) {
+      super(productum.toString());
+      vacatio     = () -> Objects.nonNull(this.productum) &&
+                           StringUtils.isWhitespace(this.productum);
+      continentia = () -> Objects.nonNull(this.productum) &&
+                          !StringUtils.isWhitespace(this.productum);
     }
 
     /**
      * {@inheritDoc}
      *
-     * @param expct  valor {@link #expectatio} indicat.
-     * @param prdctm valor {@link #productum} indicat.
+     * @param exepctatio  valor {@link #expectatio} indicat.
+     * @param productum valor {@link #productum} indicat.
      */
-    public TentamiculumVersiculi(@NonNull String expct, @NonNull Object prdctm) {
-      super(expct, prdctm.toString());
-    }
+    @SuppressWarnings("ConstantConditions")
+    public Versiculi(@NonNull String exepctatio, @NonNull Object productum) {
+      super(exepctatio, productum.toString());
 
-    private boolean aequanturne() {
-      //noinspection ConstantConditions
-      return ObjectUtils.allNotNull(expectatio, productum) && expectatio.equals(productum);
-    }
+      aequatio    = () -> comparatio.compare(this.expectatio, this.productum) == 0;
+      differentia = () -> comparatio.compare(this.expectatio, this.productum) != 0;
 
-    private boolean differuntne() {
-      //noinspection ConstantConditions
-      return ObjectUtils.allNotNull(expectatio, productum) && !expectatio.equals(productum);
-    }
-
-    private boolean continetne() {
-      //noinspection ConstantConditions
-      return ObjectUtils.allNotNull(expectatio, productum) && productum.contains(expectatio);
-    }
-
-    private boolean vacatne() {
-      return StringUtils.isEmpty(productum) || StringUtils.isWhitespace(productum);
-    }
-
-    private boolean aliamContinetne() {
-      return StringUtils.isNotEmpty(productum) && !StringUtils.isWhitespace(productum);
+      vacatio     = () -> StringUtils.isWhitespace(this.productum);
+      continentia = () -> ObjectUtils.allNotNull(this.expectatio, this.productum) &&
+                          this.productum.contains(this.expectatio);
     }
 
     /**
@@ -258,8 +258,9 @@ abstract class Tentamiculum<Hoc> extends Omne {
      * @param error Error scrībendus sī hoc aborītur
      * @return Hic valor
      */
-    public TentamiculumVersiculi aequentur(@NonNull final String error) {
-      Assertions.assertTrue(aequanturne(), error);
+    public Versiculi aequentur(@NonNull final String error) {
+      Assertions.assertNotNull(aequatio);
+      Assertions.assertTrue(aequatio, error);
       return this;
     }
 
@@ -270,8 +271,9 @@ abstract class Tentamiculum<Hoc> extends Omne {
      * @param error Error scrībendus sī hoc aborītur
      * @return Hic valor
      */
-    public TentamiculumVersiculi differant(@NonNull final String error) {
-      Assertions.assertTrue(differuntne(), error);
+    public Versiculi differant(@NonNull final String error) {
+      Assertions.assertNotNull(differentia);
+      Assertions.assertTrue(differentia, error);
       return this;
     }
 
@@ -282,8 +284,8 @@ abstract class Tentamiculum<Hoc> extends Omne {
      * @param error Error scrībendus sī hoc aborītur
      * @return Hic valor
      */
-    public TentamiculumVersiculi contineat(@NonNull final String error) {
-      Assertions.assertTrue(continetne(), error);
+    public Versiculi contineat(@NonNull final String error) {
+      Assertions.assertTrue(continentia, error);
       return this;
     }
 
@@ -294,8 +296,8 @@ abstract class Tentamiculum<Hoc> extends Omne {
      * @param error Error scrībendus sī hoc aborītur
      * @return Hic valor
      */
-    public TentamiculumVersiculi vacet(@NonNull final String error) {
-      Assertions.assertTrue(vacatne(), error);
+    public Versiculi vacet(@NonNull final String error) {
+      Assertions.assertTrue(vacatio, error);
       return this;
     }
 
@@ -306,8 +308,8 @@ abstract class Tentamiculum<Hoc> extends Omne {
      * @param error Error scrībendus sī hoc aborītur
      * @return Hic valor
      */
-    public TentamiculumVersiculi aliamContineat(@NonNull final String error) {
-      Assertions.assertTrue(aliamContinetne(), error);
+    public Versiculi aliamContineat(@NonNull final String error) {
+      Assertions.assertTrue(continentia, error);
       return this;
     }
   }

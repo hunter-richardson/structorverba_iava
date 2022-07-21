@@ -4,7 +4,7 @@ import androidx.annotation.NonNull;
 import com.structorverba.officia.enumerationes.*;
 import com.structorverba.officia.miscella.*;
 import com.structorverba.officia.tentamina.Tentamen;
-import com.structorverba.officia.verba.*;
+import com.structorverba.officia.verba.simplicia.Numerus;
 import lombok.Getter;
 import org.junit.jupiter.api.*;
 
@@ -28,7 +28,7 @@ final class Numeri extends Omne {
   }
 
   @NonNull @Getter(lazy = true)
-  private final StructorVerba structor = StructorVerba.faciendum.get();
+  private final Structor structor = Structor.faciendum.get();
 
   @NonNull @Getter(lazy = true)
   private final Consumer<Operatio> agendum = operatio -> {
@@ -36,7 +36,7 @@ final class Numeri extends Omne {
             //noinspection ConstantConditions
             final short expectatus = operatio.arabicus.apply(numeri.getKey().intValue(), numeri.getValue().intValue()).shortValue();
             try {
-              System.out.println(new Tentamen.TentamenMathematicum(numeri, operatio)
+              System.out.println(new Tentamen.Mathematicum(numeri, operatio)
                       .exsequar(structor.numeram(expectatus)));
             } catch (IllegalArgumentException e) {
               System.out.printf("Prōductā conversiōnis relicta'st prōductiō numerī %d.%n", expectatus);
@@ -55,8 +55,8 @@ final class Numeri extends Omne {
   @Test @Order(1)
   public void conversionis() {
     try {
-      System.out.println(new Tentamen.TentamenNumeraleConversionis(XLII_SCRIPTIO, XLII_NUMERUM)
-              .exsequar(structor.numeram(XLII_NUMERUM)));
+      System.out.println(new Tentamen.Numerale.Conversionis(XLII_SCRIPTIO, XLII_NUMERUM)
+                                .exsequar(structor.numeram(XLII_NUMERUM)));
     } catch (IllegalArgumentException e) {
       System.out.printf("Prōductā conversiōnis relicta'st prōductiō numerī %d.%n", XLII_NUMERUM);
     }
@@ -69,8 +69,8 @@ final class Numeri extends Omne {
   @Test @Order(2)
   public void reversionis() {
     try {
-      System.out.println(new Tentamen.TentamenNumeraleReversionis(XLII_NUMERUM, XLII_SCRIPTIO)
-              .exsequar(structor.adveniam(XLII_SCRIPTIO, Categoria.NUMERUS)));
+      System.out.println(new Tentamen.Numerale.Reversionis(XLII_NUMERUM, XLII_SCRIPTIO)
+                                  .exsequar(structor.adveniam(XLII_SCRIPTIO, Categoria.NUMERUS)));
     } catch (IllegalArgumentException e) {
       System.out.printf("Prōductā conversiōnis relicta'st prōductiō numerī %d.%n", XLII_NUMERUM);
     }
@@ -85,8 +85,7 @@ final class Numeri extends Omne {
     final short numerus = Integer.valueOf(new Random().ints(1, NUMERUM_MAXIMUM)
                                                       .distinct().findFirst().orElse(10)).shortValue();
     try {
-      System.out.println(new Tentamen.TentamenNumeraleCombinationis(numerus)
-              .exsequar(structor.numeram(numerus)));
+      System.out.println(new Tentamen.Numerale.Combinationis(numerus).exsequar(structor.numeram(numerus)));
     } catch (IllegalArgumentException e) {
       System.out.println("Prōductā conversiōnis relicta'st prōductiō numerī.");
     }

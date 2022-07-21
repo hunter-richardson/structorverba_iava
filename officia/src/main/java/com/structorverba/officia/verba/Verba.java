@@ -87,6 +87,6 @@ public final class Verba extends Omne {
   public String toString() {
     final StringBuilder structor = new StringBuilder();
     series.forEach(verbum -> structor.append(verbum).append(' '));
-    return Utilitas.primamCapitaneamScribo(structor.toString());
+    return Utilitas.primaCapitanea.apply(structor.toString());
   }
 }

@@ -17,7 +17,7 @@ import lombok.Getter;
 @SuppressWarnings({"SpellCheckingInspection", "FieldCanBeLocal", "NewClassNamingConvention"})
 public class Carthago extends Omne {
   @NonNull @Getter(lazy = true)
-  private final StructorVerba structor = StructorVerba.faciendum.get();
+  private final Structor structor = Structor.faciendum.get();
 
   @NonNull private final String producta = "Cēterum cēnseō Carthāginem esse dēlendam";
 
@@ -27,7 +27,7 @@ public class Carthago extends Omne {
    */
   @Test @SuppressWarnings("ConstantConditions")
   public void deleatur() {
-    System.out.println(new Tentamen.TentamenVerbale(producta, "prōducta")
+    System.out.println(new Tentamen.Verbale(producta, "prōducta")
                          .exsequar(structor.strue(structor.adveniam("cēterum", Categoria.ADVERBIUM),
                                                   structor.adveniam("cēnsēre", Categoria.ACTUS,
                                                                     Modus.INDICATIVUS, Vox.ACTIVA, Tempus.PRAESENS,

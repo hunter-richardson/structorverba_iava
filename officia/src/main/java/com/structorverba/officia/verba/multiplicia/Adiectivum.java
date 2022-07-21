@@ -1,33 +1,30 @@
 package com.structorverba.officia.verba.multiplicia;
 
 import androidx.annotation.NonNull;
-import androidx.annotation.*;
-import com.structorverba.officia.curatores.multiplicia.CuratorAdiectivis;
 import com.structorverba.officia.enumerationes.*;
-import com.structorverba.officia.interfacta.*;
-import com.structorverba.officia.inventores.InventorAdiectivis;
-import com.structorverba.officia.lectores.LectorMultiplicibus;
-import com.structorverba.officia.nuntii.*;
-import com.structorverba.officia.tenores.TenorMultiplicibus;
-import jakarta.ejb.Singleton;
+import com.structorverba.officia.nuntii.Nuntius;
+import com.structorverba.officia.quadriiugia.*;
+import com.structorverba.officia.verba.Verbum;
+import com.structorverba.officia.verba.interfacta.*;
+import jakarta.ejb.DependsOn;
 import lombok.*;
-import org.apache.commons.lang3.*;
 
-import java.util.function.Supplier;
+import java.util.function.BiFunction;
 
 /**
  * Classis {@link Adiectivum} repraesentat adiectīva ut coniectēris. <br>
  * Rēs huius classis catēgoriam {@link Categoria#NOMEN} ūtuntur cōnservātaque sunt in scrīniō
  * <a href="{@docRoot}/../src/main/resources">auxiliārēs</a>/adiectīva. <br>
  * Discrīmina prīmōria inter hīs classibus classeque {@link Pronomen} est huius valor {@link #gradus}.
- * @see LectorMultiplicibus.LectorAdiectivis
- * @see TenorMultiplicibus.TenorAdiectivis
- * @see InventorAdiectivis
- * @see CuratorAdiectivis
- * @see NuntiusAdiectivorum
+ * @see Lector.Adiectivis
+ * @see Tenor.Adiectivis
+ * @see Inventor.Adiectivis
+ * @see Curator.Adiectivis
+ * @see Nuntius.Verbis.Adiectivis
  */
 @SuppressWarnings("SpellCheckingInspection")
-public final class Adiectivum extends Declinabile<Adiectivum>
+@DependsOn("Nuntius.Verbis.Adiectivis")
+public final class Adiectivum extends Verbum.Multiplex.Declinabile<Adiectivum>
         implements Curabile<Adiectivum>, Legibile<Adiectivum>, Tenebile<Adiectivum> {
   /**
    * Hic valor potentiam reī huius dēsignat.
@@ -35,7 +32,7 @@ public final class Adiectivum extends Declinabile<Adiectivum>
    */
   @NonNull public final Gradus gradus;
   @NonNull @Getter(lazy = true)
-  private final NuntiusAdiectivorum nuntius = NuntiusAdiectivorum.faciendum.get();
+  private final Nuntius.Verbis.Adiectivis nuntius = Nuntius.Verbis.Adiectivis.faciendum.get();
 
   @Builder(access = AccessLevel.PUBLIC, toBuilder = true)
   private Adiectivum(@NonNull final Specialitas specialitas, @NonNull final Genus genus,
@@ -47,23 +44,22 @@ public final class Adiectivum extends Declinabile<Adiectivum>
     nuntius.plusGarrio("Scrībor ut", scriptio);
   }
 
-  /**
-   * Classis {@link NuntiusAdiectivorum} est vās classis {@link Nuntius} classī {@link Adiectivum}}
-   * @see Adiectivum
-   */
-  @Singleton
-  private static final class NuntiusAdiectivorum extends Nuntius {
-    @Nullable private static NuntiusAdiectivorum instantia = null;
-
     /**
-     * Hic valor viam reī huius classis facit.
-     * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
-     */
-    @NonNull private static final Supplier<NuntiusAdiectivorum> faciendum =
-            () -> ObjectUtils.firstNonNull(instantia, instantia = new NuntiusAdiectivorum());
-
-    private NuntiusAdiectivorum() {
-      super(ParametriNuntii.para(Actus.class));
-    }
-  }
+     * Hic modus verbum dē valōribus imputātīs dēclīnat.
+     * */
+  @NonNull public static BiFunction<Casus, Numeralis, String> declinatio =
+          (casus, numeralis) -> "adiectīv".concat(switch (casus) {
+            case NOMINATIVUS, ACCUSATIVUS, VOCATIVUS, DERECTUS -> switch (numeralis) {
+              case SINGULARIS, NULLUS -> "um";
+              case PLURALIS -> "a";
+            };
+            case GENITIVUS -> switch (numeralis) {
+              case SINGULARIS, NULLUS -> "ī";
+              case PLURALIS -> "ōrum";
+            };
+            case DATIVUS, ABLATIVUS, INSTRUMENTALIS, LOCATIVUS -> switch (numeralis) {
+              case SINGULARIS, NULLUS -> "ō";
+              case PLURALIS -> "īs";
+            };
+          });
 }

@@ -1,14 +1,14 @@
 package com.structorverba.officia.enumerationes;
 
 import androidx.annotation.NonNull;
-import com.structorverba.officia.interfacta.Declinabile;
+import com.structorverba.officia.verba.Verbum;
 import org.apache.commons.lang3.StringUtils;
 
 import java.util.stream.Stream;
 
 /**
  * Haec ēnumerātiō dēsignat utrum verbum est certum necne.
- * @see Declinabile
+ * @see Verbum.Multiplex.Declinabile
  */
 @SuppressWarnings("SpellCheckingInspection")
 public enum Specialitas {
@@ -61,7 +61,6 @@ public enum Specialitas {
   @SuppressWarnings("ConstantConditions")
   @NonNull public static Specialitas ut(@NonNull final Enum <?> illud) {
     final Specialitas hoc = (Specialitas) illud;
-    return hoc.equals(illud) ? hoc
-                             : NULLUM;
+    return hoc.equals(illud) ? hoc : NULLUM;
   }
 }

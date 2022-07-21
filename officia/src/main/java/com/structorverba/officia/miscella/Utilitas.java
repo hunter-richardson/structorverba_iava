@@ -2,7 +2,7 @@ package com.structorverba.officia.miscella;
 
 import androidx.annotation.NonNull;
 import com.structorverba.officia.enumerationes.Categoria;
-import com.structorverba.officia.lectores.LectorPraepositionibus;
+import com.structorverba.officia.quadriiugia.*;
 import com.structorverba.officia.verba.Verbum;
 import org.apache.commons.io.FilenameUtils;
 import org.apache.commons.lang3.*;
@@ -11,7 +11,7 @@ import java.io.*;
 import java.nio.charset.*;
 import java.nio.file.*;
 import java.util.*;
-import java.util.function.BinaryOperator;
+import java.util.function.*;
 import java.util.stream.Stream;
 
 /**
@@ -26,29 +26,27 @@ public final class Utilitas extends Omne {
   @NonNull public static final Locale LOCULUS = Locale.forLanguageTag("Latn");
 
   /**
-   * @param haec valor scrībendus
-   * @return Valor {@code haec} cum litterīs capitāneīs
+   * Hic modus litterās capitāneās scrībit
    */
-  @NonNull public static String capitaneasScribo(@NonNull final String haec) {
-    return haec.trim().toUpperCase(LOCULUS);
-  }
+  @NonNull public static final Function<String, String> capitaneae = hoc -> hoc.trim().toUpperCase(LOCULUS);
 
   /**
-   * @param haec valor scrībendus
-   * @return Valor {@code haec} cum litterīs minusculīs
+   * Hic modus litterās capitāneās scrībit
    */
-  @NonNull public static String minusculasScribo(@NonNull final String haec) {
-    return haec.trim().toLowerCase(LOCULUS);
-  }
+  @NonNull public static final Function<String, String> minisculae = hoc -> hoc.trim().toLowerCase(LOCULUS);
 
   /**
-   * @param haec valor scrībendus
-   * @return Valor {@code haec} cum litterīs minusculīs praeter prīmam capitāneam
+   * Hic modus litterās capitāneās scrībit
    */
-  @NonNull public static String primamCapitaneamScribo(@NonNull final String haec) {
-    return String.format("%s%s", String.valueOf(haec.charAt(0)).toUpperCase(LOCULUS),
-                         haec.substring(1).trim());
-  }
+  @NonNull public static final Function<String, String> primaCapitanea =
+          hoc -> String.format("%s%s", capitaneae.apply(String.valueOf(hoc.charAt(0))),
+                                       minisculae.apply(hoc.substring(1)));
+
+  /**
+   * Hic valor classem {@link Random} invocat ut dēcrēta bīnāria agat.
+   * @see Random#nextBoolean()
+   * */
+  @NonNull public static BinaryOperator<?> fors = (primum, secundum) -> new Random().nextBoolean() ? primum : secundum;
 
   /**
    * @param locus locus adveniendus
@@ -73,15 +71,15 @@ public final class Utilitas extends Omne {
    * Hic modus nōminem scāpī <a href="{@docRoot}/../src/main/resources">dictiōnāriō</a> temere sēligit.
    * @param categoria  Rēs classis {@link Categoria} quae extēnsiōnem nōminandam classis {@link Verbum} repraesentat.
    * @return Nōminem scāpī fortuītī
-   * @see #invocaFortem
+   * @see #fors
    * */
   @SuppressWarnings({"unchecked", "ConstantConditions"})
   @NonNull public static String fortuitumLegam(@NonNull final Categoria categoria) throws IOException {
     switch (categoria) {
       case PRAEPOSITIO: case NUMERUS:
         return (switch (categoria) {
-          case PRAEPOSITIO -> LectorPraepositionibus.faciendum.get().fortuitumLegam();
-          case NUMERUS -> StructorVerba.faciendum.get().fortuitumNumeram();
+          case PRAEPOSITIO -> Lector.Praepositionibus.faciendum.get().fortuitumLegam();
+          case NUMERUS -> Curator.Numeris.faciendum.get().fortuitumNumeram();
           default -> null;
         }).lemma;
       default:
@@ -90,7 +88,7 @@ public final class Utilitas extends Omne {
            via.toFile().exists() && via.toFile().isDirectory()) {
           try (final Stream<Path> loci = Files.walk(via, 0).distinct().filter(Objects::nonNull)
                                               .filter(Files::isRegularFile).filter(Files::isReadable)) {
-            final Path hoc = loci.reduce((BinaryOperator<Path>) invocaFortem).orElseGet(null);
+            final Path hoc = loci.reduce((BinaryOperator<Path>) fors).orElseGet(null);
             return ObjectUtils.allNotNull(hoc, hoc.toFile()) ? FilenameUtils.getBaseName(hoc.toFile().getName())
                                                              : StringUtils.EMPTY;
           }
@@ -104,18 +102,12 @@ public final class Utilitas extends Omne {
    * Hic modus nōminem scāpī <a href="{@docRoot}/../src/main/resources">dictiōnāriō</a> temere sēligit.
    * @return Nōminem scāpī fortuītī
    * @see #fortuitumLegam(Categoria)
-   * @see #invocaFortem
+   * @see #fors
    * */
   @SuppressWarnings({"unchecked", "OptionalGetWithoutIsPresent", "unused"})
   @NonNull public static String fortitumLegam() throws IOException {
     return fortuitumLegam(Arrays.stream(Categoria.values())
-                                .reduce((BinaryOperator<Categoria>) invocaFortem)
+                                .reduce((BinaryOperator<Categoria>) fors)
                                 .get());
   }
-
-  /**
-   * Hic valor classem {@link Random} invocat ut dēcrēta bīnāria agat.
-   * @see Random#nextBoolean()
-   * */
-  @NonNull public static BinaryOperator<?> invocaFortem = (primum, secundum) -> new Random().nextBoolean() ? primum : secundum;
 }

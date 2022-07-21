@@ -4,7 +4,7 @@ import com.structorverba.officia.enumerationes.*;
 
 import androidx.annotation.NonNull;
 import com.structorverba.officia.miscella.Omne;
-import com.structorverba.officia.miscella.StructorVerba;
+import com.structorverba.officia.miscella.Structor;
 import com.structorverba.officia.tentamina.Tentamen;
 import org.junit.jupiter.api.MethodOrderer;
 import org.junit.jupiter.api.Order;
@@ -26,7 +26,7 @@ import lombok.Getter;
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 final class DoloremIpsum extends Omne {
   @NonNull @Getter(lazy = true)
-  private final StructorVerba structor = StructorVerba.faciendum.get();
+  private final Structor structor = Structor.faciendum.get();
 
   @NonNull private final String productaPrima   = "Neque porrō quisquam est";
   @NonNull private final String productaSecunda = "Qui dolōrem ipsum quia dolor sit amet";
@@ -41,7 +41,7 @@ final class DoloremIpsum extends Omne {
    */
   @Test @Order(1)
   public void prima() {
-    System.out.println(new Tentamen.TentamenVerbale(productaPrima, "prīma")
+    System.out.println(new Tentamen.Verbale(productaPrima, "prīma")
                          .exsequar(structor.strue(structor.adveniam("neque", Categoria.CONIUNCTIO),
                                                   structor.adveniam("porrō", Categoria.ADVERBIUM),
                                                   structor.adveniam("quidquam", Categoria.PRONOMEN,
@@ -58,7 +58,7 @@ final class DoloremIpsum extends Omne {
    */
   @Test @Order(2)
   public void secunda() {
-    System.out.println(new Tentamen.TentamenVerbale(productaSecunda, "secunda")
+    System.out.println(new Tentamen.Verbale(productaSecunda, "secunda")
                          .exsequar(structor.strue(structor.adveniam("quod", Categoria.PRONOMEN,
                                                                     Specialitas.COMMUNE, Genus.MASCULINUM,
                                                                     Casus.NOMINATIVUS, Numeralis.PLURALIS),
@@ -86,7 +86,7 @@ final class DoloremIpsum extends Omne {
    */
   @Test @Order(3)
   public void tertia() {
-    System.out.println(new Tentamen.TentamenVerbale(productaTertia, "tertia")
+    System.out.println(new Tentamen.Verbale(productaTertia, "tertia")
                          .exsequar(structor.strue(structor.adveniam("consectārī", Categoria.ACTUS,
                                                                     Modus.SUBIUNCTIVUS, Vox.ACTIVA, Tempus.PRAESENS,
                                                                     Numeralis.SINGULARIS, Persona.TERTIA),
@@ -103,7 +103,7 @@ final class DoloremIpsum extends Omne {
    */
   @Test @Order(4)
   public void quarta() {
-    System.out.println(new Tentamen.TentamenVerbale(productaQuarta, "quārta")
+    System.out.println(new Tentamen.Verbale(productaQuarta, "quārta")
                          .exsequar(structor.strue(structor.adveniam("sed", Categoria.CONIUNCTIO),
                                                   structor.adveniam("quia", Categoria.ADVERBIUM),
                                                   structor.adveniam("nōnnumquam", Categoria.ADVERBIUM),
@@ -127,7 +127,7 @@ final class DoloremIpsum extends Omne {
    */
   @Test @Order(5)
   public void quinta() {
-    System.out.println(new Tentamen.TentamenVerbale(productaQuinta, "quīnta")
+    System.out.println(new Tentamen.Verbale(productaQuinta, "quīnta")
                          .exsequar(structor.strue(structor.adveniam("ut", Categoria.CONIUNCTIO),
                                                   structor.adveniam("labor", Categoria.NOMEN,
                                                                     Specialitas.COMMUNE, Genus.MASCULINUM,
@@ -157,7 +157,7 @@ final class DoloremIpsum extends Omne {
    */
   @Test @Order(6)
   public void cuncta() {
-    System.out.println(new Tentamen.TentamenVerbale(productaCuncta, "cūncta")
+    System.out.println(new Tentamen.Verbale(productaCuncta, "cūncta")
                          .exsequar(structor.strue(structor.adveniam("neque", Categoria.CONIUNCTIO),
                                                   structor.adveniam("porrō", Categoria.ADVERBIUM),
                                                   structor.adveniam("quidquam", Categoria.PRONOMEN,

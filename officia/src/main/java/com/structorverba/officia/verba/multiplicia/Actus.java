@@ -2,33 +2,30 @@ package com.structorverba.officia.verba.multiplicia;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.*;
-import com.structorverba.officia.curatores.multiplicia.CuratorActis;
 import com.structorverba.officia.enumerationes.*;
-import com.structorverba.officia.interfacta.*;
-import com.structorverba.officia.inventores.InventorActis;
-import com.structorverba.officia.lectores.LectorMultiplicibus;
-import com.structorverba.officia.miscella.Utilitas;
-import com.structorverba.officia.nuntii.*;
-import com.structorverba.officia.tenores.TenorMultiplicibus;
-import jakarta.ejb.Singleton;
+import com.structorverba.officia.nuntii.Nuntius;
+import com.structorverba.officia.quadriiugia.*;
+import com.structorverba.officia.verba.Verbum;
+import com.structorverba.officia.verba.interfacta.*;
+import jakarta.ejb.DependsOn;
 import lombok.*;
-import org.apache.commons.lang3.*;
 
-import java.util.function.Supplier;
+import java.util.function.BiFunction;
 
 /**
  * Classis {@link Actus} repraesentat nōmina ut coniectēris. <br>
  * Rēs huius classis catēgoriam {@link Categoria#ACTUS} ūtuntur cōnservātaque sunt in
  * scrīniō <a href="{@docRoot}/../src/main/resources">auxiliārēs</a>/āctī.
- * @see LectorMultiplicibus.LectorActis
- * @see TenorMultiplicibus.TenorActis
- * @see InventorActis
- * @see CuratorActis
- * @see NuntiusActorum
+ * @see Lector.Actis
+ * @see Tenor.Actis
+ * @see Inventor.Actis
+ * @see Curator.Actis
+ * @see Nuntius.Verbis.Actis
  */
 @SuppressWarnings({"SpellCheckingInspection", "unused" })
-public final class Actus extends Multiplex<Actus>
-        implements Coniugabile<Actus>, Curabile<Actus>, Legibile<Actus>, Tenebile<Actus> {
+@DependsOn("Nuntius.Verbis.Actis")
+public final class Actus extends Verbum.Multiplex<Actus>
+        implements Curabile<Actus>, Legibile<Actus>, Tenebile<Actus> {
   /**
    * Hic valor modum reī huius dēsignat.
    * @see Modus
@@ -55,19 +52,19 @@ public final class Actus extends Multiplex<Actus>
    */
   @NonNull public final Persona persona;
   @NonNull @Getter(lazy = true)
-  private final LectorMultiplicibus.LectorAdiectivis adiectiva = LectorMultiplicibus.LectorAdiectivis.faciendum.get();
+  private final Lector.Adiectivis adiectiva = Lector.Adiectivis.faciendum.get();
   @NonNull @Getter(lazy = true)
-  private final LectorMultiplicibus.LectorNominibus nomina = LectorMultiplicibus.LectorNominibus.faciendum.get();
+  private final Lector.Nominibus nomina = Lector.Nominibus.faciendum.get();
   @NonNull @Getter(lazy = true)
-  private final LectorMultiplicibus.LectorActis acta = LectorMultiplicibus.LectorActis.faciendum.get();
+  private final Lector.Actis acta = Lector.Actis.faciendum.get();
   @NonNull @Getter(lazy = true)
-  private final NuntiusActorum nuntius = NuntiusActorum.faciendum.get();
+  private final Nuntius.Verbis.Actis nuntius = Nuntius.Verbis.Actis.faciendum.get();
 
   @Builder(access = AccessLevel.PUBLIC, toBuilder = true)
   private Actus(@NonNull final Modus modus, @NonNull final Vox vox, @NonNull final Tempus tempus,
                 @NonNull final Numeralis numeralis, @NonNull final Persona persona,
                 @NonNull final String lemma, @NonNull final String scriptio) {
-    super(Categoria.ACTUS, lemma, Utilitas.minusculasScribo(scriptio));
+    super(Categoria.ACTUS, lemma, scriptio);
     this.modus = modus;
     this.vox = vox;
     this.tempus = tempus;
@@ -78,7 +75,7 @@ public final class Actus extends Multiplex<Actus>
 
   /**
    * {@inheritDoc}
-   * @see LectorMultiplicibus.LectorAdiectivis#adveniam(String, Enum[])
+   * @see Lector.Adiectivis#adveniam(String, Enum[])
    * @see Modus#PARTICIPALIS
    */
   @Nullable public Adiectivum participem(@NonNull final Vox vx, @NonNull final Tempus tmps,
@@ -97,7 +94,7 @@ public final class Actus extends Multiplex<Actus>
 
   /**
    * {@inheritDoc}
-   * @see LectorMultiplicibus.LectorAdiectivis#adveniam(String, Enum[])
+   * @see Lector.Adiectivis#adveniam(String, Enum[])
    * @see Modus#PARTICIPALIS
    * @see #participem(Vox, Tempus, Genus, Casus, Numeralis)
    */
@@ -108,7 +105,7 @@ public final class Actus extends Multiplex<Actus>
 
   /**
    * {@inheritDoc}
-   * @see LectorMultiplicibus.LectorAdiectivis#adveniam(String, Enum[])
+   * @see Lector.Adiectivis#adveniam(String, Enum[])
    * @see Modus#PARTICIPALIS
    * @see #participem(Vox, Tempus, Genus, Casus, Numeralis)
    */
@@ -119,7 +116,7 @@ public final class Actus extends Multiplex<Actus>
 
   /**
    * {@inheritDoc}
-   * @see LectorMultiplicibus.LectorAdiectivis#adveniam(String, Enum[])
+   * @see Lector.Adiectivis#adveniam(String, Enum[])
    * @see Modus#PARTICIPALIS
    * @see #participem(Vox, Tempus, Genus, Casus, Numeralis)
    */
@@ -130,7 +127,7 @@ public final class Actus extends Multiplex<Actus>
 
   /**
    * {@inheritDoc}
-   * @see LectorMultiplicibus.LectorNominibus#adveniam(String, Enum[])
+   * @see Lector.Nominibus#adveniam(String, Enum[])
    * @see Tempus#GERUNDIVUS
    * @see Tempus#SUPINUS
    * @see Genus#NEUTRUM
@@ -159,23 +156,29 @@ public final class Actus extends Multiplex<Actus>
   }
 
   /**
-   * Classis {@link NuntiusActorum} est vās classis {@link Nuntius} classī {@link Actus}}
-   * @see Actus
-   */
-  @Singleton
-  private static final class NuntiusActorum extends Nuntius {
-    @Nullable private static NuntiusActorum instantia = null;
-
-    /**
-     * Hic valor viam reī huius classis facit.
-     * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
-     */
-    @NonNull private static final Supplier<NuntiusActorum> faciendum =
-            () -> ObjectUtils.firstNonNull(instantia, instantia = new NuntiusActorum());
-
-    private NuntiusActorum() {
-      super(ParametriNuntii.para(Actus.class));
-    }
-  }
+   * Hic modus verbum dē valōribus imputātīs dēclīnat.
+   * */
+  @NonNull public static BiFunction<Casus, Numeralis, String> declinatio =
+          (casus, numeralis) -> "āct".concat(switch (casus) {
+            case NOMINATIVUS, VOCATIVUS, DERECTUS -> switch (numeralis) {
+              case SINGULARIS, NULLUS -> "us";
+              case PLURALIS -> "ūs";
+            };
+            case GENITIVUS -> switch (numeralis) {
+              case SINGULARIS, NULLUS -> "ūs";
+              case PLURALIS -> "uum";
+            };
+            case DATIVUS -> switch (numeralis) {
+              case SINGULARIS, NULLUS -> "uī";
+              case PLURALIS -> "ibus";
+            };
+            case ACCUSATIVUS -> switch (numeralis) {
+              case SINGULARIS, NULLUS -> "um";
+              case PLURALIS -> "ūs";
+            };
+            case ABLATIVUS, INSTRUMENTALIS, LOCATIVUS -> switch (numeralis) {
+              case SINGULARIS, NULLUS -> "ū";
+              case PLURALIS -> "ibus";
+            };
+          });
 }
-

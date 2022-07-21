@@ -2,7 +2,7 @@ package com.structorverba.officia.enumerationes;
 
 import androidx.annotation.NonNull;
 import com.github.chaosfirebolt.converter.constants.IntegerType;
-import com.structorverba.officia.verba.*;
+import com.structorverba.officia.verba.simplicia.Numerus;
 
 import java.util.function.BiFunction;
 

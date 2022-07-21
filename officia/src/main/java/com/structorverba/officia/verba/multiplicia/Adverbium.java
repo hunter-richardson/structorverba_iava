@@ -1,30 +1,29 @@
 package com.structorverba.officia.verba.multiplicia;
 
 import androidx.annotation.NonNull;
-import androidx.annotation.*;
-import com.structorverba.officia.curatores.multiplicia.CuratorAdverbiis;
 import com.structorverba.officia.enumerationes.*;
-import com.structorverba.officia.interfacta.*;
-import com.structorverba.officia.lectores.LectorMultiplicibus;
-import com.structorverba.officia.nuntii.*;
-import com.structorverba.officia.tenores.TenorMultiplicibus;
-import jakarta.ejb.Singleton;
+import com.structorverba.officia.nuntii.Nuntius;
+import com.structorverba.officia.quadriiugia.*;
+import com.structorverba.officia.verba.Verbum;
+import com.structorverba.officia.verba.interfacta.*;
+import jakarta.ejb.DependsOn;
 import lombok.*;
-import org.apache.commons.lang3.*;
 
-import java.util.function.Supplier;
+import java.util.function.BiFunction;
 
 /**
  * Classis {@link Adverbium} repraesentat adverbia ut coniectēris. <br>
  * Rēs huius classis catēgoriam {@link Categoria#ADVERBIUM} ūtuntur cōnservātaque sunt in
  * scrīnio <a href="{@docRoot}/../src/main/resources">auxiliārēs</a>/adverbia.
- * @see LectorMultiplicibus.LectorAdverbiis
- * @see TenorMultiplicibus.TenorAdverbiis
- * @see CuratorAdverbiis
- * @see NuntiusAdverbiorum
+ * @see Lector.Adverbiis
+ * @see Tenor.Adverbiis
+ * @see Inventor.Adverbiis
+ * @see Curator.Adverbiis
+ * @see Nuntius.Verbis.Adverbiis
  */
 @SuppressWarnings("SpellCheckingInspection")
-public class Adverbium extends Multiplex<Adverbium>
+@DependsOn("Nuntius.Verbis.Adverbiis")
+public class Adverbium extends Verbum.Multiplex<Adverbium>
         implements Curabile<Adverbium>, Legibile<Adverbium>, Tenebile<Adverbium> {
   /**
    * Hic valor potentiam reī huius dēsignat.
@@ -32,7 +31,7 @@ public class Adverbium extends Multiplex<Adverbium>
    */
   @NonNull public final Gradus gradus;
   @NonNull @Getter(lazy = true)
-  private final NuntiusAdverbiorum nuntius = NuntiusAdverbiorum.faciendum.get();
+  private final Nuntius.Verbis.Adverbiis nuntius = Nuntius.Verbis.Adverbiis.faciendum.get();
 
   @Builder(access = AccessLevel.PUBLIC, toBuilder = true)
   private Adverbium(@NonNull final Gradus gradus, @NonNull final String lemma,
@@ -42,23 +41,22 @@ public class Adverbium extends Multiplex<Adverbium>
     nuntius.plusGarrio("Scrībor ut", scriptio);
   }
 
-  /**
-   * Classis {@link NuntiusAdverbiorum} est vās classis {@link Nuntius} classī {@link Adverbium}
-   * @see Adverbium
-   */
-  @Singleton
-  private static final class NuntiusAdverbiorum extends Nuntius {
-    @Nullable private static NuntiusAdverbiorum instantia = null;
-
     /**
-     * Hic valor viam reī huius classis facit.
-     * @see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html">Supplier</a>
-     */
-    @NonNull private static final Supplier<NuntiusAdverbiorum> faciendum =
-            () -> ObjectUtils.firstNonNull(instantia, instantia = new NuntiusAdverbiorum());
-
-    private NuntiusAdverbiorum() {
-      super(ParametriNuntii.para(Adverbium.class));
-    }
-  }
+     * Hic modus verbum dē valōribus imputātīs dēclīnat.
+     * */
+  @NonNull public static BiFunction<Casus, Numeralis, String> declinatio =
+          (casus, numeralis) -> "adverbi".concat(switch (casus) {
+            case NOMINATIVUS, ACCUSATIVUS, VOCATIVUS, DERECTUS -> switch (numeralis) {
+              case SINGULARIS, NULLUS -> "um";
+              case PLURALIS -> "a";
+            };
+            case GENITIVUS -> switch (numeralis) {
+              case SINGULARIS, NULLUS -> "ī";
+              case PLURALIS -> "ōrum";
+            };
+            case DATIVUS, ABLATIVUS, INSTRUMENTALIS, LOCATIVUS -> switch (numeralis) {
+              case SINGULARIS, NULLUS -> "ō";
+              case PLURALIS -> "īs";
+            };
+          });
 }

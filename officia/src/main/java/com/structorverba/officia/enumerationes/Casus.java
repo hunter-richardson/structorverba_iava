@@ -1,14 +1,14 @@
 package com.structorverba.officia.enumerationes;
 
 import androidx.annotation.NonNull;
-import com.structorverba.officia.interfacta.Declinabile;
+import com.structorverba.officia.verba.Verbum;
 import org.apache.commons.lang3.StringUtils;
 
 import java.util.stream.Stream;
 
 /**
  * Haec ēnumerātiō cāsum verbī omnis dēsignat.
- * @see Declinabile
+ * @see Verbum.Multiplex.Declinabile
  */
 @SuppressWarnings({"SpellCheckingInspection", "unused" })
 public enum Casus {
@@ -91,7 +91,6 @@ public enum Casus {
   @SuppressWarnings("ConstantConditions")
   @NonNull public static Casus ut(@NonNull final Enum <?> illud) {
     final Casus hoc = (Casus) illud;
-    return hoc.equals(illud) ? hoc
-                             : DERECTUS;
+    return hoc.equals(illud) ? hoc : DERECTUS;
   }
 }

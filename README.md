@@ -6,13 +6,13 @@ Nōn iam! Vōbīs intrōdūcō programma StrūctorVerba scrīptum in linguā [Ia
 
 Programma hoc dēfīnit classēs novem quās catēgoriās novem verbōrum repraesentent:
 
-I. [Coniunctio](officia/src/main/java/com/structorverba/officia/verba/Simplex.java#L58)
+I. [Coniunctio](officia/src/main/java/com/structorverba/officia/verba/simplicia/Coniunctio.java)
 
-II. [Interiectio](officia/src/main/java/com/structorverba/officia/verba/Simplex.java#L100)
+II. [Interiectio](officia/src/main/java/com/structorverba/officia/verba/simplicia/Interiectio.java)
 
-III. [Praepositio](officia/src/main/java/com/structorverba/officia/verba/Simplex.java#L140)
+III. [Praepositio](officia/src/main/java/com/structorverba/officia/verba/simplicia/Praepositio.java)
 
-IV. [Numerus](officia/src/main/java/com/structorverba/officia/verba/Numerus.java)
+IV. [Numerus](officia/src/main/java/com/structorverba/officia/verba/simplicia/Numerus.java)
 
 V. [Adverbium](officia/src/main/java/com/structorverba/officia/verba/multiplicia/Adverbium.java)
 
@@ -40,7 +40,7 @@ IV. [Numeri](officia/src/test/java/com/structorverba/officia/Numeri.java)
 
 V. [Verbales](officia/src/test/java/com/structorverba/officia/Verbales.java)
 
-Invocāte valōrem [StructorVerba.faciendum](officia/src/main/java/com/structorverba/officia/miscella/StructorVerba.java#L30) ut fūnctiōnēs omnēs programmātis StrūctorVerba accēdātis:
+Invocāte valōrem [Structor.faciendum](officia/src/main/java/com/structorverba/officia/miscella/Structor.java#L31) ut fūnctiōnēs omnēs programmātis StrūctorVerba accēdātis:
 
 ```java
 import net.structorverba.enumerationes.*;
@@ -51,7 +51,7 @@ import net.structorverba.verba.multiplicia.*;
 @SuppressWarnings({ "ConstantConditions", "SpellCheckingInspection" })
 class Tentamen {
   public void main(String[] args) {
-    final StructorVerba structor = StructorVerba.faciendum.get();
+    final Structor structor = Structor.faciendum.get();
     final Verba verba = structor.strue(
           structor.adveniam("ecce", Categoria.INTERIECTIO),
           structor.adveniam("lingua", Categoria.NOMEN,

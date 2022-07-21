@@ -1,15 +1,14 @@
 package com.structorverba.officia.enumerationes;
 
-import com.structorverba.officia.interfacta.Inflectabile;
-import com.structorverba.officia.verba.multiplicia.Multiplex;
-
-import org.apache.commons.lang3.StringUtils;
 import androidx.annotation.NonNull;
+import com.structorverba.officia.verba.Verbum;
+import com.structorverba.officia.verba.interfacta.Inflectabile;
+import org.apache.commons.lang3.StringUtils;
 
 /**
  * Haec ēnumerātiō <a href="https://en.wiktionary.org/wiki/Category:Latin_clitics">encliticum</a>
- * subiūnctum reī omnī classis {@link Multiplex} dēsignat.
- * @see Multiplex
+ * subiūnctum reī omnī classis {@link Verbum.Multiplex} dēsignat.
+ * @see Verbum.Multiplex
  * @see Inflectabile
  */
 @SuppressWarnings({ "SpellCheckingInspection", "unused" })

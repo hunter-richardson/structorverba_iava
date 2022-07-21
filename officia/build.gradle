@@ -2,16 +2,16 @@ apply plugin: 'com.android.library'
 
 android {
     compileSdkVersion 32
-    buildToolsVersion "32.1.0"
+    buildToolsVersion '32.1.0'
 
     defaultConfig {
-        minSdkVersion 26
+        minSdkVersion 31
         targetSdkVersion 32
         versionCode 1
-        versionName "1.0"
+        versionName '1.0'
 
         testInstrumentationRunner "$testRunner"
-        consumerProguardFiles "consumer-rules.pro"
+        consumerProguardFiles 'consumer-rules.pro'
     }
 
     buildTypes {

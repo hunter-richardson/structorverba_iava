@@ -6,6 +6,7 @@ import com.structorverba.officia.miscella.*;
 import com.structorverba.officia.tentamina.Tentamen;
 import com.structorverba.officia.verba.*;
 import com.structorverba.officia.verba.multiplicia.*;
+import com.structorverba.officia.verba.simplicia.*;
 import lombok.Getter;
 import org.junit.jupiter.api.*;
 
@@ -14,17 +15,17 @@ import java.util.stream.Stream;
 /**
  * Haec classis cōnstrūctiōnem rēbus extēnsiōnis cuiusque classis {@link Verbum} tentat.
  * Modus quisque proper modum {@link #omnesDeleantur()} rem fortuītam catēgoriae imputātae generat.
- * @see StructorVerba#fortuitumLegam(Categoria)
+ * @see Structor#fortuitumLegam(Categoria)
  * */
 @SuppressWarnings({"NewClassNamingConvention", "SpellCheckingInspection"})
 @TestMethodOrder(MethodOrderer.Random.class)
 public class Verbales extends Omne {
     @NonNull @Getter(lazy = true)
-    private final StructorVerba structor = StructorVerba.faciendum.get();
+    private final Structor structor = Structor.faciendum.get();
 
     @NonNull @Getter(lazy = true)
     private final java.util.function.Consumer<Categoria> actio =
-            categoria -> System.out.println(new Tentamen.TentamenVerbi(categoria.declina(Casus.NOMINATIVUS, Numeralis.SINGULARIS, false))
+            categoria -> System.out.println(new Tentamen.Verbi(categoria.declina(Casus.NOMINATIVUS, Numeralis.SINGULARIS, false))
                                                         .exsequar(structor.fortuitumLegam(categoria)));
 
     /**
@@ -73,7 +74,7 @@ public class Verbales extends Omne {
     }
 
     /**
-     * Hic modus cōnstrūctiōnem rēbus classis {@link Simplex.Praepositio} tentat.
+     * Hic modus cōnstrūctiōnem rēbus classis {@link Praepositio} tentat.
      * @see Categoria#PRAEPOSITIO
      * */
     @Test
@@ -82,7 +83,7 @@ public class Verbales extends Omne {
     }
 
     /**
-     * Hic modus cōnstrūctiōnem rēbus classis {@link Simplex.Coniunctio} tentat.
+     * Hic modus cōnstrūctiōnem rēbus classis {@link Coniunctio} tentat.
      * @see Categoria#CONIUNCTIO
      * */
     @Test
@@ -91,7 +92,7 @@ public class Verbales extends Omne {
     }
 
     /**
-     * Hic modus cōnstrūctiōnem rēbus classis {@link Simplex.Interiectio} tentat.
+     * Hic modus cōnstrūctiōnem rēbus classis {@link Interiectio} tentat.
      * @see Categoria#INTERIECTIO
      * */
     @Test

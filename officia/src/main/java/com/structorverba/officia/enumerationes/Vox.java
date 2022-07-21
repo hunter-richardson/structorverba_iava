@@ -61,7 +61,6 @@ public enum Vox {
   @SuppressWarnings("ConstantConditions")
   @NonNull public static Vox ut(@NonNull final Enum <?> illud) {
     final Vox hoc = (Vox) illud;
-    return hoc.equals(illud) ? hoc
-                             : NULLA;
+    return hoc.equals(illud) ? hoc : NULLA;
   }
 }
